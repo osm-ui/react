@@ -1,0 +1,41 @@
+{
+  "name": "@osm-ui/react",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/osm-ui/react",
+  "author": "Guillaume AMAT <guillaume@amat.io>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o docs"
+  },
+  "dependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addons": "^1.6.1",
+    "leaflet": "^1.0.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-leaflet": "^1.1.0",
+    "semantic-ui-css": "^2.2.9",
+    "semantic-ui-react": "^0.67.0",
+    "storybook-host": "^1.0.14"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
+  }
+}
