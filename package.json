@@ -13,6 +13,7 @@
   "dependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.21.0",
+    "@kadira/storybook-addon-options": "^1.0.1",
     "@kadira/storybook-addons": "^1.6.1",
     "leaflet": "^1.0.3",
     "react": "^15.4.2",

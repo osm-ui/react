@@ -4,15 +4,17 @@ import { TextArea } from 'semantic-ui-react';
 
 
 const Textarea = props => (
-    <TextArea {...props}>
-        {props.children}
-    </TextArea>
+    <TextArea {...props} />
 );
 
 
-Textarea.propTypes = {
-    children: React.PropTypes.element.isRequired,
-};
+// Textarea.propTypes = {
+//     value: React.PropTypes.string,
+// };
+//
+// Textarea.defaultProps = {
+//     value: '',
+// };
 
 
 export default Textarea;
