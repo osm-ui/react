@@ -4,5 +4,5 @@ export default {
     padding: 40,
     width: '100%',
     height: '80%',
-    background: '#efefef',
+    background: '#fff',
 };
