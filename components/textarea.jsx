@@ -1,35 +1,53 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
 import { TextArea } from 'semantic-ui-react';
-import themes from '../themes';
+import InputBottomLabel from './inputBottomLabel';
 
 
 const StyledTextArea = styled(TextArea)`
     &&&,
     &&&:hover,
     &&&:focus {
-        border-radius: ${props => props.theme.inputBorderRadius};
+        border-radius: ${props => props.theme.form.input.borderRadius};
+    }
+
+    &&&.with-bottom-label,
+    &&&.with-bottom-label:hover,
+    &&&.with-bottom-label:focus {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 `;
 
+
 const Textarea = (props) => {
-    const { theme: themeName, ...rest } = props;
+    const {
+        bottomLabel,
+        ...rest
+    } = props;
+
+    const bottomLabelElement = (
+        <InputBottomLabel>{bottomLabel}</InputBottomLabel>
+    );
+
+    const textareaClassName = bottomLabel ? 'with-bottom-label' : '';
 
     return (
-        <ThemeProvider theme={themes[themeName]}>
-            <StyledTextArea {...rest} />
-        </ThemeProvider>
+        <div>
+            <StyledTextArea className={textareaClassName} {...rest} />
+            {( bottomLabel ? bottomLabelElement : '' )}
+        </div>
     );
 };
 
 
 Textarea.propTypes = {
-    theme: React.PropTypes.string,
+    bottomLabel: React.PropTypes.string,
 };
 
 Textarea.defaultProps = {
-    theme: 'default',
+    bottomLabel: '',
 };
 
 

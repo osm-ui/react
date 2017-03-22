@@ -9,7 +9,7 @@ setOptions({
     url: 'https://github.com/osm-ui/react',
     goFullScreen: false,
     showLeftPanel: true,
-    showDownPanel: true,
+    showDownPanel: false,
     showSearchBox: false,
     downPanelInRight: false,
     sortStoriesByKind: false,

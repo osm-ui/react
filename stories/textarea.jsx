@@ -4,6 +4,10 @@ import { host } from 'storybook-host';
 import { Form } from 'semantic-ui-react';
 
 import defaultHostOptions from './defaultHostOptions';
+
+import DefaultTheme from '../themes/default';
+// import RedTheme from '../themes/red';
+
 import Textarea from '../components/textarea';
 
 
@@ -13,17 +17,30 @@ storiesOf('Textarea', module)
         title: 'Textarea',
     }))
     .addWithInfo('Default state', () => (
-        <Form>
-            <Textarea placeholder="A placeholder" />
-        </Form>
+        <DefaultTheme>
+            <Form>
+                <Textarea placeholder="A placeholder" />
+            </Form>
+        </DefaultTheme>
     ))
     .addWithInfo('With a default value', () => (
-        <Form>
-            <Textarea placeholder="A placeholder" defaultValue="The quick brown fox jumps over the lazy dog" />
-        </Form>
+        <DefaultTheme>
+            <Form>
+                <Textarea placeholder="A placeholder" defaultValue="The quick brown fox jumps over the lazy dog" />
+            </Form>
+        </DefaultTheme>
     ))
     .addWithInfo('Automatic height', () => (
-        <Form>
-            <Textarea placeholder="A placeholder" autoHeight />
-        </Form>
+        <DefaultTheme>
+            <Form>
+                <Textarea placeholder="A placeholder" autoHeight />
+            </Form>
+        </DefaultTheme>
+    ))
+    .addWithInfo('With a bottom label', () => (
+        <DefaultTheme>
+            <Form>
+                <Textarea placeholder="A placeholder" bottomLabel="Hey there! I can help you filling that field!" />
+            </Form>
+        </DefaultTheme>
     ));
