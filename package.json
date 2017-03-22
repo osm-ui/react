@@ -21,7 +21,8 @@
     "react-leaflet": "^1.1.0",
     "semantic-ui-css": "^2.2.9",
     "semantic-ui-react": "^0.67.0",
-    "storybook-host": "^1.0.14"
+    "storybook-host": "^1.0.14",
+    "styled-components": "^1.4.4"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
