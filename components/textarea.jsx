@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
-import { TextArea } from 'semantic-ui-react';
+import { TextArea as SUITextArea } from 'semantic-ui-react';
 import InputBottomLabel from './inputBottomLabel';
 
 
-const StyledTextArea = styled(TextArea)`
+const StyledTextArea = styled(SUITextArea)`
     &&&,
     &&&:hover,
     &&&:focus {

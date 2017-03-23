@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
-import { Label } from 'semantic-ui-react';
+import { Label as SUILabel } from 'semantic-ui-react';
 
 
-const StyledBottomLabel = styled(Label)`
+const StyledBottomLabel = styled(SUILabel)`
     &&& {
         width: 100%;
         margin: 0;
