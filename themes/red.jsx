@@ -9,8 +9,12 @@ export const config = {
 };
 
 
-const RedTheme = props => (
-    <ThemeProvider theme={config} {...props} />
+const RedTheme = ({ children, ...rest }) => (
+    <ThemeProvider theme={config} {...rest}>
+        <div>
+            {children}
+        </div>
+    </ThemeProvider>
 );
 
 

@@ -12,8 +12,12 @@ export const config = {
 };
 
 
-const DefaultTheme = props => (
-    <ThemeProvider theme={config} {...props} />
+const DefaultTheme = ({ children, ...rest }) => (
+    <ThemeProvider theme={config} {...rest}>
+        <div>
+            {children}
+        </div>
+    </ThemeProvider>
 );
 
 
