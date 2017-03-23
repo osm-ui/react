@@ -5,7 +5,6 @@ import { host } from 'storybook-host';
 import defaultHostOptions from './defaultHostOptions';
 
 import DefaultTheme from '../themes/default';
-// import RedTheme from '../themes/red';
 
 import Form from '../components/form';
 import Textarea from '../components/textarea';

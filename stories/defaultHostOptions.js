@@ -1,4 +1,5 @@
 export default {
+    mobXDevTools: false,
     hr: false,
     align: 'center top',
     padding: 40,

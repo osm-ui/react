@@ -12,6 +12,14 @@ export const config = {
 };
 
 
-export default props => (
+const DefaultTheme = props => (
     <ThemeProvider theme={config} {...props} />
 );
+
+
+DefaultTheme.propTypes = {
+    children: React.PropTypes.node.isRequired,
+};
+
+
+export default DefaultTheme;

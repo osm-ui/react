@@ -11,7 +11,12 @@ const Map = props => (
 
 
 Map.propTypes = {
-    children: React.PropTypes.element.isRequired,
+    ...LeafletMap.propTypes,
+};
+
+
+Map.defaultProps = {
+    ...LeafletMap.defaultProps,
 };
 
 

@@ -11,13 +11,6 @@ const StyledTextArea = styled(SUITextArea)`
     &&&:focus {
         border-radius: ${props => props.theme.form.input.borderRadius};
     }
-
-    &&&.with-bottom-label,
-    &&&.with-bottom-label:hover,
-    &&&.with-bottom-label:focus {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
 `;
 
 
@@ -51,11 +44,13 @@ const Textarea = (props) => {
 
 
 Textarea.propTypes = {
+    ...SUITextArea.propTypes,
     label: React.PropTypes.string,
     labelPosition: React.PropTypes.string,
 };
 
 Textarea.defaultProps = {
+    ...SUITextArea.defaultProps,
     label: '',
     labelPosition: '',
 };

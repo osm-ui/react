@@ -8,18 +8,19 @@ setOptions({
     name: 'OSM UI - REACT',
     url: 'https://github.com/osm-ui/react',
     goFullScreen: false,
-    showLeftPanel: true,
-    showDownPanel: false,
     showSearchBox: false,
-    downPanelInRight: false,
+    showLeftPanel: true,
+    showDownPanel: true,
+    downPanelInRight: true,
     sortStoriesByKind: false,
 });
 
 
 function loadStories() {
     /* eslint-disable */
-    require('../stories/textarea');
+    require('../stories/button');
     require('../stories/map');
+    require('../stories/textarea');
     /* eslint-enable */
 }
 

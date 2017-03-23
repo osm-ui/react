@@ -8,4 +8,14 @@ const Form = props => (
 );
 
 
+Form.propTypes = {
+    ...SUIForm.propTypes,
+};
+
+
+Form.defaultProps = {
+    ...SUIForm.defaultProps,
+};
+
+
 export default Form;
