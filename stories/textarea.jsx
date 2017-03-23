@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import { Form } from 'semantic-ui-react';
 
 import defaultHostOptions from './defaultHostOptions';
 
 import DefaultTheme from '../themes/default';
 // import RedTheme from '../themes/red';
 
+import Form from '../components/form';
 import Textarea from '../components/textarea';
 
 
