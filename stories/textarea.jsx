@@ -40,7 +40,7 @@ storiesOf('Textarea', module)
     .addWithInfo('With a bottom label', () => (
         <DefaultTheme>
             <Form>
-                <Textarea placeholder="A placeholder" bottomLabel="Hey there! I can help you filling that field!" />
+                <Textarea placeholder="A placeholder" label="Hey there! I can help you filling that field!" labelPosition="bottom" />
             </Form>
         </DefaultTheme>
     ));

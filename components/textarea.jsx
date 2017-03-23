@@ -23,31 +23,41 @@ const StyledTextArea = styled(SUITextArea)`
 
 const Textarea = (props) => {
     const {
-        bottomLabel,
+        label,
+        labelPosition,
         ...rest
     } = props;
 
-    const bottomLabelElement = (
-        <InputBottomLabel>{bottomLabel}</InputBottomLabel>
-    );
+    let bottomLabel;
 
-    const textareaClassName = bottomLabel ? 'with-bottom-label' : '';
+    if (labelPosition !== 'bottom') {
+        rest.label = label;
+        rest.labelPosition = labelPosition;
+        bottomLabel = '';
+    }
+    else {
+        bottomLabel = (
+            <InputBottomLabel>{label}</InputBottomLabel>
+        );
+    }
 
     return (
         <div>
-            <StyledTextArea className={textareaClassName} {...rest} />
-            {( bottomLabel ? bottomLabelElement : '' )}
+            <StyledTextArea {...rest} />
+            {bottomLabel}
         </div>
     );
 };
 
 
 Textarea.propTypes = {
-    bottomLabel: React.PropTypes.string,
+    label: React.PropTypes.string,
+    labelPosition: React.PropTypes.string,
 };
 
 Textarea.defaultProps = {
-    bottomLabel: '',
+    label: '',
+    labelPosition: '',
 };
 
 
