@@ -6,7 +6,6 @@ import { Label } from 'semantic-ui-react';
 import defaultHostOptions from './defaultHostOptions';
 
 import DefaultTheme from '../themes/default';
-
 import Button from '../components/button';
 
 

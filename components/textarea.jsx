@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
 import { TextArea as SUITextArea } from 'semantic-ui-react';
@@ -45,8 +46,8 @@ const Textarea = (props) => {
 
 Textarea.propTypes = {
     ...SUITextArea.propTypes,
-    label: React.PropTypes.string,
-    labelPosition: React.PropTypes.string,
+    label: PropTypes.string,
+    labelPosition: PropTypes.string,
 };
 
 Textarea.defaultProps = {

@@ -5,7 +5,6 @@ import { host } from 'storybook-host';
 import defaultHostOptions from './defaultHostOptions';
 
 import DefaultTheme from '../themes/default';
-
 import Form from '../components/form';
 import Textarea from '../components/textarea';
 
@@ -15,7 +14,7 @@ storiesOf('Textarea', module)
         ...defaultHostOptions,
         title: 'Textarea',
     }))
-    .addWithInfo('Default state', () => (
+    .addWithInfo('Default', () => (
         <DefaultTheme>
             <Form>
                 <Textarea placeholder="A placeholder" />

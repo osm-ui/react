@@ -1,11 +1,17 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import { config as defaultThemeConfig } from './default';
+import { white, red, darkRed } from '../colors';
 
 
 export const config = {
     ...defaultThemeConfig,
+    color: white,
+    backgroundColor: red,
+    borderColor: darkRed,
+    dividerColor: 'rgba(255, 255, 255, 0.4)',
 };
 
 
@@ -19,7 +25,7 @@ const RedTheme = ({ children, ...rest }) => (
 
 
 RedTheme.propTypes = {
-    children: React.PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 };
 
 
