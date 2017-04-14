@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
+import { withKnobs } from '@kadira/storybook-addon-knobs';
 import { TileLayer } from 'react-leaflet';
 
 import defaultHostOptions from './defaultHostOptions';
@@ -8,6 +9,7 @@ import Map from '../components/map';
 
 
 storiesOf('Map', module)
+.addDecorator(withKnobs)
     .addDecorator(host({
         ...defaultHostOptions,
         title: 'Map',

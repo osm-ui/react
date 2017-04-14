@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
+import { withKnobs } from '@kadira/storybook-addon-knobs';
 import { Label } from 'semantic-ui-react';
 
 import defaultHostOptions from './defaultHostOptions';
@@ -10,11 +11,12 @@ import Button from '../components/button';
 
 
 storiesOf('Button', module)
+    .addDecorator(withKnobs)
     .addDecorator(host({
         ...defaultHostOptions,
         title: 'Button',
     }))
-    .addWithInfo('Default', () => (
+    .addWithInfo('Default state', () => (
         <DefaultTheme>
             <Button onClick={action('onClick')}>Default</Button>
             <Button color="red" onClick={action('onClick')}>Red</Button>
@@ -50,10 +52,10 @@ storiesOf('Button', module)
             <Button basic color="black" onClick={action('onClick')}>Black</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('More', () => (
+    .add('More', () => (
         <div>
             <p>
-                OSM UI for React is based on the awesome Semantic-UI-React library.
+                OSM UI for React is based on the awesome <a href="http://react.semantic-ui.com" target="_blank" rel="noopener noreferrer">Semantic UI React</a> library.
             </p>
             <p>
                 You can find all the available <Label color="blue" horizontal basic>Button</Label> options <a href="http://react.semantic-ui.com/elements/button" target="_blank" rel="noopener noreferrer">here</a>.

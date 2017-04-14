@@ -16,7 +16,7 @@ storiesOf('Column', module)
         ...defaultHostOptions,
         title: 'Column',
     }))
-    .addWithInfo('Default', () => {
+    .addWithInfo('Default state', () => {
         const title = text('Title', 'A column title');
         const visible = boolean('Visible', true);
         const loading = boolean('Loading');
