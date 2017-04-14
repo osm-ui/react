@@ -2,16 +2,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { white, lightGray, darkGray, anthracite } from '../colors';
+import { white, gray, darkGray, lightAnthracite, anthracite } from '../colors';
 
 
 export const config = {
     color: anthracite,
     backgroundColor: white,
     borderColor: darkGray,
+    dimmerBackgroundColor: white,
+    loaderColor: lightAnthracite,
     borderStyle: 'solid',
     borderWidth: '4px',
-    dividerColor: lightGray,
+    dividerColor: gray,
     form: {
         input: {
             borderRadius: 0,

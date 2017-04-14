@@ -19,8 +19,9 @@ storiesOf('Column', module)
     .addWithInfo('Default', () => {
         const title = text('Title', 'A column title');
         const visible = boolean('Visible', true);
+        const loading = boolean('Loading');
         const direction = select('Direction', ['left', 'right']);
-        const animation = select('Animation', ['overlay', 'push']);
+        const animation = select('Animation', ['overlay', 'push', 'scale down', 'uncover', 'slide out', 'slide along']);
 
         return (
             <RedTheme>
@@ -28,6 +29,7 @@ storiesOf('Column', module)
                     <Column
                         title={title}
                         visible={visible}
+                        loading={loading}
                         direction={direction}
                         animation={animation}
                     >

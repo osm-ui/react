@@ -9,7 +9,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+	"pre-commit": "yarn run lint"
   },
   "dependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",

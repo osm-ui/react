@@ -11,6 +11,8 @@ export const config = {
     color: white,
     backgroundColor: red,
     borderColor: darkRed,
+    dimmerBackgroundColor: red,
+    loaderColor: white,
     dividerColor: 'rgba(255, 255, 255, 0.4)',
 };
 

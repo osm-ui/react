@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
-import { Divider, Container, Sidebar, Segment, Header } from 'semantic-ui-react';
+import {
+    Divider,
+    Sidebar,
+    Segment,
+    Header,
+} from 'semantic-ui-react';
 
 
 const StyledSidebar = styled(Sidebar)`
@@ -22,6 +27,18 @@ const StyledSidebar = styled(Sidebar)`
         border-left-width: ${props => props.theme.borderWidth};
     }
 
+    .content {
+        padding: 0;
+    }
+
+    &&&& .content::before {
+        background: ${props => props.theme.dimmerBackgroundColor};
+    }
+
+    &&&& .content::after {
+        border-top-color: ${props => props.theme.loaderColor};
+    }
+
     .ui.header {
         color: ${props => props.theme.color};
     }
@@ -39,16 +56,17 @@ const StyledSidebar = styled(Sidebar)`
 const Column = (props) => {
     const {
         title,
+        loading,
         ...rest
     } = props;
 
     return (
-        <StyledSidebar as={Segment} width="very wide" animation="overlay" basic {...rest}>
+        <StyledSidebar as={Segment} basic {...rest}>
             <Header as="h2">{props.title}</Header>
-            <Divider section />
-            <Container>
+            <Divider hidden />
+            <Segment basic compact loading={loading} className="content">
                 {props.children}
-            </Container>
+            </Segment>
         </StyledSidebar>
     );
 };
@@ -57,9 +75,13 @@ const Column = (props) => {
 Column.propTypes = {
     title: PropTypes.string.isRequired,
     children: PropTypes.element.isRequired,
+    loading: PropTypes.bool,
 };
 
 Column.defaultProps = {
+    loading: false,
+    width: 'very wide',
+    animation: 'overlay',
 };
 
 
