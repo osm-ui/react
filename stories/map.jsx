@@ -5,6 +5,8 @@ import { withKnobs } from '@kadira/storybook-addon-knobs';
 import { TileLayer } from 'react-leaflet';
 
 import defaultHostOptions from './defaultHostOptions';
+import KnobsAlert from './knobsAlert';
+
 import Map from '../components/map';
 
 
@@ -20,11 +22,14 @@ storiesOf('Map', module)
         const style = { height: 450 };
 
         return (
-            <Map center={position} zoom={13} style={style}>
-                <TileLayer
-                    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
-            </Map>
+            <div>
+                <KnobsAlert />
+                <Map center={position} zoom={13} style={style}>
+                    <TileLayer
+                        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    />
+                </Map>
+            </div>
         );
     });

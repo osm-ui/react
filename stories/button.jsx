@@ -1,13 +1,16 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import { withKnobs } from '@kadira/storybook-addon-knobs';
-import { Label } from 'semantic-ui-react';
+import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs';
 
 import defaultHostOptions from './defaultHostOptions';
+import KnobsAlert from './knobsAlert';
 
 import DefaultTheme from '../themes/default';
-import Button from '../components/button';
+import {
+    Alert,
+    Button,
+} from '../index';
 
 
 storiesOf('Button', module)
@@ -16,49 +19,82 @@ storiesOf('Button', module)
         ...defaultHostOptions,
         title: 'Button',
     }))
-    .addWithInfo('Default state', () => (
+    .addWithInfo('Context', () => (
         <DefaultTheme>
-            <Button onClick={action('onClick')}>Default</Button>
-            <Button color="red" onClick={action('onClick')}>Red</Button>
-            <Button color="orange" onClick={action('onClick')}>Orange</Button>
-            <Button color="yellow" onClick={action('onClick')}>Yellow</Button>
-            <Button color="olive" onClick={action('onClick')}>Olive</Button>
-            <Button color="green" onClick={action('onClick')}>Green</Button>
-            <Button color="teal" onClick={action('onClick')}>Teal</Button>
-            <Button color="blue" onClick={action('onClick')}>Blue</Button>
-            <Button color="violet" onClick={action('onClick')}>Violet</Button>
-            <Button color="purple" onClick={action('onClick')}>Purple</Button>
-            <Button color="pink" onClick={action('onClick')}>Pink</Button>
-            <Button color="brown" onClick={action('onClick')}>Brown</Button>
-            <Button color="grey" onClick={action('onClick')}>Grey</Button>
-            <Button color="black" onClick={action('onClick')}>Black</Button>
+            <Button context="default" onClick={action('onClick')}>Default</Button>
+            {' '}
+            <Button context="primary" onClick={action('onClick')}>Primary</Button>
+            {' '}
+            <Button context="success" onClick={action('onClick')}>Success</Button>
+            {' '}
+            <Button context="info" onClick={action('onClick')}>Info</Button>
+            {' '}
+            <Button context="warning" onClick={action('onClick')}>Warning</Button>
+            {' '}
+            <Button context="danger" onClick={action('onClick')}>Danger</Button>
+            {' '}
+            <Button context="link" onClick={action('onClick')}>Link</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('Basic', () => (
+    .addWithInfo('Types', () => (
         <DefaultTheme>
-            <Button basic onClick={action('onClick')}>Default</Button>
-            <Button basic color="red" onClick={action('onClick')}>Red</Button>
-            <Button basic color="orange" onClick={action('onClick')}>Orange</Button>
-            <Button basic color="yellow" onClick={action('onClick')}>Yellow</Button>
-            <Button basic color="olive" onClick={action('onClick')}>Olive</Button>
-            <Button basic color="green" onClick={action('onClick')}>Green</Button>
-            <Button basic color="teal" onClick={action('onClick')}>Teal</Button>
-            <Button basic color="blue" onClick={action('onClick')}>Blue</Button>
-            <Button basic color="violet" onClick={action('onClick')}>Violet</Button>
-            <Button basic color="purple" onClick={action('onClick')}>Purple</Button>
-            <Button basic color="pink" onClick={action('onClick')}>Pink</Button>
-            <Button basic color="brown" onClick={action('onClick')}>Brown</Button>
-            <Button basic color="grey" onClick={action('onClick')}>Grey</Button>
-            <Button basic color="black" onClick={action('onClick')}>Black</Button>
+            <Button type="button" onClick={action('onClick')}>Button (default)</Button>
+            {' '}
+            <Button type="submit" onClick={action('onClick')}>Submit button</Button>
+            {' '}
+            <Button type="reset" onClick={action('onClick')}>Reset button</Button>
+            {' '}
+            <Button type="anchor" href="#" onClick={action('onClick')}>Anchor button</Button>
         </DefaultTheme>
     ))
-    .add('More', () => (
-        <div>
-            <p>
-                OSM UI for React is based on the awesome <a href="http://react.semantic-ui.com" target="_blank" rel="noopener noreferrer">Semantic UI React</a> library.
-            </p>
-            <p>
-                You can find all the available <Label color="blue" horizontal basic>Button</Label> options <a href="http://react.semantic-ui.com/elements/button" target="_blank" rel="noopener noreferrer">here</a>.
-            </p>
-        </div>
-    ));
+    .addWithInfo('Sizes', () => (
+        <DefaultTheme>
+            <Button size="lg" onClick={action('onClick')}>Large button</Button>
+            {' '}
+            <Button size="md" onClick={action('onClick')}>Medium button (default)</Button>
+            {' '}
+            <Button size="sm" onClick={action('onClick')}>Small button</Button>
+            {' '}
+            <Button size="xs" onClick={action('onClick')}>Extra small button</Button>
+        </DefaultTheme>
+    ))
+    .addWithInfo('Block', () => (
+        <DefaultTheme>
+            <Button block size="lg" context="primary" onClick={action('onClick')}>Block level button</Button>
+            {' '}
+            <Button block size="lg" onClick={action('onClick')}>Block level button</Button>
+        </DefaultTheme>
+    ))
+    .addWithInfo('States', () => (
+        <DefaultTheme>
+            <Button active onClick={action('onClick')}>Active</Button>
+            {' '}
+            <Button disabled onClick={action('onClick')}>Disabled</Button>
+        </DefaultTheme>
+    ))
+    .addWithInfo('Playground', () => {
+        const label = text('Label', 'Hello world!');
+        const block = boolean('Block');
+        const active = boolean('Active');
+        const disabled = boolean('Disabled');
+        const size = select('Size', ['', 'lg', 'md', 'sm', 'xs']);
+        const context = select('Context', ['', 'default', 'info', 'primary', 'success', 'warning', 'danger']);
+        const type = select('Type', ['', 'button', 'submit', 'reset', 'anchor']);
+
+        return (
+            <DefaultTheme>
+                <KnobsAlert />
+                <Button
+                    block={block}
+                    active={active}
+                    disabled={disabled}
+                    size={size}
+                    context={context}
+                    type={type}
+                    onClick={action('onClick')}
+                >
+                    {label}
+                </Button>
+            </DefaultTheme>
+        );
+    });

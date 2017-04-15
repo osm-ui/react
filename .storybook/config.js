@@ -19,10 +19,10 @@ setOptions({
 function loadStories() {
     /* eslint-disable */
     require('../stories/introduction');
-    require('../stories/column');
-    require('../stories/map');
-    require('../stories/textarea');
     require('../stories/button');
+    require('../stories/form');
+    // require('../stories/column');
+    require('../stories/map');
     /* eslint-enable */
 }
 

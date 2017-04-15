@@ -1,21 +1,21 @@
 import React from 'react';
-import 'semantic-ui-css/semantic.min.css';
-import { Form as SUIForm } from 'semantic-ui-react';
+import FormGroup from './formGroup';
 
 
 const Form = props => (
-    <SUIForm {...props} />
+    <form {...props} />
 );
 
 
 Form.propTypes = {
-    ...SUIForm.propTypes,
 };
 
 
 Form.defaultProps = {
-    ...SUIForm.defaultProps,
 };
+
+
+Form.Group = FormGroup;
 
 
 export default Form;

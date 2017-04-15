@@ -19,10 +19,23 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loaders: [
-                    'style', 'raw'
-                ],
-            }
+                loaders: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.less$/,
+                loaders: ['style-loader', 'css-loader', 'less-loader'],
+            },
+            {
+                test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'assets/[name].[ext]?[hash]',
+                },
+            },
+            {
+                test: require.resolve('jquery'),
+                loader: 'expose-loader?$!expose-loader?jQuery',
+            },
         ]
     }
 };

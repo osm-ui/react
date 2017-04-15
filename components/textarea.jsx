@@ -1,59 +1,55 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import 'semantic-ui-css/semantic.min.css';
-import { TextArea as SUITextArea } from 'semantic-ui-react';
-import InputBottomLabel from './inputBottomLabel';
+import InputHint from './inputHint';
 
 
-const StyledTextArea = styled(SUITextArea)`
-    &&&,
-    &&&:hover,
-    &&&:focus {
-        border-radius: ${props => props.theme.form.input.borderRadius};
+const StyledTextArea = styled.textarea`
+    opacity: ${props => props.theme.form.input.opacity};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    resize: ${props => props.resize};
+
+    &:focus,
+    &.form-control:focus {
+        opacity: ${props => props.theme.form.input.focusedOpacity};
+        background-color: ${props => props.theme.form.input.focusedBackgroundColor};
+        box-shadow: ${props => props.theme.form.input.focusedBoxShadow};
     }
 `;
 
 
-const Textarea = (props) => {
-    const {
-        label,
-        labelPosition,
-        ...rest
-    } = props;
-
-    let bottomLabel;
-
-    if (labelPosition !== 'bottom') {
-        rest.label = label;
-        rest.labelPosition = labelPosition;
-        bottomLabel = '';
-    }
-    else {
-        bottomLabel = (
-            <InputBottomLabel>{label}</InputBottomLabel>
-        );
-    }
-
-    return (
-        <div>
-            <StyledTextArea {...rest} />
-            {bottomLabel}
-        </div>
-    );
-};
+const Textarea = ({
+    rows,
+    disabled,
+    hint,
+    ...props
+}) => (
+    <div>
+        <StyledTextArea
+            className="form-control"
+            rows={rows}
+            disabled={disabled}
+            {...props}
+        />
+        { hint && <InputHint>{hint}</InputHint> }
+    </div>
+);
 
 
 Textarea.propTypes = {
-    ...SUITextArea.propTypes,
-    label: PropTypes.string,
-    labelPosition: PropTypes.string,
+    rows: PropTypes.number,
+    disabled: PropTypes.bool,
+    hint: PropTypes.string,
+    resize: PropTypes.oneOf(['none', 'vertical', 'horizontal']),
 };
 
 Textarea.defaultProps = {
-    ...SUITextArea.defaultProps,
-    label: '',
-    labelPosition: '',
+    rows: 6,
+    disabled: false,
+    hint: '',
+    resize: 'vertical',
 };
 
 
