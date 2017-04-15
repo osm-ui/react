@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import 'semantic-ui-css/semantic.min.css';
 import { Button as SUIButton } from 'semantic-ui-react';
 
 

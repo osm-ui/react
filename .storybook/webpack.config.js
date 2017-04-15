@@ -20,9 +20,17 @@ module.exports = {
             {
                 test: /\.css$/,
                 loaders: [
-                    'style', 'raw'
+                    'style-loader',
+                    'css-loader'
                 ],
-            }
+            },
+            {
+                test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'assets/[name].[ext]?[hash]',
+                },
+            },
         ]
     }
 };

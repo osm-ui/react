@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o docs",
     "lint": "eslint .",
-	"pre-commit": "yarn run lint"
+    "pre-commit": "yarn run lint"
   },
   "dependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
@@ -19,6 +19,8 @@
     "@kadira/storybook-addon-notes": "^1.0.1",
     "@kadira/storybook-addon-options": "^1.0.1",
     "@kadira/storybook-addons": "^1.6.1",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.11.1",
     "leaflet": "^1.0.3",
     "prop-types": "^15.5.6",
     "react": "^15.4.2",
@@ -41,7 +43,6 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
-    "raw-loader": "^0.5.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1"
   }
