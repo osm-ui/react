@@ -54,5 +54,6 @@ Alert.defaultProps = {
     context: 'info',
 };
 
+Alert.displayName = 'Alert';
 
 export default Alert;

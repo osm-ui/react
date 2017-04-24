@@ -8,4 +8,6 @@ const KnobsAlert = () => (
     </Alert>
 );
 
+KnobsAlert.displayName = 'KnobsAlert';
+
 export default KnobsAlert;

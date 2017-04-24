@@ -197,5 +197,6 @@ DefaultTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+DefaultTheme.displayName = 'DefaultTheme';
 
 export default DefaultTheme;

@@ -20,7 +20,7 @@ const StyledSidebar = styled.aside`
 `;
 
 
-export default class Column extends React.Component {
+class Column extends React.Component {
     constructor(props) {
         super(props);
 
@@ -81,3 +81,7 @@ Column.defaultProps = {
     width: 'very wide',
     animation: 'overlay',
 };
+
+Column.displayName = 'Column';
+
+export default Column;

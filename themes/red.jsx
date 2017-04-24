@@ -30,5 +30,6 @@ RedTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
+RedTheme.displayName = 'RedTheme';
 
 export default RedTheme;

@@ -18,5 +18,6 @@ AppCanvas.propTypes = {
 AppCanvas.defaultProps = {
 };
 
+AppCanvas.displayName = 'AppCanvas';
 
 export default AppCanvas;

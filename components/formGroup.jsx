@@ -62,10 +62,10 @@ FormGroup.propTypes = {
     context: PropTypes.string,
 };
 
-
 FormGroup.defaultProps = {
     context: '',
 };
 
+FormGroup.displayName = 'FormGroup';
 
 export default FormGroup;

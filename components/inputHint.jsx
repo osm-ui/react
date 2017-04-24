@@ -14,5 +14,6 @@ const InputHint = props => (
     <StyledDiv className="help-block" {...props} />
 );
 
+InputHint.displayName = 'InputHint';
 
 export default InputHint;

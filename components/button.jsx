@@ -99,7 +99,6 @@ Button.propTypes = {
     disabled: PropTypes.bool,
 };
 
-
 Button.defaultProps = {
     type: 'button',
     context: 'default',
@@ -109,5 +108,6 @@ Button.defaultProps = {
     disabled: false,
 };
 
+Button.displayName = 'Button';
 
 export default Button;

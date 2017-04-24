@@ -19,5 +19,6 @@ Map.defaultProps = {
     ...LeafletMap.defaultProps,
 };
 
+Map.displayName = 'Map';
 
 export default Map;

@@ -55,5 +55,6 @@ Textarea.defaultProps = {
     resize: 'vertical',
 };
 
+Textarea.displayName = 'Textarea';
 
 export default Textarea;
