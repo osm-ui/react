@@ -1,10 +1,10 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("prop-types"), require("styled-components"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("jquery"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("jquery"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "prop-types", "styled-components", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "jquery"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "jquery"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("prop-types"), require("styled-components"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("jquery")) : factory(root["react"], root["prop-types"], root["styled-components"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["jquery"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("jquery")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["jquery"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
 })(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_14__) {
@@ -86,13 +86,13 @@ module.exports = require("react");
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("prop-types");
+module.exports = require("styled-components");
 
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = require("styled-components");
+module.exports = require("prop-types");
 
 /***/ }),
 /* 3 */
@@ -118,45 +118,194 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 const config = exports.config = {
-    color: _colors.anthracite,
-    backgroundColor: _colors.white,
-    borderColor: _colors.darkGray,
-    dimmerBackgroundColor: _colors.white,
-    loaderColor: _colors.lightAnthracite,
+    color: _colors2.default.anthracite1,
+    backgroundColor: _colors2.default.white,
+    borderColor: _colors2.default.gray1,
+    dimmerBackgroundColor: _colors2.default.white,
+    loaderColor: _colors2.default.gray1,
     borderStyle: 'solid',
     borderWidth: '4px',
     borderRadius: 0,
-    dividerColor: _colors.gray,
+    dividerColor: _colors2.default.gray3,
 
     form: {
+        button: {
+            borderRadius: 0,
+
+            backgroundColor: _colors2.default.white,
+            borderColor: _colors2.default.gray3,
+            hoverBackgroundColor: _colors2.default.gray5,
+            hoverBorderColor: _colors2.default.gray3,
+            focusBackgroundColor: _colors2.default.gray5,
+            focusBorderColor: _colors2.default.gray3,
+            activeBackgroundColor: _colors2.default.gray5,
+            activeBorderColor: _colors2.default.gray3,
+
+            primary: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.blue2,
+                borderColor: _colors2.default.blue2,
+                hoverBackgroundColor: _colors2.default.blue3,
+                hoverBorderColor: _colors2.default.blue3,
+                focusBackgroundColor: _colors2.default.blue3,
+                focusBorderColor: _colors2.default.blue3,
+                activeBackgroundColor: _colors2.default.blue3,
+                activeBorderColor: _colors2.default.blue3
+            },
+
+            info: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.turquoise2,
+                borderColor: _colors2.default.turquoise2,
+                hoverBackgroundColor: _colors2.default.turquoise3,
+                hoverBorderColor: _colors2.default.turquoise3,
+                focusBackgroundColor: _colors2.default.turquoise3,
+                focusBorderColor: _colors2.default.turquoise3,
+                activeBackgroundColor: _colors2.default.turquoise3,
+                activeBorderColor: _colors2.default.turquoise3
+            },
+
+            success: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.green2,
+                borderColor: _colors2.default.green2,
+                hoverBackgroundColor: _colors2.default.green3,
+                hoverBorderColor: _colors2.default.green3,
+                focusBackgroundColor: _colors2.default.green3,
+                focusBorderColor: _colors2.default.green3,
+                activeBackgroundColor: _colors2.default.green3,
+                activeBorderColor: _colors2.default.green3
+            },
+
+            warning: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.orange2,
+                borderColor: _colors2.default.orange2,
+                hoverBackgroundColor: _colors2.default.orange3,
+                hoverBorderColor: _colors2.default.orange3,
+                focusBackgroundColor: _colors2.default.orange3,
+                focusBorderColor: _colors2.default.orange3,
+                activeBackgroundColor: _colors2.default.orange3,
+                activeBorderColor: _colors2.default.orange3
+            },
+
+            danger: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.red2,
+                borderColor: _colors2.default.red2,
+                hoverBackgroundColor: _colors2.default.red3,
+                hoverBorderColor: _colors2.default.red3,
+                focusBackgroundColor: _colors2.default.red3,
+                focusBorderColor: _colors2.default.red3,
+                activeBackgroundColor: _colors2.default.red3,
+                activeBorderColor: _colors2.default.red3
+            },
+
+            link: {
+                color: _colors2.default.blue2,
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                hoverBackgroundColor: 'transparent',
+                hoverBorderColor: 'transparent',
+                focusBackgroundColor: 'transparent',
+                focusBorderColor: 'transparent',
+                activeBackgroundColor: 'transparent',
+                activeBorderColor: 'transparent'
+            }
+        },
         input: {
-            opacity: 0.8,
-            backgroundColor: _colors.white,
-            focusedOpacity: 1,
-            focusedBackgroundColor: _colors.white,
+            borderWidth: '2px',
             borderRadius: 0,
             boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
-            focusedBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)'
+            opacity: 0.8,
+            backgroundColor: _colors2.default.white,
+            borderColor: _colors2.default.gray3,
+
+            focusOpacity: 1,
+            focusBackgroundColor: _colors2.default.white,
+            focusBorderColor: _colors2.default.blue2,
+            focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
+
+            success: {
+                color: _colors2.default.green2,
+                backgroundColor: _colors2.default.white
+            },
+
+            warning: {
+                color: _colors2.default.orange2,
+                backgroundColor: _colors2.default.white
+            },
+
+            error: {
+                color: _colors2.default.red2,
+                backgroundColor: _colors2.default.white
+            }
         },
         hint: {
-            backgroundColor: _colors.lightGray,
-            color: _colors.lightAnthracite,
             fontSize: '0.9em',
             margin: 0,
-            padding: '5px 10px'
+            padding: '5px 10px',
+
+            backgroundColor: _colors2.default.gray5,
+            color: _colors2.default.anthracite2,
+
+            success: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.green2
+            },
+
+            warning: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.orange2
+            },
+
+            error: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.red2
+            }
+        }
+    },
+    alert: {
+        backgroundColor: _colors2.default.gray5,
+        color: _colors2.default.anthracite2,
+
+        info: {
+            color: _colors2.default.turquoise1,
+            backgroundColor: _colors2.default.turquoise5,
+            borderColor: _colors2.default.turquoise5
+        },
+
+        success: {
+            color: _colors2.default.green1,
+            backgroundColor: _colors2.default.green5,
+            borderColor: _colors2.default.green5
+        },
+
+        warning: {
+            color: _colors2.default.orange1,
+            backgroundColor: _colors2.default.orange5,
+            borderColor: _colors2.default.orange5
+        },
+
+        danger: {
+            color: _colors2.default.red1,
+            backgroundColor: _colors2.default.red5,
+            borderColor: _colors2.default.red5
         }
     }
 };
@@ -190,50 +339,80 @@ exports.default = DefaultTheme;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
-const white = exports.white = '#fff';
-const black = exports.black = '#000';
+/* eslint-disable */
 
-const yellow = exports.yellow = '#F8DC00';
-const lightYellow = exports.lightYellow = '#fce94f';
-const darkYellow = exports.darkYellow = '#c4a000';
+exports.default = {
+    white: '#ffffff',
+    black: '#000000',
 
-const orange = exports.orange = '#F8981D';
-const lightOrange = exports.lightOrange = '#f9aa45';
-const darkOrange = exports.darkOrange = '#db7e07';
+    gray1: '#7a8888',
+    gray2: '#adb8b9',
+    gray3: '#d0d6d7',
+    gray4: '#dce1e1',
+    gray5: '#eff1f1',
 
-const brown = exports.brown = '#B46F00';
-const lightBrown = exports.lightBrown = '#e9b96e';
-const darkBrown = exports.darkBrown = '#8f5902';
+    anthracite1: '#3b3f45',
+    anthracite2: '#707377',
+    anthracite3: '#b7b9bb',
+    anthracite4: '#c9cacc',
+    anthracite5: '#dbdcdd',
 
-const red = exports.red = '#E85657';
-const lightRed = exports.lightRed = '#ea6364';
-const darkRed = exports.darkRed = '#cc1c1d';
+    yellow1: '#ffd100',
+    yellow2: '#ffde08',
+    yellow3: '#fffa66',
+    yellow4: '#ffffb5',
+    yellow5: '#ffffcf',
 
-const purple = exports.purple = '#553445';
-const lightPurple = exports.lightPurple = '#5e3a4d';
-const darkPurple = exports.darkPurple = '#291921';
+    orange1: '#e59100',
+    orange2: '#f9bb00',
+    orange3: '#ffd761',
+    orange4: '#ffecb3',
+    orange5: '#fff2ce',
 
-const blue = exports.blue = '#38B8E2';
-const lightBlue = exports.lightBlue = '#5cc5e7';
-const darkBlue = exports.darkBlue = '#1c98c1';
+    brown1: '#965c00',
+    brown2: '#ba7200',
+    brown3: '#d3a65d',
+    brown4: '#dcbd8b',
+    brown5: '#ead7b9',
 
-const turquoise = exports.turquoise = '#00B6AD';
-const lightTurquoise = exports.lightTurquoise = '#00bbb2';
-const darkTurquoise = exports.darkTurquoise = '#00837d';
+    red1: '#d32f2f',
+    red2: '#f44336',
+    red3: '#f8877f',
+    red4: '#f9a7a1',
+    red5: '#ffcdd2',
 
-const green = exports.green = '#1D9650';
-const lightGreen = exports.lightGreen = '#1f9f55';
-const darkGreen = exports.darkGreen = '#156b39';
+    rose1: '#c2185b',
+    rose2: '#e91e63',
+    rose3: '#f06292',
+    rose4: '#f48caf',
+    rose5: '#f8bbd0',
 
-const gray = exports.gray = '#eee';
-const lightGray = exports.lightGray = '#f3f3f3';
-const darkGray = exports.darkGray = '#e4e4e4';
+    purple1: '#8e4ea7',
+    purple2: '#b46dd0',
+    purple3: '#ca99de',
+    purple4: '#d9b6e7',
+    purple5: '#e8d3f1',
 
-const anthracite = exports.anthracite = '#3B3F45';
-const lightAnthracite = exports.lightAnthracite = '#4e535b';
-const darkAnthracite = exports.darkAnthracite = '#23262a';
+    blue1: '#1976d2',
+    blue2: '#2196f3',
+    blue3: '#71bcf7',
+    blue4: '#97cef9',
+    blue5: '#c2e2fb',
+
+    turquoise1: '#009991',
+    turquoise2: '#00c6bc',
+    turquoise3: '#5cd7d1',
+    turquoise4: '#8be2de',
+    turquoise5: '#b9eeeb',
+
+    green1: '#388e3c',
+    green2: '#4caf50',
+    green3: '#7cc47f',
+    green4: '#9fd4a1',
+    green5: '#c8e6c9'
+};
 
 /***/ }),
 /* 6 */
@@ -252,7 +431,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -260,7 +439,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
@@ -268,8 +447,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+const contexts = ['info', 'success', 'warning', 'danger'];
+
+const colorsStyle = props => contexts.map(context => {
+    const colors = props.theme.alert[context];
+
+    return `
+        &.alert-${context} {
+            color: ${colors.color};
+            background-color: ${colors.backgroundColor};
+            border-color: ${colors.borderColor};
+        }
+    `;
+}).join('');
+
 const StyledDiv = _styledComponents2.default.div`
     border-radius: ${props => props.theme.borderRadius};
+    ${props => colorsStyle(props)}
 `;
 
 const Alert = (_ref) => {
@@ -287,11 +481,11 @@ const Alert = (_ref) => {
 };
 
 Alert.propTypes = {
-    context: _propTypes2.default.oneOf(['default', 'primary', 'info', 'success', 'warning', 'danger'])
+    context: _propTypes2.default.oneOf(contexts)
 };
 
 Alert.defaultProps = {
-    context: 'default'
+    context: 'info'
 };
 
 exports.default = Alert;
@@ -313,7 +507,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -321,7 +515,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
@@ -329,12 +523,43 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+const contexts = ['default', 'primary', 'info', 'success', 'warning', 'danger', 'link'];
+
+const colorsStyle = props => contexts.map(context => {
+    const colors = context === 'default' ? props.theme.form.button : props.theme.form.button[context];
+
+    return `
+        &.btn-${context} {
+            color: ${colors.color};
+            background-color: ${colors.backgroundColor};
+            border-color: ${colors.borderColor};
+
+            &:hover {
+                background-color: ${colors.hoverBackgroundColor};
+                border-color: ${colors.hoverBorderColor};
+            }
+
+            &:focus {
+                background-color: ${colors.focusBackgroundColor};
+                border-color: ${colors.focusBorderColor};
+            }
+
+            &:active, .active {
+                background-color: ${colors.activeBackgroundColor};
+                border-color: ${colors.activeBorderColor};
+            }
+        }
+    `;
+}).join('');
+
 const StyledButton = _styledComponents2.default.button`
-    border-radius: ${props => props.theme.form.input.borderRadius};
+    border-radius: ${props => props.theme.form.button.borderRadius};
+    ${props => colorsStyle(props)}
 `;
 
 const StyledAnchor = _styledComponents2.default.a`
-    border-radius: ${props => props.theme.form.input.borderRadius};
+    border-radius: ${props => props.theme.form.button.borderRadius};
+    ${colorsStyle}
 `;
 
 const Button = (_ref) => {
@@ -366,7 +591,7 @@ const Button = (_ref) => {
 
 Button.propTypes = {
     type: _propTypes2.default.string,
-    context: _propTypes2.default.oneOf(['default', 'primary', 'info', 'success', 'warning', 'danger', 'link']),
+    context: _propTypes2.default.oneOf(contexts),
     size: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs']),
     block: _propTypes2.default.bool,
     active: _propTypes2.default.bool,
@@ -399,11 +624,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
@@ -538,11 +763,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
@@ -556,16 +781,19 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const StyledTextArea = _styledComponents2.default.textarea`
     opacity: ${props => props.theme.form.input.opacity};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
-    border-radius: ${props => props.theme.form.input.borderRadius};
     resize: ${props => props.resize};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    border-color: ${props => props.theme.form.input.borderColor};
+    border-width: ${props => props.theme.form.input.borderWidth};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
 
     &:focus,
     &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusedOpacity};
-        background-color: ${props => props.theme.form.input.focusedBackgroundColor};
-        box-shadow: ${props => props.theme.form.input.focusedBoxShadow};
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
     }
 `;
 
@@ -627,11 +855,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _default = __webpack_require__(4);
 
@@ -706,9 +934,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(1);
+var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _classnames = __webpack_require__(3);
 
@@ -717,6 +949,44 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledDiv = _styledComponents2.default.div`
+    &.has-success {
+        .form-control {
+            background-color: ${props => props.theme.form.input.success.backgroundColor};
+            border-color: ${props => props.theme.form.input.success.borderColor};
+        }
+
+        .help-block {
+            background-color: ${props => props.theme.form.hint.success.backgroundColor};
+            color: ${props => props.theme.form.hint.success.color};
+        }
+    }
+
+    &.has-warning {
+        .form-control {
+            background-color: ${props => props.theme.form.input.warning.backgroundColor};
+            border-color: ${props => props.theme.form.input.warning.borderColor};
+        }
+
+        .help-block {
+            background-color: ${props => props.theme.form.hint.warning.backgroundColor};
+            color: ${props => props.theme.form.hint.warning.color};
+        }
+    }
+
+    &.has-error {
+        .form-control {
+            background-color: ${props => props.theme.form.input.error.backgroundColor};
+            border-color: ${props => props.theme.form.input.error.borderColor};
+        }
+
+        .help-block {
+            background-color: ${props => props.theme.form.hint.error.backgroundColor};
+            color: ${props => props.theme.form.hint.error.color};
+        }
+    }
+`;
 
 const FormGroup = (_ref) => {
     let {
@@ -729,7 +999,7 @@ const FormGroup = (_ref) => {
         [`has-${context}`]: context !== ''
     });
 
-    return _react2.default.createElement('div', _extends({ className: classes }, props));
+    return _react2.default.createElement(StyledDiv, _extends({ className: classes }, props));
 };
 
 FormGroup.propTypes = {
@@ -759,7 +1029,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = __webpack_require__(2);
+var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
