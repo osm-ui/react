@@ -22,8 +22,8 @@ export default {
     yellow4:       '#ffffb5',
     yellow5:       '#ffffcf',
 
-    orange1:       '#ffa000',
-    orange2:       '#ffc107',
+    orange1:       '#e59100',
+    orange2:       '#f9bb00',
     orange3:       '#ffd761',
     orange4:       '#ffecb3',
     orange5:       '#fff2ce',

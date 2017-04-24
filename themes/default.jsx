@@ -141,6 +141,34 @@ export const config = {
             errorColor: colors.white,
         },
     },
+    alert: {
+        backgroundColor: colors.gray5,
+        color: colors.anthracite2,
+
+        info: {
+            color: colors.turquoise1,
+            backgroundColor: colors.turquoise5,
+            borderColor: colors.turquoise5,
+        },
+
+        success: {
+            color: colors.green1,
+            backgroundColor: colors.green5,
+            borderColor: colors.green5,
+        },
+
+        warning: {
+            color: colors.orange1,
+            backgroundColor: colors.orange5,
+            borderColor: colors.orange5,
+        },
+
+        danger: {
+            color: colors.red1,
+            backgroundColor: colors.red5,
+            borderColor: colors.red5,
+        },
+    },
 };
 
 

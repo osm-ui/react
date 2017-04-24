@@ -4,8 +4,29 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 
 
+const contexts = [
+    'info',
+    'success',
+    'warning',
+    'danger',
+];
+
+const colorsStyle = props => contexts.map((context) => {
+    const colors = props.theme.alert[context];
+
+    return (`
+        &.alert-${context} {
+            color: ${colors.color};
+            background-color: ${colors.backgroundColor};
+            border-color: ${colors.borderColor};
+        }
+    `);
+}).join('');
+
+
 const StyledDiv = styled.div`
     border-radius: ${props => props.theme.borderRadius};
+    ${props => colorsStyle(props)}
 `;
 
 
@@ -25,19 +46,12 @@ const Alert = ({
 
 
 Alert.propTypes = {
-    context: PropTypes.oneOf([
-        'default',
-        'primary',
-        'info',
-        'success',
-        'warning',
-        'danger',
-    ]),
+    context: PropTypes.oneOf(contexts),
 };
 
 
 Alert.defaultProps = {
-    context: 'default',
+    context: 'info',
 };
 
 
