@@ -35,7 +35,7 @@ const colorsStyle = props => contexts.map((context) => {
                 border-color: ${colors.focusBorderColor};
             }
 
-            &:active {
+            &:active, .active {
                 background-color: ${colors.activeBackgroundColor};
                 border-color: ${colors.activeBorderColor};
             }
