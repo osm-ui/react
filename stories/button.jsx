@@ -8,7 +8,6 @@ import KnobsAlert from './knobsAlert';
 
 import DefaultTheme from '../themes/default';
 import {
-    Alert,
     Button,
 } from '../index';
 
