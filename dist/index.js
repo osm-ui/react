@@ -329,6 +329,8 @@ DefaultTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
+DefaultTheme.displayName = 'DefaultTheme';
+
 exports.default = DefaultTheme;
 
 /***/ }),
@@ -488,6 +490,8 @@ Alert.defaultProps = {
     context: 'info'
 };
 
+Alert.displayName = 'Alert';
+
 exports.default = Alert;
 
 /***/ }),
@@ -607,6 +611,8 @@ Button.defaultProps = {
     disabled: false
 };
 
+Button.displayName = 'Button';
+
 exports.default = Button;
 
 /***/ }),
@@ -700,7 +706,6 @@ class Column extends _react2.default.Component {
     }
 }
 
-exports.default = Column;
 Column.propTypes = {
     title: _propTypes2.default.string.isRequired,
     children: _propTypes2.default.element.isRequired,
@@ -714,6 +719,10 @@ Column.defaultProps = {
     width: 'very wide',
     animation: 'overlay'
 };
+
+Column.displayName = 'Column';
+
+exports.default = Column;
 
 /***/ }),
 /* 9 */
@@ -742,7 +751,11 @@ Form.propTypes = {};
 
 Form.defaultProps = {};
 
+Form.displayName = 'Form';
+
 Form.Group = _formGroup2.default;
+
+Form.Group.displayName = 'Form.Group';
 
 exports.default = Form;
 
@@ -835,6 +848,8 @@ Textarea.defaultProps = {
     resize: 'vertical'
 };
 
+Textarea.displayName = 'Textarea';
+
 exports.default = Textarea;
 
 /***/ }),
@@ -896,6 +911,8 @@ const RedTheme = (_ref) => {
 RedTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
+
+RedTheme.displayName = 'RedTheme';
 
 exports.default = RedTheme;
 
@@ -1010,6 +1027,8 @@ FormGroup.defaultProps = {
     context: ''
 };
 
+FormGroup.displayName = 'FormGroup';
+
 exports.default = FormGroup;
 
 /***/ }),
@@ -1044,6 +1063,8 @@ const StyledDiv = _styledComponents2.default.div`
 `;
 
 const InputHint = props => _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+
+InputHint.displayName = 'InputHint';
 
 exports.default = InputHint;
 
