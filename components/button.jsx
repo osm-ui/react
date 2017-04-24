@@ -4,37 +4,45 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 
 
-const colorsStyle = props => (`
-    &.btn-default {
-        background-color: ${props.theme.form.button.backgroundColor};
-        border-color: ${props.theme.form.button.borderColor};
-    }
+const contexts = [
+    'default',
+    'primary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'link',
+];
 
-    &.btn-primary {
-        background-color: ${props.theme.form.button.primaryBackgroundColor};
-        border-color: ${props.theme.form.button.primaryBorderColor};
-    }
+const colorsStyle = props => contexts.map((context) => {
+    const colors = context === 'default'
+        ? props.theme.form.button
+        : props.theme.form.button[context];
 
-    &.btn-success {
-        background-color: ${props.theme.form.button.successBackgroundColor};
-        border-color: ${props.theme.form.button.successBorderColor};
-    }
+    return (`
+        &.btn-${context} {
+            color: ${colors.color};
+            background-color: ${colors.backgroundColor};
+            border-color: ${colors.borderColor};
 
-    &.btn-info {
-        background-color: ${props.theme.form.button.infoBackgroundColor};
-        border-color: ${props.theme.form.button.infoBorderColor};
-    }
+            &:hover {
+                background-color: ${colors.hoverBackgroundColor};
+                border-color: ${colors.hoverBorderColor};
+            }
 
-    &.btn-warning {
-        background-color: ${props.theme.form.button.warningBackgroundColor};
-        border-color: ${props.theme.form.button.warningBorderColor};
-    }
+            &:focus {
+                background-color: ${colors.focusBackgroundColor};
+                border-color: ${colors.focusBorderColor};
+            }
 
-    &.btn-danger {
-        background-color: ${props.theme.form.button.dangerBackgroundColor};
-        border-color: ${props.theme.form.button.dangerBorderColor};
-    }
-`);
+            &:active {
+                background-color: ${colors.activeBackgroundColor};
+                border-color: ${colors.activeBorderColor};
+            }
+        }
+    `);
+}).join('');
+
 
 const StyledButton = styled.button`
     border-radius: ${props => props.theme.form.button.borderRadius};
@@ -79,15 +87,7 @@ const Button = ({
 
 Button.propTypes = {
     type: PropTypes.string,
-    context: PropTypes.oneOf([
-        'default',
-        'primary',
-        'info',
-        'success',
-        'warning',
-        'danger',
-        'link',
-    ]),
+    context: PropTypes.oneOf(contexts),
     size: PropTypes.oneOf([
         'lg',
         'md',

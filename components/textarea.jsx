@@ -15,10 +15,10 @@ const StyledTextArea = styled.textarea`
 
     &:focus,
     &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusedOpacity};
-        background-color: ${props => props.theme.form.input.focusedBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusedBorderColor};
-        box-shadow: ${props => props.theme.form.input.focusedBoxShadow};
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
     }
 `;
 
