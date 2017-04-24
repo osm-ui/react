@@ -8,8 +8,9 @@
   "private": false,
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -o docs",
-    "build": "cross-env NODE_ENV=production webpack --progress",
+    "build:storybook": "build-storybook -o docs",
+    "build:dist": "cross-env NODE_ENV=production webpack --progress",
+    "build": "npm run build:dist && npm run build:storybook",
     "lint": "eslint .",
     "pre-commit": "yarn run lint"
   },
