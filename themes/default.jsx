@@ -114,14 +114,20 @@ export const config = {
             focusBorderColor: colors.blue2,
             focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
 
-            successBackgroundColor: colors.white,
-            successBorderColor: colors.green2,
+            success: {
+                color: colors.green2,
+                backgroundColor: colors.white,
+            },
 
-            warningBackgroundColor: colors.white,
-            warningBorderColor: colors.orange2,
+            warning: {
+                color: colors.orange2,
+                backgroundColor: colors.white,
+            },
 
-            errorBackgroundColor: colors.white,
-            errorBorderColor: colors.red2,
+            error: {
+                color: colors.red2,
+                backgroundColor: colors.white,
+            },
         },
         hint: {
             fontSize: '0.9em',
@@ -131,14 +137,20 @@ export const config = {
             backgroundColor: colors.gray5,
             color: colors.anthracite2,
 
-            successBackgroundColor: colors.green2,
-            successColor: colors.white,
+            success: {
+                color: colors.white,
+                backgroundColor: colors.green2,
+            },
 
-            warningBackgroundColor: colors.orange2,
-            warningColor: colors.white,
+            warning: {
+                color: colors.white,
+                backgroundColor: colors.orange2,
+            },
 
-            errorBackgroundColor: colors.red2,
-            errorColor: colors.white,
+            error: {
+                color: colors.white,
+                backgroundColor: colors.red2,
+            },
         },
     },
     alert: {

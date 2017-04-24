@@ -7,37 +7,37 @@ import classnames from 'classnames';
 const StyledDiv = styled.div`
     &.has-success {
         .form-control {
-            background-color: ${props => props.theme.form.input.successBackgroundColor};
-            border-color: ${props => props.theme.form.input.successBorderColor};
+            background-color: ${props => props.theme.form.input.success.backgroundColor};
+            border-color: ${props => props.theme.form.input.success.borderColor};
         }
 
         .help-block {
-            background-color: ${props => props.theme.form.hint.successBackgroundColor};
-            color: ${props => props.theme.form.hint.successColor};
+            background-color: ${props => props.theme.form.hint.success.backgroundColor};
+            color: ${props => props.theme.form.hint.success.color};
         }
     }
 
     &.has-warning {
         .form-control {
-            background-color: ${props => props.theme.form.input.warningBackgroundColor};
-            border-color: ${props => props.theme.form.input.warningBorderColor};
+            background-color: ${props => props.theme.form.input.warning.backgroundColor};
+            border-color: ${props => props.theme.form.input.warning.borderColor};
         }
 
         .help-block {
-            background-color: ${props => props.theme.form.hint.warningBackgroundColor};
-            color: ${props => props.theme.form.hint.warningColor};
+            background-color: ${props => props.theme.form.hint.warning.backgroundColor};
+            color: ${props => props.theme.form.hint.warning.color};
         }
     }
 
     &.has-error {
         .form-control {
-            background-color: ${props => props.theme.form.input.errorBackgroundColor};
-            border-color: ${props => props.theme.form.input.errorBorderColor};
+            background-color: ${props => props.theme.form.input.error.backgroundColor};
+            border-color: ${props => props.theme.form.input.error.borderColor};
         }
 
         .help-block {
-            background-color: ${props => props.theme.form.hint.errorBackgroundColor};
-            color: ${props => props.theme.form.hint.errorColor};
+            background-color: ${props => props.theme.form.hint.error.backgroundColor};
+            color: ${props => props.theme.form.hint.error.color};
         }
     }
 `;
