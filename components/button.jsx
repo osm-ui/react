@@ -4,12 +4,46 @@ import classnames from 'classnames';
 import styled from 'styled-components';
 
 
+const colorsStyle = props => (`
+    &.btn-default {
+        background-color: ${props.theme.form.button.backgroundColor};
+        border-color: ${props.theme.form.button.borderColor};
+    }
+
+    &.btn-primary {
+        background-color: ${props.theme.form.button.primaryBackgroundColor};
+        border-color: ${props.theme.form.button.primaryBorderColor};
+    }
+
+    &.btn-success {
+        background-color: ${props.theme.form.button.successBackgroundColor};
+        border-color: ${props.theme.form.button.successBorderColor};
+    }
+
+    &.btn-info {
+        background-color: ${props.theme.form.button.infoBackgroundColor};
+        border-color: ${props.theme.form.button.infoBorderColor};
+    }
+
+    &.btn-warning {
+        background-color: ${props.theme.form.button.warningBackgroundColor};
+        border-color: ${props.theme.form.button.warningBorderColor};
+    }
+
+    &.btn-danger {
+        background-color: ${props.theme.form.button.dangerBackgroundColor};
+        border-color: ${props.theme.form.button.dangerBorderColor};
+    }
+`);
+
 const StyledButton = styled.button`
-    border-radius: ${props => props.theme.form.input.borderRadius};
+    border-radius: ${props => props.theme.form.button.borderRadius};
+    ${props => colorsStyle(props)}
 `;
 
 const StyledAnchor = styled.a`
-    border-radius: ${props => props.theme.form.input.borderRadius};
+    border-radius: ${props => props.theme.form.button.borderRadius};
+    ${colorsStyle}
 `;
 
 

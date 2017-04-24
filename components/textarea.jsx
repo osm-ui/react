@@ -6,15 +6,18 @@ import InputHint from './inputHint';
 
 const StyledTextArea = styled.textarea`
     opacity: ${props => props.theme.form.input.opacity};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
-    border-radius: ${props => props.theme.form.input.borderRadius};
     resize: ${props => props.resize};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    border-color: ${props => props.theme.form.input.borderColor};
+    border-width: ${props => props.theme.form.input.borderWidth};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
 
     &:focus,
     &.form-control:focus {
         opacity: ${props => props.theme.form.input.focusedOpacity};
         background-color: ${props => props.theme.form.input.focusedBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusedBorderColor};
         box-shadow: ${props => props.theme.form.input.focusedBoxShadow};
     }
 `;
