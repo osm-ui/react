@@ -18,7 +18,6 @@
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-addon-knobs": "^1.7.1",
-    "@kadira/storybook-addon-notes": "^1.0.1",
     "@kadira/storybook-addon-options": "^1.0.1",
     "@kadira/storybook-addons": "^1.6.1",
     "bootstrap": "^3.3.7",
