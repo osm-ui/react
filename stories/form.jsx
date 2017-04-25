@@ -10,7 +10,7 @@ import DefaultTheme from '../themes/default';
 import {
     Form,
     Textarea,
-} from '../components';
+} from '../index';
 
 
 storiesOf('Form', module)
