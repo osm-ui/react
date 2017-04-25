@@ -157,9 +157,6 @@ export const config = {
         },
     },
     alert: {
-        backgroundColor: colors.gray5,
-        color: colors.anthracite2,
-
         info: {
             color: colors.turquoise1,
             backgroundColor: colors.turquoise5,
