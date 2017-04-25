@@ -22,7 +22,7 @@ function loadStories() {
     require('../stories/button');
     require('../stories/alert');
     require('../stories/form');
-    // require('../stories/column');
+    require('../stories/column');
     require('../stories/map');
     /* eslint-enable */
 }

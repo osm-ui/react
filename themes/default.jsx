@@ -8,7 +8,7 @@ import colors from '../colors';
 export const config = {
     color: colors.anthracite1,
     backgroundColor: colors.white,
-    borderColor: colors.gray1,
+    borderColor: colors.gray4,
     dimmerBackgroundColor: colors.white,
     loaderColor: colors.gray1,
     borderStyle: 'solid',
