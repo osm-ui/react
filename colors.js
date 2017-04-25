@@ -1,20 +1,25 @@
+/**
+ * This file is a json representation of the palette.svg file.
+ * Thank you to not modify it without updating the svg reference.
+ */
+
 /* eslint-disable */
 
 export default {
     white:         '#ffffff',
     black:         '#000000',
 
-    gray1:         '#7a8888',
-    gray2:         '#adb8b9',
-    gray3:         '#d0d6d7',
-    gray4:         '#dce1e1',
-    gray5:         '#eff1f1',
-
     anthracite1:   '#3b3f45',
     anthracite2:   '#707377',
     anthracite3:   '#b7b9bb',
     anthracite4:   '#c9cacc',
     anthracite5:   '#dbdcdd',
+
+    gray1:         '#7a8888',
+    gray2:         '#adb8b9',
+    gray3:         '#d0d6d7',
+    gray4:         '#dce1e1',
+    gray5:         '#eff1f1',
 
     yellow1:       '#ffd100',
     yellow2:       '#ffde08',
