@@ -243,17 +243,20 @@ const config = exports.config = {
 
             success: {
                 color: _colors2.default.green2,
-                backgroundColor: _colors2.default.white
+                backgroundColor: _colors2.default.white,
+                borderColor: _colors2.default.green2
             },
 
             warning: {
                 color: _colors2.default.orange2,
-                backgroundColor: _colors2.default.white
+                backgroundColor: _colors2.default.white,
+                borderColor: _colors2.default.orange2
             },
 
             error: {
                 color: _colors2.default.red2,
-                backgroundColor: _colors2.default.white
+                backgroundColor: _colors2.default.white,
+                borderColor: _colors2.default.red2
             }
         },
         hint: {
@@ -451,17 +454,19 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const contexts = ['info', 'success', 'warning', 'danger'];
 
-const colorsStyle = props => contexts.map(context => {
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     const colors = props.theme.alert[context];
 
     return `
+        ${reducedStyles}
+
         &.alert-${context} {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
         }
     `;
-}).join('');
+});
 
 const StyledDiv = _styledComponents2.default.div`
     border-radius: ${props => props.theme.borderRadius};
@@ -529,10 +534,12 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const contexts = ['default', 'primary', 'info', 'success', 'warning', 'danger', 'link'];
 
-const colorsStyle = props => contexts.map(context => {
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     const colors = context === 'default' ? props.theme.form.button : props.theme.form.button[context];
 
     return `
+        ${reducedStyles}
+
         &.btn-${context} {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
@@ -554,7 +561,7 @@ const colorsStyle = props => contexts.map(context => {
             }
         }
     `;
-}).join('');
+});
 
 const StyledButton = _styledComponents2.default.button`
     border-radius: ${props => props.theme.form.button.borderRadius};
@@ -967,42 +974,35 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+const contexts = ['', 'success', 'warning', 'error'];
+
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
+    if (!context) {
+        return reducedStyles;
+    }
+
+    const controlColors = props.theme.form.input[context];
+    const hintColors = props.theme.form.hint[context];
+
+    return `
+        ${reducedStyles}
+
+        &.has-${context} {
+            .form-control {
+                background-color: ${controlColors.backgroundColor};
+                border-color: ${controlColors.borderColor};
+            }
+
+            .help-block {
+                background-color: ${hintColors.backgroundColor};
+                color: ${hintColors.color};
+            }
+        }
+    `;
+});
+
 const StyledDiv = _styledComponents2.default.div`
-    &.has-success {
-        .form-control {
-            background-color: ${props => props.theme.form.input.success.backgroundColor};
-            border-color: ${props => props.theme.form.input.success.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.success.backgroundColor};
-            color: ${props => props.theme.form.hint.success.color};
-        }
-    }
-
-    &.has-warning {
-        .form-control {
-            background-color: ${props => props.theme.form.input.warning.backgroundColor};
-            border-color: ${props => props.theme.form.input.warning.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.warning.backgroundColor};
-            color: ${props => props.theme.form.hint.warning.color};
-        }
-    }
-
-    &.has-error {
-        .form-control {
-            background-color: ${props => props.theme.form.input.error.backgroundColor};
-            border-color: ${props => props.theme.form.input.error.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.error.backgroundColor};
-            color: ${props => props.theme.form.hint.error.color};
-        }
-    }
+    ${props => colorsStyle(props)}
 `;
 
 const FormGroup = (_ref) => {
@@ -1020,7 +1020,7 @@ const FormGroup = (_ref) => {
 };
 
 FormGroup.propTypes = {
-    context: _propTypes2.default.string
+    context: _propTypes2.default.oneOf(contexts)
 };
 
 FormGroup.defaultProps = {
