@@ -23,7 +23,7 @@ storiesOf('Form', module)
         const placeholder = text('Placeholder', 'A placeholder');
         const hint = text('Hint', 'Hey there! I can help you filling that field!');
         const formGroupContext = select('Context', ['', 'success', 'warning', 'error']);
-        const resize = select('Resize', ['', 'none', 'vertical', 'horizontal'], 'vertical');
+        const resize = select('Resize', ['none', 'vertical', 'horizontal'], 'vertical');
         const disabled = boolean('Disabled');
         const rows = number('Rows', 6, {
             range: true,

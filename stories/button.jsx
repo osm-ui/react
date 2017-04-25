@@ -76,9 +76,9 @@ storiesOf('Button', module)
         const block = boolean('Block');
         const active = boolean('Active');
         const disabled = boolean('Disabled');
-        const size = select('Size', ['', 'lg', 'md', 'sm', 'xs'], 'md');
-        const context = select('Context', ['', 'default', 'info', 'primary', 'success', 'warning', 'danger'], 'default');
-        const type = select('Type', ['', 'button', 'submit', 'reset', 'anchor'], 'button');
+        const size = select('Size', ['lg', 'md', 'sm', 'xs'], 'md');
+        const context = select('Context', ['default', 'info', 'primary', 'success', 'warning', 'danger'], 'default');
+        const type = select('Type', ['button', 'submit', 'reset', 'anchor'], 'button');
 
         return (
             <DefaultTheme>
