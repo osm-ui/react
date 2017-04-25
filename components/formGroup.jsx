@@ -4,42 +4,41 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 
 
+const contexts = [
+    '',
+    'success',
+    'warning',
+    'error',
+];
+
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
+    if (!context) {
+        return reducedStyles;
+    }
+
+    const controlColors = props.theme.form.input[context];
+    const hintColors = props.theme.form.hint[context];
+
+    return (`
+        ${reducedStyles}
+
+        &.has-${context} {
+            .form-control {
+                background-color: ${controlColors.backgroundColor};
+                border-color: ${controlColors.borderColor};
+            }
+
+            .help-block {
+                background-color: ${hintColors.backgroundColor};
+                color: ${hintColors.color};
+            }
+        }
+    `);
+});
+
+
 const StyledDiv = styled.div`
-    &.has-success {
-        .form-control {
-            background-color: ${props => props.theme.form.input.success.backgroundColor};
-            border-color: ${props => props.theme.form.input.success.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.success.backgroundColor};
-            color: ${props => props.theme.form.hint.success.color};
-        }
-    }
-
-    &.has-warning {
-        .form-control {
-            background-color: ${props => props.theme.form.input.warning.backgroundColor};
-            border-color: ${props => props.theme.form.input.warning.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.warning.backgroundColor};
-            color: ${props => props.theme.form.hint.warning.color};
-        }
-    }
-
-    &.has-error {
-        .form-control {
-            background-color: ${props => props.theme.form.input.error.backgroundColor};
-            border-color: ${props => props.theme.form.input.error.borderColor};
-        }
-
-        .help-block {
-            background-color: ${props => props.theme.form.hint.error.backgroundColor};
-            color: ${props => props.theme.form.hint.error.color};
-        }
-    }
+    ${props => colorsStyle(props)}
 `;
 
 
@@ -59,7 +58,7 @@ const FormGroup = ({
 
 
 FormGroup.propTypes = {
-    context: PropTypes.string,
+    context: PropTypes.oneOf(contexts),
 };
 
 FormGroup.defaultProps = {

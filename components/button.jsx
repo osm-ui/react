@@ -14,12 +14,14 @@ const contexts = [
     'link',
 ];
 
-const colorsStyle = props => contexts.map((context) => {
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     const colors = context === 'default'
         ? props.theme.form.button
         : props.theme.form.button[context];
 
     return (`
+        ${reducedStyles}
+
         &.btn-${context} {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
@@ -41,7 +43,7 @@ const colorsStyle = props => contexts.map((context) => {
             }
         }
     `);
-}).join('');
+});
 
 
 const StyledButton = styled.button`

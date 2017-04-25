@@ -11,17 +11,19 @@ const contexts = [
     'danger',
 ];
 
-const colorsStyle = props => contexts.map((context) => {
+const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     const colors = props.theme.alert[context];
 
     return (`
+        ${reducedStyles}
+
         &.alert-${context} {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
         }
     `);
-}).join('');
+});
 
 
 const StyledDiv = styled.div`

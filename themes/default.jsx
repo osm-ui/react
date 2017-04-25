@@ -117,16 +117,19 @@ export const config = {
             success: {
                 color: colors.green2,
                 backgroundColor: colors.white,
+                borderColor: colors.green2,
             },
 
             warning: {
                 color: colors.orange2,
                 backgroundColor: colors.white,
+                borderColor: colors.orange2,
             },
 
             error: {
                 color: colors.red2,
                 backgroundColor: colors.white,
+                borderColor: colors.red2,
             },
         },
         hint: {
