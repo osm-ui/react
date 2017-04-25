@@ -34,7 +34,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             }
         }
     `);
-});
+}, '');
 
 
 const StyledDiv = styled.div`

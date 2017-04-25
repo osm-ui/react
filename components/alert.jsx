@@ -23,7 +23,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             border-color: ${colors.borderColor};
         }
     `);
-});
+}, '');
 
 
 const StyledDiv = styled.div`

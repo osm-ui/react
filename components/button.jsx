@@ -43,7 +43,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             }
         }
     `);
-});
+}, '');
 
 
 const StyledButton = styled.button`
