@@ -35,9 +35,9 @@ storiesOf('Column', module)
         const ThemeElement = themes[`${theme}Theme`];
 
         return (
-            <AppCanvas style={{ height: '80vh', border: '1px solid #ccc' }}>
-                <ThemeElement>
-                    <KnobsAlert />
+            <ThemeElement>
+                <KnobsAlert />
+                <AppCanvas style={{ height: '80vh', border: '1px solid #ccc' }}>
                     <h2>Application Content</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -66,7 +66,7 @@ storiesOf('Column', module)
                             ullamcorper efficitur eget interdum justo.
                         </p>
                     </Column>
-                </ThemeElement>
-            </AppCanvas>
+                </AppCanvas>
+            </ThemeElement>
         );
     });
