@@ -284,9 +284,6 @@ const config = exports.config = {
         }
     },
     alert: {
-        backgroundColor: _colors2.default.gray5,
-        color: _colors2.default.anthracite2,
-
         info: {
             color: _colors2.default.turquoise1,
             backgroundColor: _colors2.default.turquoise5,
@@ -466,7 +463,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             border-color: ${colors.borderColor};
         }
     `;
-});
+}, '');
 
 const StyledDiv = _styledComponents2.default.div`
     border-radius: ${props => props.theme.borderRadius};
@@ -561,7 +558,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             }
         }
     `;
-});
+}, '');
 
 const StyledButton = _styledComponents2.default.button`
     border-radius: ${props => props.theme.form.button.borderRadius};
@@ -999,7 +996,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             }
         }
     `;
-});
+}, '');
 
 const StyledDiv = _styledComponents2.default.div`
     ${props => colorsStyle(props)}
