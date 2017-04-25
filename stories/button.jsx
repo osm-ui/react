@@ -9,7 +9,7 @@ import KnobsAlert from './knobsAlert';
 import DefaultTheme from '../themes/default';
 import {
     Button,
-} from '../index';
+} from '../components';
 
 
 storiesOf('Button', module)

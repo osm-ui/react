@@ -8,7 +8,7 @@ import defaultHostOptions from './defaultHostOptions';
 import DefaultTheme from '../themes/default';
 import {
     Alert,
-} from '../index';
+} from '../components';
 
 
 storiesOf('Alert', module)
