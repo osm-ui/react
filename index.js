@@ -8,6 +8,7 @@ export DefaultTheme from './themes/default';
 export RedTheme from './themes/red';
 
 export AppCanvas from './components/appCanvas';
+export Loader from './components/loader';
 export Alert from './components/alert';
 export Button from './components/button';
 export Form from './components/form';

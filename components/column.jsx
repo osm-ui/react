@@ -2,19 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
+import FontAwesome from 'react-fontawesome';
+import Loader from './loader';
 
 
 const StyledAside = styled.aside`
-    position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.2s ease-out;
+    transition: all 0.25s ease-out;
 
     color: ${props => props.theme.color};
     background: ${props => props.theme.backgroundColor};
     border-color: ${props => props.theme.borderColor};
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
+
+    &.container-parent { position: absolute; }
+    &.container-root   { position: fixed; }
 
     &.xs { width: 150px; }
     &.sm { width: 250px; }
@@ -34,8 +38,63 @@ const StyledAside = styled.aside`
         border-left-width: ${props => props.theme.borderWidth};
     }
 
+    &.left.maximized,
+    &.right.maximized {
+        border-width: 0;
+    }
+
     &.visible {
         transform: translate(0, 0);
+    }
+
+    .back-btn,
+    .close-btn {
+        color: ${props => props.theme.controlColor};
+        background: transparent;
+        border-width: 0;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+
+        &:hover {
+            color: ${props => props.theme.hoverControlColor};
+        }
+    }
+
+    .back-btn {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .close-btn {
+        float: right;
+        margin-left: 5px;
+    }
+
+    .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0 30px;
+    }
+
+    .content {
+        position: relative;
+        padding: 10px 20px;
+    }
+
+    .content.loading {
+        visibility: hidden;
+    }
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        margin-top: -25px;
+        text-align: center;
+        visibility: visible;
     }
 `;
 
@@ -76,32 +135,45 @@ class Column extends React.Component {
         const {
             title,
             children,
-            // loading,
+            loading,
+            loaderLabel,
             position,
             width,
             maximized,
+            container,
             ...rest
         } = this.props;
 
-        const classes = classnames({
+        const asideClasses = classnames({
             'form-group': true,
             [position]: true,
             [width]: true,
             visible: this.state.visible,
             maximized,
+            [`container-${container}`]: true,
+        });
+
+        const contentClasses = classnames({
+            content: true,
+            loading,
         });
 
         return (
-            <StyledAside className={classes} {...rest}>
-                <h2 className="title">{title}</h2>
-                <button className="back-btn" onClick={() => this._handleBackClick()}>
-                    <i className="fa fa-chevron-left" />
-                </button>
+            <StyledAside className={asideClasses} {...rest}>
+                {this.props.onBack && (
+                    <button className="back-btn" onClick={() => this._handleBackClick()}>
+                        <FontAwesome name="chevron-left" size="lg" />
+                    </button>
+                )}
                 <button className="close-btn" onClick={() => this._handleCloseClick()}>
-                    <i className="fa fa-close" />
+                    <FontAwesome name="close" size="lg" />
                 </button>
-                <div className="content">
+                <div className="clearfix" />
+
+                <div className={contentClasses}>
+                    {title && <h2 className="title">{title}</h2>}
                     {children}
+                    {loading && <Loader className="loader" label={loaderLabel} />}
                 </div>
             </StyledAside>
         );
@@ -110,27 +182,38 @@ class Column extends React.Component {
 
 
 Column.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     children: PropTypes.element.isRequired,
     visible: PropTypes.bool,
-    // loading: PropTypes.bool,
+    loading: PropTypes.bool,
+    loaderLabel: PropTypes.node,
     position: PropTypes.oneOf(['left', 'right']),
+    // animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
+    // show-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
+    // close-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
     width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: PropTypes.bool,
+    container: PropTypes.oneOf(['parent', 'root']),
     onClose: PropTypes.func,
     onBack: PropTypes.func,
     onMaximize: PropTypes.func,
 };
 
 Column.defaultProps = {
+    title: '',
     visible: false,
-    // loading: false,
+    loading: false,
+    loaderLabel: '',
     position: 'left',
+    // animation: 'linear',
+    // show-animation: 'linear',
+    // close-animation: 'linear',
     width: 'md',
     maximized: false,
+    container: 'parent',
     onClose: () => {},
-    onBack: () => {},
-    onMaximize: () => {},
+    onBack: null,
+    onMaximize: null,
 };
 
 Column.displayName = 'Column';

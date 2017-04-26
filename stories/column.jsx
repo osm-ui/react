@@ -9,9 +9,9 @@ import KnobsAlert from './knobsAlert';
 import {
     DefaultTheme,
     RedTheme,
-    AppCanvas,
     Column,
 } from '../index';
+import FakeApp from '../components/fakeApp';
 
 
 storiesOf('Column', module)
@@ -20,13 +20,119 @@ storiesOf('Column', module)
         ...defaultHostOptions,
         title: 'Column',
     }))
-    .addWithInfo('Default state', () => {
+    .addWithInfo('Default state', () => (
+        <DefaultTheme>
+            <FakeApp>
+                <Column
+                    visible
+                    title="A column title"
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam non cursus purus. Nullam vehicula,
+                        quam in rhoncus convallis, ligula est pellentesque quam,
+                        ut venenatis ex lorem vitae est.
+                        Etiam iaculis ante non orci euismod molestie.
+                        Phasellus non diam massa. Donec non enim nec dolor
+                        ullamcorper efficitur eget interdum justo.
+                    </p>
+                </Column>
+            </FakeApp>
+        </DefaultTheme>
+    ))
+    .addWithInfo('With a theme', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    visible
+                    title="A column title"
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam non cursus purus. Nullam vehicula,
+                        quam in rhoncus convallis, ligula est pellentesque quam,
+                        ut venenatis ex lorem vitae est.
+                        Etiam iaculis ante non orci euismod molestie.
+                        Phasellus non diam massa. Donec non enim nec dolor
+                        ullamcorper efficitur eget interdum justo.
+                    </p>
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('Loading', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    visible
+                    title="A column title"
+                    loading
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam non cursus purus. Nullam vehicula,
+                        quam in rhoncus convallis, ligula est pellentesque quam,
+                        ut venenatis ex lorem vitae est.
+                        Etiam iaculis ante non orci euismod molestie.
+                        Phasellus non diam massa. Donec non enim nec dolor
+                        ullamcorper efficitur eget interdum justo.
+                    </p>
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('On the right', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    visible
+                    title="A column title"
+                    position="right"
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam non cursus purus. Nullam vehicula,
+                        quam in rhoncus convallis, ligula est pellentesque quam,
+                        ut venenatis ex lorem vitae est.
+                        Etiam iaculis ante non orci euismod molestie.
+                        Phasellus non diam massa. Donec non enim nec dolor
+                        ullamcorper efficitur eget interdum justo.
+                    </p>
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('Larger', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    visible
+                    title="A column title"
+                    position="right"
+                    width="lg"
+                >
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aliquam non cursus purus. Nullam vehicula,
+                        quam in rhoncus convallis, ligula est pellentesque quam,
+                        ut venenatis ex lorem vitae est.
+                        Etiam iaculis ante non orci euismod molestie.
+                        Phasellus non diam massa. Donec non enim nec dolor
+                        ullamcorper efficitur eget interdum justo.
+                    </p>
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('Playground', () => {
         const title = text('Title', 'A column title');
         const position = select('Position', ['left', 'right'], 'left');
         const width = select('Width', ['xs', 'sm', 'md', 'lg'], 'md');
-        const maximized = boolean('Maximized');
+        const container = select('Container', ['parent', 'root'], 'parent');
         const visible = boolean('Visible', true);
         const loading = boolean('Loading');
+        const loaderLabel = text('Loader label');
+        const maximized = boolean('Maximized');
         const theme = select('Theme', ['Default', 'Red'], 'Red');
         const themes = {
             DefaultTheme,
@@ -37,24 +143,16 @@ storiesOf('Column', module)
         return (
             <ThemeElement>
                 <KnobsAlert />
-                <AppCanvas style={{ height: '80vh', border: '1px solid #ccc' }}>
-                    <h2>Application Content</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                <FakeApp>
                     <Column
                         title={title}
                         visible={visible}
                         loading={loading}
+                        loaderLabel={loaderLabel}
                         position={position}
                         width={width}
                         maximized={maximized}
+                        container={container}
                         onClose={action('onClose')}
                         onBack={action('onBack')}
                         onMaximize={action('onMaximize')}
@@ -69,7 +167,7 @@ storiesOf('Column', module)
                             ullamcorper efficitur eget interdum justo.
                         </p>
                     </Column>
-                </AppCanvas>
+                </FakeApp>
             </ThemeElement>
         );
     });
