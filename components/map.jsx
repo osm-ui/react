@@ -1,9 +1,8 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Map as LeafletMap } from 'react-leaflet';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.css';
-import 'font-awesome/css/font-awesome.css';
 import 'leaflet.locatecontrol';
 
 
@@ -20,7 +19,7 @@ class Map extends LeafletMap {
 
 Map.propTypes = {
     ...LeafletMap.propTypes,
-    locate: React.PropTypes.bool,
+    locate: PropTypes.bool,
 };
 
 
