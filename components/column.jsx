@@ -1,21 +1,100 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
+import FontAwesome from 'react-fontawesome';
+import Loader from './loader';
 
 
-const StyledSidebar = styled.aside`
+const StyledAside = styled.aside`
+    top: 0;
+    height: 100%;
+    transition: all 0.25s ease-out;
+
     color: ${props => props.theme.color};
     background: ${props => props.theme.backgroundColor};
     border-color: ${props => props.theme.borderColor};
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
 
-    .left {
+    &.container-parent { position: absolute; }
+    &.container-root   { position: fixed; }
+
+    &.xs { width: 150px; }
+    &.sm { width: 250px; }
+    &.md { width: 400px; }
+    &.lg { width: 600px; }
+    &.maximized { width: 100%; }
+
+    &.left {
+        left: 0;
+        transform: translate(-150%, 0);
         border-right-width: ${props => props.theme.borderWidth};
     }
 
-    .right {
+    &.right {
+        right: 0;
+        transform: translate(150%, 0);
         border-left-width: ${props => props.theme.borderWidth};
+    }
+
+    &.left.maximized,
+    &.right.maximized {
+        border-width: 0;
+    }
+
+    &.visible {
+        transform: translate(0, 0);
+    }
+
+    .back-btn,
+    .close-btn {
+        color: ${props => props.theme.controlColor};
+        background: transparent;
+        border-width: 0;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+
+        &:hover {
+            color: ${props => props.theme.hoverControlColor};
+        }
+    }
+
+    .back-btn {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .close-btn {
+        float: right;
+        margin-left: 5px;
+    }
+
+    .title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0 30px;
+    }
+
+    .content {
+        position: relative;
+        padding: 10px 20px;
+    }
+
+    .content.loading {
+        visibility: hidden;
+    }
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        margin-top: -25px;
+        text-align: center;
+        visibility: visible;
     }
 `;
 
@@ -29,57 +108,112 @@ class Column extends React.Component {
         };
     }
 
-    componentWillReceiveProps(props) {
+    componentWillReceiveProps(nextProps) {
         this.setState({
-            visible: props.visible,
+            visible: nextProps.visible,
         });
+
+        if (this.props.maximized !== nextProps.maximized) {
+            this.props.onMaximize();
+        }
+
+        if (this.props.visible !== nextProps.visible && nextProps.visible === false) {
+            this.props.onClose();
+        }
     }
 
-    handleCloseClick() {
-        this.setState({
-            visible: !this.state.visible,
-        });
+    _handleBackClick() {
+        this.props.onBack();
+    }
+
+    _handleCloseClick() {
+        this.setState({ visible: false });
+        this.props.onClose();
     }
 
     render() {
         const {
             title,
-            loading,
             children,
-            visible,
+            loading,
+            loaderLabel,
+            position,
+            width,
+            maximized,
+            container,
             ...rest
         } = this.props;
 
-        return ({
-            // <StyledSidebar as={Segment} visible={this.state.visible} basic {...rest}>
-            //     <Button.Group>
-            //         <Header as="h2">{title}</Header>
-            //         <Button attached="right" onClick={() => this.handleCloseClick()}>
-            //             <Icon name="close" />
-            //         </Button>
-            //     </Button.Group>
-            //     <Divider hidden />
-            //     <Segment basic compact loading={loading} className="content">
-            //         {children}
-            //     </Segment>
-            // </StyledSidebar>
+        const asideClasses = classnames({
+            'form-group': true,
+            [position]: true,
+            [width]: true,
+            visible: this.state.visible,
+            maximized,
+            [`container-${container}`]: true,
         });
+
+        const contentClasses = classnames({
+            content: true,
+            loading,
+        });
+
+        return (
+            <StyledAside className={asideClasses} {...rest}>
+                {this.props.onBack && (
+                    <button className="back-btn" onClick={() => this._handleBackClick()}>
+                        <FontAwesome name="chevron-left" size="lg" />
+                    </button>
+                )}
+                <button className="close-btn" onClick={() => this._handleCloseClick()}>
+                    <FontAwesome name="close" size="lg" />
+                </button>
+                <div className="clearfix" />
+
+                <div className={contentClasses}>
+                    {title && <h2 className="title">{title}</h2>}
+                    {children}
+                    {loading && <Loader className="loader" label={loaderLabel} />}
+                </div>
+            </StyledAside>
+        );
     }
 }
 
 
 Column.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     children: PropTypes.element.isRequired,
-    loading: PropTypes.bool,
     visible: PropTypes.bool,
+    loading: PropTypes.bool,
+    loaderLabel: PropTypes.node,
+    position: PropTypes.oneOf(['left', 'right']),
+    // animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
+    // show-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
+    // close-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
+    width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+    maximized: PropTypes.bool,
+    container: PropTypes.oneOf(['parent', 'root']),
+    onClose: PropTypes.func,
+    onBack: PropTypes.func,
+    onMaximize: PropTypes.func,
 };
 
 Column.defaultProps = {
-    loading: false,
+    title: '',
     visible: false,
-    width: 'very wide',
-    animation: 'overlay',
+    loading: false,
+    loaderLabel: '',
+    position: 'left',
+    // animation: 'linear',
+    // show-animation: 'linear',
+    // close-animation: 'linear',
+    width: 'md',
+    maximized: false,
+    container: 'parent',
+    onClose: () => {},
+    onBack: null,
+    onMaximize: null,
 };
 
 Column.displayName = 'Column';

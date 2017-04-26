@@ -20,55 +20,54 @@ storiesOf('Button', module)
     }))
     .addWithInfo('Context', () => (
         <DefaultTheme>
-            <Button context="default" onClick={action('onClick')}>Default</Button>
+            <Button context="default" onClick={action('onClick default')}>Default</Button>
             {' '}
-            <Button context="primary" onClick={action('onClick')}>Primary</Button>
+            <Button context="primary" onClick={action('onClick primary')}>Primary</Button>
             {' '}
-            <Button context="success" onClick={action('onClick')}>Success</Button>
+            <Button context="success" onClick={action('onClick success')}>Success</Button>
             {' '}
-            <Button context="info" onClick={action('onClick')}>Info</Button>
+            <Button context="info" onClick={action('onClick info')}>Info</Button>
             {' '}
-            <Button context="warning" onClick={action('onClick')}>Warning</Button>
+            <Button context="warning" onClick={action('onClick warning')}>Warning</Button>
             {' '}
-            <Button context="danger" onClick={action('onClick')}>Danger</Button>
+            <Button context="danger" onClick={action('onClick danger')}>Danger</Button>
             {' '}
-            <Button context="link" onClick={action('onClick')}>Link</Button>
+            <Button context="link" onClick={action('onClick link')}>Link</Button>
         </DefaultTheme>
     ))
     .addWithInfo('Types', () => (
         <DefaultTheme>
-            <Button type="button" onClick={action('onClick')}>Button (default)</Button>
+            <Button type="button" onClick={action('onClick button')}>Button (default)</Button>
             {' '}
-            <Button type="submit" onClick={action('onClick')}>Submit button</Button>
+            <Button type="submit" onClick={action('onClick submit')}>Submit button</Button>
             {' '}
-            <Button type="reset" onClick={action('onClick')}>Reset button</Button>
+            <Button type="reset" onClick={action('onClick reset')}>Reset button</Button>
             {' '}
-            <Button type="anchor" href="#" onClick={action('onClick')}>Anchor button</Button>
+            <Button type="anchor" href="#" onClick={action('onClick anchor')}>Anchor button</Button>
         </DefaultTheme>
     ))
     .addWithInfo('Sizes', () => (
         <DefaultTheme>
-            <Button size="lg" onClick={action('onClick')}>Large button</Button>
+            <Button size="lg" onClick={action('onClick lg')}>Large button</Button>
             {' '}
-            <Button size="md" onClick={action('onClick')}>Medium button (default)</Button>
+            <Button size="md" onClick={action('onClick md')}>Medium button (default)</Button>
             {' '}
-            <Button size="sm" onClick={action('onClick')}>Small button</Button>
+            <Button size="sm" onClick={action('onClick sm')}>Small button</Button>
             {' '}
-            <Button size="xs" onClick={action('onClick')}>Extra small button</Button>
+            <Button size="xs" onClick={action('onClick xs')}>Extra small button</Button>
         </DefaultTheme>
     ))
     .addWithInfo('Block', () => (
         <DefaultTheme>
-            <Button block size="lg" context="primary" onClick={action('onClick')}>Block level button</Button>
-            {' '}
-            <Button block size="lg" onClick={action('onClick')}>Block level button</Button>
+            <Button block size="lg" context="primary" onClick={action('onClick primary')}>Block level button</Button>
+            <Button block size="lg" onClick={action('onClick default')}>Block level button</Button>
         </DefaultTheme>
     ))
     .addWithInfo('States', () => (
         <DefaultTheme>
             <Button active onClick={action('onClick')}>Active</Button>
             {' '}
-            <Button disabled onClick={action('onClick')}>Disabled</Button>
+            <Button disabled>Disabled</Button>
         </DefaultTheme>
     ))
     .addWithInfo('Playground', () => {

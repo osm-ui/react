@@ -1,20 +1,22 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import colors from '../colors';
 
 
 export const config = {
+    font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
     color: colors.anthracite1,
     backgroundColor: colors.white,
-    borderColor: colors.gray1,
+    borderColor: colors.gray4,
     dimmerBackgroundColor: colors.white,
     loaderColor: colors.gray1,
     borderStyle: 'solid',
     borderWidth: '4px',
     borderRadius: 0,
-    dividerColor: colors.gray3,
+    controlColor: colors.gray4,
+    hoverControlColor: colors.gray1,
 
     form: {
         button: {
@@ -184,11 +186,16 @@ export const config = {
 };
 
 
+export const StyledDiv = styled.div`
+    font-family: ${props => props.theme.font};
+    font-size: 16px;
+`;
+
 const DefaultTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config} {...rest}>
-        <div>
+        <StyledDiv>
             {children}
-        </div>
+        </StyledDiv>
     </ThemeProvider>
 );
 
