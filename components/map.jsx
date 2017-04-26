@@ -8,25 +8,25 @@ import 'leaflet.locatecontrol';
 
 
 class Map extends LeafletMap {
-	componentDidMount() {
-		super.componentDidMount();
-		
-		if(this.props.locate === true) {
-			L.control.locate().addTo(this.leafletElement);
-		}
-	}
+    componentDidMount() {
+        super.componentDidMount();
+
+        if (this.props.locate === true) {
+            L.control.locate().addTo(this.leafletElement);
+        }
+    }
 }
 
 
 Map.propTypes = {
     ...LeafletMap.propTypes,
-	locate: React.PropTypes.bool
+    locate: React.PropTypes.bool,
 };
 
 
 Map.defaultProps = {
     ...LeafletMap.defaultProps,
-	locate: false
+    locate: false,
 };
 
 Map.displayName = 'Map';
