@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
 import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs';
 
@@ -55,6 +55,9 @@ storiesOf('Column', module)
                         position={position}
                         width={width}
                         maximized={maximized}
+                        onClose={action('onClose')}
+                        onBack={action('onBack')}
+                        onMaximize={action('onMaximize')}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

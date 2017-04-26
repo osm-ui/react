@@ -16,25 +16,11 @@ const StyledAside = styled.aside`
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
 
-    &.xs {
-        width: 150px;
-    }
-
-    &.sm {
-        width: 250px;
-    }
-
-    &.md {
-        width: 400px;
-    }
-
-    &.lg {
-        width: 600px;
-    }
-
-    &.maximized {
-        width: 100%;
-    }
+    &.xs { width: 150px; }
+    &.sm { width: 250px; }
+    &.md { width: 400px; }
+    &.lg { width: 600px; }
+    &.maximized { width: 100%; }
 
     &.left {
         left: 0;
@@ -54,38 +40,73 @@ const StyledAside = styled.aside`
 `;
 
 
-const Column = (props) => {
-    const {
-        title,
-        children,
-        visible,
-        // loading,
-        position,
-        width,
-        maximized,
-        ...rest
-    } = props;
+class Column extends React.Component {
+    constructor(props) {
+        super(props);
 
-    const classes = classnames({
-        'form-group': true,
-        [position]: true,
-        [width]: true,
-        visible,
-        maximized,
-    });
+        this.state = {
+            visible: props.visible,
+        };
+    }
 
-    return (
-        <StyledAside className={classes} {...rest}>
-            <h2>{title}</h2>
-            <button onClick={() => this.handleCloseClick()}>
-                <i className="fa fa-close" />
-            </button>
-            <div className="content">
-                {children}
-            </div>
-        </StyledAside>
-    );
-};
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            visible: nextProps.visible,
+        });
+
+        if (this.props.maximized !== nextProps.maximized) {
+            this.props.onMaximize();
+        }
+
+        if (this.props.visible !== nextProps.visible && nextProps.visible === false) {
+            this.props.onClose();
+        }
+    }
+
+    _handleBackClick() {
+        this.props.onBack();
+    }
+
+    _handleCloseClick() {
+        this.setState({ visible: false });
+        this.props.onClose();
+    }
+
+    render() {
+        const {
+            title,
+            children,
+            // loading,
+            position,
+            width,
+            maximized,
+            ...rest
+        } = this.props;
+
+        const classes = classnames({
+            'form-group': true,
+            [position]: true,
+            [width]: true,
+            visible: this.state.visible,
+            maximized,
+        });
+
+        return (
+            <StyledAside className={classes} {...rest}>
+                <h2 className="title">{title}</h2>
+                <button className="back-btn" onClick={() => this._handleBackClick()}>
+                    <i className="fa fa-chevron-left" />
+                </button>
+                <button className="close-btn" onClick={() => this._handleCloseClick()}>
+                    <i className="fa fa-close" />
+                </button>
+                <div className="content">
+                    {children}
+                </div>
+            </StyledAside>
+        );
+    }
+}
 
 
 Column.propTypes = {
@@ -96,6 +117,9 @@ Column.propTypes = {
     position: PropTypes.oneOf(['left', 'right']),
     width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: PropTypes.bool,
+    onClose: PropTypes.func,
+    onBack: PropTypes.func,
+    onMaximize: PropTypes.func,
 };
 
 Column.defaultProps = {
@@ -104,6 +128,9 @@ Column.defaultProps = {
     position: 'left',
     width: 'md',
     maximized: false,
+    onClose: () => {},
+    onBack: () => {},
+    onMaximize: () => {},
 };
 
 Column.displayName = 'Column';
