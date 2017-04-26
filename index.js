@@ -2,6 +2,8 @@ import 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import 'font-awesome/css/font-awesome.min.css';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet.locatecontrol/dist/L.Control.Locate.css';
 
 
 export DefaultTheme from './themes/default';
