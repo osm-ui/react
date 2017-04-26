@@ -1,6 +1,7 @@
 import 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
+import 'font-awesome/css/font-awesome.min.css';
 
 
 export DefaultTheme from './themes/default';
