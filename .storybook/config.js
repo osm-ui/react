@@ -18,9 +18,13 @@ setOptions({
 
 function loadStories() {
     /* eslint-disable */
+    require('../stories/introduction');
     require('../stories/button');
+    require('../stories/alert');
+    require('../stories/form');
+    require('../stories/loader');
+    require('../stories/column');
     require('../stories/map');
-    require('../stories/textarea');
     /* eslint-enable */
 }
 

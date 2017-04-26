@@ -29,5 +29,6 @@ Map.defaultProps = {
 	locate: false
 };
 
+Map.displayName = 'Map';
 
 export default Map;
