@@ -20,8 +20,6 @@ export const config = {
 
     form: {
         button: {
-            borderRadius: 0,
-
             backgroundColor: colors.white,
             borderColor: colors.gray3,
             hoverBackgroundColor: colors.gray5,

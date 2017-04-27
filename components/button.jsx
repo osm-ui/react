@@ -47,12 +47,10 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 
 
 const StyledButton = styled.button`
-    border-radius: ${props => props.theme.form.button.borderRadius};
     ${props => colorsStyle(props)}
 `;
 
 const StyledAnchor = styled.a`
-    border-radius: ${props => props.theme.form.button.borderRadius};
     ${colorsStyle}
 `;
 
