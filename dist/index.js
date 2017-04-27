@@ -237,8 +237,6 @@ const config = exports.config = {
 
     form: {
         button: {
-            borderRadius: 0,
-
             backgroundColor: _colors2.default.white,
             borderColor: _colors2.default.gray3,
             hoverBackgroundColor: _colors2.default.gray5,
@@ -701,12 +699,10 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 }, '');
 
 const StyledButton = _styledComponents2.default.button`
-    border-radius: ${props => props.theme.form.button.borderRadius};
     ${props => colorsStyle(props)}
 `;
 
 const StyledAnchor = _styledComponents2.default.a`
-    border-radius: ${props => props.theme.form.button.borderRadius};
     ${colorsStyle}
 `;
 
@@ -802,7 +798,9 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const StyledAside = _styledComponents2.default.aside`
     top: 0;
+    max-width: 100%;
     height: 100%;
+    overflow-y: auto;
     transition: all 0.25s ease-out;
 
     color: ${props => props.theme.color};
@@ -874,11 +872,11 @@ const StyledAside = _styledComponents2.default.aside`
 
     .content {
         position: relative;
-        padding: 10px 20px;
+        padding: 20px;
     }
 
     .content.loading {
-        visibility: hidden;
+        display: none;
     }
 
     .loader {
@@ -963,7 +961,6 @@ class Column extends _react2.default.Component {
               rest = _objectWithoutProperties(_props, ['title', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container']);
 
         const asideClasses = (0, _classnames2.default)({
-            'form-group': true,
             [position]: true,
             [width]: true,
             opened: this.state.opened,
@@ -998,9 +995,9 @@ class Column extends _react2.default.Component {
                     { className: 'title' },
                     title
                 ),
-                children,
-                loading && _react2.default.createElement(_loader2.default, { className: 'loader', label: loaderLabel })
-            )
+                children
+            ),
+            loading && _react2.default.createElement(_loader2.default, { className: 'loader', label: loaderLabel })
         );
     }
 }
