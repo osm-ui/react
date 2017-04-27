@@ -85,7 +85,7 @@ const StyledAside = styled.aside`
     }
 
     .content.loading {
-        visibility: hidden;
+        display: none;
     }
 
     .loader {
@@ -199,8 +199,8 @@ class Column extends React.Component {
                 <div className={contentClasses}>
                     {title && <h2 className="title">{title}</h2>}
                     {children}
-                    {loading && <Loader className="loader" label={loaderLabel} />}
                 </div>
+                {loading && <Loader className="loader" label={loaderLabel} />}
             </StyledAside>
         );
     }
