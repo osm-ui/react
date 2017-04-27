@@ -153,9 +153,11 @@ storiesOf('Column', module)
                         width={width}
                         maximized={maximized}
                         container={container}
+                        onOpen={action('onOpen')}
                         onClose={action('onClose')}
                         onBack={action('onBack')}
                         onMaximize={action('onMaximize')}
+                        onUnmaximize={action('onUnmaximize')}
                     >
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

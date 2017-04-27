@@ -108,27 +108,53 @@ class Column extends React.Component {
         };
     }
 
+    componentDidMount() {
+        if (this.props.opened === true) {
+            this._triggerCallback('onOpen');
+        }
+
+        if (this.props.maximized === true) {
+            this.props.onMaximize();
+        }
+    }
+
     componentWillReceiveProps(nextProps) {
         this.setState({
             opened: nextProps.opened,
         });
 
-        if (this.props.maximized !== nextProps.maximized) {
-            this.props.onMaximize();
+        if (this.props.opened !== nextProps.opened) {
+            if (nextProps.opened === true) {
+                this._triggerCallback('onOpen');
+            }
+            else {
+                this._triggerCallback('onClose');
+            }
         }
 
-        if (this.props.opened !== nextProps.opened && nextProps.opened === false) {
-            this.props.onClose();
+        if (this.props.maximized !== nextProps.maximized) {
+            if (nextProps.maximized === true) {
+                this._triggerCallback('onMaximize');
+            }
+            else {
+                this._triggerCallback('onUnmaximize');
+            }
+        }
+    }
+
+    _triggerCallback(name) {
+        if (this.props[name] !== null) {
+            this.props[name]();
         }
     }
 
     _handleBackClick() {
-        this.props.onBack();
+        this._triggerCallback('onBack');
     }
 
     _handleCloseClick() {
         this.setState({ opened: false });
-        this.props.onClose();
+        this._triggerCallback('onClose');
     }
 
     render() {
@@ -194,9 +220,11 @@ Column.propTypes = {
     width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: PropTypes.bool,
     container: PropTypes.oneOf(['parent', 'root']),
+    onOpen: PropTypes.func,
     onClose: PropTypes.func,
     onBack: PropTypes.func,
     onMaximize: PropTypes.func,
+    onUnmaximize: PropTypes.func,
 };
 
 Column.defaultProps = {
@@ -211,9 +239,11 @@ Column.defaultProps = {
     width: 'md',
     maximized: false,
     container: 'parent',
-    onClose: () => {},
+    onOpen: null,
+    onClose: null,
     onBack: null,
     onMaximize: null,
+    onUnmaximize: null,
 };
 
 Column.displayName = 'Column';
