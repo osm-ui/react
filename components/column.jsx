@@ -82,7 +82,7 @@ const StyledAside = styled.aside`
 
     .content {
         position: relative;
-        padding: 15px 20px;
+        padding: 20px;
     }
 
     .content.loading {
