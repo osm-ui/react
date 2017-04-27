@@ -28,7 +28,7 @@ storiesOf('Column', module)
                     opened
                     title="A column title"
                 >
-                    <Lorem count={1} />
+                    <Lorem count={2} />
                 </Column>
             </FakeApp>
         </DefaultTheme>
@@ -40,7 +40,7 @@ storiesOf('Column', module)
                     opened
                     title="A column title"
                 >
-                    <Lorem count={1} />
+                    <Lorem count={2} />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -65,7 +65,7 @@ storiesOf('Column', module)
                     title="A column title"
                     loading
                 >
-                    <Lorem />
+                    <Lorem count={2} />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -78,7 +78,7 @@ storiesOf('Column', module)
                     title="A column title"
                     position="right"
                 >
-                    <Lorem />
+                    <Lorem count={2} />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -92,7 +92,7 @@ storiesOf('Column', module)
                     position="right"
                     width="lg"
                 >
-                    <Lorem />
+                    <Lorem count={2} />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -132,7 +132,7 @@ storiesOf('Column', module)
                         onMaximize={action('onMaximize')}
                         onUnmaximize={action('onUnmaximize')}
                     >
-                        <Lorem />
+                        <Lorem count={2} />
                     </Column>
                 </FakeApp>
             </ThemeElement>
