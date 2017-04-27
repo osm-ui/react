@@ -171,7 +171,6 @@ class Column extends React.Component {
         } = this.props;
 
         const asideClasses = classnames({
-            'form-group': true,
             [position]: true,
             [width]: true,
             opened: this.state.opened,
