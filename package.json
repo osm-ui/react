@@ -35,6 +35,7 @@
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.6.1",
     "react-leaflet": "^1.1.0",
+    "react-lorem-component": "^0.11.0",
     "storybook-host": "^1.0.14",
     "styled-components": "^1.4.4"
   },

@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
 import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs';
+import Lorem from 'react-lorem-component';
 
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './knobsAlert';
@@ -27,15 +28,7 @@ storiesOf('Column', module)
                     opened
                     title="A column title"
                 >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                    <Lorem count={1} />
                 </Column>
             </FakeApp>
         </DefaultTheme>
@@ -47,15 +40,19 @@ storiesOf('Column', module)
                     opened
                     title="A column title"
                 >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                    <Lorem count={1} />
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('With more content', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    opened
+                    title="A column title"
+                >
+                    <Lorem />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -68,15 +65,7 @@ storiesOf('Column', module)
                     title="A column title"
                     loading
                 >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                    <Lorem />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -89,15 +78,7 @@ storiesOf('Column', module)
                     title="A column title"
                     position="right"
                 >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                    <Lorem />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -111,15 +92,7 @@ storiesOf('Column', module)
                     position="right"
                     width="lg"
                 >
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aliquam non cursus purus. Nullam vehicula,
-                        quam in rhoncus convallis, ligula est pellentesque quam,
-                        ut venenatis ex lorem vitae est.
-                        Etiam iaculis ante non orci euismod molestie.
-                        Phasellus non diam massa. Donec non enim nec dolor
-                        ullamcorper efficitur eget interdum justo.
-                    </p>
+                    <Lorem />
                 </Column>
             </FakeApp>
         </RedTheme>
@@ -159,15 +132,7 @@ storiesOf('Column', module)
                         onMaximize={action('onMaximize')}
                         onUnmaximize={action('onUnmaximize')}
                     >
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Aliquam non cursus purus. Nullam vehicula,
-                            quam in rhoncus convallis, ligula est pellentesque quam,
-                            ut venenatis ex lorem vitae est.
-                            Etiam iaculis ante non orci euismod molestie.
-                            Phasellus non diam massa. Donec non enim nec dolor
-                            ullamcorper efficitur eget interdum justo.
-                        </p>
+                        <Lorem />
                     </Column>
                 </FakeApp>
             </ThemeElement>
