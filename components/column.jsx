@@ -9,6 +9,7 @@ import Loader from './loader';
 const StyledAside = styled.aside`
     top: 0;
     height: 100%;
+    overflow-y: auto;
     transition: all 0.25s ease-out;
 
     color: ${props => props.theme.color};
