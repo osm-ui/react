@@ -837,7 +837,7 @@ const StyledAside = _styledComponents2.default.aside`
         border-width: 0;
     }
 
-    &.visible {
+    &.opened {
         transform: translate(0, 0);
     }
 
@@ -897,31 +897,55 @@ class Column extends _react2.default.Component {
         super(props);
 
         this.state = {
-            visible: props.visible
+            opened: props.opened
         };
+    }
+
+    componentDidMount() {
+        if (this.props.opened === true) {
+            this._triggerCallback('onOpen');
+        }
+
+        if (this.props.maximized === true) {
+            this.props.onMaximize();
+        }
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            visible: nextProps.visible
+            opened: nextProps.opened
         });
 
-        if (this.props.maximized !== nextProps.maximized) {
-            this.props.onMaximize();
+        if (this.props.opened !== nextProps.opened) {
+            if (nextProps.opened === true) {
+                this._triggerCallback('onOpen');
+            } else {
+                this._triggerCallback('onClose');
+            }
         }
 
-        if (this.props.visible !== nextProps.visible && nextProps.visible === false) {
-            this.props.onClose();
+        if (this.props.maximized !== nextProps.maximized) {
+            if (nextProps.maximized === true) {
+                this._triggerCallback('onMaximize');
+            } else {
+                this._triggerCallback('onUnmaximize');
+            }
+        }
+    }
+
+    _triggerCallback(name) {
+        if (this.props[name] !== null) {
+            this.props[name]();
         }
     }
 
     _handleBackClick() {
-        this.props.onBack();
+        this._triggerCallback('onBack');
     }
 
     _handleCloseClick() {
-        this.setState({ visible: false });
-        this.props.onClose();
+        this.setState({ opened: false });
+        this._triggerCallback('onClose');
     }
 
     render() {
@@ -942,7 +966,7 @@ class Column extends _react2.default.Component {
             'form-group': true,
             [position]: true,
             [width]: true,
-            visible: this.state.visible,
+            opened: this.state.opened,
             maximized,
             [`container-${container}`]: true
         });
@@ -984,7 +1008,7 @@ class Column extends _react2.default.Component {
 Column.propTypes = {
     title: _propTypes2.default.string,
     children: _propTypes2.default.element.isRequired,
-    visible: _propTypes2.default.bool,
+    opened: _propTypes2.default.bool,
     loading: _propTypes2.default.bool,
     loaderLabel: _propTypes2.default.node,
     position: _propTypes2.default.oneOf(['left', 'right']),
@@ -994,14 +1018,16 @@ Column.propTypes = {
     width: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: _propTypes2.default.bool,
     container: _propTypes2.default.oneOf(['parent', 'root']),
+    onOpen: _propTypes2.default.func,
     onClose: _propTypes2.default.func,
     onBack: _propTypes2.default.func,
-    onMaximize: _propTypes2.default.func
+    onMaximize: _propTypes2.default.func,
+    onUnmaximize: _propTypes2.default.func
 };
 
 Column.defaultProps = {
     title: '',
-    visible: false,
+    opened: false,
     loading: false,
     loaderLabel: '',
     position: 'left',
@@ -1011,9 +1037,11 @@ Column.defaultProps = {
     width: 'md',
     maximized: false,
     container: 'parent',
-    onClose: () => {},
+    onOpen: null,
+    onClose: null,
     onBack: null,
-    onMaximize: null
+    onMaximize: null,
+    onUnmaximize: null
 };
 
 Column.displayName = 'Column';
