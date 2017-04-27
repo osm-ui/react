@@ -43,7 +43,7 @@ const StyledAside = styled.aside`
         border-width: 0;
     }
 
-    &.visible {
+    &.opened {
         transform: translate(0, 0);
     }
 
@@ -104,31 +104,57 @@ class Column extends React.Component {
         super(props);
 
         this.state = {
-            visible: props.visible,
+            opened: props.opened,
         };
+    }
+
+    componentDidMount() {
+        if (this.props.opened === true) {
+            this._triggerCallback('onOpen');
+        }
+
+        if (this.props.maximized === true) {
+            this.props.onMaximize();
+        }
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            visible: nextProps.visible,
+            opened: nextProps.opened,
         });
 
-        if (this.props.maximized !== nextProps.maximized) {
-            this.props.onMaximize();
+        if (this.props.opened !== nextProps.opened) {
+            if (nextProps.opened === true) {
+                this._triggerCallback('onOpen');
+            }
+            else {
+                this._triggerCallback('onClose');
+            }
         }
 
-        if (this.props.visible !== nextProps.visible && nextProps.visible === false) {
-            this.props.onClose();
+        if (this.props.maximized !== nextProps.maximized) {
+            if (nextProps.maximized === true) {
+                this._triggerCallback('onMaximize');
+            }
+            else {
+                this._triggerCallback('onUnmaximize');
+            }
+        }
+    }
+
+    _triggerCallback(name) {
+        if (this.props[name] !== null) {
+            this.props[name]();
         }
     }
 
     _handleBackClick() {
-        this.props.onBack();
+        this._triggerCallback('onBack');
     }
 
     _handleCloseClick() {
-        this.setState({ visible: false });
-        this.props.onClose();
+        this.setState({ opened: false });
+        this._triggerCallback('onClose');
     }
 
     render() {
@@ -148,7 +174,7 @@ class Column extends React.Component {
             'form-group': true,
             [position]: true,
             [width]: true,
-            visible: this.state.visible,
+            opened: this.state.opened,
             maximized,
             [`container-${container}`]: true,
         });
@@ -184,7 +210,7 @@ class Column extends React.Component {
 Column.propTypes = {
     title: PropTypes.string,
     children: PropTypes.element.isRequired,
-    visible: PropTypes.bool,
+    opened: PropTypes.bool,
     loading: PropTypes.bool,
     loaderLabel: PropTypes.node,
     position: PropTypes.oneOf(['left', 'right']),
@@ -194,14 +220,16 @@ Column.propTypes = {
     width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: PropTypes.bool,
     container: PropTypes.oneOf(['parent', 'root']),
+    onOpen: PropTypes.func,
     onClose: PropTypes.func,
     onBack: PropTypes.func,
     onMaximize: PropTypes.func,
+    onUnmaximize: PropTypes.func,
 };
 
 Column.defaultProps = {
     title: '',
-    visible: false,
+    opened: false,
     loading: false,
     loaderLabel: '',
     position: 'left',
@@ -211,9 +239,11 @@ Column.defaultProps = {
     width: 'md',
     maximized: false,
     container: 'parent',
-    onClose: () => {},
+    onOpen: null,
+    onClose: null,
     onBack: null,
     onMaximize: null,
+    onUnmaximize: null,
 };
 
 Column.displayName = 'Column';
