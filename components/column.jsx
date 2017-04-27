@@ -43,7 +43,7 @@ const StyledAside = styled.aside`
         border-width: 0;
     }
 
-    &.visible {
+    &.opened {
         transform: translate(0, 0);
     }
 
@@ -104,20 +104,20 @@ class Column extends React.Component {
         super(props);
 
         this.state = {
-            visible: props.visible,
+            opened: props.opened,
         };
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            visible: nextProps.visible,
+            opened: nextProps.opened,
         });
 
         if (this.props.maximized !== nextProps.maximized) {
             this.props.onMaximize();
         }
 
-        if (this.props.visible !== nextProps.visible && nextProps.visible === false) {
+        if (this.props.opened !== nextProps.opened && nextProps.opened === false) {
             this.props.onClose();
         }
     }
@@ -127,7 +127,7 @@ class Column extends React.Component {
     }
 
     _handleCloseClick() {
-        this.setState({ visible: false });
+        this.setState({ opened: false });
         this.props.onClose();
     }
 
@@ -148,7 +148,7 @@ class Column extends React.Component {
             'form-group': true,
             [position]: true,
             [width]: true,
-            visible: this.state.visible,
+            opened: this.state.opened,
             maximized,
             [`container-${container}`]: true,
         });
@@ -184,7 +184,7 @@ class Column extends React.Component {
 Column.propTypes = {
     title: PropTypes.string,
     children: PropTypes.element.isRequired,
-    visible: PropTypes.bool,
+    opened: PropTypes.bool,
     loading: PropTypes.bool,
     loaderLabel: PropTypes.node,
     position: PropTypes.oneOf(['left', 'right']),
@@ -201,7 +201,7 @@ Column.propTypes = {
 
 Column.defaultProps = {
     title: '',
-    visible: false,
+    opened: false,
     loading: false,
     loaderLabel: '',
     position: 'left',

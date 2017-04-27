@@ -24,7 +24,7 @@ storiesOf('Column', module)
         <DefaultTheme>
             <FakeApp>
                 <Column
-                    visible
+                    opened
                     title="A column title"
                 >
                     <p>
@@ -44,7 +44,7 @@ storiesOf('Column', module)
         <RedTheme>
             <FakeApp>
                 <Column
-                    visible
+                    opened
                     title="A column title"
                 >
                     <p>
@@ -64,7 +64,7 @@ storiesOf('Column', module)
         <RedTheme>
             <FakeApp>
                 <Column
-                    visible
+                    opened
                     title="A column title"
                     loading
                 >
@@ -85,7 +85,7 @@ storiesOf('Column', module)
         <RedTheme>
             <FakeApp>
                 <Column
-                    visible
+                    opened
                     title="A column title"
                     position="right"
                 >
@@ -106,7 +106,7 @@ storiesOf('Column', module)
         <RedTheme>
             <FakeApp>
                 <Column
-                    visible
+                    opened
                     title="A column title"
                     position="right"
                     width="lg"
@@ -129,10 +129,10 @@ storiesOf('Column', module)
         const position = select('Position', ['left', 'right'], 'left');
         const width = select('Width', ['xs', 'sm', 'md', 'lg'], 'md');
         const container = select('Container', ['parent', 'root'], 'parent');
-        const visible = boolean('Visible', true);
+        const opened = boolean('Opened', true);
+        const maximized = boolean('Maximized');
         const loading = boolean('Loading');
         const loaderLabel = text('Loader label');
-        const maximized = boolean('Maximized');
         const theme = select('Theme', ['Default', 'Red'], 'Red');
         const themes = {
             DefaultTheme,
@@ -146,7 +146,7 @@ storiesOf('Column', module)
                 <FakeApp>
                     <Column
                         title={title}
-                        visible={visible}
+                        opened={opened}
                         loading={loading}
                         loaderLabel={loaderLabel}
                         position={position}
