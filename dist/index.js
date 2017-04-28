@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("react-fontawesome"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("lodash"), require("react-fontawesome"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "font-awesome/css/font-awesome.min.css", "jquery", "react-fontawesome"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "font-awesome/css/font-awesome.min.css", "jquery", "lodash", "react-fontawesome"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("react-fontawesome")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["react-fontawesome"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("lodash"), require("react-fontawesome")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["lodash"], root["react-fontawesome"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_20__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_23__, __WEBPACK_EXTERNAL_MODULE_24__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 25);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -237,6 +237,7 @@ const config = exports.config = {
 
     form: {
         button: {
+            color: _colors2.default.anthracite2,
             backgroundColor: _colors2.default.white,
             borderColor: _colors2.default.gray3,
             hoverBackgroundColor: _colors2.default.gray5,
@@ -676,21 +677,25 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         ${reducedStyles}
 
         &.btn-${context} {
+            font-weight: 700;
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
 
             &:hover {
+                color: ${colors.color};
                 background-color: ${colors.hoverBackgroundColor};
                 border-color: ${colors.hoverBorderColor};
             }
 
             &:focus {
+                color: ${colors.color};
                 background-color: ${colors.focusBackgroundColor};
                 border-color: ${colors.focusBorderColor};
             }
 
             &:active, .active {
+                color: ${colors.color};
                 background-color: ${colors.activeBackgroundColor};
                 border-color: ${colors.activeBorderColor};
             }
@@ -784,9 +789,21 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactFontawesome = __webpack_require__(20);
+var _reactFontawesome = __webpack_require__(24);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _title = __webpack_require__(20);
+
+var _title2 = _interopRequireDefault(_title);
+
+var _header = __webpack_require__(19);
+
+var _header2 = _interopRequireDefault(_header);
+
+var _footer = __webpack_require__(18);
+
+var _footer2 = _interopRequireDefault(_footer);
 
 var _loader = __webpack_require__(4);
 
@@ -808,6 +825,12 @@ const StyledAside = _styledComponents2.default.aside`
     border-color: ${props => props.theme.borderColor};
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
+
+    &.scroll-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: none;
+    }
 
     &.container-parent { position: absolute; }
     &.container-root   { position: fixed; }
@@ -863,16 +886,25 @@ const StyledAside = _styledComponents2.default.aside`
         margin-left: 5px;
     }
 
-    .title {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 0 0 30px;
+    &.scroll-content .header {
+        margin-bottom: 20px;
     }
 
     .content {
-        position: relative;
         padding: 20px;
+    }
+
+    &.scroll-content .content {
+        overflow-y: auto;
+        border-color: ${props => props.theme.borderColor};
+        border-style: ${props => props.theme.borderStyle};
+        border-width: 1px 0 1px 0;
+
+        &::after {
+            content: '';
+            margin-top: 20px;
+            display: block;
+        }
     }
 
     .content.loading {
@@ -887,6 +919,10 @@ const StyledAside = _styledComponents2.default.aside`
         margin-top: -25px;
         text-align: center;
         visibility: visible;
+    }
+
+    &.scroll-content .footer {
+        margin-top: 20px;
     }
 `;
 
@@ -950,22 +986,26 @@ class Column extends _react2.default.Component {
         const _props = this.props,
               {
             title,
+            header,
+            footer,
             children,
             loading,
             loaderLabel,
             position,
             width,
             maximized,
-            container
+            container,
+            scrollContent
         } = _props,
-              rest = _objectWithoutProperties(_props, ['title', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container']);
+              rest = _objectWithoutProperties(_props, ['title', 'header', 'footer', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container', 'scrollContent']);
 
         const asideClasses = (0, _classnames2.default)({
             [position]: true,
             [width]: true,
             opened: this.state.opened,
             maximized,
-            [`container-${container}`]: true
+            [`container-${container}`]: true,
+            'scroll-content': scrollContent
         });
 
         const contentClasses = (0, _classnames2.default)({
@@ -976,27 +1016,33 @@ class Column extends _react2.default.Component {
         return _react2.default.createElement(
             StyledAside,
             _extends({ className: asideClasses }, rest),
-            this.props.onBack && _react2.default.createElement(
-                'button',
-                { className: 'back-btn', onClick: () => this._handleBackClick() },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
-            ),
             _react2.default.createElement(
-                'button',
-                { className: 'close-btn', onClick: () => this._handleCloseClick() },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                'header',
+                { className: 'header' },
+                this.props.onBack && _react2.default.createElement(
+                    'button',
+                    { className: 'back-btn', onClick: () => this._handleBackClick() },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { className: 'close-btn', onClick: () => this._handleCloseClick() },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                ),
+                title && _react2.default.createElement(
+                    _title2.default,
+                    { inHeader: true },
+                    title
+                ),
+                _react2.default.createElement('div', { className: 'clearfix' }),
+                !loading && header && header
             ),
-            _react2.default.createElement('div', { className: 'clearfix' }),
             _react2.default.createElement(
                 'div',
                 { className: contentClasses },
-                title && _react2.default.createElement(
-                    'h2',
-                    { className: 'title' },
-                    title
-                ),
                 children
             ),
+            !loading && footer && footer,
             loading && _react2.default.createElement(_loader2.default, { className: 'loader', label: loaderLabel })
         );
     }
@@ -1004,7 +1050,9 @@ class Column extends _react2.default.Component {
 
 Column.propTypes = {
     title: _propTypes2.default.string,
-    children: _propTypes2.default.element.isRequired,
+    header: _propTypes2.default.node,
+    footer: _propTypes2.default.node,
+    children: _propTypes2.default.node.isRequired,
     opened: _propTypes2.default.bool,
     loading: _propTypes2.default.bool,
     loaderLabel: _propTypes2.default.node,
@@ -1015,6 +1063,7 @@ Column.propTypes = {
     width: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: _propTypes2.default.bool,
     container: _propTypes2.default.oneOf(['parent', 'root']),
+    scrollContent: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
     onClose: _propTypes2.default.func,
     onBack: _propTypes2.default.func,
@@ -1024,6 +1073,8 @@ Column.propTypes = {
 
 Column.defaultProps = {
     title: '',
+    header: '',
+    footer: '',
     opened: false,
     loading: false,
     loaderLabel: '',
@@ -1034,6 +1085,7 @@ Column.defaultProps = {
     width: 'md',
     maximized: false,
     container: 'parent',
+    scrollContent: false,
     onOpen: null,
     onClose: null,
     onBack: null,
@@ -1042,6 +1094,10 @@ Column.defaultProps = {
 };
 
 Column.displayName = 'Column';
+
+Column.Title = _title2.default;
+Column.Header = _header2.default;
+Column.Footer = _footer2.default;
 
 exports.default = Column;
 
@@ -1060,7 +1116,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _formGroup = __webpack_require__(18);
+var _formGroup = __webpack_require__(21);
 
 var _formGroup2 = _interopRequireDefault(_formGroup);
 
@@ -1105,7 +1161,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _inputHint = __webpack_require__(19);
+var _inputHint = __webpack_require__(22);
 
 var _inputHint2 = _interopRequireDefault(_inputHint);
 
@@ -1185,8 +1241,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.config = undefined;
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1196,6 +1250,10 @@ var _propTypes = __webpack_require__(2);
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(23);
+
+var _lodash2 = _interopRequireDefault(_lodash);
 
 var _default = __webpack_require__(5);
 
@@ -1207,14 +1265,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const config = exports.config = _extends({}, _default.config, {
+const config = exports.config = _lodash2.default.merge({}, _default.config, {
     color: _colors2.default.white,
     backgroundColor: _colors2.default.red2,
     borderColor: _colors2.default.red1,
     dimmerBackgroundColor: _colors2.default.red2,
     loaderColor: _colors2.default.white,
     controlColor: _colors2.default.red1,
-    hoverControlColor: _colors2.default.white
+    hoverControlColor: _colors2.default.white,
+
+    form: {
+        button: {
+            color: _colors2.default.white,
+            backgroundColor: _colors2.default.red2,
+            borderColor: _colors2.default.red5,
+            hoverBackgroundColor: _colors2.default.red3,
+            hoverBorderColor: _colors2.default.red5,
+            focusBackgroundColor: _colors2.default.red3,
+            focusBorderColor: _colors2.default.red5,
+            activeBackgroundColor: _colors2.default.red3,
+            activeBorderColor: _colors2.default.red5,
+
+            primary: {
+                color: _colors2.default.red2,
+                backgroundColor: _colors2.default.white,
+                borderColor: _colors2.default.white,
+                hoverBackgroundColor: _colors2.default.gray5,
+                hoverBorderColor: _colors2.default.gray5,
+                focusBackgroundColor: _colors2.default.gray5,
+                focusBorderColor: _colors2.default.gray5,
+                activeBackgroundColor: _colors2.default.gray5,
+                activeBorderColor: _colors2.default.gray5
+            },
+
+            danger: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.red1,
+                borderColor: _colors2.default.red1,
+                hoverBackgroundColor: _colors2.default.red3,
+                hoverBorderColor: _colors2.default.red3,
+                focusBackgroundColor: _colors2.default.red3,
+                focusBorderColor: _colors2.default.red3,
+                activeBackgroundColor: _colors2.default.red3,
+                activeBorderColor: _colors2.default.red3
+            }
+        }
+    }
 });
 
 const RedTheme = (_ref) => {
@@ -1266,6 +1362,187 @@ module.exports = require("jquery");
 
 /***/ }),
 /* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledDiv = _styledComponents2.default.div`
+    padding: 20px 20px;
+    border-color: ${props => props.theme.borderColor};
+    border-style: ${props => props.theme.borderStyle};
+    border-width: 1px 0 0 0;
+`;
+
+const ColumnFooter = (_ref) => {
+    let { children } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        StyledDiv,
+        _extends({ className: 'column-footer' }, rest),
+        children
+    );
+};
+
+ColumnFooter.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+ColumnFooter.displayName = 'Column.Footer';
+
+exports.default = ColumnFooter;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledDiv = _styledComponents2.default.div`
+    padding: 15px 20px 0;
+`;
+
+const ColumnHeader = (_ref) => {
+    let { children } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        StyledDiv,
+        _extends({ className: 'column-header' }, rest),
+        children
+    );
+};
+
+ColumnHeader.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+ColumnHeader.displayName = 'Column.Header';
+
+exports.default = ColumnHeader;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledH2 = _styledComponents2.default.h2`
+    margin: 0 0 30px;
+
+    &.in-header {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0 0 20px;
+        line-height: 50px;
+    }
+`;
+
+const ColumnTitle = (_ref) => {
+    let { children, inHeader } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children', 'inHeader']);
+
+    const classes = (0, _classnames2.default)({
+        'column-title': true,
+        'in-header': inHeader
+    });
+
+    return _react2.default.createElement(
+        StyledH2,
+        _extends({ className: classes }, rest),
+        children
+    );
+};
+
+ColumnTitle.propTypes = {
+    children: _propTypes2.default.node.isRequired,
+    inHeader: _propTypes2.default.bool
+};
+
+ColumnTitle.defaultProps = {
+    inHeader: false
+};
+
+ColumnTitle.displayName = 'Column.Title';
+
+exports.default = ColumnTitle;
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1355,7 +1632,7 @@ FormGroup.displayName = 'FormGroup';
 exports.default = FormGroup;
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1392,13 +1669,19 @@ InputHint.displayName = 'InputHint';
 exports.default = InputHint;
 
 /***/ }),
-/* 20 */
+/* 23 */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash");
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-fontawesome");
 
 /***/ }),
-/* 21 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
