@@ -117,6 +117,7 @@ storiesOf('Column', module)
         const container = select('Container', ['parent', 'root'], 'parent');
         const opened = boolean('Opened', true);
         const maximized = boolean('Maximized');
+        const scrollContent = boolean('Scroll content only');
         const loading = boolean('Loading');
         const loaderLabel = text('Loader label');
         const theme = select('Theme', ['Default', 'Red'], 'Red');
@@ -138,6 +139,7 @@ storiesOf('Column', module)
                         position={position}
                         width={width}
                         maximized={maximized}
+                        scrollContent={scrollContent}
                         container={container}
                         onOpen={action('onOpen')}
                         onClose={action('onClose')}

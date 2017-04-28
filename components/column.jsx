@@ -20,6 +20,12 @@ const StyledAside = styled.aside`
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
 
+    &.scroll-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: none;
+    }
+
     &.container-parent { position: absolute; }
     &.container-root   { position: fixed; }
 
@@ -74,11 +80,11 @@ const StyledAside = styled.aside`
         margin-left: 5px;
     }
 
-    .content .title {
-        margin: 0 0 30px;
+    &.scroll-content .header {
+        margin-bottom: 20px;
     }
 
-    header .title {
+    .header .title {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -88,6 +94,21 @@ const StyledAside = styled.aside`
 
     .content {
         padding: 20px;
+    }
+
+    .content .title {
+        margin: 0 0 30px;
+    }
+
+    &.scroll-content .content {
+        padding-top: 0;
+        overflow-y: auto;
+
+        &::after {
+            content: '';
+            margin-top: 20px;
+            display: block;
+        }
     }
 
     .content.loading {
@@ -102,6 +123,10 @@ const StyledAside = styled.aside`
         margin-top: -25px;
         text-align: center;
         visibility: visible;
+    }
+
+    &.scroll-content .footer {
+        margin-top: 20px;
     }
 `;
 
@@ -174,6 +199,7 @@ class Column extends React.Component {
             width,
             maximized,
             container,
+            scrollContent,
             ...rest
         } = this.props;
 
@@ -183,6 +209,7 @@ class Column extends React.Component {
             opened: this.state.opened,
             maximized,
             [`container-${container}`]: true,
+            'scroll-content': scrollContent,
         });
 
         const contentClasses = classnames({
@@ -192,7 +219,7 @@ class Column extends React.Component {
 
         return (
             <StyledAside className={asideClasses} {...rest}>
-                <header>
+                <header className="header">
                     {this.props.onBack && (
                         <button className="back-btn" onClick={() => this._handleBackClick()}>
                             <FontAwesome name="chevron-left" size="lg" />
@@ -208,6 +235,7 @@ class Column extends React.Component {
                 <div className={contentClasses}>
                     {children}
                 </div>
+
                 {loading && <Loader className="loader" label={loaderLabel} />}
             </StyledAside>
         );
@@ -228,6 +256,7 @@ Column.propTypes = {
     width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     maximized: PropTypes.bool,
     container: PropTypes.oneOf(['parent', 'root']),
+    scrollContent: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
     onBack: PropTypes.func,
@@ -247,6 +276,7 @@ Column.defaultProps = {
     width: 'md',
     maximized: false,
     container: 'parent',
+    scrollContent: false,
     onOpen: null,
     onClose: null,
     onBack: null,
