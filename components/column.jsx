@@ -87,7 +87,6 @@ const StyledAside = styled.aside`
     }
 
     .content {
-        position: relative;
         padding: 20px;
     }
 
