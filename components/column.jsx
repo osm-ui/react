@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
+import ColumnTitle from './column/title';
 import Loader from './loader';
 
 
@@ -73,11 +74,16 @@ const StyledAside = styled.aside`
         margin-left: 5px;
     }
 
-    .title {
+    .content .title {
+        margin: 0 0 30px;
+    }
+
+    header .title {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        margin: 0 0 30px;
+        margin: 0 0 0 20px;
+        line-height: 50px;
     }
 
     .content {
@@ -187,18 +193,20 @@ class Column extends React.Component {
 
         return (
             <StyledAside className={asideClasses} {...rest}>
-                {this.props.onBack && (
-                    <button className="back-btn" onClick={() => this._handleBackClick()}>
-                        <FontAwesome name="chevron-left" size="lg" />
+                <header>
+                    {this.props.onBack && (
+                        <button className="back-btn" onClick={() => this._handleBackClick()}>
+                            <FontAwesome name="chevron-left" size="lg" />
+                        </button>
+                    )}
+                    <button className="close-btn" onClick={() => this._handleCloseClick()}>
+                        <FontAwesome name="close" size="lg" />
                     </button>
-                )}
-                <button className="close-btn" onClick={() => this._handleCloseClick()}>
-                    <FontAwesome name="close" size="lg" />
-                </button>
-                <div className="clearfix" />
+                    {title && <ColumnTitle>{title}</ColumnTitle>}
+                    <div className="clearfix" />
+                </header>
 
                 <div className={contentClasses}>
-                    {title && <h2 className="title">{title}</h2>}
                     {children}
                 </div>
                 {loading && <Loader className="loader" label={loaderLabel} />}
@@ -248,5 +256,7 @@ Column.defaultProps = {
 };
 
 Column.displayName = 'Column';
+
+Column.Title = ColumnTitle;
 
 export default Column;

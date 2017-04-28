@@ -33,25 +33,37 @@ storiesOf('Column', module)
             </FakeApp>
         </DefaultTheme>
     ))
-    .addWithInfo('With a theme', () => (
+    .addWithInfo('Detached title', () => (
+        <DefaultTheme>
+            <FakeApp>
+                <Column
+                    opened
+                >
+                    <Column.Title>A column title</Column.Title>
+                    <Lorem count={2} />
+                </Column>
+            </FakeApp>
+        </DefaultTheme>
+    ))
+    .addWithInfo('Theme', () => (
         <RedTheme>
             <FakeApp>
                 <Column
                     opened
-                    title="A column title"
                 >
+                    <Column.Title>A column title</Column.Title>
                     <Lorem count={2} />
                 </Column>
             </FakeApp>
         </RedTheme>
     ))
-    .addWithInfo('With more content', () => (
+    .addWithInfo('More content', () => (
         <RedTheme>
             <FakeApp>
                 <Column
                     opened
-                    title="A column title"
                 >
+                    <Column.Title>A column title</Column.Title>
                     <Lorem />
                 </Column>
             </FakeApp>
