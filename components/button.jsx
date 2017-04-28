@@ -23,21 +23,25 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         ${reducedStyles}
 
         &.btn-${context} {
+            font-weight: 700;
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
 
             &:hover {
+                color: ${colors.color};
                 background-color: ${colors.hoverBackgroundColor};
                 border-color: ${colors.hoverBorderColor};
             }
 
             &:focus {
+                color: ${colors.color};
                 background-color: ${colors.focusBackgroundColor};
                 border-color: ${colors.focusBorderColor};
             }
 
             &:active, .active {
+                color: ${colors.color};
                 background-color: ${colors.activeBackgroundColor};
                 border-color: ${colors.activeBorderColor};
             }

@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 import ColumnTitle from './column/title';
+import ColumnHeader from './column/header';
+import ColumnFooter from './column/footer';
 import Loader from './loader';
 
 
@@ -84,25 +86,15 @@ const StyledAside = styled.aside`
         margin-bottom: 20px;
     }
 
-    .header .title {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 0 0 0 20px;
-        line-height: 50px;
-    }
-
     .content {
         padding: 20px;
     }
 
-    .content .title {
-        margin: 0 0 30px;
-    }
-
     &.scroll-content .content {
-        padding-top: 0;
         overflow-y: auto;
+        border-color: ${props => props.theme.borderColor};
+        border-style: ${props => props.theme.borderStyle};
+        border-width: 1px 0 1px 0;
 
         &::after {
             content: '';
@@ -192,6 +184,8 @@ class Column extends React.Component {
     render() {
         const {
             title,
+            header,
+            footer,
             children,
             loading,
             loaderLabel,
@@ -228,13 +222,16 @@ class Column extends React.Component {
                     <button className="close-btn" onClick={() => this._handleCloseClick()}>
                         <FontAwesome name="close" size="lg" />
                     </button>
-                    {title && <ColumnTitle>{title}</ColumnTitle>}
+                    {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
                     <div className="clearfix" />
+                    {!loading && header && header}
                 </header>
 
                 <div className={contentClasses}>
                     {children}
                 </div>
+
+                {!loading && footer && footer}
 
                 {loading && <Loader className="loader" label={loaderLabel} />}
             </StyledAside>
@@ -245,7 +242,9 @@ class Column extends React.Component {
 
 Column.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.element.isRequired,
+    header: PropTypes.node,
+    footer: PropTypes.node,
+    children: PropTypes.node.isRequired,
     opened: PropTypes.bool,
     loading: PropTypes.bool,
     loaderLabel: PropTypes.node,
@@ -266,6 +265,8 @@ Column.propTypes = {
 
 Column.defaultProps = {
     title: '',
+    header: '',
+    footer: '',
     opened: false,
     loading: false,
     loaderLabel: '',
@@ -287,5 +288,7 @@ Column.defaultProps = {
 Column.displayName = 'Column';
 
 Column.Title = ColumnTitle;
+Column.Header = ColumnHeader;
+Column.Footer = ColumnFooter;
 
 export default Column;

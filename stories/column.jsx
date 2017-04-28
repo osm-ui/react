@@ -11,6 +11,7 @@ import {
     DefaultTheme,
     RedTheme,
     Column,
+    Button,
 } from '../index';
 import FakeApp from '../components/fakeApp';
 
@@ -64,6 +65,29 @@ storiesOf('Column', module)
                     opened
                 >
                     <Column.Title>A column title</Column.Title>
+                    <Lorem />
+                </Column>
+            </FakeApp>
+        </RedTheme>
+    ))
+    .addWithInfo('Header and footer', () => (
+        <RedTheme>
+            <FakeApp>
+                <Column
+                    opened
+                    title="A column title"
+                    scrollContent
+                    header={(
+                        <Column.Header>
+                            <h3 style={{ margin: 0 }}>A header content</h3>
+                        </Column.Header>
+                    )}
+                    footer={(
+                        <Column.Footer>
+                            <Button context="primary" block>A footer button</Button>
+                        </Column.Footer>
+                    )}
+                >
                     <Lorem />
                 </Column>
             </FakeApp>
