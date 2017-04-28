@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import { withKnobs, text, boolean, select } from '@kadira/storybook-addon-knobs';
+import { withKnobs, text, number, boolean, select } from '@kadira/storybook-addon-knobs';
 import Lorem from 'react-lorem-component';
 
 import defaultHostOptions from './defaultHostOptions';
@@ -99,6 +99,7 @@ storiesOf('Column', module)
     ))
     .addWithInfo('Playground', () => {
         const title = text('Title', 'A column title');
+        const paragraphs = number('Paragraphs', 2);
         const position = select('Position', ['left', 'right'], 'left');
         const width = select('Width', ['xs', 'sm', 'md', 'lg'], 'md');
         const container = select('Container', ['parent', 'root'], 'parent');
@@ -132,7 +133,7 @@ storiesOf('Column', module)
                         onMaximize={action('onMaximize')}
                         onUnmaximize={action('onUnmaximize')}
                     >
-                        <Lorem count={2} />
+                        <Lorem count={paragraphs} />
                     </Column>
                 </FakeApp>
             </ThemeElement>
