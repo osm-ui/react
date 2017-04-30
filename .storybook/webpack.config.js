@@ -22,10 +22,6 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.less$/,
-                loaders: ['style-loader', 'css-loader', 'less-loader'],
-            },
-            {
                 test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 query: {
