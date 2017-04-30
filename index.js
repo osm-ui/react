@@ -6,13 +6,14 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.css';
 
 
-export DefaultTheme from './themes/default';
-export RedTheme from './themes/red';
+export DefaultTheme from './themes/Default';
+export RedTheme from './themes/Red';
 
-export AppCanvas from './components/appCanvas';
-export Loader from './components/loader';
-export Alert from './components/alert';
-export Button from './components/button';
-export Form from './components/form';
-export Textarea from './components/textarea';
-export Column from './components/column';
+export AppCanvas from './components/AppCanvas';
+export Loader from './components/Loader';
+export Alert from './components/Alert';
+export Button from './components/Button';
+export Form from './components/Form';
+export Textarea from './components/Textarea';
+export Column from './components/Column';
+export Map from './components/Map';

@@ -4,8 +4,9 @@ import { host } from 'storybook-host';
 import { withKnobs, text, number, boolean, select } from '@kadira/storybook-addon-knobs';
 import Lorem from 'react-lorem-component';
 
-import defaultHostOptions from './defaultHostOptions';
-import KnobsAlert from './knobsAlert';
+import defaultHostOptions from '../.storybook/defaultHostOptions';
+import KnobsAlert from './components/KnobsAlert';
+import FakeApp from './components/FakeApp';
 
 import {
     DefaultTheme,
@@ -13,7 +14,6 @@ import {
     Column,
     Button,
 } from '../index';
-import FakeApp from '../components/fakeApp';
 
 
 storiesOf('Column', module)

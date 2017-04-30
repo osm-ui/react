@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Lorem from 'react-lorem-component';
-import AppCanvas from './appCanvas';
+import AppCanvas from '../../components/AppCanvas';
 
 
 const StyledAppCanvas = styled(AppCanvas)`

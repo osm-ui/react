@@ -3,7 +3,7 @@ import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
 import { withKnobs } from '@kadira/storybook-addon-knobs';
 
-import defaultHostOptions from './defaultHostOptions';
+import defaultHostOptions from '../.storybook/defaultHostOptions';
 import logoFile from '../logo.png';
 
 

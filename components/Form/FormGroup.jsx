@@ -65,6 +65,6 @@ FormGroup.defaultProps = {
     context: '',
 };
 
-FormGroup.displayName = 'FormGroup';
+FormGroup.displayName = 'Form.Group';
 
 export default FormGroup;

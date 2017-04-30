@@ -6,7 +6,7 @@ import _ from 'lodash';
 import {
     config as defaultThemeConfig,
     StyledDiv,
-} from './default';
+} from './Default';
 import colors from '../colors';
 
 

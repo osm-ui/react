@@ -3,8 +3,8 @@ import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
 import { withKnobs, text, number } from '@kadira/storybook-addon-knobs';
 
-import defaultHostOptions from './defaultHostOptions';
-import KnobsAlert from './knobsAlert';
+import defaultHostOptions from '../.storybook/defaultHostOptions';
+import KnobsAlert from './components/KnobsAlert';
 
 import {
     DefaultTheme,

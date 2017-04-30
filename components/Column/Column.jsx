@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import ColumnTitle from './column/title';
-import ColumnHeader from './column/header';
-import ColumnFooter from './column/footer';
-import Loader from './loader';
+import ColumnTitle from './Title';
+import Loader from '../Loader';
 
 
 const StyledAside = styled.aside`
@@ -286,9 +284,5 @@ Column.defaultProps = {
 };
 
 Column.displayName = 'Column';
-
-Column.Title = ColumnTitle;
-Column.Header = ColumnHeader;
-Column.Footer = ColumnFooter;
 
 export default Column;

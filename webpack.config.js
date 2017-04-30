@@ -1,8 +1,15 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
+    plugins: [
+        new ExtractTextPlugin({
+          filename: '[name].css',
+          allChunks: true,
+        }),
+    ],
     externals: [ nodeExternals() ],
     entry: {
         index: path.resolve(__dirname, 'index.js'),
@@ -23,8 +30,11 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /.css$/,
-                loaders: ['style-loader', 'css-loader'],
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader',
+                }),
             },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,

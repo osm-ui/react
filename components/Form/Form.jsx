@@ -1,5 +1,4 @@
 import React from 'react';
-import FormGroup from './formGroup';
 
 
 const Form = props => (
@@ -14,10 +13,5 @@ Form.defaultProps = {
 };
 
 Form.displayName = 'Form';
-
-
-Form.Group = FormGroup;
-
-Form.Group.displayName = 'Form.Group';
 
 export default Form;
