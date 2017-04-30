@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Lorem from 'react-lorem-component';
 import AppCanvas from './appCanvas';
 
 
@@ -14,15 +15,7 @@ const StyledAppCanvas = styled(AppCanvas)`
 const FakeApp = ({ children, ...rest }) => (
     <StyledAppCanvas {...rest}>
         <h2>Application Content</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam non cursus purus. Nullam vehicula,
-            quam in rhoncus convallis, ligula est pellentesque quam,
-            ut venenatis ex lorem vitae est.
-            Etiam iaculis ante non orci euismod molestie.
-            Phasellus non diam massa. Donec non enim nec dolor
-            ullamcorper efficitur eget interdum justo.
-        </p>
+        <Lorem count={2} />
         {children}
     </StyledAppCanvas>
 );
