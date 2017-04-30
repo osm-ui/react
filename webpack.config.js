@@ -41,6 +41,10 @@ module.exports = {
                 test: require.resolve('jquery'),
                 loader: 'expose-loader?$!expose-loader?jQuery',
             },
+            {
+                test: require.resolve('leaflet'),
+                loader: 'expose-loader?L',
+            },
         ],
     },
 };
