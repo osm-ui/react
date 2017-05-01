@@ -5257,6 +5257,10 @@ tar@~2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
+text-ground-react@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/text-ground-react/-/text-ground-react-0.0.12.tgz#d57cd96192ec62f7b5fe8c270648f4b2250e99b4"
+
 text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"

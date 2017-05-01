@@ -105,16 +105,6 @@ const StyledAside = styled.aside`
         display: none;
     }
 
-    .loader {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        margin-top: -25px;
-        text-align: center;
-        visibility: visible;
-    }
-
     &.scroll-content .footer {
         margin-top: 20px;
     }
@@ -231,7 +221,7 @@ class Column extends React.Component {
 
                 {!loading && footer && footer}
 
-                {loading && <Loader className="loader" label={loaderLabel} />}
+                {loading && <Loader centered label={loaderLabel} />}
             </StyledAside>
         );
     }

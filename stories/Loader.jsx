@@ -1,10 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import { withKnobs, text, number } from '@kadira/storybook-addon-knobs';
+import { withKnobs, text, number, boolean } from '@kadira/storybook-addon-knobs';
 
 import defaultHostOptions from '../.storybook/defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
+import FakeApp from './components/FakeApp';
 
 import {
     DefaultTheme,
@@ -33,6 +34,13 @@ storiesOf('Loader', module)
     .addWithInfo('Label', () => (
         <DefaultTheme>
             <Loader label="Custom label" />
+        </DefaultTheme>
+    ))
+    .addWithInfo('Centered', () => (
+        <DefaultTheme>
+            <FakeApp fakeText dimmed>
+                <Loader centered label="Custom label" />
+            </FakeApp>
         </DefaultTheme>
     ))
     .addWithInfo('Playground', () => {

@@ -39,7 +39,8 @@
     "react-leaflet": "^1.1.0",
     "react-lorem-component": "^0.11.0",
     "storybook-host": "^1.0.14",
-    "styled-components": "^1.4.4"
+    "styled-components": "^1.4.4",
+    "text-ground-react": "^0.0.12"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
