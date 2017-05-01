@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("lodash"), require("react-fontawesome"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "font-awesome/css/font-awesome.min.css", "jquery", "lodash", "react-fontawesome"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "lodash", "react-fontawesome", "react-leaflet"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("lodash"), require("react-fontawesome")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["lodash"], root["react-fontawesome"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["lodash"], root["react-fontawesome"], root["react-leaflet"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_23__, __WEBPACK_EXTERNAL_MODULE_24__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_20__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 25);
+/******/ 	return __webpack_require__(__webpack_require__.s = 40);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -108,85 +108,16 @@ module.exports = require("classnames");
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
-var _react = __webpack_require__(0);
+var _Loader = __webpack_require__(32);
 
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _Loader2 = _interopRequireDefault(_Loader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-const rotate360 = _styledComponents.keyframes`
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-`;
-
-const Spinner = _styledComponents2.default.div`
-    width: ${props => props.spinnerSize}px;
-    height: ${props => props.spinnerSize}px;
-    margin: 0 auto;
-    border: 3px solid ${props => props.theme.loaderColor};
-    border-radius: 50%;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    animation: ${rotate360} 650ms infinite linear;
-`;
-
-const StyledDiv = _styledComponents2.default.div`
-    text-align: center;
-
-    .loader-label {
-        color: ${props => props.theme.loaderColor};
-        margin-top: 15px;
-    }
-`;
-
-const Loader = (_ref) => {
-    let { spinnerSize, label } = _ref,
-        rest = _objectWithoutProperties(_ref, ['spinnerSize', 'label']);
-
-    return _react2.default.createElement(
-        StyledDiv,
-        rest,
-        _react2.default.createElement(Spinner, { spinnerSize: spinnerSize }),
-        label && _react2.default.createElement(
-            'div',
-            { className: 'loader-label' },
-            label
-        )
-    );
-};
-
-Loader.propTypes = {
-    spinnerSize: _propTypes2.default.number,
-    label: _propTypes2.default.string
-};
-
-Loader.defaultProps = {
-    spinnerSize: 40,
-    label: ''
-};
-
-Loader.displayName = 'Loader';
-
-exports.default = Loader;
+exports.default = _Loader2.default;
 
 /***/ }),
 /* 5 */
@@ -538,6 +469,378 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledH2 = _styledComponents2.default.h2`
+    margin: 0 0 30px;
+
+    &.in-header {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0 0 0 20px;
+        line-height: 50px;
+    }
+`;
+
+const ColumnTitle = (_ref) => {
+    let { children, inHeader } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children', 'inHeader']);
+
+    const classes = (0, _classnames2.default)({
+        'column-title': true,
+        'in-header': inHeader
+    });
+
+    return _react2.default.createElement(
+        StyledH2,
+        _extends({ className: classes }, rest),
+        children
+    );
+};
+
+ColumnTitle.propTypes = {
+    children: _propTypes2.default.node.isRequired,
+    inHeader: _propTypes2.default.bool
+};
+
+ColumnTitle.defaultProps = {
+    inHeader: false
+};
+
+ColumnTitle.displayName = 'Column.Title';
+
+exports.default = ColumnTitle;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Alert = __webpack_require__(22);
+
+var _Alert2 = _interopRequireDefault(_Alert);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Alert2.default;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _AppCanvas = __webpack_require__(23);
+
+var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _AppCanvas2.default;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Button = __webpack_require__(24);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Button2.default;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Column = __webpack_require__(25);
+
+var _Column2 = _interopRequireDefault(_Column);
+
+var _Title = __webpack_require__(7);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _Header = __webpack_require__(27);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(26);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Column2.default.Title = _Title2.default;
+_Column2.default.Header = _Header2.default;
+_Column2.default.Footer = _Footer2.default;
+
+exports.default = _Column2.default;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Form = __webpack_require__(28);
+
+var _Form2 = _interopRequireDefault(_Form);
+
+var _FormGroup = __webpack_require__(29);
+
+var _FormGroup2 = _interopRequireDefault(_FormGroup);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Form2.default.Group = _FormGroup2.default;
+
+exports.default = _Form2.default;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Map = __webpack_require__(33);
+
+var _Map2 = _interopRequireDefault(_Map);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Map2.default;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Textarea = __webpack_require__(34);
+
+var _Textarea2 = _interopRequireDefault(_Textarea);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Textarea2.default;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(37);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _Default = __webpack_require__(5);
+
+var _colors = __webpack_require__(6);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const config = exports.config = _lodash2.default.merge({}, _Default.config, {
+    color: _colors2.default.white,
+    backgroundColor: _colors2.default.red2,
+    borderColor: _colors2.default.red1,
+    dimmerBackgroundColor: _colors2.default.red2,
+    loaderColor: _colors2.default.white,
+    controlColor: _colors2.default.red1,
+    hoverControlColor: _colors2.default.white,
+
+    form: {
+        button: {
+            color: _colors2.default.white,
+            backgroundColor: _colors2.default.red2,
+            borderColor: _colors2.default.red5,
+            hoverBackgroundColor: _colors2.default.red3,
+            hoverBorderColor: _colors2.default.red5,
+            focusBackgroundColor: _colors2.default.red3,
+            focusBorderColor: _colors2.default.red5,
+            activeBackgroundColor: _colors2.default.red3,
+            activeBorderColor: _colors2.default.red5,
+
+            primary: {
+                color: _colors2.default.red2,
+                backgroundColor: _colors2.default.white,
+                borderColor: _colors2.default.white,
+                hoverBackgroundColor: _colors2.default.gray5,
+                hoverBorderColor: _colors2.default.gray5,
+                focusBackgroundColor: _colors2.default.gray5,
+                focusBorderColor: _colors2.default.gray5,
+                activeBackgroundColor: _colors2.default.gray5,
+                activeBorderColor: _colors2.default.gray5
+            },
+
+            danger: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.red1,
+                borderColor: _colors2.default.red1,
+                hoverBackgroundColor: _colors2.default.red3,
+                hoverBorderColor: _colors2.default.red3,
+                focusBackgroundColor: _colors2.default.red3,
+                focusBorderColor: _colors2.default.red3,
+                activeBackgroundColor: _colors2.default.red3,
+                activeBorderColor: _colors2.default.red3
+            }
+        }
+    }
+});
+
+const RedTheme = (_ref) => {
+    let { children } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+RedTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+RedTheme.displayName = 'RedTheme';
+
+exports.default = RedTheme;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = require("bootstrap");
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = require("bootstrap/dist/css/bootstrap.min.css");
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+module.exports = require("font-awesome/css/font-awesome.min.css");
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("jquery");
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet/dist/leaflet.css");
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
@@ -598,7 +901,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 8 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -636,7 +939,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 9 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -761,7 +1064,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 10 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -789,25 +1092,17 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactFontawesome = __webpack_require__(24);
+var _reactFontawesome = __webpack_require__(38);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _title = __webpack_require__(20);
+var _Title = __webpack_require__(7);
 
-var _title2 = _interopRequireDefault(_title);
+var _Title2 = _interopRequireDefault(_Title);
 
-var _header = __webpack_require__(19);
+var _Loader = __webpack_require__(4);
 
-var _header2 = _interopRequireDefault(_header);
-
-var _footer = __webpack_require__(18);
-
-var _footer2 = _interopRequireDefault(_footer);
-
-var _loader = __webpack_require__(4);
-
-var _loader2 = _interopRequireDefault(_loader);
+var _Loader2 = _interopRequireDefault(_Loader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -909,16 +1204,6 @@ const StyledAside = _styledComponents2.default.aside`
 
     .content.loading {
         display: none;
-    }
-
-    .loader {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        margin-top: -25px;
-        text-align: center;
-        visibility: visible;
     }
 
     &.scroll-content .footer {
@@ -1030,7 +1315,7 @@ class Column extends _react2.default.Component {
                     _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
                 ),
                 title && _react2.default.createElement(
-                    _title2.default,
+                    _Title2.default,
                     { inHeader: true },
                     title
                 ),
@@ -1043,7 +1328,7 @@ class Column extends _react2.default.Component {
                 children
             ),
             !loading && footer && footer,
-            loading && _react2.default.createElement(_loader2.default, { className: 'loader', label: loaderLabel })
+            loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
         );
     }
 }
@@ -1095,273 +1380,10 @@ Column.defaultProps = {
 
 Column.displayName = 'Column';
 
-Column.Title = _title2.default;
-Column.Header = _header2.default;
-Column.Footer = _footer2.default;
-
 exports.default = Column;
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _formGroup = __webpack_require__(21);
-
-var _formGroup2 = _interopRequireDefault(_formGroup);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const Form = props => _react2.default.createElement('form', props);
-
-Form.propTypes = {};
-
-Form.defaultProps = {};
-
-Form.displayName = 'Form';
-
-Form.Group = _formGroup2.default;
-
-Form.Group.displayName = 'Form.Group';
-
-exports.default = Form;
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _inputHint = __webpack_require__(22);
-
-var _inputHint2 = _interopRequireDefault(_inputHint);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-const StyledTextArea = _styledComponents2.default.textarea`
-    opacity: ${props => props.theme.form.input.opacity};
-    resize: ${props => props.resize};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    border-color: ${props => props.theme.form.input.borderColor};
-    border-width: ${props => props.theme.form.input.borderWidth};
-    border-radius: ${props => props.theme.form.input.borderRadius};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
-
-    &:focus,
-    &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusOpacity};
-        background-color: ${props => props.theme.form.input.focusBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusBorderColor};
-        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
-    }
-`;
-
-const Textarea = (_ref) => {
-    let {
-        rows,
-        disabled,
-        hint
-    } = _ref,
-        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
-
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(StyledTextArea, _extends({
-            className: 'form-control',
-            rows: rows,
-            disabled: disabled
-        }, props)),
-        hint && _react2.default.createElement(
-            _inputHint2.default,
-            null,
-            hint
-        )
-    );
-};
-
-Textarea.propTypes = {
-    rows: _propTypes2.default.number,
-    disabled: _propTypes2.default.bool,
-    hint: _propTypes2.default.string,
-    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
-};
-
-Textarea.defaultProps = {
-    rows: 6,
-    disabled: false,
-    hint: '',
-    resize: 'vertical'
-};
-
-Textarea.displayName = 'Textarea';
-
-exports.default = Textarea;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.config = undefined;
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _lodash = __webpack_require__(23);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _default = __webpack_require__(5);
-
-var _colors = __webpack_require__(6);
-
-var _colors2 = _interopRequireDefault(_colors);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-const config = exports.config = _lodash2.default.merge({}, _default.config, {
-    color: _colors2.default.white,
-    backgroundColor: _colors2.default.red2,
-    borderColor: _colors2.default.red1,
-    dimmerBackgroundColor: _colors2.default.red2,
-    loaderColor: _colors2.default.white,
-    controlColor: _colors2.default.red1,
-    hoverControlColor: _colors2.default.white,
-
-    form: {
-        button: {
-            color: _colors2.default.white,
-            backgroundColor: _colors2.default.red2,
-            borderColor: _colors2.default.red5,
-            hoverBackgroundColor: _colors2.default.red3,
-            hoverBorderColor: _colors2.default.red5,
-            focusBackgroundColor: _colors2.default.red3,
-            focusBorderColor: _colors2.default.red5,
-            activeBackgroundColor: _colors2.default.red3,
-            activeBorderColor: _colors2.default.red5,
-
-            primary: {
-                color: _colors2.default.red2,
-                backgroundColor: _colors2.default.white,
-                borderColor: _colors2.default.white,
-                hoverBackgroundColor: _colors2.default.gray5,
-                hoverBorderColor: _colors2.default.gray5,
-                focusBackgroundColor: _colors2.default.gray5,
-                focusBorderColor: _colors2.default.gray5,
-                activeBackgroundColor: _colors2.default.gray5,
-                activeBorderColor: _colors2.default.gray5
-            },
-
-            danger: {
-                color: _colors2.default.white,
-                backgroundColor: _colors2.default.red1,
-                borderColor: _colors2.default.red1,
-                hoverBackgroundColor: _colors2.default.red3,
-                hoverBorderColor: _colors2.default.red3,
-                focusBackgroundColor: _colors2.default.red3,
-                focusBorderColor: _colors2.default.red3,
-                activeBackgroundColor: _colors2.default.red3,
-                activeBorderColor: _colors2.default.red3
-            }
-        }
-    }
-});
-
-const RedTheme = (_ref) => {
-    let { children } = _ref,
-        rest = _objectWithoutProperties(_ref, ['children']);
-
-    return _react2.default.createElement(
-        _styledComponents.ThemeProvider,
-        { theme: config },
-        _react2.default.createElement(
-            _default.StyledDiv,
-            rest,
-            children
-        )
-    );
-};
-
-RedTheme.propTypes = {
-    children: _propTypes2.default.node.isRequired
-};
-
-RedTheme.displayName = 'RedTheme';
-
-exports.default = RedTheme;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-module.exports = require("bootstrap");
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-module.exports = require("bootstrap/dist/css/bootstrap.min.css");
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
-
-module.exports = require("font-awesome/css/font-awesome.min.css");
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-module.exports = require("jquery");
-
-/***/ }),
-/* 18 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1416,7 +1438,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 19 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1468,7 +1490,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 20 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1478,71 +1500,24 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _classnames = __webpack_require__(3);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+const Form = props => _react2.default.createElement('form', props);
 
-const StyledH2 = _styledComponents2.default.h2`
-    margin: 0 0 30px;
+Form.propTypes = {};
 
-    &.in-header {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 0 0 0 20px;
-        line-height: 50px;
-    }
-`;
+Form.defaultProps = {};
 
-const ColumnTitle = (_ref) => {
-    let { children, inHeader } = _ref,
-        rest = _objectWithoutProperties(_ref, ['children', 'inHeader']);
+Form.displayName = 'Form';
 
-    const classes = (0, _classnames2.default)({
-        'column-title': true,
-        'in-header': inHeader
-    });
-
-    return _react2.default.createElement(
-        StyledH2,
-        _extends({ className: classes }, rest),
-        children
-    );
-};
-
-ColumnTitle.propTypes = {
-    children: _propTypes2.default.node.isRequired,
-    inHeader: _propTypes2.default.bool
-};
-
-ColumnTitle.defaultProps = {
-    inHeader: false
-};
-
-ColumnTitle.displayName = 'Column.Title';
-
-exports.default = ColumnTitle;
+exports.default = Form;
 
 /***/ }),
-/* 21 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1627,12 +1602,12 @@ FormGroup.defaultProps = {
     context: ''
 };
 
-FormGroup.displayName = 'FormGroup';
+FormGroup.displayName = 'Form.Group';
 
 exports.default = FormGroup;
 
 /***/ }),
-/* 22 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1669,19 +1644,7 @@ InputHint.displayName = 'InputHint';
 exports.default = InputHint;
 
 /***/ }),
-/* 23 */
-/***/ (function(module, exports) {
-
-module.exports = require("lodash");
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-fontawesome");
-
-/***/ }),
-/* 25 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1690,63 +1653,412 @@ module.exports = require("react-fontawesome");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Column = exports.Textarea = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.RedTheme = exports.DefaultTheme = undefined;
 
-__webpack_require__(17);
+var _InputHint = __webpack_require__(30);
 
-__webpack_require__(15);
-
-__webpack_require__(14);
-
-__webpack_require__(16);
-
-var _default = __webpack_require__(5);
-
-var _default2 = _interopRequireDefault(_default);
-
-var _red = __webpack_require__(13);
-
-var _red2 = _interopRequireDefault(_red);
-
-var _appCanvas = __webpack_require__(8);
-
-var _appCanvas2 = _interopRequireDefault(_appCanvas);
-
-var _loader = __webpack_require__(4);
-
-var _loader2 = _interopRequireDefault(_loader);
-
-var _alert = __webpack_require__(7);
-
-var _alert2 = _interopRequireDefault(_alert);
-
-var _button = __webpack_require__(9);
-
-var _button2 = _interopRequireDefault(_button);
-
-var _form = __webpack_require__(11);
-
-var _form2 = _interopRequireDefault(_form);
-
-var _textarea = __webpack_require__(12);
-
-var _textarea2 = _interopRequireDefault(_textarea);
-
-var _column = __webpack_require__(10);
-
-var _column2 = _interopRequireDefault(_column);
+var _InputHint2 = _interopRequireDefault(_InputHint);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.DefaultTheme = _default2.default;
-exports.RedTheme = _red2.default;
-exports.AppCanvas = _appCanvas2.default;
-exports.Loader = _loader2.default;
-exports.Alert = _alert2.default;
-exports.Button = _button2.default;
-exports.Form = _form2.default;
-exports.Textarea = _textarea2.default;
-exports.Column = _column2.default;
+exports.default = _InputHint2.default;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const rotate360 = _styledComponents.keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+`;
+
+const Spinner = _styledComponents2.default.div`
+    width: ${props => props.spinnerSize}px;
+    height: ${props => props.spinnerSize}px;
+    margin: 0 auto;
+    border: 3px solid ${props => props.theme.loaderColor};
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    animation: ${rotate360} 650ms infinite linear;
+`;
+
+const Wrapper = _styledComponents2.default.div`
+    text-align: center;
+
+    &.centered {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+const Label = _styledComponents2.default.div`
+    color: ${props => props.theme.loaderColor};
+    margin-top: 15px;
+`;
+
+const Loader = (_ref) => {
+    let {
+        centered,
+        spinnerSize,
+        label
+    } = _ref,
+        rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'label']);
+
+    const classes = (0, _classnames2.default)({
+        centered
+    });
+
+    return _react2.default.createElement(
+        Wrapper,
+        _extends({ className: classes }, rest),
+        _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(Spinner, { spinnerSize: spinnerSize }),
+            label && _react2.default.createElement(
+                Label,
+                null,
+                label
+            )
+        )
+    );
+};
+
+Loader.propTypes = {
+    centered: _propTypes2.default.bool,
+    spinnerSize: _propTypes2.default.number,
+    label: _propTypes2.default.string
+};
+
+Loader.defaultProps = {
+    centered: false,
+    spinnerSize: 40,
+    label: ''
+};
+
+Loader.displayName = 'Loader';
+
+exports.default = Loader;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _leaflet = __webpack_require__(35);
+
+var _leaflet2 = _interopRequireDefault(_leaflet);
+
+var _reactLeaflet = __webpack_require__(39);
+
+__webpack_require__(36);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+class Map extends _react2.default.Component {
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.locate === true) {
+            this.locateControl = _leaflet2.default.control.locate();
+            this.map.addControl(this.locateControl);
+        } else if (this.locateControl) {
+            this.map.removeControl(this.locateControl);
+        }
+    }
+
+    handleRef(map) {
+        if (map !== null) {
+            this.map = map.leafletElement;
+        }
+    }
+
+    render() {
+        const _props = this.props,
+              {
+            children
+        } = _props,
+              rest = _objectWithoutProperties(_props, ['children']);
+
+        return _react2.default.createElement(
+            _reactLeaflet.Map,
+            _extends({
+                ref: map => this.handleRef(map)
+            }, rest),
+            children
+        );
+    }
+}
+
+Map.propTypes = {
+    locate: _propTypes2.default.bool,
+    children: _propTypes2.default.node.isRequired
+};
+
+Map.defaultProps = {
+    locate: false
+};
+
+Map.displayName = 'Map';
+
+exports.default = Map;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _InputHint = __webpack_require__(31);
+
+var _InputHint2 = _interopRequireDefault(_InputHint);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledTextArea = _styledComponents2.default.textarea`
+    opacity: ${props => props.theme.form.input.opacity};
+    resize: ${props => props.resize};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    border-color: ${props => props.theme.form.input.borderColor};
+    border-width: ${props => props.theme.form.input.borderWidth};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
+
+    &:focus,
+    &.form-control:focus {
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
+    }
+`;
+
+const Textarea = (_ref) => {
+    let {
+        rows,
+        disabled,
+        hint
+    } = _ref,
+        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
+
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(StyledTextArea, _extends({
+            className: 'form-control',
+            rows: rows,
+            disabled: disabled
+        }, props)),
+        hint && _react2.default.createElement(
+            _InputHint2.default,
+            null,
+            hint
+        )
+    );
+};
+
+Textarea.propTypes = {
+    rows: _propTypes2.default.number,
+    disabled: _propTypes2.default.bool,
+    hint: _propTypes2.default.string,
+    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
+};
+
+Textarea.defaultProps = {
+    rows: 6,
+    disabled: false,
+    hint: '',
+    resize: 'vertical'
+};
+
+Textarea.displayName = 'Textarea';
+
+exports.default = Textarea;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet");
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet.locatecontrol");
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+module.exports = require("lodash");
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-fontawesome");
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-leaflet");
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Map = exports.Column = exports.Textarea = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.RedTheme = exports.DefaultTheme = undefined;
+
+__webpack_require__(19);
+
+__webpack_require__(17);
+
+__webpack_require__(16);
+
+__webpack_require__(18);
+
+__webpack_require__(21);
+
+__webpack_require__(20);
+
+var _Default = __webpack_require__(5);
+
+var _Default2 = _interopRequireDefault(_Default);
+
+var _Red = __webpack_require__(15);
+
+var _Red2 = _interopRequireDefault(_Red);
+
+var _AppCanvas2 = __webpack_require__(9);
+
+var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
+
+var _Loader2 = __webpack_require__(4);
+
+var _Loader3 = _interopRequireDefault(_Loader2);
+
+var _Alert2 = __webpack_require__(8);
+
+var _Alert3 = _interopRequireDefault(_Alert2);
+
+var _Button2 = __webpack_require__(10);
+
+var _Button3 = _interopRequireDefault(_Button2);
+
+var _Form2 = __webpack_require__(12);
+
+var _Form3 = _interopRequireDefault(_Form2);
+
+var _Textarea2 = __webpack_require__(14);
+
+var _Textarea3 = _interopRequireDefault(_Textarea2);
+
+var _Column2 = __webpack_require__(11);
+
+var _Column3 = _interopRequireDefault(_Column2);
+
+var _Map2 = __webpack_require__(13);
+
+var _Map3 = _interopRequireDefault(_Map2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.DefaultTheme = _Default2.default;
+exports.RedTheme = _Red2.default;
+exports.AppCanvas = _AppCanvas3.default;
+exports.Loader = _Loader3.default;
+exports.Alert = _Alert3.default;
+exports.Button = _Button3.default;
+exports.Form = _Form3.default;
+exports.Textarea = _Textarea3.default;
+exports.Column = _Column3.default;
+exports.Map = _Map3.default;
 
 /***/ })
 /******/ ]);
