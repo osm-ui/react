@@ -20,7 +20,9 @@ const StyledMap = styled.div`
         line-height: 50px;
         transition: all 0.1s ease-out;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
             color: ${props => props.theme.map.hoverControlColor};
             background: ${props => props.theme.map.hoverControlBackgroundColor};
         }
