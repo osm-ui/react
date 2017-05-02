@@ -18,6 +18,12 @@ export const config = {
     controlColor: colors.gray4,
     hoverControlColor: colors.gray1,
 
+    map: {
+        controlColor: colors.anthracite1,
+        controlBackgroundColor: colors.white,
+        hoverControlColor: colors.white,
+        hoverControlBackgroundColor: colors.blue2,
+    },
     form: {
         button: {
             color: colors.anthracite2,

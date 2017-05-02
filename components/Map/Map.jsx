@@ -1,8 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import L from 'leaflet';
 import { Map as LeafletMap } from 'react-leaflet';
 import 'leaflet.locatecontrol';
+
+
+const StyledMap = styled.div`
+    .leaflet-bar {
+        border: none;
+    }
+
+    .leaflet-bar a {
+        color: ${props => props.theme.map.controlColor};
+        background: ${props => props.theme.map.controlBackgroundColor};
+        border: none;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        transition: all 0.1s ease-out;
+
+        &:hover {
+            color: ${props => props.theme.map.hoverControlColor};
+            background: ${props => props.theme.map.hoverControlBackgroundColor};
+        }
+    }
+`;
 
 
 class Map extends React.Component {
@@ -29,12 +52,14 @@ class Map extends React.Component {
         } = this.props;
 
         return (
-            <LeafletMap
-                ref={map => this.handleRef(map)}
-                {...rest}
-            >
-                {children}
-            </LeafletMap>
+            <StyledMap>
+                <LeafletMap
+                    ref={map => this.handleRef(map)}
+                    {...rest}
+                >
+                    {children}
+                </LeafletMap>
+            </StyledMap>
         );
     }
 }
