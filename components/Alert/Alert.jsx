@@ -21,6 +21,16 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
+
+            a {
+                color: ${colors.color};
+                text-decoration: underline;
+            }
+
+            a:hover, a:focus, a:active {
+                color: ${colors.color};
+                text-decoration: none;
+            }
         }
     `);
 }, '');
