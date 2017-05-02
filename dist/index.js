@@ -111,7 +111,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(32);
+var _Loader = __webpack_require__(33);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -166,6 +166,12 @@ const config = exports.config = {
     controlColor: _colors2.default.gray4,
     hoverControlColor: _colors2.default.gray1,
 
+    map: {
+        controlColor: _colors2.default.anthracite1,
+        controlBackgroundColor: _colors2.default.white,
+        hoverControlColor: _colors2.default.white,
+        hoverControlBackgroundColor: _colors2.default.blue2
+    },
     form: {
         button: {
             color: _colors2.default.anthracite2,
@@ -530,6 +536,43 @@ exports.default = ColumnTitle;
 
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const StyledDiv = _styledComponents2.default.div`
+    font-size: ${props => props.theme.form.hint.fontSize};
+    color: ${props => props.theme.form.hint.color};
+    background-color: ${props => props.theme.form.hint.backgroundColor};
+    margin: ${props => props.theme.form.hint.margin};
+    padding: ${props => props.theme.form.hint.padding};
+`;
+
+const InputHint = props => _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+
+InputHint.displayName = 'Form.InputHint';
+
+exports.default = InputHint;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -542,7 +585,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Alert2.default;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -561,7 +604,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _AppCanvas2.default;
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -580,7 +623,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Button2.default;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -615,7 +658,7 @@ _Column2.default.Footer = _Footer2.default;
 exports.default = _Column2.default;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -633,30 +676,26 @@ var _FormGroup = __webpack_require__(29);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
+var _Label = __webpack_require__(31);
+
+var _Label2 = _interopRequireDefault(_Label);
+
+var _Input = __webpack_require__(30);
+
+var _Input2 = _interopRequireDefault(_Input);
+
+var _Textarea = __webpack_require__(32);
+
+var _Textarea2 = _interopRequireDefault(_Textarea);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _Form2.default.Group = _FormGroup2.default;
+_Form2.default.Label = _Label2.default;
+_Form2.default.Input = _Input2.default;
+_Form2.default.Textarea = _Textarea2.default;
 
 exports.default = _Form2.default;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Map = __webpack_require__(33);
-
-var _Map2 = _interopRequireDefault(_Map);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Map2.default;
 
 /***/ }),
 /* 14 */
@@ -669,13 +708,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Textarea = __webpack_require__(34);
+var _Map = __webpack_require__(34);
 
-var _Textarea2 = _interopRequireDefault(_Textarea);
+var _Map2 = _interopRequireDefault(_Map);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Textarea2.default;
+exports.default = _Map2.default;
 
 /***/ }),
 /* 15 */
@@ -1578,6 +1617,8 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 
 const StyledDiv = _styledComponents2.default.div`
     ${props => colorsStyle(props)}
+
+    margin-bottom: 40px;
 `;
 
 const FormGroup = (_ref) => {
@@ -1623,25 +1664,81 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _InputHint = __webpack_require__(8);
+
+var _InputHint2 = _interopRequireDefault(_InputHint);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const StyledDiv = _styledComponents2.default.div`
-    font-size: ${props => props.theme.form.hint.fontSize};
-    color: ${props => props.theme.form.hint.color};
-    background-color: ${props => props.theme.form.hint.backgroundColor};
-    margin: ${props => props.theme.form.hint.margin};
-    padding: ${props => props.theme.form.hint.padding};
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledInput = _styledComponents2.default.input`
+    opacity: ${props => props.theme.form.input.opacity};
+    resize: ${props => props.resize};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    border-color: ${props => props.theme.form.input.borderColor};
+    border-width: ${props => props.theme.form.input.borderWidth};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
+
+    &:focus,
+    &.form-control:focus {
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
+    }
 `;
 
-const InputHint = props => _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+const Input = (_ref) => {
+    let {
+        type,
+        disabled,
+        hint
+    } = _ref,
+        props = _objectWithoutProperties(_ref, ['type', 'disabled', 'hint']);
 
-InputHint.displayName = 'InputHint';
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(StyledInput, _extends({
+            className: 'form-control',
+            type: type,
+            disabled: disabled
+        }, props)),
+        hint && _react2.default.createElement(
+            _InputHint2.default,
+            null,
+            hint
+        )
+    );
+};
 
-exports.default = InputHint;
+Input.propTypes = {
+    type: _propTypes2.default.string,
+    disabled: _propTypes2.default.bool,
+    hint: _propTypes2.default.string,
+    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
+};
+
+Input.defaultProps = {
+    type: 'text',
+    disabled: false,
+    hint: '',
+    resize: 'vertical'
+};
+
+Input.displayName = 'Form.Input';
+
+exports.default = Input;
 
 /***/ }),
 /* 31 */
@@ -1651,19 +1748,155 @@ exports.default = InputHint;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
-var _InputHint = __webpack_require__(30);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledLabel = _styledComponents2.default.label`
+    color: ${props => props.theme.color}
+`;
+
+const Label = (_ref) => {
+    let {
+        htmlFor
+    } = _ref,
+        props = _objectWithoutProperties(_ref, ['htmlFor']);
+
+    const classes = (0, _classnames2.default)({
+        'control-label': true
+    });
+
+    return _react2.default.createElement(StyledLabel, _extends({ htmlFor: htmlFor, className: classes }, props));
+};
+
+Label.propTypes = {
+    htmlFor: _propTypes2.default.string
+};
+
+Label.defaultProps = {
+    htmlFor: ''
+};
+
+Label.displayName = 'Form.Label';
+
+exports.default = Label;
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _InputHint = __webpack_require__(8);
 
 var _InputHint2 = _interopRequireDefault(_InputHint);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _InputHint2.default;
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledTextArea = _styledComponents2.default.textarea`
+    opacity: ${props => props.theme.form.input.opacity};
+    resize: ${props => props.resize};
+    background-color: ${props => props.theme.form.input.backgroundColor};
+    border-color: ${props => props.theme.form.input.borderColor};
+    border-width: ${props => props.theme.form.input.borderWidth};
+    border-radius: ${props => props.theme.form.input.borderRadius};
+    box-shadow: ${props => props.theme.form.input.boxShadow};
+
+    &:focus,
+    &.form-control:focus {
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
+    }
+`;
+
+const Textarea = (_ref) => {
+    let {
+        rows,
+        disabled,
+        hint
+    } = _ref,
+        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
+
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(StyledTextArea, _extends({
+            className: 'form-control',
+            rows: rows,
+            disabled: disabled
+        }, props)),
+        hint && _react2.default.createElement(
+            _InputHint2.default,
+            null,
+            hint
+        )
+    );
+};
+
+Textarea.propTypes = {
+    rows: _propTypes2.default.number,
+    disabled: _propTypes2.default.bool,
+    hint: _propTypes2.default.string,
+    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
+};
+
+Textarea.defaultProps = {
+    rows: 6,
+    disabled: false,
+    hint: '',
+    resize: 'vertical'
+};
+
+Textarea.displayName = 'Form.Textarea';
+
+exports.default = Textarea;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1782,7 +2015,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1802,6 +2035,10 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
 var _leaflet = __webpack_require__(35);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
@@ -1813,6 +2050,33 @@ __webpack_require__(36);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+const StyledMap = _styledComponents2.default.div`
+    .leaflet-bar {
+        border: none;
+    }
+
+    .leaflet-bar a {
+        color: ${props => props.theme.map.controlColor};
+        background: ${props => props.theme.map.controlBackgroundColor};
+        border: none;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        transition: all 0.1s ease-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: ${props => props.theme.map.hoverControlColor};
+            background: ${props => props.theme.map.hoverControlBackgroundColor};
+        }
+
+        &:active {
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        }
+    }
+`;
 
 class Map extends _react2.default.Component {
     componentWillReceiveProps(nextProps) {
@@ -1838,11 +2102,15 @@ class Map extends _react2.default.Component {
               rest = _objectWithoutProperties(_props, ['children']);
 
         return _react2.default.createElement(
-            _reactLeaflet.Map,
-            _extends({
-                ref: map => this.handleRef(map)
-            }, rest),
-            children
+            StyledMap,
+            null,
+            _react2.default.createElement(
+                _reactLeaflet.Map,
+                _extends({
+                    ref: map => this.handleRef(map)
+                }, rest),
+                children
+            )
         );
     }
 }
@@ -1859,99 +2127,6 @@ Map.defaultProps = {
 Map.displayName = 'Map';
 
 exports.default = Map;
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _InputHint = __webpack_require__(31);
-
-var _InputHint2 = _interopRequireDefault(_InputHint);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-const StyledTextArea = _styledComponents2.default.textarea`
-    opacity: ${props => props.theme.form.input.opacity};
-    resize: ${props => props.resize};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    border-color: ${props => props.theme.form.input.borderColor};
-    border-width: ${props => props.theme.form.input.borderWidth};
-    border-radius: ${props => props.theme.form.input.borderRadius};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
-
-    &:focus,
-    &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusOpacity};
-        background-color: ${props => props.theme.form.input.focusBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusBorderColor};
-        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
-    }
-`;
-
-const Textarea = (_ref) => {
-    let {
-        rows,
-        disabled,
-        hint
-    } = _ref,
-        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
-
-    return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(StyledTextArea, _extends({
-            className: 'form-control',
-            rows: rows,
-            disabled: disabled
-        }, props)),
-        hint && _react2.default.createElement(
-            _InputHint2.default,
-            null,
-            hint
-        )
-    );
-};
-
-Textarea.propTypes = {
-    rows: _propTypes2.default.number,
-    disabled: _propTypes2.default.bool,
-    hint: _propTypes2.default.string,
-    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
-};
-
-Textarea.defaultProps = {
-    rows: 6,
-    disabled: false,
-    hint: '',
-    resize: 'vertical'
-};
-
-Textarea.displayName = 'Textarea';
-
-exports.default = Textarea;
 
 /***/ }),
 /* 35 */
@@ -1993,7 +2168,7 @@ module.exports = require("react-leaflet");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Map = exports.Column = exports.Textarea = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.RedTheme = exports.DefaultTheme = undefined;
+exports.Map = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.RedTheme = exports.DefaultTheme = undefined;
 
 __webpack_require__(19);
 
@@ -2015,7 +2190,7 @@ var _Red = __webpack_require__(15);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _AppCanvas2 = __webpack_require__(9);
+var _AppCanvas2 = __webpack_require__(10);
 
 var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
 
@@ -2023,27 +2198,23 @@ var _Loader2 = __webpack_require__(4);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(8);
+var _Alert2 = __webpack_require__(9);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(10);
+var _Button2 = __webpack_require__(11);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(12);
+var _Form2 = __webpack_require__(13);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Textarea2 = __webpack_require__(14);
-
-var _Textarea3 = _interopRequireDefault(_Textarea2);
-
-var _Column2 = __webpack_require__(11);
+var _Column2 = __webpack_require__(12);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
-var _Map2 = __webpack_require__(13);
+var _Map2 = __webpack_require__(14);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
@@ -2056,7 +2227,6 @@ exports.Loader = _Loader3.default;
 exports.Alert = _Alert3.default;
 exports.Button = _Button3.default;
 exports.Form = _Form3.default;
-exports.Textarea = _Textarea3.default;
 exports.Column = _Column3.default;
 exports.Map = _Map3.default;
 

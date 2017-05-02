@@ -14,6 +14,5 @@ export Loader from './components/Loader';
 export Alert from './components/Alert';
 export Button from './components/Button';
 export Form from './components/Form';
-export Textarea from './components/Textarea';
 export Column from './components/Column';
 export Map from './components/Map';

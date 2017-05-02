@@ -39,6 +39,8 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 
 const StyledDiv = styled.div`
     ${props => colorsStyle(props)}
+
+    margin-bottom: 40px;
 `;
 
 

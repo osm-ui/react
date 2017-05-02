@@ -9,7 +9,6 @@ import KnobsAlert from './components/KnobsAlert';
 import {
     DefaultTheme,
     Form,
-    Textarea,
 } from '../index';
 
 
@@ -19,6 +18,29 @@ storiesOf('Form', module)
         ...defaultHostOptions,
         title: 'Form',
     }))
+    .addWithInfo('Input', () => {
+        const placeholder = text('Placeholder', 'A placeholder');
+        const hint = text('Hint', 'Hey there! I can help you filling that field!');
+        const formGroupContext = select('Context', ['', 'success', 'warning', 'error']);
+        const disabled = boolean('Disabled');
+        const type = select('Type', ['text', 'email', 'number', 'url'], 'text');
+
+        return (
+            <DefaultTheme>
+                <KnobsAlert />
+                <Form>
+                    <Form.Group context={formGroupContext}>
+                        <Form.Input
+                            type={type}
+                            placeholder={placeholder}
+                            hint={hint}
+                            disabled={disabled}
+                        />
+                    </Form.Group>
+                </Form>
+            </DefaultTheme>
+        );
+    })
     .addWithInfo('Textarea', () => {
         const placeholder = text('Placeholder', 'A placeholder');
         const hint = text('Hint', 'Hey there! I can help you filling that field!');
@@ -37,7 +59,7 @@ storiesOf('Form', module)
                 <KnobsAlert />
                 <Form>
                     <Form.Group context={formGroupContext}>
-                        <Textarea
+                        <Form.Textarea
                             rows={rows}
                             placeholder={placeholder}
                             hint={hint}
@@ -48,4 +70,30 @@ storiesOf('Form', module)
                 </Form>
             </DefaultTheme>
         );
+    })
+    .addWithInfo('Label', () => {
+        const formGroupContext = select('Context', ['', 'success', 'warning', 'error']);
+
+        return (
+            <DefaultTheme>
+                <KnobsAlert />
+                <Form>
+                    <Form.Group context={formGroupContext}>
+                        <Form.Label htmlFor="input">A label over an input</Form.Label>
+                        <Form.Input
+                            id="input"
+                            placeholder="A placeholder"
+                        />
+                    </Form.Group>
+                    <Form.Group context={formGroupContext}>
+                        <Form.Label htmlFor="textarea">A label over a textarea</Form.Label>
+                        <Form.Textarea
+                            id="textarea"
+                            rows={6}
+                            placeholder="A placeholder"
+                        />
+                    </Form.Group>
+                </Form>
+            </DefaultTheme>
+        )
     });
