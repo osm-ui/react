@@ -26,6 +26,10 @@ const StyledMap = styled.div`
             color: ${props => props.theme.map.hoverControlColor};
             background: ${props => props.theme.map.hoverControlBackgroundColor};
         }
+
+        &:active {
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        }
     }
 `;
 
