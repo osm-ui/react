@@ -19,14 +19,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: 'style-loader',
-                query: {
-                    sourceMap: true,
-                }
+                loaders: ['style-loader?sourceMap', 'css-loader'],
             },
             {
-                test: /\.css$/,
-                loader: 'css-loader',
+                test: /\.less$/,
+                loaders: ['style-loader?sourceMap', 'css-loader', 'less-loader'],
             },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,

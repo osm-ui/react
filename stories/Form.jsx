@@ -75,6 +75,7 @@ storiesOf('Form', module)
     .addWithInfo('Select', () => {
         const multi = boolean('Multi-value');
         const searchable = boolean('Searchable');
+        const clearable = boolean('Clearable');
         const disabled = boolean('Disabled');
         const formGroupContext = select('Context', ['', 'success', 'warning', 'error']);
         const options = [
@@ -95,8 +96,8 @@ storiesOf('Form', module)
                             multi={multi}
                             searchable={searchable}
                             disabled={disabled}
+                            clearable={clearable}
                             options={options}
-                            clearable={false}
                         />
                     </Form.Group>
                 </Form>
@@ -111,14 +112,14 @@ storiesOf('Form', module)
                 <KnobsAlert />
                 <Form>
                     <Form.Group context={formGroupContext}>
-                        <Form.Label htmlFor="input">A label over an input</Form.Label>
+                        <Form.Label htmlFor="input">A label above an input</Form.Label>
                         <Form.Input
                             id="input"
                             placeholder="A placeholder"
                         />
                     </Form.Group>
                     <Form.Group context={formGroupContext}>
-                        <Form.Label htmlFor="textarea">A label over a textarea</Form.Label>
+                        <Form.Label htmlFor="textarea">A label above a textarea</Form.Label>
                         <Form.Textarea
                             id="textarea"
                             rows={6}

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "bootstrap/dist/css/bootstrap.min.css", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "lodash", "react-fontawesome", "react-leaflet"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "lodash", "react-fontawesome", "react-leaflet", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("bootstrap/dist/css/bootstrap.min.css"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["bootstrap/dist/css/bootstrap.min.css"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["lodash"], root["react-fontawesome"], root["react-leaflet"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["lodash"], root["react-fontawesome"], root["react-leaflet"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_20__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_17__, __WEBPACK_EXTERNAL_MODULE_18__, __WEBPACK_EXTERNAL_MODULE_19__, __WEBPACK_EXTERNAL_MODULE_20__, __WEBPACK_EXTERNAL_MODULE_21__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_43__, __WEBPACK_EXTERNAL_MODULE_44__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 40);
+/******/ 	return __webpack_require__(__webpack_require__.s = 45);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -111,7 +111,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(33);
+var _Loader = __webpack_require__(34);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -173,7 +173,12 @@ const config = exports.config = {
         hoverControlBackgroundColor: _colors2.default.blue2
     },
     form: {
+        select: {
+            optionColor: _colors2.default.white,
+            optionBackgroundColor: _colors2.default.blue2
+        },
         button: {
+            fontWeight: 700,
             color: _colors2.default.anthracite2,
             backgroundColor: _colors2.default.white,
             borderColor: _colors2.default.gray3,
@@ -185,6 +190,7 @@ const config = exports.config = {
             activeBorderColor: _colors2.default.gray3,
 
             primary: {
+                fontWeight: 700,
                 color: _colors2.default.white,
                 backgroundColor: _colors2.default.blue2,
                 borderColor: _colors2.default.blue2,
@@ -197,6 +203,7 @@ const config = exports.config = {
             },
 
             info: {
+                fontWeight: 700,
                 color: _colors2.default.white,
                 backgroundColor: _colors2.default.turquoise2,
                 borderColor: _colors2.default.turquoise2,
@@ -209,6 +216,7 @@ const config = exports.config = {
             },
 
             success: {
+                fontWeight: 700,
                 color: _colors2.default.white,
                 backgroundColor: _colors2.default.green2,
                 borderColor: _colors2.default.green2,
@@ -221,6 +229,7 @@ const config = exports.config = {
             },
 
             warning: {
+                fontWeight: 700,
                 color: _colors2.default.white,
                 backgroundColor: _colors2.default.orange2,
                 borderColor: _colors2.default.orange2,
@@ -233,6 +242,7 @@ const config = exports.config = {
             },
 
             danger: {
+                fontWeight: 700,
                 color: _colors2.default.white,
                 backgroundColor: _colors2.default.red2,
                 borderColor: _colors2.default.red2,
@@ -245,6 +255,7 @@ const config = exports.config = {
             },
 
             link: {
+                fontWeight: 400,
                 color: _colors2.default.blue2,
                 backgroundColor: 'transparent',
                 borderColor: 'transparent',
@@ -340,7 +351,6 @@ const config = exports.config = {
 
 const StyledDiv = exports.StyledDiv = _styledComponents2.default.div`
     font-family: ${props => props.theme.font};
-    font-size: 16px;
 `;
 
 const DefaultTheme = (_ref) => {
@@ -684,9 +694,13 @@ var _Input = __webpack_require__(30);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(32);
+var _Textarea = __webpack_require__(33);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
+
+var _Select = __webpack_require__(32);
+
+var _Select2 = _interopRequireDefault(_Select);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -694,6 +708,7 @@ _Form2.default.Group = _FormGroup2.default;
 _Form2.default.Label = _Label2.default;
 _Form2.default.Input = _Input2.default;
 _Form2.default.Textarea = _Textarea2.default;
+_Form2.default.Select = _Select2.default;
 
 exports.default = _Form2.default;
 
@@ -708,7 +723,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Map = __webpack_require__(34);
+var _Map = __webpack_require__(35);
 
 var _Map2 = _interopRequireDefault(_Map);
 
@@ -738,7 +753,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(37);
+var _lodash = __webpack_require__(38);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -827,13 +842,13 @@ exports.default = RedTheme;
 /* 16 */
 /***/ (function(module, exports) {
 
-module.exports = require("bootstrap");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = require("bootstrap/dist/css/bootstrap.min.css");
+module.exports = require("bootstrap");
 
 /***/ }),
 /* 18 */
@@ -904,6 +919,16 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
+
+            a {
+                color: ${colors.color};
+                text-decoration: underline;
+            }
+
+            a:hover, a:focus, a:active {
+                color: ${colors.color};
+                text-decoration: none;
+            }
         }
     `;
 }, '');
@@ -1019,7 +1044,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         ${reducedStyles}
 
         &.btn-${context} {
-            font-weight: 700;
+            font-weight: ${colors.fontWeight};
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};
@@ -1131,7 +1156,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _reactFontawesome = __webpack_require__(38);
+var _reactFontawesome = __webpack_require__(39);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
@@ -1682,7 +1707,6 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const StyledInput = _styledComponents2.default.input`
     opacity: ${props => props.theme.form.input.opacity};
-    resize: ${props => props.resize};
     background-color: ${props => props.theme.form.input.backgroundColor};
     border-color: ${props => props.theme.form.input.borderColor};
     border-width: ${props => props.theme.form.input.borderWidth};
@@ -1725,15 +1749,13 @@ const Input = (_ref) => {
 Input.propTypes = {
     type: _propTypes2.default.string,
     disabled: _propTypes2.default.bool,
-    hint: _propTypes2.default.string,
-    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
+    hint: _propTypes2.default.string
 };
 
 Input.defaultProps = {
     type: 'text',
     disabled: false,
-    hint: '',
-    resize: 'vertical'
+    hint: ''
 };
 
 Input.displayName = 'Form.Input';
@@ -1775,6 +1797,9 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 const StyledLabel = _styledComponents2.default.label`
     color: ${props => props.theme.color}
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    font-weight: 400;
 `;
 
 const Label = (_ref) => {
@@ -1804,6 +1829,109 @@ exports.default = Label;
 
 /***/ }),
 /* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+__webpack_require__(41);
+
+__webpack_require__(44);
+
+__webpack_require__(43);
+
+var _reactVirtualizedSelect = __webpack_require__(42);
+
+var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const StyledSelect = (0, _styledComponents2.default)(_reactVirtualizedSelect2.default)`
+    .Select-control {
+        opacity: ${props => props.theme.form.input.opacity};
+        background-color: ${props => props.theme.form.input.backgroundColor};
+        border-color: ${props => props.theme.form.input.borderColor};
+        border-width: ${props => props.theme.form.input.borderWidth};
+        border-radius: ${props => props.theme.form.input.borderRadius};
+        box-shadow: none;
+    }
+
+    &.is-focused .Select-control,
+    &.is-focused:not(.is-open) > .Select-control {
+        opacity: ${props => props.theme.form.input.focusOpacity};
+        background-color: ${props => props.theme.form.input.focusBackgroundColor};
+        border-color: ${props => props.theme.form.input.focusBorderColor};
+        box-shadow: none;
+    }
+
+    .Select-placeholder {
+        padding-left: 15px;
+    }
+
+    .Select-input > input {
+        padding: 0;
+        line-height: 34px;
+    }
+
+    .Select-menu-outer {
+        margin-top: 0;
+        border-top-width: 0;
+    }
+
+    .VirtualizedSelectOption {
+        cursor: default;
+        padding: 5px 10px;
+    }
+
+    .VirtualizedSelectFocusedOption {
+        color: ${props => props.theme.form.select.optionColor};
+        background-color: ${props => props.theme.form.select.optionBackgroundColor};
+    }
+`;
+
+class Select extends _react2.default.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {};
+    }
+
+    render() {
+        return _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(StyledSelect, _extends({
+                onChange: selectValue => this.setState({ selectValue }),
+                value: this.state.selectValue
+            }, this.props))
+        );
+    }
+}
+
+Select.propTypes = _extends({}, _reactVirtualizedSelect2.default.PropTypes);
+
+Select.defaultProps = _extends({}, _reactVirtualizedSelect2.default.defaultProps);
+
+Select.displayName = 'Form.Select';
+
+exports.default = Select;
+
+/***/ }),
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1896,7 +2024,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2015,7 +2143,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2039,13 +2167,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(35);
+var _leaflet = __webpack_require__(36);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _reactLeaflet = __webpack_require__(39);
+var _reactLeaflet = __webpack_require__(40);
 
-__webpack_require__(36);
+__webpack_require__(37);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2129,37 +2257,61 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet");
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol");
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("lodash");
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-fontawesome");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-leaflet");
 
 /***/ }),
-/* 40 */
+/* 41 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-select/dist/react-select.css");
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select");
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select/styles.css");
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized/styles.css");
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2174,13 +2326,13 @@ __webpack_require__(19);
 
 __webpack_require__(17);
 
-__webpack_require__(16);
-
 __webpack_require__(18);
 
 __webpack_require__(21);
 
 __webpack_require__(20);
+
+__webpack_require__(16);
 
 var _Default = __webpack_require__(5);
 

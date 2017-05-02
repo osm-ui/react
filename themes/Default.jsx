@@ -30,6 +30,7 @@ export const config = {
             optionBackgroundColor: colors.blue2,
         },
         button: {
+            fontWeight: 700,
             color: colors.anthracite2,
             backgroundColor: colors.white,
             borderColor: colors.gray3,
@@ -41,6 +42,7 @@ export const config = {
             activeBorderColor: colors.gray3,
 
             primary: {
+                fontWeight: 700,
                 color: colors.white,
                 backgroundColor: colors.blue2,
                 borderColor: colors.blue2,
@@ -53,6 +55,7 @@ export const config = {
             },
 
             info: {
+                fontWeight: 700,
                 color: colors.white,
                 backgroundColor: colors.turquoise2,
                 borderColor: colors.turquoise2,
@@ -65,6 +68,7 @@ export const config = {
             },
 
             success: {
+                fontWeight: 700,
                 color: colors.white,
                 backgroundColor: colors.green2,
                 borderColor: colors.green2,
@@ -77,6 +81,7 @@ export const config = {
             },
 
             warning: {
+                fontWeight: 700,
                 color: colors.white,
                 backgroundColor: colors.orange2,
                 borderColor: colors.orange2,
@@ -89,6 +94,7 @@ export const config = {
             },
 
             danger: {
+                fontWeight: 700,
                 color: colors.white,
                 backgroundColor: colors.red2,
                 borderColor: colors.red2,
@@ -101,6 +107,7 @@ export const config = {
             },
 
             link: {
+                fontWeight: 400,
                 color: colors.blue2,
                 backgroundColor: 'transparent',
                 borderColor: 'transparent',
@@ -197,7 +204,6 @@ export const config = {
 
 export const StyledDiv = styled.div`
     font-family: ${props => props.theme.font};
-    font-size: 16px;
 `;
 
 const DefaultTheme = ({ children, ...rest }) => (

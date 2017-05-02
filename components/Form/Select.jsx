@@ -8,7 +8,6 @@ import VirtualizedSelect from 'react-virtualized-select';
 
 const StyledSelect = styled(VirtualizedSelect)`
     .Select-control {
-        font-size: 14px;
         opacity: ${props => props.theme.form.input.opacity};
         background-color: ${props => props.theme.form.input.backgroundColor};
         border-color: ${props => props.theme.form.input.borderColor};

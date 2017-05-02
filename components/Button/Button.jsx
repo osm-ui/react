@@ -23,7 +23,7 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         ${reducedStyles}
 
         &.btn-${context} {
-            font-weight: 700;
+            font-weight: ${colors.fontWeight};
             color: ${colors.color};
             background-color: ${colors.backgroundColor};
             border-color: ${colors.borderColor};

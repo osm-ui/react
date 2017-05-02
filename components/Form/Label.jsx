@@ -6,6 +6,9 @@ import classnames from 'classnames';
 
 const StyledLabel = styled.label`
     color: ${props => props.theme.color}
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    font-weight: 400;
 `;
 
 const Label = ({
