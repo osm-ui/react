@@ -1,5 +1,5 @@
 {
-  "name": "@osm-ui/react",
+  "name": "osm-ui-react",
   "version": "0.1.0",
   "main": "dist/index.js",
   "repository": "https://github.com/osm-ui/react",
