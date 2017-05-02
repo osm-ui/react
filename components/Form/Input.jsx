@@ -6,7 +6,6 @@ import InputHint from './InputHint';
 
 const StyledInput = styled.input`
     opacity: ${props => props.theme.form.input.opacity};
-    resize: ${props => props.resize};
     background-color: ${props => props.theme.form.input.backgroundColor};
     border-color: ${props => props.theme.form.input.borderColor};
     border-width: ${props => props.theme.form.input.borderWidth};
@@ -45,14 +44,12 @@ Input.propTypes = {
     type: PropTypes.string,
     disabled: PropTypes.bool,
     hint: PropTypes.string,
-    resize: PropTypes.oneOf(['none', 'vertical', 'horizontal']),
 };
 
 Input.defaultProps = {
     type: 'text',
     disabled: false,
     hint: '',
-    resize: 'vertical',
 };
 
 Input.displayName = 'Form.Input';
