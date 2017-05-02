@@ -95,5 +95,5 @@ storiesOf('Form', module)
                     </Form.Group>
                 </Form>
             </DefaultTheme>
-        )
+        );
     });
