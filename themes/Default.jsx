@@ -25,6 +25,10 @@ export const config = {
         hoverControlBackgroundColor: colors.blue2,
     },
     form: {
+        select: {
+            optionColor: colors.white,
+            optionBackgroundColor: colors.blue2,
+        },
         button: {
             color: colors.anthracite2,
             backgroundColor: colors.white,

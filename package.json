@@ -22,6 +22,7 @@
     "@kadira/storybook-addons": "^1.6.1",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
+    "create-react-class": "^15.5.2",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.0",
     "expose-loader": "^0.7.3",
@@ -38,6 +39,9 @@
     "react-fontawesome": "^1.6.1",
     "react-leaflet": "^1.1.0",
     "react-lorem-component": "^0.11.0",
+    "react-select": "^1.0.0-rc.3",
+    "react-virtualized": "^9.7.4",
+    "react-virtualized-select": "^3.0.1",
     "storybook-host": "^1.0.14",
     "styled-components": "^1.4.4",
     "text-ground-react": "^0.0.12"

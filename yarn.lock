@@ -1648,7 +1648,7 @@ clap@^1.0.9:
   dependencies:
     chalk "^1.1.3"
 
-classnames@^2.2.3, classnames@^2.2.5:
+classnames@^2.2.3, classnames@^2.2.4, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
@@ -1867,6 +1867,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
   dependencies:
     create-hash "^1.1.0"
     inherits "^2.0.1"
+
+create-react-class@^15.5.2:
+  version "15.5.2"
+  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.2.tgz#6a8758348df660b88326a0e764d569f274aad681"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.1"
 
 cross-env@^4.0.0:
   version "4.0.0"
@@ -2158,6 +2165,10 @@ doctrine@^2.0.0:
   dependencies:
     esutils "^2.0.2"
     isarray "^1.0.0"
+
+"dom-helpers@^2.4.0 || ^3.0.0":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.2.1.tgz#3203e07fed217bd1f424b019735582fc37b2825a"
 
 domain-browser@^1.1.1:
   version "1.1.7"
@@ -3486,7 +3497,7 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-loose-envify@^1.0.0, loose-envify@^1.1.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -3834,7 +3845,7 @@ object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -4375,6 +4386,12 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.4, prop-types@^15.5.8:
+  version "15.5.8"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.8.tgz#6b7b2e141083be38c8595aa51fc55775c7199394"
+  dependencies:
+    fbjs "^0.8.9"
+
 prop-types@^15.5.6:
   version "15.5.6"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.6.tgz#797a915b1714b645ebb7c5d6cc690346205bd2aa"
@@ -4542,6 +4559,10 @@ react-fuzzy@^0.3.3:
     classnames "^2.2.3"
     fuse.js "^2.2.0"
 
+react-input-autosize@^1.1.0:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-1.1.3.tgz#ced3acd0f237cc04a1475c9207d4da1b7c0a0c86"
+
 react-inspector@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-1.1.2.tgz#192bc54f2be44f9fa0f29f183386f7f6e380f5ec"
@@ -4596,6 +4617,13 @@ react-onclickoutside@^5.9.0:
   version "5.9.0"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-5.9.0.tgz#c47bb506384adc98d686d134b34412ed17b97437"
 
+react-select@^1.0.0-rc.2, react-select@^1.0.0-rc.3:
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-1.0.0-rc.3.tgz#94ade090522153067eff09282d0525249ea1d9e3"
+  dependencies:
+    classnames "^2.2.4"
+    react-input-autosize "^1.1.0"
+
 react-simple-di@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-simple-di/-/react-simple-di-1.2.0.tgz#dde0e5bf689f391ef2ab02c9043b213fe239c6d0"
@@ -4612,6 +4640,25 @@ react-stubber@^1.0.0:
 react-textarea-autosize@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-4.0.5.tgz#55379f6a6fa575fc87d1b8de2756e57e3b6c995d"
+
+react-virtualized-select@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-virtualized-select/-/react-virtualized-select-3.0.1.tgz#7a9727849987c9d49bbbd8707a8254c4288a815a"
+  dependencies:
+    babel-runtime "^6.11.6"
+    prop-types "^15.5.8"
+    react-select "^1.0.0-rc.2"
+    react-virtualized "^9.0.0"
+
+react-virtualized@^9.0.0, react-virtualized@^9.7.4:
+  version "9.7.4"
+  resolved "https://registry.yarnpkg.com/react-virtualized/-/react-virtualized-9.7.4.tgz#1b5b25c1397282c6ffc651b416befc69e282df12"
+  dependencies:
+    babel-runtime "^6.11.6"
+    classnames "^2.2.3"
+    dom-helpers "^2.4.0 || ^3.0.0"
+    loose-envify "^1.3.0"
+    prop-types "^15.5.4"
 
 react@^15.4.2:
   version "15.4.2"

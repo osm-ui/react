@@ -9,6 +9,7 @@ import KnobsAlert from './components/KnobsAlert';
 import {
     DefaultTheme,
     Form,
+    Alert,
 } from '../index';
 
 
@@ -65,6 +66,37 @@ storiesOf('Form', module)
                             hint={hint}
                             disabled={disabled}
                             resize={resize}
+                        />
+                    </Form.Group>
+                </Form>
+            </DefaultTheme>
+        );
+    })
+    .addWithInfo('Select', () => {
+        const multi = boolean('Multi-value');
+        const searchable = boolean('Searchable');
+        const disabled = boolean('Disabled');
+        const formGroupContext = select('Context', ['', 'success', 'warning', 'error']);
+        const options = [
+            { label: 'First option', value: 1 },
+            { label: 'Second option', value: 2 },
+            { label: 'Third option', value: 3, disabled: true },
+        ];
+
+        return (
+            <DefaultTheme>
+                <Alert context="info">
+                    This component is based on the <a href="https://github.com/bvaughn/react-virtualized-select">react-virtualized-select</a> so you use all its props.
+                </Alert>
+                <KnobsAlert />
+                <Form>
+                    <Form.Group context={formGroupContext}>
+                        <Form.Select
+                            multi={multi}
+                            searchable={searchable}
+                            disabled={disabled}
+                            options={options}
+                            clearable={false}
                         />
                     </Form.Group>
                 </Form>
