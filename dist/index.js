@@ -510,10 +510,10 @@ const StyledH2 = _styledComponents2.default.h2`
 `;
 
 const ColumnTitle = (_ref) => {
-    let { children, inHeader } = _ref,
-        rest = _objectWithoutProperties(_ref, ['children', 'inHeader']);
+    let { children, inHeader, className } = _ref,
+        rest = _objectWithoutProperties(_ref, ['children', 'inHeader', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         'column-title': true,
         'in-header': inHeader
     });
@@ -527,11 +527,13 @@ const ColumnTitle = (_ref) => {
 
 ColumnTitle.propTypes = {
     children: _propTypes2.default.node.isRequired,
-    inHeader: _propTypes2.default.bool
+    inHeader: _propTypes2.default.bool,
+    className: _propTypes2.default.string
 };
 
 ColumnTitle.defaultProps = {
-    inHeader: false
+    inHeader: false,
+    className: ''
 };
 
 ColumnTitle.displayName = 'Column.Title';
@@ -940,11 +942,12 @@ const StyledDiv = _styledComponents2.default.div`
 
 const Alert = (_ref) => {
     let {
-        context
+        context,
+        className
     } = _ref,
-        props = _objectWithoutProperties(_ref, ['context']);
+        props = _objectWithoutProperties(_ref, ['context', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         alert: true,
         [`alert-${context}`]: true
     });
@@ -953,11 +956,13 @@ const Alert = (_ref) => {
 };
 
 Alert.propTypes = {
-    context: _propTypes2.default.oneOf(contexts)
+    context: _propTypes2.default.oneOf(contexts),
+    className: _propTypes2.default.string
 };
 
 Alert.defaultProps = {
-    context: 'info'
+    context: 'info',
+    className: ''
 };
 
 Alert.displayName = 'Alert';
@@ -1085,11 +1090,12 @@ const Button = (_ref) => {
         size,
         block,
         active,
-        disabled
+        disabled,
+        className
     } = _ref,
-        props = _objectWithoutProperties(_ref, ['type', 'context', 'size', 'block', 'active', 'disabled']);
+        props = _objectWithoutProperties(_ref, ['type', 'context', 'size', 'block', 'active', 'disabled', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         btn: true,
         [`btn-${context}`]: true,
         [`btn-${size}`]: true,
@@ -1111,7 +1117,8 @@ Button.propTypes = {
     size: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs']),
     block: _propTypes2.default.bool,
     active: _propTypes2.default.bool,
-    disabled: _propTypes2.default.bool
+    disabled: _propTypes2.default.bool,
+    className: _propTypes2.default.string
 };
 
 Button.defaultProps = {
@@ -1120,7 +1127,8 @@ Button.defaultProps = {
     size: 'md',
     block: false,
     active: false,
-    disabled: false
+    disabled: false,
+    className: ''
 };
 
 Button.displayName = 'Button';
@@ -1344,11 +1352,12 @@ class Column extends _react2.default.Component {
             width,
             maximized,
             container,
-            scrollContent
+            scrollContent,
+            className
         } = _props,
-              rest = _objectWithoutProperties(_props, ['title', 'header', 'footer', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container', 'scrollContent']);
+              rest = _objectWithoutProperties(_props, ['title', 'header', 'footer', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container', 'scrollContent', 'className']);
 
-        const asideClasses = (0, _classnames2.default)({
+        const asideClasses = (0, _classnames2.default)(className, {
             [position]: true,
             [width]: true,
             opened: this.state.opened,
@@ -1417,7 +1426,8 @@ Column.propTypes = {
     onClose: _propTypes2.default.func,
     onBack: _propTypes2.default.func,
     onMaximize: _propTypes2.default.func,
-    onUnmaximize: _propTypes2.default.func
+    onUnmaximize: _propTypes2.default.func,
+    className: _propTypes2.default.string
 };
 
 Column.defaultProps = {
@@ -1439,7 +1449,8 @@ Column.defaultProps = {
     onClose: null,
     onBack: null,
     onMaximize: null,
-    onUnmaximize: null
+    onUnmaximize: null,
+    className: ''
 };
 
 Column.displayName = 'Column';
@@ -1648,11 +1659,12 @@ const StyledDiv = _styledComponents2.default.div`
 
 const FormGroup = (_ref) => {
     let {
-        context
+        context,
+        className
     } = _ref,
-        props = _objectWithoutProperties(_ref, ['context']);
+        props = _objectWithoutProperties(_ref, ['context', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         'form-group': true,
         [`has-${context}`]: context !== ''
     });
@@ -1661,11 +1673,13 @@ const FormGroup = (_ref) => {
 };
 
 FormGroup.propTypes = {
-    context: _propTypes2.default.oneOf(contexts)
+    context: _propTypes2.default.oneOf(contexts),
+    className: _propTypes2.default.string
 };
 
 FormGroup.defaultProps = {
-    context: ''
+    context: '',
+    className: ''
 };
 
 FormGroup.displayName = 'Form.Group';
@@ -1804,11 +1818,12 @@ const StyledLabel = _styledComponents2.default.label`
 
 const Label = (_ref) => {
     let {
-        htmlFor
+        htmlFor,
+        className
     } = _ref,
-        props = _objectWithoutProperties(_ref, ['htmlFor']);
+        props = _objectWithoutProperties(_ref, ['htmlFor', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         'control-label': true
     });
 
@@ -1816,11 +1831,13 @@ const Label = (_ref) => {
 };
 
 Label.propTypes = {
-    htmlFor: _propTypes2.default.string
+    htmlFor: _propTypes2.default.string,
+    className: _propTypes2.default.string
 };
 
 Label.defaultProps = {
-    htmlFor: ''
+    htmlFor: '',
+    className: ''
 };
 
 Label.displayName = 'Form.Label';
@@ -2102,11 +2119,12 @@ const Loader = (_ref) => {
     let {
         centered,
         spinnerSize,
-        label
+        label,
+        className
     } = _ref,
-        rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'label']);
+        rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'label', 'className']);
 
-    const classes = (0, _classnames2.default)({
+    const classes = (0, _classnames2.default)(className, {
         centered
     });
 
@@ -2129,13 +2147,15 @@ const Loader = (_ref) => {
 Loader.propTypes = {
     centered: _propTypes2.default.bool,
     spinnerSize: _propTypes2.default.number,
-    label: _propTypes2.default.string
+    label: _propTypes2.default.string,
+    className: _propTypes2.default.string
 };
 
 Loader.defaultProps = {
     centered: false,
     spinnerSize: 40,
-    label: ''
+    label: '',
+    className: ''
 };
 
 Loader.displayName = 'Loader';
