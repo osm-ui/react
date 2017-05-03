@@ -52,9 +52,10 @@ const Loader = ({
     centered,
     spinnerSize,
     label,
+    className,
     ...rest
 }) => {
-    const classes = classnames({
+    const classes = classnames(className, {
         centered,
     });
 
@@ -73,12 +74,14 @@ Loader.propTypes = {
     centered: PropTypes.bool,
     spinnerSize: PropTypes.number,
     label: PropTypes.string,
+    className: PropTypes.string,
 };
 
 Loader.defaultProps = {
     centered: false,
     spinnerSize: 40,
     label: '',
+    className: '',
 };
 
 Loader.displayName = 'Loader';

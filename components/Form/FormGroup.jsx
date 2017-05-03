@@ -46,9 +46,10 @@ const StyledDiv = styled.div`
 
 const FormGroup = ({
     context,
+    className,
     ...props
 }) => {
-    const classes = classnames({
+    const classes = classnames(className, {
         'form-group': true,
         [`has-${context}`]: context !== '',
     });
@@ -61,10 +62,12 @@ const FormGroup = ({
 
 FormGroup.propTypes = {
     context: PropTypes.oneOf(contexts),
+    className: PropTypes.string,
 };
 
 FormGroup.defaultProps = {
     context: '',
+    className: '',
 };
 
 FormGroup.displayName = 'Form.Group';

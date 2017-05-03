@@ -182,10 +182,11 @@ class Column extends React.Component {
             maximized,
             container,
             scrollContent,
+            className,
             ...rest
         } = this.props;
 
-        const asideClasses = classnames({
+        const asideClasses = classnames(className, {
             [position]: true,
             [width]: true,
             opened: this.state.opened,
@@ -249,6 +250,7 @@ Column.propTypes = {
     onBack: PropTypes.func,
     onMaximize: PropTypes.func,
     onUnmaximize: PropTypes.func,
+    className: PropTypes.string,
 };
 
 Column.defaultProps = {
@@ -271,6 +273,7 @@ Column.defaultProps = {
     onBack: null,
     onMaximize: null,
     onUnmaximize: null,
+    className: '',
 };
 
 Column.displayName = 'Column';

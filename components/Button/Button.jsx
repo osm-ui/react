@@ -66,9 +66,10 @@ const Button = ({
     block,
     active,
     disabled,
+    className,
     ...props
 }) => {
-    const classes = classnames({
+    const classes = classnames(className, {
         btn: true,
         [`btn-${context}`]: true,
         [`btn-${size}`]: true,
@@ -101,6 +102,7 @@ Button.propTypes = {
     block: PropTypes.bool,
     active: PropTypes.bool,
     disabled: PropTypes.bool,
+    className: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -110,6 +112,7 @@ Button.defaultProps = {
     block: false,
     active: false,
     disabled: false,
+    className: '',
 };
 
 Button.displayName = 'Button';

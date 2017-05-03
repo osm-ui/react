@@ -13,9 +13,10 @@ const StyledLabel = styled.label`
 
 const Label = ({
     htmlFor,
+    className,
     ...props
 }) => {
-    const classes = classnames({
+    const classes = classnames(className, {
         'control-label': true,
     });
 
@@ -27,10 +28,12 @@ const Label = ({
 
 Label.propTypes = {
     htmlFor: PropTypes.string,
+    className: PropTypes.string,
 };
 
 Label.defaultProps = {
     htmlFor: '',
+    className: '',
 };
 
 Label.displayName = 'Form.Label';

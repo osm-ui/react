@@ -17,8 +17,8 @@ const StyledH2 = styled.h2`
 `;
 
 
-const ColumnTitle = ({ children, inHeader, ...rest }) => {
-    const classes = classnames({
+const ColumnTitle = ({ children, inHeader, className, ...rest }) => {
+    const classes = classnames(className, {
         'column-title': true,
         'in-header': inHeader,
     });
@@ -32,10 +32,12 @@ const ColumnTitle = ({ children, inHeader, ...rest }) => {
 ColumnTitle.propTypes = {
     children: PropTypes.node.isRequired,
     inHeader: PropTypes.bool,
+    className: PropTypes.string,
 };
 
 ColumnTitle.defaultProps = {
     inHeader: false,
+    className: '',
 };
 
 ColumnTitle.displayName = 'Column.Title';

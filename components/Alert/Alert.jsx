@@ -44,9 +44,10 @@ const StyledDiv = styled.div`
 
 const Alert = ({
     context,
+    className,
     ...props
 }) => {
-    const classes = classnames({
+    const classes = classnames(className, {
         alert: true,
         [`alert-${context}`]: true,
     });
@@ -59,11 +60,13 @@ const Alert = ({
 
 Alert.propTypes = {
     context: PropTypes.oneOf(contexts),
+    className: PropTypes.string,
 };
 
 
 Alert.defaultProps = {
     context: 'info',
+    className: '',
 };
 
 Alert.displayName = 'Alert';
