@@ -16,16 +16,22 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         return reducedStyles;
     }
 
-    const controlColors = props.theme.form.input[context];
+    const labelColors = props.theme.form.label[context];
+    const inputColors = props.theme.form.input[context];
     const hintColors = props.theme.form.hint[context];
 
     return (`
         ${reducedStyles}
 
         &.has-${context} {
+            .control-label {
+                color: ${labelColors.color};
+            }
+
+            .Select-control,
             .form-control {
-                background-color: ${controlColors.backgroundColor};
-                border-color: ${controlColors.borderColor};
+                background-color: ${inputColors.backgroundColor};
+                border-color: ${inputColors.borderColor};
             }
 
             .help-block {

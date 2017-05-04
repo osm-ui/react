@@ -293,9 +293,26 @@ const config = exports.config = {
             },
 
             error: {
-                color: _colors2.default.red2,
+                color: _colors2.default.red1,
                 backgroundColor: _colors2.default.white,
                 borderColor: _colors2.default.red2
+            }
+        },
+        label: {
+            color: _colors2.default.anthracite1,
+            fontSize: '1.1em',
+            fontWeight: 400,
+
+            success: {
+                color: _colors2.default.green1
+            },
+
+            warning: {
+                color: _colors2.default.orange1
+            },
+
+            error: {
+                color: _colors2.default.red1
             }
         },
         hint: {
@@ -1631,16 +1648,22 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
         return reducedStyles;
     }
 
-    const controlColors = props.theme.form.input[context];
+    const labelColors = props.theme.form.label[context];
+    const inputColors = props.theme.form.input[context];
     const hintColors = props.theme.form.hint[context];
 
     return `
         ${reducedStyles}
 
         &.has-${context} {
+            .control-label {
+                color: ${labelColors.color};
+            }
+
+            .Select-control,
             .form-control {
-                background-color: ${controlColors.backgroundColor};
-                border-color: ${controlColors.borderColor};
+                background-color: ${inputColors.backgroundColor};
+                border-color: ${inputColors.borderColor};
             }
 
             .help-block {
@@ -1810,10 +1833,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 const StyledLabel = _styledComponents2.default.label`
-    color: ${props => props.theme.color}
+    color: ${props => props.theme.form.label.color}
     margin-bottom: 6px;
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: ${props => props.theme.form.label.fontSize};
+    font-weight: ${props => props.theme.form.label.fontWeight};
 `;
 
 const Label = (_ref) => {

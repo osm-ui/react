@@ -5,10 +5,10 @@ import classnames from 'classnames';
 
 
 const StyledLabel = styled.label`
-    color: ${props => props.theme.color}
+    color: ${props => props.theme.form.label.color}
     margin-bottom: 6px;
-    font-size: 1.1em;
-    font-weight: 400;
+    font-size: ${props => props.theme.form.label.fontSize};
+    font-weight: ${props => props.theme.form.label.fontWeight};
 `;
 
 const Label = ({

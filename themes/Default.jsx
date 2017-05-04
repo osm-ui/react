@@ -145,9 +145,26 @@ export const config = {
             },
 
             error: {
-                color: colors.red2,
+                color: colors.red1,
                 backgroundColor: colors.white,
                 borderColor: colors.red2,
+            },
+        },
+        label: {
+            color: colors.anthracite1,
+            fontSize: '1.1em',
+            fontWeight: 400,
+
+            success: {
+                color: colors.green1,
+            },
+
+            warning: {
+                color: colors.orange1,
+            },
+
+            error: {
+                color: colors.red1,
             },
         },
         hint: {
