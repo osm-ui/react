@@ -133,6 +133,8 @@ exports.StyledDiv = exports.config = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    font-family: ', ';\n'], ['\n    font-family: ', ';\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -153,7 +155,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const config = exports.config = {
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var config = exports.config = {
     font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
     color: _colors2.default.anthracite1,
     backgroundColor: _colors2.default.white,
@@ -366,12 +370,12 @@ const config = exports.config = {
     }
 };
 
-const StyledDiv = exports.StyledDiv = _styledComponents2.default.div`
-    font-family: ${props => props.theme.font};
-`;
+var StyledDiv = exports.StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.font;
+});
 
-const DefaultTheme = (_ref) => {
-    let { children } = _ref,
+var DefaultTheme = function DefaultTheme(_ref) {
+    var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
     return _react2.default.createElement(
@@ -494,6 +498,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n'], ['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -514,23 +520,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledH2 = _styledComponents2.default.h2`
-    margin: 0 0 30px;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-    &.in-header {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 0 0 0 20px;
-        line-height: 50px;
-    }
-`;
+var StyledH2 = _styledComponents2.default.h2(_templateObject);
 
-const ColumnTitle = (_ref) => {
-    let { children, inHeader, className } = _ref,
+var ColumnTitle = function ColumnTitle(_ref) {
+    var children = _ref.children,
+        inHeader = _ref.inHeader,
+        className = _ref.className,
         rest = _objectWithoutProperties(_ref, ['children', 'inHeader', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
+    var classes = (0, _classnames2.default)(className, {
         'column-title': true,
         'in-header': inHeader
     });
@@ -570,6 +570,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    font-size: ', ';\n    color: ', ';\n    background-color: ', ';\n    margin: ', ';\n    padding: ', ';\n'], ['\n    font-size: ', ';\n    color: ', ';\n    background-color: ', ';\n    margin: ', ';\n    padding: ', ';\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -580,15 +582,23 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const StyledDiv = _styledComponents2.default.div`
-    font-size: ${props => props.theme.form.hint.fontSize};
-    color: ${props => props.theme.form.hint.color};
-    background-color: ${props => props.theme.form.hint.backgroundColor};
-    margin: ${props => props.theme.form.hint.margin};
-    padding: ${props => props.theme.form.hint.padding};
-`;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const InputHint = props => _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.form.hint.fontSize;
+}, function (props) {
+    return props.theme.form.hint.color;
+}, function (props) {
+    return props.theme.form.hint.backgroundColor;
+}, function (props) {
+    return props.theme.form.hint.margin;
+}, function (props) {
+    return props.theme.form.hint.padding;
+});
+
+var InputHint = function InputHint(props) {
+    return _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+};
 
 InputHint.displayName = 'Form.InputHint';
 
@@ -786,7 +796,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const config = exports.config = _lodash2.default.merge({}, _Default.config, {
+var config = exports.config = _lodash2.default.merge({}, _Default.config, {
     color: _colors2.default.white,
     backgroundColor: _colors2.default.red2,
     borderColor: _colors2.default.red1,
@@ -834,8 +844,8 @@ const config = exports.config = _lodash2.default.merge({}, _Default.config, {
     }
 });
 
-const RedTheme = (_ref) => {
-    let { children } = _ref,
+var RedTheme = function RedTheme(_ref) {
+    var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
     return _react2.default.createElement(
@@ -906,6 +916,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    border-radius: ', ';\n    ', '\n'], ['\n    border-radius: ', ';\n    ', '\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -914,9 +926,9 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = __webpack_require__(3);
+var _classnames2 = __webpack_require__(3);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -924,50 +936,36 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const contexts = ['info', 'success', 'warning', 'danger'];
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
-    const colors = props.theme.alert[context];
+var contexts = ['info', 'success', 'warning', 'danger'];
 
-    return `
-        ${reducedStyles}
+var colorsStyle = function colorsStyle(props) {
+    return contexts.reduce(function (reducedStyles, context) {
+        var colors = props.theme.alert[context];
 
-        &.alert-${context} {
-            color: ${colors.color};
-            background-color: ${colors.backgroundColor};
-            border-color: ${colors.borderColor};
+        return '\n        ' + reducedStyles + '\n\n        &.alert-' + context + ' {\n            color: ' + colors.color + ';\n            background-color: ' + colors.backgroundColor + ';\n            border-color: ' + colors.borderColor + ';\n\n            a {\n                color: ' + colors.color + ';\n                text-decoration: underline;\n            }\n\n            a:hover, a:focus, a:active {\n                color: ' + colors.color + ';\n                text-decoration: none;\n            }\n        }\n    ';
+    }, '');
+};
 
-            a {
-                color: ${colors.color};
-                text-decoration: underline;
-            }
+var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.borderRadius;
+}, function (props) {
+    return colorsStyle(props);
+});
 
-            a:hover, a:focus, a:active {
-                color: ${colors.color};
-                text-decoration: none;
-            }
-        }
-    `;
-}, '');
-
-const StyledDiv = _styledComponents2.default.div`
-    border-radius: ${props => props.theme.borderRadius};
-    ${props => colorsStyle(props)}
-`;
-
-const Alert = (_ref) => {
-    let {
-        context,
-        className
-    } = _ref,
+var Alert = function Alert(_ref) {
+    var context = _ref.context,
+        className = _ref.className,
         props = _objectWithoutProperties(_ref, ['context', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
-        alert: true,
-        [`alert-${context}`]: true
-    });
+    var classes = (0, _classnames3.default)(className, _defineProperty({
+        alert: true
+    }, 'alert-' + context, true));
 
     return _react2.default.createElement(StyledDiv, _extends({ className: classes }, props));
 };
@@ -997,6 +995,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _templateObject = _taggedTemplateLiteral(['\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n'], ['\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1007,14 +1007,13 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const StyledDiv = _styledComponents2.default.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-`;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const AppCanvas = props => _react2.default.createElement(StyledDiv, props);
+var StyledDiv = _styledComponents2.default.div(_templateObject);
+
+var AppCanvas = function AppCanvas(props) {
+    return _react2.default.createElement(StyledDiv, props);
+};
 
 AppCanvas.propTypes = {};
 
@@ -1037,6 +1036,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n'], ['\n    ', '\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1045,9 +1046,9 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = __webpack_require__(3);
+var _classnames2 = __webpack_require__(3);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -1055,71 +1056,43 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const contexts = ['default', 'primary', 'info', 'success', 'warning', 'danger', 'link'];
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
-    const colors = context === 'default' ? props.theme.form.button : props.theme.form.button[context];
+var contexts = ['default', 'primary', 'info', 'success', 'warning', 'danger', 'link'];
 
-    return `
-        ${reducedStyles}
+var colorsStyle = function colorsStyle(props) {
+    return contexts.reduce(function (reducedStyles, context) {
+        var colors = context === 'default' ? props.theme.form.button : props.theme.form.button[context];
 
-        &.btn-${context} {
-            font-weight: ${colors.fontWeight};
-            color: ${colors.color};
-            background-color: ${colors.backgroundColor};
-            border-color: ${colors.borderColor};
+        return '\n        ' + reducedStyles + '\n\n        &.btn-' + context + ' {\n            font-weight: ' + colors.fontWeight + ';\n            color: ' + colors.color + ';\n            background-color: ' + colors.backgroundColor + ';\n            border-color: ' + colors.borderColor + ';\n\n            &:hover {\n                color: ' + colors.color + ';\n                background-color: ' + colors.hoverBackgroundColor + ';\n                border-color: ' + colors.hoverBorderColor + ';\n            }\n\n            &:focus {\n                color: ' + colors.color + ';\n                background-color: ' + colors.focusBackgroundColor + ';\n                border-color: ' + colors.focusBorderColor + ';\n            }\n\n            &:active, .active {\n                color: ' + colors.color + ';\n                background-color: ' + colors.activeBackgroundColor + ';\n                border-color: ' + colors.activeBorderColor + ';\n            }\n        }\n    ';
+    }, '');
+};
 
-            &:hover {
-                color: ${colors.color};
-                background-color: ${colors.hoverBackgroundColor};
-                border-color: ${colors.hoverBorderColor};
-            }
+var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
+    return colorsStyle(props);
+});
 
-            &:focus {
-                color: ${colors.color};
-                background-color: ${colors.focusBackgroundColor};
-                border-color: ${colors.focusBorderColor};
-            }
+var StyledAnchor = _styledComponents2.default.a(_templateObject, colorsStyle);
 
-            &:active, .active {
-                color: ${colors.color};
-                background-color: ${colors.activeBackgroundColor};
-                border-color: ${colors.activeBorderColor};
-            }
-        }
-    `;
-}, '');
+var Button = function Button(_ref) {
+    var _classnames;
 
-const StyledButton = _styledComponents2.default.button`
-    ${props => colorsStyle(props)}
-`;
-
-const StyledAnchor = _styledComponents2.default.a`
-    ${colorsStyle}
-`;
-
-const Button = (_ref) => {
-    let {
-        type,
-        context,
-        size,
-        block,
-        active,
-        disabled,
-        className
-    } = _ref,
+    var type = _ref.type,
+        context = _ref.context,
+        size = _ref.size,
+        block = _ref.block,
+        active = _ref.active,
+        disabled = _ref.disabled,
+        className = _ref.className,
         props = _objectWithoutProperties(_ref, ['type', 'context', 'size', 'block', 'active', 'disabled', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
-        btn: true,
-        [`btn-${context}`]: true,
-        [`btn-${size}`]: true,
-        'btn-block': block,
-        active,
-        disabled
-    });
+    var classes = (0, _classnames3.default)(className, (_classnames = {
+        btn: true
+    }, _defineProperty(_classnames, 'btn-' + context, true), _defineProperty(_classnames, 'btn-' + size, true), _defineProperty(_classnames, 'btn-block', block), _defineProperty(_classnames, 'active', active), _defineProperty(_classnames, 'disabled', disabled), _classnames));
 
     if (type === 'anchor') {
         return _react2.default.createElement(StyledAnchor, _extends({ className: classes, role: 'button' }, props));
@@ -1165,6 +1138,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n'], ['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1177,9 +1154,9 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames = __webpack_require__(3);
+var _classnames2 = __webpack_require__(3);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 var _reactFontawesome = __webpack_require__(39);
 
@@ -1195,233 +1172,175 @@ var _Loader2 = _interopRequireDefault(_Loader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledAside = _styledComponents2.default.aside`
-    top: 0;
-    max-width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    transition: all 0.25s ease-out;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-    color: ${props => props.theme.color};
-    background: ${props => props.theme.backgroundColor};
-    border-color: ${props => props.theme.borderColor};
-    border-style: ${props => props.theme.borderStyle};
-    border-width: 0;
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-    &.scroll-content {
-        display: flex;
-        flex-direction: column;
-        overflow-y: none;
-    }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    &.container-parent { position: absolute; }
-    &.container-root   { position: fixed; }
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-    &.xs { width: 150px; }
-    &.sm { width: 250px; }
-    &.md { width: 400px; }
-    &.lg { width: 600px; }
-    &.maximized { width: 100%; }
+var StyledAside = _styledComponents2.default.aside(_templateObject, function (props) {
+    return props.theme.color;
+}, function (props) {
+    return props.theme.backgroundColor;
+}, function (props) {
+    return props.theme.borderColor;
+}, function (props) {
+    return props.theme.borderStyle;
+}, function (props) {
+    return props.theme.borderWidth;
+}, function (props) {
+    return props.theme.borderWidth;
+}, function (props) {
+    return props.theme.controlColor;
+}, function (props) {
+    return props.theme.hoverControlColor;
+}, function (props) {
+    return props.theme.borderColor;
+}, function (props) {
+    return props.theme.borderStyle;
+});
 
-    &.left {
-        left: 0;
-        transform: translate(-150%, 0);
-        border-right-width: ${props => props.theme.borderWidth};
-    }
+var Column = function (_React$Component) {
+    _inherits(Column, _React$Component);
 
-    &.right {
-        right: 0;
-        transform: translate(150%, 0);
-        border-left-width: ${props => props.theme.borderWidth};
-    }
+    function Column(props) {
+        _classCallCheck(this, Column);
 
-    &.left.maximized,
-    &.right.maximized {
-        border-width: 0;
-    }
+        var _this = _possibleConstructorReturn(this, (Column.__proto__ || Object.getPrototypeOf(Column)).call(this, props));
 
-    &.opened {
-        transform: translate(0, 0);
-    }
-
-    .back-btn,
-    .close-btn {
-        color: ${props => props.theme.controlColor};
-        background: transparent;
-        border-width: 0;
-        width: 50px;
-        height: 50px;
-        padding: 0;
-
-        &:hover {
-            color: ${props => props.theme.hoverControlColor};
-        }
-    }
-
-    .back-btn {
-        float: left;
-        margin-right: 5px;
-    }
-
-    .close-btn {
-        float: right;
-        margin-left: 5px;
-    }
-
-    &.scroll-content .header {
-        margin-bottom: 20px;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    &.scroll-content .content {
-        overflow-y: auto;
-        border-color: ${props => props.theme.borderColor};
-        border-style: ${props => props.theme.borderStyle};
-        border-width: 1px 0 1px 0;
-
-        &::after {
-            content: '';
-            margin-top: 20px;
-            display: block;
-        }
-    }
-
-    .content.loading {
-        display: none;
-    }
-
-    &.scroll-content .footer {
-        margin-top: 20px;
-    }
-`;
-
-class Column extends _react2.default.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
+        _this.state = {
             opened: props.opened
         };
+        return _this;
     }
 
-    componentDidMount() {
-        if (this.props.opened === true) {
-            this._triggerCallback('onOpen');
-        }
-
-        if (this.props.maximized === true) {
-            this.props.onMaximize();
-        }
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            opened: nextProps.opened
-        });
-
-        if (this.props.opened !== nextProps.opened) {
-            if (nextProps.opened === true) {
+    _createClass(Column, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (this.props.opened === true) {
                 this._triggerCallback('onOpen');
-            } else {
-                this._triggerCallback('onClose');
+            }
+
+            if (this.props.maximized === true) {
+                this.props.onMaximize();
             }
         }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            this.setState({
+                opened: nextProps.opened
+            });
 
-        if (this.props.maximized !== nextProps.maximized) {
-            if (nextProps.maximized === true) {
-                this._triggerCallback('onMaximize');
-            } else {
-                this._triggerCallback('onUnmaximize');
+            if (this.props.opened !== nextProps.opened) {
+                if (nextProps.opened === true) {
+                    this._triggerCallback('onOpen');
+                } else {
+                    this._triggerCallback('onClose');
+                }
+            }
+
+            if (this.props.maximized !== nextProps.maximized) {
+                if (nextProps.maximized === true) {
+                    this._triggerCallback('onMaximize');
+                } else {
+                    this._triggerCallback('onUnmaximize');
+                }
             }
         }
-    }
-
-    _triggerCallback(name) {
-        if (this.props[name] !== null) {
-            this.props[name]();
+    }, {
+        key: '_triggerCallback',
+        value: function _triggerCallback(name) {
+            if (this.props[name] !== null) {
+                this.props[name]();
+            }
         }
-    }
+    }, {
+        key: '_handleBackClick',
+        value: function _handleBackClick() {
+            this._triggerCallback('onBack');
+        }
+    }, {
+        key: '_handleCloseClick',
+        value: function _handleCloseClick() {
+            this.setState({ opened: false });
+            this._triggerCallback('onClose');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _classnames,
+                _this2 = this;
 
-    _handleBackClick() {
-        this._triggerCallback('onBack');
-    }
+            var _props = this.props,
+                title = _props.title,
+                header = _props.header,
+                footer = _props.footer,
+                children = _props.children,
+                loading = _props.loading,
+                loaderLabel = _props.loaderLabel,
+                position = _props.position,
+                width = _props.width,
+                maximized = _props.maximized,
+                container = _props.container,
+                scrollContent = _props.scrollContent,
+                className = _props.className,
+                rest = _objectWithoutProperties(_props, ['title', 'header', 'footer', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container', 'scrollContent', 'className']);
 
-    _handleCloseClick() {
-        this.setState({ opened: false });
-        this._triggerCallback('onClose');
-    }
+            var asideClasses = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, position, true), _defineProperty(_classnames, width, true), _defineProperty(_classnames, 'opened', this.state.opened), _defineProperty(_classnames, 'maximized', maximized), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'scroll-content', scrollContent), _classnames));
 
-    render() {
-        const _props = this.props,
-              {
-            title,
-            header,
-            footer,
-            children,
-            loading,
-            loaderLabel,
-            position,
-            width,
-            maximized,
-            container,
-            scrollContent,
-            className
-        } = _props,
-              rest = _objectWithoutProperties(_props, ['title', 'header', 'footer', 'children', 'loading', 'loaderLabel', 'position', 'width', 'maximized', 'container', 'scrollContent', 'className']);
+            var contentClasses = (0, _classnames3.default)({
+                content: true,
+                loading: loading
+            });
 
-        const asideClasses = (0, _classnames2.default)(className, {
-            [position]: true,
-            [width]: true,
-            opened: this.state.opened,
-            maximized,
-            [`container-${container}`]: true,
-            'scroll-content': scrollContent
-        });
-
-        const contentClasses = (0, _classnames2.default)({
-            content: true,
-            loading
-        });
-
-        return _react2.default.createElement(
-            StyledAside,
-            _extends({ className: asideClasses }, rest),
-            _react2.default.createElement(
-                'header',
-                { className: 'header' },
-                this.props.onBack && _react2.default.createElement(
-                    'button',
-                    { className: 'back-btn', onClick: () => this._handleBackClick() },
-                    _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+            return _react2.default.createElement(
+                StyledAside,
+                _extends({ className: asideClasses }, rest),
+                _react2.default.createElement(
+                    'header',
+                    { className: 'header' },
+                    this.props.onBack && _react2.default.createElement(
+                        'button',
+                        { className: 'back-btn', onClick: function onClick() {
+                                return _this2._handleBackClick();
+                            } },
+                        _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+                    ),
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'close-btn', onClick: function onClick() {
+                                return _this2._handleCloseClick();
+                            } },
+                        _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                    ),
+                    title && _react2.default.createElement(
+                        _Title2.default,
+                        { inHeader: true },
+                        title
+                    ),
+                    _react2.default.createElement('div', { className: 'clearfix' }),
+                    !loading && header && header
                 ),
                 _react2.default.createElement(
-                    'button',
-                    { className: 'close-btn', onClick: () => this._handleCloseClick() },
-                    _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                    'div',
+                    { className: contentClasses },
+                    children
                 ),
-                title && _react2.default.createElement(
-                    _Title2.default,
-                    { inHeader: true },
-                    title
-                ),
-                _react2.default.createElement('div', { className: 'clearfix' }),
-                !loading && header && header
-            ),
-            _react2.default.createElement(
-                'div',
-                { className: contentClasses },
-                children
-            ),
-            !loading && footer && footer,
-            loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
-        );
-    }
-}
+                !loading && footer && footer,
+                loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
+            );
+        }
+    }]);
+
+    return Column;
+}(_react2.default.Component);
 
 Column.propTypes = {
     title: _propTypes2.default.string,
@@ -1487,6 +1406,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    padding: 20px 20px;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 0 0;\n'], ['\n    padding: 20px 20px;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 0 0;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1503,15 +1424,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledDiv = _styledComponents2.default.div`
-    padding: 20px 20px;
-    border-color: ${props => props.theme.borderColor};
-    border-style: ${props => props.theme.borderStyle};
-    border-width: 1px 0 0 0;
-`;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const ColumnFooter = (_ref) => {
-    let { children } = _ref,
+var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.borderColor;
+}, function (props) {
+    return props.theme.borderStyle;
+});
+
+var ColumnFooter = function ColumnFooter(_ref) {
+    var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
     return _react2.default.createElement(
@@ -1542,6 +1464,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    padding: 15px 20px 0;\n'], ['\n    padding: 15px 20px 0;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1558,12 +1482,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledDiv = _styledComponents2.default.div`
-    padding: 15px 20px 0;
-`;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const ColumnHeader = (_ref) => {
-    let { children } = _ref,
+var StyledDiv = _styledComponents2.default.div(_templateObject);
+
+var ColumnHeader = function ColumnHeader(_ref) {
+    var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
     return _react2.default.createElement(
@@ -1598,7 +1522,9 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const Form = props => _react2.default.createElement('form', props);
+var Form = function Form(props) {
+    return _react2.default.createElement('form', props);
+};
 
 Form.propTypes = {};
 
@@ -1621,6 +1547,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    margin-bottom: 40px;\n'], ['\n    ', '\n\n    margin-bottom: 40px;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1633,64 +1561,46 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames = __webpack_require__(3);
+var _classnames2 = __webpack_require__(3);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const contexts = ['', 'success', 'warning', 'error'];
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
-    if (!context) {
-        return reducedStyles;
-    }
+var contexts = ['', 'success', 'warning', 'error'];
 
-    const labelColors = props.theme.form.label[context];
-    const inputColors = props.theme.form.input[context];
-    const hintColors = props.theme.form.hint[context];
-
-    return `
-        ${reducedStyles}
-
-        &.has-${context} {
-            .control-label {
-                color: ${labelColors.color};
-            }
-
-            .Select-control,
-            .form-control {
-                background-color: ${inputColors.backgroundColor};
-                border-color: ${inputColors.borderColor};
-            }
-
-            .help-block {
-                background-color: ${hintColors.backgroundColor};
-                color: ${hintColors.color};
-            }
+var colorsStyle = function colorsStyle(props) {
+    return contexts.reduce(function (reducedStyles, context) {
+        if (!context) {
+            return reducedStyles;
         }
-    `;
-}, '');
 
-const StyledDiv = _styledComponents2.default.div`
-    ${props => colorsStyle(props)}
+        var labelColors = props.theme.form.label[context];
+        var inputColors = props.theme.form.input[context];
+        var hintColors = props.theme.form.hint[context];
 
-    margin-bottom: 40px;
-`;
+        return '\n        ' + reducedStyles + '\n\n        &.has-' + context + ' {\n            .control-label {\n                color: ' + labelColors.color + ';\n            }\n\n            .Select-control,\n            .form-control {\n                background-color: ' + inputColors.backgroundColor + ';\n                border-color: ' + inputColors.borderColor + ';\n            }\n\n            .help-block {\n                background-color: ' + hintColors.backgroundColor + ';\n                color: ' + hintColors.color + ';\n            }\n        }\n    ';
+    }, '');
+};
 
-const FormGroup = (_ref) => {
-    let {
-        context,
-        className
-    } = _ref,
+var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return colorsStyle(props);
+});
+
+var FormGroup = function FormGroup(_ref) {
+    var context = _ref.context,
+        className = _ref.className,
         props = _objectWithoutProperties(_ref, ['context', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
-        'form-group': true,
-        [`has-${context}`]: context !== ''
-    });
+    var classes = (0, _classnames3.default)(className, _defineProperty({
+        'form-group': true
+    }, 'has-' + context, context !== ''));
 
     return _react2.default.createElement(StyledDiv, _extends({ className: classes }, props));
 };
@@ -1722,6 +1632,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: ', ';\n\n    &:focus,\n    &.form-control:focus {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: ', ';\n    }\n'], ['\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: ', ';\n\n    &:focus,\n    &.form-control:focus {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: ', ';\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1742,29 +1654,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledInput = _styledComponents2.default.input`
-    opacity: ${props => props.theme.form.input.opacity};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    border-color: ${props => props.theme.form.input.borderColor};
-    border-width: ${props => props.theme.form.input.borderWidth};
-    border-radius: ${props => props.theme.form.input.borderRadius};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-    &:focus,
-    &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusOpacity};
-        background-color: ${props => props.theme.form.input.focusBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusBorderColor};
-        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
-    }
-`;
+var StyledInput = _styledComponents2.default.input(_templateObject, function (props) {
+    return props.theme.form.input.opacity;
+}, function (props) {
+    return props.theme.form.input.backgroundColor;
+}, function (props) {
+    return props.theme.form.input.borderColor;
+}, function (props) {
+    return props.theme.form.input.borderWidth;
+}, function (props) {
+    return props.theme.form.input.borderRadius;
+}, function (props) {
+    return props.theme.form.input.boxShadow;
+}, function (props) {
+    return props.theme.form.input.focusOpacity;
+}, function (props) {
+    return props.theme.form.input.focusBackgroundColor;
+}, function (props) {
+    return props.theme.form.input.focusBorderColor;
+}, function (props) {
+    return props.theme.form.input.focusBoxShadow;
+});
 
-const Input = (_ref) => {
-    let {
-        type,
-        disabled,
-        hint
-    } = _ref,
+var Input = function Input(_ref) {
+    var type = _ref.type,
+        disabled = _ref.disabled,
+        hint = _ref.hint,
         props = _objectWithoutProperties(_ref, ['type', 'disabled', 'hint']);
 
     return _react2.default.createElement(
@@ -1812,6 +1729,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    color: ', '\n    margin-bottom: 6px;\n    font-size: ', ';\n    font-weight: ', ';\n'], ['\n    color: ', '\n    margin-bottom: 6px;\n    font-size: ', ';\n    font-weight: ', ';\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1832,21 +1751,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledLabel = _styledComponents2.default.label`
-    color: ${props => props.theme.form.label.color}
-    margin-bottom: 6px;
-    font-size: ${props => props.theme.form.label.fontSize};
-    font-weight: ${props => props.theme.form.label.fontWeight};
-`;
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-const Label = (_ref) => {
-    let {
-        htmlFor,
-        className
-    } = _ref,
+var StyledLabel = _styledComponents2.default.label(_templateObject, function (props) {
+    return props.theme.form.label.color;
+}, function (props) {
+    return props.theme.form.label.fontSize;
+}, function (props) {
+    return props.theme.form.label.fontWeight;
+});
+
+var Label = function Label(_ref) {
+    var htmlFor = _ref.htmlFor,
+        className = _ref.className,
         props = _objectWithoutProperties(_ref, ['htmlFor', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
+    var classes = (0, _classnames2.default)(className, {
         'control-label': true
     });
 
@@ -1880,6 +1800,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    .Select-control {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        border-width: ', ';\n        border-radius: ', ';\n        box-shadow: none;\n    }\n\n    &.is-focused .Select-control,\n    &.is-focused:not(.is-open) > .Select-control {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: none;\n    }\n\n    .Select-placeholder {\n        padding-left: 15px;\n    }\n\n    .Select-input > input {\n        padding: 0;\n        line-height: 34px;\n    }\n\n    .Select-menu-outer {\n        margin-top: 0;\n        border-top-width: 0;\n    }\n\n    .VirtualizedSelectOption {\n        cursor: default;\n        padding: 5px 10px;\n    }\n\n    .VirtualizedSelectFocusedOption {\n        color: ', ';\n        background-color: ', ';\n    }\n'], ['\n    .Select-control {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        border-width: ', ';\n        border-radius: ', ';\n        box-shadow: none;\n    }\n\n    &.is-focused .Select-control,\n    &.is-focused:not(.is-open) > .Select-control {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: none;\n    }\n\n    .Select-placeholder {\n        padding-left: 15px;\n    }\n\n    .Select-input > input {\n        padding: 0;\n        line-height: 34px;\n    }\n\n    .Select-menu-outer {\n        margin-top: 0;\n        border-top-width: 0;\n    }\n\n    .VirtualizedSelectOption {\n        cursor: default;\n        padding: 5px 10px;\n    }\n\n    .VirtualizedSelectFocusedOption {\n        color: ', ';\n        background-color: ', ';\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -1900,67 +1824,68 @@ var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const StyledSelect = (0, _styledComponents2.default)(_reactVirtualizedSelect2.default)`
-    .Select-control {
-        opacity: ${props => props.theme.form.input.opacity};
-        background-color: ${props => props.theme.form.input.backgroundColor};
-        border-color: ${props => props.theme.form.input.borderColor};
-        border-width: ${props => props.theme.form.input.borderWidth};
-        border-radius: ${props => props.theme.form.input.borderRadius};
-        box-shadow: none;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledSelect = (0, _styledComponents2.default)(_reactVirtualizedSelect2.default)(_templateObject, function (props) {
+    return props.theme.form.input.opacity;
+}, function (props) {
+    return props.theme.form.input.backgroundColor;
+}, function (props) {
+    return props.theme.form.input.borderColor;
+}, function (props) {
+    return props.theme.form.input.borderWidth;
+}, function (props) {
+    return props.theme.form.input.borderRadius;
+}, function (props) {
+    return props.theme.form.input.focusOpacity;
+}, function (props) {
+    return props.theme.form.input.focusBackgroundColor;
+}, function (props) {
+    return props.theme.form.input.focusBorderColor;
+}, function (props) {
+    return props.theme.form.select.optionColor;
+}, function (props) {
+    return props.theme.form.select.optionBackgroundColor;
+});
+
+var Select = function (_React$Component) {
+    _inherits(Select, _React$Component);
+
+    function Select(props) {
+        _classCallCheck(this, Select);
+
+        var _this = _possibleConstructorReturn(this, (Select.__proto__ || Object.getPrototypeOf(Select)).call(this, props));
+
+        _this.state = {};
+        return _this;
     }
 
-    &.is-focused .Select-control,
-    &.is-focused:not(.is-open) > .Select-control {
-        opacity: ${props => props.theme.form.input.focusOpacity};
-        background-color: ${props => props.theme.form.input.focusBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusBorderColor};
-        box-shadow: none;
-    }
+    _createClass(Select, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
 
-    .Select-placeholder {
-        padding-left: 15px;
-    }
+            return _react2.default.createElement(
+                'div',
+                null,
+                _react2.default.createElement(StyledSelect, _extends({
+                    onChange: function onChange(selectValue) {
+                        return _this2.setState({ selectValue: selectValue });
+                    },
+                    value: this.state.selectValue
+                }, this.props))
+            );
+        }
+    }]);
 
-    .Select-input > input {
-        padding: 0;
-        line-height: 34px;
-    }
-
-    .Select-menu-outer {
-        margin-top: 0;
-        border-top-width: 0;
-    }
-
-    .VirtualizedSelectOption {
-        cursor: default;
-        padding: 5px 10px;
-    }
-
-    .VirtualizedSelectFocusedOption {
-        color: ${props => props.theme.form.select.optionColor};
-        background-color: ${props => props.theme.form.select.optionBackgroundColor};
-    }
-`;
-
-class Select extends _react2.default.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {};
-    }
-
-    render() {
-        return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(StyledSelect, _extends({
-                onChange: selectValue => this.setState({ selectValue }),
-                value: this.state.selectValue
-            }, this.props))
-        );
-    }
-}
+    return Select;
+}(_react2.default.Component);
 
 Select.propTypes = _extends({}, _reactVirtualizedSelect2.default.PropTypes);
 
@@ -1983,6 +1908,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    opacity: ', ';\n    resize: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: ', ';\n\n    &:focus,\n    &.form-control:focus {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: ', ';\n    }\n'], ['\n    opacity: ', ';\n    resize: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: ', ';\n\n    &:focus,\n    &.form-control:focus {\n        opacity: ', ';\n        background-color: ', ';\n        border-color: ', ';\n        box-shadow: ', ';\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2003,30 +1930,36 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledTextArea = _styledComponents2.default.textarea`
-    opacity: ${props => props.theme.form.input.opacity};
-    resize: ${props => props.resize};
-    background-color: ${props => props.theme.form.input.backgroundColor};
-    border-color: ${props => props.theme.form.input.borderColor};
-    border-width: ${props => props.theme.form.input.borderWidth};
-    border-radius: ${props => props.theme.form.input.borderRadius};
-    box-shadow: ${props => props.theme.form.input.boxShadow};
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-    &:focus,
-    &.form-control:focus {
-        opacity: ${props => props.theme.form.input.focusOpacity};
-        background-color: ${props => props.theme.form.input.focusBackgroundColor};
-        border-color: ${props => props.theme.form.input.focusBorderColor};
-        box-shadow: ${props => props.theme.form.input.focusBoxShadow};
-    }
-`;
+var StyledTextArea = _styledComponents2.default.textarea(_templateObject, function (props) {
+    return props.theme.form.input.opacity;
+}, function (props) {
+    return props.resize;
+}, function (props) {
+    return props.theme.form.input.backgroundColor;
+}, function (props) {
+    return props.theme.form.input.borderColor;
+}, function (props) {
+    return props.theme.form.input.borderWidth;
+}, function (props) {
+    return props.theme.form.input.borderRadius;
+}, function (props) {
+    return props.theme.form.input.boxShadow;
+}, function (props) {
+    return props.theme.form.input.focusOpacity;
+}, function (props) {
+    return props.theme.form.input.focusBackgroundColor;
+}, function (props) {
+    return props.theme.form.input.focusBorderColor;
+}, function (props) {
+    return props.theme.form.input.focusBoxShadow;
+});
 
-const Textarea = (_ref) => {
-    let {
-        rows,
-        disabled,
-        hint
-    } = _ref,
+var Textarea = function Textarea(_ref) {
+    var rows = _ref.rows,
+        disabled = _ref.disabled,
+        hint = _ref.hint,
         props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
 
     return _react2.default.createElement(
@@ -2076,6 +2009,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _templateObject = _taggedTemplateLiteral(['\n    from {\n        transform: rotate(0deg);\n    }\n\n    to {\n        transform: rotate(360deg);\n    }\n'], ['\n    from {\n        transform: rotate(0deg);\n    }\n\n    to {\n        transform: rotate(360deg);\n    }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border: 3px solid ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n'], ['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border: 3px solid ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    text-align: center;\n\n    &.centered {\n        position: absolute;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n    }\n'], ['\n    text-align: center;\n\n    &.centered {\n        position: absolute;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n    }\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    color: ', ';\n    margin-top: 15px;\n'], ['\n    color: ', ';\n    margin-top: 15px;\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2096,59 +2034,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const rotate360 = _styledComponents.keyframes`
-    from {
-        transform: rotate(0deg);
-    }
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-    to {
-        transform: rotate(360deg);
-    }
-`;
+var rotate360 = (0, _styledComponents.keyframes)(_templateObject);
 
-const Spinner = _styledComponents2.default.div`
-    width: ${props => props.spinnerSize}px;
-    height: ${props => props.spinnerSize}px;
-    margin: 0 auto;
-    border: 3px solid ${props => props.theme.loaderColor};
-    border-radius: 50%;
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-    animation: ${rotate360} 650ms infinite linear;
-`;
+var Spinner = _styledComponents2.default.div(_templateObject2, function (props) {
+    return props.spinnerSize;
+}, function (props) {
+    return props.spinnerSize;
+}, function (props) {
+    return props.theme.loaderColor;
+}, rotate360);
 
-const Wrapper = _styledComponents2.default.div`
-    text-align: center;
+var Wrapper = _styledComponents2.default.div(_templateObject3);
 
-    &.centered {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-`;
+var Label = _styledComponents2.default.div(_templateObject4, function (props) {
+    return props.theme.loaderColor;
+});
 
-const Label = _styledComponents2.default.div`
-    color: ${props => props.theme.loaderColor};
-    margin-top: 15px;
-`;
-
-const Loader = (_ref) => {
-    let {
-        centered,
-        spinnerSize,
-        label,
-        className
-    } = _ref,
+var Loader = function Loader(_ref) {
+    var centered = _ref.centered,
+        spinnerSize = _ref.spinnerSize,
+        label = _ref.label,
+        className = _ref.className,
         rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'label', 'className']);
 
-    const classes = (0, _classnames2.default)(className, {
-        centered
+    var classes = (0, _classnames2.default)(className, {
+        centered: centered
     });
 
     return _react2.default.createElement(
@@ -2198,6 +2110,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    .leaflet-bar {\n        border: none;\n    }\n\n    .leaflet-bar a {\n        color: ', ';\n        background: ', ';\n        border: none;\n        width: 50px;\n        height: 50px;\n        line-height: 50px;\n        transition: all 0.1s ease-out;\n\n        &:hover,\n        &:focus,\n        &:active {\n            color: ', ';\n            background: ', ';\n        }\n\n        &:active {\n            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n        }\n    }\n'], ['\n    .leaflet-bar {\n        border: none;\n    }\n\n    .leaflet-bar a {\n        color: ', ';\n        background: ', ';\n        border: none;\n        width: 50px;\n        height: 50px;\n        line-height: 50px;\n        transition: all 0.1s ease-out;\n\n        &:hover,\n        &:focus,\n        &:active {\n            color: ', ';\n            background: ', ';\n        }\n\n        &:active {\n            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n        }\n    }\n']);
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -2222,69 +2138,77 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-const StyledMap = _styledComponents2.default.div`
-    .leaflet-bar {
-        border: none;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledMap = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.map.controlColor;
+}, function (props) {
+    return props.theme.map.controlBackgroundColor;
+}, function (props) {
+    return props.theme.map.hoverControlColor;
+}, function (props) {
+    return props.theme.map.hoverControlBackgroundColor;
+});
+
+var Map = function (_React$Component) {
+    _inherits(Map, _React$Component);
+
+    function Map() {
+        _classCallCheck(this, Map);
+
+        return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));
     }
 
-    .leaflet-bar a {
-        color: ${props => props.theme.map.controlColor};
-        background: ${props => props.theme.map.controlBackgroundColor};
-        border: none;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        transition: all 0.1s ease-out;
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: ${props => props.theme.map.hoverControlColor};
-            background: ${props => props.theme.map.hoverControlBackgroundColor};
+    _createClass(Map, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            if (nextProps.locate === true) {
+                this.locateControl = _leaflet2.default.control.locate();
+                this.map.addControl(this.locateControl);
+            } else if (this.locateControl) {
+                this.map.removeControl(this.locateControl);
+            }
         }
-
-        &:active {
-            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }, {
+        key: 'handleRef',
+        value: function handleRef(map) {
+            if (map !== null) {
+                this.map = map.leafletElement;
+            }
         }
-    }
-`;
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
 
-class Map extends _react2.default.Component {
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.locate === true) {
-            this.locateControl = _leaflet2.default.control.locate();
-            this.map.addControl(this.locateControl);
-        } else if (this.locateControl) {
-            this.map.removeControl(this.locateControl);
+            var _props = this.props,
+                children = _props.children,
+                rest = _objectWithoutProperties(_props, ['children']);
+
+            return _react2.default.createElement(
+                StyledMap,
+                null,
+                _react2.default.createElement(
+                    _reactLeaflet.Map,
+                    _extends({
+                        ref: function ref(map) {
+                            return _this2.handleRef(map);
+                        }
+                    }, rest),
+                    children
+                )
+            );
         }
-    }
+    }]);
 
-    handleRef(map) {
-        if (map !== null) {
-            this.map = map.leafletElement;
-        }
-    }
-
-    render() {
-        const _props = this.props,
-              {
-            children
-        } = _props,
-              rest = _objectWithoutProperties(_props, ['children']);
-
-        return _react2.default.createElement(
-            StyledMap,
-            null,
-            _react2.default.createElement(
-                _reactLeaflet.Map,
-                _extends({
-                    ref: map => this.handleRef(map)
-                }, rest),
-                children
-            )
-        );
-    }
-}
+    return Map;
+}(_react2.default.Component);
 
 Map.propTypes = {
     locate: _propTypes2.default.bool,
