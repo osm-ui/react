@@ -47,91 +47,103 @@ storiesOf('Column', module)
         </DefaultTheme>
     ))
     .addWithInfo('Theme', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                >
-                    <Column.Title>A column title</Column.Title>
-                    <Lorem count={2} />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                    >
+                        <Column.Title>A column title</Column.Title>
+                        <Lorem count={2} />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('More content', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                >
-                    <Column.Title>A column title</Column.Title>
-                    <Lorem />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                    >
+                        <Column.Title>A column title</Column.Title>
+                        <Lorem />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('Header and footer', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                    title="A column title"
-                    scrollContent
-                    header={(
-                        <Column.Header>
-                            <h3 style={{ margin: 0 }}>A header content</h3>
-                        </Column.Header>
-                    )}
-                    footer={(
-                        <Column.Footer>
-                            <Button context="primary" block>A footer button</Button>
-                        </Column.Footer>
-                    )}
-                >
-                    <Lorem />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                        title="A column title"
+                        scrollContent
+                        header={(
+                            <Column.Header>
+                                <h3 style={{ margin: 0 }}>A header content</h3>
+                            </Column.Header>
+                        )}
+                        footer={(
+                            <Column.Footer>
+                                <Button context="primary" block>A footer button</Button>
+                            </Column.Footer>
+                        )}
+                    >
+                        <Lorem />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('Loading', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                    title="A column title"
-                    loading
-                >
-                    <Lorem count={2} />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                        title="A column title"
+                        loading
+                    >
+                        <Lorem count={2} />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('On the right', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                    title="A column title"
-                    position="right"
-                >
-                    <Lorem count={2} />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                        title="A column title"
+                        position="right"
+                    >
+                        <Lorem count={2} />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('Larger', () => (
-        <RedTheme>
+        <DefaultTheme>
             <FakeApp>
-                <Column
-                    opened
-                    title="A column title"
-                    position="right"
-                    width="lg"
-                >
-                    <Lorem count={2} />
-                </Column>
+                <RedTheme>
+                    <Column
+                        opened
+                        title="A column title"
+                        position="right"
+                        width="lg"
+                    >
+                        <Lorem count={2} />
+                    </Column>
+                </RedTheme>
             </FakeApp>
-        </RedTheme>
+        </DefaultTheme>
     ))
     .addWithInfo('Playground', () => {
         const title = text('Title', 'A column title');
@@ -152,28 +164,30 @@ storiesOf('Column', module)
         const ThemeElement = themes[`${theme}Theme`];
 
         return (
-            <ThemeElement>
+            <DefaultTheme>
                 <KnobsAlert />
                 <FakeApp>
-                    <Column
-                        title={title}
-                        opened={opened}
-                        loading={loading}
-                        loaderLabel={loaderLabel}
-                        position={position}
-                        width={width}
-                        maximized={maximized}
-                        scrollContent={scrollContent}
-                        container={container}
-                        onOpen={action('onOpen')}
-                        onClose={action('onClose')}
-                        onBack={action('onBack')}
-                        onMaximize={action('onMaximize')}
-                        onUnmaximize={action('onUnmaximize')}
-                    >
-                        <Lorem count={paragraphs} />
-                    </Column>
+                    <ThemeElement>
+                        <Column
+                            title={title}
+                            opened={opened}
+                            loading={loading}
+                            loaderLabel={loaderLabel}
+                            position={position}
+                            width={width}
+                            maximized={maximized}
+                            scrollContent={scrollContent}
+                            container={container}
+                            onOpen={action('onOpen')}
+                            onClose={action('onClose')}
+                            onBack={action('onBack')}
+                            onMaximize={action('onMaximize')}
+                            onUnmaximize={action('onUnmaximize')}
+                        >
+                            <Lorem count={paragraphs} />
+                        </Column>
+                    </ThemeElement>
                 </FakeApp>
-            </ThemeElement>
+            </DefaultTheme>
         );
     });
