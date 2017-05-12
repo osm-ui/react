@@ -8,6 +8,8 @@ import './bootstrap.less';
 
 export DefaultTheme from './themes/Default';
 export RedTheme from './themes/Red';
+export BlueTheme from './themes/Blue';
+export GreenTheme from './themes/Green';
 
 export AppCanvas from './components/AppCanvas';
 export Loader from './components/Loader';
