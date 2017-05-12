@@ -995,7 +995,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n'], ['\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n\n    color: ', ';\n    background-color: ', ';\n'], ['\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n\n    color: ', ';\n    background-color: ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -1009,7 +1009,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyledDiv = _styledComponents2.default.div(_templateObject);
+var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.color;
+}, function (props) {
+    return props.theme.backgroundColor;
+});
 
 var AppCanvas = function AppCanvas(props) {
     return _react2.default.createElement(StyledDiv, props);
