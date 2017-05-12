@@ -10,8 +10,13 @@ import FakeApp from './components/FakeApp';
 
 import {
     DefaultTheme,
+    OrangeTheme,
+    BrownTheme,
     RedTheme,
+    RoseTheme,
+    PurpleTheme,
     BlueTheme,
+    TurquoiseTheme,
     GreenTheme,
     Column,
     Button,
@@ -158,11 +163,26 @@ storiesOf('Column', module)
         const scrollContent = boolean('Scroll content only');
         const loading = boolean('Loading');
         const loaderLabel = text('Loader label');
-        const theme = select('Theme', ['Default', 'Red', 'Blue', 'Green'], 'Red');
+        const theme = select('Theme', [
+            'Default',
+            'Orange',
+            'Brown',
+            'Red',
+            'Rose',
+            'Purple',
+            'Blue',
+            'Turquoise',
+            'Green',
+        ], 'Red');
         const themes = {
             DefaultTheme,
+            OrangeTheme,
+            BrownTheme,
             RedTheme,
+            RoseTheme,
+            PurpleTheme,
             BlueTheme,
+            TurquoiseTheme,
             GreenTheme,
         };
         const ThemeElement = themes[`${theme}Theme`];

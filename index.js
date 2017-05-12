@@ -7,9 +7,15 @@ import './bootstrap.less';
 
 
 export DefaultTheme from './themes/Default';
+export OrangeTheme from './themes/Orange';
+export BrownTheme from './themes/Brown';
 export RedTheme from './themes/Red';
+export RoseTheme from './themes/Rose';
+export PurpleTheme from './themes/Purple';
 export BlueTheme from './themes/Blue';
+export TurquoiseTheme from './themes/Turquoise';
 export GreenTheme from './themes/Green';
+
 
 export AppCanvas from './components/AppCanvas';
 export Loader from './components/Loader';
