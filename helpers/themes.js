@@ -12,7 +12,6 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         color: colors.white,
         backgroundColor: color2,
         borderColor: color1,
-        dimmerBackgroundColor: color2,
         loaderColor: colors.white,
         controlColor: color1,
         hoverControlColor: colors.white,
