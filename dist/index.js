@@ -412,8 +412,8 @@ exports.default = {
     yellow5: '#ffffcf',
 
     orange1: '#de8c00',
-    orange2: '#ffb600',
-    orange3: '#ffd761',
+    orange2: '#ffaf00',
+    orange3: '#ffd659',
     orange4: '#ffecb3',
     orange5: '#fff2ce',
 
@@ -448,7 +448,7 @@ exports.default = {
     blue5: '#c2e2fb',
 
     turquoise1: '#00948d',
-    turquoise2: '#00c6bc',
+    turquoise2: '#00c2b8',
     turquoise3: '#5cd7d1',
     turquoise4: '#8be2de',
     turquoise5: '#b9eeeb',
