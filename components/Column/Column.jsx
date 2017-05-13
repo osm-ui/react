@@ -19,6 +19,7 @@ const StyledAside = styled.aside`
     border-color: ${props => props.theme.borderColor};
     border-style: ${props => props.theme.borderStyle};
     border-width: 0;
+    box-shadow: ${props => props.theme.boxShadow};
 
     &.scroll-content {
         display: flex;

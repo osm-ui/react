@@ -10,6 +10,7 @@ export const config = {
     color: colors.anthracite1,
     backgroundColor: colors.white,
     borderColor: colors.gray4,
+    boxShadow: '0 2px 3px -1px rgba(0,0,0,0.4)',
     loaderColor: colors.gray1,
     borderStyle: 'solid',
     borderWidth: '4px',
