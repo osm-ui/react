@@ -18,7 +18,7 @@ export const config = _.merge(
 );
 
 
-const RedTheme = ({ children, ...rest }) => (
+const PurpleTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
         <StyledDiv {...rest}>
             {children}
@@ -27,10 +27,10 @@ const RedTheme = ({ children, ...rest }) => (
 );
 
 
-RedTheme.propTypes = {
+PurpleTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-RedTheme.displayName = 'RedTheme';
+PurpleTheme.displayName = 'PurpleTheme';
 
-export default RedTheme;
+export default PurpleTheme;

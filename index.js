@@ -7,6 +7,11 @@ import './bootstrap.less';
 
 
 export DefaultTheme from './themes/Default';
+export WhiteTheme from './themes/Default';
+export LightGrayTheme from './themes/LightGray';
+export DarkGrayTheme from './themes/DarkGray';
+export AnthraciteTheme from './themes/Anthracite';
+export YellowTheme from './themes/Yellow';
 export OrangeTheme from './themes/Orange';
 export BrownTheme from './themes/Brown';
 export RedTheme from './themes/Red';

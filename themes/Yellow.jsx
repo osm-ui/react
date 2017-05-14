@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import _ from 'lodash';
 import colors from '../colors';
-import { buildDarkThemeConfig } from '../helpers/themes';
+import { buildLightThemeConfig } from '../helpers/themes';
 import {
     config as defaultThemeConfig,
     StyledDiv,
@@ -13,12 +13,12 @@ import {
 
 export const config = _.merge(
     {},
-    buildDarkThemeConfig(defaultThemeConfig, colors, 'blue'),
+    buildLightThemeConfig(defaultThemeConfig, colors, 'yellow'),
     {},
 );
 
 
-const BlueTheme = ({ children, ...rest }) => (
+const YellowTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
         <StyledDiv {...rest}>
             {children}
@@ -27,10 +27,10 @@ const BlueTheme = ({ children, ...rest }) => (
 );
 
 
-BlueTheme.propTypes = {
+YellowTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-BlueTheme.displayName = 'BlueTheme';
+YellowTheme.displayName = 'YellowTheme';
 
-export default BlueTheme;
+export default YellowTheme;

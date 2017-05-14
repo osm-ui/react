@@ -10,6 +10,11 @@ import FakeApp from './components/FakeApp';
 
 import {
     DefaultTheme,
+    WhiteTheme,
+    LightGrayTheme,
+    DarkGrayTheme,
+    AnthraciteTheme,
+    YellowTheme,
     OrangeTheme,
     BrownTheme,
     RedTheme,
@@ -165,6 +170,11 @@ storiesOf('Column', module)
         const loaderLabel = text('Loader label');
         const theme = select('Theme', [
             'Default',
+            'White',
+            'LightGray',
+            'DarkGray',
+            'Anthracite',
+            'Yellow',
             'Orange',
             'Brown',
             'Red',
@@ -176,6 +186,11 @@ storiesOf('Column', module)
         ], 'Red');
         const themes = {
             DefaultTheme,
+            WhiteTheme,
+            LightGrayTheme,
+            DarkGrayTheme,
+            AnthraciteTheme,
+            YellowTheme,
             OrangeTheme,
             BrownTheme,
             RedTheme,

@@ -34,7 +34,7 @@ export const config = _.merge(
 );
 
 
-const RedTheme = ({ children, ...rest }) => (
+const GreenTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
         <StyledDiv {...rest}>
             {children}
@@ -43,10 +43,10 @@ const RedTheme = ({ children, ...rest }) => (
 );
 
 
-RedTheme.propTypes = {
+GreenTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-RedTheme.displayName = 'RedTheme';
+GreenTheme.displayName = 'GreenTheme';
 
-export default RedTheme;
+export default GreenTheme;

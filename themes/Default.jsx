@@ -9,14 +9,14 @@ export const config = {
     font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
     color: colors.anthracite1,
     backgroundColor: colors.white,
-    borderColor: colors.gray4,
+    borderColor: colors.lightGray4,
     boxShadow: '0 2px 3px -1px rgba(0,0,0,0.4)',
-    loaderColor: colors.gray1,
+    loaderColor: colors.lightGray1,
     borderStyle: 'solid',
     borderWidth: '4px',
     borderRadius: 0,
-    controlColor: colors.gray4,
-    hoverControlColor: colors.gray1,
+    controlColor: colors.lightGray4,
+    hoverControlColor: colors.lightGray1,
 
     map: {
         controlColor: colors.anthracite1,
@@ -33,13 +33,13 @@ export const config = {
             fontWeight: 700,
             color: colors.anthracite2,
             backgroundColor: colors.white,
-            borderColor: colors.gray3,
-            hoverBackgroundColor: colors.gray5,
-            hoverBorderColor: colors.gray3,
-            focusBackgroundColor: colors.gray5,
-            focusBorderColor: colors.gray3,
-            activeBackgroundColor: colors.gray5,
-            activeBorderColor: colors.gray3,
+            borderColor: colors.lightGray3,
+            hoverBackgroundColor: colors.lightGray5,
+            hoverBorderColor: colors.lightGray3,
+            focusBackgroundColor: colors.lightGray5,
+            focusBorderColor: colors.lightGray3,
+            activeBackgroundColor: colors.lightGray5,
+            activeBorderColor: colors.lightGray3,
 
             primary: {
                 fontWeight: 700,
@@ -125,7 +125,7 @@ export const config = {
             boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
             opacity: 0.8,
             backgroundColor: colors.white,
-            borderColor: colors.gray3,
+            borderColor: colors.lightGray3,
 
             focusOpacity: 1,
             focusBackgroundColor: colors.white,
@@ -172,7 +172,7 @@ export const config = {
             margin: 0,
             padding: '5px 10px',
 
-            backgroundColor: colors.gray5,
+            backgroundColor: colors.lightGray5,
             color: colors.anthracite2,
 
             success: {

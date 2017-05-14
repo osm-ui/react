@@ -13,12 +13,12 @@ import {
 
 export const config = _.merge(
     {},
-    buildDarkThemeConfig(defaultThemeConfig, colors, 'blue'),
+    buildDarkThemeConfig(defaultThemeConfig, colors, 'anthracite'),
     {},
 );
 
 
-const BlueTheme = ({ children, ...rest }) => (
+const AnthraciteTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
         <StyledDiv {...rest}>
             {children}
@@ -27,10 +27,10 @@ const BlueTheme = ({ children, ...rest }) => (
 );
 
 
-BlueTheme.propTypes = {
+AnthraciteTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-BlueTheme.displayName = 'BlueTheme';
+AnthraciteTheme.displayName = 'AnthraciteTheme';
 
-export default BlueTheme;
+export default AnthraciteTheme;
