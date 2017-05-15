@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
 
 
 const StyledDiv = styled.div`
@@ -8,13 +9,20 @@ const StyledDiv = styled.div`
 `;
 
 
-const ColumnHeader = ({ children, ...rest }) => (
-    <StyledDiv className="column-header" {...rest}>{children}</StyledDiv>
+const ColumnHeader = ({ className, children, ...rest }) => (
+    <StyledDiv className={classnames(className, 'column-header')} {...rest}>
+        {children}
+    </StyledDiv>
 );
 
 
 ColumnHeader.propTypes = {
-    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+        children: PropTypes.node.isRequired,
+};
+
+ColumnHeader.defaultProps = {
+    className: '',
 };
 
 ColumnHeader.displayName = 'Column.Header';

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
 import InputHint from './InputHint';
 
 
@@ -27,11 +28,12 @@ const Textarea = ({
     rows,
     disabled,
     hint,
+    className,
     ...props
 }) => (
     <div>
         <StyledTextArea
-            className="form-control"
+            className={classnames(className, 'form-control')}
             rows={rows}
             disabled={disabled}
             {...props}
@@ -46,6 +48,7 @@ Textarea.propTypes = {
     disabled: PropTypes.bool,
     hint: PropTypes.string,
     resize: PropTypes.oneOf(['none', 'vertical', 'horizontal']),
+    className: PropTypes.string,
 };
 
 Textarea.defaultProps = {
@@ -53,6 +56,7 @@ Textarea.defaultProps = {
     disabled: false,
     hint: '',
     resize: 'vertical',
+    className: '',
 };
 
 Textarea.displayName = 'Form.Textarea';

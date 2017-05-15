@@ -26,9 +26,9 @@ storiesOf('Loader', module)
     ))
     .addWithInfo('Size', () => (
         <DefaultTheme>
-            <Loader spinnerSize="20" />
-            <Loader spinnerSize="40" />
-            <Loader spinnerSize="60" />
+            <Loader spinnerSize={20} strokeSize={2} />
+            <Loader spinnerSize={40} strokeSize={3} />
+            <Loader spinnerSize={60} strokeSize={4} />
         </DefaultTheme>
     ))
     .addWithInfo('Label', () => (

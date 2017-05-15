@@ -234,7 +234,6 @@ Column.propTypes = {
     title: PropTypes.string,
     header: PropTypes.node,
     footer: PropTypes.node,
-    children: PropTypes.node.isRequired,
     opened: PropTypes.bool,
     loading: PropTypes.bool,
     loaderLabel: PropTypes.node,
@@ -252,6 +251,7 @@ Column.propTypes = {
     onMaximize: PropTypes.func,
     onUnmaximize: PropTypes.func,
     className: PropTypes.string,
+    children: PropTypes.node.isRequired,
 };
 
 Column.defaultProps = {

@@ -17,7 +17,7 @@ const StyledH2 = styled.h2`
 `;
 
 
-const ColumnTitle = ({ inHeader, className, children, ...rest }) => {
+const ColumnTitle = ({ children, inHeader, className, ...rest }) => {
     const classes = classnames(className, {
         'column-title': true,
         'in-header': inHeader,
@@ -30,9 +30,9 @@ const ColumnTitle = ({ inHeader, className, children, ...rest }) => {
 
 
 ColumnTitle.propTypes = {
+    children: PropTypes.node.isRequired,
     inHeader: PropTypes.bool,
     className: PropTypes.string,
-    children: PropTypes.node.isRequired,
 };
 
 ColumnTitle.defaultProps = {

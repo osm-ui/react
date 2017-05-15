@@ -24,6 +24,7 @@ function loadStories() {
     require('../stories/Form');
     require('../stories/Loader');
     require('../stories/Column');
+    require('../stories/Toolbar');
     require('../stories/Map');
     /* eslint-enable */
 }

@@ -19,7 +19,9 @@ const Spinner = styled.div`
     width: ${props => props.spinnerSize}px;
     height: ${props => props.spinnerSize}px;
     margin: 0 auto;
-    border: 3px solid ${props => props.theme.loaderColor};
+    border-width: ${props => props.strokeSize}px;
+    border-style: solid;
+    border-color: ${props => props.theme.loaderColor};
     border-radius: 50%;
     border-left-color: transparent;
     border-bottom-color: transparent;
@@ -51,6 +53,7 @@ const Label = styled.div`
 const Loader = ({
     centered,
     spinnerSize,
+    strokeSize,
     label,
     className,
     ...rest
@@ -62,7 +65,7 @@ const Loader = ({
     return (
         <Wrapper className={classes} {...rest}>
             <div>
-                <Spinner spinnerSize={spinnerSize} />
+                <Spinner spinnerSize={spinnerSize} strokeSize={strokeSize} />
                 {label && <Label>{label}</Label>}
             </div>
         </Wrapper>
@@ -73,6 +76,7 @@ const Loader = ({
 Loader.propTypes = {
     centered: PropTypes.bool,
     spinnerSize: PropTypes.number,
+    strokeSize: PropTypes.number,
     label: PropTypes.string,
     className: PropTypes.string,
 };
@@ -80,6 +84,7 @@ Loader.propTypes = {
 Loader.defaultProps = {
     centered: false,
     spinnerSize: 40,
+    strokeSize: 3,
     label: '',
     className: '',
 };

@@ -28,4 +28,5 @@ export Alert from './components/Alert';
 export Button from './components/Button';
 export Form from './components/Form';
 export Column from './components/Column';
+export Toolbar from './components/Toolbar';
 export Map from './components/Map';

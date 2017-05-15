@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import classnames from 'classnames';
 import InputHint from './InputHint';
 
 
@@ -26,11 +27,12 @@ const Input = ({
     type,
     disabled,
     hint,
+    className,
     ...props
 }) => (
     <div>
         <StyledInput
-            className="form-control"
+            className={classnames(className, 'form-control')}
             type={type}
             disabled={disabled}
             {...props}
@@ -44,12 +46,14 @@ Input.propTypes = {
     type: PropTypes.string,
     disabled: PropTypes.bool,
     hint: PropTypes.string,
+    className: PropTypes.string,
 };
 
 Input.defaultProps = {
     type: 'text',
     disabled: false,
     hint: '',
+    className: '',
 };
 
 Input.displayName = 'Form.Input';

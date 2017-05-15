@@ -10,7 +10,7 @@ export const config = {
     color: colors.anthracite1,
     backgroundColor: colors.white,
     borderColor: colors.lightGray4,
-    boxShadow: '0 2px 3px -1px rgba(0,0,0,0.4)',
+    boxShadow: '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)',
     loaderColor: colors.lightGray1,
     borderStyle: 'solid',
     borderWidth: '4px',
@@ -23,6 +23,25 @@ export const config = {
         controlBackgroundColor: colors.white,
         hoverControlColor: colors.white,
         hoverControlBackgroundColor: colors.blue2,
+    },
+    toolbar: {
+        margin: '10px',
+        childrenMargin: '8px',
+
+        button: {
+            color: colors.anthracite1,
+            backgroundColor: colors.white,
+            borderColor: colors.white,
+            borderStyle: 'solid',
+            borderWidth: 0,
+            hoverBackgroundColor: colors.lightGray5,
+            hoverBorderColor: colors.lightGray3,
+            focusBackgroundColor: colors.lightGray5,
+            focusBorderColor: colors.lightGray3,
+            activeBackgroundColor: colors.lightGray5,
+            activeBorderColor: colors.lightGray3,
+            boxShadow: '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)',
+        },
     },
     form: {
         select: {
