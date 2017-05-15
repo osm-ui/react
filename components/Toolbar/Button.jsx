@@ -36,6 +36,10 @@ const StyledButton = styled.button`
         border-color: ${props => props.theme.toolbar.button.activeBorderColor};
     }
 
+    &.in-group {
+        box-shadow: none;
+    }
+
     &.shape-square {
         border-radius: 0;
     }
@@ -45,29 +49,29 @@ const StyledButton = styled.button`
     }
 
     &.xs {
-        width: 30px;
-        height: 30px;
+        width: ${props => props.theme.toolbar.xsSize};
+        height: ${props => props.theme.toolbar.xsSize};
         font-size: 0.85em;
         line-height: 0.85em;
     }
 
     &.sm {
-        width: 40px;
-        height: 40px;
+        width: ${props => props.theme.toolbar.smSize};
+        height: ${props => props.theme.toolbar.smSize};
         font-size: 1.08em;
         line-height: 1.08em;
     }
 
     &.md {
-        width: 50px;
-        height: 50px;
+        width: ${props => props.theme.toolbar.mdSize};
+        height: ${props => props.theme.toolbar.mdSize};
         font-size: 1.29em;
         line-height: 1.29em;
     }
 
     &.lg {
-        width: 60px;
-        height: 60px;
+        width: ${props => props.theme.toolbar.lgSize};
+        height: ${props => props.theme.toolbar.lgSize};
         font-size: 1.43em;
         line-height: 1.43em;
     }
@@ -79,6 +83,7 @@ const ToolbarButton = ({
     icon,
     size,
     shape,
+    inGroup,
     loading,
     // loaderTitle,
     className,
@@ -86,6 +91,7 @@ const ToolbarButton = ({
     ...rest
 }) => {
     const classes = classnames(className, {
+        'in-group': inGroup,
         loading,
         [size]: size,
         [`shape-${shape}`]: true,
@@ -130,6 +136,7 @@ ToolbarButton.propTypes = {
     icon: PropTypes.string,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['round', 'square']),
+    inGroup: PropTypes.bool,
     loading: PropTypes.bool,
     // loaderTitle: PropTypes.node,
     className: PropTypes.string,
@@ -141,6 +148,7 @@ ToolbarButton.defaultProps = {
     icon: '',
     size: 'md',
     shape: 'round',
+    inGroup: false,
     loading: false,
     // loaderTitle: '',
     className: '',

@@ -196,6 +196,33 @@ storiesOf('Toolbar', module)
             </FakeApp>
         </DefaultTheme>
     ))
+    .addWithInfo('Group', () => (
+        <DefaultTheme>
+            <FakeApp style={fakeAppColumnStyle}>
+                <DefaultTheme>
+                    <Toolbar opened>
+                        <Toolbar.Group shape="square">
+                            <Toolbar.Button icon="plus" />
+                            <Toolbar.Button icon="minus" />
+                        </Toolbar.Group>
+                        <Toolbar.Group>
+                            <Toolbar.Button icon="search" shape="square" />
+                            <Toolbar.Button icon="location-arrow" />
+                        </Toolbar.Group>
+                    </Toolbar>
+                </DefaultTheme>
+                <BlueTheme>
+                    <Toolbar opened top right>
+                        <Toolbar.Button icon="bars" />
+                        <Toolbar.Group>
+                            <Toolbar.Button icon="user" />
+                            <Toolbar.Button icon="share-alt" />
+                        </Toolbar.Group>
+                    </Toolbar>
+                </BlueTheme>
+            </FakeApp>
+        </DefaultTheme>
+    ))
     .addWithInfo('Playground', () => {
         const vPosition = select('Vertical position', ['top', 'bottom'], 'top');
         const hPosition = select('Horizontal position', ['left', 'right'], 'left');
@@ -261,14 +288,16 @@ storiesOf('Toolbar', module)
                                 icon="bars"
                                 loading={loading}
                             />
-                            <Toolbar.Button
-                                icon="search"
-                                loading={loading}
-                            />
-                            <Toolbar.Button
-                                icon="location-arrow"
-                                loading={loading}
-                            />
+                            <Toolbar.Group>
+                                <Toolbar.Button
+                                    icon="search"
+                                    loading={loading}
+                                />
+                                <Toolbar.Button
+                                    icon="location-arrow"
+                                    loading={loading}
+                                />
+                            </Toolbar.Group>
                         </Toolbar>
                     </ThemeElement>
                 </FakeApp>

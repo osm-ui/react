@@ -27,6 +27,10 @@ export const config = {
     toolbar: {
         margin: '10px',
         childrenMargin: '8px',
+        xsSize: '30px',
+        smSize: '40px',
+        mdSize: '50px',
+        lgSize: '60px',
 
         button: {
             color: colors.anthracite1,

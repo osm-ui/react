@@ -118,7 +118,9 @@ class Toolbar extends React.Component {
             opened: this.state.opened,
         });
 
-        const childrenProps = {};
+        const childrenProps = {
+            direction,
+        };
 
         if (size) {
             childrenProps.size = size;
