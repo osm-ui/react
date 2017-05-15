@@ -3287,15 +3287,13 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
 var ToolbarButton = function ToolbarButton(_ref) {
     var _classnames;
 
-    var title = _ref.title,
-        icon = _ref.icon,
+    var icon = _ref.icon,
         size = _ref.size,
         shape = _ref.shape,
         loading = _ref.loading,
-        loaderTitle = _ref.loaderTitle,
         className = _ref.className,
         children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['title', 'icon', 'size', 'shape', 'loading', 'loaderTitle', 'className', 'children']);
+        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'loading', 'className', 'children']);
 
     var classes = (0, _classnames3.default)(className, (_classnames = {
         loading: loading
@@ -3334,23 +3332,23 @@ var ToolbarButton = function ToolbarButton(_ref) {
 };
 
 ToolbarButton.propTypes = {
-    title: _propTypes2.default.string,
+    // title: PropTypes.string,
     icon: _propTypes2.default.string,
     size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: _propTypes2.default.oneOf(['round', 'square']),
     loading: _propTypes2.default.bool,
-    loaderTitle: _propTypes2.default.node,
+    // loaderTitle: PropTypes.node,
     className: _propTypes2.default.string,
     children: _propTypes2.default.node
 };
 
 ToolbarButton.defaultProps = {
-    title: '',
+    // title: '',
     icon: '',
     size: 'md',
     shape: 'round',
     loading: false,
-    loaderTitle: '',
+    // loaderTitle: '',
     className: '',
     children: ''
 };
@@ -3546,9 +3544,12 @@ var Toolbar = function (_React$Component) {
                 bottom = _props.bottom,
                 left = _props.left,
                 direction = _props.direction,
+                size = _props.size,
+                shape = _props.shape,
                 container = _props.container,
                 className = _props.className,
-                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'container', 'className']);
+                children = _props.children,
+                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'size', 'shape', 'container', 'className', 'children']);
 
             var asideClasses = (0, _classnames3.default)(className, (_classnames = {
                 top: top || !bottom,
@@ -3557,7 +3558,23 @@ var Toolbar = function (_React$Component) {
                 left: left || !right
             }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
-            return _react2.default.createElement(StyledAside, _extends({ className: asideClasses }, rest));
+            var childrenProps = {};
+
+            if (size) {
+                childrenProps.size = size;
+            }
+
+            if (shape) {
+                childrenProps.shape = shape;
+            }
+
+            return _react2.default.createElement(
+                StyledAside,
+                _extends({ className: asideClasses }, rest),
+                _react2.default.Children.map(children, function (child) {
+                    return _react2.default.cloneElement(child, childrenProps);
+                })
+            );
         }
     }]);
 
@@ -3570,6 +3587,8 @@ Toolbar.propTypes = {
     bottom: _propTypes2.default.bool,
     left: _propTypes2.default.bool,
     direction: _propTypes2.default.oneOf(['row', 'column']),
+    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['round', 'square']),
     container: _propTypes2.default.oneOf(['parent', 'root']),
     opened: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
@@ -3584,6 +3603,8 @@ Toolbar.defaultProps = {
     bottom: false,
     left: false,
     direction: 'column',
+    size: '',
+    shape: '',
     container: 'parent',
     opened: false,
     onOpen: null,
