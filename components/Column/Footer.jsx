@@ -6,9 +6,6 @@ import classnames from 'classnames';
 
 const StyledDiv = styled.div`
     padding: 20px 20px;
-    border-color: ${props => props.theme.borderColor};
-    border-style: ${props => props.theme.borderStyle};
-    border-width: 1px 0 0 0;
 `;
 
 
