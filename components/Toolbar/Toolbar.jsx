@@ -100,8 +100,11 @@ class Toolbar extends React.Component {
             bottom,
             left,
             direction,
+            size,
+            shape,
             container,
             className,
+            children,
             ...rest
         } = this.props;
 
@@ -115,8 +118,24 @@ class Toolbar extends React.Component {
             opened: this.state.opened,
         });
 
+        const childrenProps = {};
+
+        if (size) {
+            childrenProps.size = size;
+        }
+
+        if (shape) {
+            childrenProps.shape = shape;
+        }
+
         return (
-            <StyledAside className={asideClasses} {...rest} />
+            <StyledAside className={asideClasses} {...rest}>
+                {
+                    React.Children.map(children,
+                        child => React.cloneElement(child, childrenProps),
+                    )
+                }
+            </StyledAside>
         );
     }
 }
@@ -128,6 +147,8 @@ Toolbar.propTypes = {
     bottom: PropTypes.bool,
     left: PropTypes.bool,
     direction: PropTypes.oneOf(['row', 'column']),
+    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+    shape: PropTypes.oneOf(['round', 'square']),
     container: PropTypes.oneOf(['parent', 'root']),
     opened: PropTypes.bool,
     onOpen: PropTypes.func,
@@ -142,6 +163,8 @@ Toolbar.defaultProps = {
     bottom: false,
     left: false,
     direction: 'column',
+    size: '',
+    shape: '',
     container: 'parent',
     opened: false,
     onOpen: null,

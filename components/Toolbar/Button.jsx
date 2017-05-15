@@ -75,12 +75,12 @@ const StyledButton = styled.button`
 
 
 const ToolbarButton = ({
-    title,
+    // title,
     icon,
     size,
     shape,
     loading,
-    loaderTitle,
+    // loaderTitle,
     className,
     children,
     ...rest
@@ -126,23 +126,23 @@ const ToolbarButton = ({
 
 
 ToolbarButton.propTypes = {
-    title: PropTypes.string,
+    // title: PropTypes.string,
     icon: PropTypes.string,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['round', 'square']),
     loading: PropTypes.bool,
-    loaderTitle: PropTypes.node,
+    // loaderTitle: PropTypes.node,
     className: PropTypes.string,
     children: PropTypes.node,
 };
 
 ToolbarButton.defaultProps = {
-    title: '',
+    // title: '',
     icon: '',
     size: 'md',
     shape: 'round',
     loading: false,
-    loaderTitle: '',
+    // loaderTitle: '',
     className: '',
     children: '',
 };
