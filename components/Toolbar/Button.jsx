@@ -6,6 +6,8 @@ import FontAwesome from 'react-fontawesome';
 import Loader from '../Loader';
 
 
+const buildShadow = props => props.shadow && `box-shadow: ${props.theme.toolbar.button.boxShadow};`;
+
 const StyledButton = styled.button`
     position: relative;
     transition: all 0.1s ease-out;
@@ -17,7 +19,7 @@ const StyledButton = styled.button`
     background: ${props => props.theme.toolbar.button.backgroundColor};
     padding: 0;
 
-    ${props => props.shadow && `box-shadow: ${props.theme.toolbar.button.boxShadow};`}
+    ${props => buildShadow(props)}
 
     &:hover {
         color: ${props => props.theme.toolbar.button.color};
@@ -109,7 +111,11 @@ const ToolbarButton = ({
             lg: 3,
         };
         return (
-            <StyledButton className={classes} shadow={shadow} {...rest}>
+            <StyledButton
+                className={classes}
+                shadow={shadow}
+                {...rest}
+            >
                 <Loader
                     spinnerSize={spinnerSizes[size]}
                     strokeSize={strokeSizes[size]}
@@ -120,7 +126,11 @@ const ToolbarButton = ({
     }
 
     return (
-        <StyledButton className={classes} shadow={shadow} {...rest}>
+        <StyledButton
+            className={classes}
+            shadow={shadow}
+            {...rest}
+        >
             {children && children}
             {!children && <FontAwesome name={icon} />}
         </StyledButton>

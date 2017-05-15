@@ -2,9 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
+import ToolbarButton from './Button';
 
 
-const StyledAside = styled.aside`
+const Container = styled.div`
+    display: flex;
+
+    &.direction-row { flex-direction: row; }
+    &.direction-column { flex-direction: column; }
+`;
+
+const Collapse = styled.div`
     transition: all 0.1s ease-out;
 
     display: flex;
@@ -12,27 +20,20 @@ const StyledAside = styled.aside`
     &.direction-row { flex-direction: row; }
     &.direction-column { flex-direction: column; }
 
-    &.container-parent { position: absolute; }
-    &.container-root   { position: fixed; }
-
-    &.top {
-        top: 0;
-        margin-top: ${props => props.theme.toolbar.margin};
+    &.direction-column.top > * {
+        margin-top: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.bottom {
-        bottom: 0;
-        margin-bottom: ${props => props.theme.toolbar.margin};
+    &.direction-column.bottom > * {
+        margin-bottom: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.left {
-        left: 0;
-        margin-left: ${props => props.theme.toolbar.margin};
+    &.direction-row.left > * {
+        margin-left: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.right {
-        right: 0;
-        margin-right: ${props => props.theme.toolbar.margin};
+    &.direction-row.right > * {
+        margin-right: ${props => props.theme.toolbar.childrenMargin};
     }
 
     &.direction-column {
@@ -44,9 +45,9 @@ const StyledAside = styled.aside`
 
     &.direction-row {
         &.top.left {     transform: translate(0, -150%); }
-        &.top.right {    transform: translate(0, 150%); }
+        &.top.right {    transform: translate(0, -150%); }
         &.bottom.right { transform: translate(0, 150%); }
-        &.bottom.left {  transform: translate(0, -150%); }
+        &.bottom.left {  transform: translate(0, 150%); }
     }
 
     &.direction-column, &.direction-row {
@@ -59,24 +60,10 @@ const StyledAside = styled.aside`
             }
         }
     }
-
-
-    &.direction-column > * {
-        margin-bottom: ${props => props.theme.toolbar.childrenMargin};
-    }
-
-    &.direction-row > * {
-        margin-right: ${props => props.theme.toolbar.childrenMargin};
-    }
-
-    &.direction-column :last-child,
-    &.direction-row :last-child {
-        margin: 0;
-    }
 `;
 
 
-class Toolbar extends React.Component {
+class ToolbarCollapse extends React.Component {
     constructor(props) {
         super(props);
 
@@ -112,6 +99,21 @@ class Toolbar extends React.Component {
         }
     }
 
+    _handleClick() {
+        const newState = !this.state.opened;
+
+        this.setState({
+            opened: newState,
+        });
+
+        if (newState === true) {
+            this._triggerCallback('onOpen');
+        }
+        else {
+            this._triggerCallback('onClose');
+        }
+    }
+
     render() {
         const {
             top,
@@ -119,30 +121,25 @@ class Toolbar extends React.Component {
             bottom,
             left,
             direction,
+            icon,
             size,
             shape,
-            container,
             className,
             children,
             ...rest
         } = this.props;
 
-        const asideClasses = classnames(className, {
+        const classes = classnames(className, {
             top: top || !bottom,
             right,
             bottom,
             left: left || !right,
             [`direction-${direction}`]: true,
-            [`container-${container}`]: true,
             opened: this.state.opened,
         });
 
         const childrenProps = {
             direction,
-            top,
-            right,
-            bottom,
-            left,
         };
 
         if (size) {
@@ -153,51 +150,64 @@ class Toolbar extends React.Component {
             childrenProps.shape = shape;
         }
 
+        const elements = [
+            <ToolbarButton icon={icon} onClick={e => this._handleClick(e)} />,
+            (
+                <Collapse className={classes} {...rest}>
+                    {
+                        React.Children.map(children,
+                            child => React.cloneElement(child, childrenProps),
+                        )
+                    }
+                </Collapse>
+            ),
+        ];
+
+        if (
+            (direction === 'column' && bottom === true)
+            || (direction === 'row' && right === true)
+        ) {
+            elements.reverse();
+        }
+
         return (
-            <StyledAside className={asideClasses} {...rest}>
-                {
-                    React.Children.map(children,
-                        child => React.cloneElement(child, childrenProps),
-                    )
-                }
-            </StyledAside>
+            <Container className={classes}>{elements}</Container>
         );
     }
 }
 
 
-Toolbar.propTypes = {
+ToolbarCollapse.propTypes = {
     top: PropTypes.bool,
     right: PropTypes.bool,
     bottom: PropTypes.bool,
     left: PropTypes.bool,
-    direction: PropTypes.oneOf(['row', 'column']),
+    direction: PropTypes.string,
+    icon: PropTypes.string,
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
-    container: PropTypes.oneOf(['parent', 'root']),
     opened: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
     className: PropTypes.string,
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
 };
 
-Toolbar.defaultProps = {
+ToolbarCollapse.defaultProps = {
     top: false,
     right: false,
     bottom: false,
     left: false,
     direction: 'column',
+    icon: 'bars',
     size: '',
     shape: '',
-    container: 'parent',
     opened: false,
     onOpen: null,
     onClose: null,
     className: '',
-    children: '',
 };
 
-Toolbar.displayName = 'Toolbar';
+ToolbarCollapse.displayName = 'Toolbar.Collapse';
 
-export default Toolbar;
+export default ToolbarCollapse;

@@ -25,24 +25,48 @@ const Group = styled.div`
         margin: 0;
     }
 
-    &.first-shape-square {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+    &.direction-column {
+        &.first-shape-square {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        &.last-shape-square {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &.first-shape-round {
+            border-top-left-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
+            border-top-right-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
+        }
+
+        &.last-shape-round {
+            border-bottom-left-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
+            border-bottom-right-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
+        }
     }
 
-    &.last-shape-square {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+    &.direction-row {
+        &.first-shape-square {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
 
-    &.first-shape-round {
-        border-top-left-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
-        border-top-right-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
-    }
+        &.last-shape-square {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
 
-    &.last-shape-round {
-        border-bottom-left-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
-        border-bottom-right-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
+        &.first-shape-round {
+            border-top-left-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
+            border-bottom-left-radius: ${props => props.theme.toolbar[`${props.firstSize}Size`]};
+        }
+
+        &.last-shape-round {
+            border-top-right-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
+            border-bottom-right-radius: ${props => props.theme.toolbar[`${props.lastSize}Size`]};
+        }
     }
 `;
 
@@ -108,14 +132,15 @@ const ToolbarGroup = ({
 
 
 ToolbarGroup.propTypes = {
-    direction: PropTypes.string.isRequired,
-    size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
-    shape: PropTypes.oneOf(['round', 'square']),
+    direction: PropTypes.string,
+    size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
+    shape: PropTypes.oneOf(['', 'round', 'square']),
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
 };
 
 ToolbarGroup.defaultProps = {
+    direction: 'column',
     size: '',
     shape: '',
     className: '',

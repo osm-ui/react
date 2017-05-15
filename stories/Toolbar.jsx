@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 import { host } from 'storybook-host';
-import { withKnobs, text, number, boolean, select } from '@kadira/storybook-addon-knobs';
+import { withKnobs, boolean, select } from '@kadira/storybook-addon-knobs';
 
 import defaultHostOptions from '../.storybook/defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
@@ -23,6 +23,7 @@ import {
     TurquoiseTheme,
     GreenTheme,
     Toolbar,
+    Alert,
 } from '../index';
 
 
@@ -114,17 +115,17 @@ storiesOf('Toolbar', module)
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
-                    <Toolbar opened top right>
-                        <LightGrayTheme>
-                            <Toolbar.Button icon="bars" />
-                        </LightGrayTheme>
-                        <DarkGrayTheme>
-                            <Toolbar.Button icon="search" />
-                        </DarkGrayTheme>
-                        <AnthraciteTheme>
-                            <Toolbar.Button icon="location-arrow" />
-                        </AnthraciteTheme>
-                    </Toolbar>
+                <Toolbar opened top right>
+                    <LightGrayTheme>
+                        <Toolbar.Button icon="bars" />
+                    </LightGrayTheme>
+                    <DarkGrayTheme>
+                        <Toolbar.Button icon="search" />
+                    </DarkGrayTheme>
+                    <AnthraciteTheme>
+                        <Toolbar.Button icon="location-arrow" />
+                    </AnthraciteTheme>
+                </Toolbar>
                 <RoseTheme>
                     <Toolbar opened bottom right>
                         <Toolbar.Button icon="bars" />
@@ -223,6 +224,45 @@ storiesOf('Toolbar', module)
             </FakeApp>
         </DefaultTheme>
     ))
+    .addWithInfo('Collapse', () => (
+        <DefaultTheme>
+            <FakeApp style={fakeAppColumnStyle}>
+                <Alert context="info">Click on the <em>bars</em> buttons</Alert>
+                <BlueTheme>
+                    <Toolbar opened>
+                        <Toolbar.Collapse
+                            opened
+                            icon="bars"
+                            onOpen={action('onOpen')}
+                            onClose={action('onClose')}
+                        >
+                            <Toolbar.Group>
+                                <Toolbar.Button icon="plus" />
+                                <Toolbar.Button icon="minus" />
+                            </Toolbar.Group>
+                            <Toolbar.Button icon="search" />
+                            <Toolbar.Button icon="location-arrow" />
+                        </Toolbar.Collapse>
+                    </Toolbar>
+                </BlueTheme>
+                <OrangeTheme>
+                    <Toolbar opened bottom right direction="row">
+                        <Toolbar.Collapse
+                            opened
+                            icon="bars"
+                            onOpen={action('onOpen')}
+                            onClose={action('onClose')}
+                        >
+                            <Toolbar.Button icon="user" />
+                            <Toolbar.Button icon="pencil" />
+                            <Toolbar.Button icon="share-alt" />
+                            <Toolbar.Button icon="sign-out" />
+                        </Toolbar.Collapse>
+                    </Toolbar>
+                </OrangeTheme>
+            </FakeApp>
+        </DefaultTheme>
+    ))
     .addWithInfo('Playground', () => {
         const vPosition = select('Vertical position', ['top', 'bottom'], 'top');
         const hPosition = select('Horizontal position', ['left', 'right'], 'left');
@@ -283,21 +323,28 @@ storiesOf('Toolbar', module)
                             direction={direction}
                             container={container}
                             size={size}
+                            onOpen={action('onOpen toolbar')}
+                            onClose={action('onClose toolbar')}
                         >
-                            <Toolbar.Button
+                            <Toolbar.Collapse
+                                opened
                                 icon="bars"
-                                loading={loading}
-                            />
-                            <Toolbar.Group>
-                                <Toolbar.Button
-                                    icon="search"
-                                    loading={loading}
-                                />
-                                <Toolbar.Button
-                                    icon="location-arrow"
-                                    loading={loading}
-                                />
-                            </Toolbar.Group>
+                                onOpen={action('onOpen toolbar collapse')}
+                                onClose={action('onClose toolbar collapse')}
+                            >
+                                <Toolbar.Group>
+                                    <Toolbar.Button
+                                        icon="search"
+                                        loading={loading}
+                                        onClick={action('onClick search')}
+                                    />
+                                    <Toolbar.Button
+                                        icon="location-arrow"
+                                        loading={loading}
+                                        onClick={action('onClick location arrow')}
+                                    />
+                                </Toolbar.Group>
+                            </Toolbar.Collapse>
                         </Toolbar>
                     </ThemeElement>
                 </FakeApp>
