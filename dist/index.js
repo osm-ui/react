@@ -564,12 +564,12 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
                     color: color2,
                     backgroundColor: colors.white,
                     borderColor: colors.white,
-                    hoverBackgroundColor: colors.gray5,
-                    hoverBorderColor: colors.gray5,
-                    focusBackgroundColor: colors.gray5,
-                    focusBorderColor: colors.gray5,
-                    activeBackgroundColor: colors.gray5,
-                    activeBorderColor: colors.gray5
+                    hoverBackgroundColor: colors.lightGray5,
+                    hoverBorderColor: colors.lightGray5,
+                    focusBackgroundColor: colors.lightGray5,
+                    focusBorderColor: colors.lightGray5,
+                    activeBackgroundColor: colors.lightGray5,
+                    activeBorderColor: colors.lightGray5
                 }
             }
         }
@@ -620,12 +620,12 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
                     color: color2,
                     backgroundColor: colors.anthracite1,
                     borderColor: colors.anthracite1,
-                    hoverBackgroundColor: colors.gray5,
-                    hoverBorderColor: colors.gray5,
-                    focusBackgroundColor: colors.gray5,
-                    focusBorderColor: colors.gray5,
-                    activeBackgroundColor: colors.gray5,
-                    activeBorderColor: colors.gray5
+                    hoverBackgroundColor: colors.lightGray5,
+                    hoverBorderColor: colors.lightGray5,
+                    focusBackgroundColor: colors.lightGray5,
+                    focusBorderColor: colors.lightGray5,
+                    activeBackgroundColor: colors.lightGray5,
+                    activeBorderColor: colors.lightGray5
                 }
             }
         }
