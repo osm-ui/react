@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("lodash"), require("classnames"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-fontawesome"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "lodash", "classnames", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "react-fontawesome", "react-leaflet", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "lodash", "react-fontawesome", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "react-leaflet", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("lodash"), require("classnames"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-fontawesome"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["lodash"], root["classnames"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["react-fontawesome"], root["react-leaflet"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["react-leaflet"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_26__, __WEBPACK_EXTERNAL_MODULE_27__, __WEBPACK_EXTERNAL_MODULE_28__, __WEBPACK_EXTERNAL_MODULE_29__, __WEBPACK_EXTERNAL_MODULE_30__, __WEBPACK_EXTERNAL_MODULE_45__, __WEBPACK_EXTERNAL_MODULE_46__, __WEBPACK_EXTERNAL_MODULE_47__, __WEBPACK_EXTERNAL_MODULE_48__, __WEBPACK_EXTERNAL_MODULE_49__, __WEBPACK_EXTERNAL_MODULE_50__, __WEBPACK_EXTERNAL_MODULE_51__, __WEBPACK_EXTERNAL_MODULE_52__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_32__, __WEBPACK_EXTERNAL_MODULE_33__, __WEBPACK_EXTERNAL_MODULE_34__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_54__, __WEBPACK_EXTERNAL_MODULE_55__, __WEBPACK_EXTERNAL_MODULE_56__, __WEBPACK_EXTERNAL_MODULE_57__, __WEBPACK_EXTERNAL_MODULE_58__, __WEBPACK_EXTERNAL_MODULE_59__, __WEBPACK_EXTERNAL_MODULE_60__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 53);
+/******/ 	return __webpack_require__(__webpack_require__.s = 61);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -96,6 +96,12 @@ module.exports = require("prop-types");
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("classnames");
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -122,7 +128,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
@@ -136,20 +142,39 @@ var config = exports.config = {
     font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
     color: _colors2.default.anthracite1,
     backgroundColor: _colors2.default.white,
-    borderColor: _colors2.default.gray4,
-    dimmerBackgroundColor: _colors2.default.white,
-    loaderColor: _colors2.default.gray1,
+    borderColor: _colors2.default.lightGray4,
+    boxShadow: '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)',
+    loaderColor: _colors2.default.lightGray1,
     borderStyle: 'solid',
     borderWidth: '4px',
     borderRadius: 0,
-    controlColor: _colors2.default.gray4,
-    hoverControlColor: _colors2.default.gray1,
+    controlColor: _colors2.default.lightGray4,
+    hoverControlColor: _colors2.default.lightGray1,
 
     map: {
         controlColor: _colors2.default.anthracite1,
         controlBackgroundColor: _colors2.default.white,
         hoverControlColor: _colors2.default.white,
         hoverControlBackgroundColor: _colors2.default.blue2
+    },
+    toolbar: {
+        margin: '10px',
+        childrenMargin: '8px',
+
+        button: {
+            color: _colors2.default.anthracite1,
+            backgroundColor: _colors2.default.white,
+            borderColor: _colors2.default.white,
+            borderStyle: 'solid',
+            borderWidth: 0,
+            hoverBackgroundColor: _colors2.default.lightGray5,
+            hoverBorderColor: _colors2.default.lightGray3,
+            focusBackgroundColor: _colors2.default.lightGray5,
+            focusBorderColor: _colors2.default.lightGray3,
+            activeBackgroundColor: _colors2.default.lightGray5,
+            activeBorderColor: _colors2.default.lightGray3,
+            boxShadow: '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)'
+        }
     },
     form: {
         select: {
@@ -160,13 +185,13 @@ var config = exports.config = {
             fontWeight: 700,
             color: _colors2.default.anthracite2,
             backgroundColor: _colors2.default.white,
-            borderColor: _colors2.default.gray3,
-            hoverBackgroundColor: _colors2.default.gray5,
-            hoverBorderColor: _colors2.default.gray3,
-            focusBackgroundColor: _colors2.default.gray5,
-            focusBorderColor: _colors2.default.gray3,
-            activeBackgroundColor: _colors2.default.gray5,
-            activeBorderColor: _colors2.default.gray3,
+            borderColor: _colors2.default.lightGray3,
+            hoverBackgroundColor: _colors2.default.lightGray5,
+            hoverBorderColor: _colors2.default.lightGray3,
+            focusBackgroundColor: _colors2.default.lightGray5,
+            focusBorderColor: _colors2.default.lightGray3,
+            activeBackgroundColor: _colors2.default.lightGray5,
+            activeBorderColor: _colors2.default.lightGray3,
 
             primary: {
                 fontWeight: 700,
@@ -252,7 +277,7 @@ var config = exports.config = {
             boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
             opacity: 0.8,
             backgroundColor: _colors2.default.white,
-            borderColor: _colors2.default.gray3,
+            borderColor: _colors2.default.lightGray3,
 
             focusOpacity: 1,
             focusBackgroundColor: _colors2.default.white,
@@ -299,7 +324,7 @@ var config = exports.config = {
             margin: 0,
             padding: '5px 10px',
 
-            backgroundColor: _colors2.default.gray5,
+            backgroundColor: _colors2.default.lightGray5,
             color: _colors2.default.anthracite2,
 
             success: {
@@ -373,7 +398,7 @@ DefaultTheme.displayName = 'DefaultTheme';
 exports.default = DefaultTheme;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -393,17 +418,23 @@ exports.default = {
     white: '#ffffff',
     black: '#000000',
 
-    anthracite1: '#3b3f45',
-    anthracite2: '#707377',
-    anthracite3: '#b7b9bb',
-    anthracite4: '#c9cacc',
-    anthracite5: '#dbdcdd',
+    anthracite1: '#101113',
+    anthracite2: '#3b3f45',
+    anthracite3: '#707377',
+    anthracite4: '#b7b9bb',
+    anthracite5: '#c9cacc',
 
-    gray1: '#7a8888',
-    gray2: '#adb8b9',
-    gray3: '#d0d6d7',
-    gray4: '#dce1e1',
-    gray5: '#eff1f1',
+    darkGray1: '#3b3f45',
+    darkGray2: '#707377',
+    darkGray3: '#b7b9bb',
+    darkGray4: '#c9cacc',
+    darkGray5: '#dbdcdd',
+
+    lightGray1: '#707377',
+    lightGray2: '#b7b9bb',
+    lightGray3: '#c9cacc',
+    lightGray4: '#dbdcdd',
+    lightGray5: '#eceeef',
 
     yellow1: '#e3b900',
     yellow2: '#ffde08',
@@ -461,13 +492,13 @@ exports.default = {
 };
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = require("lodash");
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -477,8 +508,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.buildDarkThemeConfig = buildDarkThemeConfig;
+exports.buildLightThemeConfig = buildLightThemeConfig;
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
@@ -495,11 +527,23 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         color: colors.white,
         backgroundColor: color2,
         borderColor: color1,
-        dimmerBackgroundColor: color2,
         loaderColor: colors.white,
         controlColor: color1,
         hoverControlColor: colors.white,
 
+        toolbar: {
+            button: {
+                color: colors.white,
+                backgroundColor: color2,
+                borderColor: color2,
+                hoverBackgroundColor: color3,
+                hoverBorderColor: color5,
+                focusBackgroundColor: color3,
+                focusBorderColor: color5,
+                activeBackgroundColor: color3,
+                activeBorderColor: color5
+            }
+        },
         form: {
             button: {
                 color: colors.white,
@@ -528,15 +572,66 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     });
 }
 
+function buildLightThemeConfig(baseConfig, colors, colorVariant) {
+    var color1 = colors[colorVariant + '1'];
+    var color2 = colors[colorVariant + '2'];
+    var color3 = colors[colorVariant + '3'];
+    var color4 = colors[colorVariant + '4'];
+    var color5 = colors[colorVariant + '5'];
+
+    return _lodash2.default.merge({}, baseConfig, {
+        color: colors.anthracite1,
+        backgroundColor: color2,
+        borderColor: color1,
+        loaderColor: colors.anthracite1,
+        controlColor: color4,
+        hoverControlColor: colors.anthracite1,
+
+        toolbar: {
+            button: {
+                color: colors.anthracite1,
+                backgroundColor: color2,
+                borderColor: color2,
+                hoverBackgroundColor: color3,
+                hoverBorderColor: color5,
+                focusBackgroundColor: color3,
+                focusBorderColor: color5,
+                activeBackgroundColor: color3,
+                activeBorderColor: color5
+            }
+        },
+        form: {
+            button: {
+                color: colors.anthracite1,
+                backgroundColor: color2,
+                borderColor: color5,
+                hoverBackgroundColor: color3,
+                hoverBorderColor: color5,
+                focusBackgroundColor: color3,
+                focusBorderColor: color5,
+                activeBackgroundColor: color3,
+                activeBorderColor: color5,
+
+                primary: {
+                    color: color2,
+                    backgroundColor: colors.anthracite1,
+                    borderColor: colors.anthracite1,
+                    hoverBackgroundColor: colors.gray5,
+                    hoverBorderColor: colors.gray5,
+                    focusBackgroundColor: colors.gray5,
+                    focusBorderColor: colors.gray5,
+                    activeBackgroundColor: colors.gray5,
+                    activeBorderColor: colors.gray5
+                }
+            }
+        }
+    });
+}
+
 exports.default = {
-    buildDarkThemeConfig: buildDarkThemeConfig
+    buildDarkThemeConfig: buildDarkThemeConfig,
+    buildLightThemeConfig: buildLightThemeConfig
 };
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-module.exports = require("classnames");
 
 /***/ }),
 /* 8 */
@@ -549,7 +644,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(43);
+var _Loader = __webpack_require__(49);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -584,7 +679,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames = __webpack_require__(7);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -597,10 +692,10 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var StyledH2 = _styledComponents2.default.h2(_templateObject);
 
 var ColumnTitle = function ColumnTitle(_ref) {
-    var children = _ref.children,
-        inHeader = _ref.inHeader,
+    var inHeader = _ref.inHeader,
         className = _ref.className,
-        rest = _objectWithoutProperties(_ref, ['children', 'inHeader', 'className']);
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['inHeader', 'className', 'children']);
 
     var classes = (0, _classnames2.default)(className, {
         'column-title': true,
@@ -615,9 +710,9 @@ var ColumnTitle = function ColumnTitle(_ref) {
 };
 
 ColumnTitle.propTypes = {
-    children: _propTypes2.default.node.isRequired,
     inHeader: _propTypes2.default.bool,
-    className: _propTypes2.default.string
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node.isRequired
 };
 
 ColumnTitle.defaultProps = {
@@ -648,11 +743,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -668,8 +773,19 @@ var StyledDiv = _styledComponents2.default.div(_templateObject, function (props)
     return props.theme.form.hint.padding;
 });
 
-var InputHint = function InputHint(props) {
-    return _react2.default.createElement(StyledDiv, _extends({ className: 'help-block' }, props));
+var InputHint = function InputHint(_ref) {
+    var className = _ref.className,
+        props = _objectWithoutProperties(_ref, ['className']);
+
+    return _react2.default.createElement(StyledDiv, _extends({ className: (0, _classnames2.default)(className, 'help-block') }, props));
+};
+
+InputHint.propTypes = {
+    className: _propTypes2.default.string
+};
+
+InputHint.defaultProps = {
+    className: ''
 };
 
 InputHint.displayName = 'Form.InputHint';
@@ -678,22 +794,9 @@ exports.default = InputHint;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Alert = __webpack_require__(31);
-
-var _Alert2 = _interopRequireDefault(_Alert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Alert2.default;
+module.exports = require("react-fontawesome");
 
 /***/ }),
 /* 12 */
@@ -706,13 +809,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(32);
+var _Alert = __webpack_require__(37);
 
-var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+var _Alert2 = _interopRequireDefault(_Alert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _AppCanvas2.default;
+exports.default = _Alert2.default;
 
 /***/ }),
 /* 13 */
@@ -725,13 +828,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(33);
+var _AppCanvas = __webpack_require__(38);
 
-var _Button2 = _interopRequireDefault(_Button);
+var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Button2.default;
+exports.default = _AppCanvas2.default;
 
 /***/ }),
 /* 14 */
@@ -744,29 +847,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(34);
+var _Button = __webpack_require__(39);
 
-var _Column2 = _interopRequireDefault(_Column);
-
-var _Title = __webpack_require__(9);
-
-var _Title2 = _interopRequireDefault(_Title);
-
-var _Header = __webpack_require__(36);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(35);
-
-var _Footer2 = _interopRequireDefault(_Footer);
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_Column2.default.Title = _Title2.default;
-_Column2.default.Header = _Header2.default;
-_Column2.default.Footer = _Footer2.default;
-
-exports.default = _Column2.default;
+exports.default = _Button2.default;
 
 /***/ }),
 /* 15 */
@@ -779,27 +866,62 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(37);
+var _Column = __webpack_require__(40);
+
+var _Column2 = _interopRequireDefault(_Column);
+
+var _Title = __webpack_require__(9);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _Header = __webpack_require__(42);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(41);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Column2.default.Title = _Title2.default;
+_Column2.default.Header = _Header2.default;
+_Column2.default.Footer = _Footer2.default;
+
+exports.default = _Column2.default;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Form = __webpack_require__(43);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(38);
+var _FormGroup = __webpack_require__(44);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(40);
+var _Label = __webpack_require__(46);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(39);
+var _Input = __webpack_require__(45);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(42);
+var _Textarea = __webpack_require__(48);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(41);
+var _Select = __webpack_require__(47);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -814,7 +936,7 @@ _Form2.default.Select = _Select2.default;
 exports.default = _Form2.default;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -824,76 +946,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Map = __webpack_require__(44);
+var _Map = __webpack_require__(50);
 
 var _Map2 = _interopRequireDefault(_Map);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _Map2.default;
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.config = undefined;
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _lodash = __webpack_require__(5);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
-
-var _themes = __webpack_require__(6);
-
-var _Default = __webpack_require__(3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'blue'), {});
-
-var RedTheme = function RedTheme(_ref) {
-    var children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['children']);
-
-    return _react2.default.createElement(
-        _styledComponents.ThemeProvider,
-        { theme: config },
-        _react2.default.createElement(
-            _Default.StyledDiv,
-            rest,
-            children
-        )
-    );
-};
-
-RedTheme.propTypes = {
-    children: _propTypes2.default.node.isRequired
-};
-
-RedTheme.displayName = 'RedTheme';
-
-exports.default = RedTheme;
 
 /***/ }),
 /* 18 */
@@ -903,60 +962,27 @@ exports.default = RedTheme;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-exports.config = undefined;
 
-var _react = __webpack_require__(0);
+var _Toolbar = __webpack_require__(53);
 
-var _react2 = _interopRequireDefault(_react);
+var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-var _propTypes = __webpack_require__(2);
+var _Button = __webpack_require__(51);
 
-var _propTypes2 = _interopRequireDefault(_propTypes);
+var _Button2 = _interopRequireDefault(_Button);
 
-var _styledComponents = __webpack_require__(1);
+var _Group = __webpack_require__(52);
 
-var _lodash = __webpack_require__(5);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
-
-var _themes = __webpack_require__(6);
-
-var _Default = __webpack_require__(3);
+var _Group2 = _interopRequireDefault(_Group);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+_Toolbar2.default.Button = _Button2.default;
+_Toolbar2.default.Group = _Group2.default;
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'brown'), {});
-
-var RedTheme = function RedTheme(_ref) {
-    var children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['children']);
-
-    return _react2.default.createElement(
-        _styledComponents.ThemeProvider,
-        { theme: config },
-        _react2.default.createElement(
-            _Default.StyledDiv,
-            rest,
-            children
-        )
-    );
-};
-
-RedTheme.propTypes = {
-    children: _propTypes2.default.node.isRequired
-};
-
-RedTheme.displayName = 'RedTheme';
-
-exports.default = RedTheme;
+exports.default = _Toolbar2.default;
 
 /***/ }),
 /* 19 */
@@ -980,41 +1006,25 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'green'), {
-    form: {
-        button: {
-            success: {
-                color: _colors2.default.white,
-                backgroundColor: _colors2.default.green3,
-                borderColor: _colors2.default.green3,
-                hoverBackgroundColor: _colors2.default.green1,
-                hoverBorderColor: _colors2.default.green1,
-                focusBackgroundColor: _colors2.default.green1,
-                focusBorderColor: _colors2.default.green1,
-                activeBackgroundColor: _colors2.default.green1,
-                activeBorderColor: _colors2.default.green1
-            }
-        }
-    }
-});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'anthracite'), {});
 
-var RedTheme = function RedTheme(_ref) {
+var AnthraciteTheme = function AnthraciteTheme(_ref) {
     var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
@@ -1029,13 +1039,13 @@ var RedTheme = function RedTheme(_ref) {
     );
 };
 
-RedTheme.propTypes = {
+AnthraciteTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
-RedTheme.displayName = 'RedTheme';
+AnthraciteTheme.displayName = 'AnthraciteTheme';
 
-exports.default = RedTheme;
+exports.default = AnthraciteTheme;
 
 /***/ }),
 /* 20 */
@@ -1059,41 +1069,25 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'orange'), {
-    form: {
-        button: {
-            warning: {
-                color: _colors2.default.white,
-                backgroundColor: _colors2.default.orange1,
-                borderColor: _colors2.default.orange1,
-                hoverBackgroundColor: _colors2.default.orange3,
-                hoverBorderColor: _colors2.default.orange3,
-                focusBackgroundColor: _colors2.default.orange3,
-                focusBorderColor: _colors2.default.orange3,
-                activeBackgroundColor: _colors2.default.orange3,
-                activeBorderColor: _colors2.default.orange3
-            }
-        }
-    }
-});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'blue'), {});
 
-var RedTheme = function RedTheme(_ref) {
+var BlueTheme = function BlueTheme(_ref) {
     var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
@@ -1108,13 +1102,13 @@ var RedTheme = function RedTheme(_ref) {
     );
 };
 
-RedTheme.propTypes = {
+BlueTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
-RedTheme.displayName = 'RedTheme';
+BlueTheme.displayName = 'BlueTheme';
 
-exports.default = RedTheme;
+exports.default = BlueTheme;
 
 /***/ }),
 /* 21 */
@@ -1138,25 +1132,25 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'purple'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'brown'), {});
 
-var RedTheme = function RedTheme(_ref) {
+var BrownTheme = function BrownTheme(_ref) {
     var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
@@ -1171,13 +1165,13 @@ var RedTheme = function RedTheme(_ref) {
     );
 };
 
-RedTheme.propTypes = {
+BrownTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
-RedTheme.displayName = 'RedTheme';
+BrownTheme.displayName = 'BrownTheme';
 
-exports.default = RedTheme;
+exports.default = BrownTheme;
 
 /***/ }),
 /* 22 */
@@ -1201,17 +1195,364 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'darkGray'), {});
+
+var DarkGrayTheme = function DarkGrayTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+DarkGrayTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+DarkGrayTheme.displayName = 'DarkGrayTheme';
+
+exports.default = DarkGrayTheme;
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'green'), {
+    form: {
+        button: {
+            success: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.green3,
+                borderColor: _colors2.default.green3,
+                hoverBackgroundColor: _colors2.default.green1,
+                hoverBorderColor: _colors2.default.green1,
+                focusBackgroundColor: _colors2.default.green1,
+                focusBorderColor: _colors2.default.green1,
+                activeBackgroundColor: _colors2.default.green1,
+                activeBorderColor: _colors2.default.green1
+            }
+        }
+    }
+});
+
+var GreenTheme = function GreenTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+GreenTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+GreenTheme.displayName = 'GreenTheme';
+
+exports.default = GreenTheme;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'lightGray'), {});
+
+var LightGrayTheme = function LightGrayTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+LightGrayTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+LightGrayTheme.displayName = 'LightGrayTheme';
+
+exports.default = LightGrayTheme;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'orange'), {
+    form: {
+        button: {
+            warning: {
+                color: _colors2.default.white,
+                backgroundColor: _colors2.default.orange1,
+                borderColor: _colors2.default.orange1,
+                hoverBackgroundColor: _colors2.default.orange3,
+                hoverBorderColor: _colors2.default.orange3,
+                focusBackgroundColor: _colors2.default.orange3,
+                focusBorderColor: _colors2.default.orange3,
+                activeBackgroundColor: _colors2.default.orange3,
+                activeBorderColor: _colors2.default.orange3
+            }
+        }
+    }
+});
+
+var OrangeTheme = function OrangeTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+OrangeTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+OrangeTheme.displayName = 'OrangeTheme';
+
+exports.default = OrangeTheme;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'purple'), {});
+
+var PurpleTheme = function PurpleTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+PurpleTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+PurpleTheme.displayName = 'PurpleTheme';
+
+exports.default = PurpleTheme;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1259,7 +1600,7 @@ RedTheme.displayName = 'RedTheme';
 exports.default = RedTheme;
 
 /***/ }),
-/* 23 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1280,17 +1621,17 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1298,7 +1639,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'rose'), {});
 
-var RedTheme = function RedTheme(_ref) {
+var RoseTheme = function RoseTheme(_ref) {
     var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
@@ -1313,16 +1654,16 @@ var RedTheme = function RedTheme(_ref) {
     );
 };
 
-RedTheme.propTypes = {
+RoseTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
-RedTheme.displayName = 'RedTheme';
+RoseTheme.displayName = 'RoseTheme';
 
-exports.default = RedTheme;
+exports.default = RoseTheme;
 
 /***/ }),
-/* 24 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1343,17 +1684,17 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = __webpack_require__(1);
 
-var _lodash = __webpack_require__(5);
+var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
+var _colors = __webpack_require__(5);
 
 var _colors2 = _interopRequireDefault(_colors);
 
-var _themes = __webpack_require__(6);
+var _themes = __webpack_require__(7);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1377,7 +1718,7 @@ var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkTh
     }
 });
 
-var RedTheme = function RedTheme(_ref) {
+var TurquoiseTheme = function TurquoiseTheme(_ref) {
     var children = _ref.children,
         rest = _objectWithoutProperties(_ref, ['children']);
 
@@ -1392,52 +1733,115 @@ var RedTheme = function RedTheme(_ref) {
     );
 };
 
-RedTheme.propTypes = {
+TurquoiseTheme.propTypes = {
     children: _propTypes2.default.node.isRequired
 };
 
-RedTheme.displayName = 'RedTheme';
+TurquoiseTheme.displayName = 'TurquoiseTheme';
 
-exports.default = RedTheme;
+exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 25 */
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(5);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(4);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'yellow'), {});
+
+var YellowTheme = function YellowTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledDiv,
+            rest,
+            children
+        )
+    );
+};
+
+YellowTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+YellowTheme.displayName = 'YellowTheme';
+
+exports.default = YellowTheme;
+
+/***/ }),
+/* 31 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 26 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("bootstrap");
 
 /***/ }),
-/* 27 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
-/* 28 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
 /***/ }),
-/* 29 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
-/* 30 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
-/* 31 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1459,7 +1863,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames2 = __webpack_require__(7);
+var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
@@ -1518,7 +1922,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 32 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1561,7 +1965,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 33 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1583,7 +1987,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames2 = __webpack_require__(7);
+var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
@@ -1663,7 +2067,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 34 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1677,7 +2081,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n'], ['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n'], ['\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -1691,11 +2095,11 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames2 = __webpack_require__(7);
+var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(47);
+var _reactFontawesome = __webpack_require__(11);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
@@ -1729,6 +2133,8 @@ var StyledAside = _styledComponents2.default.aside(_templateObject, function (pr
     return props.theme.borderColor;
 }, function (props) {
     return props.theme.borderStyle;
+}, function (props) {
+    return props.theme.boxShadow;
 }, function (props) {
     return props.theme.borderWidth;
 }, function (props) {
@@ -1883,7 +2289,6 @@ Column.propTypes = {
     title: _propTypes2.default.string,
     header: _propTypes2.default.node,
     footer: _propTypes2.default.node,
-    children: _propTypes2.default.node.isRequired,
     opened: _propTypes2.default.bool,
     loading: _propTypes2.default.bool,
     loaderLabel: _propTypes2.default.node,
@@ -1900,7 +2305,8 @@ Column.propTypes = {
     onBack: _propTypes2.default.func,
     onMaximize: _propTypes2.default.func,
     onUnmaximize: _propTypes2.default.func,
-    className: _propTypes2.default.string
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node.isRequired
 };
 
 Column.defaultProps = {
@@ -1931,7 +2337,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 35 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1957,6 +2363,10 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -1970,18 +2380,24 @@ var StyledDiv = _styledComponents2.default.div(_templateObject, function (props)
 });
 
 var ColumnFooter = function ColumnFooter(_ref) {
-    var children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['children']);
+    var className = _ref.className,
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['className', 'children']);
 
     return _react2.default.createElement(
         StyledDiv,
-        _extends({ className: 'column-footer' }, rest),
+        _extends({ className: (0, _classnames2.default)(className, 'column-footer') }, rest),
         children
     );
 };
 
 ColumnFooter.propTypes = {
+    className: _propTypes2.default.string,
     children: _propTypes2.default.node.isRequired
+};
+
+ColumnFooter.defaultProps = {
+    className: ''
 };
 
 ColumnFooter.displayName = 'Column.Footer';
@@ -1989,7 +2405,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 36 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2015,6 +2431,10 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -2024,18 +2444,24 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var StyledDiv = _styledComponents2.default.div(_templateObject);
 
 var ColumnHeader = function ColumnHeader(_ref) {
-    var children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['children']);
+    var className = _ref.className,
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['className', 'children']);
 
     return _react2.default.createElement(
         StyledDiv,
-        _extends({ className: 'column-header' }, rest),
+        _extends({ className: (0, _classnames2.default)(className, 'column-header') }, rest),
         children
     );
 };
 
 ColumnHeader.propTypes = {
+    className: _propTypes2.default.string,
     children: _propTypes2.default.node.isRequired
+};
+
+ColumnHeader.defaultProps = {
+    className: ''
 };
 
 ColumnHeader.displayName = 'Column.Header';
@@ -2043,7 +2469,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 37 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2072,7 +2498,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 38 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2098,7 +2524,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames2 = __webpack_require__(7);
+var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
@@ -2157,7 +2583,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 39 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2182,6 +2608,10 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _InputHint = __webpack_require__(10);
 
@@ -2219,13 +2649,14 @@ var Input = function Input(_ref) {
     var type = _ref.type,
         disabled = _ref.disabled,
         hint = _ref.hint,
-        props = _objectWithoutProperties(_ref, ['type', 'disabled', 'hint']);
+        className = _ref.className,
+        props = _objectWithoutProperties(_ref, ['type', 'disabled', 'hint', 'className']);
 
     return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(StyledInput, _extends({
-            className: 'form-control',
+            className: (0, _classnames2.default)(className, 'form-control'),
             type: type,
             disabled: disabled
         }, props)),
@@ -2240,13 +2671,15 @@ var Input = function Input(_ref) {
 Input.propTypes = {
     type: _propTypes2.default.string,
     disabled: _propTypes2.default.bool,
-    hint: _propTypes2.default.string
+    hint: _propTypes2.default.string,
+    className: _propTypes2.default.string
 };
 
 Input.defaultProps = {
     type: 'text',
     disabled: false,
-    hint: ''
+    hint: '',
+    className: ''
 };
 
 Input.displayName = 'Form.Input';
@@ -2254,7 +2687,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 40 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2280,7 +2713,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames = __webpack_require__(7);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -2325,7 +2758,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 41 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2349,13 +2782,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(49);
+__webpack_require__(57);
 
-__webpack_require__(52);
+__webpack_require__(60);
 
-__webpack_require__(51);
+__webpack_require__(59);
 
-var _reactVirtualizedSelect = __webpack_require__(50);
+var _reactVirtualizedSelect = __webpack_require__(58);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -2433,7 +2866,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 42 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2458,6 +2891,10 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _InputHint = __webpack_require__(10);
 
@@ -2497,13 +2934,14 @@ var Textarea = function Textarea(_ref) {
     var rows = _ref.rows,
         disabled = _ref.disabled,
         hint = _ref.hint,
-        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint']);
+        className = _ref.className,
+        props = _objectWithoutProperties(_ref, ['rows', 'disabled', 'hint', 'className']);
 
     return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(StyledTextArea, _extends({
-            className: 'form-control',
+            className: (0, _classnames2.default)(className, 'form-control'),
             rows: rows,
             disabled: disabled
         }, props)),
@@ -2519,14 +2957,16 @@ Textarea.propTypes = {
     rows: _propTypes2.default.number,
     disabled: _propTypes2.default.bool,
     hint: _propTypes2.default.string,
-    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal'])
+    resize: _propTypes2.default.oneOf(['none', 'vertical', 'horizontal']),
+    className: _propTypes2.default.string
 };
 
 Textarea.defaultProps = {
     rows: 6,
     disabled: false,
     hint: '',
-    resize: 'vertical'
+    resize: 'vertical',
+    className: ''
 };
 
 Textarea.displayName = 'Form.Textarea';
@@ -2534,7 +2974,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 43 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2547,7 +2987,7 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n    from {\n        transform: rotate(0deg);\n    }\n\n    to {\n        transform: rotate(360deg);\n    }\n'], ['\n    from {\n        transform: rotate(0deg);\n    }\n\n    to {\n        transform: rotate(360deg);\n    }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border: 3px solid ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n'], ['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border: 3px solid ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border-width: ', 'px;\n    border-style: solid;\n    border-color: ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n'], ['\n    width: ', 'px;\n    height: ', 'px;\n    margin: 0 auto;\n    border-width: ', 'px;\n    border-style: solid;\n    border-color: ', ';\n    border-radius: 50%;\n    border-left-color: transparent;\n    border-bottom-color: transparent;\n    border-right-color: transparent;\n    animation: ', ' 650ms infinite linear;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n    text-align: center;\n\n    &.centered {\n        position: absolute;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n    }\n'], ['\n    text-align: center;\n\n    &.centered {\n        position: absolute;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n    }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n    color: ', ';\n    margin-top: 15px;\n'], ['\n    color: ', ';\n    margin-top: 15px;\n']);
 
@@ -2559,7 +2999,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = __webpack_require__(7);
+var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -2580,6 +3020,8 @@ var Spinner = _styledComponents2.default.div(_templateObject2, function (props) 
 }, function (props) {
     return props.spinnerSize;
 }, function (props) {
+    return props.strokeSize;
+}, function (props) {
     return props.theme.loaderColor;
 }, rotate360);
 
@@ -2592,9 +3034,10 @@ var Label = _styledComponents2.default.div(_templateObject4, function (props) {
 var Loader = function Loader(_ref) {
     var centered = _ref.centered,
         spinnerSize = _ref.spinnerSize,
+        strokeSize = _ref.strokeSize,
         label = _ref.label,
         className = _ref.className,
-        rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'label', 'className']);
+        rest = _objectWithoutProperties(_ref, ['centered', 'spinnerSize', 'strokeSize', 'label', 'className']);
 
     var classes = (0, _classnames2.default)(className, {
         centered: centered
@@ -2606,7 +3049,7 @@ var Loader = function Loader(_ref) {
         _react2.default.createElement(
             'div',
             null,
-            _react2.default.createElement(Spinner, { spinnerSize: spinnerSize }),
+            _react2.default.createElement(Spinner, { spinnerSize: spinnerSize, strokeSize: strokeSize }),
             label && _react2.default.createElement(
                 Label,
                 null,
@@ -2619,6 +3062,7 @@ var Loader = function Loader(_ref) {
 Loader.propTypes = {
     centered: _propTypes2.default.bool,
     spinnerSize: _propTypes2.default.number,
+    strokeSize: _propTypes2.default.number,
     label: _propTypes2.default.string,
     className: _propTypes2.default.string
 };
@@ -2626,6 +3070,7 @@ Loader.propTypes = {
 Loader.defaultProps = {
     centered: false,
     spinnerSize: 40,
+    strokeSize: 3,
     label: '',
     className: ''
 };
@@ -2635,7 +3080,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 44 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2663,13 +3108,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(45);
+var _leaflet = __webpack_require__(54);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _reactLeaflet = __webpack_require__(48);
+var _reactLeaflet = __webpack_require__(56);
 
-__webpack_require__(46);
+__webpack_require__(55);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2761,52 +3206,230 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-module.exports = require("leaflet");
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports) {
-
-module.exports = require("leaflet.locatecontrol");
-
-/***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-fontawesome");
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-leaflet");
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-select/dist/react-select.css");
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-virtualized-select");
-
-/***/ }),
 /* 51 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-virtualized-select/styles.css");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: 30px;\n        height: 30px;\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: 40px;\n        height: 40px;\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: 50px;\n        height: 50px;\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: 60px;\n        height: 60px;\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: 30px;\n        height: 30px;\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: 40px;\n        height: 40px;\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: 50px;\n        height: 50px;\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: 60px;\n        height: 60px;\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames2 = __webpack_require__(3);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _reactFontawesome = __webpack_require__(11);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _Loader = __webpack_require__(8);
+
+var _Loader2 = _interopRequireDefault(_Loader);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.borderColor;
+}, function (props) {
+    return props.theme.toolbar.button.borderStyle;
+}, function (props) {
+    return props.theme.toolbar.button.borderWidth;
+}, function (props) {
+    return props.theme.toolbar.button.backgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.boxShadow;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.focusBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.focusBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.activeBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.activeBorderColor;
+});
+
+var ToolbarButton = function ToolbarButton(_ref) {
+    var _classnames;
+
+    var title = _ref.title,
+        icon = _ref.icon,
+        size = _ref.size,
+        shape = _ref.shape,
+        loading = _ref.loading,
+        loaderTitle = _ref.loaderTitle,
+        className = _ref.className,
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['title', 'icon', 'size', 'shape', 'loading', 'loaderTitle', 'className', 'children']);
+
+    var classes = (0, _classnames3.default)(className, (_classnames = {
+        loading: loading
+    }, _defineProperty(_classnames, size, size), _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn', true), _classnames));
+
+    if (loading) {
+        var spinnerSizes = {
+            xs: 14,
+            sm: 20,
+            md: 24,
+            lg: 30
+        };
+        var strokeSizes = {
+            xs: 2,
+            sm: 3,
+            md: 3,
+            lg: 3
+        };
+        return _react2.default.createElement(
+            StyledButton,
+            _extends({ className: classes }, rest),
+            _react2.default.createElement(_Loader2.default, {
+                spinnerSize: spinnerSizes[size],
+                strokeSize: strokeSizes[size],
+                centered: true
+            })
+        );
+    }
+
+    return _react2.default.createElement(
+        StyledButton,
+        _extends({ className: classes }, rest),
+        children && children,
+        !children && _react2.default.createElement(_reactFontawesome2.default, { name: icon })
+    );
+};
+
+ToolbarButton.propTypes = {
+    title: _propTypes2.default.string,
+    icon: _propTypes2.default.string,
+    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['round', 'square']),
+    loading: _propTypes2.default.bool,
+    loaderTitle: _propTypes2.default.node,
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node
+};
+
+ToolbarButton.defaultProps = {
+    title: '',
+    icon: '',
+    size: 'md',
+    shape: 'round',
+    loading: false,
+    loaderTitle: '',
+    className: '',
+    children: ''
+};
+
+ToolbarButton.displayName = 'Toolbar.Button';
+
+exports.default = ToolbarButton;
 
 /***/ }),
 /* 52 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = require("react-virtualized/styles.css");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n'], ['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledH2 = _styledComponents2.default.h2(_templateObject);
+
+var ColumnTitle = function ColumnTitle(_ref) {
+    var children = _ref.children,
+        inHeader = _ref.inHeader,
+        className = _ref.className,
+        rest = _objectWithoutProperties(_ref, ['children', 'inHeader', 'className']);
+
+    var classes = (0, _classnames2.default)(className, {
+        'column-title': true,
+        'in-header': inHeader
+    });
+
+    return _react2.default.createElement(
+        StyledH2,
+        _extends({ className: classes }, rest),
+        children
+    );
+};
+
+ColumnTitle.propTypes = {
+    children: _propTypes2.default.node.isRequired,
+    inHeader: _propTypes2.default.bool,
+    className: _propTypes2.default.string
+};
+
+ColumnTitle.defaultProps = {
+    inHeader: false,
+    className: ''
+};
+
+ColumnTitle.displayName = 'Column.Title';
+
+exports.default = ColumnTitle;
 
 /***/ }),
 /* 53 */
@@ -2816,59 +3439,282 @@ module.exports = require("react-virtualized/styles.css");
 
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n        transform: translate(-150%, 0);\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n        transform: translate(150%, 0);\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n        transform: translate(-150%, 0);\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n        transform: translate(150%, 0);\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames2 = __webpack_require__(3);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledAside = _styledComponents2.default.aside(_templateObject, function (props) {
+    return props.theme.toolbar.margin;
+}, function (props) {
+    return props.theme.toolbar.margin;
+}, function (props) {
+    return props.theme.toolbar.margin;
+}, function (props) {
+    return props.theme.toolbar.margin;
+}, function (props) {
+    return props.theme.toolbar.childrenMargin;
+}, function (props) {
+    return props.theme.toolbar.childrenMargin;
+});
+
+var Toolbar = function (_React$Component) {
+    _inherits(Toolbar, _React$Component);
+
+    function Toolbar(props) {
+        _classCallCheck(this, Toolbar);
+
+        var _this = _possibleConstructorReturn(this, (Toolbar.__proto__ || Object.getPrototypeOf(Toolbar)).call(this, props));
+
+        _this.state = {
+            opened: props.opened
+        };
+        return _this;
+    }
+
+    _createClass(Toolbar, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (this.props.opened === true) {
+                this._triggerCallback('onOpen');
+            }
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            this.setState({
+                opened: nextProps.opened
+            });
+
+            if (this.props.opened !== nextProps.opened) {
+                if (nextProps.opened === true) {
+                    this._triggerCallback('onOpen');
+                } else {
+                    this._triggerCallback('onClose');
+                }
+            }
+        }
+    }, {
+        key: '_triggerCallback',
+        value: function _triggerCallback(name) {
+            if (this.props[name] !== null) {
+                this.props[name]();
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _classnames;
+
+            var _props = this.props,
+                top = _props.top,
+                right = _props.right,
+                bottom = _props.bottom,
+                left = _props.left,
+                direction = _props.direction,
+                container = _props.container,
+                className = _props.className,
+                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'container', 'className']);
+
+            var asideClasses = (0, _classnames3.default)(className, (_classnames = {
+                top: top || !bottom,
+                right: right,
+                bottom: bottom,
+                left: left || !right
+            }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
+
+            return _react2.default.createElement(StyledAside, _extends({ className: asideClasses }, rest));
+        }
+    }]);
+
+    return Toolbar;
+}(_react2.default.Component);
+
+Toolbar.propTypes = {
+    top: _propTypes2.default.bool,
+    right: _propTypes2.default.bool,
+    bottom: _propTypes2.default.bool,
+    left: _propTypes2.default.bool,
+    direction: _propTypes2.default.oneOf(['row', 'column']),
+    container: _propTypes2.default.oneOf(['parent', 'root']),
+    opened: _propTypes2.default.bool,
+    onOpen: _propTypes2.default.func,
+    onClose: _propTypes2.default.func,
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node
+};
+
+Toolbar.defaultProps = {
+    top: false,
+    right: false,
+    bottom: false,
+    left: false,
+    direction: 'column',
+    container: 'parent',
+    opened: false,
+    onOpen: null,
+    onClose: null,
+    className: '',
+    children: ''
+};
+
+Toolbar.displayName = 'Toolbar';
+
+exports.default = Toolbar;
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet");
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet.locatecontrol");
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-leaflet");
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-select/dist/react-select.css");
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select");
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select/styles.css");
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized/styles.css");
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Map = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.DefaultTheme = undefined;
+exports.Map = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = undefined;
 
-__webpack_require__(28);
+__webpack_require__(34);
 
-__webpack_require__(26);
+__webpack_require__(32);
 
-__webpack_require__(27);
+__webpack_require__(33);
 
-__webpack_require__(30);
+__webpack_require__(36);
 
-__webpack_require__(29);
+__webpack_require__(35);
 
-__webpack_require__(25);
+__webpack_require__(31);
 
-var _Default = __webpack_require__(3);
+var _Default = __webpack_require__(4);
 
 var _Default2 = _interopRequireDefault(_Default);
 
-var _Orange = __webpack_require__(20);
+var _LightGray = __webpack_require__(24);
+
+var _LightGray2 = _interopRequireDefault(_LightGray);
+
+var _DarkGray = __webpack_require__(22);
+
+var _DarkGray2 = _interopRequireDefault(_DarkGray);
+
+var _Anthracite = __webpack_require__(19);
+
+var _Anthracite2 = _interopRequireDefault(_Anthracite);
+
+var _Yellow = __webpack_require__(30);
+
+var _Yellow2 = _interopRequireDefault(_Yellow);
+
+var _Orange = __webpack_require__(25);
 
 var _Orange2 = _interopRequireDefault(_Orange);
 
-var _Brown = __webpack_require__(18);
+var _Brown = __webpack_require__(21);
 
 var _Brown2 = _interopRequireDefault(_Brown);
 
-var _Red = __webpack_require__(22);
+var _Red = __webpack_require__(27);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _Rose = __webpack_require__(23);
+var _Rose = __webpack_require__(28);
 
 var _Rose2 = _interopRequireDefault(_Rose);
 
-var _Purple = __webpack_require__(21);
+var _Purple = __webpack_require__(26);
 
 var _Purple2 = _interopRequireDefault(_Purple);
 
-var _Blue = __webpack_require__(17);
+var _Blue = __webpack_require__(20);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Turquoise = __webpack_require__(24);
+var _Turquoise = __webpack_require__(29);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
-var _Green = __webpack_require__(19);
+var _Green = __webpack_require__(23);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _AppCanvas2 = __webpack_require__(12);
+var _AppCanvas2 = __webpack_require__(13);
 
 var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
 
@@ -2876,29 +3722,38 @@ var _Loader2 = __webpack_require__(8);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(11);
+var _Alert2 = __webpack_require__(12);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(13);
+var _Button2 = __webpack_require__(14);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(15);
+var _Form2 = __webpack_require__(16);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(14);
+var _Column2 = __webpack_require__(15);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
-var _Map2 = __webpack_require__(16);
+var _Toolbar2 = __webpack_require__(18);
+
+var _Toolbar3 = _interopRequireDefault(_Toolbar2);
+
+var _Map2 = __webpack_require__(17);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.DefaultTheme = _Default2.default;
+exports.WhiteTheme = _Default2.default;
+exports.LightGrayTheme = _LightGray2.default;
+exports.DarkGrayTheme = _DarkGray2.default;
+exports.AnthraciteTheme = _Anthracite2.default;
+exports.YellowTheme = _Yellow2.default;
 exports.OrangeTheme = _Orange2.default;
 exports.BrownTheme = _Brown2.default;
 exports.RedTheme = _Red2.default;
@@ -2913,6 +3768,7 @@ exports.Alert = _Alert3.default;
 exports.Button = _Button3.default;
 exports.Form = _Form3.default;
 exports.Column = _Column3.default;
+exports.Toolbar = _Toolbar3.default;
 exports.Map = _Map3.default;
 
 /***/ })
