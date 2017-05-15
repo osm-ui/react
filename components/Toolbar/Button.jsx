@@ -15,8 +15,9 @@ const StyledButton = styled.button`
     border-style: ${props => props.theme.toolbar.button.borderStyle};
     border-width: ${props => props.theme.toolbar.button.borderWidth};
     background: ${props => props.theme.toolbar.button.backgroundColor};
-    box-shadow: ${props => props.theme.toolbar.button.boxShadow};
     padding: 0;
+
+    ${props => props.shadow && `box-shadow: ${props.theme.toolbar.button.boxShadow};`}
 
     &:hover {
         color: ${props => props.theme.toolbar.button.color};
@@ -30,14 +31,10 @@ const StyledButton = styled.button`
         border-color: ${props => props.theme.toolbar.button.focusBorderColor};
     }
 
-    &:active {
+    &:active, .active {
         color: ${props => props.theme.toolbar.button.color};
         background-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
         border-color: ${props => props.theme.toolbar.button.activeBorderColor};
-    }
-
-    &.in-group {
-        box-shadow: none;
     }
 
     &.shape-square {
@@ -90,8 +87,8 @@ const ToolbarButton = ({
     children,
     ...rest
 }) => {
+    const shadow = !inGroup;
     const classes = classnames(className, {
-        'in-group': inGroup,
         loading,
         [size]: size,
         [`shape-${shape}`]: true,
@@ -112,7 +109,7 @@ const ToolbarButton = ({
             lg: 3,
         };
         return (
-            <StyledButton className={classes} {...rest}>
+            <StyledButton className={classes} shadow={shadow} {...rest}>
                 <Loader
                     spinnerSize={spinnerSizes[size]}
                     strokeSize={strokeSizes[size]}
@@ -123,7 +120,7 @@ const ToolbarButton = ({
     }
 
     return (
-        <StyledButton className={classes} {...rest}>
+        <StyledButton className={classes} shadow={shadow} {...rest}>
             {children && children}
             {!children && <FontAwesome name={icon} />}
         </StyledButton>
