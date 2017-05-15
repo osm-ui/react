@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-leaflet"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["react-leaflet"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_32__, __WEBPACK_EXTERNAL_MODULE_33__, __WEBPACK_EXTERNAL_MODULE_34__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_54__, __WEBPACK_EXTERNAL_MODULE_55__, __WEBPACK_EXTERNAL_MODULE_56__, __WEBPACK_EXTERNAL_MODULE_57__, __WEBPACK_EXTERNAL_MODULE_58__, __WEBPACK_EXTERNAL_MODULE_59__, __WEBPACK_EXTERNAL_MODULE_60__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_33__, __WEBPACK_EXTERNAL_MODULE_34__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_55__, __WEBPACK_EXTERNAL_MODULE_56__, __WEBPACK_EXTERNAL_MODULE_57__, __WEBPACK_EXTERNAL_MODULE_58__, __WEBPACK_EXTERNAL_MODULE_59__, __WEBPACK_EXTERNAL_MODULE_60__, __WEBPACK_EXTERNAL_MODULE_61__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 61);
+/******/ 	return __webpack_require__(__webpack_require__.s = 62);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -648,7 +648,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(49);
+var _Loader = __webpack_require__(50);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -798,28 +798,191 @@ exports.default = InputHint;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-fontawesome");
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
-var _Alert = __webpack_require__(37);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _Alert2 = _interopRequireDefault(_Alert);
+var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    padding: 0;\n\n    ', '\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active, .active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    padding: 0;\n\n    ', '\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active, .active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames2 = __webpack_require__(3);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _reactFontawesome = __webpack_require__(12);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _Loader = __webpack_require__(8);
+
+var _Loader2 = _interopRequireDefault(_Loader);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Alert2.default;
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var buildShadow = function buildShadow(props) {
+    return props.shadow && 'box-shadow: ' + props.theme.toolbar.button.boxShadow + ';';
+};
+
+var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.borderColor;
+}, function (props) {
+    return props.theme.toolbar.button.borderStyle;
+}, function (props) {
+    return props.theme.toolbar.button.borderWidth;
+}, function (props) {
+    return props.theme.toolbar.button.backgroundColor;
+}, function (props) {
+    return buildShadow(props);
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.focusBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.focusBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.activeBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.activeBorderColor;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
+});
+
+var ToolbarButton = function ToolbarButton(_ref) {
+    var _classnames;
+
+    var icon = _ref.icon,
+        size = _ref.size,
+        shape = _ref.shape,
+        inGroup = _ref.inGroup,
+        loading = _ref.loading,
+        className = _ref.className,
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'inGroup', 'loading', 'className', 'children']);
+
+    var shadow = !inGroup;
+    var classes = (0, _classnames3.default)(className, (_classnames = {
+        loading: loading
+    }, _defineProperty(_classnames, size, size), _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn', true), _classnames));
+
+    if (loading) {
+        var spinnerSizes = {
+            xs: 14,
+            sm: 20,
+            md: 24,
+            lg: 30
+        };
+        var strokeSizes = {
+            xs: 2,
+            sm: 3,
+            md: 3,
+            lg: 3
+        };
+        return _react2.default.createElement(
+            StyledButton,
+            _extends({
+                className: classes,
+                shadow: shadow
+            }, rest),
+            _react2.default.createElement(_Loader2.default, {
+                spinnerSize: spinnerSizes[size],
+                strokeSize: strokeSizes[size],
+                centered: true
+            })
+        );
+    }
+
+    return _react2.default.createElement(
+        StyledButton,
+        _extends({
+            className: classes,
+            shadow: shadow
+        }, rest),
+        children && children,
+        !children && _react2.default.createElement(_reactFontawesome2.default, { name: icon })
+    );
+};
+
+ToolbarButton.propTypes = {
+    // title: PropTypes.string,
+    icon: _propTypes2.default.string,
+    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['round', 'square']),
+    inGroup: _propTypes2.default.bool,
+    loading: _propTypes2.default.bool,
+    // loaderTitle: PropTypes.node,
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node
+};
+
+ToolbarButton.defaultProps = {
+    // title: '',
+    icon: '',
+    size: 'md',
+    shape: 'round',
+    inGroup: false,
+    loading: false,
+    // loaderTitle: '',
+    className: '',
+    children: ''
+};
+
+ToolbarButton.displayName = 'Toolbar.Button';
+
+exports.default = ToolbarButton;
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-fontawesome");
 
 /***/ }),
 /* 13 */
@@ -832,13 +995,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(38);
+var _Alert = __webpack_require__(38);
 
-var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+var _Alert2 = _interopRequireDefault(_Alert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _AppCanvas2.default;
+exports.default = _Alert2.default;
 
 /***/ }),
 /* 14 */
@@ -851,13 +1014,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(39);
+var _AppCanvas = __webpack_require__(39);
 
-var _Button2 = _interopRequireDefault(_Button);
+var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Button2.default;
+exports.default = _AppCanvas2.default;
 
 /***/ }),
 /* 15 */
@@ -870,29 +1033,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(40);
+var _Button = __webpack_require__(40);
 
-var _Column2 = _interopRequireDefault(_Column);
-
-var _Title = __webpack_require__(9);
-
-var _Title2 = _interopRequireDefault(_Title);
-
-var _Header = __webpack_require__(42);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(41);
-
-var _Footer2 = _interopRequireDefault(_Footer);
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_Column2.default.Title = _Title2.default;
-_Column2.default.Header = _Header2.default;
-_Column2.default.Footer = _Footer2.default;
-
-exports.default = _Column2.default;
+exports.default = _Button2.default;
 
 /***/ }),
 /* 16 */
@@ -905,27 +1052,62 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(43);
+var _Column = __webpack_require__(41);
+
+var _Column2 = _interopRequireDefault(_Column);
+
+var _Title = __webpack_require__(9);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _Header = __webpack_require__(43);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(42);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Column2.default.Title = _Title2.default;
+_Column2.default.Header = _Header2.default;
+_Column2.default.Footer = _Footer2.default;
+
+exports.default = _Column2.default;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Form = __webpack_require__(44);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(44);
+var _FormGroup = __webpack_require__(45);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(46);
+var _Label = __webpack_require__(47);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(45);
+var _Input = __webpack_require__(46);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(48);
+var _Textarea = __webpack_require__(49);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(47);
+var _Select = __webpack_require__(48);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -940,25 +1122,6 @@ _Form2.default.Select = _Select2.default;
 exports.default = _Form2.default;
 
 /***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Map = __webpack_require__(50);
-
-var _Map2 = _interopRequireDefault(_Map);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Map2.default;
-
-/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -969,27 +1132,51 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Toolbar = __webpack_require__(53);
+var _Map = __webpack_require__(51);
+
+var _Map2 = _interopRequireDefault(_Map);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Map2.default;
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Toolbar = __webpack_require__(54);
 
 var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-var _Button = __webpack_require__(51);
+var _Button = __webpack_require__(11);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _Group = __webpack_require__(52);
+var _Group = __webpack_require__(53);
 
 var _Group2 = _interopRequireDefault(_Group);
+
+var _Collapse = __webpack_require__(52);
+
+var _Collapse2 = _interopRequireDefault(_Collapse);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _Toolbar2.default.Button = _Button2.default;
 _Toolbar2.default.Group = _Group2.default;
+_Toolbar2.default.Collapse = _Collapse2.default;
 
 exports.default = _Toolbar2.default;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1052,7 +1239,7 @@ AnthraciteTheme.displayName = 'AnthraciteTheme';
 exports.default = AnthraciteTheme;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1115,7 +1302,7 @@ BlueTheme.displayName = 'BlueTheme';
 exports.default = BlueTheme;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1178,7 +1365,7 @@ BrownTheme.displayName = 'BrownTheme';
 exports.default = BrownTheme;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1241,7 +1428,7 @@ DarkGrayTheme.displayName = 'DarkGrayTheme';
 exports.default = DarkGrayTheme;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1320,7 +1507,7 @@ GreenTheme.displayName = 'GreenTheme';
 exports.default = GreenTheme;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1383,7 +1570,7 @@ LightGrayTheme.displayName = 'LightGrayTheme';
 exports.default = LightGrayTheme;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1462,7 +1649,7 @@ OrangeTheme.displayName = 'OrangeTheme';
 exports.default = OrangeTheme;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1525,7 +1712,7 @@ PurpleTheme.displayName = 'PurpleTheme';
 exports.default = PurpleTheme;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1604,7 +1791,7 @@ RedTheme.displayName = 'RedTheme';
 exports.default = RedTheme;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1667,7 +1854,7 @@ RoseTheme.displayName = 'RoseTheme';
 exports.default = RoseTheme;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1746,7 +1933,7 @@ TurquoiseTheme.displayName = 'TurquoiseTheme';
 exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1809,43 +1996,43 @@ YellowTheme.displayName = 'YellowTheme';
 exports.default = YellowTheme;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("bootstrap");
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1926,7 +2113,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1969,7 +2156,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2071,7 +2258,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2103,7 +2290,7 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(11);
+var _reactFontawesome = __webpack_require__(12);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
@@ -2341,7 +2528,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2409,7 +2596,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2473,7 +2660,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2502,7 +2689,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2587,7 +2774,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2691,7 +2878,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2762,7 +2949,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2786,13 +2973,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(57);
+__webpack_require__(58);
+
+__webpack_require__(61);
 
 __webpack_require__(60);
 
-__webpack_require__(59);
-
-var _reactVirtualizedSelect = __webpack_require__(58);
+var _reactVirtualizedSelect = __webpack_require__(59);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -2870,7 +3057,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2978,7 +3165,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3084,7 +3271,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3112,13 +3299,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(54);
+var _leaflet = __webpack_require__(55);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _reactLeaflet = __webpack_require__(56);
+var _reactLeaflet = __webpack_require__(57);
 
-__webpack_require__(55);
+__webpack_require__(56);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3210,7 +3397,7 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3222,7 +3409,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.in-group {\n        box-shadow: none;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.in-group {\n        box-shadow: none;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n']);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n'], ['\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.top > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.bottom > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, -150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, 150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.top > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.bottom > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, -150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, 150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3240,13 +3430,9 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(11);
+var _Button = __webpack_require__(11);
 
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _Loader = __webpack_require__(8);
-
-var _Loader2 = _interopRequireDefault(_Loader);
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3254,135 +3440,184 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
-    return props.theme.toolbar.button.color;
+var Container = _styledComponents2.default.div(_templateObject);
+
+var Collapse = _styledComponents2.default.div(_templateObject2, function (props) {
+    return props.theme.toolbar.childrenMargin;
 }, function (props) {
-    return props.theme.toolbar.button.borderColor;
+    return props.theme.toolbar.childrenMargin;
 }, function (props) {
-    return props.theme.toolbar.button.borderStyle;
+    return props.theme.toolbar.childrenMargin;
 }, function (props) {
-    return props.theme.toolbar.button.borderWidth;
-}, function (props) {
-    return props.theme.toolbar.button.backgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.boxShadow;
-}, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.hoverBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.hoverBorderColor;
-}, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.focusBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.focusBorderColor;
-}, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.activeBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.activeBorderColor;
-}, function (props) {
-    return props.theme.toolbar.xsSize;
-}, function (props) {
-    return props.theme.toolbar.xsSize;
-}, function (props) {
-    return props.theme.toolbar.smSize;
-}, function (props) {
-    return props.theme.toolbar.smSize;
-}, function (props) {
-    return props.theme.toolbar.mdSize;
-}, function (props) {
-    return props.theme.toolbar.mdSize;
-}, function (props) {
-    return props.theme.toolbar.lgSize;
-}, function (props) {
-    return props.theme.toolbar.lgSize;
+    return props.theme.toolbar.childrenMargin;
 });
 
-var ToolbarButton = function ToolbarButton(_ref) {
-    var _classnames;
+var ToolbarCollapse = function (_React$Component) {
+    _inherits(ToolbarCollapse, _React$Component);
 
-    var icon = _ref.icon,
-        size = _ref.size,
-        shape = _ref.shape,
-        inGroup = _ref.inGroup,
-        loading = _ref.loading,
-        className = _ref.className,
-        children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'inGroup', 'loading', 'className', 'children']);
+    function ToolbarCollapse(props) {
+        _classCallCheck(this, ToolbarCollapse);
 
-    var classes = (0, _classnames3.default)(className, (_classnames = {
-        'in-group': inGroup,
-        loading: loading
-    }, _defineProperty(_classnames, size, size), _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn', true), _classnames));
+        var _this = _possibleConstructorReturn(this, (ToolbarCollapse.__proto__ || Object.getPrototypeOf(ToolbarCollapse)).call(this, props));
 
-    if (loading) {
-        var spinnerSizes = {
-            xs: 14,
-            sm: 20,
-            md: 24,
-            lg: 30
+        _this.state = {
+            opened: props.opened
         };
-        var strokeSizes = {
-            xs: 2,
-            sm: 3,
-            md: 3,
-            lg: 3
-        };
-        return _react2.default.createElement(
-            StyledButton,
-            _extends({ className: classes }, rest),
-            _react2.default.createElement(_Loader2.default, {
-                spinnerSize: spinnerSizes[size],
-                strokeSize: strokeSizes[size],
-                centered: true
-            })
-        );
+        return _this;
     }
 
-    return _react2.default.createElement(
-        StyledButton,
-        _extends({ className: classes }, rest),
-        children && children,
-        !children && _react2.default.createElement(_reactFontawesome2.default, { name: icon })
-    );
-};
+    _createClass(ToolbarCollapse, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            if (this.props.opened === true) {
+                this._triggerCallback('onOpen');
+            }
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            this.setState({
+                opened: nextProps.opened
+            });
 
-ToolbarButton.propTypes = {
-    // title: PropTypes.string,
+            if (this.props.opened !== nextProps.opened) {
+                if (nextProps.opened === true) {
+                    this._triggerCallback('onOpen');
+                } else {
+                    this._triggerCallback('onClose');
+                }
+            }
+        }
+    }, {
+        key: '_triggerCallback',
+        value: function _triggerCallback(name) {
+            if (this.props[name] !== null) {
+                this.props[name]();
+            }
+        }
+    }, {
+        key: '_handleClick',
+        value: function _handleClick() {
+            var newState = !this.state.opened;
+
+            this.setState({
+                opened: newState
+            });
+
+            if (newState === true) {
+                this._triggerCallback('onOpen');
+            } else {
+                this._triggerCallback('onClose');
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _classnames,
+                _this2 = this;
+
+            var _props = this.props,
+                top = _props.top,
+                right = _props.right,
+                bottom = _props.bottom,
+                left = _props.left,
+                direction = _props.direction,
+                icon = _props.icon,
+                size = _props.size,
+                shape = _props.shape,
+                className = _props.className,
+                children = _props.children,
+                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'icon', 'size', 'shape', 'className', 'children']);
+
+            var classes = (0, _classnames3.default)(className, (_classnames = {
+                top: top || !bottom,
+                right: right,
+                bottom: bottom,
+                left: left || !right
+            }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
+
+            var childrenProps = {
+                direction: direction
+            };
+
+            if (size) {
+                childrenProps.size = size;
+            }
+
+            if (shape) {
+                childrenProps.shape = shape;
+            }
+
+            var elements = [_react2.default.createElement(_Button2.default, { icon: icon, onClick: function onClick(e) {
+                    return _this2._handleClick(e);
+                } }), _react2.default.createElement(
+                Collapse,
+                _extends({ className: classes }, rest),
+                _react2.default.Children.map(children, function (child) {
+                    return _react2.default.cloneElement(child, childrenProps);
+                })
+            )];
+
+            if (direction === 'column' && bottom === true || direction === 'row' && right === true) {
+                elements.reverse();
+            }
+
+            return _react2.default.createElement(
+                Container,
+                { className: classes },
+                elements
+            );
+        }
+    }]);
+
+    return ToolbarCollapse;
+}(_react2.default.Component);
+
+ToolbarCollapse.propTypes = {
+    top: _propTypes2.default.bool,
+    right: _propTypes2.default.bool,
+    bottom: _propTypes2.default.bool,
+    left: _propTypes2.default.bool,
+    direction: _propTypes2.default.string,
     icon: _propTypes2.default.string,
-    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
-    shape: _propTypes2.default.oneOf(['round', 'square']),
-    inGroup: _propTypes2.default.bool,
-    loading: _propTypes2.default.bool,
-    // loaderTitle: PropTypes.node,
+    size: _propTypes2.default.oneOf(['', 'xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['', 'round', 'square']),
+    opened: _propTypes2.default.bool,
+    onOpen: _propTypes2.default.func,
+    onClose: _propTypes2.default.func,
     className: _propTypes2.default.string,
-    children: _propTypes2.default.node
+    children: _propTypes2.default.node.isRequired
 };
 
-ToolbarButton.defaultProps = {
-    // title: '',
-    icon: '',
-    size: 'md',
-    shape: 'round',
-    inGroup: false,
-    loading: false,
-    // loaderTitle: '',
-    className: '',
-    children: ''
+ToolbarCollapse.defaultProps = {
+    top: false,
+    right: false,
+    bottom: false,
+    left: false,
+    direction: 'column',
+    icon: 'bars',
+    size: '',
+    shape: '',
+    opened: false,
+    onOpen: null,
+    onClose: null,
+    className: ''
 };
 
-ToolbarButton.displayName = 'Toolbar.Button';
+ToolbarCollapse.displayName = 'Toolbar.Collapse';
 
-exports.default = ToolbarButton;
+exports.default = ToolbarCollapse;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3394,7 +3629,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.first-shape-square {\n        border-top-left-radius: 0;\n        border-top-right-radius: 0;\n    }\n\n    &.last-shape-square {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n    }\n\n    &.first-shape-round {\n        border-top-left-radius: ', ';\n        border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n        border-bottom-left-radius: ', ';\n        border-bottom-right-radius: ', ';\n    }\n'], ['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.first-shape-square {\n        border-top-left-radius: 0;\n        border-top-right-radius: 0;\n    }\n\n    &.last-shape-square {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n    }\n\n    &.first-shape-round {\n        border-top-left-radius: ', ';\n        border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n        border-bottom-left-radius: ', ';\n        border-bottom-right-radius: ', ';\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-top-right-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-bottom-left-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n'], ['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-top-right-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-bottom-left-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3428,6 +3663,14 @@ var Group = _styledComponents2.default.div(_templateObject, function (props) {
     return props.theme.toolbar.childrenMargin;
 }, function (props) {
     return props.theme.toolbar.childrenMargin;
+}, function (props) {
+    return props.theme.toolbar[props.firstSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.firstSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.lastSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.lastSize + 'Size'];
 }, function (props) {
     return props.theme.toolbar[props.firstSize + 'Size'];
 }, function (props) {
@@ -3491,14 +3734,15 @@ var ToolbarGroup = function ToolbarGroup(_ref) {
 };
 
 ToolbarGroup.propTypes = {
-    direction: _propTypes2.default.string.isRequired,
-    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
-    shape: _propTypes2.default.oneOf(['round', 'square']),
+    direction: _propTypes2.default.string,
+    size: _propTypes2.default.oneOf(['', 'xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['', 'round', 'square']),
     className: _propTypes2.default.string,
     children: _propTypes2.default.node.isRequired
 };
 
 ToolbarGroup.defaultProps = {
+    direction: 'column',
     size: '',
     shape: '',
     className: ''
@@ -3509,7 +3753,7 @@ ToolbarGroup.displayName = 'Toolbar.Group';
 exports.default = ToolbarGroup;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3523,7 +3767,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n        transform: translate(-150%, 0);\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n        transform: translate(150%, 0);\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n        transform: translate(-150%, 0);\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n        transform: translate(150%, 0);\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, 150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, -150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, 150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, -150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3638,7 +3882,11 @@ var Toolbar = function (_React$Component) {
             }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
             var childrenProps = {
-                direction: direction
+                direction: direction,
+                top: top,
+                right: right,
+                bottom: bottom,
+                left: left
             };
 
             if (size) {
@@ -3668,8 +3916,8 @@ Toolbar.propTypes = {
     bottom: _propTypes2.default.bool,
     left: _propTypes2.default.bool,
     direction: _propTypes2.default.oneOf(['row', 'column']),
-    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
-    shape: _propTypes2.default.oneOf(['round', 'square']),
+    size: _propTypes2.default.oneOf(['', 'xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['', 'round', 'square']),
     container: _propTypes2.default.oneOf(['parent', 'root']),
     opened: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
@@ -3699,49 +3947,49 @@ Toolbar.displayName = 'Toolbar';
 exports.default = Toolbar;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet");
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol");
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-leaflet");
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-select/dist/react-select.css");
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select");
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select/styles.css");
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3752,71 +4000,71 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Map = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = undefined;
 
-__webpack_require__(34);
-
-__webpack_require__(32);
+__webpack_require__(35);
 
 __webpack_require__(33);
 
+__webpack_require__(34);
+
+__webpack_require__(37);
+
 __webpack_require__(36);
 
-__webpack_require__(35);
-
-__webpack_require__(31);
+__webpack_require__(32);
 
 var _Default = __webpack_require__(4);
 
 var _Default2 = _interopRequireDefault(_Default);
 
-var _LightGray = __webpack_require__(24);
+var _LightGray = __webpack_require__(25);
 
 var _LightGray2 = _interopRequireDefault(_LightGray);
 
-var _DarkGray = __webpack_require__(22);
+var _DarkGray = __webpack_require__(23);
 
 var _DarkGray2 = _interopRequireDefault(_DarkGray);
 
-var _Anthracite = __webpack_require__(19);
+var _Anthracite = __webpack_require__(20);
 
 var _Anthracite2 = _interopRequireDefault(_Anthracite);
 
-var _Yellow = __webpack_require__(30);
+var _Yellow = __webpack_require__(31);
 
 var _Yellow2 = _interopRequireDefault(_Yellow);
 
-var _Orange = __webpack_require__(25);
+var _Orange = __webpack_require__(26);
 
 var _Orange2 = _interopRequireDefault(_Orange);
 
-var _Brown = __webpack_require__(21);
+var _Brown = __webpack_require__(22);
 
 var _Brown2 = _interopRequireDefault(_Brown);
 
-var _Red = __webpack_require__(27);
+var _Red = __webpack_require__(28);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _Rose = __webpack_require__(28);
+var _Rose = __webpack_require__(29);
 
 var _Rose2 = _interopRequireDefault(_Rose);
 
-var _Purple = __webpack_require__(26);
+var _Purple = __webpack_require__(27);
 
 var _Purple2 = _interopRequireDefault(_Purple);
 
-var _Blue = __webpack_require__(20);
+var _Blue = __webpack_require__(21);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Turquoise = __webpack_require__(29);
+var _Turquoise = __webpack_require__(30);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
-var _Green = __webpack_require__(23);
+var _Green = __webpack_require__(24);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _AppCanvas2 = __webpack_require__(13);
+var _AppCanvas2 = __webpack_require__(14);
 
 var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
 
@@ -3824,27 +4072,27 @@ var _Loader2 = __webpack_require__(8);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(12);
+var _Alert2 = __webpack_require__(13);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(14);
+var _Button2 = __webpack_require__(15);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(16);
+var _Form2 = __webpack_require__(17);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(15);
+var _Column2 = __webpack_require__(16);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
-var _Toolbar2 = __webpack_require__(18);
+var _Toolbar2 = __webpack_require__(19);
 
 var _Toolbar3 = _interopRequireDefault(_Toolbar2);
 
-var _Map2 = __webpack_require__(17);
+var _Map2 = __webpack_require__(18);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
