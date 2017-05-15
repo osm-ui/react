@@ -2540,7 +2540,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    padding: 20px 20px;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 0 0;\n'], ['\n    padding: 20px 20px;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 0 0;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    padding: 20px 20px;\n'], ['\n    padding: 20px 20px;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2564,11 +2564,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
-    return props.theme.borderColor;
-}, function (props) {
-    return props.theme.borderStyle;
-});
+var StyledDiv = _styledComponents2.default.div(_templateObject);
 
 var ColumnFooter = function ColumnFooter(_ref) {
     var className = _ref.className,
