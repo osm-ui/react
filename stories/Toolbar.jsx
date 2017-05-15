@@ -115,23 +115,17 @@ storiesOf('Toolbar', module)
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
-                <Toolbar opened top right>
-                    <LightGrayTheme>
+                <GreenTheme>
+                    <Toolbar opened top right>
                         <Toolbar.Button icon="bars" />
-                    </LightGrayTheme>
-                    <DarkGrayTheme>
                         <Toolbar.Button icon="search" />
-                    </DarkGrayTheme>
-                    <AnthraciteTheme>
                         <Toolbar.Button icon="location-arrow" />
-                    </AnthraciteTheme>
-                </Toolbar>
+                    </Toolbar>
+                </GreenTheme>
                 <RoseTheme>
                     <Toolbar opened bottom right>
                         <Toolbar.Button icon="bars" />
-                        <PurpleTheme>
-                            <Toolbar.Button icon="search" />
-                        </PurpleTheme>
+                        <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </RoseTheme>
