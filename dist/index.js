@@ -160,6 +160,10 @@ var config = exports.config = {
     toolbar: {
         margin: '10px',
         childrenMargin: '8px',
+        xsSize: '30px',
+        smSize: '40px',
+        mdSize: '50px',
+        lgSize: '60px',
 
         button: {
             color: _colors2.default.anthracite1,
@@ -3218,7 +3222,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: 30px;\n        height: 30px;\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: 40px;\n        height: 40px;\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: 50px;\n        height: 50px;\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: 60px;\n        height: 60px;\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: 30px;\n        height: 30px;\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: 40px;\n        height: 40px;\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: 50px;\n        height: 50px;\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: 60px;\n        height: 60px;\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.in-group {\n        box-shadow: none;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    box-shadow: ', ';\n    padding: 0;\n\n    &:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &:active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n    }\n\n    &.in-group {\n        box-shadow: none;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        font-size: 0.85em;\n        line-height: 0.85em;\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        font-size: 1.08em;\n        line-height: 1.08em;\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        font-size: 1.29em;\n        line-height: 1.29em;\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        font-size: 1.43em;\n        line-height: 1.43em;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3282,6 +3286,22 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
     return props.theme.toolbar.button.activeBackgroundColor;
 }, function (props) {
     return props.theme.toolbar.button.activeBorderColor;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
 });
 
 var ToolbarButton = function ToolbarButton(_ref) {
@@ -3290,12 +3310,14 @@ var ToolbarButton = function ToolbarButton(_ref) {
     var icon = _ref.icon,
         size = _ref.size,
         shape = _ref.shape,
+        inGroup = _ref.inGroup,
         loading = _ref.loading,
         className = _ref.className,
         children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'loading', 'className', 'children']);
+        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'inGroup', 'loading', 'className', 'children']);
 
     var classes = (0, _classnames3.default)(className, (_classnames = {
+        'in-group': inGroup,
         loading: loading
     }, _defineProperty(_classnames, size, size), _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn', true), _classnames));
 
@@ -3336,6 +3358,7 @@ ToolbarButton.propTypes = {
     icon: _propTypes2.default.string,
     size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: _propTypes2.default.oneOf(['round', 'square']),
+    inGroup: _propTypes2.default.bool,
     loading: _propTypes2.default.bool,
     // loaderTitle: PropTypes.node,
     className: _propTypes2.default.string,
@@ -3347,6 +3370,7 @@ ToolbarButton.defaultProps = {
     icon: '',
     size: 'md',
     shape: 'round',
+    inGroup: false,
     loading: false,
     // loaderTitle: '',
     className: '',
@@ -3370,7 +3394,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n'], ['\n    margin: 0 0 30px;\n\n    &.in-header {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n        margin: 0 0 0 20px;\n        line-height: 50px;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.first-shape-square {\n        border-top-left-radius: 0;\n        border-top-right-radius: 0;\n    }\n\n    &.last-shape-square {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n    }\n\n    &.first-shape-round {\n        border-top-left-radius: ', ';\n        border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n        border-bottom-left-radius: ', ';\n        border-bottom-right-radius: ', ';\n    }\n'], ['\n    display: flex;\n    background: ', ';\n    box-shadow: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.first-shape-square {\n        border-top-left-radius: 0;\n        border-top-right-radius: 0;\n    }\n\n    &.last-shape-square {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n    }\n\n    &.first-shape-round {\n        border-top-left-radius: ', ';\n        border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n        border-bottom-left-radius: ', ';\n        border-bottom-right-radius: ', ';\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3384,50 +3408,105 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _classnames = __webpack_require__(3);
+var _classnames2 = __webpack_require__(3);
 
-var _classnames2 = _interopRequireDefault(_classnames);
+var _classnames3 = _interopRequireDefault(_classnames2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var StyledH2 = _styledComponents2.default.h2(_templateObject);
+var Group = _styledComponents2.default.div(_templateObject, function (props) {
+    return props.theme.toolbar.button.backgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.boxShadow;
+}, function (props) {
+    return props.theme.toolbar.childrenMargin;
+}, function (props) {
+    return props.theme.toolbar.childrenMargin;
+}, function (props) {
+    return props.theme.toolbar[props.firstSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.firstSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.lastSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar[props.lastSize + 'Size'];
+});
 
-var ColumnTitle = function ColumnTitle(_ref) {
-    var children = _ref.children,
-        inHeader = _ref.inHeader,
+var ToolbarGroup = function ToolbarGroup(_ref) {
+    var _classnames;
+
+    var direction = _ref.direction,
+        size = _ref.size,
+        shape = _ref.shape,
         className = _ref.className,
-        rest = _objectWithoutProperties(_ref, ['children', 'inHeader', 'className']);
+        children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['direction', 'size', 'shape', 'className', 'children']);
 
-    var classes = (0, _classnames2.default)(className, {
-        'column-title': true,
-        'in-header': inHeader
-    });
+    var firstShape = shape;
+    var lastShape = shape;
+    var firstSize = size;
+    var lastSize = size;
+
+    if (!size && children.length > 0) {
+        firstSize = children[0].props.size;
+        lastSize = children[children.length - 1].props.size;
+    }
+
+    if (!shape && children.length > 0) {
+        firstShape = children[0].props.shape;
+        lastShape = children[children.length - 1].props.shape;
+    }
+
+    var classes = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'first-shape-' + firstShape, true), _defineProperty(_classnames, 'last-shape-' + lastShape, true), _defineProperty(_classnames, 'first-size-' + firstSize, true), _defineProperty(_classnames, 'last-size-' + lastSize, true), _classnames));
+
+    var childrenProps = {
+        inGroup: true
+    };
+
+    if (size) {
+        childrenProps.size = size;
+    }
+
+    if (shape) {
+        childrenProps.shape = shape;
+    }
 
     return _react2.default.createElement(
-        StyledH2,
-        _extends({ className: classes }, rest),
-        children
+        Group,
+        _extends({
+            className: classes,
+            firstSize: firstSize,
+            lastSize: lastSize
+        }, rest),
+        _react2.default.Children.map(children, function (child) {
+            return _react2.default.cloneElement(child, childrenProps);
+        })
     );
 };
 
-ColumnTitle.propTypes = {
-    children: _propTypes2.default.node.isRequired,
-    inHeader: _propTypes2.default.bool,
-    className: _propTypes2.default.string
+ToolbarGroup.propTypes = {
+    direction: _propTypes2.default.string.isRequired,
+    size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
+    shape: _propTypes2.default.oneOf(['round', 'square']),
+    className: _propTypes2.default.string,
+    children: _propTypes2.default.node.isRequired
 };
 
-ColumnTitle.defaultProps = {
-    inHeader: false,
+ToolbarGroup.defaultProps = {
+    size: '',
+    shape: '',
     className: ''
 };
 
-ColumnTitle.displayName = 'Column.Title';
+ToolbarGroup.displayName = 'Toolbar.Group';
 
-exports.default = ColumnTitle;
+exports.default = ToolbarGroup;
 
 /***/ }),
 /* 53 */
@@ -3558,7 +3637,9 @@ var Toolbar = function (_React$Component) {
                 left: left || !right
             }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
-            var childrenProps = {};
+            var childrenProps = {
+                direction: direction
+            };
 
             if (size) {
                 childrenProps.size = size;
