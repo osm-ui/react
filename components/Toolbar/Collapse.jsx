@@ -20,41 +20,55 @@ const Collapse = styled.div`
     &.direction-row { flex-direction: row; }
     &.direction-column { flex-direction: column; }
 
-    &.direction-column.top > * {
+    &.direction-column.position-top-left > *,
+    &.direction-column.position-top-right > * {
         margin-top: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-column.bottom > * {
+    &.direction-column.position-bottom-left > *,
+    &.direction-column.position-bottom-right > * {
         margin-bottom: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-row.left > * {
+    &.direction-row.position-top-left > *,
+    &.direction-row.position-bottom-left > * {
         margin-left: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-row.right > * {
+    &.direction-row.position-top-right > *,
+    &.direction-row.position-bottom-right > * {
         margin-right: ${props => props.theme.toolbar.childrenMargin};
     }
 
     &.direction-column {
-        &.top.left {     transform: translate(-150%, 0); }
-        &.top.right {    transform: translate(150%, 0); }
-        &.bottom.right { transform: translate(150%, 0); }
-        &.bottom.left {  transform: translate(-150%, 0); }
+        &.position-top-left,
+        &.position-bottom-left {
+            transform: translate(-150%, 0);
+        }
+
+        &.position-top-right,
+        &.position-bottom-right {
+            transform: translate(150%, 0);
+        }
     }
 
     &.direction-row {
-        &.top.left {     transform: translate(0, -150%); }
-        &.top.right {    transform: translate(0, -150%); }
-        &.bottom.right { transform: translate(0, 150%); }
-        &.bottom.left {  transform: translate(0, 150%); }
+        &.position-top-left,
+        &.position-top-right {
+            transform: translate(0, -150%);
+        }
+
+        &.position-bottom-left,
+        &.position-bottom-right {
+            transform: translate(0, 150%);
+        }
     }
 
     &.direction-column, &.direction-row {
-        &.top.left,
-        &.top.right,
-        &.bottom.right,
-        &.bottom.left {
+        &.position-top-left,
+        &.position-top-right,
+        &.position-bottom-right,
+        &.position-bottom-left {
             &.opened {
                 transform: translate(0, 0);
             }
@@ -116,10 +130,7 @@ class ToolbarCollapse extends React.Component {
 
     render() {
         const {
-            top,
-            right,
-            bottom,
-            left,
+            position,
             direction,
             icon,
             size,
@@ -130,10 +141,7 @@ class ToolbarCollapse extends React.Component {
         } = this.props;
 
         const classes = classnames(className, {
-            top: top || !bottom,
-            right,
-            bottom,
-            left: left || !right,
+            [`position-${position}`]: true,
             [`direction-${direction}`]: true,
             opened: this.state.opened,
         });
@@ -164,8 +172,8 @@ class ToolbarCollapse extends React.Component {
         ];
 
         if (
-            (direction === 'column' && bottom === true)
-            || (direction === 'row' && right === true)
+            (direction === 'column' && ['bottom-left', 'bottom-right'].indexOf(position) > -1)
+            || (direction === 'row' && ['top-right', 'bottom-right'].indexOf(position) > -1)
         ) {
             elements.reverse();
         }
@@ -178,11 +186,8 @@ class ToolbarCollapse extends React.Component {
 
 
 ToolbarCollapse.propTypes = {
-    top: PropTypes.bool,
-    right: PropTypes.bool,
-    bottom: PropTypes.bool,
-    left: PropTypes.bool,
-    direction: PropTypes.string,
+    position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
+    direction: PropTypes.oneOf(['row', 'column']),
     icon: PropTypes.string,
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
@@ -194,10 +199,7 @@ ToolbarCollapse.propTypes = {
 };
 
 ToolbarCollapse.defaultProps = {
-    top: false,
-    right: false,
-    bottom: false,
-    left: false,
+    position: 'top-left',
     direction: 'column',
     icon: 'bars',
     size: '',

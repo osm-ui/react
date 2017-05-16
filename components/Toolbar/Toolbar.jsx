@@ -15,51 +15,64 @@ const StyledAside = styled.aside`
     &.container-parent { position: absolute; }
     &.container-root   { position: fixed; }
 
-    &.top {
+    &.position-top-left,
+    &.position-top-right {
         top: 0;
         margin-top: ${props => props.theme.toolbar.margin};
     }
 
-    &.bottom {
+    &.position-bottom-left,
+    &.position-bottom-right {
         bottom: 0;
         margin-bottom: ${props => props.theme.toolbar.margin};
     }
 
-    &.left {
+    &.position-top-left,
+    &.position-bottom-left {
         left: 0;
         margin-left: ${props => props.theme.toolbar.margin};
     }
 
-    &.right {
+    &.position-top-right,
+    &.position-bottom-right {
         right: 0;
         margin-right: ${props => props.theme.toolbar.margin};
     }
 
     &.direction-column {
-        &.top.left {     transform: translate(-150%, 0); }
-        &.top.right {    transform: translate(150%, 0); }
-        &.bottom.right { transform: translate(150%, 0); }
-        &.bottom.left {  transform: translate(-150%, 0); }
+        &.position-top-left,
+        &.position-bottom-left {
+            transform: translate(-150%, 0);
+        }
+
+        &.position-top-right,
+        &.position-bottom-right {
+            transform: translate(150%, 0);
+        }
     }
 
     &.direction-row {
-        &.top.left {     transform: translate(0, -150%); }
-        &.top.right {    transform: translate(0, 150%); }
-        &.bottom.right { transform: translate(0, 150%); }
-        &.bottom.left {  transform: translate(0, -150%); }
+        &.position-top-left,
+        &.position-top-right {
+            transform: translate(0, -150%);
+        }
+
+        &.position-bottom-left,
+        &.position-bottom-right {
+            transform: translate(0, 150%);
+        }
     }
 
     &.direction-column, &.direction-row {
-        &.top.left,
-        &.top.right,
-        &.bottom.right,
-        &.bottom.left {
+        &.position-top-left,
+        &.position-top-right,
+        &.position-bottom-right,
+        &.position-bottom-left {
             &.opened {
                 transform: translate(0, 0);
             }
         }
     }
-
 
     &.direction-column > * {
         margin-bottom: ${props => props.theme.toolbar.childrenMargin};
@@ -114,10 +127,7 @@ class Toolbar extends React.Component {
 
     render() {
         const {
-            top,
-            right,
-            bottom,
-            left,
+            position,
             direction,
             size,
             shape,
@@ -128,10 +138,7 @@ class Toolbar extends React.Component {
         } = this.props;
 
         const asideClasses = classnames(className, {
-            top: top || !bottom,
-            right,
-            bottom,
-            left: left || !right,
+            [`position-${position}`]: true,
             [`direction-${direction}`]: true,
             [`container-${container}`]: true,
             opened: this.state.opened,
@@ -139,10 +146,7 @@ class Toolbar extends React.Component {
 
         const childrenProps = {
             direction,
-            top,
-            right,
-            bottom,
-            left,
+            position,
         };
 
         if (size) {
@@ -167,10 +171,7 @@ class Toolbar extends React.Component {
 
 
 Toolbar.propTypes = {
-    top: PropTypes.bool,
-    right: PropTypes.bool,
-    bottom: PropTypes.bool,
-    left: PropTypes.bool,
+    position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
     direction: PropTypes.oneOf(['row', 'column']),
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
@@ -183,10 +184,7 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-    top: false,
-    right: false,
-    bottom: false,
-    left: false,
+    position: 'top-left',
     direction: 'column',
     size: '',
     shape: '',

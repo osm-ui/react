@@ -56,22 +56,22 @@ storiesOf('Toolbar', module)
     .addWithInfo('Positions', () => (
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
-                <Toolbar opened top left>
+                <Toolbar opened position="top-left">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened top right>
+                <Toolbar opened position="top-right">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened bottom right>
+                <Toolbar opened position="bottom-right">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened bottom left>
+                <Toolbar opened position="bottom-left">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
@@ -82,22 +82,22 @@ storiesOf('Toolbar', module)
     .addWithInfo('Directions', () => (
         <DefaultTheme>
             <FakeApp style={fakeAppRowStyle}>
-                <Toolbar opened top left direction="row">
+                <Toolbar opened position="top-left" direction="row">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened top right direction="row">
+                <Toolbar opened position="top-right" direction="row">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened bottom right direction="row">
+                <Toolbar opened position="bottom-right" direction="row">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
                 </Toolbar>
-                <Toolbar opened bottom left direction="row">
+                <Toolbar opened position="bottom-left" direction="row">
                     <Toolbar.Button icon="bars" />
                     <Toolbar.Button icon="search" />
                     <Toolbar.Button icon="location-arrow" />
@@ -109,28 +109,28 @@ storiesOf('Toolbar', module)
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
                 <BlueTheme>
-                    <Toolbar opened top left>
+                    <Toolbar opened position="top-left">
                         <Toolbar.Button icon="bars" />
                         <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
                 <GreenTheme>
-                    <Toolbar opened top right>
+                    <Toolbar opened position="top-right">
                         <Toolbar.Button icon="bars" />
                         <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </GreenTheme>
                 <RoseTheme>
-                    <Toolbar opened bottom right>
+                    <Toolbar opened position="bottom-right">
                         <Toolbar.Button icon="bars" />
                         <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
                 </RoseTheme>
                 <OrangeTheme>
-                    <Toolbar opened bottom left>
+                    <Toolbar opened position="bottom-left">
                         <Toolbar.Button icon="bars" />
                         <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
@@ -150,7 +150,7 @@ storiesOf('Toolbar', module)
                     </Toolbar>
                 </BlueTheme>
                 <OrangeTheme>
-                    <Toolbar opened bottom left>
+                    <Toolbar opened position="bottom-left">
                         <Toolbar.Button icon="bars" shape="round" />
                         <Toolbar.Button icon="search" shape="square" />
                         <Toolbar.Button icon="location-arrow" shape="round" />
@@ -168,7 +168,7 @@ storiesOf('Toolbar', module)
                         <Toolbar.Button icon="search" />
                         <Toolbar.Button icon="location-arrow" />
                     </Toolbar>
-                    <Toolbar opened bottom left>
+                    <Toolbar opened position="bottom-left">
                         <Toolbar.Button icon="bars" size="lg" />
                         <Toolbar.Button icon="bars" size="md" />
                         <Toolbar.Button icon="bars" size="sm" />
@@ -207,7 +207,7 @@ storiesOf('Toolbar', module)
                     </Toolbar>
                 </DefaultTheme>
                 <BlueTheme>
-                    <Toolbar opened top right>
+                    <Toolbar opened position="top-right">
                         <Toolbar.Button icon="bars" />
                         <Toolbar.Group>
                             <Toolbar.Button icon="user" />
@@ -240,7 +240,7 @@ storiesOf('Toolbar', module)
                     </Toolbar>
                 </BlueTheme>
                 <OrangeTheme>
-                    <Toolbar opened bottom right direction="row">
+                    <Toolbar opened position="bottom-right" direction="row">
                         <Toolbar.Collapse
                             opened
                             icon="bars"
@@ -258,8 +258,7 @@ storiesOf('Toolbar', module)
         </DefaultTheme>
     ))
     .addWithInfo('Playground', () => {
-        const vPosition = select('Vertical position', ['top', 'bottom'], 'top');
-        const hPosition = select('Horizontal position', ['left', 'right'], 'left');
+        const position = select('Position', ['top-left', 'top-right', 'bottom-right', 'bottom-left'], 'top-left');
         const direction = select('Direction', ['column', 'row'], 'column');
         const size = select('Size', ['xs', 'sm', 'md', 'lg'], 'md');
         const container = select('Container', ['parent', 'root'], 'parent');
@@ -298,10 +297,6 @@ storiesOf('Toolbar', module)
             GreenTheme,
         };
         const ThemeElement = themes[`${theme}Theme`];
-        const top = vPosition === 'top';
-        const bottom = vPosition === 'bottom';
-        const left = hPosition === 'left';
-        const right = hPosition === 'right';
 
         return (
             <DefaultTheme>
@@ -310,10 +305,7 @@ storiesOf('Toolbar', module)
                     <ThemeElement>
                         <Toolbar
                             opened={opened}
-                            top={top}
-                            bottom={bottom}
-                            left={left}
-                            right={right}
+                            position={position}
                             direction={direction}
                             container={container}
                             size={size}
