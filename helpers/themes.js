@@ -29,6 +29,23 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
                 activeBorderColor: color5,
             },
         },
+        titlebar: {
+            color: colors.white,
+            backgroundColor: color2,
+            borderColor: color2,
+
+            button: {
+                color: colors.white,
+                backgroundColor: color2,
+                borderColor: color2,
+                hoverBackgroundColor: color3,
+                hoverBorderColor: color5,
+                focusBackgroundColor: color3,
+                focusBorderColor: color5,
+                activeBackgroundColor: color3,
+                activeBorderColor: color5,
+            },
+        },
         form: {
             button: {
                 color: colors.white,
@@ -74,6 +91,23 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         hoverControlColor: colors.anthracite1,
 
         toolbar: {
+            button: {
+                color: colors.anthracite1,
+                backgroundColor: color2,
+                borderColor: color2,
+                hoverBackgroundColor: color3,
+                hoverBorderColor: color5,
+                focusBackgroundColor: color3,
+                focusBorderColor: color5,
+                activeBackgroundColor: color3,
+                activeBorderColor: color5,
+            },
+        },
+        titlebar: {
+            color: colors.anthracite1,
+            backgroundColor: color2,
+            borderColor: color2,
+
             button: {
                 color: colors.anthracite1,
                 backgroundColor: color2,

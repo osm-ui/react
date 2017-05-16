@@ -29,4 +29,5 @@ export Button from './components/Button';
 export Form from './components/Form';
 export Column from './components/Column';
 export Toolbar from './components/Toolbar';
+export Titlebar from './components/Titlebar';
 export Map from './components/Map';

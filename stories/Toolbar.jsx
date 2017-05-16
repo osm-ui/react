@@ -53,7 +53,7 @@ storiesOf('Toolbar', module)
             </FakeApp>
         </DefaultTheme>
     ))
-    .addWithInfo('Positions', () => (
+    .addWithInfo('Position', () => (
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
                 <Toolbar opened position="top-left">
