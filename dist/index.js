@@ -3408,7 +3408,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n'], ['\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.top > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.bottom > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, -150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, 150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.top > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.bottom > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, -150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, 150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n']);
+    _templateObject2 = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.position-top-left > *,\n    &.direction-column.position-top-right > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.position-bottom-left > *,\n    &.direction-column.position-bottom-right > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.position-top-left > *,\n    &.direction-row.position-bottom-left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.position-top-right > *,\n    &.direction-row.position-bottom-right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column.position-top-left > *,\n    &.direction-column.position-top-right > * {\n        margin-top: ', ';\n    }\n\n    &.direction-column.position-bottom-left > *,\n    &.direction-column.position-bottom-right > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row.position-top-left > *,\n    &.direction-row.position-bottom-left > * {\n        margin-left: ', ';\n    }\n\n    &.direction-row.position-top-right > *,\n    &.direction-row.position-bottom-right > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3521,24 +3521,16 @@ var ToolbarCollapse = function (_React$Component) {
                 _this2 = this;
 
             var _props = this.props,
-                top = _props.top,
-                right = _props.right,
-                bottom = _props.bottom,
-                left = _props.left,
+                position = _props.position,
                 direction = _props.direction,
                 icon = _props.icon,
                 size = _props.size,
                 shape = _props.shape,
                 className = _props.className,
                 children = _props.children,
-                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'icon', 'size', 'shape', 'className', 'children']);
+                rest = _objectWithoutProperties(_props, ['position', 'direction', 'icon', 'size', 'shape', 'className', 'children']);
 
-            var classes = (0, _classnames3.default)(className, (_classnames = {
-                top: top || !bottom,
-                right: right,
-                bottom: bottom,
-                left: left || !right
-            }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
+            var classes = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
             var childrenProps = {
                 direction: direction
@@ -3562,7 +3554,7 @@ var ToolbarCollapse = function (_React$Component) {
                 })
             )];
 
-            if (direction === 'column' && bottom === true || direction === 'row' && right === true) {
+            if (direction === 'column' && ['bottom-left', 'bottom-right'].indexOf(position) > -1 || direction === 'row' && ['top-right', 'bottom-right'].indexOf(position) > -1) {
                 elements.reverse();
             }
 
@@ -3578,11 +3570,8 @@ var ToolbarCollapse = function (_React$Component) {
 }(_react2.default.Component);
 
 ToolbarCollapse.propTypes = {
-    top: _propTypes2.default.bool,
-    right: _propTypes2.default.bool,
-    bottom: _propTypes2.default.bool,
-    left: _propTypes2.default.bool,
-    direction: _propTypes2.default.string,
+    position: _propTypes2.default.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
+    direction: _propTypes2.default.oneOf(['row', 'column']),
     icon: _propTypes2.default.string,
     size: _propTypes2.default.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: _propTypes2.default.oneOf(['', 'round', 'square']),
@@ -3594,10 +3583,7 @@ ToolbarCollapse.propTypes = {
 };
 
 ToolbarCollapse.defaultProps = {
-    top: false,
-    right: false,
-    bottom: false,
-    left: false,
+    position: 'top-left',
     direction: 'column',
     icon: 'bars',
     size: '',
@@ -3763,7 +3749,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, 150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, -150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.top {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.bottom {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.top.left {     transform: translate(-150%, 0); }\n        &.top.right {    transform: translate(150%, 0); }\n        &.bottom.right { transform: translate(150%, 0); }\n        &.bottom.left {  transform: translate(-150%, 0); }\n    }\n\n    &.direction-row {\n        &.top.left {     transform: translate(0, -150%); }\n        &.top.right {    transform: translate(0, 150%); }\n        &.bottom.right { transform: translate(0, 150%); }\n        &.bottom.left {  transform: translate(0, -150%); }\n    }\n\n    &.direction-column, &.direction-row {\n        &.top.left,\n        &.top.right,\n        &.bottom.right,\n        &.bottom.left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3858,31 +3844,20 @@ var Toolbar = function (_React$Component) {
             var _classnames;
 
             var _props = this.props,
-                top = _props.top,
-                right = _props.right,
-                bottom = _props.bottom,
-                left = _props.left,
+                position = _props.position,
                 direction = _props.direction,
                 size = _props.size,
                 shape = _props.shape,
                 container = _props.container,
                 className = _props.className,
                 children = _props.children,
-                rest = _objectWithoutProperties(_props, ['top', 'right', 'bottom', 'left', 'direction', 'size', 'shape', 'container', 'className', 'children']);
+                rest = _objectWithoutProperties(_props, ['position', 'direction', 'size', 'shape', 'container', 'className', 'children']);
 
-            var asideClasses = (0, _classnames3.default)(className, (_classnames = {
-                top: top || !bottom,
-                right: right,
-                bottom: bottom,
-                left: left || !right
-            }, _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
+            var asideClasses = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
             var childrenProps = {
                 direction: direction,
-                top: top,
-                right: right,
-                bottom: bottom,
-                left: left
+                position: position
             };
 
             if (size) {
@@ -3907,10 +3882,7 @@ var Toolbar = function (_React$Component) {
 }(_react2.default.Component);
 
 Toolbar.propTypes = {
-    top: _propTypes2.default.bool,
-    right: _propTypes2.default.bool,
-    bottom: _propTypes2.default.bool,
-    left: _propTypes2.default.bool,
+    position: _propTypes2.default.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
     direction: _propTypes2.default.oneOf(['row', 'column']),
     size: _propTypes2.default.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: _propTypes2.default.oneOf(['', 'round', 'square']),
@@ -3923,10 +3895,7 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-    top: false,
-    right: false,
-    bottom: false,
-    left: false,
+    position: 'top-left',
     direction: 'column',
     size: '',
     shape: '',
