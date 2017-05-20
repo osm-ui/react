@@ -46,6 +46,13 @@ storiesOf('Button', module)
             <Button type="anchor" href="#" onClick={action('onClick anchor')}>Anchor button</Button>
         </DefaultTheme>
     ))
+    .addWithInfo('Shape', () => (
+        <DefaultTheme>
+            <Button shape="round" onClick={action('onClick round')}>Round (default)</Button>
+            {' '}
+            <Button shape="square" onClick={action('onClick square')}>Square</Button>
+        </DefaultTheme>
+    ))
     .addWithInfo('Sizes', () => (
         <DefaultTheme>
             <Button size="lg" onClick={action('onClick lg')}>Large button</Button>

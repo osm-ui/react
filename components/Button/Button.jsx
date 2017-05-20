@@ -49,19 +49,50 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     `);
 }, '');
 
+const shapesStyle = `
+    &.shape-round {
+        &.btn-xs {
+            height: 25px;
+            border-radius: 12.5px;
+            padding: 0 14px;
+        }
+
+        &.btn-sm {
+            height: 33px;
+            border-radius: 16.5px;
+            padding: 0 16px;
+        }
+
+        &.btn-md {
+            height: 42px;
+            border-radius: 21px;
+            padding: 0 20px;
+        }
+
+        &.btn-lg {
+            height: 49px;
+            border-radius: 24.5px;
+            padding: 0 24px;
+        }
+    }
+`;
+
 
 const StyledButton = styled.button`
     ${props => colorsStyle(props)}
+    ${shapesStyle}
 `;
 
 const StyledAnchor = styled.a`
-    ${colorsStyle}
+    ${props => colorsStyle(props)}
+    ${shapesStyle}
 `;
 
 
 const Button = ({
     type,
     context,
+    shape,
     size,
     block,
     active,
@@ -71,6 +102,7 @@ const Button = ({
 }) => {
     const classes = classnames(className, {
         btn: true,
+        [`shape-${shape}`]: true,
         [`btn-${context}`]: true,
         [`btn-${size}`]: true,
         'btn-block': block,
@@ -93,6 +125,10 @@ const Button = ({
 Button.propTypes = {
     type: PropTypes.string,
     context: PropTypes.oneOf(contexts),
+    shape: PropTypes.oneOf([
+        'square',
+        'round',
+    ]),
     size: PropTypes.oneOf([
         'lg',
         'md',
@@ -108,6 +144,7 @@ Button.propTypes = {
 Button.defaultProps = {
     type: 'button',
     context: 'default',
+    shape: 'round',
     size: 'md',
     block: false,
     active: false,
