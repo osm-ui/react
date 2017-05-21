@@ -55,6 +55,7 @@ export const config = {
         smFontSize: '0.9em',
         mdFontSize: '1.1em',
         lgFontSize: '1.3em',
+        fontWeight: 700,
         color: colors.anthracite1,
         backgroundColor: colors.white,
         borderColor: colors.lightGray4,

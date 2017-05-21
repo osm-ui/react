@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
 
     left: 0;
     right: 0;
+    font-weight: ${props => props.theme.titlebar.fontWeight};
     color: ${props => props.theme.titlebar.color};
     border-color: ${props => props.theme.titlebar.borderColor};
     border-style: ${props => props.theme.titlebar.borderStyle};
