@@ -82,6 +82,7 @@ storiesOf('Button', module)
         const block = boolean('Block');
         const active = boolean('Active');
         const disabled = boolean('Disabled');
+        const shape = select('Shape', ['round', 'square'], 'round');
         const size = select('Size', ['lg', 'md', 'sm', 'xs'], 'md');
         const context = select('Context', ['default', 'info', 'primary', 'success', 'warning', 'danger'], 'default');
         const type = select('Type', ['button', 'submit', 'reset', 'anchor'], 'button');
@@ -93,6 +94,7 @@ storiesOf('Button', module)
                     block={block}
                     active={active}
                     disabled={disabled}
+                    shape={shape}
                     size={size}
                     context={context}
                     type={type}
