@@ -46,29 +46,41 @@ const StyledButton = styled.button`
     &.xs {
         width: ${props => props.theme.toolbar.xsSize};
         height: ${props => props.theme.toolbar.xsSize};
-        font-size: 0.85em;
         line-height: 0.85em;
+
+        .fa {
+            font-size: 0.85em;
+        }
     }
 
     &.sm {
         width: ${props => props.theme.toolbar.smSize};
         height: ${props => props.theme.toolbar.smSize};
-        font-size: 1.08em;
-        line-height: 1.08em;
+        line-height: 1.04em;
+
+        .fa {
+            font-size: 1.04em;
+        }
     }
 
     &.md {
         width: ${props => props.theme.toolbar.mdSize};
         height: ${props => props.theme.toolbar.mdSize};
-        font-size: 1.29em;
-        line-height: 1.29em;
+        line-height: 1.2em;
+
+        .fa {
+            font-size: 1.2em;
+        }
     }
 
     &.lg {
         width: ${props => props.theme.toolbar.lgSize};
         height: ${props => props.theme.toolbar.lgSize};
-        font-size: 1.43em;
         line-height: 1.43em;
+
+        .fa {
+            font-size: 1.43em;
+        }
     }
 `;
 
