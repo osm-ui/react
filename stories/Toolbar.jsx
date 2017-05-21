@@ -178,6 +178,19 @@ storiesOf('Toolbar', module)
             </FakeApp>
         </DefaultTheme>
     ))
+    .addWithInfo('Inactive', () => (
+        <DefaultTheme>
+            <FakeApp style={fakeAppColumnStyle}>
+                <BlueTheme>
+                    <Toolbar opened>
+                        <Toolbar.Item inactive icon="bars" />
+                        <Toolbar.Item inactive icon="search" />
+                        <Toolbar.Item inactive icon="location-arrow" />
+                    </Toolbar>
+                </BlueTheme>
+            </FakeApp>
+        </DefaultTheme>
+    ))
     .addWithInfo('Loading', () => (
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
@@ -199,6 +212,7 @@ storiesOf('Toolbar', module)
                         <Toolbar.Group shape="square">
                             <Toolbar.Item icon="plus" />
                             <Toolbar.Item icon="minus" />
+                            <Toolbar.Item inactive>14</Toolbar.Item>
                         </Toolbar.Group>
                         <Toolbar.Group>
                             <Toolbar.Item icon="search" shape="square" />
@@ -233,6 +247,7 @@ storiesOf('Toolbar', module)
                             <Toolbar.Group>
                                 <Toolbar.Item icon="plus" />
                                 <Toolbar.Item icon="minus" />
+                                <Toolbar.Item inactive>14</Toolbar.Item>
                             </Toolbar.Group>
                             <Toolbar.Item icon="search" />
                             <Toolbar.Item icon="location-arrow" />
