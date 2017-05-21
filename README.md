@@ -3,7 +3,7 @@
 The OSM User Interface initiative aims to provide knowledge and tools in order to build awesome OSM tools.
 
 
-**This project is heavy development phase, don't use it in production until the first stable version.**
+**This project is heavy development phase, don't use it in production until the first 1.0.0 stable version.**
 
 
 # Getting started
