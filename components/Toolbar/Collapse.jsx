@@ -159,9 +159,9 @@ class ToolbarCollapse extends React.Component {
         }
 
         const elements = [
-            <ToolbarButton icon={icon} onClick={e => this._handleClick(e)} />,
+            <ToolbarButton key="button" icon={icon} onClick={e => this._handleClick(e)} />,
             (
-                <Collapse className={classes} {...rest}>
+                <Collapse key="collapse" className={classes} {...rest}>
                     {
                         React.Children.map(children,
                             child => React.cloneElement(child, childrenProps),

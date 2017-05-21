@@ -17,19 +17,19 @@ const StyledButton = styled.button`
     background: ${props => props.theme.toolbar.button.backgroundColor};
     padding: 0;
 
-    &:hover {
+    &.btn:hover {
         color: ${props => props.theme.toolbar.button.color};
         background-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
         border-color: ${props => props.theme.toolbar.button.hoverBorderColor};
     }
 
-    &:focus {
+    &.btn:focus {
         color: ${props => props.theme.toolbar.button.color};
         background-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
         border-color: ${props => props.theme.toolbar.button.focusBorderColor};
     }
 
-    &:active, .active {
+    &.btn:active, &.btn.active {
         color: ${props => props.theme.toolbar.button.color};
         background-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
         border-color: ${props => props.theme.toolbar.button.activeBorderColor};
