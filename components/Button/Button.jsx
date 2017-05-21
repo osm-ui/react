@@ -54,25 +54,25 @@ const shapesStyle = `
         &.btn-xs {
             height: 25px;
             border-radius: 12.5px;
-            padding: 0 14px;
+            padding: 1px 14px;
         }
 
         &.btn-sm {
             height: 33px;
             border-radius: 16.5px;
-            padding: 0 16px;
+            padding: 5px 16px;
         }
 
         &.btn-md {
             height: 42px;
             border-radius: 21px;
-            padding: 0 20px;
+            padding: 6px 20px;
         }
 
         &.btn-lg {
             height: 49px;
             border-radius: 24.5px;
-            padding: 0 24px;
+            padding: 10px 24px;
         }
     }
 `;
