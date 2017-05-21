@@ -233,7 +233,6 @@ storiesOf('Toolbar', module)
                             <Toolbar.Group>
                                 <Toolbar.Button icon="plus" />
                                 <Toolbar.Button icon="minus" />
-                                <Toolbar.Button>14</Toolbar.Button>
                             </Toolbar.Group>
                             <Toolbar.Button icon="search" />
                             <Toolbar.Button icon="location-arrow" />
