@@ -1,9 +1,9 @@
 import Toolbar from './Toolbar';
-import ToolbarButton from './Button';
+import ToolbarItem from './Item';
 import ToolbarGroup from './Group';
 import ToolbarCollapse from './Collapse';
 
-Toolbar.Button = ToolbarButton;
+Toolbar.Item = ToolbarItem;
 Toolbar.Group = ToolbarGroup;
 Toolbar.Collapse = ToolbarCollapse;
 

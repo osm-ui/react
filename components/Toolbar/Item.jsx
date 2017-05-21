@@ -85,7 +85,7 @@ const StyledButton = styled.button`
 `;
 
 
-const ToolbarButton = ({
+const ToolbarItem = ({
     // title,
     icon,
     size,
@@ -142,7 +142,7 @@ const ToolbarButton = ({
 };
 
 
-ToolbarButton.propTypes = {
+ToolbarItem.propTypes = {
     // title: PropTypes.string,
     icon: PropTypes.string,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
@@ -153,7 +153,7 @@ ToolbarButton.propTypes = {
     children: PropTypes.node,
 };
 
-ToolbarButton.defaultProps = {
+ToolbarItem.defaultProps = {
     // title: '',
     icon: '',
     size: 'md',
@@ -164,6 +164,6 @@ ToolbarButton.defaultProps = {
     children: '',
 };
 
-ToolbarButton.displayName = 'Toolbar.Button';
+ToolbarItem.displayName = 'Toolbar.Item';
 
-export default ToolbarButton;
+export default ToolbarItem;

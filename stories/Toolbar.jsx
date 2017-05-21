@@ -46,9 +46,9 @@ storiesOf('Toolbar', module)
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
                 <Toolbar opened>
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
             </FakeApp>
         </DefaultTheme>
@@ -57,24 +57,24 @@ storiesOf('Toolbar', module)
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
                 <Toolbar opened position="top-left">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="top-right">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="bottom-right">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="bottom-left">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
             </FakeApp>
         </DefaultTheme>
@@ -83,24 +83,24 @@ storiesOf('Toolbar', module)
         <DefaultTheme>
             <FakeApp style={fakeAppRowStyle}>
                 <Toolbar opened position="top-left" direction="row">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="top-right" direction="row">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="bottom-right" direction="row">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
                 <Toolbar opened position="bottom-left" direction="row">
-                    <Toolbar.Button icon="bars" />
-                    <Toolbar.Button icon="search" />
-                    <Toolbar.Button icon="location-arrow" />
+                    <Toolbar.Item icon="bars" />
+                    <Toolbar.Item icon="search" />
+                    <Toolbar.Item icon="location-arrow" />
                 </Toolbar>
             </FakeApp>
         </DefaultTheme>
@@ -110,30 +110,30 @@ storiesOf('Toolbar', module)
             <FakeApp style={fakeAppColumnStyle}>
                 <BlueTheme>
                     <Toolbar opened position="top-left">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
                 <GreenTheme>
                     <Toolbar opened position="top-right">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </GreenTheme>
                 <RoseTheme>
                     <Toolbar opened position="bottom-right">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </RoseTheme>
                 <OrangeTheme>
                     <Toolbar opened position="bottom-left">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </OrangeTheme>
             </FakeApp>
@@ -144,16 +144,16 @@ storiesOf('Toolbar', module)
             <FakeApp style={fakeAppColumnStyle}>
                 <BlueTheme>
                     <Toolbar opened shape="square">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
                 <OrangeTheme>
                     <Toolbar opened position="bottom-left">
-                        <Toolbar.Button icon="bars" shape="round" />
-                        <Toolbar.Button icon="search" shape="square" />
-                        <Toolbar.Button icon="location-arrow" shape="round" />
+                        <Toolbar.Item icon="bars" shape="round" />
+                        <Toolbar.Item icon="search" shape="square" />
+                        <Toolbar.Item icon="location-arrow" shape="round" />
                     </Toolbar>
                 </OrangeTheme>
             </FakeApp>
@@ -164,15 +164,15 @@ storiesOf('Toolbar', module)
             <FakeApp style={fakeAppColumnStyle}>
                 <BlueTheme>
                     <Toolbar opened size="lg">
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                     <Toolbar opened position="bottom-left">
-                        <Toolbar.Button icon="bars" size="lg" />
-                        <Toolbar.Button icon="bars" size="md" />
-                        <Toolbar.Button icon="bars" size="sm" />
-                        <Toolbar.Button icon="bars" size="xs" />
+                        <Toolbar.Item icon="bars" size="lg" />
+                        <Toolbar.Item icon="bars" size="md" />
+                        <Toolbar.Item icon="bars" size="sm" />
+                        <Toolbar.Item icon="bars" size="xs" />
                     </Toolbar>
                 </BlueTheme>
             </FakeApp>
@@ -183,9 +183,9 @@ storiesOf('Toolbar', module)
             <FakeApp style={fakeAppColumnStyle}>
                 <BlueTheme>
                     <Toolbar opened>
-                        <Toolbar.Button icon="bars" />
-                        <Toolbar.Button icon="search" loading />
-                        <Toolbar.Button icon="location-arrow" />
+                        <Toolbar.Item icon="bars" />
+                        <Toolbar.Item icon="search" loading />
+                        <Toolbar.Item icon="location-arrow" />
                     </Toolbar>
                 </BlueTheme>
             </FakeApp>
@@ -197,21 +197,21 @@ storiesOf('Toolbar', module)
                 <DefaultTheme>
                     <Toolbar opened>
                         <Toolbar.Group shape="square">
-                            <Toolbar.Button icon="plus" />
-                            <Toolbar.Button icon="minus" />
+                            <Toolbar.Item icon="plus" />
+                            <Toolbar.Item icon="minus" />
                         </Toolbar.Group>
                         <Toolbar.Group>
-                            <Toolbar.Button icon="search" shape="square" />
-                            <Toolbar.Button icon="location-arrow" />
+                            <Toolbar.Item icon="search" shape="square" />
+                            <Toolbar.Item icon="location-arrow" />
                         </Toolbar.Group>
                     </Toolbar>
                 </DefaultTheme>
                 <BlueTheme>
                     <Toolbar opened position="top-right">
-                        <Toolbar.Button icon="bars" />
+                        <Toolbar.Item icon="bars" />
                         <Toolbar.Group>
-                            <Toolbar.Button icon="user" />
-                            <Toolbar.Button icon="share-alt" />
+                            <Toolbar.Item icon="user" />
+                            <Toolbar.Item icon="share-alt" />
                         </Toolbar.Group>
                     </Toolbar>
                 </BlueTheme>
@@ -231,11 +231,11 @@ storiesOf('Toolbar', module)
                             onClose={action('onClose')}
                         >
                             <Toolbar.Group>
-                                <Toolbar.Button icon="plus" />
-                                <Toolbar.Button icon="minus" />
+                                <Toolbar.Item icon="plus" />
+                                <Toolbar.Item icon="minus" />
                             </Toolbar.Group>
-                            <Toolbar.Button icon="search" />
-                            <Toolbar.Button icon="location-arrow" />
+                            <Toolbar.Item icon="search" />
+                            <Toolbar.Item icon="location-arrow" />
                         </Toolbar.Collapse>
                     </Toolbar>
                 </BlueTheme>
@@ -247,10 +247,10 @@ storiesOf('Toolbar', module)
                             onOpen={action('onOpen')}
                             onClose={action('onClose')}
                         >
-                            <Toolbar.Button icon="user" />
-                            <Toolbar.Button icon="pencil" />
-                            <Toolbar.Button icon="share-alt" />
-                            <Toolbar.Button icon="sign-out" />
+                            <Toolbar.Item icon="user" />
+                            <Toolbar.Item icon="pencil" />
+                            <Toolbar.Item icon="share-alt" />
+                            <Toolbar.Item icon="sign-out" />
                         </Toolbar.Collapse>
                     </Toolbar>
                 </OrangeTheme>
@@ -319,12 +319,12 @@ storiesOf('Toolbar', module)
                                 onClose={action('onClose toolbar collapse')}
                             >
                                 <Toolbar.Group>
-                                    <Toolbar.Button
+                                    <Toolbar.Item
                                         icon="search"
                                         loading={loading}
                                         onClick={action('onClick search')}
                                     />
-                                    <Toolbar.Button
+                                    <Toolbar.Item
                                         icon="location-arrow"
                                         loading={loading}
                                         onClick={action('onClick location arrow')}

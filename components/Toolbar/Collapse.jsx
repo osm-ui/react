@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import ToolbarButton from './Button';
+import ToolbarItem from './Item';
 
 
 const Container = styled.div`
@@ -159,7 +159,7 @@ class ToolbarCollapse extends React.Component {
         }
 
         const elements = [
-            <ToolbarButton key="button" icon={icon} onClick={e => this._handleClick(e)} />,
+            <ToolbarItem key="button" icon={icon} onClick={e => this._handleClick(e)} />,
             (
                 <Collapse key="collapse" className={classes} {...rest}>
                     {
