@@ -6,8 +6,6 @@ import FontAwesome from 'react-fontawesome';
 import Loader from '../Loader';
 
 
-const buildShadow = props => props.shadow && `box-shadow: ${props.theme.toolbar.button.boxShadow};`;
-
 const StyledButton = styled.button`
     position: relative;
     transition: all 0.1s ease-out;
@@ -18,8 +16,6 @@ const StyledButton = styled.button`
     border-width: ${props => props.theme.toolbar.button.borderWidth};
     background: ${props => props.theme.toolbar.button.backgroundColor};
     padding: 0;
-
-    ${props => buildShadow(props)}
 
     &:hover {
         color: ${props => props.theme.toolbar.button.color};
@@ -82,14 +78,12 @@ const ToolbarButton = ({
     icon,
     size,
     shape,
-    inGroup,
     loading,
     // loaderTitle,
     className,
     children,
     ...rest
 }) => {
-    const shadow = !inGroup;
     const classes = classnames(className, {
         loading,
         [size]: size,
@@ -113,7 +107,6 @@ const ToolbarButton = ({
         return (
             <StyledButton
                 className={classes}
-                shadow={shadow}
                 {...rest}
             >
                 <Loader
@@ -128,7 +121,6 @@ const ToolbarButton = ({
     return (
         <StyledButton
             className={classes}
-            shadow={shadow}
             {...rest}
         >
             {children && children}
@@ -143,7 +135,6 @@ ToolbarButton.propTypes = {
     icon: PropTypes.string,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['round', 'square']),
-    inGroup: PropTypes.bool,
     loading: PropTypes.bool,
     // loaderTitle: PropTypes.node,
     className: PropTypes.string,
@@ -155,7 +146,6 @@ ToolbarButton.defaultProps = {
     icon: '',
     size: 'md',
     shape: 'round',
-    inGroup: false,
     loading: false,
     // loaderTitle: '',
     className: '',

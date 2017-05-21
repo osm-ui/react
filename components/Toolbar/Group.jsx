@@ -7,7 +7,6 @@ import classnames from 'classnames';
 const Group = styled.div`
     display: flex;
     background: ${props => props.theme.toolbar.button.backgroundColor};
-    box-shadow: ${props => props.theme.toolbar.button.boxShadow};
 
     &.direction-row { flex-direction: row; }
     &.direction-column { flex-direction: column; }
@@ -102,9 +101,7 @@ const ToolbarGroup = ({
         [`last-size-${lastSize}`]: true,
     });
 
-    const childrenProps = {
-        inGroup: true,
-    };
+    const childrenProps = {};
 
     if (size) {
         childrenProps.size = size;
