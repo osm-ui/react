@@ -87,7 +87,7 @@ storiesOf('Form', module)
         return (
             <DefaultTheme>
                 <Alert context="info">
-                    This component is based on the <a href="https://github.com/bvaughn/react-virtualized-select">react-virtualized-select</a> so you use all its props.
+                    This component is based on the great <a href="https://github.com/bvaughn/react-virtualized-select">react-virtualized-select</a> module so you can use all its props.
                 </Alert>
                 <KnobsAlert />
                 <Form>
