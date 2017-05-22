@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { host } from 'storybook-host';
 import { withKnobs, number, boolean } from '@kadira/storybook-addon-knobs';
-import { TileLayer } from 'react-leaflet';
 
 import defaultHostOptions from '../.storybook/defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
+import ReactLeafletAlert from './components/ReactLeafletAlert';
 
 import {
     DefaultTheme,
@@ -25,8 +25,9 @@ storiesOf('Map', module)
 
         return (
             <DefaultTheme>
+                <ReactLeafletAlert />
                 <Map center={position} zoom={13} style={{ height: 450 }}>
-                    <TileLayer
+                    <Map.TileLayer
                         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
@@ -40,8 +41,9 @@ storiesOf('Map', module)
 
         return (
             <DefaultTheme>
+                <ReactLeafletAlert />
                 <Map center={position} zoom={13} style={style} locate>
-                    <TileLayer
+                    <Map.TileLayer
                         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />
@@ -61,6 +63,7 @@ storiesOf('Map', module)
 
         return (
             <DefaultTheme>
+                <ReactLeafletAlert />
                 <KnobsAlert />
                 <Map
                     center={position}
@@ -68,7 +71,7 @@ storiesOf('Map', module)
                     locate={locate}
                     style={{ height: 450 }}
                 >
-                    <TileLayer
+                    <Map.TileLayer
                         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     />

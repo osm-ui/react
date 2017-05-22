@@ -111,7 +111,7 @@ const StyledDiv = styled.div`
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 
