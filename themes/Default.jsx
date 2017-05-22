@@ -55,7 +55,7 @@ export const config = {
         smFontSize: '0.9em',
         mdFontSize: '1.1em',
         lgFontSize: '1.3em',
-        fontWeight: 700,
+        fontWeight: 500,
         color: colors.anthracite1,
         backgroundColor: colors.white,
         borderColor: colors.lightGray4,
@@ -82,7 +82,7 @@ export const config = {
             optionBackgroundColor: colors.blue2,
         },
         button: {
-            fontWeight: 700,
+            fontWeight: 500,
             color: colors.anthracite2,
             backgroundColor: colors.white,
             borderColor: colors.lightGray3,
@@ -94,7 +94,7 @@ export const config = {
             activeBorderColor: colors.lightGray3,
 
             primary: {
-                fontWeight: 700,
+                fontWeight: 500,
                 color: colors.white,
                 backgroundColor: colors.blue2,
                 borderColor: colors.blue2,
@@ -107,7 +107,7 @@ export const config = {
             },
 
             info: {
-                fontWeight: 700,
+                fontWeight: 500,
                 color: colors.white,
                 backgroundColor: colors.turquoise2,
                 borderColor: colors.turquoise2,
@@ -120,7 +120,7 @@ export const config = {
             },
 
             success: {
-                fontWeight: 700,
+                fontWeight: 500,
                 color: colors.white,
                 backgroundColor: colors.green2,
                 borderColor: colors.green2,
@@ -133,7 +133,7 @@ export const config = {
             },
 
             warning: {
-                fontWeight: 700,
+                fontWeight: 500,
                 color: colors.white,
                 backgroundColor: colors.orange2,
                 borderColor: colors.orange2,
@@ -146,7 +146,7 @@ export const config = {
             },
 
             danger: {
-                fontWeight: 700,
+                fontWeight: 500,
                 color: colors.white,
                 backgroundColor: colors.red2,
                 borderColor: colors.red2,
