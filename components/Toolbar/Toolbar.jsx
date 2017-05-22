@@ -5,6 +5,7 @@ import classnames from 'classnames';
 
 
 const StyledAside = styled.aside`
+    z-index: 1000;
     transition: all 0.1s ease-out;
 
     display: flex;

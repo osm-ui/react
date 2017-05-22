@@ -5,6 +5,7 @@ import classnames from 'classnames';
 
 
 const StyledHeader = styled.header`
+    z-index: 1000;
     transition: all 0.1s ease-out;
 
     left: 0;
