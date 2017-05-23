@@ -872,8 +872,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n'], ['\n    ', '\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    ', '\n\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    pointer-events: none;\n    font-weight: 500;\n'], ['\n    ', '\n\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    pointer-events: none;\n    font-weight: 500;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    ', '\n'], ['\n    ', '\n    ', '\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    ', '\n    ', '\n    pointer-events: none;\n'], ['\n    ', '\n    ', '\n    pointer-events: none;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    ', '\n    ', '\n    ', '\n'], ['\n    ', '\n    ', '\n    ', '\n']);
 
 var _react = __webpack_require__(0);
 
@@ -907,46 +908,49 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+var buildInGroupSize = function buildInGroupSize(props) {
+    var size = props.theme.toolbar[props.size + 'Size'];
+    var borderWidth = props.theme.toolbar.button.borderWidth;
+    return 'calc(' + size + ' - (' + borderWidth + ' * 2))';
+};
+
 var buildCommonStyles = function buildCommonStyles(props) {
-    return '\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ' + props.theme.toolbar.button.color + ';\n    border-color: ' + props.theme.toolbar.button.borderColor + ';\n    border-style: ' + props.theme.toolbar.button.borderStyle + ';\n    border-width: ' + props.theme.toolbar.button.borderWidth + ';\n    background: ' + props.theme.toolbar.button.backgroundColor + ';\n    padding: 0;\n\n    &.in-group {\n        border-color: ' + props.theme.toolbar.button.backgroundColor + ';\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ' + props.theme.toolbar.xsSize + ';\n        height: ' + props.theme.toolbar.xsSize + ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ' + props.theme.toolbar.smSize + ';\n        height: ' + props.theme.toolbar.smSize + ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ' + props.theme.toolbar.mdSize + ';\n        height: ' + props.theme.toolbar.mdSize + ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ' + props.theme.toolbar.lgSize + ';\n        height: ' + props.theme.toolbar.lgSize + ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n';
+    return '\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ' + props.theme.toolbar.button.color + ';\n    border-color: ' + props.theme.toolbar.button.borderColor + ';\n    border-style: ' + props.theme.toolbar.button.borderStyle + ';\n    border-width: ' + props.theme.toolbar.button.borderWidth + ';\n    background: ' + props.theme.toolbar.button.backgroundColor + ';\n    padding: 0;\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ' + props.theme.toolbar.xsSize + ';\n        height: ' + props.theme.toolbar.xsSize + ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ' + props.theme.toolbar.smSize + ';\n        height: ' + props.theme.toolbar.smSize + ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ' + props.theme.toolbar.mdSize + ';\n        height: ' + props.theme.toolbar.mdSize + ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ' + props.theme.toolbar.lgSize + ';\n        height: ' + props.theme.toolbar.lgSize + ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ' + buildInGroupSize(props) + ';\n        height: ' + buildInGroupSize(props) + ';\n        border-width: 0;\n    }\n';
+};
+
+var buildActiveStyles = function buildActiveStyles(props) {
+    return '\n    &.btn:hover {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.hoverBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.hoverBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.hoverBackgroundColor + ';\n        }\n    }\n\n    &.btn:focus {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.focusBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.focusBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.focusBackgroundColor + ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.activeBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.activeBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.activeBackgroundColor + ';\n        }\n    }\n';
+};
+
+var buildNonButtonStyles = function buildNonButtonStyles() {
+    return '\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n';
 };
 
 var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
     return buildCommonStyles(props);
 }, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.hoverBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.hoverBorderColor;
-}, function (props) {
-    return props.theme.toolbar.button.hoverBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.focusBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.focusBorderColor;
-}, function (props) {
-    return props.theme.toolbar.button.focusBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.color;
-}, function (props) {
-    return props.theme.toolbar.button.activeBackgroundColor;
-}, function (props) {
-    return props.theme.toolbar.button.activeBorderColor;
-}, function (props) {
-    return props.theme.toolbar.button.activeBackgroundColor;
+    return buildActiveStyles(props);
 });
 
 var StyledDiv = _styledComponents2.default.div(_templateObject2, function (props) {
     return buildCommonStyles(props);
+}, function (props) {
+    return buildNonButtonStyles(props);
+});
+
+var StyledAnchor = _styledComponents2.default.a(_templateObject3, function (props) {
+    return buildCommonStyles(props);
+}, function (props) {
+    return buildActiveStyles(props);
+}, function (props) {
+    return buildNonButtonStyles(props);
 });
 
 var ToolbarItem = function ToolbarItem(_ref) {
     var _classnames;
 
-    var icon = _ref.icon,
+    var type = _ref.type,
+        icon = _ref.icon,
         size = _ref.size,
         shape = _ref.shape,
         inactive = _ref.inactive,
@@ -954,13 +958,23 @@ var ToolbarItem = function ToolbarItem(_ref) {
         inGroup = _ref.inGroup,
         className = _ref.className,
         children = _ref.children,
-        rest = _objectWithoutProperties(_ref, ['icon', 'size', 'shape', 'inactive', 'loading', 'inGroup', 'className', 'children']);
+        rest = _objectWithoutProperties(_ref, ['type', 'icon', 'size', 'shape', 'inactive', 'loading', 'inGroup', 'className', 'children']);
 
     var classes = (0, _classnames3.default)(className, (_classnames = {
         loading: loading
     }, _defineProperty(_classnames, size, size), _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn', !inactive), _defineProperty(_classnames, 'in-group', inGroup), _classnames));
 
-    var Element = inactive === true ? StyledDiv : StyledButton;
+    var Element = StyledDiv;
+
+    if (inactive === false) {
+        switch (type) {
+            case 'anchor':
+                Element = StyledAnchor;
+                break;
+            default:
+                Element = StyledButton;
+        }
+    }
 
     if (loading) {
         var spinnerSizes = {
@@ -978,6 +992,7 @@ var ToolbarItem = function ToolbarItem(_ref) {
         return _react2.default.createElement(
             Element,
             _extends({
+                size: size,
                 className: classes
             }, rest),
             _react2.default.createElement(_Loader2.default, {
@@ -991,6 +1006,7 @@ var ToolbarItem = function ToolbarItem(_ref) {
     return _react2.default.createElement(
         Element,
         _extends({
+            size: size,
             className: classes
         }, rest),
         children && children,
@@ -1000,6 +1016,7 @@ var ToolbarItem = function ToolbarItem(_ref) {
 
 ToolbarItem.propTypes = {
     // title: PropTypes.string,
+    type: _propTypes2.default.oneOf(['button', 'anchor']),
     icon: _propTypes2.default.string,
     size: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: _propTypes2.default.oneOf(['round', 'square']),
@@ -1013,6 +1030,7 @@ ToolbarItem.propTypes = {
 
 ToolbarItem.defaultProps = {
     // title: '',
+    type: 'button',
     icon: '',
     size: 'md',
     shape: 'round',
@@ -2347,7 +2365,7 @@ var Button = function Button(_ref) {
 };
 
 Button.propTypes = {
-    type: _propTypes2.default.string,
+    type: _propTypes2.default.oneOf(['button', 'anchor']),
     context: _propTypes2.default.oneOf(contexts),
     shape: _propTypes2.default.oneOf(['square', 'round']),
     size: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs']),

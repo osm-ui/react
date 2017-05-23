@@ -6,6 +6,12 @@ import FontAwesome from 'react-fontawesome';
 import Loader from '../Loader';
 
 
+const buildInGroupSize = (props) => {
+    const size = props.theme.toolbar[`${props.size}Size`];
+    const borderWidth = props.theme.toolbar.button.borderWidth;
+    return `calc(${size} - (${borderWidth} * 2))`;
+};
+
 const buildCommonStyles = props => `
     position: relative;
     transition: all 0.1s ease-out;
@@ -16,10 +22,6 @@ const buildCommonStyles = props => `
     border-width: ${props.theme.toolbar.button.borderWidth};
     background: ${props.theme.toolbar.button.backgroundColor};
     padding: 0;
-
-    &.in-group {
-        border-color: ${props.theme.toolbar.button.backgroundColor};
-    }
 
     &.shape-square {
         border-radius: 0;
@@ -68,55 +70,74 @@ const buildCommonStyles = props => `
             font-size: 1.43em;
         }
     }
+
+    &.in-group {
+        width: ${buildInGroupSize(props)};
+        height: ${buildInGroupSize(props)};
+        border-width: 0;
+    }
 `;
 
-const StyledButton = styled.button`
-    ${props => buildCommonStyles(props)}
-
+const buildActiveStyles = props => `
     &.btn:hover {
-        color: ${props => props.theme.toolbar.button.color};
-        background-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
-        border-color: ${props => props.theme.toolbar.button.hoverBorderColor};
+        color: ${props.theme.toolbar.button.color};
+        background-color: ${props.theme.toolbar.button.hoverBackgroundColor};
+        border-color: ${props.theme.toolbar.button.hoverBorderColor};
 
         &.in-group {
-            border-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
+            border-color: ${props.theme.toolbar.button.hoverBackgroundColor};
         }
     }
 
     &.btn:focus {
-        color: ${props => props.theme.toolbar.button.color};
-        background-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
-        border-color: ${props => props.theme.toolbar.button.focusBorderColor};
+        color: ${props.theme.toolbar.button.color};
+        background-color: ${props.theme.toolbar.button.focusBackgroundColor};
+        border-color: ${props.theme.toolbar.button.focusBorderColor};
 
         &.in-group {
-            border-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
+            border-color: ${props.theme.toolbar.button.focusBackgroundColor};
         }
     }
 
     &.btn:active, &.btn.active {
-        color: ${props => props.theme.toolbar.button.color};
-        background-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
-        border-color: ${props => props.theme.toolbar.button.activeBorderColor};
+        color: ${props.theme.toolbar.button.color};
+        background-color: ${props.theme.toolbar.button.activeBackgroundColor};
+        border-color: ${props.theme.toolbar.button.activeBorderColor};
 
         &.in-group {
-            border-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
+            border-color: ${props.theme.toolbar.button.activeBackgroundColor};
         }
     }
 `;
 
-const StyledDiv = styled.div`
-    ${props => buildCommonStyles(props)}
-
+const buildNonButtonStyles = () => `
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
     font-weight: 500;
+`;
+
+const StyledButton = styled.button`
+    ${props => buildCommonStyles(props)}
+    ${props => buildActiveStyles(props)}
+`;
+
+const StyledDiv = styled.div`
+    ${props => buildCommonStyles(props)}
+    ${props => buildNonButtonStyles(props)}
+    pointer-events: none;
+`;
+
+const StyledAnchor = styled.a`
+    ${props => buildCommonStyles(props)}
+    ${props => buildActiveStyles(props)}
+    ${props => buildNonButtonStyles(props)}
 `;
 
 
 const ToolbarItem = ({
     // title,
+    type,
     icon,
     size,
     shape,
@@ -136,7 +157,17 @@ const ToolbarItem = ({
         'in-group': inGroup,
     });
 
-    const Element = inactive === true ? StyledDiv : StyledButton;
+    let Element = StyledDiv;
+
+    if (inactive === false) {
+        switch (type) {
+            case 'anchor':
+                Element = StyledAnchor;
+                break;
+            default:
+                Element = StyledButton;
+        }
+    }
 
     if (loading) {
         const spinnerSizes = {
@@ -153,6 +184,7 @@ const ToolbarItem = ({
         };
         return (
             <Element
+                size={size}
                 className={classes}
                 {...rest}
             >
@@ -167,6 +199,7 @@ const ToolbarItem = ({
 
     return (
         <Element
+            size={size}
             className={classes}
             {...rest}
         >
@@ -179,6 +212,7 @@ const ToolbarItem = ({
 
 ToolbarItem.propTypes = {
     // title: PropTypes.string,
+    type: PropTypes.oneOf(['button', 'anchor']),
     icon: PropTypes.string,
     size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['round', 'square']),
@@ -192,6 +226,7 @@ ToolbarItem.propTypes = {
 
 ToolbarItem.defaultProps = {
     // title: '',
+    type: 'button',
     icon: '',
     size: 'md',
     shape: 'round',

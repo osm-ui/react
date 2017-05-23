@@ -279,6 +279,7 @@ storiesOf('Toolbar', module)
         const container = select('Container', ['parent', 'root'], 'parent');
         const opened = boolean('Opened', true);
         const loading = boolean('Loading');
+        const type = select('Item type', ['button', 'anchor'], 'button');
         const theme = select('Theme', [
             'Default',
             'White',
@@ -337,11 +338,13 @@ storiesOf('Toolbar', module)
                                     <Toolbar.Item
                                         icon="search"
                                         loading={loading}
+                                        type={type}
                                         onClick={action('onClick search')}
                                     />
                                     <Toolbar.Item
                                         icon="location-arrow"
                                         loading={loading}
+                                        type={type}
                                         onClick={action('onClick location arrow')}
                                     />
                                 </Toolbar.Group>
