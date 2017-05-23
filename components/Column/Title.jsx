@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 
 const StyledH2 = styled.h2`
-    margin: 0 0 30px;
+    margin: -30px 0 50px;
 
     &.in-header {
         overflow: hidden;
