@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
@@ -42,24 +43,32 @@ const StyledAside = styled.aside`
 
     &.direction-column {
         &.position-top-left,
-        &.position-bottom-left {
+        &.position-top-left.transition-appear,
+        &.position-bottom-left,
+        &.position-bottom-left.transition-appear {
             transform: translate(-150%, 0);
         }
 
         &.position-top-right,
-        &.position-bottom-right {
+        &.position-top-right.transition-appear,
+        &.position-bottom-right,
+        &.position-bottom-right.transition-appear {
             transform: translate(150%, 0);
         }
     }
 
     &.direction-row {
         &.position-top-left,
-        &.position-top-right {
+        &.position-top-left.transition-appear,
+        &.position-top-right,
+        &.position-top-right.transition-appear {
             transform: translate(0, -150%);
         }
 
         &.position-bottom-left,
-        &.position-bottom-right {
+        &.position-bottom-left.transition-appear,
+        &.position-bottom-right,
+        &.position-bottom-right.transition-appear {
             transform: translate(0, 150%);
         }
     }
@@ -69,7 +78,8 @@ const StyledAside = styled.aside`
         &.position-top-right,
         &.position-bottom-right,
         &.position-bottom-left {
-            &.opened {
+            &.opened,
+            &.opened.transition-appear.transition-appear-active {
                 transform: translate(0, 0);
             }
         }
@@ -159,13 +169,21 @@ class Toolbar extends React.Component {
         }
 
         return (
-            <StyledAside className={asideClasses} {...rest}>
-                {
-                    React.Children.map(children,
-                        child => React.cloneElement(child, childrenProps),
-                    )
-                }
-            </StyledAside>
+            <CSSTransitionGroup
+                transitionName="transition"
+                transitionAppear
+                transitionAppearTimeout={100}
+                transitionEnter={false}
+                transitionLeave={false}
+            >
+                <StyledAside className={asideClasses} {...rest}>
+                    {
+                        React.Children.map(children,
+                            child => React.cloneElement(child, childrenProps),
+                        )
+                    }
+                </StyledAside>
+            </CSSTransitionGroup>
         );
     }
 }

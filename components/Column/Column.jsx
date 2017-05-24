@@ -212,7 +212,7 @@ class Column extends React.Component {
             <CSSTransitionGroup
                 transitionName="transition"
                 transitionAppear
-                transitionAppearTimeout={2500}
+                transitionAppearTimeout={250}
                 transitionEnter={false}
                 transitionLeave={false}
             >
