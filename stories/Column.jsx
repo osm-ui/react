@@ -141,6 +141,10 @@ storiesOf('Column', module)
                                 <li><a href="">One more here</a></li>
                                 <li><a href="">With a very very very very very very long title</a></li>
                             </ul>
+                            <ul>
+                                <li><a href="">Another list of items</a></li>
+                                <li><a href="">With other links</a></li>
+                            </ul>
                         </Column.Nav>
                     </Column>
                 </RedTheme>

@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 
 const StyledNav = styled.nav`
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin: 20px 0;
 
     ul {
         text-align: center;
         list-style: none;
-        margin: 0;
+        margin: 0 0 40px;
         padding: 0;
     }
 
