@@ -87,11 +87,13 @@ const StyledAside = styled.aside`
     }
 
     .content {
+        margin-top: 30px;
         padding: 20px;
     }
 
     &.scroll-content .content {
         overflow-y: auto;
+        margin: 0;
         border-color: ${props => props.theme.borderColor};
         border-style: ${props => props.theme.borderStyle};
         border-width: 1px 0 1px 0;

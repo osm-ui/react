@@ -24,6 +24,18 @@ export const config = {
         hoverControlColor: colors.white,
         hoverControlBackgroundColor: colors.blue2,
     },
+    column: {
+        nav: {
+            fontSize: '1.1em',
+            lineHeight: '1.2em',
+            fontWeight: 500,
+            borderRadius: '4px',
+            color: colors.anthracite1,
+            backgroundColor: colors.lightGray5,
+            hoverColor: colors.anthracite1,
+            hoverBackgroundColor: colors.lightGray4,
+        },
+    },
     toolbar: {
         margin: '10px',
         childrenMargin: '8px',

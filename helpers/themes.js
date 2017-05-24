@@ -1,11 +1,12 @@
 import _ from 'lodash';
+import { lighten } from 'polished';
 
 
 export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     const color1 = colors[`${colorVariant}1`];
     const color2 = colors[`${colorVariant}2`];
     const color3 = colors[`${colorVariant}3`];
-    // const color4 = colors[`${colorVariant}4`];
+    const color4 = colors[`${colorVariant}4`];
     const color5 = colors[`${colorVariant}5`];
 
     return _.merge({}, baseConfig, {
@@ -16,6 +17,14 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         controlColor: color1,
         hoverControlColor: colors.white,
 
+        column: {
+            nav: {
+                color: colors.white,
+                backgroundColor: lighten(0.1, color2),
+                hoverColor: colors.white,
+                hoverBackgroundColor: color4,
+            },
+        },
         toolbar: {
             button: {
                 color: colors.white,
@@ -90,6 +99,14 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         controlColor: color4,
         hoverControlColor: colors.anthracite1,
 
+        column: {
+            nav: {
+                color: colors.anthracite1,
+                backgroundColor: lighten(0.2, color2),
+                hoverColor: colors.anthracite1,
+                hoverBackgroundColor: color4,
+            },
+        },
         toolbar: {
             button: {
                 color: colors.anthracite1,

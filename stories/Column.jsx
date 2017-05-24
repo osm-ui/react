@@ -126,6 +126,27 @@ storiesOf('Column', module)
             </FakeApp>
         </DefaultTheme>
     ))
+    .addWithInfo('Nav', () => (
+        <DefaultTheme>
+            <FakeApp>
+                <RedTheme>
+                    <Column
+                        opened
+                        title="A column title"
+                    >
+                        <Column.Nav>
+                            <ul>
+                                <li><a href="">A nav item</a></li>
+                                <li><a href="">Another one</a></li>
+                                <li><a href="">One more here</a></li>
+                                <li><a href="">With a very very very very very very long title</a></li>
+                            </ul>
+                        </Column.Nav>
+                    </Column>
+                </RedTheme>
+            </FakeApp>
+        </DefaultTheme>
+    ))
     .addWithInfo('On the right', () => (
         <DefaultTheme>
             <FakeApp>

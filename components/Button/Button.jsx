@@ -123,7 +123,7 @@ const Button = ({
 
 
 Button.propTypes = {
-    type: PropTypes.string,
+    type: PropTypes.oneOf(['button', 'anchor']),
     context: PropTypes.oneOf(contexts),
     shape: PropTypes.oneOf([
         'square',
