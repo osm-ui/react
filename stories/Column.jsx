@@ -141,6 +141,10 @@ storiesOf('Column', module)
                                 <li><a href="">One more here</a></li>
                                 <li><a href="">With a very very very very very very long title</a></li>
                             </ul>
+                            <ul>
+                                <li><a href="">Another list of items</a></li>
+                                <li><a href="">With other links</a></li>
+                            </ul>
                         </Column.Nav>
                     </Column>
                 </RedTheme>
@@ -240,7 +244,8 @@ storiesOf('Column', module)
                             container={container}
                             onOpen={action('onOpen')}
                             onClose={action('onClose')}
-                            onBack={action('onBack')}
+                            onClickClose={action('onClickClose')}
+                            onClickBack={action('onClickBack')}
                             onMaximize={action('onMaximize')}
                             onUnmaximize={action('onUnmaximize')}
                         >

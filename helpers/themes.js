@@ -1,12 +1,12 @@
 import _ from 'lodash';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 
 export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     const color1 = colors[`${colorVariant}1`];
     const color2 = colors[`${colorVariant}2`];
     const color3 = colors[`${colorVariant}3`];
-    const color4 = colors[`${colorVariant}4`];
+    // const color4 = colors[`${colorVariant}4`];
     const color5 = colors[`${colorVariant}5`];
 
     return _.merge({}, baseConfig, {
@@ -22,7 +22,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
                 color: colors.white,
                 backgroundColor: lighten(0.1, color2),
                 hoverColor: colors.white,
-                hoverBackgroundColor: color4,
+                hoverBackgroundColor: color3,
             },
         },
         toolbar: {
@@ -92,24 +92,24 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     const color5 = colors[`${colorVariant}5`];
 
     return _.merge({}, baseConfig, {
-        color: colors.anthracite1,
+        color: darken(0.27, color1),
         backgroundColor: color2,
         borderColor: color1,
-        loaderColor: colors.anthracite1,
+        loaderColor: darken(0.27, color1),
         controlColor: color4,
-        hoverControlColor: colors.anthracite1,
+        hoverControlColor: darken(0.27, color1),
 
         column: {
             nav: {
-                color: colors.anthracite1,
+                color: darken(0.27, color1),
                 backgroundColor: lighten(0.2, color2),
-                hoverColor: colors.anthracite1,
-                hoverBackgroundColor: color4,
+                hoverColor: darken(0.27, color1),
+                hoverBackgroundColor: color3,
             },
         },
         toolbar: {
             button: {
-                color: colors.anthracite1,
+                color: darken(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -121,12 +121,12 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
             },
         },
         titlebar: {
-            color: colors.anthracite1,
+            color: darken(0.27, color1),
             backgroundColor: color2,
             borderColor: color2,
 
             button: {
-                color: colors.anthracite1,
+                color: darken(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -139,7 +139,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         },
         form: {
             button: {
-                color: colors.anthracite1,
+                color: darken(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color5,
                 hoverBackgroundColor: color3,
@@ -151,8 +151,8 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
 
                 primary: {
                     color: color2,
-                    backgroundColor: colors.anthracite1,
-                    borderColor: colors.anthracite1,
+                    backgroundColor: darken(0.27, color1),
+                    borderColor: darken(0.27, color1),
                     hoverBackgroundColor: colors.lightGray5,
                     hoverBorderColor: colors.lightGray5,
                     focusBackgroundColor: colors.lightGray5,

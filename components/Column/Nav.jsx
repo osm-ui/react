@@ -3,13 +3,12 @@ import styled from 'styled-components';
 
 
 const StyledNav = styled.nav`
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin: 20px 0;
 
     ul {
         text-align: center;
         list-style: none;
-        margin: 0;
+        margin: 0 0 40px;
         padding: 0;
     }
 
@@ -29,7 +28,9 @@ const StyledNav = styled.nav`
         font-weight: ${props => props.theme.column.nav.fontWeight};
     }
 
-    a:hover {
+    a:hover,
+    a:active,
+    a:focus {
         text-decoration: none;
         color: ${props => props.theme.column.nav.hoverColor}
         background-color: ${props => props.theme.column.nav.hoverBackgroundColor}

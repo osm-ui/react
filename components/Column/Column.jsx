@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
@@ -37,13 +38,15 @@ const StyledAside = styled.aside`
     &.lg { width: 600px; }
     &.maximized { width: 100%; }
 
-    &.left {
+    &.left,
+    &.left.transition-appear {
         left: 0;
         transform: translate(-150%, 0);
         border-right-width: ${props => props.theme.borderWidth};
     }
 
-    &.right {
+    &.right,
+    &.right.transition-appear {
         right: 0;
         transform: translate(150%, 0);
         border-left-width: ${props => props.theme.borderWidth};
@@ -54,7 +57,8 @@ const StyledAside = styled.aside`
         border-width: 0;
     }
 
-    &.opened {
+    &.opened,
+    &.opened.transition-appear.transition-appear-active {
         transform: translate(0, 0);
     }
 
@@ -165,11 +169,12 @@ class Column extends React.Component {
     }
 
     _handleBackClick() {
-        this._triggerCallback('onBack');
+        this._triggerCallback('onClickBack');
     }
 
     _handleCloseClick() {
         this.setState({ opened: false });
+        this._triggerCallback('onClickClose');
         this._triggerCallback('onClose');
     }
 
@@ -205,29 +210,37 @@ class Column extends React.Component {
         });
 
         return (
-            <StyledAside className={asideClasses} {...rest}>
-                <header className="header">
-                    {this.props.onBack && (
-                        <button className="back-btn" onClick={() => this._handleBackClick()}>
-                            <FontAwesome name="chevron-left" size="lg" />
+            <CSSTransitionGroup
+                transitionName="transition"
+                transitionAppear
+                transitionAppearTimeout={250}
+                transitionEnter={false}
+                transitionLeave={false}
+            >
+                <StyledAside key="column" className={asideClasses} {...rest}>
+                    <header className="header">
+                        {this.props.onClickBack && (
+                            <button className="back-btn" onClick={() => this._handleBackClick()}>
+                                <FontAwesome name="chevron-left" size="lg" />
+                            </button>
+                        )}
+                        <button className="close-btn" onClick={() => this._handleCloseClick()}>
+                            <FontAwesome name="close" size="lg" />
                         </button>
-                    )}
-                    <button className="close-btn" onClick={() => this._handleCloseClick()}>
-                        <FontAwesome name="close" size="lg" />
-                    </button>
-                    {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
-                    <div className="clearfix" />
-                    {!loading && header && header}
-                </header>
+                        {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
+                        <div className="clearfix" />
+                        {!loading && header && header}
+                    </header>
 
-                <div className={contentClasses}>
-                    {children}
-                </div>
+                    <div className={contentClasses}>
+                        {children}
+                    </div>
 
-                {!loading && footer && footer}
+                    {!loading && footer && footer}
 
-                {loading && <Loader centered label={loaderLabel} />}
-            </StyledAside>
+                    {loading && <Loader centered label={loaderLabel} />}
+                </StyledAside>
+            </CSSTransitionGroup>
         );
     }
 }
@@ -250,7 +263,8 @@ Column.propTypes = {
     scrollContent: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
-    onBack: PropTypes.func,
+    onClickClose: PropTypes.func,
+    onClickBack: PropTypes.func,
     onMaximize: PropTypes.func,
     onUnmaximize: PropTypes.func,
     className: PropTypes.string,
@@ -273,8 +287,9 @@ Column.defaultProps = {
     container: 'parent',
     scrollContent: false,
     onOpen: null,
+    onClickClose: null,
     onClose: null,
-    onBack: null,
+    onClickBack: null,
     onMaximize: null,
     onUnmaximize: null,
     className: '',
