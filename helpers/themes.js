@@ -6,7 +6,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     const color1 = colors[`${colorVariant}1`];
     const color2 = colors[`${colorVariant}2`];
     const color3 = colors[`${colorVariant}3`];
-    const color4 = colors[`${colorVariant}4`];
+    // const color4 = colors[`${colorVariant}4`];
     const color5 = colors[`${colorVariant}5`];
 
     return _.merge({}, baseConfig, {
@@ -22,7 +22,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
                 color: colors.white,
                 backgroundColor: lighten(0.1, color2),
                 hoverColor: colors.white,
-                hoverBackgroundColor: color4,
+                hoverBackgroundColor: color3,
             },
         },
         toolbar: {
@@ -104,7 +104,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
                 color: colors.anthracite1,
                 backgroundColor: lighten(0.2, color2),
                 hoverColor: colors.anthracite1,
-                hoverBackgroundColor: color4,
+                hoverBackgroundColor: color3,
             },
         },
         toolbar: {
