@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
@@ -37,13 +38,15 @@ const StyledAside = styled.aside`
     &.lg { width: 600px; }
     &.maximized { width: 100%; }
 
-    &.left {
+    &.left,
+    &.left.transition-appear {
         left: 0;
         transform: translate(-150%, 0);
         border-right-width: ${props => props.theme.borderWidth};
     }
 
-    &.right {
+    &.right,
+    &.right.transition-appear {
         right: 0;
         transform: translate(150%, 0);
         border-left-width: ${props => props.theme.borderWidth};
@@ -54,7 +57,8 @@ const StyledAside = styled.aside`
         border-width: 0;
     }
 
-    &.opened {
+    &.opened,
+    &.opened.transition-appear.transition-appear-active {
         transform: translate(0, 0);
     }
 
@@ -205,29 +209,37 @@ class Column extends React.Component {
         });
 
         return (
-            <StyledAside className={asideClasses} {...rest}>
-                <header className="header">
-                    {this.props.onBack && (
-                        <button className="back-btn" onClick={() => this._handleBackClick()}>
-                            <FontAwesome name="chevron-left" size="lg" />
+            <CSSTransitionGroup
+                transitionName="transition"
+                transitionAppear
+                transitionAppearTimeout={2500}
+                transitionEnter={false}
+                transitionLeave={false}
+            >
+                <StyledAside key="column" className={asideClasses} {...rest}>
+                    <header className="header">
+                        {this.props.onBack && (
+                            <button className="back-btn" onClick={() => this._handleBackClick()}>
+                                <FontAwesome name="chevron-left" size="lg" />
+                            </button>
+                        )}
+                        <button className="close-btn" onClick={() => this._handleCloseClick()}>
+                            <FontAwesome name="close" size="lg" />
                         </button>
-                    )}
-                    <button className="close-btn" onClick={() => this._handleCloseClick()}>
-                        <FontAwesome name="close" size="lg" />
-                    </button>
-                    {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
-                    <div className="clearfix" />
-                    {!loading && header && header}
-                </header>
+                        {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
+                        <div className="clearfix" />
+                        {!loading && header && header}
+                    </header>
 
-                <div className={contentClasses}>
-                    {children}
-                </div>
+                    <div className={contentClasses}>
+                        {children}
+                    </div>
 
-                {!loading && footer && footer}
+                    {!loading && footer && footer}
 
-                {loading && <Loader centered label={loaderLabel} />}
-            </StyledAside>
+                    {loading && <Loader centered label={loaderLabel} />}
+                </StyledAside>
+            </CSSTransitionGroup>
         );
     }
 }
