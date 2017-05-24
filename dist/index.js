@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "lodash", "react-fontawesome", "react-leaflet", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "lodash", "react-fontawesome", "react-leaflet", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "polished", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["react-leaflet"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["react-leaflet"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["polished"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_60__, __WEBPACK_EXTERNAL_MODULE_61__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_60__, __WEBPACK_EXTERNAL_MODULE_61__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__, __WEBPACK_EXTERNAL_MODULE_66__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -159,7 +159,7 @@ var config = exports.config = {
     },
     column: {
         nav: {
-            fontSize: '1.2em',
+            fontSize: '1.1em',
             lineHeight: '1.2em',
             fontWeight: 500,
             borderRadius: '4px',
@@ -559,6 +559,8 @@ var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
+var _polished = __webpack_require__(62);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
@@ -579,7 +581,7 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         column: {
             nav: {
                 color: colors.white,
-                backgroundColor: color3,
+                backgroundColor: (0, _polished.lighten)(0.1, color2),
                 hoverColor: colors.white,
                 hoverBackgroundColor: color4
             }
@@ -660,7 +662,7 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         column: {
             nav: {
                 color: colors.anthracite1,
-                backgroundColor: color3,
+                backgroundColor: (0, _polished.lighten)(0.2, color2),
                 hoverColor: colors.anthracite1,
                 hoverBackgroundColor: color4
             }
@@ -3190,13 +3192,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(62);
+__webpack_require__(63);
+
+__webpack_require__(66);
 
 __webpack_require__(65);
 
-__webpack_require__(64);
-
-var _reactVirtualizedSelect = __webpack_require__(63);
+var _reactVirtualizedSelect = __webpack_require__(64);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -4472,22 +4474,28 @@ module.exports = require("leaflet.locatecontrol");
 /* 62 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-select/dist/react-select.css");
+module.exports = require("polished");
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-virtualized-select");
+module.exports = require("react-select/dist/react-select.css");
 
 /***/ }),
 /* 64 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-virtualized-select/styles.css");
+module.exports = require("react-virtualized-select");
 
 /***/ }),
 /* 65 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select/styles.css");
+
+/***/ }),
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");
