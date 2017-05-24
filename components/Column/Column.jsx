@@ -169,11 +169,12 @@ class Column extends React.Component {
     }
 
     _handleBackClick() {
-        this._triggerCallback('onBack');
+        this._triggerCallback('onClickBack');
     }
 
     _handleCloseClick() {
         this.setState({ opened: false });
+        this._triggerCallback('onClickClose');
         this._triggerCallback('onClose');
     }
 
@@ -218,7 +219,7 @@ class Column extends React.Component {
             >
                 <StyledAside key="column" className={asideClasses} {...rest}>
                     <header className="header">
-                        {this.props.onBack && (
+                        {this.props.onClickBack && (
                             <button className="back-btn" onClick={() => this._handleBackClick()}>
                                 <FontAwesome name="chevron-left" size="lg" />
                             </button>
@@ -262,7 +263,8 @@ Column.propTypes = {
     scrollContent: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
-    onBack: PropTypes.func,
+    onClickClose: PropTypes.func,
+    onClickBack: PropTypes.func,
     onMaximize: PropTypes.func,
     onUnmaximize: PropTypes.func,
     className: PropTypes.string,
@@ -285,8 +287,9 @@ Column.defaultProps = {
     container: 'parent',
     scrollContent: false,
     onOpen: null,
+    onClickClose: null,
     onClose: null,
-    onBack: null,
+    onClickBack: null,
     onMaximize: null,
     onUnmaximize: null,
     className: '',

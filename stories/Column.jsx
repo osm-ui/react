@@ -244,7 +244,8 @@ storiesOf('Column', module)
                             container={container}
                             onOpen={action('onOpen')}
                             onClose={action('onClose')}
-                            onBack={action('onBack')}
+                            onClickClose={action('onClickClose')}
+                            onClickBack={action('onClickBack')}
                             onMaximize={action('onMaximize')}
                             onUnmaximize={action('onUnmaximize')}
                         >
