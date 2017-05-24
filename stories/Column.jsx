@@ -139,7 +139,7 @@ storiesOf('Column', module)
                                 <li><a href="">A nav item</a></li>
                                 <li><a href="">Another one</a></li>
                                 <li><a href="">One more here</a></li>
-                                <li><a href="">One more here very very very very long</a></li>
+                                <li><a href="">With a very very very very very very long title</a></li>
                             </ul>
                         </Column.Nav>
                     </Column>

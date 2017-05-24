@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { lighten } from 'polished';
 
 
 export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
@@ -19,7 +20,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         column: {
             nav: {
                 color: colors.white,
-                backgroundColor: color3,
+                backgroundColor: lighten(0.1, color2),
                 hoverColor: colors.white,
                 hoverBackgroundColor: color4,
             },
@@ -101,7 +102,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         column: {
             nav: {
                 color: colors.anthracite1,
-                backgroundColor: color3,
+                backgroundColor: lighten(0.2, color2),
                 hoverColor: colors.anthracite1,
                 hoverBackgroundColor: color4,
             },

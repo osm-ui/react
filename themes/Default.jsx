@@ -26,7 +26,7 @@ export const config = {
     },
     column: {
         nav: {
-            fontSize: '1.2em',
+            fontSize: '1.1em',
             lineHeight: '1.2em',
             fontWeight: 500,
             borderRadius: '4px',
