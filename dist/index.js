@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "lodash", "react-fontawesome", "react-leaflet", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "polished", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "lodash", "react-fontawesome", "react-leaflet", "react-transition-group/CSSTransitionGroup", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "polished", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["react-leaflet"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["polished"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("react-fontawesome"), require("react-leaflet"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("polished"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["react-fontawesome"], root["react-leaflet"], root["react-transition-group/CSSTransitionGroup"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["polished"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_35__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_60__, __WEBPACK_EXTERNAL_MODULE_61__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__, __WEBPACK_EXTERNAL_MODULE_66__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_36__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_61__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__, __WEBPACK_EXTERNAL_MODULE_66__, __WEBPACK_EXTERNAL_MODULE_67__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 60);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -559,7 +559,7 @@ var _lodash = __webpack_require__(6);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _polished = __webpack_require__(62);
+var _polished = __webpack_require__(63);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -567,7 +567,7 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     var color1 = colors[colorVariant + '1'];
     var color2 = colors[colorVariant + '2'];
     var color3 = colors[colorVariant + '3'];
-    var color4 = colors[colorVariant + '4'];
+    // const color4 = colors[`${colorVariant}4`];
     var color5 = colors[colorVariant + '5'];
 
     return _lodash2.default.merge({}, baseConfig, {
@@ -583,7 +583,7 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
                 color: colors.white,
                 backgroundColor: (0, _polished.lighten)(0.1, color2),
                 hoverColor: colors.white,
-                hoverBackgroundColor: color4
+                hoverBackgroundColor: color3
             }
         },
         toolbar: {
@@ -652,24 +652,24 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     var color5 = colors[colorVariant + '5'];
 
     return _lodash2.default.merge({}, baseConfig, {
-        color: colors.anthracite1,
+        color: (0, _polished.darken)(0.27, color1),
         backgroundColor: color2,
         borderColor: color1,
-        loaderColor: colors.anthracite1,
+        loaderColor: (0, _polished.darken)(0.27, color1),
         controlColor: color4,
-        hoverControlColor: colors.anthracite1,
+        hoverControlColor: (0, _polished.darken)(0.27, color1),
 
         column: {
             nav: {
-                color: colors.anthracite1,
+                color: (0, _polished.darken)(0.27, color1),
                 backgroundColor: (0, _polished.lighten)(0.2, color2),
-                hoverColor: colors.anthracite1,
-                hoverBackgroundColor: color4
+                hoverColor: (0, _polished.darken)(0.27, color1),
+                hoverBackgroundColor: color3
             }
         },
         toolbar: {
             button: {
-                color: colors.anthracite1,
+                color: (0, _polished.darken)(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -681,12 +681,12 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
             }
         },
         titlebar: {
-            color: colors.anthracite1,
+            color: (0, _polished.darken)(0.27, color1),
             backgroundColor: color2,
             borderColor: color2,
 
             button: {
-                color: colors.anthracite1,
+                color: (0, _polished.darken)(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -699,7 +699,7 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         },
         form: {
             button: {
-                color: colors.anthracite1,
+                color: (0, _polished.darken)(0.27, color1),
                 backgroundColor: color2,
                 borderColor: color5,
                 hoverBackgroundColor: color3,
@@ -711,8 +711,8 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
 
                 primary: {
                     color: color2,
-                    backgroundColor: colors.anthracite1,
-                    borderColor: colors.anthracite1,
+                    backgroundColor: (0, _polished.darken)(0.27, color1),
+                    borderColor: (0, _polished.darken)(0.27, color1),
                     hoverBackgroundColor: colors.lightGray5,
                     hoverBorderColor: colors.lightGray5,
                     focusBackgroundColor: colors.lightGray5,
@@ -741,7 +741,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(53);
+var _Loader = __webpack_require__(54);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -1090,22 +1090,9 @@ module.exports = require("react-leaflet");
 
 /***/ }),
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Alert = __webpack_require__(40);
-
-var _Alert2 = _interopRequireDefault(_Alert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Alert2.default;
+module.exports = require("react-transition-group/CSSTransitionGroup");
 
 /***/ }),
 /* 15 */
@@ -1118,13 +1105,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(41);
+var _Alert = __webpack_require__(41);
 
-var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+var _Alert2 = _interopRequireDefault(_Alert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _AppCanvas2.default;
+exports.default = _Alert2.default;
 
 /***/ }),
 /* 16 */
@@ -1137,13 +1124,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(42);
+var _AppCanvas = __webpack_require__(42);
 
-var _Button2 = _interopRequireDefault(_Button);
+var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Button2.default;
+exports.default = _AppCanvas2.default;
 
 /***/ }),
 /* 17 */
@@ -1156,7 +1143,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(43);
+var _Button = __webpack_require__(43);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Button2.default;
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Column = __webpack_require__(44);
 
 var _Column2 = _interopRequireDefault(_Column);
 
@@ -1164,15 +1170,15 @@ var _Title = __webpack_require__(9);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _Header = __webpack_require__(45);
+var _Header = __webpack_require__(46);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(44);
+var _Footer = __webpack_require__(45);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Nav = __webpack_require__(46);
+var _Nav = __webpack_require__(47);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -1186,7 +1192,7 @@ _Column2.default.Nav = _Nav2.default;
 exports.default = _Column2.default;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1196,27 +1202,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(47);
+var _Form = __webpack_require__(48);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(48);
+var _FormGroup = __webpack_require__(49);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(50);
+var _Label = __webpack_require__(51);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(49);
+var _Input = __webpack_require__(50);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(52);
+var _Textarea = __webpack_require__(53);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(51);
+var _Select = __webpack_require__(52);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -1231,7 +1237,7 @@ _Form2.default.Select = _Select2.default;
 exports.default = _Form2.default;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1245,7 +1251,7 @@ var _reactLeaflet = __webpack_require__(13);
 
 var ReactLeaflet = _interopRequireWildcard(_reactLeaflet);
 
-var _Map = __webpack_require__(54);
+var _Map = __webpack_require__(55);
 
 var _Map2 = _interopRequireDefault(_Map);
 
@@ -1283,25 +1289,6 @@ try {
 exports.default = _Map2.default;
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Titlebar = __webpack_require__(55);
-
-var _Titlebar2 = _interopRequireDefault(_Titlebar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Titlebar2.default;
-
-/***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1312,7 +1299,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Toolbar = __webpack_require__(58);
+var _Titlebar = __webpack_require__(56);
+
+var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Titlebar2.default;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Toolbar = __webpack_require__(59);
 
 var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -1320,11 +1326,11 @@ var _Item = __webpack_require__(11);
 
 var _Item2 = _interopRequireDefault(_Item);
 
-var _Group = __webpack_require__(57);
+var _Group = __webpack_require__(58);
 
 var _Group2 = _interopRequireDefault(_Group);
 
-var _Collapse = __webpack_require__(56);
+var _Collapse = __webpack_require__(57);
 
 var _Collapse2 = _interopRequireDefault(_Collapse);
 
@@ -1337,7 +1343,7 @@ _Toolbar2.default.Collapse = _Collapse2.default;
 exports.default = _Toolbar2.default;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1400,7 +1406,7 @@ AnthraciteTheme.displayName = 'AnthraciteTheme';
 exports.default = AnthraciteTheme;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1463,7 +1469,7 @@ BlueTheme.displayName = 'BlueTheme';
 exports.default = BlueTheme;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1526,7 +1532,7 @@ BrownTheme.displayName = 'BrownTheme';
 exports.default = BrownTheme;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1589,7 +1595,7 @@ DarkGrayTheme.displayName = 'DarkGrayTheme';
 exports.default = DarkGrayTheme;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1668,7 +1674,7 @@ GreenTheme.displayName = 'GreenTheme';
 exports.default = GreenTheme;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1731,7 +1737,7 @@ LightGrayTheme.displayName = 'LightGrayTheme';
 exports.default = LightGrayTheme;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1810,7 +1816,7 @@ OrangeTheme.displayName = 'OrangeTheme';
 exports.default = OrangeTheme;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1873,7 +1879,7 @@ PurpleTheme.displayName = 'PurpleTheme';
 exports.default = PurpleTheme;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1952,7 +1958,7 @@ RedTheme.displayName = 'RedTheme';
 exports.default = RedTheme;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2015,7 +2021,7 @@ RoseTheme.displayName = 'RoseTheme';
 exports.default = RoseTheme;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2094,7 +2100,7 @@ TurquoiseTheme.displayName = 'TurquoiseTheme';
 exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2157,43 +2163,43 @@ YellowTheme.displayName = 'YellowTheme';
 exports.default = YellowTheme;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 module.exports = require("bootstrap");
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2274,7 +2280,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2317,7 +2323,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2426,7 +2432,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2440,7 +2446,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n    z-index: 1000;\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        margin-top: 30px;\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        margin: 0;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n'], ['\n    z-index: 1000;\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        margin-top: 30px;\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        margin: 0;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    z-index: 1000;\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left,\n    &.left.transition-appear {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right,\n    &.right.transition-appear {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened,\n    &.opened.transition-appear.transition-appear-active {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        margin-top: 30px;\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        margin: 0;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n'], ['\n    z-index: 1000;\n    top: 0;\n    max-width: 100%;\n    height: 100%;\n    overflow-y: auto;\n    transition: all 0.25s ease-out;\n\n    color: ', ';\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 0;\n    box-shadow: ', ';\n\n    &.scroll-content {\n        display: flex;\n        flex-direction: column;\n        overflow-y: none;\n    }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.xs { width: 150px; }\n    &.sm { width: 250px; }\n    &.md { width: 400px; }\n    &.lg { width: 600px; }\n    &.maximized { width: 100%; }\n\n    &.left,\n    &.left.transition-appear {\n        left: 0;\n        transform: translate(-150%, 0);\n        border-right-width: ', ';\n    }\n\n    &.right,\n    &.right.transition-appear {\n        right: 0;\n        transform: translate(150%, 0);\n        border-left-width: ', ';\n    }\n\n    &.left.maximized,\n    &.right.maximized {\n        border-width: 0;\n    }\n\n    &.opened,\n    &.opened.transition-appear.transition-appear-active {\n        transform: translate(0, 0);\n    }\n\n    .back-btn,\n    .close-btn {\n        color: ', ';\n        background: transparent;\n        border-width: 0;\n        width: 50px;\n        height: 50px;\n        padding: 0;\n\n        &:hover {\n            color: ', ';\n        }\n    }\n\n    .back-btn {\n        float: left;\n        margin-right: 5px;\n    }\n\n    .close-btn {\n        float: right;\n        margin-left: 5px;\n    }\n\n    &.scroll-content .header {\n        margin-bottom: 20px;\n    }\n\n    .content {\n        margin-top: 30px;\n        padding: 20px;\n    }\n\n    &.scroll-content .content {\n        overflow-y: auto;\n        margin: 0;\n        border-color: ', ';\n        border-style: ', ';\n        border-width: 1px 0 1px 0;\n\n        &::after {\n            content: \'\';\n            margin-top: 20px;\n            display: block;\n        }\n    }\n\n    .content.loading {\n        display: none;\n    }\n\n    &.scroll-content .footer {\n        margin-top: 20px;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2449,6 +2455,10 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _CSSTransitionGroup = __webpack_require__(14);
+
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -2566,12 +2576,13 @@ var Column = function (_React$Component) {
     }, {
         key: '_handleBackClick',
         value: function _handleBackClick() {
-            this._triggerCallback('onBack');
+            this._triggerCallback('onClickBack');
         }
     }, {
         key: '_handleCloseClick',
         value: function _handleCloseClick() {
             this.setState({ opened: false });
+            this._triggerCallback('onClickClose');
             this._triggerCallback('onClose');
         }
     }, {
@@ -2603,40 +2614,50 @@ var Column = function (_React$Component) {
             });
 
             return _react2.default.createElement(
-                StyledAside,
-                _extends({ className: asideClasses }, rest),
+                _CSSTransitionGroup2.default,
+                {
+                    transitionName: 'transition',
+                    transitionAppear: true,
+                    transitionAppearTimeout: 250,
+                    transitionEnter: false,
+                    transitionLeave: false
+                },
                 _react2.default.createElement(
-                    'header',
-                    { className: 'header' },
-                    this.props.onBack && _react2.default.createElement(
-                        'button',
-                        { className: 'back-btn', onClick: function onClick() {
-                                return _this2._handleBackClick();
-                            } },
-                        _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+                    StyledAside,
+                    _extends({ key: 'column', className: asideClasses }, rest),
+                    _react2.default.createElement(
+                        'header',
+                        { className: 'header' },
+                        this.props.onClickBack && _react2.default.createElement(
+                            'button',
+                            { className: 'back-btn', onClick: function onClick() {
+                                    return _this2._handleBackClick();
+                                } },
+                            _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+                        ),
+                        _react2.default.createElement(
+                            'button',
+                            { className: 'close-btn', onClick: function onClick() {
+                                    return _this2._handleCloseClick();
+                                } },
+                            _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                        ),
+                        title && _react2.default.createElement(
+                            _Title2.default,
+                            { inHeader: true },
+                            title
+                        ),
+                        _react2.default.createElement('div', { className: 'clearfix' }),
+                        !loading && header && header
                     ),
                     _react2.default.createElement(
-                        'button',
-                        { className: 'close-btn', onClick: function onClick() {
-                                return _this2._handleCloseClick();
-                            } },
-                        _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                        'div',
+                        { className: contentClasses },
+                        children
                     ),
-                    title && _react2.default.createElement(
-                        _Title2.default,
-                        { inHeader: true },
-                        title
-                    ),
-                    _react2.default.createElement('div', { className: 'clearfix' }),
-                    !loading && header && header
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: contentClasses },
-                    children
-                ),
-                !loading && footer && footer,
-                loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
+                    !loading && footer && footer,
+                    loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
+                )
             );
         }
     }]);
@@ -2661,7 +2682,8 @@ Column.propTypes = {
     scrollContent: _propTypes2.default.bool,
     onOpen: _propTypes2.default.func,
     onClose: _propTypes2.default.func,
-    onBack: _propTypes2.default.func,
+    onClickClose: _propTypes2.default.func,
+    onClickBack: _propTypes2.default.func,
     onMaximize: _propTypes2.default.func,
     onUnmaximize: _propTypes2.default.func,
     className: _propTypes2.default.string,
@@ -2684,8 +2706,9 @@ Column.defaultProps = {
     container: 'parent',
     scrollContent: false,
     onOpen: null,
+    onClickClose: null,
     onClose: null,
-    onBack: null,
+    onClickBack: null,
     onMaximize: null,
     onUnmaximize: null,
     className: ''
@@ -2696,7 +2719,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2760,7 +2783,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2824,7 +2847,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2834,7 +2857,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n    margin-top: 20px;\n    margin-bottom: 50px;\n\n    ul {\n        text-align: center;\n        list-style: none;\n        margin: 0;\n        padding: 0;\n    }\n\n    a {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n\n        display: block;\n        margin: 10px 0;\n        padding: 14px 20px;\n        border-radius: ', ';\n        background-color: ', ';\n        color: ', ';\n        font-size: ', ';\n        line-height: ', ';\n        font-weight: ', ';\n    }\n\n    a:hover {\n        text-decoration: none;\n        color: ', '\n        background-color: ', '\n    }\n'], ['\n    margin-top: 20px;\n    margin-bottom: 50px;\n\n    ul {\n        text-align: center;\n        list-style: none;\n        margin: 0;\n        padding: 0;\n    }\n\n    a {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n\n        display: block;\n        margin: 10px 0;\n        padding: 14px 20px;\n        border-radius: ', ';\n        background-color: ', ';\n        color: ', ';\n        font-size: ', ';\n        line-height: ', ';\n        font-weight: ', ';\n    }\n\n    a:hover {\n        text-decoration: none;\n        color: ', '\n        background-color: ', '\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    margin: 20px 0;\n\n    ul {\n        text-align: center;\n        list-style: none;\n        margin: 0 0 40px;\n        padding: 0;\n    }\n\n    a {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n\n        display: block;\n        margin: 10px 0;\n        padding: 14px 20px;\n        border-radius: ', ';\n        background-color: ', ';\n        color: ', ';\n        font-size: ', ';\n        line-height: ', ';\n        font-weight: ', ';\n    }\n\n    a:hover,\n    a:active,\n    a:focus {\n        text-decoration: none;\n        color: ', '\n        background-color: ', '\n    }\n'], ['\n    margin: 20px 0;\n\n    ul {\n        text-align: center;\n        list-style: none;\n        margin: 0 0 40px;\n        padding: 0;\n    }\n\n    a {\n        overflow: hidden;\n        text-overflow: ellipsis;\n        white-space: nowrap;\n\n        display: block;\n        margin: 10px 0;\n        padding: 14px 20px;\n        border-radius: ', ';\n        background-color: ', ';\n        color: ', ';\n        font-size: ', ';\n        line-height: ', ';\n        font-weight: ', ';\n    }\n\n    a:hover,\n    a:active,\n    a:focus {\n        text-decoration: none;\n        color: ', '\n        background-color: ', '\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2879,7 +2902,7 @@ ColumnNav.displayName = 'Column.Nav';
 exports.default = ColumnNav;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2908,7 +2931,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2993,7 +3016,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3097,7 +3120,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3168,7 +3191,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3192,13 +3215,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(63);
+__webpack_require__(64);
+
+__webpack_require__(67);
 
 __webpack_require__(66);
 
-__webpack_require__(65);
-
-var _reactVirtualizedSelect = __webpack_require__(64);
+var _reactVirtualizedSelect = __webpack_require__(65);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -3276,7 +3299,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3384,7 +3407,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3490,7 +3513,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3518,13 +3541,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(60);
+var _leaflet = __webpack_require__(61);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
 var _reactLeaflet = __webpack_require__(13);
 
-__webpack_require__(61);
+__webpack_require__(62);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3616,7 +3639,7 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3798,7 +3821,7 @@ Titlebar.displayName = 'Titlebar';
 exports.default = Titlebar;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4004,7 +4027,7 @@ ToolbarCollapse.displayName = 'Toolbar.Collapse';
 exports.default = ToolbarCollapse;
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4144,7 +4167,7 @@ ToolbarGroup.displayName = 'Toolbar.Group';
 exports.default = ToolbarGroup;
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4158,7 +4181,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n    z-index: 1000;\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    z-index: 1000;\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-bottom-left {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-bottom-right {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-right {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-right {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    z-index: 1000;\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-top-left.transition-appear,\n        &.position-bottom-left,\n        &.position-bottom-left.transition-appear {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-top-right.transition-appear,\n        &.position-bottom-right,\n        &.position-bottom-right.transition-appear {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-left.transition-appear,\n        &.position-top-right,\n        &.position-top-right.transition-appear {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-left.transition-appear,\n        &.position-bottom-right,\n        &.position-bottom-right.transition-appear {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened,\n            &.opened.transition-appear.transition-appear-active {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n'], ['\n    z-index: 1000;\n    transition: all 0.1s ease-out;\n\n    display: flex;\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.container-parent { position: absolute; }\n    &.container-root   { position: fixed; }\n\n    &.position-top-left,\n    &.position-top-right {\n        top: 0;\n        margin-top: ', ';\n    }\n\n    &.position-bottom-left,\n    &.position-bottom-right {\n        bottom: 0;\n        margin-bottom: ', ';\n    }\n\n    &.position-top-left,\n    &.position-bottom-left {\n        left: 0;\n        margin-left: ', ';\n    }\n\n    &.position-top-right,\n    &.position-bottom-right {\n        right: 0;\n        margin-right: ', ';\n    }\n\n    &.direction-column {\n        &.position-top-left,\n        &.position-top-left.transition-appear,\n        &.position-bottom-left,\n        &.position-bottom-left.transition-appear {\n            transform: translate(-150%, 0);\n        }\n\n        &.position-top-right,\n        &.position-top-right.transition-appear,\n        &.position-bottom-right,\n        &.position-bottom-right.transition-appear {\n            transform: translate(150%, 0);\n        }\n    }\n\n    &.direction-row {\n        &.position-top-left,\n        &.position-top-left.transition-appear,\n        &.position-top-right,\n        &.position-top-right.transition-appear {\n            transform: translate(0, -150%);\n        }\n\n        &.position-bottom-left,\n        &.position-bottom-left.transition-appear,\n        &.position-bottom-right,\n        &.position-bottom-right.transition-appear {\n            transform: translate(0, 150%);\n        }\n    }\n\n    &.direction-column, &.direction-row {\n        &.position-top-left,\n        &.position-top-right,\n        &.position-bottom-right,\n        &.position-bottom-left {\n            &.opened,\n            &.opened.transition-appear.transition-appear-active {\n                transform: translate(0, 0);\n            }\n        }\n    }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4167,6 +4190,10 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _CSSTransitionGroup = __webpack_require__(14);
+
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -4278,11 +4305,21 @@ var Toolbar = function (_React$Component) {
             }
 
             return _react2.default.createElement(
-                StyledAside,
-                _extends({ className: asideClasses }, rest),
-                _react2.default.Children.map(children, function (child) {
-                    return _react2.default.cloneElement(child, childrenProps);
-                })
+                _CSSTransitionGroup2.default,
+                {
+                    transitionName: 'transition',
+                    transitionAppear: true,
+                    transitionAppearTimeout: 100,
+                    transitionEnter: false,
+                    transitionLeave: false
+                },
+                _react2.default.createElement(
+                    StyledAside,
+                    _extends({ className: asideClasses }, rest),
+                    _react2.default.Children.map(children, function (child) {
+                        return _react2.default.cloneElement(child, childrenProps);
+                    })
+                )
             );
         }
     }]);
@@ -4321,7 +4358,7 @@ Toolbar.displayName = 'Toolbar';
 exports.default = Toolbar;
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4332,71 +4369,71 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = undefined;
 
-__webpack_require__(37);
-
-__webpack_require__(35);
+__webpack_require__(38);
 
 __webpack_require__(36);
 
+__webpack_require__(37);
+
+__webpack_require__(40);
+
 __webpack_require__(39);
 
-__webpack_require__(38);
-
-__webpack_require__(34);
+__webpack_require__(35);
 
 var _Default = __webpack_require__(4);
 
 var _Default2 = _interopRequireDefault(_Default);
 
-var _LightGray = __webpack_require__(27);
+var _LightGray = __webpack_require__(28);
 
 var _LightGray2 = _interopRequireDefault(_LightGray);
 
-var _DarkGray = __webpack_require__(25);
+var _DarkGray = __webpack_require__(26);
 
 var _DarkGray2 = _interopRequireDefault(_DarkGray);
 
-var _Anthracite = __webpack_require__(22);
+var _Anthracite = __webpack_require__(23);
 
 var _Anthracite2 = _interopRequireDefault(_Anthracite);
 
-var _Yellow = __webpack_require__(33);
+var _Yellow = __webpack_require__(34);
 
 var _Yellow2 = _interopRequireDefault(_Yellow);
 
-var _Orange = __webpack_require__(28);
+var _Orange = __webpack_require__(29);
 
 var _Orange2 = _interopRequireDefault(_Orange);
 
-var _Brown = __webpack_require__(24);
+var _Brown = __webpack_require__(25);
 
 var _Brown2 = _interopRequireDefault(_Brown);
 
-var _Red = __webpack_require__(30);
+var _Red = __webpack_require__(31);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _Rose = __webpack_require__(31);
+var _Rose = __webpack_require__(32);
 
 var _Rose2 = _interopRequireDefault(_Rose);
 
-var _Purple = __webpack_require__(29);
+var _Purple = __webpack_require__(30);
 
 var _Purple2 = _interopRequireDefault(_Purple);
 
-var _Blue = __webpack_require__(23);
+var _Blue = __webpack_require__(24);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Turquoise = __webpack_require__(32);
+var _Turquoise = __webpack_require__(33);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
-var _Green = __webpack_require__(26);
+var _Green = __webpack_require__(27);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _AppCanvas2 = __webpack_require__(15);
+var _AppCanvas2 = __webpack_require__(16);
 
 var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
 
@@ -4404,31 +4441,31 @@ var _Loader2 = __webpack_require__(8);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(14);
+var _Alert2 = __webpack_require__(15);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(16);
+var _Button2 = __webpack_require__(17);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(18);
+var _Form2 = __webpack_require__(19);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(17);
+var _Column2 = __webpack_require__(18);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
-var _Toolbar2 = __webpack_require__(21);
+var _Toolbar2 = __webpack_require__(22);
 
 var _Toolbar3 = _interopRequireDefault(_Toolbar2);
 
-var _Titlebar2 = __webpack_require__(20);
+var _Titlebar2 = __webpack_require__(21);
 
 var _Titlebar3 = _interopRequireDefault(_Titlebar2);
 
-var _Map2 = __webpack_require__(19);
+var _Map2 = __webpack_require__(20);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
@@ -4459,43 +4496,43 @@ exports.Titlebar = _Titlebar3.default;
 exports.Map = _Map3.default;
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet");
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol");
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports) {
 
 module.exports = require("polished");
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-select/dist/react-select.css");
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select");
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select/styles.css");
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");
