@@ -28,7 +28,9 @@ const StyledNav = styled.nav`
         font-weight: ${props => props.theme.column.nav.fontWeight};
     }
 
-    a:hover {
+    a:hover,
+    a:active,
+    a:focus {
         text-decoration: none;
         color: ${props => props.theme.column.nav.hoverColor}
         background-color: ${props => props.theme.column.nav.hoverBackgroundColor}
