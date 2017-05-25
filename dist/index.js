@@ -194,10 +194,10 @@ var config = exports.config = {
     titlebar: {
         xsHeight: '30px',
         smHeight: '35px',
-        mdHeight: '45px',
-        lgHeight: '55px',
-        xsFontSize: '0.8em',
-        smFontSize: '0.9em',
+        mdHeight: '40px',
+        lgHeight: '45px',
+        xsFontSize: '0.9em',
+        smFontSize: '1em',
         mdFontSize: '1.1em',
         lgFontSize: '1.3em',
         fontWeight: 500,
@@ -2570,7 +2570,16 @@ var Column = function (_React$Component) {
         key: '_triggerCallback',
         value: function _triggerCallback(name) {
             if (this.props[name] !== null) {
-                this.props[name]();
+                var callback = this.props[name];
+
+                switch (name) {
+                    case 'onClickClose':
+                    case 'onClose':
+                        setTimeout(callback, 250);
+                        break;
+                    default:
+                        callback();
+                }
             }
         }
     }, {
