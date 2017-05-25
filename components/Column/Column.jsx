@@ -164,7 +164,16 @@ class Column extends React.Component {
 
     _triggerCallback(name) {
         if (this.props[name] !== null) {
-            this.props[name]();
+            const callback = this.props[name];
+
+            switch (name) {
+                case 'onClickClose':
+                case 'onClose':
+                    setTimeout(callback, 250);
+                    break;
+                default:
+                    callback();
+            }
         }
     }
 
