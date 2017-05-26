@@ -5,7 +5,7 @@
 
 /* eslint-disable */
 
-export default {
+const colors = {
     white:         '#ffffff',
     black:         '#000000',
 
@@ -81,3 +81,5 @@ export default {
     green4:        '#9fd4a1',
     green5:        '#c8e6c9',
 };
+
+export default colors;
