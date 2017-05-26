@@ -102,9 +102,9 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         column: {
             nav: {
                 color: darken(0.27, color1),
-                backgroundColor: lighten(0.2, color2),
+                backgroundColor: color3,
                 hoverColor: darken(0.27, color1),
-                hoverBackgroundColor: color3,
+                hoverBackgroundColor: lighten(0.14, color3),
             },
         },
         toolbar: {
