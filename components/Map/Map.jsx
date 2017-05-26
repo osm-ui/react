@@ -63,7 +63,11 @@ class Map extends React.Component {
                     ref={map => this.handleRef(map)}
                     {...rest}
                 >
-                    {children}
+                    {
+                        React.Children.map(children,
+                            child => React.cloneElement(child, { map: this.map }),
+                        )
+                    }
                 </LeafletMap>
             </StyledMap>
         );
