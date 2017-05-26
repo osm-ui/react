@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import { lighten } from 'polished';
 import _ from 'lodash';
 import colors from '../colors';
 import { buildDarkThemeConfig } from '../helpers/themes';
@@ -15,6 +16,14 @@ export const config = _.merge(
     {},
     buildDarkThemeConfig(defaultThemeConfig, colors, 'turquoise'),
     {
+        column: {
+            nav: {
+                color: colors.white,
+                backgroundColor: colors.turquoise3,
+                hoverColor: colors.white,
+                hoverBackgroundColor: lighten(0.05, colors.turquoise3),
+            },
+        },
         form: {
             button: {
                 info: {
