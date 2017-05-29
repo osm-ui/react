@@ -13,6 +13,10 @@ import {
 } from '../index';
 
 
+const mapPosition = [ 51.505, -0.09 ];
+const mapStyle = { height: 450 };
+
+
 storiesOf('Map', module)
 .addDecorator(withKnobs)
     .addDecorator(host({
@@ -20,37 +24,28 @@ storiesOf('Map', module)
         title: 'Map',
         height: 450,
     }))
-    .addWithInfo('Default state', () => {
-        const position = [ 51.505, -0.09 ];
-
-        return (
-            <DefaultTheme>
-                <ReactLeafletAlert />
-                <Map center={position} zoom={13} style={{ height: 450 }}>
-                    <Map.TileLayer
-                        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                </Map>
-            </DefaultTheme>
-        );
-    })
-    .addWithInfo('With locate control', () => {
-        const position = [ 51.505, -0.09 ];
-        const style = { height: 450 };
-
-        return (
-            <DefaultTheme>
-                <ReactLeafletAlert />
-                <Map center={position} zoom={13} style={style} locate>
-                    <Map.TileLayer
-                        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    />
-                </Map>
-            </DefaultTheme>
-        );
-    })
+    .addWithInfo('Default state', () => (
+        <DefaultTheme>
+            <ReactLeafletAlert />
+            <Map center={mapPosition} zoom={13} style={mapStyle}>
+                <Map.TileLayer
+                    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+            </Map>
+        </DefaultTheme>
+    ))
+    .addWithInfo('With locate control', () => (
+        <DefaultTheme>
+            <ReactLeafletAlert />
+            <Map center={mapPosition} zoom={13} style={mapStyle} locate>
+                <Map.TileLayer
+                    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+            </Map>
+        </DefaultTheme>
+    ))
     .addWithInfo('Playground', () => {
         const zoom = number('Zoom', 13, {
             range: true,
@@ -59,17 +54,16 @@ storiesOf('Map', module)
             step: 1,
         });
         const locate = boolean('Locate control');
-        const position = [ 51.505, -0.09 ];
 
         return (
             <DefaultTheme>
                 <ReactLeafletAlert />
                 <KnobsAlert />
                 <Map
-                    center={position}
+                    center={mapPosition}
                     zoom={zoom}
                     locate={locate}
-                    style={{ height: 450 }}
+                    style={mapStyle}
                 >
                     <Map.TileLayer
                         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
