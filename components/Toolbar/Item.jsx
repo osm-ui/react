@@ -12,15 +12,15 @@ const buildInGroupSize = (props) => {
     return `calc(${size} - (${borderWidth} * 2))`;
 };
 
-const buildCommonStyles = props => `
+const StyledButton = styled.button`
     position: relative;
     transition: all 0.1s ease-out;
 
-    color: ${props.theme.toolbar.button.color};
-    border-color: ${props.theme.toolbar.button.borderColor};
-    border-style: ${props.theme.toolbar.button.borderStyle};
-    border-width: ${props.theme.toolbar.button.borderWidth};
-    background: ${props.theme.toolbar.button.backgroundColor};
+    color: ${props => props.theme.toolbar.button.color};
+    border-color: ${props => props.theme.toolbar.button.borderColor};
+    border-style: ${props => props.theme.toolbar.button.borderStyle};
+    border-width: ${props => props.theme.toolbar.button.borderWidth};
+    background: ${props => props.theme.toolbar.button.backgroundColor};
     padding: 0;
 
     &.shape-square {
@@ -32,8 +32,8 @@ const buildCommonStyles = props => `
     }
 
     &.xs {
-        width: ${props.theme.toolbar.xsSize};
-        height: ${props.theme.toolbar.xsSize};
+        width: ${props => props.theme.toolbar.xsSize};
+        height: ${props => props.theme.toolbar.xsSize};
         line-height: 0.85em;
 
         .fa {
@@ -42,8 +42,8 @@ const buildCommonStyles = props => `
     }
 
     &.sm {
-        width: ${props.theme.toolbar.smSize};
-        height: ${props.theme.toolbar.smSize};
+        width: ${props => props.theme.toolbar.smSize};
+        height: ${props => props.theme.toolbar.smSize};
         line-height: 1.04em;
 
         .fa {
@@ -52,8 +52,8 @@ const buildCommonStyles = props => `
     }
 
     &.md {
-        width: ${props.theme.toolbar.mdSize};
-        height: ${props.theme.toolbar.mdSize};
+        width: ${props => props.theme.toolbar.mdSize};
+        height: ${props => props.theme.toolbar.mdSize};
         line-height: 1.2em;
 
         .fa {
@@ -62,8 +62,8 @@ const buildCommonStyles = props => `
     }
 
     &.lg {
-        width: ${props.theme.toolbar.lgSize};
-        height: ${props.theme.toolbar.lgSize};
+        width: ${props => props.theme.toolbar.lgSize};
+        height: ${props => props.theme.toolbar.lgSize};
         line-height: 1.43em;
 
         .fa {
@@ -72,66 +72,51 @@ const buildCommonStyles = props => `
     }
 
     &.in-group {
-        width: ${buildInGroupSize(props)};
-        height: ${buildInGroupSize(props)};
+        width: ${props => buildInGroupSize(props)};
+        height: ${props => buildInGroupSize(props)};
         border-width: 0;
     }
-`;
 
-const buildActiveStyles = props => `
     &.btn:hover {
-        color: ${props.theme.toolbar.button.color};
-        background-color: ${props.theme.toolbar.button.hoverBackgroundColor};
-        border-color: ${props.theme.toolbar.button.hoverBorderColor};
+        color: ${props => props.theme.toolbar.button.color};
+        background-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
+        border-color: ${props => props.theme.toolbar.button.hoverBorderColor};
 
         &.in-group {
-            border-color: ${props.theme.toolbar.button.hoverBackgroundColor};
+            border-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
         }
     }
 
     &.btn:focus {
-        color: ${props.theme.toolbar.button.color};
-        background-color: ${props.theme.toolbar.button.focusBackgroundColor};
-        border-color: ${props.theme.toolbar.button.focusBorderColor};
+        color: ${props => props.theme.toolbar.button.color};
+        background-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
+        border-color: ${props => props.theme.toolbar.button.focusBorderColor};
 
         &.in-group {
-            border-color: ${props.theme.toolbar.button.focusBackgroundColor};
+            border-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
         }
     }
 
     &.btn:active, &.btn.active {
-        color: ${props.theme.toolbar.button.color};
-        background-color: ${props.theme.toolbar.button.activeBackgroundColor};
-        border-color: ${props.theme.toolbar.button.activeBorderColor};
+        color: ${props => props.theme.toolbar.button.color};
+        background-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
+        border-color: ${props => props.theme.toolbar.button.activeBorderColor};
 
         &.in-group {
-            border-color: ${props.theme.toolbar.button.activeBackgroundColor};
+            border-color: ${props => props.theme.toolbar.button.activeBackgroundColor};
         }
     }
 `;
 
-const buildNonButtonStyles = () => `
+const StyledDiv = StyledButton.extend`
+    pointer-events: none;
+`;
+
+const StyledAnchor = StyledButton.extend`
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 500;
-`;
-
-const StyledButton = styled.button`
-    ${props => buildCommonStyles(props)}
-    ${props => buildActiveStyles(props)}
-`;
-
-const StyledDiv = styled.div`
-    ${props => buildCommonStyles(props)}
-    ${props => buildNonButtonStyles(props)}
-    pointer-events: none;
-`;
-
-const StyledAnchor = styled.a`
-    ${props => buildCommonStyles(props)}
-    ${props => buildActiveStyles(props)}
-    ${props => buildNonButtonStyles(props)}
 `;
 
 

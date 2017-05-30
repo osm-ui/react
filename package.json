@@ -37,6 +37,7 @@
     "lodash": "^4.17.4",
     "polished": "^1.1.2",
     "prop-types": "^15.5.6",
+    "raw-loader": "^0.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-fontawesome": "^1.6.1",
@@ -47,7 +48,7 @@
     "react-virtualized": "^9.7.4",
     "react-virtualized-select": "^3.0.1",
     "storybook-host": "^1.0.14",
-    "styled-components": "^1.4.4",
+    "styled-components": "^2.0.0",
     "text-ground-react": "^0.0.12"
   },
   "devDependencies": {
