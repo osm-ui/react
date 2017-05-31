@@ -15,6 +15,7 @@ import {
 
 const mapPosition = [ 51.505, -0.09 ];
 const mapStyle = { height: 450 };
+const mapZoom = 13;
 
 
 storiesOf('Map', module)
@@ -27,7 +28,7 @@ storiesOf('Map', module)
     .addWithInfo('Default state', () => (
         <DefaultTheme>
             <ReactLeafletAlert />
-            <Map center={mapPosition} zoom={13} style={mapStyle}>
+            <Map center={mapPosition} zoom={mapZoom} style={mapStyle}>
                 <Map.TileLayer
                     url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -38,7 +39,7 @@ storiesOf('Map', module)
     .addWithInfo('With locate control', () => (
         <DefaultTheme>
             <ReactLeafletAlert />
-            <Map center={mapPosition} zoom={13} style={mapStyle} locate>
+            <Map center={mapPosition} zoom={mapZoom} style={mapStyle} locate>
                 <Map.TileLayer
                     url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -46,8 +47,34 @@ storiesOf('Map', module)
             </Map>
         </DefaultTheme>
     ))
+    .addWithInfo('Marker icon', () => (
+        <DefaultTheme>
+            <ReactLeafletAlert />
+            <Map center={mapPosition} zoom={mapZoom} style={mapStyle}>
+                <Map.TileLayer
+                    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Map.Marker
+                    position={[ 51.505, -0.09 ]}
+                    shape="shape1"
+                    icon="recycle"
+                />
+                <Map.Marker
+                    position={[ 51.518, -0.135 ]}
+                    shape="shape2"
+                    icon="star"
+                />
+                <Map.Marker
+                    position={[ 51.495, -0.11 ]}
+                    shape="shape3"
+                    icon="info"
+                />
+            </Map>
+        </DefaultTheme>
+    ))
     .addWithInfo('Playground', () => {
-        const zoom = number('Zoom', 13, {
+        const zoom = number('Zoom', mapZoom, {
             range: true,
             min: 1,
             max: 18,

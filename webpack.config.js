@@ -44,7 +44,12 @@ module.exports = {
                 }),
             },
             {
+                test: /markers\/\w\.svg$/,
+                loaders: ['raw-loader'],
+            },
+            {
                 test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: /markers\/\w\.svg$/,
                 loader: 'file-loader',
                 query: {
                     name: 'assets/[name].[ext]?[hash]',
