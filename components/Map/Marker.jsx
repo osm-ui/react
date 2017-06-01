@@ -42,7 +42,7 @@ injectGlobal`
         }
 
         .osm-ui-react-marker-icon-wrapper {
-            top: -22px;
+            top: -23px;
             left: 0;
         }
     }
