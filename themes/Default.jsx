@@ -1,7 +1,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import colors from '../colors';
 
 
@@ -281,6 +281,19 @@ export const config = {
         },
     },
 };
+
+
+/* eslint-disable no-unused-expressions */
+injectGlobal`
+    .osm-ui-react-marker-default {
+        color: ${colors.anthracite1};
+
+        #colorized, #colorized * {
+            fill: ${colors.white} !important;
+        }
+    }
+`;
+/* eslint-enable */
 
 
 export const StyledDiv = styled.div`

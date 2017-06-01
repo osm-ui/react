@@ -58,6 +58,7 @@ const shapeNames = Object.keys(shapes);
 
 
 const MapMarker = ({
+    theme,
     shape,
     position,
     icon,
@@ -67,7 +68,7 @@ const MapMarker = ({
         position={position}
         icon={
             L.divIcon({
-                className: `osm-ui-react-marker-shape osm-ui-react-marker-shape-${shape}`,
+                className: `osm-ui-react-marker-shape osm-ui-react-marker-${theme} osm-ui-react-marker-shape-${shape}`,
                 html: `
                     ${shapes[shape]}
                     <div class="osm-ui-react-marker-icon-wrapper">
@@ -81,12 +82,14 @@ const MapMarker = ({
 
 MapMarker.propTypes = {
     position: PropTypes.arrayOf(PropTypes.number).isRequired,
+    theme: PropTypes.string,
     shape: PropTypes.oneOf(shapeNames),
     icon: PropTypes.string,
     // iconType: PropTypes.oneOf(['font-awesome']),
 };
 
 MapMarker.defaultProps = {
+    theme: 'default',
     shape: shapeNames[0],
     icon: null,
     // iconType: 'font-awesome',

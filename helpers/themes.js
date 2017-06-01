@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { lighten, darken } from 'polished';
+import { injectGlobal } from 'styled-components';
 
 
 export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
@@ -8,6 +9,20 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     const color3 = colors[`${colorVariant}3`];
     // const color4 = colors[`${colorVariant}4`];
     const color5 = colors[`${colorVariant}5`];
+
+
+    /* eslint-disable no-unused-expressions */
+    injectGlobal`
+        .osm-ui-react-marker-${colorVariant} {
+            color: ${colors.white};
+
+            #colorized, #colorized * {
+                fill: ${color2} !important;
+            }
+        }
+    `;
+    /* eslint-enable */
+
 
     return _.merge({}, baseConfig, {
         color: colors.white,
@@ -90,26 +105,41 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     const color3 = colors[`${colorVariant}3`];
     const color4 = colors[`${colorVariant}4`];
     const color5 = colors[`${colorVariant}5`];
+    const darkColor1 = darken(0.27, color1);
+
+
+    /* eslint-disable no-unused-expressions */
+    injectGlobal`
+        .osm-ui-react-marker-${colorVariant} {
+            color: ${darkColor1};
+
+            #colorized, #colorized * {
+                fill: ${color2} !important;
+            }
+        }
+    `;
+    /* eslint-enable */
+
 
     return _.merge({}, baseConfig, {
-        color: darken(0.27, color1),
+        color: darkColor1,
         backgroundColor: color2,
         borderColor: color1,
-        loaderColor: darken(0.27, color1),
+        loaderColor: darkColor1,
         controlColor: color4,
-        hoverControlColor: darken(0.27, color1),
+        hoverControlColor: darkColor1,
 
         column: {
             nav: {
-                color: darken(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color3,
-                hoverColor: darken(0.27, color1),
+                hoverColor: darkColor1,
                 hoverBackgroundColor: lighten(0.14, color3),
             },
         },
         toolbar: {
             button: {
-                color: darken(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -121,12 +151,12 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
             },
         },
         titlebar: {
-            color: darken(0.27, color1),
+            color: darkColor1,
             backgroundColor: color2,
             borderColor: color2,
 
             button: {
-                color: darken(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -139,7 +169,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         },
         form: {
             button: {
-                color: darken(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color5,
                 hoverBackgroundColor: color3,
@@ -151,8 +181,8 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
 
                 primary: {
                     color: color2,
-                    backgroundColor: darken(0.27, color1),
-                    borderColor: darken(0.27, color1),
+                    backgroundColor: darkColor1,
+                    borderColor: darkColor1,
                     hoverBackgroundColor: colors.lightGray5,
                     hoverBorderColor: colors.lightGray5,
                     focusBackgroundColor: colors.lightGray5,

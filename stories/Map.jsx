@@ -56,19 +56,33 @@ storiesOf('Map', module)
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 />
                 <Map.Marker
-                    position={[ 51.505, -0.09 ]}
+                    position={[ 51.515, -0.09 ]}
+                    theme="green"
                     shape="shape1"
                     icon="recycle"
                 />
                 <Map.Marker
-                    position={[ 51.518, -0.135 ]}
+                    position={[ 51.52, -0.123 ]}
+                    theme="yellow"
                     shape="shape2"
                     icon="star"
                 />
                 <Map.Marker
                     position={[ 51.495, -0.11 ]}
+                    theme="blue"
                     shape="shape3"
                     icon="info"
+                />
+                <Map.Marker
+                    position={[ 51.522, -0.053 ]}
+                    theme="rose"
+                    shape="shape3"
+                />
+                <Map.Marker
+                    position={[ 51.507, -0.155 ]}
+                    theme="red"
+                    shape="shape1"
+                    icon="plus"
                 />
             </Map>
         </DefaultTheme>
