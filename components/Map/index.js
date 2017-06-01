@@ -1,5 +1,6 @@
 import * as ReactLeaflet from 'react-leaflet';
 import Map from './Map';
+import MapMarker from './Marker';
 
 const reactLeafletComponents = [
     'AttributionControl',
@@ -31,5 +32,7 @@ const reactLeafletComponents = [
 for (const componentName of reactLeafletComponents) {
     Map[componentName] = ReactLeaflet[componentName];
 }
+
+Map.Marker = MapMarker;
 
 export default Map;

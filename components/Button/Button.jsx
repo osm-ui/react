@@ -49,7 +49,10 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
     `);
 }, '');
 
-const shapesStyle = `
+
+const StyledButton = styled.button`
+    ${props => colorsStyle(props)}
+
     &.shape-round {
         &.btn-xs {
             height: 25px;
@@ -77,16 +80,7 @@ const shapesStyle = `
     }
 `;
 
-
-const StyledButton = styled.button`
-    ${props => colorsStyle(props)}
-    ${shapesStyle}
-`;
-
-const StyledAnchor = styled.a`
-    ${props => colorsStyle(props)}
-    ${shapesStyle}
-`;
+const StyledAnchor = StyledButton.withComponent('a');
 
 
 const Button = ({

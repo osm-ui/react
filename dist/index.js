@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("polished"), require("react-fontawesome"), require("react-leaflet"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
+		module.exports = factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("polished"), require("react-leaflet"), require("leaflet"), require("react-fontawesome"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css"));
 	else if(typeof define === 'function' && define.amd)
-		define(["react", "styled-components", "prop-types", "classnames", "lodash", "polished", "react-fontawesome", "react-leaflet", "react-transition-group/CSSTransitionGroup", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet", "leaflet.locatecontrol", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
+		define(["react", "styled-components", "prop-types", "classnames", "lodash", "polished", "react-leaflet", "leaflet", "react-fontawesome", "react-transition-group/CSSTransitionGroup", "bootstrap", "font-awesome/css/font-awesome.min.css", "jquery", "leaflet.locatecontrol/dist/L.Control.Locate.css", "leaflet/dist/leaflet.css", "leaflet.locatecontrol", "react-select/dist/react-select.css", "react-virtualized-select", "react-virtualized-select/styles.css", "react-virtualized/styles.css"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("polished"), require("react-fontawesome"), require("react-leaflet"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["polished"], root["react-fontawesome"], root["react-leaflet"], root["react-transition-group/CSSTransitionGroup"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet"], root["leaflet.locatecontrol"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
+		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("polished"), require("react-leaflet"), require("leaflet"), require("react-fontawesome"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["polished"], root["react-leaflet"], root["leaflet"], root["react-fontawesome"], root["react-transition-group/CSSTransitionGroup"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet.locatecontrol"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_37__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_62__, __WEBPACK_EXTERNAL_MODULE_63__, __WEBPACK_EXTERNAL_MODULE_64__, __WEBPACK_EXTERNAL_MODULE_65__, __WEBPACK_EXTERNAL_MODULE_66__, __WEBPACK_EXTERNAL_MODULE_67__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_67__, __WEBPACK_EXTERNAL_MODULE_68__, __WEBPACK_EXTERNAL_MODULE_69__, __WEBPACK_EXTERNAL_MODULE_70__, __WEBPACK_EXTERNAL_MODULE_71__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 61);
+/******/ 	return __webpack_require__(__webpack_require__.s = 63);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -210,7 +210,8 @@ exports.StyledDiv = exports.config = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    font-family: ', ';\n'], ['\n    font-family: ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    .osm-ui-react-marker-default {\n        color: ', ';\n\n        #colorized, #colorized * {\n            fill: ', ' !important;\n        }\n    }\n'], ['\n    .osm-ui-react-marker-default {\n        color: ', ';\n\n        #colorized, #colorized * {\n            fill: ', ' !important;\n        }\n    }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    font-family: ', ';\n'], ['\n    font-family: ', ';\n']);
 
 var _react = __webpack_require__(0);
 
@@ -511,7 +512,11 @@ var config = exports.config = {
     }
 };
 
-var StyledDiv = exports.StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
+/* eslint-disable no-unused-expressions */
+(0, _styledComponents.injectGlobal)(_templateObject, _colors2.default.anthracite1, _colors2.default.white);
+/* eslint-enable */
+
+var StyledDiv = exports.StyledDiv = _styledComponents2.default.div(_templateObject2, function (props) {
     return props.theme.font;
 });
 
@@ -554,6 +559,9 @@ module.exports = require("lodash");
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+var _templateObject = _taggedTemplateLiteral(['\n        .osm-ui-react-marker-', ' {\n            color: ', ';\n\n            #colorized, #colorized * {\n                fill: ', ' !important;\n            }\n        }\n    '], ['\n        .osm-ui-react-marker-', ' {\n            color: ', ';\n\n            #colorized, #colorized * {\n                fill: ', ' !important;\n            }\n        }\n    ']);
+
 exports.buildDarkThemeConfig = buildDarkThemeConfig;
 exports.buildLightThemeConfig = buildLightThemeConfig;
 
@@ -563,7 +571,11 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 var _polished = __webpack_require__(9);
 
+var _styledComponents = __webpack_require__(1);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     var color1 = colors[colorVariant + '1'];
@@ -571,6 +583,10 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     var color3 = colors[colorVariant + '3'];
     // const color4 = colors[`${colorVariant}4`];
     var color5 = colors[colorVariant + '5'];
+
+    /* eslint-disable no-unused-expressions */
+    (0, _styledComponents.injectGlobal)(_templateObject, colorVariant, colors.white, color2);
+    /* eslint-enable */
 
     return _lodash2.default.merge({}, baseConfig, {
         color: colors.white,
@@ -652,26 +668,31 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     var color3 = colors[colorVariant + '3'];
     var color4 = colors[colorVariant + '4'];
     var color5 = colors[colorVariant + '5'];
+    var darkColor1 = (0, _polished.darken)(0.27, color1);
+
+    /* eslint-disable no-unused-expressions */
+    (0, _styledComponents.injectGlobal)(_templateObject, colorVariant, darkColor1, color2);
+    /* eslint-enable */
 
     return _lodash2.default.merge({}, baseConfig, {
-        color: (0, _polished.darken)(0.27, color1),
+        color: darkColor1,
         backgroundColor: color2,
         borderColor: color1,
-        loaderColor: (0, _polished.darken)(0.27, color1),
+        loaderColor: darkColor1,
         controlColor: color4,
-        hoverControlColor: (0, _polished.darken)(0.27, color1),
+        hoverControlColor: darkColor1,
 
         column: {
             nav: {
-                color: (0, _polished.darken)(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color3,
-                hoverColor: (0, _polished.darken)(0.27, color1),
+                hoverColor: darkColor1,
                 hoverBackgroundColor: (0, _polished.lighten)(0.14, color3)
             }
         },
         toolbar: {
             button: {
-                color: (0, _polished.darken)(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -683,12 +704,12 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
             }
         },
         titlebar: {
-            color: (0, _polished.darken)(0.27, color1),
+            color: darkColor1,
             backgroundColor: color2,
             borderColor: color2,
 
             button: {
-                color: (0, _polished.darken)(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color2,
                 hoverBackgroundColor: color3,
@@ -701,7 +722,7 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         },
         form: {
             button: {
-                color: (0, _polished.darken)(0.27, color1),
+                color: darkColor1,
                 backgroundColor: color2,
                 borderColor: color5,
                 hoverBackgroundColor: color3,
@@ -713,8 +734,8 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
 
                 primary: {
                     color: color2,
-                    backgroundColor: (0, _polished.darken)(0.27, color1),
-                    borderColor: (0, _polished.darken)(0.27, color1),
+                    backgroundColor: darkColor1,
+                    borderColor: darkColor1,
                     hoverBackgroundColor: colors.lightGray5,
                     hoverBorderColor: colors.lightGray5,
                     focusBackgroundColor: colors.lightGray5,
@@ -743,7 +764,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(55);
+var _Loader = __webpack_require__(56);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -759,6 +780,12 @@ module.exports = require("polished");
 
 /***/ }),
 /* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-leaflet");
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -830,7 +857,7 @@ ColumnTitle.displayName = 'Column.Title';
 exports.default = ColumnTitle;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -898,7 +925,7 @@ InputHint.displayName = 'Form.InputHint';
 exports.default = InputHint;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -910,9 +937,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    ', '\n'], ['\n    ', '\n    ', '\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    ', '\n    ', '\n    pointer-events: none;\n'], ['\n    ', '\n    ', '\n    pointer-events: none;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    ', '\n    ', '\n    ', '\n'], ['\n    ', '\n    ', '\n    ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    padding: 0;\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n'], ['\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    padding: 0;\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    pointer-events: none;\n'], ['\n    pointer-events: none;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n'], ['\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -930,7 +957,7 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(13);
+var _reactFontawesome = __webpack_require__(15);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
@@ -952,37 +979,65 @@ var buildInGroupSize = function buildInGroupSize(props) {
     return 'calc(' + size + ' - (' + borderWidth + ' * 2))';
 };
 
-var buildCommonStyles = function buildCommonStyles(props) {
-    return '\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    color: ' + props.theme.toolbar.button.color + ';\n    border-color: ' + props.theme.toolbar.button.borderColor + ';\n    border-style: ' + props.theme.toolbar.button.borderStyle + ';\n    border-width: ' + props.theme.toolbar.button.borderWidth + ';\n    background: ' + props.theme.toolbar.button.backgroundColor + ';\n    padding: 0;\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ' + props.theme.toolbar.xsSize + ';\n        height: ' + props.theme.toolbar.xsSize + ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ' + props.theme.toolbar.smSize + ';\n        height: ' + props.theme.toolbar.smSize + ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ' + props.theme.toolbar.mdSize + ';\n        height: ' + props.theme.toolbar.mdSize + ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ' + props.theme.toolbar.lgSize + ';\n        height: ' + props.theme.toolbar.lgSize + ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ' + buildInGroupSize(props) + ';\n        height: ' + buildInGroupSize(props) + ';\n        border-width: 0;\n    }\n';
-};
-
-var buildActiveStyles = function buildActiveStyles(props) {
-    return '\n    &.btn:hover {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.hoverBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.hoverBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.hoverBackgroundColor + ';\n        }\n    }\n\n    &.btn:focus {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.focusBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.focusBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.focusBackgroundColor + ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ' + props.theme.toolbar.button.color + ';\n        background-color: ' + props.theme.toolbar.button.activeBackgroundColor + ';\n        border-color: ' + props.theme.toolbar.button.activeBorderColor + ';\n\n        &.in-group {\n            border-color: ' + props.theme.toolbar.button.activeBackgroundColor + ';\n        }\n    }\n';
-};
-
-var buildNonButtonStyles = function buildNonButtonStyles() {
-    return '\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n';
-};
-
 var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
-    return buildCommonStyles(props);
+    return props.theme.toolbar.button.color;
 }, function (props) {
-    return buildActiveStyles(props);
+    return props.theme.toolbar.button.borderColor;
+}, function (props) {
+    return props.theme.toolbar.button.borderStyle;
+}, function (props) {
+    return props.theme.toolbar.button.borderWidth;
+}, function (props) {
+    return props.theme.toolbar.button.backgroundColor;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.xsSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.smSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.mdSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
+}, function (props) {
+    return props.theme.toolbar.lgSize;
+}, function (props) {
+    return buildInGroupSize(props);
+}, function (props) {
+    return buildInGroupSize(props);
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.hoverBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.focusBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.focusBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.focusBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.color;
+}, function (props) {
+    return props.theme.toolbar.button.activeBackgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.activeBorderColor;
+}, function (props) {
+    return props.theme.toolbar.button.activeBackgroundColor;
 });
 
-var StyledDiv = _styledComponents2.default.div(_templateObject2, function (props) {
-    return buildCommonStyles(props);
-}, function (props) {
-    return buildNonButtonStyles(props);
-});
+var StyledDiv = StyledButton.extend(_templateObject2);
 
-var StyledAnchor = _styledComponents2.default.a(_templateObject3, function (props) {
-    return buildCommonStyles(props);
-}, function (props) {
-    return buildActiveStyles(props);
-}, function (props) {
-    return buildNonButtonStyles(props);
-});
+var StyledAnchor = StyledButton.extend(_templateObject3);
 
 var ToolbarItem = function ToolbarItem(_ref) {
     var _classnames;
@@ -1085,41 +1140,22 @@ ToolbarItem.displayName = 'Toolbar.Item';
 exports.default = ToolbarItem;
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-fontawesome");
-
-/***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-leaflet");
+module.exports = require("leaflet");
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-transition-group/CSSTransitionGroup");
+module.exports = require("react-fontawesome");
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Alert = __webpack_require__(42);
-
-var _Alert2 = _interopRequireDefault(_Alert);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Alert2.default;
+module.exports = require("react-transition-group/CSSTransitionGroup");
 
 /***/ }),
 /* 17 */
@@ -1132,13 +1168,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(43);
+var _Alert = __webpack_require__(43);
 
-var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+var _Alert2 = _interopRequireDefault(_Alert);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _AppCanvas2.default;
+exports.default = _Alert2.default;
 
 /***/ }),
 /* 18 */
@@ -1151,13 +1187,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(44);
+var _AppCanvas = __webpack_require__(44);
 
-var _Button2 = _interopRequireDefault(_Button);
+var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _Button2.default;
+exports.default = _AppCanvas2.default;
 
 /***/ }),
 /* 19 */
@@ -1170,23 +1206,42 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(45);
+var _Button = __webpack_require__(45);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Button2.default;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Column = __webpack_require__(46);
 
 var _Column2 = _interopRequireDefault(_Column);
 
-var _Title = __webpack_require__(10);
+var _Title = __webpack_require__(11);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _Header = __webpack_require__(47);
+var _Header = __webpack_require__(48);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(46);
+var _Footer = __webpack_require__(47);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Nav = __webpack_require__(48);
+var _Nav = __webpack_require__(49);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -1200,7 +1255,7 @@ _Column2.default.Nav = _Nav2.default;
 exports.default = _Column2.default;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1210,27 +1265,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(49);
+var _Form = __webpack_require__(50);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(50);
+var _FormGroup = __webpack_require__(51);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(52);
+var _Label = __webpack_require__(53);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(51);
+var _Input = __webpack_require__(52);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(54);
+var _Textarea = __webpack_require__(55);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(53);
+var _Select = __webpack_require__(54);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -1245,7 +1300,7 @@ _Form2.default.Select = _Select2.default;
 exports.default = _Form2.default;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1255,13 +1310,17 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _reactLeaflet = __webpack_require__(14);
+var _reactLeaflet = __webpack_require__(10);
 
 var ReactLeaflet = _interopRequireWildcard(_reactLeaflet);
 
-var _Map = __webpack_require__(56);
+var _Map = __webpack_require__(57);
 
 var _Map2 = _interopRequireDefault(_Map);
+
+var _Marker = __webpack_require__(58);
+
+var _Marker2 = _interopRequireDefault(_Marker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1294,26 +1353,9 @@ try {
     }
 }
 
+_Map2.default.Marker = _Marker2.default;
+
 exports.default = _Map2.default;
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Titlebar = __webpack_require__(57);
-
-var _Titlebar2 = _interopRequireDefault(_Titlebar);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Titlebar2.default;
 
 /***/ }),
 /* 23 */
@@ -1326,19 +1368,38 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Toolbar = __webpack_require__(60);
+var _Titlebar = __webpack_require__(59);
+
+var _Titlebar2 = _interopRequireDefault(_Titlebar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Titlebar2.default;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Toolbar = __webpack_require__(62);
 
 var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-var _Item = __webpack_require__(12);
+var _Item = __webpack_require__(13);
 
 var _Item2 = _interopRequireDefault(_Item);
 
-var _Group = __webpack_require__(59);
+var _Group = __webpack_require__(61);
 
 var _Group2 = _interopRequireDefault(_Group);
 
-var _Collapse = __webpack_require__(58);
+var _Collapse = __webpack_require__(60);
 
 var _Collapse2 = _interopRequireDefault(_Collapse);
 
@@ -1351,7 +1412,7 @@ _Toolbar2.default.Collapse = _Collapse2.default;
 exports.default = _Toolbar2.default;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1414,7 +1475,7 @@ AnthraciteTheme.displayName = 'AnthraciteTheme';
 exports.default = AnthraciteTheme;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1477,7 +1538,7 @@ BlueTheme.displayName = 'BlueTheme';
 exports.default = BlueTheme;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1540,7 +1601,7 @@ BrownTheme.displayName = 'BrownTheme';
 exports.default = BrownTheme;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1603,7 +1664,7 @@ DarkGrayTheme.displayName = 'DarkGrayTheme';
 exports.default = DarkGrayTheme;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1682,7 +1743,7 @@ GreenTheme.displayName = 'GreenTheme';
 exports.default = GreenTheme;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1756,7 +1817,7 @@ LightGrayTheme.displayName = 'LightGrayTheme';
 exports.default = LightGrayTheme;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1835,7 +1896,7 @@ OrangeTheme.displayName = 'OrangeTheme';
 exports.default = OrangeTheme;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1898,7 +1959,7 @@ PurpleTheme.displayName = 'PurpleTheme';
 exports.default = PurpleTheme;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1977,7 +2038,7 @@ RedTheme.displayName = 'RedTheme';
 exports.default = RedTheme;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2040,7 +2101,7 @@ RoseTheme.displayName = 'RoseTheme';
 exports.default = RoseTheme;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2129,7 +2190,7 @@ TurquoiseTheme.displayName = 'TurquoiseTheme';
 exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2192,43 +2253,43 @@ YellowTheme.displayName = 'YellowTheme';
 exports.default = YellowTheme;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 module.exports = require("bootstrap");
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2309,7 +2370,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2352,7 +2413,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2364,7 +2425,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    ', '\n'], ['\n    ', '\n    ', '\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n'], ['\n    ', '\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2400,15 +2461,11 @@ var colorsStyle = function colorsStyle(props) {
     }, '');
 };
 
-var shapesStyle = '\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n';
-
 var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
     return colorsStyle(props);
-}, shapesStyle);
+});
 
-var StyledAnchor = _styledComponents2.default.a(_templateObject, function (props) {
-    return colorsStyle(props);
-}, shapesStyle);
+var StyledAnchor = StyledButton.withComponent('a');
 
 var Button = function Button(_ref) {
     var _classnames;
@@ -2461,7 +2518,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2485,7 +2542,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _CSSTransitionGroup = __webpack_require__(15);
+var _CSSTransitionGroup = __webpack_require__(16);
 
 var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
@@ -2497,11 +2554,11 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(13);
+var _reactFontawesome = __webpack_require__(15);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _Title = __webpack_require__(10);
+var _Title = __webpack_require__(11);
 
 var _Title2 = _interopRequireDefault(_Title);
 
@@ -2757,7 +2814,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2821,7 +2878,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2885,7 +2942,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2940,7 +2997,7 @@ ColumnNav.displayName = 'Column.Nav';
 exports.default = ColumnNav;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2969,7 +3026,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3054,7 +3111,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3084,7 +3141,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _InputHint = __webpack_require__(11);
+var _InputHint = __webpack_require__(12);
 
 var _InputHint2 = _interopRequireDefault(_InputHint);
 
@@ -3158,7 +3215,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3229,7 +3286,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3253,13 +3310,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(64);
+__webpack_require__(68);
 
-__webpack_require__(67);
+__webpack_require__(71);
 
-__webpack_require__(66);
+__webpack_require__(70);
 
-var _reactVirtualizedSelect = __webpack_require__(65);
+var _reactVirtualizedSelect = __webpack_require__(69);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -3337,7 +3394,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3367,7 +3424,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _InputHint = __webpack_require__(11);
+var _InputHint = __webpack_require__(12);
 
 var _InputHint2 = _interopRequireDefault(_InputHint);
 
@@ -3445,7 +3502,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3551,7 +3608,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3579,13 +3636,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(62);
+var _leaflet = __webpack_require__(14);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _reactLeaflet = __webpack_require__(14);
+var _reactLeaflet = __webpack_require__(10);
 
-__webpack_require__(63);
+__webpack_require__(67);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3677,7 +3734,94 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 57 */
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(['\n    .osm-ui-react-marker-shape {\n        width: 50px !important;\n        height: 50px !important;\n\n        svg {\n            position: absolute;\n            z-index: 1;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 50px;\n            height: 50px;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 19px;\n        }\n    }\n\n    .osm-ui-react-marker-shape-shape1,\n    .osm-ui-react-marker-shape-shape2,\n    .osm-ui-react-marker-shape-shape3 {\n        svg {\n            top: -20px;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -23px;\n            left: 0;\n        }\n    }\n'], ['\n    .osm-ui-react-marker-shape {\n        width: 50px !important;\n        height: 50px !important;\n\n        svg {\n            position: absolute;\n            z-index: 1;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 50px;\n            height: 50px;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 19px;\n        }\n    }\n\n    .osm-ui-react-marker-shape-shape1,\n    .osm-ui-react-marker-shape-shape2,\n    .osm-ui-react-marker-shape-shape3 {\n        svg {\n            top: -20px;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -23px;\n            left: 0;\n        }\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _leaflet = __webpack_require__(14);
+
+var _leaflet2 = _interopRequireDefault(_leaflet);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactLeaflet = __webpack_require__(10);
+
+var _styledComponents = __webpack_require__(1);
+
+var _ = __webpack_require__(64);
+
+var _2 = _interopRequireDefault(_);
+
+var _3 = __webpack_require__(65);
+
+var _4 = _interopRequireDefault(_3);
+
+var _5 = __webpack_require__(66);
+
+var _6 = _interopRequireDefault(_5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+/* eslint-disable no-unused-expressions */
+(0, _styledComponents.injectGlobal)(_templateObject);
+/* eslint-enable */
+
+var shapes = {
+    shape1: _2.default,
+    shape2: _4.default,
+    shape3: _6.default
+};
+var shapeNames = Object.keys(shapes);
+
+var MapMarker = function MapMarker(_ref) {
+    var theme = _ref.theme,
+        shape = _ref.shape,
+        position = _ref.position,
+        icon = _ref.icon;
+    return _react2.default.createElement(_reactLeaflet.Marker, {
+        position: position,
+        icon: _leaflet2.default.divIcon({
+            className: 'osm-ui-react-marker-shape osm-ui-react-marker-' + theme + ' osm-ui-react-marker-shape-' + shape,
+            html: '\n                    ' + shapes[shape] + '\n                    <div class="osm-ui-react-marker-icon-wrapper">\n                        <i class="fa fa-' + icon + '"></i>\n                    </div>\n                '
+        })
+    });
+};
+
+MapMarker.propTypes = {
+    position: _propTypes2.default.arrayOf(_propTypes2.default.number).isRequired,
+    theme: _propTypes2.default.string,
+    shape: _propTypes2.default.oneOf(shapeNames),
+    icon: _propTypes2.default.string
+};
+
+MapMarker.defaultProps = {
+    theme: 'default',
+    shape: shapeNames[0],
+    icon: null
+};
+
+MapMarker.displayName = 'Map.Marker';
+
+exports.default = MapMarker;
+
+/***/ }),
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3859,7 +4003,7 @@ Titlebar.displayName = 'Titlebar';
 exports.default = Titlebar;
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3892,7 +4036,7 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _Item = __webpack_require__(12);
+var _Item = __webpack_require__(13);
 
 var _Item2 = _interopRequireDefault(_Item);
 
@@ -4065,7 +4209,7 @@ ToolbarCollapse.displayName = 'Toolbar.Collapse';
 exports.default = ToolbarCollapse;
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4205,7 +4349,7 @@ ToolbarGroup.displayName = 'Toolbar.Group';
 exports.default = ToolbarGroup;
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4229,7 +4373,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _CSSTransitionGroup = __webpack_require__(15);
+var _CSSTransitionGroup = __webpack_require__(16);
 
 var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
@@ -4396,7 +4540,7 @@ Toolbar.displayName = 'Toolbar';
 exports.default = Toolbar;
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4407,17 +4551,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
 
-__webpack_require__(39);
-
-__webpack_require__(37);
+__webpack_require__(40);
 
 __webpack_require__(38);
 
+__webpack_require__(39);
+
+__webpack_require__(42);
+
 __webpack_require__(41);
 
-__webpack_require__(40);
-
-__webpack_require__(36);
+__webpack_require__(37);
 
 var _colors2 = __webpack_require__(4);
 
@@ -4427,55 +4571,55 @@ var _Default = __webpack_require__(5);
 
 var _Default2 = _interopRequireDefault(_Default);
 
-var _LightGray = __webpack_require__(29);
+var _LightGray = __webpack_require__(30);
 
 var _LightGray2 = _interopRequireDefault(_LightGray);
 
-var _DarkGray = __webpack_require__(27);
+var _DarkGray = __webpack_require__(28);
 
 var _DarkGray2 = _interopRequireDefault(_DarkGray);
 
-var _Anthracite = __webpack_require__(24);
+var _Anthracite = __webpack_require__(25);
 
 var _Anthracite2 = _interopRequireDefault(_Anthracite);
 
-var _Yellow = __webpack_require__(35);
+var _Yellow = __webpack_require__(36);
 
 var _Yellow2 = _interopRequireDefault(_Yellow);
 
-var _Orange = __webpack_require__(30);
+var _Orange = __webpack_require__(31);
 
 var _Orange2 = _interopRequireDefault(_Orange);
 
-var _Brown = __webpack_require__(26);
+var _Brown = __webpack_require__(27);
 
 var _Brown2 = _interopRequireDefault(_Brown);
 
-var _Red = __webpack_require__(32);
+var _Red = __webpack_require__(33);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _Rose = __webpack_require__(33);
+var _Rose = __webpack_require__(34);
 
 var _Rose2 = _interopRequireDefault(_Rose);
 
-var _Purple = __webpack_require__(31);
+var _Purple = __webpack_require__(32);
 
 var _Purple2 = _interopRequireDefault(_Purple);
 
-var _Blue = __webpack_require__(25);
+var _Blue = __webpack_require__(26);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Turquoise = __webpack_require__(34);
+var _Turquoise = __webpack_require__(35);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
-var _Green = __webpack_require__(28);
+var _Green = __webpack_require__(29);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _AppCanvas2 = __webpack_require__(17);
+var _AppCanvas2 = __webpack_require__(18);
 
 var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
 
@@ -4483,31 +4627,31 @@ var _Loader2 = __webpack_require__(8);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(16);
+var _Alert2 = __webpack_require__(17);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(18);
+var _Button2 = __webpack_require__(19);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(20);
+var _Form2 = __webpack_require__(21);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(19);
+var _Column2 = __webpack_require__(20);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
-var _Toolbar2 = __webpack_require__(23);
+var _Toolbar2 = __webpack_require__(24);
 
 var _Toolbar3 = _interopRequireDefault(_Toolbar2);
 
-var _Titlebar2 = __webpack_require__(22);
+var _Titlebar2 = __webpack_require__(23);
 
 var _Titlebar3 = _interopRequireDefault(_Titlebar2);
 
-var _Map2 = __webpack_require__(21);
+var _Map2 = __webpack_require__(22);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
@@ -4539,37 +4683,49 @@ exports.Titlebar = _Titlebar3.default;
 exports.Map = _Map3.default;
 
 /***/ }),
-/* 62 */
-/***/ (function(module, exports) {
-
-module.exports = require("leaflet");
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports) {
-
-module.exports = require("leaflet.locatecontrol");
-
-/***/ }),
 /* 64 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-select/dist/react-select.css");
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs10\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     transform=\"matrix(1.0285679,0,0,1.0285793,6.4857087,-1035.4834)\"\n     fill=\"#babdb6\"\n     fill-rule=\"evenodd\">\n    <path\n       id=\"path4143\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4141\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <path\n       id=\"colorized\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\" />\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 65 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-virtualized-select");
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   width=\"50\"\n   version=\"1.1\"\n   viewBox=\"0 0 50 50.000001\">\n  <defs\n     id=\"defs12\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.5462)\">\n    <path\n       id=\"path4198\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\"\n       fill=\"#d3d7cf\" />\n    <path\n       id=\"path4180\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"colorized\"\n       fill=\"#babdb6\"\n       style=\"fill:#b7b9bb;fill-opacity:1\">\n      <path\n         id=\"path4148\"\n         style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         d=\"m 24.364,1018.2 a 9.0002,14.789 0 0 0 -0.4661,-0.7149 9.0002,14.789 0 0 0 -0.70854,-0.9089 9.0002,14.789 0 0 0 -0.75984,-0.794 9.0002,14.789 0 0 0 -0.80327,-0.6612 9.0002,14.789 0 0 0 -0.84208,-0.526 9.0002,14.789 0 0 0 -0.86694,-0.388 9.0002,14.789 0 0 0 -0.8872,-0.2426 9.0002,14.789 0 0 0 -0.89968,-0.095 9.0002,14.789 0 0 0 -0.898,0.051 9.0002,14.789 0 0 0 -0.89192,0.1991 9.0002,14.789 0 0 0 -0.8747,0.3448 9.0002,14.789 0 0 0 -0.84996,0.4876 9.0002,14.789 0 0 0 -0.81564,0.6255 9.0002,14.789 0 0 0 -0.77222,0.7531 9.0002,14.789 0 0 0 -0.72564,0.8756 9.0002,14.789 0 0 0 -0.66646,0.9933 9.0002,14.789 0 0 0 -0.43471,0.7664 9.0002,14.789 0 0 0 -0.55284,1.1647 9.0002,14.789 0 0 0 -0.4832,1.2485 9.0002,14.789 0 0 0 -0.40242,1.3199 9.0002,14.789 0 0 0 -0.32007,1.3837 9.0002,14.789 0 0 0 -0.23614,1.4246 9.0002,14.789 0 0 0 -0.1476,1.4579 9.0002,14.789 0 0 0 -0.057379,1.4781 9.0002,14.789 0 0 0 0.031499,1.4757 9.0002,14.789 0 0 0 0.12117,1.4654 9.0002,14.789 0 0 0 0.2097,1.4373 9.0002,14.789 0 0 0 0.29678,1.3965 9.0002,14.789 0 0 0 0.38071,1.3404 9.0002,14.789 0 0 0 0.45822,1.2688 9.0002,14.789 0 0 0 0.53292,1.1923 9.0002,14.789 0 0 0 0.60448,1.0953 l 5.5685,9.15 c 0.43944,0.7219 1.1517,0.7218 1.5911,0 l 5.5685,-9.15 a 9.0002,14.789 0 0 0 0.43471,-0.7665 9.0002,14.789 0 0 0 0.55284,-1.1646 9.0002,14.789 0 0 0 0.4832,-1.2485 9.0002,14.789 0 0 0 0.40242,-1.3199 9.0002,14.789 0 0 0 0.32007,-1.3837 9.0002,14.789 0 0 0 0.23614,-1.4246 9.0002,14.789 0 0 0 0.1476,-1.4579 9.0002,14.789 0 0 0 0.05738,-1.4781 9.0002,14.789 0 0 0 -0.0315,-1.4756 9.0002,14.789 0 0 0 -0.12128,-1.4655 9.0002,14.789 0 0 0 -0.2097,-1.4373 9.0002,14.789 0 0 0 -0.29678,-1.3965 9.0002,14.789 0 0 0 -0.38071,-1.3404 9.0002,14.789 0 0 0 -0.45834,-1.2688 9.0002,14.789 0 0 0 -0.53281,-1.1923 9.0002,14.789 0 0 0 -0.60436,-1.0952 z\" />\n      <circle\n         id=\"path4152\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cy=\"1028.3\"\n         cx=\"18\"\n         r=\"15\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 66 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-virtualized-select/styles.css");
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.3371)\">\n    <path\n       id=\"rect4159\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4172\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"qsdf\">\n      <g\n         id=\"g4145\">\n        <rect\n           id=\"rect4141\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#3b3f45;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"18\" />\n        <rect\n           id=\"rect4143\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"17\"\n           fill=\"#888a85\" />\n      </g>\n      <circle\n         id=\"colorized\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cx=\"18\"\n         cy=\"1028.3\"\n         r=\"15\"\n         fill=\"#babdb6\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 67 */
+/***/ (function(module, exports) {
+
+module.exports = require("leaflet.locatecontrol");
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-select/dist/react-select.css");
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select");
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-virtualized-select/styles.css");
+
+/***/ }),
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");
