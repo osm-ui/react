@@ -5,7 +5,7 @@ import classnames from 'classnames';
 
 
 const StyledLabel = styled.label`
-    color: ${props => props.theme.form.label.color}
+    color: ${props => props.theme.form.label.color};
     margin-bottom: 6px;
     font-size: ${props => props.theme.form.label.fontSize};
     font-weight: ${props => props.theme.form.label.fontWeight};

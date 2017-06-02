@@ -32,8 +32,8 @@ const StyledNav = styled.nav`
     a:active,
     a:focus {
         text-decoration: none;
-        color: ${props => props.theme.column.nav.hoverColor}
-        background-color: ${props => props.theme.column.nav.hoverBackgroundColor}
+        color: ${props => props.theme.column.nav.hoverColor};
+        background-color: ${props => props.theme.column.nav.hoverBackgroundColor};
     }
 `;
 
