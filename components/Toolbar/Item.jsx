@@ -13,15 +13,18 @@ const buildInGroupSize = (props) => {
 };
 
 const StyledButton = styled.button`
-    position: relative;
-    transition: all 0.1s ease-out;
+    &,
+    &.btn {
+        position: relative;
+        transition: all 0.1s ease-out;
 
-    color: ${props => props.theme.toolbar.button.color};
-    border-color: ${props => props.theme.toolbar.button.borderColor};
-    border-style: ${props => props.theme.toolbar.button.borderStyle};
-    border-width: ${props => props.theme.toolbar.button.borderWidth};
-    background: ${props => props.theme.toolbar.button.backgroundColor};
-    padding: 0;
+        color: ${props => props.theme.toolbar.button.color};
+        border-color: ${props => props.theme.toolbar.button.borderColor};
+        border-style: ${props => props.theme.toolbar.button.borderStyle};
+        border-width: ${props => props.theme.toolbar.button.borderWidth};
+        background: ${props => props.theme.toolbar.button.backgroundColor};
+        padding: 0;
+    }
 
     &.shape-square {
         border-radius: 0;
