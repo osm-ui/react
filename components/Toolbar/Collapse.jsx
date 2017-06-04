@@ -20,55 +20,87 @@ const Collapse = styled.div`
     &.direction-row { flex-direction: row; }
     &.direction-column { flex-direction: column; }
 
-    &.direction-column.position-top-left > *,
-    &.direction-column.position-top-right > * {
+    &.direction-column.position-left-center > *,
+    &.direction-column.position-left-top > *,
+    &.direction-column.position-center-top > *,
+    &.direction-column.position-right-top > *,
+    &.direction-column.position-right-center > * {
         margin-top: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-column.position-bottom-left > *,
-    &.direction-column.position-bottom-right > * {
+    &.direction-column.position-left-bottom > *,
+    &.direction-column.position-center-bottom > *,
+    &.direction-column.position-right-bottom > * {
         margin-bottom: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-row.position-top-left > *,
-    &.direction-row.position-bottom-left > * {
+    &.direction-row.position-center-top > *,
+    &.direction-row.position-left-top > *,
+    &.direction-row.position-left-center > *,
+    &.direction-row.position-left-bottom > *,
+    &.direction-row.position-center-bottom > * {
         margin-left: ${props => props.theme.toolbar.childrenMargin};
     }
 
-    &.direction-row.position-top-right > *,
-    &.direction-row.position-bottom-right > * {
+    &.direction-row.position-right-top > *,
+    &.direction-row.position-right-center > *,
+    &.direction-row.position-right-bottom > * {
         margin-right: ${props => props.theme.toolbar.childrenMargin};
     }
 
     &.direction-column {
-        &.position-top-left,
-        &.position-bottom-left {
+        &.position-left-top,
+        &.position-left-center,
+        &.position-left-bottom {
             transform: translate(-150%, 0);
         }
 
-        &.position-top-right,
-        &.position-bottom-right {
+        &.position-center-top {
+            transform: translate(0, -200%);
+        }
+
+        &.position-center-bottom {
+            transform: translate(0, 200%);
+        }
+
+        &.position-right-top,
+        &.position-right-center,
+        &.position-right-bottom {
             transform: translate(150%, 0);
         }
     }
 
     &.direction-row {
-        &.position-top-left,
-        &.position-top-right {
+        &.position-left-top,
+        &.position-center-top,
+        &.position-right-top {
             transform: translate(0, -150%);
         }
 
-        &.position-bottom-left,
-        &.position-bottom-right {
+        &.position-left-center {
+            transform: translate(-200%, 0);
+        }
+
+        &.position-right-center {
+            transform: translate(200%, 0);
+        }
+
+        &.position-left-bottom,
+        &.position-center-bottom,
+        &.position-right-bottom {
             transform: translate(0, 150%);
         }
     }
 
     &.direction-column, &.direction-row {
-        &.position-top-left,
-        &.position-top-right,
-        &.position-bottom-right,
-        &.position-bottom-left {
+        &.position-left-top,
+        &.position-center-top,
+        &.position-right-top,
+        &.position-right-center,
+        &.position-right-bottom,
+        &.position-center-bottom,
+        &.position-left-bottom,
+        &.position-left-center {
             &.opened {
                 transform: translate(0, 0);
             }
@@ -172,8 +204,8 @@ class ToolbarCollapse extends React.Component {
         ];
 
         if (
-            (direction === 'column' && ['bottom-left', 'bottom-right'].indexOf(position) > -1)
-            || (direction === 'row' && ['top-right', 'bottom-right'].indexOf(position) > -1)
+            (direction === 'column' && ['left-bottom', 'center-bottom', 'right-bottom'].indexOf(position) > -1)
+            || (direction === 'row' && ['right-top', 'right-center', 'right-bottom'].indexOf(position) > -1)
         ) {
             elements.reverse();
         }
@@ -186,7 +218,16 @@ class ToolbarCollapse extends React.Component {
 
 
 ToolbarCollapse.propTypes = {
-    position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
+    position: PropTypes.oneOf([
+        'left-top',
+        'center-top',
+        'right-top',
+        'right-center',
+        'right-bottom',
+        'center-bottom',
+        'left-bottom',
+        'left-center',
+    ]),
     direction: PropTypes.oneOf(['row', 'column']),
     icon: PropTypes.string,
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
@@ -199,7 +240,7 @@ ToolbarCollapse.propTypes = {
 };
 
 ToolbarCollapse.defaultProps = {
-    position: 'top-left',
+    position: 'left-top',
     direction: 'column',
     icon: 'bars',
     size: '',

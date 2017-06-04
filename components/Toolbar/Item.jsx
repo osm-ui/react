@@ -18,6 +18,7 @@ const StyledButton = styled.button`
         position: relative;
         transition: all 0.1s ease-out;
 
+        pointer-events: all;
         color: ${props => props.theme.toolbar.button.color};
         border-color: ${props => props.theme.toolbar.button.borderColor};
         border-style: ${props => props.theme.toolbar.button.borderStyle};
