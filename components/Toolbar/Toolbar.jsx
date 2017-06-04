@@ -9,77 +9,177 @@ const StyledAside = styled.aside`
     z-index: 1000;
     transition: all 0.1s ease-out;
 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
-
-    &.direction-row { flex-direction: row; }
-    &.direction-column { flex-direction: column; }
+    margin: ${props => props.theme.toolbar.margin};
+    pointer-events: none;
 
     &.container-parent { position: absolute; }
     &.container-root   { position: fixed; }
 
-    &.position-top-left,
-    &.position-top-right {
-        top: 0;
-        margin-top: ${props => props.theme.toolbar.margin};
-    }
+    &.direction-row {
+        flex-direction: row;
 
-    &.position-bottom-left,
-    &.position-bottom-right {
-        bottom: 0;
-        margin-bottom: ${props => props.theme.toolbar.margin};
-    }
+        &.position-left-top,
+        &.position-left-center,
+        &.position-left-bottom {
+            justify-content: flex-start;
+        }
 
-    &.position-top-left,
-    &.position-bottom-left {
-        left: 0;
-        margin-left: ${props => props.theme.toolbar.margin};
-    }
+        &.position-center-top,
+        &.position-center-center,
+        &.position-center-bottom {
+            justify-content: center;
+        }
 
-    &.position-top-right,
-    &.position-bottom-right {
-        right: 0;
-        margin-right: ${props => props.theme.toolbar.margin};
+        &.position-right-top,
+        &.position-right-center,
+        &.position-right-bottom {
+            justify-content: flex-end;
+        }
+
+        &.position-left-top,
+        &.position-center-top,
+        &.position-right-top {
+            align-items: flex-start;
+        }
+
+        &.position-left-center,
+        &.position-center-center,
+        &.position-right-center {
+            align-items: center;
+        }
+
+        &.position-left-bottom,
+        &.position-center-bottom,
+        &.position-right-bottom {
+            align-items: flex-end;
+        }
     }
 
     &.direction-column {
-        &.position-top-left,
-        &.position-top-left.transition-appear,
-        &.position-bottom-left,
-        &.position-bottom-left.transition-appear {
+        flex-direction: column;
+
+        &.position-left-top,
+        &.position-center-top,
+        &.position-right-top {
+            justify-content: flex-start;
+        }
+
+        &.position-left-center,
+        &.position-center-center,
+        &.position-right-center {
+            justify-content: center;
+        }
+
+        &.position-left-bottom,
+        &.position-center-bottom,
+        &.position-right-bottom {
+            justify-content: flex-end;
+        }
+
+        &.position-left-top,
+        &.position-left-center,
+        &.position-left-bottom {
+            align-items: flex-start;
+        }
+
+        &.position-center-top,
+        &.position-center-center,
+        &.position-center-bottom {
+            align-items: center;
+        }
+
+        &.position-right-top,
+        &.position-right-center,
+        &.position-right-bottom {
+            align-items: flex-end;
+        }
+    }
+
+    &.direction-column {
+        &.position-left-top,
+        &.position-left-top.transition-appear,
+        &.position-left-center,
+        &.position-left-center.transition-appear,
+        &.position-left-bottom,
+        &.position-left-bottom.transition-appear {
             transform: translate(-150%, 0);
         }
 
-        &.position-top-right,
-        &.position-top-right.transition-appear,
-        &.position-bottom-right,
-        &.position-bottom-right.transition-appear {
+        &.position-center-top,
+        &.position-center-top.transition-appear {
+            transform: translate(0, -150%);
+        }
+
+        &.position-center-bottom,
+        &.position-center-bottom.transition-appear {
+            transform: translate(0, 150%);
+        }
+
+        &.position-right-top,
+        &.position-right-top.transition-appear,
+        &.position-right-center,
+        &.position-right-center.transition-appear,
+        &.position-right-bottom,
+        &.position-right-bottom.transition-appear {
             transform: translate(150%, 0);
         }
     }
 
     &.direction-row {
-        &.position-top-left,
-        &.position-top-left.transition-appear,
-        &.position-top-right,
-        &.position-top-right.transition-appear {
+        &.position-left-top,
+        &.position-left-top.transition-appear,
+        &.position-center-top,
+        &.position-center-top.transition-appear,
+        &.position-right-top,
+        &.position-right-top.transition-appear {
             transform: translate(0, -150%);
         }
 
-        &.position-bottom-left,
-        &.position-bottom-left.transition-appear,
-        &.position-bottom-right,
-        &.position-bottom-right.transition-appear {
+        &.position-left-center,
+        &.position-left-center.transition-appear {
+            transform: translate(-150%, 0);
+        }
+
+        &.position-right-center,
+        &.position-right-center.transition-appear {
+            transform: translate(150%, 0);
+        }
+
+        &.position-left-bottom,
+        &.position-left-bottom.transition-appear,
+        &.position-center-bottom,
+        &.position-center-bottom.transition-appear,
+        &.position-right-bottom,
+        &.position-right-bottom.transition-appear {
             transform: translate(0, 150%);
         }
     }
 
     &.direction-column, &.direction-row {
-        &.position-top-left,
-        &.position-top-right,
-        &.position-bottom-right,
-        &.position-bottom-left {
+        &.position-center-center,
+        &.position-center-center.transition-appear {
+            opacity: 0;
+        }
+    }
+
+    &.direction-column, &.direction-row {
+        &.position-left-top,
+        &.position-center-top,
+        &.position-right-top,
+        &.position-right-center,
+        &.position-right-bottom,
+        &.position-center-bottom,
+        &.position-left-bottom,
+        &.position-left-center,
+        &.position-center-center {
             &.opened,
             &.opened.transition-appear.transition-appear-active {
+                opacity: ${props => props.opacity};
                 transform: translate(0, 0);
             }
         }
@@ -190,11 +290,22 @@ class Toolbar extends React.Component {
 
 
 Toolbar.propTypes = {
-    position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left']),
+    position: PropTypes.oneOf([
+        'left-top',
+        'center-top',
+        'right-top',
+        'right-center',
+        'right-bottom',
+        'center-bottom',
+        'left-bottom',
+        'left-center',
+        'center-center',
+    ]),
     direction: PropTypes.oneOf(['row', 'column']),
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
     container: PropTypes.oneOf(['parent', 'root']),
+    opacity: PropTypes.number,
     opened: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
@@ -203,11 +314,12 @@ Toolbar.propTypes = {
 };
 
 Toolbar.defaultProps = {
-    position: 'top-left',
+    position: 'left-top',
     direction: 'column',
     size: '',
     shape: '',
     container: 'parent',
+    opacity: 1,
     opened: false,
     onOpen: null,
     onClose: null,
