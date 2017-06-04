@@ -179,7 +179,7 @@ const StyledAside = styled.aside`
         &.position-center-center {
             &.opened,
             &.opened.transition-appear.transition-appear-active {
-                opacity: 1;
+                opacity: ${props => props.opacity};
                 transform: translate(0, 0);
             }
         }
@@ -305,6 +305,7 @@ Toolbar.propTypes = {
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
     container: PropTypes.oneOf(['parent', 'root']),
+    opacity: PropTypes.number,
     opened: PropTypes.bool,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
@@ -318,6 +319,7 @@ Toolbar.defaultProps = {
     size: '',
     shape: '',
     container: 'parent',
+    opacity: 1,
     opened: false,
     onOpen: null,
     onClose: null,

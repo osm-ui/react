@@ -236,6 +236,20 @@ storiesOf('Toolbar', module)
             </FakeApp>
         </DefaultTheme>
     ))
+    .addWithInfo('Opacity', () => (
+        <DefaultTheme>
+            <FakeApp style={fakeAppColumnStyle}>
+                <AnthraciteTheme>
+                    <Toolbar opened size="sm" position="left-center" opacity={0.6}>
+                        <Toolbar.Item icon="chevron-left" />
+                    </Toolbar>
+                    <Toolbar opened size="sm" position="right-center" opacity={0.6}>
+                        <Toolbar.Item icon="chevron-right" />
+                    </Toolbar>
+                </AnthraciteTheme>
+            </FakeApp>
+        </DefaultTheme>
+    ))
     .addWithInfo('Group', () => (
         <DefaultTheme>
             <FakeApp style={fakeAppColumnStyle}>
