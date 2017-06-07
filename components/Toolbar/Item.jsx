@@ -38,6 +38,8 @@ const StyledButton = styled.button`
     &.xs {
         width: ${props => props.theme.toolbar.xsSize};
         height: ${props => props.theme.toolbar.xsSize};
+        min-width: ${props => props.theme.toolbar.xsSize};
+        min-height: ${props => props.theme.toolbar.xsSize};
         line-height: 0.85em;
 
         .fa {
@@ -48,6 +50,8 @@ const StyledButton = styled.button`
     &.sm {
         width: ${props => props.theme.toolbar.smSize};
         height: ${props => props.theme.toolbar.smSize};
+        min-width: ${props => props.theme.toolbar.smSize};
+        min-height: ${props => props.theme.toolbar.smSize};
         line-height: 1.04em;
 
         .fa {
@@ -58,6 +62,8 @@ const StyledButton = styled.button`
     &.md {
         width: ${props => props.theme.toolbar.mdSize};
         height: ${props => props.theme.toolbar.mdSize};
+        min-width: ${props => props.theme.toolbar.mdSize};
+        min-height: ${props => props.theme.toolbar.mdSize};
         line-height: 1.2em;
 
         .fa {
@@ -68,6 +74,8 @@ const StyledButton = styled.button`
     &.lg {
         width: ${props => props.theme.toolbar.lgSize};
         height: ${props => props.theme.toolbar.lgSize};
+        min-width: ${props => props.theme.toolbar.lgSize};
+        min-height: ${props => props.theme.toolbar.lgSize};
         line-height: 1.43em;
 
         .fa {
