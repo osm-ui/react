@@ -28,7 +28,7 @@ const StyledButton = styled.button`
     }
 
     &.shape-square {
-        border-radius: 0;
+        border-radius: ${props => props.theme.toolbar.button.borderRadius};
     }
 
     &.shape-round {

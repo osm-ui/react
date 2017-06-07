@@ -50,6 +50,7 @@ export const config = {
             borderColor: colors.lightGray3,
             borderStyle: 'solid',
             borderWidth: '1px',
+            borderRadius: '4px',
             hoverBackgroundColor: colors.lightGray5,
             hoverBorderColor: colors.lightGray3,
             focusBackgroundColor: colors.lightGray5,
@@ -80,6 +81,7 @@ export const config = {
             borderColor: colors.white,
             borderStyle: 'solid',
             borderWidth: 0,
+            borderRadius: '4px',
             hoverBackgroundColor: colors.lightGray5,
             hoverBorderColor: colors.lightGray5,
             focusBackgroundColor: colors.lightGray5,
@@ -98,6 +100,7 @@ export const config = {
             color: colors.anthracite2,
             backgroundColor: colors.white,
             borderColor: colors.lightGray3,
+            borderRadius: '4px',
             hoverBackgroundColor: colors.lightGray5,
             hoverBorderColor: colors.lightGray3,
             focusBackgroundColor: colors.lightGray5,
@@ -303,7 +306,17 @@ export const StyledDiv = styled.div`
 const DefaultTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config} {...rest}>
         <StyledDiv>
-            {children}
+            {
+                React.Children.map(children,
+                    (child) => {
+                        if (React.isValidElement(child)) {
+                            return React.cloneElement(child, rest);
+                        }
+
+                        return child;
+                    }
+                )
+            }
         </StyledDiv>
     </ThemeProvider>
 );

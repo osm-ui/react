@@ -53,6 +53,8 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 const StyledButton = styled.button`
     ${props => colorsStyle(props)}
 
+    border-radius: ${props => props.theme.form.button.borderRadius};
+
     &.shape-round {
         &.btn-xs {
             height: 25px;
@@ -106,7 +108,7 @@ const Button = ({
 
     if (type === 'anchor') {
         return (
-            <StyledAnchor className={classes} role="button" {...props} />
+            <StyledAnchor className={classes} disabled={disabled} role="button" {...props} />
         );
     }
 
@@ -117,7 +119,7 @@ const Button = ({
 
 
 Button.propTypes = {
-    type: PropTypes.oneOf(['button', 'anchor']),
+    type: PropTypes.oneOf(['button', 'submit', 'reset', 'anchor']),
     context: PropTypes.oneOf(contexts),
     shape: PropTypes.oneOf([
         'square',
