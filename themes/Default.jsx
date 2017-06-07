@@ -303,7 +303,17 @@ export const StyledDiv = styled.div`
 const DefaultTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config} {...rest}>
         <StyledDiv>
-            {children}
+            {
+                React.Children.map(children,
+                    (child) => {
+                        if (React.isValidElement(child)) {
+                            return React.cloneElement(child, rest);
+                        }
+
+                        return child;
+                    }
+                )
+            }
         </StyledDiv>
     </ThemeProvider>
 );

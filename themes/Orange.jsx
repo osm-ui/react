@@ -36,8 +36,18 @@ export const config = _.merge(
 
 const OrangeTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
-        <StyledDiv {...rest}>
-            {children}
+        <StyledDiv>
+            {
+                React.Children.map(children,
+                    (child) => {
+                        if (React.isValidElement(child)) {
+                            return React.cloneElement(child, rest);
+                        }
+
+                        return child;
+                    }
+                )
+            }
         </StyledDiv>
     </ThemeProvider>
 );
