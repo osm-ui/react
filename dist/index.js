@@ -280,6 +280,7 @@ var config = exports.config = {
             borderColor: _colors2.default.lightGray3,
             borderStyle: 'solid',
             borderWidth: '1px',
+            borderRadius: '4px',
             hoverBackgroundColor: _colors2.default.lightGray5,
             hoverBorderColor: _colors2.default.lightGray3,
             focusBackgroundColor: _colors2.default.lightGray5,
@@ -310,6 +311,7 @@ var config = exports.config = {
             borderColor: _colors2.default.white,
             borderStyle: 'solid',
             borderWidth: 0,
+            borderRadius: '4px',
             hoverBackgroundColor: _colors2.default.lightGray5,
             hoverBorderColor: _colors2.default.lightGray5,
             focusBackgroundColor: _colors2.default.lightGray5,
@@ -328,6 +330,7 @@ var config = exports.config = {
             color: _colors2.default.anthracite2,
             backgroundColor: _colors2.default.white,
             borderColor: _colors2.default.lightGray3,
+            borderRadius: '4px',
             hoverBackgroundColor: _colors2.default.lightGray5,
             hoverBorderColor: _colors2.default.lightGray3,
             focusBackgroundColor: _colors2.default.lightGray5,
@@ -530,7 +533,13 @@ var DefaultTheme = function DefaultTheme(_ref) {
         _react2.default.createElement(
             StyledDiv,
             null,
-            children
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -937,7 +946,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    &,\n    &.btn {\n        position: relative;\n        transition: all 0.1s ease-out;\n\n        pointer-events: all;\n        color: ', ';\n        border-color: ', ';\n        border-style: ', ';\n        border-width: ', ';\n        background: ', ';\n        padding: 0;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n'], ['\n    &,\n    &.btn {\n        position: relative;\n        transition: all 0.1s ease-out;\n\n        pointer-events: all;\n        color: ', ';\n        border-color: ', ';\n        border-style: ', ';\n        border-width: ', ';\n        background: ', ';\n        padding: 0;\n    }\n\n    &.shape-square {\n        border-radius: 0;\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n    &,\n    &.btn {\n        position: relative;\n        transition: all 0.1s ease-out;\n\n        pointer-events: all;\n        color: ', ';\n        border-color: ', ';\n        border-style: ', ';\n        border-width: ', ';\n        background: ', ';\n        padding: 0;\n    }\n\n    &.shape-square {\n        border-radius: ', ';\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n'], ['\n    &,\n    &.btn {\n        position: relative;\n        transition: all 0.1s ease-out;\n\n        pointer-events: all;\n        color: ', ';\n        border-color: ', ';\n        border-style: ', ';\n        border-width: ', ';\n        background: ', ';\n        padding: 0;\n    }\n\n    &.shape-square {\n        border-radius: ', ';\n    }\n\n    &.shape-round {\n        border-radius: 50%;\n    }\n\n    &.xs {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 0.85em;\n\n        .fa {\n            font-size: 0.85em;\n        }\n    }\n\n    &.sm {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.04em;\n\n        .fa {\n            font-size: 1.04em;\n        }\n    }\n\n    &.md {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.2em;\n\n        .fa {\n            font-size: 1.2em;\n        }\n    }\n\n    &.lg {\n        width: ', ';\n        height: ', ';\n        min-width: ', ';\n        min-height: ', ';\n        line-height: 1.43em;\n\n        .fa {\n            font-size: 1.43em;\n        }\n    }\n\n    &.in-group {\n        width: ', ';\n        height: ', ';\n        border-width: 0;\n    }\n\n    &.btn:hover {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:focus {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n\n    &.btn:active, &.btn.active {\n        color: ', ';\n        background-color: ', ';\n        border-color: ', ';\n\n        &.in-group {\n            border-color: ', ';\n        }\n    }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    pointer-events: none;\n'], ['\n    pointer-events: none;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n'], ['\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 500;\n']);
 
@@ -989,6 +998,8 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
     return props.theme.toolbar.button.borderWidth;
 }, function (props) {
     return props.theme.toolbar.button.backgroundColor;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
 }, function (props) {
     return props.theme.toolbar.xsSize;
 }, function (props) {
@@ -1476,8 +1487,14 @@ var AnthraciteTheme = function AnthraciteTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1539,8 +1556,14 @@ var BlueTheme = function BlueTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1602,8 +1625,14 @@ var BrownTheme = function BrownTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1665,8 +1694,14 @@ var DarkGrayTheme = function DarkGrayTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1744,8 +1779,14 @@ var GreenTheme = function GreenTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1818,8 +1859,14 @@ var LightGrayTheme = function LightGrayTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1897,8 +1944,14 @@ var OrangeTheme = function OrangeTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -1960,8 +2013,14 @@ var PurpleTheme = function PurpleTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -2039,8 +2098,14 @@ var RedTheme = function RedTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -2102,8 +2167,14 @@ var RoseTheme = function RoseTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -2191,8 +2262,14 @@ var TurquoiseTheme = function TurquoiseTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -2254,8 +2331,14 @@ var YellowTheme = function YellowTheme(_ref) {
         { theme: config },
         _react2.default.createElement(
             _Default.StyledDiv,
-            rest,
-            children
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
         )
     );
 };
@@ -2441,7 +2524,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n'], ['\n    ', '\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    border-radius: ', ';\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n'], ['\n    ', '\n\n    border-radius: ', ';\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2479,6 +2562,8 @@ var colorsStyle = function colorsStyle(props) {
 
 var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
     return colorsStyle(props);
+}, function (props) {
+    return props.theme.form.button.borderRadius;
 });
 
 var StyledAnchor = StyledButton.withComponent('a');
@@ -2501,14 +2586,14 @@ var Button = function Button(_ref) {
     }, _defineProperty(_classnames, 'shape-' + shape, true), _defineProperty(_classnames, 'btn-' + context, true), _defineProperty(_classnames, 'btn-' + size, true), _defineProperty(_classnames, 'btn-block', block), _defineProperty(_classnames, 'active', active), _defineProperty(_classnames, 'disabled', disabled), _classnames));
 
     if (type === 'anchor') {
-        return _react2.default.createElement(StyledAnchor, _extends({ className: classes, role: 'button' }, props));
+        return _react2.default.createElement(StyledAnchor, _extends({ className: classes, disabled: disabled, role: 'button' }, props));
     }
 
     return _react2.default.createElement(StyledButton, _extends({ className: classes, type: type, disabled: disabled }, props));
 };
 
 Button.propTypes = {
-    type: _propTypes2.default.oneOf(['button', 'anchor']),
+    type: _propTypes2.default.oneOf(['button', 'submit', 'reset', 'anchor']),
     context: _propTypes2.default.oneOf(contexts),
     shape: _propTypes2.default.oneOf(['square', 'round']),
     size: _propTypes2.default.oneOf(['lg', 'md', 'sm', 'xs']),
@@ -4237,7 +4322,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-top-right-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-bottom-left-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n'], ['\n    display: flex;\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-top-right-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: 0;\n            border-bottom-left-radius: 0;\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: 0;\n            border-bottom-right-radius: 0;\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    display: flex;\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n'], ['\n    display: flex;\n    background: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n\n    &.direction-row { flex-direction: row; }\n    &.direction-column { flex-direction: column; }\n\n    &.direction-column > * {\n        margin-bottom: ', ';\n    }\n\n    &.direction-row > * {\n        margin-right: ', ';\n    }\n\n    &.direction-column :last-child,\n    &.direction-row :last-child {\n        margin: 0;\n    }\n\n    &.direction-column {\n        &.first-shape-square {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-square {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-top-right-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-bottom-left-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n\n    &.direction-row {\n        &.first-shape-square {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-square {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n\n        &.first-shape-round {\n            border-top-left-radius: ', ';\n            border-bottom-left-radius: ', ';\n        }\n\n        &.last-shape-round {\n            border-top-right-radius: ', ';\n            border-bottom-right-radius: ', ';\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4276,6 +4361,14 @@ var Group = _styledComponents2.default.div(_templateObject, function (props) {
 }, function (props) {
     return props.theme.toolbar.childrenMargin;
 }, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
     return props.theme.toolbar[props.firstSize + 'Size'];
 }, function (props) {
     return props.theme.toolbar[props.firstSize + 'Size'];
@@ -4283,6 +4376,14 @@ var Group = _styledComponents2.default.div(_templateObject, function (props) {
     return props.theme.toolbar[props.lastSize + 'Size'];
 }, function (props) {
     return props.theme.toolbar[props.lastSize + 'Size'];
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
+}, function (props) {
+    return props.theme.toolbar.button.borderRadius;
 }, function (props) {
     return props.theme.toolbar[props.firstSize + 'Size'];
 }, function (props) {
