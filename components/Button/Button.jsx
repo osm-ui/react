@@ -53,6 +53,8 @@ const colorsStyle = props => contexts.reduce((reducedStyles, context) => {
 const StyledButton = styled.button`
     ${props => colorsStyle(props)}
 
+    border-radius: ${props => props.theme.form.button.borderRadius};
+
     &.shape-round {
         &.btn-xs {
             height: 25px;

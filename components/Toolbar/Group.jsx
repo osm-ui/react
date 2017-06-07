@@ -29,13 +29,13 @@ const Group = styled.div`
 
     &.direction-column {
         &.first-shape-square {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            border-top-left-radius: ${props => props.theme.toolbar.button.borderRadius};
+            border-top-right-radius: ${props => props.theme.toolbar.button.borderRadius};
         }
 
         &.last-shape-square {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            border-bottom-left-radius: ${props => props.theme.toolbar.button.borderRadius};
+            border-bottom-right-radius: ${props => props.theme.toolbar.button.borderRadius};
         }
 
         &.first-shape-round {
@@ -51,13 +51,13 @@ const Group = styled.div`
 
     &.direction-row {
         &.first-shape-square {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+            border-top-left-radius: ${props => props.theme.toolbar.button.borderRadius};
+            border-bottom-left-radius: ${props => props.theme.toolbar.button.borderRadius};
         }
 
         &.last-shape-square {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-top-right-radius: ${props => props.theme.toolbar.button.borderRadius};
+            border-bottom-right-radius: ${props => props.theme.toolbar.button.borderRadius};
         }
 
         &.first-shape-round {
