@@ -8,6 +8,20 @@ import KnobsAlert from './components/KnobsAlert';
 
 import {
     DefaultTheme,
+    WhiteTheme,
+    LightGrayTheme,
+    DarkGrayTheme,
+    AnthraciteTheme,
+    YellowTheme,
+    OrangeTheme,
+    BrownTheme,
+    RedTheme,
+    RoseTheme,
+    PurpleTheme,
+    BlueTheme,
+    SkyTheme,
+    TurquoiseTheme,
+    GreenTheme,
     Button,
 } from '../index';
 
@@ -35,7 +49,70 @@ storiesOf('Button', module)
             <Button context="link" onClick={action('onClick link')}>Link</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('Types', () => (
+    .addWithInfo('Theme', () => (
+        <div>
+            <DefaultTheme>
+                <Button onClick={action('onClick Default')}>Default</Button>
+            </DefaultTheme>
+            {' '}
+            <WhiteTheme>
+                <Button onClick={action('onClick White')}>White</Button>
+            </WhiteTheme>
+            {' '}
+            <LightGrayTheme>
+                <Button onClick={action('onClick LightGray')}>LightGray</Button>
+            </LightGrayTheme>
+            {' '}
+            <DarkGrayTheme>
+                <Button onClick={action('onClick DarkGray')}>DarkGray</Button>
+            </DarkGrayTheme>
+            {' '}
+            <AnthraciteTheme>
+                <Button onClick={action('onClick Anthracite')}>Anthracite</Button>
+            </AnthraciteTheme>
+            {' '}
+            <YellowTheme>
+                <Button onClick={action('onClick Yellow')}>Yellow</Button>
+            </YellowTheme>
+            {' '}
+            <OrangeTheme>
+                <Button onClick={action('onClick Orange')}>Orange</Button>
+            </OrangeTheme>
+            {' '}
+            <BrownTheme>
+                <Button onClick={action('onClick Brown')}>Brown</Button>
+            </BrownTheme>
+            {' '}
+            <RedTheme>
+                <Button onClick={action('onClick Red')}>Red</Button>
+            </RedTheme>
+            {' '}
+            <RoseTheme>
+                <Button onClick={action('onClick Rose')}>Rose</Button>
+            </RoseTheme>
+            {' '}
+            <PurpleTheme>
+                <Button onClick={action('onClick Purple')}>Purple</Button>
+            </PurpleTheme>
+            {' '}
+            <BlueTheme>
+                <Button onClick={action('onClick Blue')}>Blue</Button>
+            </BlueTheme>
+            {' '}
+            <SkyTheme>
+                <Button onClick={action('onClick Sky')}>Sky</Button>
+            </SkyTheme>
+            {' '}
+            <TurquoiseTheme>
+                <Button onClick={action('onClick Turquoise')}>Turquoise</Button>
+            </TurquoiseTheme>
+            {' '}
+            <GreenTheme>
+                <Button onClick={action('onClick Green')}>Green</Button>
+            </GreenTheme>
+        </div>
+    ))
+    .addWithInfo('Type', () => (
         <DefaultTheme>
             <Button type="button" onClick={action('onClick button')}>Button (default)</Button>
             {' '}
@@ -53,7 +130,7 @@ storiesOf('Button', module)
             <Button shape="square" onClick={action('onClick square')}>Square</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('Sizes', () => (
+    .addWithInfo('Size', () => (
         <DefaultTheme>
             <Button size="lg" onClick={action('onClick lg')}>Large button</Button>
             {' '}
@@ -70,7 +147,7 @@ storiesOf('Button', module)
             <Button block size="lg" onClick={action('onClick default')}>Block level button</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('States', () => (
+    .addWithInfo('State', () => (
         <DefaultTheme>
             <Button active onClick={action('onClick')}>Active</Button>
             {' '}
@@ -84,24 +161,61 @@ storiesOf('Button', module)
         const disabled = boolean('Disabled');
         const shape = select('Shape', ['round', 'square'], 'round');
         const size = select('Size', ['lg', 'md', 'sm', 'xs'], 'md');
-        const context = select('Context', ['default', 'info', 'primary', 'success', 'warning', 'danger'], 'default');
         const type = select('Type', ['button', 'submit', 'reset', 'anchor'], 'button');
+        const context = select('Context', ['default', 'info', 'primary', 'success', 'warning', 'danger'], 'default');
+        const theme = select('Theme', [
+            'Default',
+            'White',
+            'LightGray',
+            'DarkGray',
+            'Anthracite',
+            'Yellow',
+            'Orange',
+            'Brown',
+            'Red',
+            'Rose',
+            'Purple',
+            'Blue',
+            'Sky',
+            'Turquoise',
+            'Green',
+        ], 'Default');
+        const themes = {
+            DefaultTheme,
+            WhiteTheme,
+            LightGrayTheme,
+            DarkGrayTheme,
+            AnthraciteTheme,
+            YellowTheme,
+            OrangeTheme,
+            BrownTheme,
+            RedTheme,
+            RoseTheme,
+            PurpleTheme,
+            BlueTheme,
+            SkyTheme,
+            TurquoiseTheme,
+            GreenTheme,
+        };
+        const ThemeElement = themes[`${theme}Theme`];
 
         return (
             <DefaultTheme>
                 <KnobsAlert />
-                <Button
-                    block={block}
-                    active={active}
-                    disabled={disabled}
-                    shape={shape}
-                    size={size}
-                    context={context}
-                    type={type}
-                    onClick={action('onClick')}
-                >
-                    {label}
-                </Button>
+                <ThemeElement>
+                    <Button
+                        block={block}
+                        active={active}
+                        disabled={disabled}
+                        shape={shape}
+                        size={size}
+                        context={context}
+                        type={type}
+                        onClick={action('onClick')}
+                    >
+                        {label}
+                    </Button>
+                </ThemeElement>
             </DefaultTheme>
         );
     });

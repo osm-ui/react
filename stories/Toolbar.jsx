@@ -20,6 +20,7 @@ import {
     RoseTheme,
     PurpleTheme,
     BlueTheme,
+    SkyTheme,
     TurquoiseTheme,
     GreenTheme,
     Toolbar,
@@ -348,6 +349,7 @@ storiesOf('Toolbar', module)
             'Rose',
             'Purple',
             'Blue',
+            'Sky',
             'Turquoise',
             'Green',
         ], 'Turquoise');
@@ -364,6 +366,7 @@ storiesOf('Toolbar', module)
             RoseTheme,
             PurpleTheme,
             BlueTheme,
+            SkyTheme,
             TurquoiseTheme,
             GreenTheme,
         };

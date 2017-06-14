@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react"), require("styled-components"), require("prop-types"), require("classnames"), require("lodash"), require("polished"), require("react-leaflet"), require("leaflet"), require("react-fontawesome"), require("react-transition-group/CSSTransitionGroup"), require("bootstrap"), require("font-awesome/css/font-awesome.min.css"), require("jquery"), require("leaflet.locatecontrol/dist/L.Control.Locate.css"), require("leaflet/dist/leaflet.css"), require("leaflet.locatecontrol"), require("react-select/dist/react-select.css"), require("react-virtualized-select"), require("react-virtualized-select/styles.css"), require("react-virtualized/styles.css")) : factory(root["react"], root["styled-components"], root["prop-types"], root["classnames"], root["lodash"], root["polished"], root["react-leaflet"], root["leaflet"], root["react-fontawesome"], root["react-transition-group/CSSTransitionGroup"], root["bootstrap"], root["font-awesome/css/font-awesome.min.css"], root["jquery"], root["leaflet.locatecontrol/dist/L.Control.Locate.css"], root["leaflet/dist/leaflet.css"], root["leaflet.locatecontrol"], root["react-select/dist/react-select.css"], root["react-virtualized-select"], root["react-virtualized-select/styles.css"], root["react-virtualized/styles.css"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_38__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_67__, __WEBPACK_EXTERNAL_MODULE_68__, __WEBPACK_EXTERNAL_MODULE_69__, __WEBPACK_EXTERNAL_MODULE_70__, __WEBPACK_EXTERNAL_MODULE_71__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_14__, __WEBPACK_EXTERNAL_MODULE_15__, __WEBPACK_EXTERNAL_MODULE_16__, __WEBPACK_EXTERNAL_MODULE_39__, __WEBPACK_EXTERNAL_MODULE_40__, __WEBPACK_EXTERNAL_MODULE_41__, __WEBPACK_EXTERNAL_MODULE_42__, __WEBPACK_EXTERNAL_MODULE_43__, __WEBPACK_EXTERNAL_MODULE_68__, __WEBPACK_EXTERNAL_MODULE_69__, __WEBPACK_EXTERNAL_MODULE_70__, __WEBPACK_EXTERNAL_MODULE_71__, __WEBPACK_EXTERNAL_MODULE_72__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 63);
+/******/ 	return __webpack_require__(__webpack_require__.s = 64);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -181,6 +181,12 @@ var colors = {
     blue4: '#97cef9',
     blue5: '#c2e2fb',
 
+    sky1: '#0cacd7',
+    sky2: '#5cd5f6',
+    sky3: '#8ce1f9',
+    sky4: '#b2ebfb',
+    sky5: '#d0f3fd',
+
     turquoise1: '#00948d',
     turquoise2: '#00c2b8',
     turquoise3: '#5cd7d1',
@@ -206,7 +212,7 @@ exports.default = colors;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.StyledDiv = exports.config = undefined;
+exports.StyledSpan = exports.config = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -519,7 +525,7 @@ var config = exports.config = {
 (0, _styledComponents.injectGlobal)(_templateObject, _colors2.default.anthracite1, _colors2.default.white);
 /* eslint-enable */
 
-var StyledDiv = exports.StyledDiv = _styledComponents2.default.div(_templateObject2, function (props) {
+var StyledSpan = exports.StyledSpan = _styledComponents2.default.span(_templateObject2, function (props) {
     return props.theme.font;
 });
 
@@ -531,7 +537,7 @@ var DefaultTheme = function DefaultTheme(_ref) {
         _styledComponents.ThemeProvider,
         _extends({ theme: config }, rest),
         _react2.default.createElement(
-            StyledDiv,
+            StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -773,7 +779,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(56);
+var _Loader = __webpack_require__(57);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -1195,7 +1201,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Alert = __webpack_require__(43);
+var _Alert = __webpack_require__(44);
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
@@ -1214,7 +1220,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(44);
+var _AppCanvas = __webpack_require__(45);
 
 var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
 
@@ -1233,7 +1239,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(45);
+var _Button = __webpack_require__(46);
 
 var _Button2 = _interopRequireDefault(_Button);
 
@@ -1252,7 +1258,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(46);
+var _Column = __webpack_require__(47);
 
 var _Column2 = _interopRequireDefault(_Column);
 
@@ -1260,15 +1266,15 @@ var _Title = __webpack_require__(11);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _Header = __webpack_require__(48);
+var _Header = __webpack_require__(49);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(47);
+var _Footer = __webpack_require__(48);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Nav = __webpack_require__(49);
+var _Nav = __webpack_require__(50);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -1292,27 +1298,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(50);
+var _Form = __webpack_require__(51);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(51);
+var _FormGroup = __webpack_require__(52);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(53);
+var _Label = __webpack_require__(54);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(52);
+var _Input = __webpack_require__(53);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(55);
+var _Textarea = __webpack_require__(56);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(54);
+var _Select = __webpack_require__(55);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -1341,11 +1347,11 @@ var _reactLeaflet = __webpack_require__(10);
 
 var ReactLeaflet = _interopRequireWildcard(_reactLeaflet);
 
-var _Map = __webpack_require__(57);
+var _Map = __webpack_require__(58);
 
 var _Map2 = _interopRequireDefault(_Map);
 
-var _Marker = __webpack_require__(58);
+var _Marker = __webpack_require__(59);
 
 var _Marker2 = _interopRequireDefault(_Marker);
 
@@ -1395,7 +1401,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Titlebar = __webpack_require__(59);
+var _Titlebar = __webpack_require__(60);
 
 var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
@@ -1414,7 +1420,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Toolbar = __webpack_require__(62);
+var _Toolbar = __webpack_require__(63);
 
 var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
@@ -1422,11 +1428,11 @@ var _Item = __webpack_require__(13);
 
 var _Item2 = _interopRequireDefault(_Item);
 
-var _Group = __webpack_require__(61);
+var _Group = __webpack_require__(62);
 
 var _Group2 = _interopRequireDefault(_Group);
 
-var _Collapse = __webpack_require__(60);
+var _Collapse = __webpack_require__(61);
 
 var _Collapse2 = _interopRequireDefault(_Collapse);
 
@@ -1486,7 +1492,7 @@ var AnthraciteTheme = function AnthraciteTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1555,7 +1561,7 @@ var BlueTheme = function BlueTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1624,7 +1630,7 @@ var BrownTheme = function BrownTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1693,7 +1699,7 @@ var DarkGrayTheme = function DarkGrayTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1778,7 +1784,7 @@ var GreenTheme = function GreenTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1858,7 +1864,7 @@ var LightGrayTheme = function LightGrayTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -1943,7 +1949,7 @@ var OrangeTheme = function OrangeTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2012,7 +2018,7 @@ var PurpleTheme = function PurpleTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2097,7 +2103,7 @@ var RedTheme = function RedTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2166,7 +2172,7 @@ var RoseTheme = function RoseTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2189,6 +2195,75 @@ exports.default = RoseTheme;
 
 /***/ }),
 /* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.config = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _lodash = __webpack_require__(6);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _colors = __webpack_require__(4);
+
+var _colors2 = _interopRequireDefault(_colors);
+
+var _themes = __webpack_require__(7);
+
+var _Default = __webpack_require__(5);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'sky'), {});
+
+var SkyTheme = function SkyTheme(_ref) {
+    var children = _ref.children,
+        rest = _objectWithoutProperties(_ref, ['children']);
+
+    return _react2.default.createElement(
+        _styledComponents.ThemeProvider,
+        { theme: config },
+        _react2.default.createElement(
+            _Default.StyledSpan,
+            null,
+            _react2.default.Children.map(children, function (child) {
+                if (_react2.default.isValidElement(child)) {
+                    return _react2.default.cloneElement(child, rest);
+                }
+
+                return child;
+            })
+        )
+    );
+};
+
+SkyTheme.propTypes = {
+    children: _propTypes2.default.node.isRequired
+};
+
+SkyTheme.displayName = 'SkyTheme';
+
+exports.default = SkyTheme;
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2261,7 +2336,7 @@ var TurquoiseTheme = function TurquoiseTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2283,7 +2358,7 @@ TurquoiseTheme.displayName = 'TurquoiseTheme';
 exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2330,7 +2405,7 @@ var YellowTheme = function YellowTheme(_ref) {
         _styledComponents.ThemeProvider,
         { theme: config },
         _react2.default.createElement(
-            _Default.StyledDiv,
+            _Default.StyledSpan,
             null,
             _react2.default.Children.map(children, function (child) {
                 if (_react2.default.isValidElement(child)) {
@@ -2352,43 +2427,43 @@ YellowTheme.displayName = 'YellowTheme';
 exports.default = YellowTheme;
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 module.exports = require("bootstrap");
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 module.exports = require("jquery");
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2469,7 +2544,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2512,7 +2587,7 @@ AppCanvas.displayName = 'AppCanvas';
 exports.default = AppCanvas;
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2619,7 +2694,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2915,7 +2990,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2979,7 +3054,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3043,7 +3118,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3098,7 +3173,7 @@ ColumnNav.displayName = 'Column.Nav';
 exports.default = ColumnNav;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3127,7 +3202,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3212,7 +3287,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3316,7 +3391,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3387,7 +3462,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3411,13 +3486,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(68);
+__webpack_require__(69);
+
+__webpack_require__(72);
 
 __webpack_require__(71);
 
-__webpack_require__(70);
-
-var _reactVirtualizedSelect = __webpack_require__(69);
+var _reactVirtualizedSelect = __webpack_require__(70);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -3495,7 +3570,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3603,7 +3678,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3709,7 +3784,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3743,7 +3818,7 @@ var _leaflet2 = _interopRequireDefault(_leaflet);
 
 var _reactLeaflet = __webpack_require__(10);
 
-__webpack_require__(67);
+__webpack_require__(68);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3835,7 +3910,7 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3863,15 +3938,15 @@ var _reactLeaflet = __webpack_require__(10);
 
 var _styledComponents = __webpack_require__(1);
 
-var _ = __webpack_require__(64);
+var _ = __webpack_require__(65);
 
 var _2 = _interopRequireDefault(_);
 
-var _3 = __webpack_require__(65);
+var _3 = __webpack_require__(66);
 
 var _4 = _interopRequireDefault(_3);
 
-var _5 = __webpack_require__(66);
+var _5 = __webpack_require__(67);
 
 var _6 = _interopRequireDefault(_5);
 
@@ -3922,7 +3997,7 @@ MapMarker.displayName = 'Map.Marker';
 exports.default = MapMarker;
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4104,7 +4179,7 @@ Titlebar.displayName = 'Titlebar';
 exports.default = Titlebar;
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4310,7 +4385,7 @@ ToolbarCollapse.displayName = 'Toolbar.Collapse';
 exports.default = ToolbarCollapse;
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4466,7 +4541,7 @@ ToolbarGroup.displayName = 'Toolbar.Group';
 exports.default = ToolbarGroup;
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4655,7 +4730,7 @@ Toolbar.displayName = 'Toolbar';
 exports.default = Toolbar;
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4664,19 +4739,19 @@ exports.default = Toolbar;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
-
-__webpack_require__(40);
-
-__webpack_require__(38);
-
-__webpack_require__(39);
-
-__webpack_require__(42);
+exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
 
 __webpack_require__(41);
 
-__webpack_require__(37);
+__webpack_require__(39);
+
+__webpack_require__(40);
+
+__webpack_require__(43);
+
+__webpack_require__(42);
+
+__webpack_require__(38);
 
 var _colors2 = __webpack_require__(4);
 
@@ -4698,7 +4773,7 @@ var _Anthracite = __webpack_require__(25);
 
 var _Anthracite2 = _interopRequireDefault(_Anthracite);
 
-var _Yellow = __webpack_require__(36);
+var _Yellow = __webpack_require__(37);
 
 var _Yellow2 = _interopRequireDefault(_Yellow);
 
@@ -4726,7 +4801,11 @@ var _Blue = __webpack_require__(26);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Turquoise = __webpack_require__(35);
+var _Sky = __webpack_require__(35);
+
+var _Sky2 = _interopRequireDefault(_Sky);
+
+var _Turquoise = __webpack_require__(36);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
@@ -4785,6 +4864,7 @@ exports.RedTheme = _Red2.default;
 exports.RoseTheme = _Rose2.default;
 exports.PurpleTheme = _Purple2.default;
 exports.BlueTheme = _Blue2.default;
+exports.SkyTheme = _Sky2.default;
 exports.TurquoiseTheme = _Turquoise2.default;
 exports.GreenTheme = _Green2.default;
 exports.AppCanvas = _AppCanvas3.default;
@@ -4798,49 +4878,49 @@ exports.Titlebar = _Titlebar3.default;
 exports.Map = _Map3.default;
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports) {
 
 module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs10\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     transform=\"matrix(1.0285679,0,0,1.0285793,6.4857087,-1035.4834)\"\n     fill=\"#babdb6\"\n     fill-rule=\"evenodd\">\n    <path\n       id=\"path4143\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4141\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <path\n       id=\"colorized\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\" />\n  </g>\n</svg>\n"
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports) {
 
 module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   width=\"50\"\n   version=\"1.1\"\n   viewBox=\"0 0 50 50.000001\">\n  <defs\n     id=\"defs12\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.5462)\">\n    <path\n       id=\"path4198\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\"\n       fill=\"#d3d7cf\" />\n    <path\n       id=\"path4180\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"colorized\"\n       fill=\"#babdb6\"\n       style=\"fill:#b7b9bb;fill-opacity:1\">\n      <path\n         id=\"path4148\"\n         style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         d=\"m 24.364,1018.2 a 9.0002,14.789 0 0 0 -0.4661,-0.7149 9.0002,14.789 0 0 0 -0.70854,-0.9089 9.0002,14.789 0 0 0 -0.75984,-0.794 9.0002,14.789 0 0 0 -0.80327,-0.6612 9.0002,14.789 0 0 0 -0.84208,-0.526 9.0002,14.789 0 0 0 -0.86694,-0.388 9.0002,14.789 0 0 0 -0.8872,-0.2426 9.0002,14.789 0 0 0 -0.89968,-0.095 9.0002,14.789 0 0 0 -0.898,0.051 9.0002,14.789 0 0 0 -0.89192,0.1991 9.0002,14.789 0 0 0 -0.8747,0.3448 9.0002,14.789 0 0 0 -0.84996,0.4876 9.0002,14.789 0 0 0 -0.81564,0.6255 9.0002,14.789 0 0 0 -0.77222,0.7531 9.0002,14.789 0 0 0 -0.72564,0.8756 9.0002,14.789 0 0 0 -0.66646,0.9933 9.0002,14.789 0 0 0 -0.43471,0.7664 9.0002,14.789 0 0 0 -0.55284,1.1647 9.0002,14.789 0 0 0 -0.4832,1.2485 9.0002,14.789 0 0 0 -0.40242,1.3199 9.0002,14.789 0 0 0 -0.32007,1.3837 9.0002,14.789 0 0 0 -0.23614,1.4246 9.0002,14.789 0 0 0 -0.1476,1.4579 9.0002,14.789 0 0 0 -0.057379,1.4781 9.0002,14.789 0 0 0 0.031499,1.4757 9.0002,14.789 0 0 0 0.12117,1.4654 9.0002,14.789 0 0 0 0.2097,1.4373 9.0002,14.789 0 0 0 0.29678,1.3965 9.0002,14.789 0 0 0 0.38071,1.3404 9.0002,14.789 0 0 0 0.45822,1.2688 9.0002,14.789 0 0 0 0.53292,1.1923 9.0002,14.789 0 0 0 0.60448,1.0953 l 5.5685,9.15 c 0.43944,0.7219 1.1517,0.7218 1.5911,0 l 5.5685,-9.15 a 9.0002,14.789 0 0 0 0.43471,-0.7665 9.0002,14.789 0 0 0 0.55284,-1.1646 9.0002,14.789 0 0 0 0.4832,-1.2485 9.0002,14.789 0 0 0 0.40242,-1.3199 9.0002,14.789 0 0 0 0.32007,-1.3837 9.0002,14.789 0 0 0 0.23614,-1.4246 9.0002,14.789 0 0 0 0.1476,-1.4579 9.0002,14.789 0 0 0 0.05738,-1.4781 9.0002,14.789 0 0 0 -0.0315,-1.4756 9.0002,14.789 0 0 0 -0.12128,-1.4655 9.0002,14.789 0 0 0 -0.2097,-1.4373 9.0002,14.789 0 0 0 -0.29678,-1.3965 9.0002,14.789 0 0 0 -0.38071,-1.3404 9.0002,14.789 0 0 0 -0.45834,-1.2688 9.0002,14.789 0 0 0 -0.53281,-1.1923 9.0002,14.789 0 0 0 -0.60436,-1.0952 z\" />\n      <circle\n         id=\"path4152\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cy=\"1028.3\"\n         cx=\"18\"\n         r=\"15\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.3371)\">\n    <path\n       id=\"rect4159\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4172\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"qsdf\">\n      <g\n         id=\"g4145\">\n        <rect\n           id=\"rect4141\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#3b3f45;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"18\" />\n        <rect\n           id=\"rect4143\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"17\"\n           fill=\"#888a85\" />\n      </g>\n      <circle\n         id=\"colorized\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cx=\"18\"\n         cy=\"1028.3\"\n         r=\"15\"\n         fill=\"#babdb6\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol");
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-select/dist/react-select.css");
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select");
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select/styles.css");
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");

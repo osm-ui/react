@@ -21,6 +21,7 @@ import {
     RoseTheme,
     PurpleTheme,
     BlueTheme,
+    SkyTheme,
     TurquoiseTheme,
     GreenTheme,
     Column,
@@ -206,6 +207,7 @@ storiesOf('Column', module)
             'Rose',
             'Purple',
             'Blue',
+            'Sky',
             'Turquoise',
             'Green',
         ], 'Red');
@@ -222,6 +224,7 @@ storiesOf('Column', module)
             RoseTheme,
             PurpleTheme,
             BlueTheme,
+            SkyTheme,
             TurquoiseTheme,
             GreenTheme,
         };

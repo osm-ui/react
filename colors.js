@@ -69,6 +69,12 @@ const colors = {
     blue4:         '#97cef9',
     blue5:         '#c2e2fb',
 
+    sky1:          '#0cacd7',
+    sky2:          '#5cd5f6',
+    sky3:          '#8ce1f9',
+    sky4:          '#b2ebfb',
+    sky5:          '#d0f3fd',
+
     turquoise1:    '#00948d',
     turquoise2:    '#00c2b8',
     turquoise3:    '#5cd7d1',
