@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import _ from 'lodash';
 import colors from '../colors';
-import { buildDarkThemeConfig } from '../helpers/themes';
+import { buildLightThemeConfig } from '../helpers/themes';
 import {
     config as defaultThemeConfig,
     StyledSpan,
@@ -13,12 +13,12 @@ import {
 
 export const config = _.merge(
     {},
-    buildDarkThemeConfig(defaultThemeConfig, colors, 'purple'),
+    buildLightThemeConfig(defaultThemeConfig, colors, 'sky'),
     {},
 );
 
 
-const PurpleTheme = ({ children, ...rest }) => (
+const SkyTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
         <StyledSpan>
             {
@@ -37,10 +37,10 @@ const PurpleTheme = ({ children, ...rest }) => (
 );
 
 
-PurpleTheme.propTypes = {
+SkyTheme.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-PurpleTheme.displayName = 'PurpleTheme';
+SkyTheme.displayName = 'SkyTheme';
 
-export default PurpleTheme;
+export default SkyTheme;

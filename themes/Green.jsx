@@ -7,7 +7,7 @@ import colors from '../colors';
 import { buildDarkThemeConfig } from '../helpers/themes';
 import {
     config as defaultThemeConfig,
-    StyledDiv,
+    StyledSpan,
 } from './Default';
 
 
@@ -36,7 +36,7 @@ export const config = _.merge(
 
 const GreenTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config}>
-        <StyledDiv>
+        <StyledSpan>
             {
                 React.Children.map(children,
                     (child) => {
@@ -48,7 +48,7 @@ const GreenTheme = ({ children, ...rest }) => (
                     }
                 )
             }
-        </StyledDiv>
+        </StyledSpan>
     </ThemeProvider>
 );
 

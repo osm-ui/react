@@ -19,6 +19,7 @@ export RedTheme from './themes/Red';
 export RoseTheme from './themes/Rose';
 export PurpleTheme from './themes/Purple';
 export BlueTheme from './themes/Blue';
+export SkyTheme from './themes/Sky';
 export TurquoiseTheme from './themes/Turquoise';
 export GreenTheme from './themes/Green';
 

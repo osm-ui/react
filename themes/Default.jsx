@@ -299,13 +299,13 @@ injectGlobal`
 /* eslint-enable */
 
 
-export const StyledDiv = styled.div`
+export const StyledSpan = styled.span`
     font-family: ${props => props.theme.font};
 `;
 
 const DefaultTheme = ({ children, ...rest }) => (
     <ThemeProvider theme={config} {...rest}>
-        <StyledDiv>
+        <StyledSpan>
             {
                 React.Children.map(children,
                     (child) => {
@@ -317,7 +317,7 @@ const DefaultTheme = ({ children, ...rest }) => (
                     }
                 )
             }
-        </StyledDiv>
+        </StyledSpan>
     </ThemeProvider>
 );
 

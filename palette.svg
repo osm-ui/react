@@ -10,11 +10,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="700"
-   height="1400"
-   viewBox="0 0 700 1400"
+   height="1500"
+   viewBox="0 0 700 1500"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r"
+   inkscape:version="0.92+devel unknown"
    sodipodi:docname="palette.svg">
   <defs
      id="defs2" />
@@ -25,19 +25,24 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="309.32435"
-     inkscape:cy="668.71104"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="321.11107"
+     inkscape:cy="1075.659"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="863"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0"
+     fit-margin-top="100"
+     fit-margin-left="100"
+     fit-margin-right="100"
+     fit-margin-bottom="100" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -46,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,7 +59,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,367.58335)">
+     transform="translate(0,467.58337)">
     <rect
        y="732.41663"
        x="100"
@@ -381,10 +386,10 @@
        width="100"
        height="100"
        x="100"
-       y="-167.58337"
+       y="-267.58337"
        inkscape:label="#rect4594" />
     <rect
-       y="-167.58337"
+       y="-267.58337"
        x="200"
        height="100"
        width="100"
@@ -397,10 +402,10 @@
        width="100"
        height="100"
        x="300"
-       y="-167.58337"
+       y="-267.58337"
        inkscape:label="#rect4598" />
     <rect
-       y="-167.58337"
+       y="-267.58337"
        x="400"
        height="100"
        width="100"
@@ -413,10 +418,10 @@
        width="100"
        height="100"
        x="500"
-       y="-167.58337"
+       y="-267.58337"
        inkscape:label="#rect4602" />
     <rect
-       y="-267.58337"
+       y="-367.58337"
        x="100"
        height="100"
        width="100"
@@ -429,10 +434,10 @@
        width="100"
        height="100"
        x="200"
-       y="-267.58337"
+       y="-367.58337"
        inkscape:label="#rect4606" />
     <rect
-       y="-267.58337"
+       y="-367.58337"
        x="300"
        height="100"
        width="100"
@@ -445,10 +450,10 @@
        width="100"
        height="100"
        x="400"
-       y="-267.58337"
+       y="-367.58337"
        inkscape:label="#rect4610" />
     <rect
-       y="-267.58337"
+       y="-367.58337"
        x="500"
        height="100"
        width="100"
@@ -535,5 +540,45 @@
        height="100"
        x="400"
        y="632.41663" />
+    <rect
+       inkscape:label="#rect4584"
+       style="opacity:1;fill:#0cacd7;fill-opacity:1;stroke:none;stroke-width:0.35055116;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99206346"
+       id="sky1"
+       width="100"
+       height="100"
+       x="100"
+       y="-167.58337" />
+    <rect
+       inkscape:label="#rect4586"
+       y="-167.58337"
+       x="200"
+       height="100"
+       width="100"
+       id="sky2"
+       style="opacity:1;fill:#5cd5f6;fill-opacity:1;stroke:none;stroke-width:0.35055116;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99206346" />
+    <rect
+       inkscape:label="#rect4588"
+       style="opacity:1;fill:#8ce1f9;fill-opacity:1;stroke:none;stroke-width:0.35055116;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99206346"
+       id="sky3"
+       width="100"
+       height="100"
+       x="300"
+       y="-167.58337" />
+    <rect
+       inkscape:label="#rect4590"
+       y="-167.58337"
+       x="400"
+       height="100"
+       width="100"
+       id="sky4"
+       style="opacity:1;fill:#b2ebfb;fill-opacity:1;stroke:none;stroke-width:0.35055116;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99206346" />
+    <rect
+       inkscape:label="#rect4592"
+       style="opacity:1;fill:#d0f3fd;fill-opacity:1;stroke:none;stroke-width:0.35055116;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.99206346"
+       id="sky5"
+       width="100"
+       height="100"
+       x="500"
+       y="-167.58337" />
   </g>
 </svg>
