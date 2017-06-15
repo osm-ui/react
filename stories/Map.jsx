@@ -58,30 +58,30 @@ storiesOf('Map', module)
                 <Map.Marker
                     position={[ 51.515, -0.09 ]}
                     theme="green"
-                    shape="shape1"
+                    shape="pointerClassic"
                     icon="recycle"
                 />
                 <Map.Marker
                     position={[ 51.52, -0.123 ]}
                     theme="yellow"
-                    shape="shape2"
+                    shape="pointerClassicThin"
                     icon="star"
                 />
                 <Map.Marker
                     position={[ 51.495, -0.11 ]}
                     theme="blue"
-                    shape="shape3"
+                    shape="pointerCirclePin"
                     icon="info"
                 />
                 <Map.Marker
                     position={[ 51.522, -0.053 ]}
                     theme="rose"
-                    shape="shape3"
+                    shape="pointerCirclePin"
                 />
                 <Map.Marker
                     position={[ 51.507, -0.155 ]}
                     theme="red"
-                    shape="shape1"
+                    shape="pointerClassic"
                     icon="plus"
                 />
             </Map>

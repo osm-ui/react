@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Marker } from 'react-leaflet';
 import { injectGlobal } from 'styled-components';
 
-import shape1 from './assets/markers/1.svg';
-import shape2 from './assets/markers/2.svg';
-import shape3 from './assets/markers/3.svg';
+import pointerClassic from './assets/markers/pointerClassic.svg';
+import pointerClassicThin from './assets/markers/pointerClassicThin.svg';
+import pointerCirclePin from './assets/markers/pointerCirclePin.svg';
 
 
 /* eslint-disable no-unused-expressions */
@@ -33,9 +33,9 @@ injectGlobal`
         }
     }
 
-    .osm-ui-react-marker-shape-shape1,
-    .osm-ui-react-marker-shape-shape2,
-    .osm-ui-react-marker-shape-shape3 {
+    .osm-ui-react-marker-pointerClassic,
+    .osm-ui-react-marker-pointerClassicThin,
+    .osm-ui-react-marker-pointerCirclePin {
         svg {
             top: -20px;
             left: 0;
@@ -50,9 +50,9 @@ injectGlobal`
 /* eslint-enable */
 
 const shapes = {
-    shape1,
-    shape2,
-    shape3,
+    pointerClassic,
+    pointerClassicThin,
+    pointerCirclePin,
 };
 const shapeNames = Object.keys(shapes);
 
@@ -68,7 +68,7 @@ const MapMarker = ({
         position={position}
         icon={
             L.divIcon({
-                className: `osm-ui-react-marker-shape osm-ui-react-marker-${theme} osm-ui-react-marker-shape-${shape}`,
+                className: `osm-ui-react-marker-shape osm-ui-react-marker-${theme} osm-ui-react-marker-${shape}`,
                 html: `
                     ${shapes[shape]}
                     <div class="osm-ui-react-marker-icon-wrapper">
