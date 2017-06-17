@@ -13,9 +13,9 @@ import {
 } from '../index';
 
 
-const mapPosition = [ 51.505, -0.09 ];
-const mapStyle = { height: 450 };
-const mapZoom = 13;
+const mapPosition = [ 44.834769665310445, -0.5757522583007814 ];
+const mapStyle = { height: 500 };
+const mapZoom = 12;
 
 
 storiesOf('Map', module)
@@ -52,37 +52,72 @@ storiesOf('Map', module)
             <ReactLeafletAlert />
             <Map center={mapPosition} zoom={mapZoom} style={mapStyle}>
                 <Map.TileLayer
-                    url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png"
+                    attribution='Tiles <a href="http://stamen.com">Stamen Design</a> under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> - Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 />
                 <Map.Marker
-                    position={[ 51.515, -0.09 ]}
+                    position={[ 44.83542161363759, -0.5201339721679689 ]}
                     theme="green"
-                    shape="shape1"
+                    shape="pointerClassic"
                     icon="recycle"
                 />
                 <Map.Marker
-                    position={[ 51.52, -0.123 ]}
+                    position={[ 44.8641429890617, -0.6245040893554689 ]}
                     theme="yellow"
-                    shape="shape2"
+                    shape="pointerClassicThin"
                     icon="star"
                 />
                 <Map.Marker
-                    position={[ 51.495, -0.11 ]}
+                    position={[ 44.805467985427924, -0.6021881103515626 ]}
                     theme="blue"
-                    shape="shape3"
+                    shape="pointerCirclePin"
                     icon="info"
                 />
                 <Map.Marker
-                    position={[ 51.522, -0.053 ]}
-                    theme="rose"
-                    shape="shape3"
+                    position={[ 44.85343499821067, -0.6928253173828125 ]}
+                    theme="purple"
+                    shape="pointerCirclePin"
                 />
                 <Map.Marker
-                    position={[ 51.507, -0.155 ]}
+                    position={[ 44.79377454332171, -0.5002212524414064 ]}
                     theme="red"
-                    shape="shape1"
+                    shape="pointerClassic"
                     icon="plus"
+                />
+                <Map.Marker
+                    position={[ 44.86049276135611, -0.5249404907226564 ]}
+                    theme="rose"
+                    shape="basicCircle"
+                />
+                <Map.Marker
+                    position={[ 44.792312696427096, -0.6399536132812501 ]}
+                    theme="turquoise"
+                    shape="basicSquare"
+                />
+                <Map.Marker
+                    position={[ 44.88336370243942, -0.6811523437500001 ]}
+                    theme="lightGray"
+                    shape="basicDiamond"
+                />
+                <Map.Marker
+                    position={[ 44.815941348210835, -0.5585861206054689 ]}
+                    theme="orange"
+                    shape="basicUpTriangle"
+                />
+                <Map.Marker
+                    position={[ 44.82884776001609, -0.4452896118164063 ]}
+                    theme="brown"
+                    shape="basicLeftTriangle"
+                />
+                <Map.Marker
+                    position={[ 44.79718537540685, -0.7206344604492189 ]}
+                    theme="anthracite"
+                    shape="basicRightTriangle"
+                />
+                <Map.Marker
+                    position={[ 44.84248158415813, -0.6039047241210939 ]}
+                    theme="sky"
+                    shape="basicDownTriangle"
                 />
             </Map>
         </DefaultTheme>
