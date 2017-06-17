@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import { Marker } from 'react-leaflet';
 import { injectGlobal } from 'styled-components';
 
-import pointerClassic from './assets/markers/pointerClassic.svg';
-import pointerClassicThin from './assets/markers/pointerClassicThin.svg';
-import pointerCirclePin from './assets/markers/pointerCirclePin.svg';
+import shapes from './assets/markers';
 
 
 /* eslint-disable no-unused-expressions */
@@ -16,8 +14,10 @@ injectGlobal`
         height: 50px !important;
 
         svg {
-            position: absolute;
             z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .osm-ui-react-marker-icon-wrapper {
@@ -46,15 +46,20 @@ injectGlobal`
             left: 0;
         }
     }
+
+    .osm-ui-react-marker-basicCircle,
+    .osm-ui-react-marker-basicSquare,
+    .osm-ui-react-marker-basicUpTriangle,
+    .osm-ui-react-marker-basicRightTriangle,
+    .osm-ui-react-marker-basicDownTriangle,
+    .osm-ui-react-marker-basicLeftTriangle,
+    .osm-ui-react-marker-basicDiamond {
+        .osm-ui-react-marker-icon-wrapper {
+            display: none;
+        }
+    }
 `;
 /* eslint-enable */
-
-const shapes = {
-    pointerClassic,
-    pointerClassicThin,
-    pointerCirclePin,
-};
-const shapeNames = Object.keys(shapes);
 
 
 const MapMarker = ({
@@ -63,22 +68,28 @@ const MapMarker = ({
     position,
     icon,
     // iconType,
+    ...props
 }) => (
     <Marker
         position={position}
         icon={
             L.divIcon({
                 className: `osm-ui-react-marker-shape osm-ui-react-marker-${theme} osm-ui-react-marker-${shape}`,
+                iconAnchor: shapes[shape].iconAnchor,
                 html: `
-                    ${shapes[shape]}
+                    ${shapes[shape].html}
                     <div class="osm-ui-react-marker-icon-wrapper">
                         <i class="fa fa-${icon}"></i>
                     </div>
                 `,
             })
         }
+        {...props}
     />
 );
+
+
+const shapeNames = Object.keys(shapes);
 
 MapMarker.propTypes = {
     position: PropTypes.arrayOf(PropTypes.number).isRequired,
