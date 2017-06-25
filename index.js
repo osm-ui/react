@@ -24,7 +24,7 @@ export TurquoiseTheme from './themes/Turquoise';
 export GreenTheme from './themes/Green';
 
 
-export AppCanvas from './components/AppCanvas';
+export Section from './components/Section';
 export Loader from './components/Loader';
 export Alert from './components/Alert';
 export Button from './components/Button';
