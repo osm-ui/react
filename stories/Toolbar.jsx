@@ -288,6 +288,7 @@ storiesOf('Toolbar', module)
                         <Toolbar.Collapse
                             opened
                             icon="bars"
+                            onClick={action('onClick')}
                             onOpen={action('onOpen')}
                             onClose={action('onClose')}
                         >
@@ -306,6 +307,7 @@ storiesOf('Toolbar', module)
                         <Toolbar.Collapse
                             opened
                             icon="bars"
+                            onClick={action('onClick')}
                             onOpen={action('onOpen')}
                             onClose={action('onClose')}
                         >

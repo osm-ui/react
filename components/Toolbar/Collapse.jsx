@@ -152,6 +152,8 @@ class ToolbarCollapse extends React.Component {
             opened: newState,
         });
 
+        this._triggerCallback('onClick');
+
         if (newState === true) {
             this._triggerCallback('onOpen');
         }
@@ -167,6 +169,7 @@ class ToolbarCollapse extends React.Component {
             icon,
             size,
             shape,
+            onClick,
             className,
             children,
             ...rest
@@ -233,6 +236,7 @@ ToolbarCollapse.propTypes = {
     size: PropTypes.oneOf(['', 'xs', 'sm', 'md', 'lg']),
     shape: PropTypes.oneOf(['', 'round', 'square']),
     opened: PropTypes.bool,
+    onClick: PropTypes.func,
     onOpen: PropTypes.func,
     onClose: PropTypes.func,
     className: PropTypes.string,
@@ -246,6 +250,7 @@ ToolbarCollapse.defaultProps = {
     size: '',
     shape: '',
     opened: false,
+    onClick: null,
     onOpen: null,
     onClose: null,
     className: '',
