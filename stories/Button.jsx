@@ -22,6 +22,7 @@ import {
     SkyTheme,
     TurquoiseTheme,
     GreenTheme,
+    Section,
     Button,
 } from '../index';
 
@@ -140,18 +141,20 @@ storiesOf('Button', module)
             <DefaultTheme>
                 <KnobsAlert />
                 <ThemeElement>
-                    <Button
-                        block={block}
-                        active={active}
-                        disabled={disabled}
-                        shape={shape}
-                        size={size}
-                        context={context}
-                        type={type}
-                        onClick={action('onClick')}
-                    >
-                        {label}
-                    </Button>
+                    <Section style={{ padding: 30, display: 'inline' }}>
+                        <Button
+                            block={block}
+                            active={active}
+                            disabled={disabled}
+                            shape={shape}
+                            size={size}
+                            context={context}
+                            type={type}
+                            onClick={action('onClick')}
+                        >
+                            {label}
+                        </Button>
+                    </Section>
                 </ThemeElement>
             </DefaultTheme>
         );
