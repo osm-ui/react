@@ -779,7 +779,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(57);
+var _Loader = __webpack_require__(56);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -1220,13 +1220,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _AppCanvas = __webpack_require__(45);
+var _Button = __webpack_require__(45);
 
-var _AppCanvas2 = _interopRequireDefault(_AppCanvas);
+var _Button2 = _interopRequireDefault(_Button);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _AppCanvas2.default;
+exports.default = _Button2.default;
 
 /***/ }),
 /* 19 */
@@ -1239,26 +1239,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Button = __webpack_require__(46);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Button2.default;
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Column = __webpack_require__(47);
+var _Column = __webpack_require__(46);
 
 var _Column2 = _interopRequireDefault(_Column);
 
@@ -1266,15 +1247,15 @@ var _Title = __webpack_require__(11);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _Header = __webpack_require__(49);
+var _Header = __webpack_require__(48);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Footer = __webpack_require__(48);
+var _Footer = __webpack_require__(47);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Nav = __webpack_require__(50);
+var _Nav = __webpack_require__(49);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
@@ -1288,7 +1269,7 @@ _Column2.default.Nav = _Nav2.default;
 exports.default = _Column2.default;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1298,27 +1279,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(51);
+var _Form = __webpack_require__(50);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(52);
+var _FormGroup = __webpack_require__(51);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(54);
+var _Label = __webpack_require__(53);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(53);
+var _Input = __webpack_require__(52);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(56);
+var _Textarea = __webpack_require__(55);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(55);
+var _Select = __webpack_require__(54);
 
 var _Select2 = _interopRequireDefault(_Select);
 
@@ -1333,7 +1314,7 @@ _Form2.default.Select = _Select2.default;
 exports.default = _Form2.default;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1347,11 +1328,11 @@ var _reactLeaflet = __webpack_require__(10);
 
 var ReactLeaflet = _interopRequireWildcard(_reactLeaflet);
 
-var _Map = __webpack_require__(58);
+var _Map = __webpack_require__(57);
 
 var _Map2 = _interopRequireDefault(_Map);
 
-var _Marker = __webpack_require__(59);
+var _Marker = __webpack_require__(58);
 
 var _Marker2 = _interopRequireDefault(_Marker);
 
@@ -1389,6 +1370,25 @@ try {
 _Map2.default.Marker = _Marker2.default;
 
 exports.default = _Map2.default;
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Section = __webpack_require__(70);
+
+var _Section2 = _interopRequireDefault(_Section);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Section2.default;
 
 /***/ }),
 /* 23 */
@@ -2554,49 +2554,6 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n\n    color: ', ';\n    background-color: ', ';\n'], ['\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    overflow: hidden;\n\n    color: ', ';\n    background-color: ', ';\n']);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var StyledDiv = _styledComponents2.default.div(_templateObject, function (props) {
-    return props.theme.color;
-}, function (props) {
-    return props.theme.backgroundColor;
-});
-
-var AppCanvas = function AppCanvas(props) {
-    return _react2.default.createElement(StyledDiv, props);
-};
-
-AppCanvas.propTypes = {};
-
-AppCanvas.defaultProps = {};
-
-AppCanvas.displayName = 'AppCanvas';
-
-exports.default = AppCanvas;
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n    ', '\n\n    border-radius: ', ';\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n'], ['\n    ', '\n\n    border-radius: ', ';\n\n    &.shape-round {\n        &.btn-xs {\n            height: 25px;\n            border-radius: 12.5px;\n            padding: 1px 14px;\n        }\n\n        &.btn-sm {\n            height: 33px;\n            border-radius: 16.5px;\n            padding: 5px 16px;\n        }\n\n        &.btn-md {\n            height: 42px;\n            border-radius: 21px;\n            padding: 6px 20px;\n        }\n\n        &.btn-lg {\n            height: 49px;\n            border-radius: 24.5px;\n            padding: 10px 24px;\n        }\n    }\n']);
@@ -2694,7 +2651,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2990,7 +2947,7 @@ Column.displayName = 'Column';
 exports.default = Column;
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3054,7 +3011,7 @@ ColumnFooter.displayName = 'Column.Footer';
 exports.default = ColumnFooter;
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3118,7 +3075,7 @@ ColumnHeader.displayName = 'Column.Header';
 exports.default = ColumnHeader;
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3173,7 +3130,7 @@ ColumnNav.displayName = 'Column.Nav';
 exports.default = ColumnNav;
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3202,7 +3159,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3287,7 +3244,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3391,7 +3348,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3462,7 +3419,7 @@ Label.displayName = 'Form.Label';
 exports.default = Label;
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3570,7 +3527,7 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3678,7 +3635,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3784,7 +3741,7 @@ Loader.displayName = 'Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3910,7 +3867,7 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3940,7 +3897,7 @@ var _reactLeaflet = __webpack_require__(10);
 
 var _styledComponents = __webpack_require__(1);
 
-var _markers = __webpack_require__(67);
+var _markers = __webpack_require__(66);
 
 var _markers2 = _interopRequireDefault(_markers);
 
@@ -3991,7 +3948,7 @@ MapMarker.displayName = 'Map.Marker';
 exports.default = MapMarker;
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4013,7 +3970,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4035,7 +3992,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4057,7 +4014,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4079,7 +4036,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4101,7 +4058,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4123,7 +4080,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4145,7 +4102,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4155,43 +4112,43 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _pointerClassic = __webpack_require__(69);
+var _pointerClassic = __webpack_require__(68);
 
 var _pointerClassic2 = _interopRequireDefault(_pointerClassic);
 
-var _pointerClassicThin = __webpack_require__(70);
+var _pointerClassicThin = __webpack_require__(69);
 
 var _pointerClassicThin2 = _interopRequireDefault(_pointerClassicThin);
 
-var _pointerCirclePin = __webpack_require__(68);
+var _pointerCirclePin = __webpack_require__(67);
 
 var _pointerCirclePin2 = _interopRequireDefault(_pointerCirclePin);
 
-var _basicCircle = __webpack_require__(60);
+var _basicCircle = __webpack_require__(59);
 
 var _basicCircle2 = _interopRequireDefault(_basicCircle);
 
-var _basicSquare = __webpack_require__(65);
+var _basicSquare = __webpack_require__(64);
 
 var _basicSquare2 = _interopRequireDefault(_basicSquare);
 
-var _basicDiamond = __webpack_require__(61);
+var _basicDiamond = __webpack_require__(60);
 
 var _basicDiamond2 = _interopRequireDefault(_basicDiamond);
 
-var _basicUpTriangle = __webpack_require__(66);
+var _basicUpTriangle = __webpack_require__(65);
 
 var _basicUpTriangle2 = _interopRequireDefault(_basicUpTriangle);
 
-var _basicRightTriangle = __webpack_require__(64);
+var _basicRightTriangle = __webpack_require__(63);
 
 var _basicRightTriangle2 = _interopRequireDefault(_basicRightTriangle);
 
-var _basicDownTriangle = __webpack_require__(62);
+var _basicDownTriangle = __webpack_require__(61);
 
 var _basicDownTriangle2 = _interopRequireDefault(_basicDownTriangle);
 
-var _basicLeftTriangle = __webpack_require__(63);
+var _basicLeftTriangle = __webpack_require__(62);
 
 var _basicLeftTriangle2 = _interopRequireDefault(_basicLeftTriangle);
 
@@ -4211,7 +4168,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4233,7 +4190,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4255,7 +4212,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4275,6 +4232,79 @@ exports.default = {
     iconAnchor: [25, 7],
     html: _pointerClassicThin2.default
 };
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n    color: ', ';\n    background-color: ', ';\n\n    & > * {\n        opacity: ', ';\n    }\n\n    &.app-canvas {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        overflow: hidden;\n    }\n'], ['\n    color: ', ';\n    background-color: ', ';\n\n    & > * {\n        opacity: ', ';\n    }\n\n    &.app-canvas {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n        overflow: hidden;\n    }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledSection = _styledComponents2.default.section(_templateObject, function (props) {
+    return props.theme.color;
+}, function (props) {
+    return props.theme.backgroundColor;
+}, function (props) {
+    return props.dimmed ? 0.2 : 1;
+});
+
+var Section = function Section(_ref) {
+    var appCanvas = _ref.appCanvas,
+        className = _ref.className,
+        props = _objectWithoutProperties(_ref, ['appCanvas', 'className']);
+
+    var classes = (0, _classnames2.default)(className, {
+        'app-canvas': appCanvas
+    });
+
+    return _react2.default.createElement(StyledSection, _extends({ className: classes }, props));
+};
+
+Section.propTypes = {
+    appCanvas: _propTypes2.default.bool,
+    dimmed: _propTypes2.default.bool,
+    className: _propTypes2.default.string
+};
+
+Section.defaultProps = {
+    appCanvas: false,
+    dimmed: false,
+    className: ''
+};
+
+Section.displayName = 'Section';
+
+exports.default = Section;
 
 /***/ }),
 /* 71 */
@@ -5019,7 +5049,7 @@ exports.default = Toolbar;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.AppCanvas = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
+exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.Section = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
 
 __webpack_require__(41);
 
@@ -5093,9 +5123,9 @@ var _Green = __webpack_require__(29);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _AppCanvas2 = __webpack_require__(18);
+var _Section2 = __webpack_require__(22);
 
-var _AppCanvas3 = _interopRequireDefault(_AppCanvas2);
+var _Section3 = _interopRequireDefault(_Section2);
 
 var _Loader2 = __webpack_require__(8);
 
@@ -5105,15 +5135,15 @@ var _Alert2 = __webpack_require__(17);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(19);
+var _Button2 = __webpack_require__(18);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(21);
+var _Form2 = __webpack_require__(20);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(20);
+var _Column2 = __webpack_require__(19);
 
 var _Column3 = _interopRequireDefault(_Column2);
 
@@ -5125,7 +5155,7 @@ var _Titlebar2 = __webpack_require__(23);
 
 var _Titlebar3 = _interopRequireDefault(_Titlebar2);
 
-var _Map2 = __webpack_require__(22);
+var _Map2 = __webpack_require__(21);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
@@ -5147,7 +5177,7 @@ exports.BlueTheme = _Blue2.default;
 exports.SkyTheme = _Sky2.default;
 exports.TurquoiseTheme = _Turquoise2.default;
 exports.GreenTheme = _Green2.default;
-exports.AppCanvas = _AppCanvas3.default;
+exports.Section = _Section3.default;
 exports.Loader = _Loader3.default;
 exports.Alert = _Alert3.default;
 exports.Button = _Button3.default;
