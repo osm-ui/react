@@ -49,69 +49,6 @@ storiesOf('Button', module)
             <Button context="link" onClick={action('onClick link')}>Link</Button>
         </DefaultTheme>
     ))
-    .addWithInfo('Theme', () => (
-        <div>
-            <DefaultTheme>
-                <Button onClick={action('onClick Default')}>Default</Button>
-            </DefaultTheme>
-            {' '}
-            <WhiteTheme>
-                <Button onClick={action('onClick White')}>White</Button>
-            </WhiteTheme>
-            {' '}
-            <LightGrayTheme>
-                <Button onClick={action('onClick LightGray')}>LightGray</Button>
-            </LightGrayTheme>
-            {' '}
-            <DarkGrayTheme>
-                <Button onClick={action('onClick DarkGray')}>DarkGray</Button>
-            </DarkGrayTheme>
-            {' '}
-            <AnthraciteTheme>
-                <Button onClick={action('onClick Anthracite')}>Anthracite</Button>
-            </AnthraciteTheme>
-            {' '}
-            <YellowTheme>
-                <Button onClick={action('onClick Yellow')}>Yellow</Button>
-            </YellowTheme>
-            {' '}
-            <OrangeTheme>
-                <Button onClick={action('onClick Orange')}>Orange</Button>
-            </OrangeTheme>
-            {' '}
-            <BrownTheme>
-                <Button onClick={action('onClick Brown')}>Brown</Button>
-            </BrownTheme>
-            {' '}
-            <RedTheme>
-                <Button onClick={action('onClick Red')}>Red</Button>
-            </RedTheme>
-            {' '}
-            <RoseTheme>
-                <Button onClick={action('onClick Rose')}>Rose</Button>
-            </RoseTheme>
-            {' '}
-            <PurpleTheme>
-                <Button onClick={action('onClick Purple')}>Purple</Button>
-            </PurpleTheme>
-            {' '}
-            <BlueTheme>
-                <Button onClick={action('onClick Blue')}>Blue</Button>
-            </BlueTheme>
-            {' '}
-            <SkyTheme>
-                <Button onClick={action('onClick Sky')}>Sky</Button>
-            </SkyTheme>
-            {' '}
-            <TurquoiseTheme>
-                <Button onClick={action('onClick Turquoise')}>Turquoise</Button>
-            </TurquoiseTheme>
-            {' '}
-            <GreenTheme>
-                <Button onClick={action('onClick Green')}>Green</Button>
-            </GreenTheme>
-        </div>
-    ))
     .addWithInfo('Type', () => (
         <DefaultTheme>
             <Button type="button" onClick={action('onClick button')}>Button (default)</Button>
