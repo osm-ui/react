@@ -35,7 +35,7 @@ import {
   Button
 } from '../index';
 
-storiesOf('Column')
+storiesOf('Column', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

@@ -14,7 +14,7 @@ import KnobsAlert from './components/KnobsAlert';
 
 import { DefaultTheme, Form, Alert } from '../index';
 
-storiesOf('Form')
+storiesOf('Form', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

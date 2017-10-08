@@ -37,7 +37,7 @@ const fakeAppColumnStyle = {
   paddingRight: '100px'
 };
 
-storiesOf('Toolbar')
+storiesOf('Toolbar', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

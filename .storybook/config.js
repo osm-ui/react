@@ -31,4 +31,4 @@ function loadStories() {
 }
 
 
-configure(loadStories);
+configure(loadStories, module);

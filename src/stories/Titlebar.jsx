@@ -32,7 +32,7 @@ const fakeAppStyle = {
   paddingBottom: '70px'
 };
 
-storiesOf('Titlebar')
+storiesOf('Titlebar', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

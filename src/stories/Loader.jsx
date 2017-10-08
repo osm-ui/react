@@ -9,7 +9,7 @@ import FakeApp from './components/FakeApp';
 
 import { DefaultTheme, Loader } from '../index';
 
-storiesOf('Loader')
+storiesOf('Loader', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

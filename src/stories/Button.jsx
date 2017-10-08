@@ -27,7 +27,7 @@ import {
   Button
 } from '../index';
 
-storiesOf('Button')
+storiesOf('Button', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

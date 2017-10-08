@@ -7,7 +7,7 @@ import defaultHostOptions from './defaultHostOptions';
 
 import { DefaultTheme, Alert } from '../index';
 
-storiesOf('Alert')
+storiesOf('Alert', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({

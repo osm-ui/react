@@ -13,7 +13,7 @@ const mapPosition = [44.834769665310445, -0.5757522583007814];
 const mapStyle = { height: 500 };
 const mapZoom = 12;
 
-storiesOf('Map')
+storiesOf('Map', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({
