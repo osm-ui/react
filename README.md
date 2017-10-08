@@ -16,6 +16,6 @@ The components are visible here: https://osm-ui.github.io/react
 ```
 $ git clone git@github.com:osm-ui/react.git osm-ui-react
 $ cd osm-ui-react
-$ yarn install
-$ yarn run storybook
+$ npm install
+$ npm run storybook
 ```

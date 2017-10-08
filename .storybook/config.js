@@ -1,6 +1,6 @@
-import { configure, setAddon } from '@kadira/storybook';
-import { setOptions } from '@kadira/storybook-addon-options';
-import infoAddon from '@kadira/react-storybook-addon-info';
+import { configure, setAddon } from '@storybook/react';
+import { setOptions } from '@storybook/addon-options';
+import infoAddon from '@storybook/addon-info';
 
 setAddon(infoAddon);
 
@@ -18,17 +18,17 @@ setOptions({
 
 function loadStories() {
     /* eslint-disable */
-    require('../stories/introduction');
-    require('../stories/Button');
-    require('../stories/Alert');
-    require('../stories/Form');
-    require('../stories/Loader');
-    require('../stories/Column');
-    require('../stories/Toolbar');
-    require('../stories/Titlebar');
-    require('../stories/Map');
+    require('../src/stories/introduction');
+    require('../src/stories/Button');
+    require('../src/stories/Alert');
+    require('../src/stories/Form');
+    require('../src/stories/Loader');
+    require('../src/stories/Column');
+    require('../src/stories/Toolbar');
+    require('../src/stories/Titlebar');
+    require('../src/stories/Map');
     /* eslint-enable */
 }
 
 
-configure(loadStories, module);
+configure(loadStories);

@@ -1,35 +1,19 @@
 {
-    "parser": "babel-eslint",
-    "ecmaFeatures": {
-        "classes": true,
-        "jsx": true
-    },
-    "plugins": [
-        "react", "import"
-    ],
-    "extends": "airbnb",
-    "rules": {
-        "indent": [0, 4],
-        "no-underscore-dangle": 0,
-        "array-bracket-spacing": 0,
-        "no-console": [2, { allow: ["warn", "error"] }],
-        "space-in-parens": 0,
-        "no-continue": 0,
-        "no-restricted-syntax": [0, "FunctionExpression", "WithStatement"],
-        "brace-style": [2, "stroustrup"],
-        "no-param-reassign": 0,
-        "import/imports-first": 0,
-        "no-case-declarations": 0,
-        "no-shadow": 0,
-        "react/jsx-indent": [2, 4],
-        "react/jsx-indent-props": [2, 4],
-        "no-confusing-arrow": ["error", {"allowParens": true}],
-        "comma-dangle": ["error", {
-            "arrays": "always-multiline",
-            "objects": "always-multiline",
-            "imports": "always-multiline",
-            "exports": "always-multiline",
-            "functions": "ignore",
-        }]
-    }
+  "parser": "babel-eslint",
+  "plugins": [
+    "import",
+    "react",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "react",
+    "prettier"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
 }
