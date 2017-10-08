@@ -4395,10 +4395,9 @@ var ToolbarCollapse = function (_React$Component) {
           icon = _props.icon,
           size = _props.size,
           shape = _props.shape,
-          onClick = _props.onClick,
           className = _props.className,
           children = _props.children,
-          rest = _objectWithoutProperties(_props, ['position', 'direction', 'icon', 'size', 'shape', 'onClick', 'className', 'children']);
+          rest = _objectWithoutProperties(_props, ['position', 'direction', 'icon', 'size', 'shape', 'className', 'children']);
 
       var classes = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
