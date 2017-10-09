@@ -23,7 +23,7 @@ const StyledButton = styled.button`
     border-style: ${props => props.theme.toolbar.button.borderStyle};
     border-width: ${props => props.theme.toolbar.button.borderWidth};
     background: ${props => props.theme.toolbar.button.backgroundColor};
-    font-weight: 700;
+    font-weight: 500;
     padding: 0;
   }
 
