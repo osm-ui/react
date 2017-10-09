@@ -257,7 +257,7 @@ var config = exports.config = {
     hoverControlColor: _colors2.default.white,
     hoverControlBackgroundColor: _colors2.default.blue2
   },
-  column: {
+  sidebar: {
     nav: {
       fontSize: '1.1em',
       lineHeight: '1.2em',
@@ -609,7 +609,7 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     controlColor: color1,
     hoverControlColor: colors.white,
 
-    column: {
+    sidebar: {
       nav: {
         color: colors.white,
         backgroundColor: (0, _polished.lighten)(0.1, color2),
@@ -695,7 +695,7 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     controlColor: color4,
     hoverControlColor: darkColor1,
 
-    column: {
+    sidebar: {
       nav: {
         color: darkColor1,
         backgroundColor: color3,
@@ -916,14 +916,14 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledH2 = _styledComponents2.default.h2(_templateObject);
 
-var ColumnTitle = function ColumnTitle(_ref) {
+var SidebarTitle = function SidebarTitle(_ref) {
   var inHeader = _ref.inHeader,
       className = _ref.className,
       children = _ref.children,
       rest = _objectWithoutProperties(_ref, ['inHeader', 'className', 'children']);
 
   var classes = (0, _classnames2.default)(className, {
-    'column-title': true,
+    'sidebar-title': true,
     'in-header': inHeader
   });
 
@@ -934,20 +934,20 @@ var ColumnTitle = function ColumnTitle(_ref) {
   );
 };
 
-ColumnTitle.propTypes = {
+SidebarTitle.propTypes = {
   inHeader: _propTypes2.default.bool,
   className: _propTypes2.default.string,
   children: _propTypes2.default.node.isRequired
 };
 
-ColumnTitle.defaultProps = {
+SidebarTitle.defaultProps = {
   inHeader: false,
   className: ''
 };
 
-ColumnTitle.displayName = 'Column.Title';
+SidebarTitle.displayName = 'Sidebar.Title';
 
-exports.default = ColumnTitle;
+exports.default = SidebarTitle;
 
 /***/ }),
 /* 15 */
@@ -962,7 +962,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 700;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 700;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  pointer-events: none;\n'], ['\n  pointer-events: none;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n']);
 
@@ -1192,7 +1192,7 @@ module.exports = require("leaflet");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Map = exports.Titlebar = exports.Toolbar = exports.Column = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.Section = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
+exports.Map = exports.Titlebar = exports.Toolbar = exports.Sidebar = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.Section = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
 
 __webpack_require__(18);
 
@@ -1286,9 +1286,9 @@ var _Form2 = __webpack_require__(44);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Column2 = __webpack_require__(55);
+var _Sidebar2 = __webpack_require__(55);
 
-var _Column3 = _interopRequireDefault(_Column2);
+var _Sidebar3 = _interopRequireDefault(_Sidebar2);
 
 var _Toolbar2 = __webpack_require__(60);
 
@@ -1325,7 +1325,7 @@ exports.Loader = _Loader3.default;
 exports.Alert = _Alert3.default;
 exports.Button = _Button3.default;
 exports.Form = _Form3.default;
-exports.Column = _Column3.default;
+exports.Sidebar = _Sidebar3.default;
 exports.Toolbar = _Toolbar3.default;
 exports.Titlebar = _Titlebar3.default;
 exports.Map = _Map3.default;
@@ -1407,7 +1407,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'lightGray'), {
-  column: {
+  sidebar: {
     nav: {
       color: (0, _polished.darken)(0.27, _colors2.default.lightGray1),
       backgroundColor: (0, _polished.lighten)(0.05, _colors2.default.lightGray3),
@@ -2209,7 +2209,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'turquoise'), {
-  column: {
+  sidebar: {
     nav: {
       color: _colors2.default.white,
       backgroundColor: _colors2.default.turquoise3,
@@ -3365,9 +3365,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Column = __webpack_require__(56);
+var _Sidebar = __webpack_require__(56);
 
-var _Column2 = _interopRequireDefault(_Column);
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
 
 var _Title = __webpack_require__(14);
 
@@ -3387,12 +3387,12 @@ var _Nav2 = _interopRequireDefault(_Nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_Column2.default.Title = _Title2.default;
-_Column2.default.Header = _Header2.default;
-_Column2.default.Footer = _Footer2.default;
-_Column2.default.Nav = _Nav2.default;
+_Sidebar2.default.Title = _Title2.default;
+_Sidebar2.default.Header = _Header2.default;
+_Sidebar2.default.Footer = _Footer2.default;
+_Sidebar2.default.Nav = _Nav2.default;
 
-exports.default = _Column2.default;
+exports.default = _Sidebar2.default;
 
 /***/ }),
 /* 56 */
@@ -3481,13 +3481,13 @@ var StyledAside = _styledComponents2.default.aside(_templateObject, function (pr
   return props.theme.borderStyle;
 });
 
-var Column = function (_React$Component) {
-  _inherits(Column, _React$Component);
+var Sidebar = function (_React$Component) {
+  _inherits(Sidebar, _React$Component);
 
-  function Column(props) {
-    _classCallCheck(this, Column);
+  function Sidebar(props) {
+    _classCallCheck(this, Sidebar);
 
-    var _this = _possibleConstructorReturn(this, (Column.__proto__ || Object.getPrototypeOf(Column)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this, props));
 
     _this.state = {
       opened: props.opened
@@ -3495,7 +3495,7 @@ var Column = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Column, [{
+  _createClass(Sidebar, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       if (this.props.opened === true) {
@@ -3596,7 +3596,7 @@ var Column = function (_React$Component) {
         },
         _react2.default.createElement(
           StyledAside,
-          _extends({ key: 'column', className: asideClasses }, rest),
+          _extends({ key: 'sidebar', className: asideClasses }, rest),
           _react2.default.createElement(
             'header',
             { className: 'header' },
@@ -3640,10 +3640,10 @@ var Column = function (_React$Component) {
     }
   }]);
 
-  return Column;
+  return Sidebar;
 }(_react2.default.Component);
 
-Column.propTypes = {
+Sidebar.propTypes = {
   title: _propTypes2.default.string,
   header: _propTypes2.default.node,
   footer: _propTypes2.default.node,
@@ -3668,7 +3668,7 @@ Column.propTypes = {
   children: _propTypes2.default.node.isRequired
 };
 
-Column.defaultProps = {
+Sidebar.defaultProps = {
   title: '',
   header: '',
   footer: '',
@@ -3692,9 +3692,9 @@ Column.defaultProps = {
   className: ''
 };
 
-Column.displayName = 'Column';
+Sidebar.displayName = 'Sidebar';
 
-exports.default = Column;
+exports.default = Sidebar;
 
 /***/ }),
 /* 57 */
@@ -3735,30 +3735,30 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledDiv = _styledComponents2.default.div(_templateObject);
 
-var ColumnHeader = function ColumnHeader(_ref) {
+var SidebarHeader = function SidebarHeader(_ref) {
   var className = _ref.className,
       children = _ref.children,
       rest = _objectWithoutProperties(_ref, ['className', 'children']);
 
   return _react2.default.createElement(
     StyledDiv,
-    _extends({ className: (0, _classnames2.default)(className, 'column-header') }, rest),
+    _extends({ className: (0, _classnames2.default)(className, 'sidebar-header') }, rest),
     children
   );
 };
 
-ColumnHeader.propTypes = {
+SidebarHeader.propTypes = {
   className: _propTypes2.default.string,
   children: _propTypes2.default.node.isRequired
 };
 
-ColumnHeader.defaultProps = {
+SidebarHeader.defaultProps = {
   className: ''
 };
 
-ColumnHeader.displayName = 'Column.Header';
+SidebarHeader.displayName = 'Sidebar.Header';
 
-exports.default = ColumnHeader;
+exports.default = SidebarHeader;
 
 /***/ }),
 /* 58 */
@@ -3799,30 +3799,30 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledDiv = _styledComponents2.default.div(_templateObject);
 
-var ColumnFooter = function ColumnFooter(_ref) {
+var SidebarFooter = function SidebarFooter(_ref) {
   var className = _ref.className,
       children = _ref.children,
       rest = _objectWithoutProperties(_ref, ['className', 'children']);
 
   return _react2.default.createElement(
     StyledDiv,
-    _extends({ className: (0, _classnames2.default)(className, 'column-footer') }, rest),
+    _extends({ className: (0, _classnames2.default)(className, 'sidebar-footer') }, rest),
     children
   );
 };
 
-ColumnFooter.propTypes = {
+SidebarFooter.propTypes = {
   className: _propTypes2.default.string,
   children: _propTypes2.default.node.isRequired
 };
 
-ColumnFooter.defaultProps = {
+SidebarFooter.defaultProps = {
   className: ''
 };
 
-ColumnFooter.displayName = 'Column.Footer';
+SidebarFooter.displayName = 'Sidebar.Footer';
 
-exports.default = ColumnFooter;
+exports.default = SidebarFooter;
 
 /***/ }),
 /* 59 */
@@ -3850,34 +3850,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var StyledNav = _styledComponents2.default.nav(_templateObject, function (props) {
-  return props.theme.column.nav.borderRadius;
+  return props.theme.sidebar.nav.borderRadius;
 }, function (props) {
-  return props.theme.column.nav.backgroundColor;
+  return props.theme.sidebar.nav.backgroundColor;
 }, function (props) {
-  return props.theme.column.nav.color;
+  return props.theme.sidebar.nav.color;
 }, function (props) {
-  return props.theme.column.nav.fontSize;
+  return props.theme.sidebar.nav.fontSize;
 }, function (props) {
-  return props.theme.column.nav.lineHeight;
+  return props.theme.sidebar.nav.lineHeight;
 }, function (props) {
-  return props.theme.column.nav.fontWeight;
+  return props.theme.sidebar.nav.fontWeight;
 }, function (props) {
-  return props.theme.column.nav.hoverColor;
+  return props.theme.sidebar.nav.hoverColor;
 }, function (props) {
-  return props.theme.column.nav.hoverBackgroundColor;
+  return props.theme.sidebar.nav.hoverBackgroundColor;
 });
 
-var ColumnNav = function ColumnNav(props) {
+var SidebarNav = function SidebarNav(props) {
   return _react2.default.createElement(StyledNav, props);
 };
 
-ColumnNav.propTypes = {};
+SidebarNav.propTypes = {};
 
-ColumnNav.defaultProps = {};
+SidebarNav.defaultProps = {};
 
-ColumnNav.displayName = 'Column.Nav';
+SidebarNav.displayName = 'Sidebar.Nav';
 
-exports.default = ColumnNav;
+exports.default = SidebarNav;
 
 /***/ }),
 /* 60 */
