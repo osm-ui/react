@@ -31,34 +31,34 @@ import {
   SkyTheme,
   TurquoiseTheme,
   GreenTheme,
-  Column,
+  Sidebar,
   Button
 } from '../index';
 
-storiesOf('Column', module)
+storiesOf('Sidebar', module)
   .addDecorator(withKnobs)
   .addDecorator(
     host({
       ...defaultHostOptions,
-      title: 'Column'
+      title: 'Sidebar'
     })
   )
   .addWithInfo('Default state', () => (
     <DefaultTheme>
       <FakeApp>
-        <Column opened title="A column title">
+        <Sidebar opened title="A sidebar title">
           <Lorem count={2} />
-        </Column>
+        </Sidebar>
       </FakeApp>
     </DefaultTheme>
   ))
   .addWithInfo('Detached title', () => (
     <DefaultTheme>
       <FakeApp>
-        <Column opened>
-          <Column.Title>A column title</Column.Title>
+        <Sidebar opened>
+          <Sidebar.Title>A sidebar title</Sidebar.Title>
           <Lorem count={2} />
-        </Column>
+        </Sidebar>
       </FakeApp>
     </DefaultTheme>
   ))
@@ -66,10 +66,10 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened>
-            <Column.Title>A column title</Column.Title>
+          <Sidebar opened>
+            <Sidebar.Title>A sidebar title</Sidebar.Title>
             <Lorem count={2} />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -78,10 +78,10 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened>
-            <Column.Title>A column title</Column.Title>
+          <Sidebar opened>
+            <Sidebar.Title>A sidebar title</Sidebar.Title>
             <Lorem />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -90,25 +90,25 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column
+          <Sidebar
             opened
-            title="A column title"
+            title="A sidebar title"
             scrollContent
             header={
-              <Column.Header>
+              <Sidebar.Header>
                 <h3 style={{ margin: 0 }}>A header content</h3>
-              </Column.Header>
+              </Sidebar.Header>
             }
             footer={
-              <Column.Footer>
+              <Sidebar.Footer>
                 <Button context="primary" block>
                   A footer button
                 </Button>
-              </Column.Footer>
+              </Sidebar.Footer>
             }
           >
             <Lorem />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -117,9 +117,9 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened title="A column title" loading>
+          <Sidebar opened title="A sidebar title" loading>
             <Lorem count={2} />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -128,8 +128,8 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened title="A column title">
-            <Column.Nav>
+          <Sidebar opened title="A sidebar title">
+            <Sidebar.Nav>
               <ul>
                 <li>
                   <a href="">A nav item</a>
@@ -152,8 +152,8 @@ storiesOf('Column', module)
                   <a href="">With other links</a>
                 </li>
               </ul>
-            </Column.Nav>
-          </Column>
+            </Sidebar.Nav>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -162,9 +162,9 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened title="A column title" position="right">
+          <Sidebar opened title="A sidebar title" position="right">
             <Lorem count={2} />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
@@ -173,15 +173,15 @@ storiesOf('Column', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Column opened title="A column title" position="right" width="lg">
+          <Sidebar opened title="A sidebar title" position="right" width="lg">
             <Lorem count={2} />
-          </Column>
+          </Sidebar>
         </RedTheme>
       </FakeApp>
     </DefaultTheme>
   ))
   .addWithInfo('Playground', () => {
-    const title = text('Title', 'A column title');
+    const title = text('Title', 'A sidebar title');
     const paragraphs = number('Paragraphs', 2);
     const position = select('Position', ['left', 'right'], 'left');
     const width = select('Width', ['xs', 'sm', 'md', 'lg'], 'md');
@@ -236,7 +236,7 @@ storiesOf('Column', module)
         <KnobsAlert />
         <FakeApp>
           <ThemeElement>
-            <Column
+            <Sidebar
               title={title}
               opened={opened}
               loading={loading}
@@ -254,7 +254,7 @@ storiesOf('Column', module)
               onUnmaximize={action('onUnmaximize')}
             >
               <Lorem count={paragraphs} />
-            </Column>
+            </Sidebar>
           </ThemeElement>
         </FakeApp>
       </DefaultTheme>

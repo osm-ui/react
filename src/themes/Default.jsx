@@ -24,7 +24,7 @@ export const config = {
     hoverControlColor: colors.white,
     hoverControlBackgroundColor: colors.blue2
   },
-  column: {
+  sidebar: {
     nav: {
       fontSize: '1.1em',
       lineHeight: '1.2em',

@@ -28,7 +28,7 @@ export Loader from './components/Loader';
 export Alert from './components/Alert';
 export Button from './components/Button';
 export Form from './components/Form';
-export Column from './components/Column';
+export Sidebar from './components/Sidebar';
 export Toolbar from './components/Toolbar';
 export Titlebar from './components/Titlebar';
 export Map from './components/Map';

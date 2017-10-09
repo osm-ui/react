@@ -23,7 +23,7 @@ function loadStories() {
     require('../src/stories/Alert');
     require('../src/stories/Form');
     require('../src/stories/Loader');
-    require('../src/stories/Column');
+    require('../src/stories/Sidebar');
     require('../src/stories/Toolbar');
     require('../src/stories/Titlebar');
     require('../src/stories/Map');

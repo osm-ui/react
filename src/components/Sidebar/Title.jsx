@@ -15,9 +15,9 @@ const StyledH2 = styled.h2`
   }
 `;
 
-const ColumnTitle = ({ inHeader, className, children, ...rest }) => {
+const SidebarTitle = ({ inHeader, className, children, ...rest }) => {
   const classes = classnames(className, {
-    'column-title': true,
+    'sidebar-title': true,
     'in-header': inHeader
   });
 
@@ -28,17 +28,17 @@ const ColumnTitle = ({ inHeader, className, children, ...rest }) => {
   );
 };
 
-ColumnTitle.propTypes = {
+SidebarTitle.propTypes = {
   inHeader: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
-ColumnTitle.defaultProps = {
+SidebarTitle.defaultProps = {
   inHeader: false,
   className: ''
 };
 
-ColumnTitle.displayName = 'Column.Title';
+SidebarTitle.displayName = 'Sidebar.Title';
 
-export default ColumnTitle;
+export default SidebarTitle;

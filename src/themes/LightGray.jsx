@@ -11,7 +11,7 @@ export const config = _.merge(
   {},
   buildLightThemeConfig(defaultThemeConfig, colors, 'lightGray'),
   {
-    column: {
+    sidebar: {
       nav: {
         color: darken(0.27, colors.lightGray1),
         backgroundColor: lighten(0.05, colors.lightGray3),

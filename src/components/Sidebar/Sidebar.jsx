@@ -4,7 +4,7 @@ import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import ColumnTitle from './Title';
+import SidebarTitle from './Title';
 import Loader from '../Loader';
 
 const StyledAside = styled.aside`
@@ -131,7 +131,7 @@ const StyledAside = styled.aside`
   }
 `;
 
-class Column extends React.Component {
+class Sidebar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -236,7 +236,7 @@ class Column extends React.Component {
         transitionEnter={false}
         transitionLeave={false}
       >
-        <StyledAside key="column" className={asideClasses} {...rest}>
+        <StyledAside key="sidebar" className={asideClasses} {...rest}>
           <header className="header">
             {this.props.onClickBack && (
               <button
@@ -252,7 +252,7 @@ class Column extends React.Component {
             >
               <FontAwesome name="close" size="lg" />
             </button>
-            {title && <ColumnTitle inHeader>{title}</ColumnTitle>}
+            {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
             <div className="clearfix" />
             {!loading && header && header}
           </header>
@@ -268,7 +268,7 @@ class Column extends React.Component {
   }
 }
 
-Column.propTypes = {
+Sidebar.propTypes = {
   title: PropTypes.string,
   header: PropTypes.node,
   footer: PropTypes.node,
@@ -293,7 +293,7 @@ Column.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-Column.defaultProps = {
+Sidebar.defaultProps = {
   title: '',
   header: '',
   footer: '',
@@ -317,6 +317,6 @@ Column.defaultProps = {
   className: ''
 };
 
-Column.displayName = 'Column';
+Sidebar.displayName = 'Sidebar';
 
-export default Column;
+export default Sidebar;

@@ -29,7 +29,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     controlColor: color1,
     hoverControlColor: colors.white,
 
-    column: {
+    sidebar: {
       nav: {
         color: colors.white,
         backgroundColor: lighten(0.1, color2),
@@ -123,7 +123,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     controlColor: color4,
     hoverControlColor: darkColor1,
 
-    column: {
+    sidebar: {
       nav: {
         color: darkColor1,
         backgroundColor: color3,

@@ -11,7 +11,7 @@ export const config = _.merge(
   {},
   buildDarkThemeConfig(defaultThemeConfig, colors, 'turquoise'),
   {
-    column: {
+    sidebar: {
       nav: {
         color: colors.white,
         backgroundColor: colors.turquoise3,

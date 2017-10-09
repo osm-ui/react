@@ -4,24 +4,24 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 
 const StyledDiv = styled.div`
-  padding: 15px 20px 0;
+  padding: 20px 20px;
 `;
 
-const ColumnHeader = ({ className, children, ...rest }) => (
-  <StyledDiv className={classnames(className, 'column-header')} {...rest}>
+const SidebarFooter = ({ className, children, ...rest }) => (
+  <StyledDiv className={classnames(className, 'sidebar-footer')} {...rest}>
     {children}
   </StyledDiv>
 );
 
-ColumnHeader.propTypes = {
+SidebarFooter.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired
 };
 
-ColumnHeader.defaultProps = {
+SidebarFooter.defaultProps = {
   className: ''
 };
 
-ColumnHeader.displayName = 'Column.Header';
+SidebarFooter.displayName = 'Sidebar.Footer';
 
-export default ColumnHeader;
+export default SidebarFooter;
