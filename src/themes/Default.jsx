@@ -49,7 +49,7 @@ export const config = {
       backgroundColor: colors.white,
       borderColor: colors.lightGray3,
       borderStyle: 'solid',
-      borderWidth: '1px',
+      borderWidth: '2px',
       borderRadius: '4px',
       hoverBackgroundColor: colors.lightGray5,
       hoverBorderColor: colors.lightGray3,

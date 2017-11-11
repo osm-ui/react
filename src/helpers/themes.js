@@ -41,13 +41,13 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
       button: {
         color: colors.white,
         backgroundColor: color2,
-        borderColor: color2,
+        borderColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
+        hoverBorderColor: color2,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
+        focusBorderColor: color2,
         activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBorderColor: color2
       }
     },
     titlebar: {
@@ -137,13 +137,13 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
       button: {
         color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color2,
+        borderColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
+        hoverBorderColor: color2,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
+        focusBorderColor: color2,
         activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBorderColor: color2
       }
     },
     titlebar: {
