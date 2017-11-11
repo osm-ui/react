@@ -64,6 +64,7 @@ export const config = {
     }
   },
   titlebar: {
+    boxShadow,
     xsHeight: '30px',
     smHeight: '35px',
     mdHeight: '40px',

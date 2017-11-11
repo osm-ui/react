@@ -15,6 +15,7 @@ const StyledHeader = styled.header`
   border-style: ${props => props.theme.titlebar.borderStyle};
   border-width: 0;
   background: ${props => props.theme.titlebar.backgroundColor};
+  box-shadow: ${props => props.theme.titlebar.boxShadow};
   text-align: center;
 
   &.container-parent {
