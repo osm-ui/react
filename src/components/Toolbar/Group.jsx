@@ -9,6 +9,7 @@ const Group = styled.div`
   border-color: ${props => props.theme.toolbar.button.borderColor};
   border-style: ${props => props.theme.toolbar.button.borderStyle};
   border-width: ${props => props.theme.toolbar.button.borderWidth};
+  box-shadow: ${props => props.theme.toolbar.boxShadow};
 
   &.direction-row {
     flex-direction: row;

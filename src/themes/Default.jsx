@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import colors from '../colors';
 
+const boxShadow =
+  '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
+
 export const config = {
+  boxShadow,
   font:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   color: colors.anthracite1,
   backgroundColor: colors.white,
   borderColor: colors.lightGray4,
-  boxShadow:
-    '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)',
   loaderColor: colors.lightGray1,
   borderStyle: 'solid',
   borderWidth: '4px',
@@ -25,6 +27,7 @@ export const config = {
     hoverControlBackgroundColor: colors.blue2
   },
   sidebar: {
+    boxShadow,
     nav: {
       fontSize: '1.1em',
       lineHeight: '1.2em',
@@ -37,6 +40,7 @@ export const config = {
     }
   },
   toolbar: {
+    boxShadow,
     margin: '10px',
     childrenMargin: '8px',
     xsSize: '30px',

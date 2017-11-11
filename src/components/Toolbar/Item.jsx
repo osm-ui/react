@@ -25,6 +25,7 @@ const StyledButton = styled.button`
     background: ${props => props.theme.toolbar.button.backgroundColor};
     font-weight: 500;
     padding: 0;
+    box-shadow: ${props => props.theme.toolbar.boxShadow};
   }
 
   &.shape-square {
@@ -79,6 +80,7 @@ const StyledButton = styled.button`
     width: ${props => buildInGroupSize(props)};
     height: ${props => buildInGroupSize(props)};
     border-width: 0;
+    box-shadow: none;
   }
 
   &.btn:hover {
