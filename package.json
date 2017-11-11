@@ -13,6 +13,10 @@
     "build": "npm run build-dist && npm run build-storybook",
     "precommit": "lint-staged"
   },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,less}": [
       "prettier --single-quote --write",

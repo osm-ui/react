@@ -8,7 +8,9 @@
   "extends": [
     "eslint:recommended",
     "react",
-    "prettier"
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
   ],
   "env": {
     "es6": true,
