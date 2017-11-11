@@ -238,12 +238,14 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+var boxShadow = '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
+
 var config = exports.config = {
+  boxShadow: boxShadow,
   font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
   color: _colors2.default.anthracite1,
   backgroundColor: _colors2.default.white,
   borderColor: _colors2.default.lightGray4,
-  boxShadow: '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)',
   loaderColor: _colors2.default.lightGray1,
   borderStyle: 'solid',
   borderWidth: '4px',
@@ -258,6 +260,7 @@ var config = exports.config = {
     hoverControlBackgroundColor: _colors2.default.blue2
   },
   sidebar: {
+    boxShadow: boxShadow,
     nav: {
       fontSize: '1.1em',
       lineHeight: '1.2em',
@@ -270,6 +273,7 @@ var config = exports.config = {
     }
   },
   toolbar: {
+    boxShadow: boxShadow,
     margin: '10px',
     childrenMargin: '8px',
     xsSize: '30px',
@@ -282,7 +286,7 @@ var config = exports.config = {
       backgroundColor: _colors2.default.white,
       borderColor: _colors2.default.lightGray3,
       borderStyle: 'solid',
-      borderWidth: '1px',
+      borderWidth: '2px',
       borderRadius: '4px',
       hoverBackgroundColor: _colors2.default.lightGray5,
       hoverBorderColor: _colors2.default.lightGray3,
@@ -293,6 +297,7 @@ var config = exports.config = {
     }
   },
   titlebar: {
+    boxShadow: boxShadow,
     xsHeight: '30px',
     smHeight: '35px',
     mdHeight: '40px',
@@ -333,6 +338,8 @@ var config = exports.config = {
       color: _colors2.default.anthracite2,
       backgroundColor: _colors2.default.white,
       borderColor: _colors2.default.lightGray3,
+      borderStyle: 'solid',
+      borderWidth: '2px',
       borderRadius: '4px',
       hoverBackgroundColor: _colors2.default.lightGray5,
       hoverBorderColor: _colors2.default.lightGray3,
@@ -345,65 +352,65 @@ var config = exports.config = {
         fontWeight: 500,
         color: _colors2.default.white,
         backgroundColor: _colors2.default.blue2,
-        borderColor: _colors2.default.blue2,
+        borderColor: _colors2.default.blue1,
         hoverBackgroundColor: _colors2.default.blue3,
-        hoverBorderColor: _colors2.default.blue3,
+        hoverBorderColor: _colors2.default.blue2,
         focusBackgroundColor: _colors2.default.blue3,
-        focusBorderColor: _colors2.default.blue3,
+        focusBorderColor: _colors2.default.blue2,
         activeBackgroundColor: _colors2.default.blue3,
-        activeBorderColor: _colors2.default.blue3
+        activeBorderColor: _colors2.default.blue2
       },
 
       info: {
         fontWeight: 500,
         color: _colors2.default.white,
         backgroundColor: _colors2.default.turquoise2,
-        borderColor: _colors2.default.turquoise2,
+        borderColor: _colors2.default.turquoise1,
         hoverBackgroundColor: _colors2.default.turquoise3,
-        hoverBorderColor: _colors2.default.turquoise3,
+        hoverBorderColor: _colors2.default.turquoise2,
         focusBackgroundColor: _colors2.default.turquoise3,
-        focusBorderColor: _colors2.default.turquoise3,
+        focusBorderColor: _colors2.default.turquoise2,
         activeBackgroundColor: _colors2.default.turquoise3,
-        activeBorderColor: _colors2.default.turquoise3
+        activeBorderColor: _colors2.default.turquoise2
       },
 
       success: {
         fontWeight: 500,
         color: _colors2.default.white,
         backgroundColor: _colors2.default.green2,
-        borderColor: _colors2.default.green2,
+        borderColor: _colors2.default.green1,
         hoverBackgroundColor: _colors2.default.green3,
-        hoverBorderColor: _colors2.default.green3,
+        hoverBorderColor: _colors2.default.green2,
         focusBackgroundColor: _colors2.default.green3,
-        focusBorderColor: _colors2.default.green3,
+        focusBorderColor: _colors2.default.green2,
         activeBackgroundColor: _colors2.default.green3,
-        activeBorderColor: _colors2.default.green3
+        activeBorderColor: _colors2.default.green2
       },
 
       warning: {
         fontWeight: 500,
         color: _colors2.default.white,
         backgroundColor: _colors2.default.orange2,
-        borderColor: _colors2.default.orange2,
+        borderColor: _colors2.default.orange1,
         hoverBackgroundColor: _colors2.default.orange3,
-        hoverBorderColor: _colors2.default.orange3,
+        hoverBorderColor: _colors2.default.orange2,
         focusBackgroundColor: _colors2.default.orange3,
-        focusBorderColor: _colors2.default.orange3,
+        focusBorderColor: _colors2.default.orange2,
         activeBackgroundColor: _colors2.default.orange3,
-        activeBorderColor: _colors2.default.orange3
+        activeBorderColor: _colors2.default.orange2
       },
 
       danger: {
         fontWeight: 500,
         color: _colors2.default.white,
         backgroundColor: _colors2.default.red2,
-        borderColor: _colors2.default.red2,
+        borderColor: _colors2.default.red1,
         hoverBackgroundColor: _colors2.default.red3,
-        hoverBorderColor: _colors2.default.red3,
+        hoverBorderColor: _colors2.default.red2,
         focusBackgroundColor: _colors2.default.red3,
-        focusBorderColor: _colors2.default.red3,
+        focusBorderColor: _colors2.default.red2,
         activeBackgroundColor: _colors2.default.red3,
-        activeBorderColor: _colors2.default.red3
+        activeBorderColor: _colors2.default.red2
       },
 
       link: {
@@ -621,13 +628,13 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
       button: {
         color: colors.white,
         backgroundColor: color2,
-        borderColor: color2,
+        borderColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
+        hoverBorderColor: color2,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
+        focusBorderColor: color2,
         activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBorderColor: color2
       }
     },
     titlebar: {
@@ -660,15 +667,15 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         activeBorderColor: color5,
 
         primary: {
-          color: color2,
+          color: color1,
           backgroundColor: colors.white,
-          borderColor: colors.white,
+          borderColor: color1,
           hoverBackgroundColor: colors.lightGray5,
-          hoverBorderColor: colors.lightGray5,
+          hoverBorderColor: color1,
           focusBackgroundColor: colors.lightGray5,
-          focusBorderColor: colors.lightGray5,
+          focusBorderColor: color1,
           activeBackgroundColor: colors.lightGray5,
-          activeBorderColor: colors.lightGray5
+          activeBorderColor: color1
         }
       }
     }
@@ -680,49 +687,51 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
   var color2 = colors[colorVariant + '2'];
   var color3 = colors[colorVariant + '3'];
   var color4 = colors[colorVariant + '4'];
-  var color5 = colors[colorVariant + '5'];
-  var darkColor1 = (0, _polished.darken)(0.27, color1);
+  // const color5 = colors[`${colorVariant}5`];
+  var dark18Color1 = (0, _polished.darken)(0.18, color1);
+  var dark22Color1 = (0, _polished.darken)(0.22, color1);
+  var dark27Color1 = (0, _polished.darken)(0.27, color1);
 
   /* eslint-disable no-unused-expressions */
-  (0, _styledComponents.injectGlobal)(_templateObject2, colorVariant, darkColor1, color2);
+  (0, _styledComponents.injectGlobal)(_templateObject2, colorVariant, dark27Color1, color2);
   /* eslint-enable */
 
   return _lodash2.default.merge({}, baseConfig, {
-    color: darkColor1,
+    color: dark27Color1,
     backgroundColor: color2,
     borderColor: color1,
-    loaderColor: darkColor1,
+    loaderColor: dark27Color1,
     controlColor: color4,
-    hoverControlColor: darkColor1,
+    hoverControlColor: dark27Color1,
 
     sidebar: {
       nav: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color3,
-        hoverColor: darkColor1,
+        hoverColor: dark27Color1,
         hoverBackgroundColor: (0, _polished.lighten)(0.14, color3)
       }
     },
     toolbar: {
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color2,
+        borderColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
+        hoverBorderColor: color2,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
+        focusBorderColor: color2,
         activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBorderColor: color2
       }
     },
     titlebar: {
-      color: darkColor1,
+      color: dark27Color1,
       backgroundColor: color2,
       borderColor: color2,
 
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
         borderColor: color2,
         hoverBackgroundColor: color3,
@@ -735,26 +744,26 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     },
     form: {
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color5,
+        borderColor: dark27Color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color5,
+        hoverBorderColor: dark18Color1,
         focusBackgroundColor: color3,
-        focusBorderColor: color5,
+        focusBorderColor: dark18Color1,
         activeBackgroundColor: color3,
-        activeBorderColor: color5,
+        activeBorderColor: dark18Color1,
 
         primary: {
           color: color2,
-          backgroundColor: darkColor1,
-          borderColor: darkColor1,
-          hoverBackgroundColor: colors.lightGray5,
-          hoverBorderColor: colors.lightGray5,
-          focusBackgroundColor: colors.lightGray5,
-          focusBorderColor: colors.lightGray5,
-          activeBackgroundColor: colors.lightGray5,
-          activeBorderColor: colors.lightGray5
+          backgroundColor: dark22Color1,
+          borderColor: dark27Color1,
+          hoverBackgroundColor: dark18Color1,
+          hoverBorderColor: dark22Color1,
+          focusBackgroundColor: dark18Color1,
+          focusBorderColor: dark22Color1,
+          activeBackgroundColor: dark18Color1,
+          activeBorderColor: dark22Color1
         }
       }
     }
@@ -962,7 +971,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    min-width: ', ';\n    min-height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  pointer-events: none;\n'], ['\n  pointer-events: none;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n']);
 
@@ -1015,20 +1024,14 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
 }, function (props) {
   return props.theme.toolbar.button.backgroundColor;
 }, function (props) {
+  return props.theme.toolbar.boxShadow;
+}, function (props) {
   return props.theme.toolbar.button.borderRadius;
 }, function (props) {
   return props.theme.toolbar.xsSize;
 }, function (props) {
   return props.theme.toolbar.xsSize;
 }, function (props) {
-  return props.theme.toolbar.xsSize;
-}, function (props) {
-  return props.theme.toolbar.xsSize;
-}, function (props) {
-  return props.theme.toolbar.smSize;
-}, function (props) {
-  return props.theme.toolbar.smSize;
-}, function (props) {
   return props.theme.toolbar.smSize;
 }, function (props) {
   return props.theme.toolbar.smSize;
@@ -1036,14 +1039,6 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
   return props.theme.toolbar.mdSize;
 }, function (props) {
   return props.theme.toolbar.mdSize;
-}, function (props) {
-  return props.theme.toolbar.mdSize;
-}, function (props) {
-  return props.theme.toolbar.mdSize;
-}, function (props) {
-  return props.theme.toolbar.lgSize;
-}, function (props) {
-  return props.theme.toolbar.lgSize;
 }, function (props) {
   return props.theme.toolbar.lgSize;
 }, function (props) {
@@ -2678,7 +2673,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  ', ' border-radius: ', ';\n\n  &.shape-round {\n    &.btn-xs {\n      height: 25px;\n      border-radius: 12.5px;\n      padding: 1px 14px;\n    }\n\n    &.btn-sm {\n      height: 33px;\n      border-radius: 16.5px;\n      padding: 5px 16px;\n    }\n\n    &.btn-md {\n      height: 42px;\n      border-radius: 21px;\n      padding: 6px 20px;\n    }\n\n    &.btn-lg {\n      height: 49px;\n      border-radius: 24.5px;\n      padding: 10px 24px;\n    }\n  }\n'], ['\n  ', ' border-radius: ', ';\n\n  &.shape-round {\n    &.btn-xs {\n      height: 25px;\n      border-radius: 12.5px;\n      padding: 1px 14px;\n    }\n\n    &.btn-sm {\n      height: 33px;\n      border-radius: 16.5px;\n      padding: 5px 16px;\n    }\n\n    &.btn-md {\n      height: 42px;\n      border-radius: 21px;\n      padding: 6px 20px;\n    }\n\n    &.btn-lg {\n      height: 49px;\n      border-radius: 24.5px;\n      padding: 10px 24px;\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 12px;\n    line-height: 21px;\n    padding: 0 14px;\n  }\n\n  &.btn-sm {\n    line-height: 30px;\n    padding: 0 16px;\n  }\n\n  &.btn-md {\n    line-height: 38px;\n    padding: 0 20px;\n  }\n\n  &.btn-lg {\n    line-height: 45px;\n    padding: 0 24px;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 12.5px;\n    }\n\n    &.btn-sm {\n      border-radius: 17px;\n    }\n\n    &.btn-md {\n      border-radius: 21px;\n    }\n\n    &.btn-lg {\n      border-radius: 24.5px;\n    }\n  }\n'], ['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 12px;\n    line-height: 21px;\n    padding: 0 14px;\n  }\n\n  &.btn-sm {\n    line-height: 30px;\n    padding: 0 16px;\n  }\n\n  &.btn-md {\n    line-height: 38px;\n    padding: 0 20px;\n  }\n\n  &.btn-lg {\n    line-height: 45px;\n    padding: 0 24px;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 12.5px;\n    }\n\n    &.btn-sm {\n      border-radius: 17px;\n    }\n\n    &.btn-md {\n      border-radius: 21px;\n    }\n\n    &.btn-lg {\n      border-radius: 24.5px;\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2716,6 +2711,10 @@ var colorsStyle = function colorsStyle(props) {
 
 var StyledButton = _styledComponents2.default.button(_templateObject, function (props) {
   return colorsStyle(props);
+}, function (props) {
+  return props.theme.form.button.borderStyle;
+}, function (props) {
+  return props.theme.form.button.borderWidth;
 }, function (props) {
   return props.theme.form.button.borderRadius;
 });
@@ -3466,7 +3465,7 @@ var StyledAside = _styledComponents2.default.aside(_templateObject, function (pr
 }, function (props) {
   return props.theme.borderStyle;
 }, function (props) {
-  return props.theme.boxShadow;
+  return props.theme.sidebar.boxShadow;
 }, function (props) {
   return props.theme.borderWidth;
 }, function (props) {
@@ -4116,7 +4115,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: ', ';\n\n  &.direction-row {\n    flex-direction: row;\n  }\n  &.direction-column {\n    flex-direction: column;\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n\n  &.direction-column {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n\n  &.direction-row {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n'], ['\n  display: flex;\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: ', ';\n\n  &.direction-row {\n    flex-direction: row;\n  }\n  &.direction-column {\n    flex-direction: column;\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n\n  &.direction-column {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n\n  &.direction-row {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: ', ';\n  box-shadow: ', ';\n\n  &.direction-row {\n    flex-direction: row;\n  }\n  &.direction-column {\n    flex-direction: column;\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n\n  &.direction-column {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n\n  &.direction-row {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n'], ['\n  display: flex;\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: ', ';\n  box-shadow: ', ';\n\n  &.direction-row {\n    flex-direction: row;\n  }\n  &.direction-column {\n    flex-direction: column;\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n\n  &.direction-column {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-top-right-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-bottom-left-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n\n  &.direction-row {\n    &.first-shape-square {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-square {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n\n    &.first-shape-round {\n      border-top-left-radius: ', ';\n      border-bottom-left-radius: ', ';\n    }\n\n    &.last-shape-round {\n      border-top-right-radius: ', ';\n      border-bottom-right-radius: ', ';\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4150,6 +4149,8 @@ var Group = _styledComponents2.default.div(_templateObject, function (props) {
   return props.theme.toolbar.button.borderStyle;
 }, function (props) {
   return props.theme.toolbar.button.borderWidth;
+}, function (props) {
+  return props.theme.toolbar.boxShadow;
 }, function (props) {
   return props.theme.toolbar.childrenMargin;
 }, function (props) {
@@ -4507,7 +4508,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  left: 0;\n  right: 0;\n  font-weight: ', ';\n  color: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  background: ', ';\n  text-align: center;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.position-top {\n    top: 0;\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    border-top-width: ', ';\n  }\n\n  &.xs {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.sm {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.md {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.lg {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.maximized {\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    border-width: 0;\n  }\n'], ['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  left: 0;\n  right: 0;\n  font-weight: ', ';\n  color: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  background: ', ';\n  text-align: center;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.position-top {\n    top: 0;\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    border-top-width: ', ';\n  }\n\n  &.xs {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.sm {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.md {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.lg {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.maximized {\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    border-width: 0;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  left: 0;\n  right: 0;\n  font-weight: ', ';\n  color: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  background: ', ';\n  box-shadow: ', ';\n  text-align: center;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.position-top {\n    top: 0;\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    border-top-width: ', ';\n  }\n\n  &.xs {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.sm {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.md {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.lg {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.maximized {\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    border-width: 0;\n  }\n'], ['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  left: 0;\n  right: 0;\n  font-weight: ', ';\n  color: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  background: ', ';\n  box-shadow: ', ';\n  text-align: center;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.position-top {\n    top: 0;\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    border-top-width: ', ';\n  }\n\n  &.xs {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.sm {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.md {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.lg {\n    height: ', ';\n    font-size: ', ';\n    line-height: ', ';\n  }\n\n  &.maximized {\n    height: 100%;\n    top: 0;\n    bottom: 0;\n    border-width: 0;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4549,6 +4550,8 @@ var StyledHeader = _styledComponents2.default.header(_templateObject, function (
   return props.theme.titlebar.borderStyle;
 }, function (props) {
   return props.theme.titlebar.backgroundColor;
+}, function (props) {
+  return props.theme.titlebar.boxShadow;
 }, function (props) {
   return props.theme.titlebar.borderWidth;
 }, function (props) {
