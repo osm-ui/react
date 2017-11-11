@@ -51,32 +51,49 @@ const colorsStyle = props =>
   }, '');
 
 const StyledButton = styled.button`
-  ${props => colorsStyle(props)} border-radius: ${props =>
-      props.theme.form.button.borderRadius};
+  /* prettier-ignore */
+  ${props => colorsStyle(props)}
+
+  border-style: ${props => props.theme.form.button.borderStyle};
+  border-width: ${props => props.theme.form.button.borderWidth};
+  border-radius: ${props => props.theme.form.button.borderRadius};
+
+  &.btn-xs {
+    font-size: 12px;
+    line-height: 21px;
+    padding: 0 14px;
+  }
+
+  &.btn-sm {
+    line-height: 30px;
+    padding: 0 16px;
+  }
+
+  &.btn-md {
+    line-height: 38px;
+    padding: 0 20px;
+  }
+
+  &.btn-lg {
+    line-height: 45px;
+    padding: 0 24px;
+  }
 
   &.shape-round {
     &.btn-xs {
-      height: 25px;
       border-radius: 12.5px;
-      padding: 1px 14px;
     }
 
     &.btn-sm {
-      height: 33px;
-      border-radius: 16.5px;
-      padding: 5px 16px;
+      border-radius: 17px;
     }
 
     &.btn-md {
-      height: 42px;
       border-radius: 21px;
-      padding: 6px 20px;
     }
 
     &.btn-lg {
-      height: 49px;
       border-radius: 24.5px;
-      padding: 10px 24px;
     }
   }
 `;

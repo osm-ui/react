@@ -80,15 +80,15 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         activeBorderColor: color5,
 
         primary: {
-          color: color2,
+          color: color1,
           backgroundColor: colors.white,
-          borderColor: colors.white,
+          borderColor: color1,
           hoverBackgroundColor: colors.lightGray5,
-          hoverBorderColor: colors.lightGray5,
+          hoverBorderColor: color1,
           focusBackgroundColor: colors.lightGray5,
-          focusBorderColor: colors.lightGray5,
+          focusBorderColor: color1,
           activeBackgroundColor: colors.lightGray5,
-          activeBorderColor: colors.lightGray5
+          activeBorderColor: color1
         }
       }
     }
@@ -100,13 +100,15 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
   const color2 = colors[`${colorVariant}2`];
   const color3 = colors[`${colorVariant}3`];
   const color4 = colors[`${colorVariant}4`];
-  const color5 = colors[`${colorVariant}5`];
-  const darkColor1 = darken(0.27, color1);
+  // const color5 = colors[`${colorVariant}5`];
+  const dark18Color1 = darken(0.18, color1);
+  const dark22Color1 = darken(0.22, color1);
+  const dark27Color1 = darken(0.27, color1);
 
   /* eslint-disable no-unused-expressions */
   injectGlobal`
         .osm-ui-react-marker-${colorVariant} {
-            color: ${darkColor1};
+            color: ${dark27Color1};
 
             #colorized, #colorized * {
                 fill: ${color2} !important;
@@ -116,24 +118,24 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
   /* eslint-enable */
 
   return _.merge({}, baseConfig, {
-    color: darkColor1,
+    color: dark27Color1,
     backgroundColor: color2,
     borderColor: color1,
-    loaderColor: darkColor1,
+    loaderColor: dark27Color1,
     controlColor: color4,
-    hoverControlColor: darkColor1,
+    hoverControlColor: dark27Color1,
 
     sidebar: {
       nav: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color3,
-        hoverColor: darkColor1,
+        hoverColor: dark27Color1,
         hoverBackgroundColor: lighten(0.14, color3)
       }
     },
     toolbar: {
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
         borderColor: color2,
         hoverBackgroundColor: color3,
@@ -145,12 +147,12 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
       }
     },
     titlebar: {
-      color: darkColor1,
+      color: dark27Color1,
       backgroundColor: color2,
       borderColor: color2,
 
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
         borderColor: color2,
         hoverBackgroundColor: color3,
@@ -163,26 +165,26 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     },
     form: {
       button: {
-        color: darkColor1,
+        color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color5,
+        borderColor: dark27Color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color5,
+        hoverBorderColor: dark18Color1,
         focusBackgroundColor: color3,
-        focusBorderColor: color5,
+        focusBorderColor: dark18Color1,
         activeBackgroundColor: color3,
-        activeBorderColor: color5,
+        activeBorderColor: dark18Color1,
 
         primary: {
           color: color2,
-          backgroundColor: darkColor1,
-          borderColor: darkColor1,
-          hoverBackgroundColor: colors.lightGray5,
-          hoverBorderColor: colors.lightGray5,
-          focusBackgroundColor: colors.lightGray5,
-          focusBorderColor: colors.lightGray5,
-          activeBackgroundColor: colors.lightGray5,
-          activeBorderColor: colors.lightGray5
+          backgroundColor: dark22Color1,
+          borderColor: dark27Color1,
+          hoverBackgroundColor: dark18Color1,
+          hoverBorderColor: dark22Color1,
+          focusBackgroundColor: dark18Color1,
+          focusBorderColor: dark22Color1,
+          activeBackgroundColor: dark18Color1,
+          activeBorderColor: dark22Color1
         }
       }
     }

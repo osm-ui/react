@@ -100,6 +100,8 @@ export const config = {
       color: colors.anthracite2,
       backgroundColor: colors.white,
       borderColor: colors.lightGray3,
+      borderStyle: 'solid',
+      borderWidth: '2px',
       borderRadius: '4px',
       hoverBackgroundColor: colors.lightGray5,
       hoverBorderColor: colors.lightGray3,
@@ -112,65 +114,65 @@ export const config = {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.blue2,
-        borderColor: colors.blue2,
+        borderColor: colors.blue1,
         hoverBackgroundColor: colors.blue3,
-        hoverBorderColor: colors.blue3,
+        hoverBorderColor: colors.blue2,
         focusBackgroundColor: colors.blue3,
-        focusBorderColor: colors.blue3,
+        focusBorderColor: colors.blue2,
         activeBackgroundColor: colors.blue3,
-        activeBorderColor: colors.blue3
+        activeBorderColor: colors.blue2
       },
 
       info: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.turquoise2,
-        borderColor: colors.turquoise2,
+        borderColor: colors.turquoise1,
         hoverBackgroundColor: colors.turquoise3,
-        hoverBorderColor: colors.turquoise3,
+        hoverBorderColor: colors.turquoise2,
         focusBackgroundColor: colors.turquoise3,
-        focusBorderColor: colors.turquoise3,
+        focusBorderColor: colors.turquoise2,
         activeBackgroundColor: colors.turquoise3,
-        activeBorderColor: colors.turquoise3
+        activeBorderColor: colors.turquoise2
       },
 
       success: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.green2,
-        borderColor: colors.green2,
+        borderColor: colors.green1,
         hoverBackgroundColor: colors.green3,
-        hoverBorderColor: colors.green3,
+        hoverBorderColor: colors.green2,
         focusBackgroundColor: colors.green3,
-        focusBorderColor: colors.green3,
+        focusBorderColor: colors.green2,
         activeBackgroundColor: colors.green3,
-        activeBorderColor: colors.green3
+        activeBorderColor: colors.green2
       },
 
       warning: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.orange2,
-        borderColor: colors.orange2,
+        borderColor: colors.orange1,
         hoverBackgroundColor: colors.orange3,
-        hoverBorderColor: colors.orange3,
+        hoverBorderColor: colors.orange2,
         focusBackgroundColor: colors.orange3,
-        focusBorderColor: colors.orange3,
+        focusBorderColor: colors.orange2,
         activeBackgroundColor: colors.orange3,
-        activeBorderColor: colors.orange3
+        activeBorderColor: colors.orange2
       },
 
       danger: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.red2,
-        borderColor: colors.red2,
+        borderColor: colors.red1,
         hoverBackgroundColor: colors.red3,
-        hoverBorderColor: colors.red3,
+        hoverBorderColor: colors.red2,
         focusBackgroundColor: colors.red3,
-        focusBorderColor: colors.red3,
+        focusBorderColor: colors.red2,
         activeBackgroundColor: colors.red3,
-        activeBorderColor: colors.red3
+        activeBorderColor: colors.red2
       },
 
       link: {
