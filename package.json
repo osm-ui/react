@@ -1,6 +1,6 @@
 {
   "name": "osm-ui-react",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
   "author": "Guillaume AMAT <guillaume@amat.io>",
