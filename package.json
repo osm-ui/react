@@ -23,6 +23,9 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
     ]
   },
   "prettier": {
@@ -76,6 +79,8 @@
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
     "eslint": "^4.11.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-config-react": "^1.1.7",
