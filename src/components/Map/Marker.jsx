@@ -71,7 +71,10 @@ const MapMarker = ({
   <Marker
     position={position}
     icon={L.divIcon({
-      className: `osm-ui-react-marker-shape osm-ui-react-marker-${theme} osm-ui-react-marker-${shape}`,
+      className: `osm-ui-react-marker-shape
+        osm-ui-react-marker-${theme}
+        osm-ui-react-marker-${shape}
+      `,
       iconAnchor: shapes[shape].iconAnchor,
       html: `
                     ${shapes[shape].html}
