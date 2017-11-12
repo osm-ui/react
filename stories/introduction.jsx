@@ -4,7 +4,7 @@ import { host } from 'storybook-host';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import defaultHostOptions from './defaultHostOptions';
-import logoFile from '../logo.png';
+import logoFile from '../src/logo.png';
 
 storiesOf('Introduction', module)
   .addDecorator(withKnobs)

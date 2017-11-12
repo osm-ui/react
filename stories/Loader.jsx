@@ -7,7 +7,7 @@ import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import FakeApp from './components/FakeApp';
 
-import { DefaultTheme, Loader } from '../index';
+import { DefaultTheme, Loader } from '../src/index';
 
 storiesOf('Loader', module)
   .addDecorator(withKnobs)

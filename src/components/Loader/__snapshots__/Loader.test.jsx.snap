@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with a text children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="sc-htpNat gCRRiF"
+  >
+    <div>
+      <div
+        className="sc-bwzfXH ksekNo"
+      />
+      
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="sc-htpNat gCRRiF"
+  >
+    <div>
+      <div
+        className="sc-bwzfXH ksekNo"
+      />
+      
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots with a label prop Should render with a text children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="sc-htpNat gCRRiF"
+  >
+    <div>
+      <div
+        className="sc-bwzfXH ksekNo"
+      />
+      <div
+        className="sc-bxivhb cqtYUU"
+      >
+        This is a label
+      </div>
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots with a label prop Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="sc-htpNat gCRRiF"
+  >
+    <div>
+      <div
+        className="sc-bwzfXH ksekNo"
+      />
+      <div
+        className="sc-bxivhb cqtYUU"
+      >
+        This is a label
+      </div>
+    </div>
+  </div>
+</span>
+`;

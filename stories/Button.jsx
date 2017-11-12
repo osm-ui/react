@@ -25,7 +25,7 @@ import {
   GreenTheme,
   Section,
   Button
-} from '../index';
+} from '../src/index';
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)

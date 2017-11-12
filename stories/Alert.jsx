@@ -5,7 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import defaultHostOptions from './defaultHostOptions';
 
-import { DefaultTheme, Alert } from '../index';
+import { DefaultTheme, Alert } from '../src/index';
 
 storiesOf('Alert', module)
   .addDecorator(withKnobs)

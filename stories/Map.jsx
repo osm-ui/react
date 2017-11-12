@@ -7,7 +7,7 @@ import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import ReactLeafletAlert from './components/ReactLeafletAlert';
 
-import { DefaultTheme, Map } from '../index';
+import { DefaultTheme, Map } from '../src/index';
 
 const mapPosition = [44.834769665310445, -0.5757522583007814];
 const mapStyle = { height: 500 };

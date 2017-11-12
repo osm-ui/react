@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Lorem from 'react-lorem-component';
 import ReactPlaceholder from 'react-placeholder';
-import Section from '../../components/Section';
+import { Section } from '../../src/index';
 
 const StyledSection = styled(Section)`
   height: 80vh !important;

@@ -33,7 +33,7 @@ import {
   GreenTheme,
   Sidebar,
   Button
-} from '../index';
+} from '../src/index';
 
 storiesOf('Sidebar', module)
   .addDecorator(withKnobs)

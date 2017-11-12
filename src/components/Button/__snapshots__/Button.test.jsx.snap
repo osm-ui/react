@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with a text children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <button
+    className="btn shape-round btn-default btn-md sc-bwzfXH fEgsfH"
+    disabled={false}
+    type="button"
+  >
+    This is a text
+  </button>
+</span>
+`;
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <button
+    className="btn shape-round btn-default btn-md sc-bwzfXH fEgsfH"
+    disabled={false}
+    type="button"
+  >
+    <div />
+  </button>
+</span>
+`;
+
+exports[`When using snapshots on an anchor typed Button Should render with a text children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <a
+    className="btn shape-round btn-default btn-md sc-htpNat jTMgHP"
+    disabled={false}
+    role="button"
+  >
+    This is a text
+  </a>
+</span>
+`;
+
+exports[`When using snapshots on an anchor typed Button Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <a
+    className="btn shape-round btn-default btn-md sc-htpNat jTMgHP"
+    disabled={false}
+    role="button"
+  >
+    <div />
+  </a>
+</span>
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with a text children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="alert alert-info sc-bwzfXH eSIoy"
+  >
+    This is a text
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="alert alert-info sc-bwzfXH eSIoy"
+  >
+    <div />
+  </div>
+</span>
+`;
