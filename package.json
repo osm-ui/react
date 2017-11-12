@@ -14,7 +14,7 @@
     "precommit": "lint-staged",
     "test": "jest --env=jsdom",
     "test-ci": "npm test -- --ci",
-    "test-coverage": "npm test-ci -- --coverage",
+    "test-coverage": "npm run test-ci -- --coverage",
     "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'",
     "lint": "eslint 'src/**/*.{js,jsx}'"
   },
