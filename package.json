@@ -19,7 +19,7 @@
     "lint": "eslint 'src/**/*.{js,jsx}'"
   },
   "jest": {
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
     ]
@@ -31,10 +31,6 @@
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,less}": [
       "prettier --single-quote --write",
-      "git add"
-    ],
-    "src/**/*.{js,jsx}": [
-      "eslint",
       "git add"
     ],
     "src/**/*.{js,jsx}": [
@@ -76,6 +72,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
     "eslint": "^4.11.0",
