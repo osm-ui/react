@@ -1,3 +1,8 @@
+[![GitHub release](https://img.shields.io/github/release/osm-ui/react.svg)](https://github.com/osm-ui/react/releases)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://api.travis-ci.org/osm-ui/react.svg?branch=develop)](http://travis-ci.org/osm-ui/react)
+
+
 # OSM User Interface for React
 
 The OSM User Interface initiative aims to provide knowledge and tools in order to build awesome OSM tools.
