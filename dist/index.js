@@ -878,7 +878,7 @@ exports.default = InputHint;
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-transition-group/CSSTransitionGroup");
+module.exports = require("react-transition-group");
 
 /***/ }),
 /* 13 */
@@ -3418,9 +3418,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _CSSTransitionGroup = __webpack_require__(12);
-
-var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+var _reactTransitionGroup = __webpack_require__(12);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -3585,7 +3583,7 @@ var Sidebar = function (_React$Component) {
       });
 
       return _react2.default.createElement(
-        _CSSTransitionGroup2.default,
+        _reactTransitionGroup.CSSTransitionGroup,
         {
           transitionName: 'transition',
           transitionAppear: true,
@@ -3938,9 +3936,7 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _CSSTransitionGroup = __webpack_require__(12);
-
-var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
+var _reactTransitionGroup = __webpack_require__(12);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -4048,7 +4044,7 @@ var Toolbar = function (_React$Component) {
       }
 
       return _react2.default.createElement(
-        _CSSTransitionGroup2.default,
+        _reactTransitionGroup.CSSTransitionGroup,
         {
           transitionName: 'transition',
           transitionAppear: true,
@@ -4920,7 +4916,7 @@ var MapMarker = function MapMarker(_ref) {
     return _react2.default.createElement(_reactLeaflet.Marker, _extends({
         position: position,
         icon: _leaflet2.default.divIcon({
-            className: 'osm-ui-react-marker-shape osm-ui-react-marker-' + theme + ' osm-ui-react-marker-' + shape,
+            className: 'osm-ui-react-marker-shape\n        osm-ui-react-marker-' + theme + '\n        osm-ui-react-marker-' + shape + '\n      ',
             iconAnchor: _markers2.default[shape].iconAnchor,
             html: '\n                    ' + _markers2.default[shape].html + '\n                    <div class="osm-ui-react-marker-icon-wrapper">\n                        <i class="fa fa-' + icon + '"></i>\n                    </div>\n                '
         })
