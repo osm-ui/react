@@ -1,10 +1,21 @@
 {
   "name": "osm-ui-react",
+  "description": "React components for awesome OSM interfaces",
   "version": "0.3.2",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
+  "bugs": "https://github.com/osm-ui/react/issues",
   "author": "Guillaume AMAT <guillaume@amat.io>",
   "license": "MIT",
+  "keywords": [
+    "osm",
+    "openstreetmap",
+    "osmui",
+    "ui",
+    "interface",
+    "component",
+    "react"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9009",
