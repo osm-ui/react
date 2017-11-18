@@ -48,6 +48,10 @@
       "prettier --single-quote --write",
       "git add"
     ],
+    "src/**/*.{js,jsx,json}": [
+      "eslint",
+      "git add"
+    ],
     "src/**/*.{js,jsx}": [
       "jest --ci",
       "git add"
