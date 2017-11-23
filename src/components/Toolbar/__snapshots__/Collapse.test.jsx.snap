@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-left-top direction-column sc-dnqmqq ZATcm"
+  >
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+    <div
+      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="column"
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with the direction and position prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-right-top direction-row sc-dnqmqq ZATcm"
+  >
+    <div
+      className="position-right-top direction-row sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="row"
+      />
+    </div>
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with the direction prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-left-top direction-column sc-dnqmqq ZATcm"
+  >
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+    <div
+      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="column"
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with the opened prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-left-top direction-column opened sc-dnqmqq ZATcm"
+  >
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+    <div
+      className="position-left-top direction-column opened sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="column"
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with the shape prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-left-top direction-column sc-dnqmqq ZATcm"
+  >
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+    <div
+      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="column"
+        shape="square"
+      />
+    </div>
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Should render with the size prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="position-left-top direction-column sc-dnqmqq ZATcm"
+  >
+    <button
+      className="md shape-round btn sc-EHOje dvAFCx"
+      onClick={[Function]}
+      size="md"
+    >
+      
+    </button>
+    <div
+      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      onClick={null}
+    >
+      <div
+        direction="column"
+        size="xs"
+      />
+    </div>
+  </div>
+</span>
+`;
