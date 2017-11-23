@@ -35,6 +35,10 @@
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
     ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/index.js",
+      "<rootDir>/node_modules/"
+    ],
     "setupFiles": [
       "<rootDir>/jest.setup.js"
     ]
