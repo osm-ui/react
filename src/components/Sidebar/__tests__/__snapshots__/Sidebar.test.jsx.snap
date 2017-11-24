@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with a some props and children 1`] = `
+<Sidebar
+  className=""
+  container="parent"
+  footer=""
+  header=""
+  loaderLabel=""
+  loading={false}
+  maximized={false}
+  onClickBack={null}
+  onClickClose={null}
+  onClose={null}
+  onMaximize={null}
+  onOpen={null}
+  onUnmaximize={null}
+  opened={false}
+  position="left"
+  scrollContent={false}
+  title=""
+  width="md"
+>
+  <Sidebar.Header
+    className=""
+  >
+    A title content
+  </Sidebar.Header>
+  <Sidebar.Footer
+    className=""
+  >
+    A footer content
+  </Sidebar.Footer>
+</Sidebar>
+`;
+
+exports[`When using snapshots Should render with a title 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="left md container-parent sc-EHOje haaoDa"
+    >
+      <header
+        className="header"
+      >
+        <button
+          className="close-btn"
+          onClick={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-close fa-lg"
+          />
+        </button>
+        <h2
+          className="sidebar-title in-header sc-bwzfXH ierRJd"
+        >
+          A title
+        </h2>
+        <div
+          className="clearfix"
+        />
+        
+      </header>
+      <div
+        className="content"
+      >
+        <div />
+      </div>
+      
+    </aside>
+  </span>
+</span>
+`;
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="left md container-parent sc-EHOje haaoDa"
+    >
+      <header
+        className="header"
+      >
+        <button
+          className="close-btn"
+          onClick={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-close fa-lg"
+          />
+        </button>
+        
+        <div
+          className="clearfix"
+        />
+        
+      </header>
+      <div
+        className="content"
+      >
+        <div />
+      </div>
+      
+    </aside>
+  </span>
+</span>
+`;
+
+exports[`When using snapshots Should render with the loading prop 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="left md container-parent sc-EHOje haaoDa"
+    >
+      <header
+        className="header"
+      >
+        <button
+          className="close-btn"
+          onClick={[Function]}
+        >
+          <span
+            aria-hidden={true}
+            className="fa fa-close fa-lg"
+          />
+        </button>
+        
+        <div
+          className="clearfix"
+        />
+      </header>
+      <div
+        className="content loading"
+      >
+        <div />
+      </div>
+      <div
+        className="centered sc-bxivhb gIwMIC"
+      >
+        <div>
+          <div
+            className="sc-htpNat fiuTRh"
+          />
+          
+        </div>
+      </div>
+    </aside>
+  </span>
+</span>
+`;
