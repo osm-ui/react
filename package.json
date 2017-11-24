@@ -36,7 +36,6 @@
       "!<rootDir>/node_modules/"
     ],
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/index.js",
       "<rootDir>/node_modules/"
     ],
     "setupFiles": [
