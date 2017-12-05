@@ -91,6 +91,9 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
           activeBorderColor: color1
         }
       }
+    },
+    modal: {
+      backgroundColor: color1
     }
   });
 }

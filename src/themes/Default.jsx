@@ -289,6 +289,9 @@ export const config = {
       backgroundColor: colors.red5,
       borderColor: colors.red5
     }
+  },
+  modal: {
+    backgroundColor: colors.black
   }
 };
 
