@@ -23,6 +23,7 @@
     "build-dist": "cross-env NODE_ENV=production webpack --progress",
     "build": "npm run build-dist && npm run build-storybook",
     "precommit": "lint-staged",
+    "prepush": "npm run test",
     "test": "jest --env=jsdom",
     "test-watch": "npm test -- --watch",
     "test-ci": "npm test -- --ci",
