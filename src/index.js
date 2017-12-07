@@ -5,8 +5,6 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.css';
 import './bootstrap.less';
 
-export colors from 'themes/colors';
-
 export DefaultTheme from 'themes/Default';
 export WhiteTheme from 'themes/Default';
 export LightGrayTheme from 'themes/LightGray';
