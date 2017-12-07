@@ -101,7 +101,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     },
     modal: {
       color: colors.white,
-      backgroundColor: makeTransparent(color2, 0.9)
+      backgroundColor: makeTransparent(color2, 0.95)
     }
   });
 }
@@ -201,7 +201,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     },
     modal: {
       color: colors.dark27Color1,
-      backgroundColor: makeTransparent(color2, 0.9)
+      backgroundColor: makeTransparent(color2, 0.95)
     }
   });
 }

@@ -293,7 +293,7 @@ export const config = {
   },
   modal: {
     color: colors.anthracite1,
-    backgroundColor: makeTransparent(colors.white, 0.9)
+    backgroundColor: makeTransparent(colors.white, 0.95)
   }
 };
 
