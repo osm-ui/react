@@ -32,3 +32,4 @@ export Sidebar from './components/Sidebar';
 export Toolbar from './components/Toolbar';
 export Titlebar from './components/Titlebar';
 export Map from './components/Map';
+export Modal from './components/Modal';

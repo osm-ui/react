@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="container-root sc-EHOje fZcxhA"
+    >
+      <header
+        className="header"
+      >
+        
+        
+      </header>
+      <div
+        className="content"
+      >
+        <div />
+      </div>
+      
+    </aside>
+  </span>
+</span>
+`;
+
+exports[`When using snapshots with loader Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="container-root sc-EHOje fZcxhA"
+    >
+      <header
+        className="header"
+      >
+        
+      </header>
+      <div
+        className="content loading"
+      >
+        <div />
+      </div>
+      <div
+        className="centered sc-bxivhb gIwMIC"
+      >
+        <div>
+          <div
+            className="sc-htpNat fiuTRh"
+          />
+          <div
+            className="sc-ifAKCX dKVvJV"
+          >
+            loading
+          </div>
+        </div>
+      </div>
+    </aside>
+  </span>
+</span>
+`;
+
+exports[`When using snapshots with title, header and footer Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <span>
+    <aside
+      className="container-root sc-EHOje fZcxhA"
+    >
+      <header
+        className="header"
+      >
+        <h2
+          className="sidebar-title in-header sc-bwzfXH ierRJd"
+        >
+          title
+        </h2>
+        <div />
+      </header>
+      <div
+        className="content"
+      >
+        <div />
+      </div>
+      <div />
+    </aside>
+  </span>
+</span>
+`;

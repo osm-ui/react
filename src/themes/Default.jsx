@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import { makeTransparent } from '../helpers/themes';
 import colors from '../colors';
 
 const boxShadow =
@@ -289,6 +290,10 @@ export const config = {
       backgroundColor: colors.red5,
       borderColor: colors.red5
     }
+  },
+  modal: {
+    color: colors.anthracite1,
+    backgroundColor: makeTransparent(colors.white, 0.9)
   }
 };
 
