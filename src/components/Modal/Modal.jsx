@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
 import classnames from 'classnames';
 import styled from 'styled-components';
-import hexRgb from 'hex-rgb';
+
 import Title from '../Sidebar/Title';
 import Loader from '../Loader';
 
@@ -14,13 +14,8 @@ const StyledAside = styled.aside`
   left: 0;
   right: 0;
   padding: 10%;
-  background: ${props => {
-    const colorAsAnArray = hexRgb(props.theme.modal.backgroundColor);
-    colorAsAnArray.push(0.8);
-
-    return `rgba(${colorAsAnArray.join(',')})`;
-  }};
-  color: white;
+  background: ${props => props.theme.modal.backgroundColor};
+  color: ${props => props.theme.modal.color};
   overflow-y: auto;
 
   &.transition-appear {

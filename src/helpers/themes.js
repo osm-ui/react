@@ -1,6 +1,13 @@
 import _ from 'lodash';
+import hexRgb from 'hex-rgb';
 import { lighten, darken } from 'polished';
 import { injectGlobal } from 'styled-components';
+
+export function makeTransparent(hexColor, opacity) {
+  const colorAsAnArray = hexRgb(hexColor);
+  colorAsAnArray.push(opacity);
+  return `rgba(${colorAsAnArray.join(',')})`;
+}
 
 export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
   const color1 = colors[`${colorVariant}1`];
@@ -93,7 +100,8 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
       }
     },
     modal: {
-      backgroundColor: color1
+      color: colors.white,
+      backgroundColor: makeTransparent(color2, 0.9)
     }
   });
 }
@@ -190,6 +198,10 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
           activeBorderColor: dark22Color1
         }
       }
+    },
+    modal: {
+      color: colors.dark27Color1,
+      backgroundColor: makeTransparent(color2, 0.9)
     }
   });
 }
