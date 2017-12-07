@@ -53,12 +53,10 @@
       "git add"
     ],
     "src/**/*.{js,jsx,json}": [
-      "eslint",
-      "git add"
+      "eslint"
     ],
     "src/**/*.{js,jsx}": [
-      "jest --ci",
-      "git add"
+      "npm run test-ci"
     ]
   },
   "dependencies": {
