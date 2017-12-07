@@ -191,7 +191,7 @@ const ToolbarItem = ({
   return (
     <Element size={size} className={classes} {...rest}>
       {children && children}
-      {!children && <FontAwesome name={icon} />}
+      {children !== '' && <FontAwesome name={icon} />}
     </Element>
   );
 };

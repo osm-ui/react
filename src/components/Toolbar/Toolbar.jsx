@@ -220,17 +220,17 @@ class Toolbar extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      opened: nextProps.opened
-    });
-
-    if (this.props.opened !== nextProps.opened) {
+    if (this.state.opened !== nextProps.opened) {
       if (nextProps.opened === true) {
         this._triggerCallback('onOpen');
       } else {
         this._triggerCallback('onClose');
       }
     }
+
+    this.setState({
+      opened: nextProps.opened
+    });
   }
 
   _triggerCallback(name) {
