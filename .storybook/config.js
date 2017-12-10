@@ -18,15 +18,16 @@ setOptions({
 
 function loadStories() {
     /* eslint-disable */
-    require('../src/stories/introduction');
-    require('../src/stories/Button');
-    require('../src/stories/Alert');
-    require('../src/stories/Form');
-    require('../src/stories/Loader');
-    require('../src/stories/Sidebar');
-    require('../src/stories/Toolbar');
-    require('../src/stories/Titlebar');
-    require('../src/stories/Map');
+    require('../stories/introduction');
+    require('../stories/Button');
+    require('../stories/Alert');
+    require('../stories/Form');
+    require('../stories/Loader');
+    require('../stories/Sidebar');
+    require('../stories/Toolbar');
+    require('../stories/Titlebar');
+    require('../stories/Map');
+    require('../stories/Modal');
     /* eslint-enable */
 }
 

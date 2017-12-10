@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "plugins": [
     "import",
+    "json",
     "react",
     "jest"
   ],

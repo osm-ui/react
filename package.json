@@ -1,10 +1,21 @@
 {
   "name": "osm-ui-react",
+  "description": "React components for awesome OSM interfaces",
   "version": "0.3.2",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
+  "bugs": "https://github.com/osm-ui/react/issues",
   "author": "Guillaume AMAT <guillaume@amat.io>",
   "license": "MIT",
+  "keywords": [
+    "osm",
+    "openstreetmap",
+    "osmui",
+    "ui",
+    "interface",
+    "component",
+    "react"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "storybook": "start-storybook -p 9009",
@@ -12,7 +23,25 @@
     "build-dist": "cross-env NODE_ENV=production webpack --progress",
     "build": "npm run build-dist && npm run build-storybook",
     "precommit": "lint-staged",
-    "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'"
+    "prepush": "npm run test",
+    "test": "jest --env=jsdom",
+    "test-watch": "npm test -- --watch",
+    "test-ci": "npm test -- --ci",
+    "test-coverage": "npm run test-ci -- --coverage",
+    "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'",
+    "lint": "eslint 'src/**/*.{js,jsx}'"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
   },
   "prettier": {
     "semi": true,
@@ -24,8 +53,10 @@
       "git add"
     ],
     "src/**/*.{js,jsx,json}": [
-      "eslint",
-      "git add"
+      "eslint"
+    ],
+    "src/**/*.{js,jsx}": [
+      "npm run test-ci"
     ]
   },
   "dependencies": {
@@ -38,6 +69,7 @@
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
+    "hex-rgb": "^1.0.0",
     "jquery": "^3.2.1",
     "leaflet": "^1.2.0",
     "leaflet.locatecontrol": "^0.62.0",
@@ -62,23 +94,29 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
     "eslint": "^4.11.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-react": "^7.4.0",
     "expose-loader": "^0.7.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "husky": "^0.14.3",
+    "jest": "^21.2.1",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "lint-staged": "^5.0.0",
     "prettier": "^1.8.2",
     "raw-loader": "^0.5.1",
+    "react-test-renderer": "^16.1.0",
     "storybook-host": "^4.1.4",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",

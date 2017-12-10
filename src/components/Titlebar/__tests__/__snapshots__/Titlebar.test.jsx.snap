@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <header
+    className="md position-top container-parent sc-bwzfXH Wioxr"
+  >
+    <div />
+  </header>
+</span>
+`;
+
+exports[`When using snapshots with the maximized prop Should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <header
+    className="md position-top container-parent maximized sc-bwzfXH Wioxr"
+  >
+    <div />
+  </header>
+</span>
+`;
