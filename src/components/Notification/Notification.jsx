@@ -143,7 +143,7 @@ const StyledAside = styled.aside`
   }
 `;
 
-class NotificationItem extends React.Component {
+class Notification extends React.Component {
   constructor(props) {
     super(props);
 
@@ -246,7 +246,7 @@ class NotificationItem extends React.Component {
   }
 }
 
-NotificationItem.propTypes = {
+Notification.propTypes = {
   id: PropTypes.number.isRequired,
   context: PropTypes.oneOf(contexts),
   position: PropTypes.oneOf([
@@ -269,7 +269,7 @@ NotificationItem.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-NotificationItem.defaultProps = {
+Notification.defaultProps = {
   context: 'info',
   position: 'top-right',
   direction: 'horizontal',
@@ -283,6 +283,6 @@ NotificationItem.defaultProps = {
   className: ''
 };
 
-NotificationItem.displayName = 'Notification.Item';
+Notification.displayName = 'Notification';
 
-export default NotificationItem;
+export default Notification;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
+import Transition from 'react-transition-group/Transition';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
@@ -105,88 +105,52 @@ const StyledAside = styled.aside`
 
   &.direction-column {
     &.position-left-top,
-    &.position-left-top.transition-appear,
     &.position-left-center,
-    &.position-left-center.transition-appear,
-    &.position-left-bottom,
-    &.position-left-bottom.transition-appear {
+    &.position-left-bottom {
       transform: translate(-150%, 0);
     }
 
-    &.position-center-top,
-    &.position-center-top.transition-appear {
+    &.position-center-top {
       transform: translate(0, -150%);
     }
 
-    &.position-center-bottom,
-    &.position-center-bottom.transition-appear {
+    &.position-center-bottom {
       transform: translate(0, 150%);
     }
 
     &.position-right-top,
-    &.position-right-top.transition-appear,
     &.position-right-center,
-    &.position-right-center.transition-appear,
-    &.position-right-bottom,
-    &.position-right-bottom.transition-appear {
+    &.position-right-bottom {
       transform: translate(150%, 0);
     }
   }
 
   &.direction-row {
     &.position-left-top,
-    &.position-left-top.transition-appear,
     &.position-center-top,
-    &.position-center-top.transition-appear,
-    &.position-right-top,
-    &.position-right-top.transition-appear {
+    &.position-right-top {
       transform: translate(0, -150%);
     }
 
-    &.position-left-center,
-    &.position-left-center.transition-appear {
+    &.position-left-center {
       transform: translate(-150%, 0);
     }
 
-    &.position-right-center,
-    &.position-right-center.transition-appear {
+    &.position-right-center {
       transform: translate(150%, 0);
     }
 
     &.position-left-bottom,
-    &.position-left-bottom.transition-appear,
     &.position-center-bottom,
-    &.position-center-bottom.transition-appear,
-    &.position-right-bottom,
-    &.position-right-bottom.transition-appear {
+    &.position-right-bottom {
       transform: translate(0, 150%);
     }
   }
 
   &.direction-column,
   &.direction-row {
-    &.position-center-center,
-    &.position-center-center.transition-appear {
-      opacity: 0;
-    }
-  }
-
-  &.direction-column,
-  &.direction-row {
-    &.position-left-top,
-    &.position-center-top,
-    &.position-right-top,
-    &.position-right-center,
-    &.position-right-bottom,
-    &.position-center-bottom,
-    &.position-left-bottom,
-    &.position-left-center,
     &.position-center-center {
-      &.opened,
-      &.opened.transition-appear.transition-appear-active {
-        opacity: ${props => props.opacity};
-        transform: translate(0, 0);
-      }
+      opacity: 0;
     }
   }
 
@@ -245,6 +209,7 @@ class Toolbar extends React.Component {
       direction,
       size,
       shape,
+      opacity,
       container,
       className,
       children,
@@ -271,20 +236,27 @@ class Toolbar extends React.Component {
       childrenProps.shape = shape;
     }
 
+    const transitionStyles = {
+      entered: {
+        opacity,
+        transform: 'translate(0,0)'
+      }
+    };
+
     return (
-      <CSSTransitionGroup
-        transitionName="transition"
-        transitionAppear
-        transitionAppearTimeout={100}
-        transitionEnter={false}
-        transitionLeave={false}
-      >
-        <StyledAside className={asideClasses} {...rest}>
-          {React.Children.map(children, child =>
-            React.cloneElement(child, childrenProps)
-          )}
-        </StyledAside>
-      </CSSTransitionGroup>
+      <Transition in appear timeout={100}>
+        {state => (
+          <StyledAside
+            className={asideClasses}
+            style={transitionStyles[state]}
+            {...rest}
+          >
+            {React.Children.map(children, child =>
+              React.cloneElement(child, childrenProps)
+            )}
+          </StyledAside>
+        )}
+      </Transition>
     );
   }
 }

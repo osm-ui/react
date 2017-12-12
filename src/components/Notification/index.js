@@ -1,7 +1,6 @@
-import NotificationItem from './Item';
+import Notification from './Notification';
 import NotificationGroup from './Group';
 
-Notification.Item = NotificationItem;
 Notification.Group = NotificationGroup;
 
 export default Notification;

@@ -37,7 +37,7 @@ class FakeNotificationCenter extends React.Component {
 
   findAllNotifs(components) {
     return React.Children.map(components, component => {
-      if (component.type === Notification.Item)
+      if (component.type === Notification)
         return component.props.id;
       else
         return this.findAllNotifs(component.props.children);
@@ -48,7 +48,7 @@ class FakeNotificationCenter extends React.Component {
     const notifications = this.state.notifications;
 
     if (notifications) {
-      if (component.type === Notification.Item && notifications.includes(component.props.id))
+      if (component.type === Notification && notifications.includes(component.props.id))
         return React.cloneElement(component, {
           onTimeoutClose: () =>
             this.setState({
@@ -98,12 +98,12 @@ storiesOf('Notification', module)
         <br/>
         You can close it by clicking the cross button.
         <FakeNotificationCenter>
-          <Notification.Item
+          <Notification
             id={1}
             pending
           >
             This is a notif
-          </Notification.Item>
+          </Notification>
         </FakeNotificationCenter>
       </FakeApp>
     </DefaultTheme>
@@ -113,44 +113,44 @@ storiesOf('Notification', module)
       <FakeApp fakeText>
         You can choose 6 different positions.
         <FakeNotificationCenter>
-          <Notification.Item
+          <Notification
             id={11}
             position='top-right'
           >
             This is top-right position
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={12}
             position='top-left'
           >
             This is top-left position
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={13}
             position='bottom-right'
           >
             This is bottom-right position
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={14}
             position='bottom-left'
           >
             This is a bottom-left position
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={15}
             position='top'
             direction='vertical'
           >
             This is top position
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={16}
             position='bottom'
             direction='vertical'
           >
             This is bottom position
-          </Notification.Item>
+          </Notification>
         </FakeNotificationCenter>
       </FakeApp>
     </DefaultTheme>
@@ -160,20 +160,20 @@ storiesOf('Notification', module)
       <FakeApp fakeText>
         Notification can be animated vertically or horizontally.
         <FakeNotificationCenter>
-          <Notification.Item
+          <Notification
             id={11}
             timespan={4000}
             direction='horizontal'
           >
             This is notification is horizontal
-          </Notification.Item>
-          <Notification.Item
+          </Notification>
+          <Notification
             id={12}
             timespan={2000}
             direction='vertical'
           >
             This is notification is vertical
-          </Notification.Item>
+          </Notification>
         </FakeNotificationCenter>
       </FakeApp>
     </DefaultTheme>
@@ -184,26 +184,26 @@ storiesOf('Notification', module)
         You can (and should) group your notifications in a group.
         <FakeNotificationCenter>
           <Notification.Group position='top-right'>
-            <Notification.Item
+            <Notification
               id={101}
             >
               This is a notif
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={102}
             >
               This is a notif
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={103}
             >
               This is a notif
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={104}
             >
               This is a notif
-            </Notification.Item>
+            </Notification>
           </Notification.Group>
         </FakeNotificationCenter>
       </FakeApp>
@@ -216,30 +216,30 @@ storiesOf('Notification', module)
         The timespan will be cancelled on mouse enter, and reset on mouse leave.
         <FakeNotificationCenter>
           <Notification.Group position='top-right'>
-            <Notification.Item
+            <Notification
               id={101}
               timespan={2000}
             >
               This is a 2s notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={102}
               timespan={3000}
             >
               This is a 3s notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={103}
               timespan={4000}
             >
               This is a 4s notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={104}
               timespan={5000}
             >
               This is a 5s notification
-            </Notification.Item>
+            </Notification>
           </Notification.Group>
         </FakeNotificationCenter>
       </FakeApp>
@@ -251,30 +251,30 @@ storiesOf('Notification', module)
         You can choose a context for your notification.
         <FakeNotificationCenter>
           <Notification.Group position='top-right'>
-            <Notification.Item
+            <Notification
               id={101}
               context='info'
             >
               This is an information notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={102}
               context='success'
             >
               This is a success notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={103}
               context='warning'
             >
               This is a warning notification
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={104}
               context='danger'
             >
               This is a danger notification
-            </Notification.Item>
+            </Notification>
           </Notification.Group>
         </FakeNotificationCenter>
       </FakeApp>
@@ -288,17 +288,17 @@ storiesOf('Notification', module)
         It can not be closed until a certain action closes it.
         <FakeNotificationCenter>
           <Notification.Group>
-            <Notification.Item
+            <Notification
               id={1}
               pending
             >
               This is a notification pending for some action
-            </Notification.Item>
-            <Notification.Item
+            </Notification>
+            <Notification
               id={2}
             >
               This is a notification that will disappear shortly
-            </Notification.Item>
+            </Notification>
           </Notification.Group>
         </FakeNotificationCenter>
       </FakeApp>
@@ -309,7 +309,7 @@ storiesOf('Notification', module)
       <FakeApp fakeText>
         You can add call-to-actions buttons.
         <FakeNotificationCenter>
-          <Notification.Item
+          <Notification
             id={2}
             callToActions={[{
               text: 'CTA1',
@@ -320,7 +320,7 @@ storiesOf('Notification', module)
             }]}
           >
             A notification with call-to-actions
-          </Notification.Item>
+          </Notification>
         </FakeNotificationCenter>
       </FakeApp>
     </DefaultTheme>

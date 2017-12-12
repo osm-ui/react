@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
+import Transition from 'react-transition-group/Transition';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
@@ -17,15 +17,9 @@ const StyledAside = styled.aside`
   background: ${props => props.theme.modal.backgroundColor};
   color: ${props => props.theme.modal.color};
   overflow-y: auto;
+  opacity: 0;
 
-  &.transition-appear {
-    opacity: 0;
-  }
-
-  &.transition-appear.transition-appear-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
-  }
+  transition: opacity 300ms ease-in-out;
 
   &.scroll-content {
     display: flex;
@@ -33,12 +27,7 @@ const StyledAside = styled.aside`
     overflow-y: none;
   }
 
-  &.container-parent {
-    position: absolute;
-  }
-  &.container-root {
-    position: fixed;
-  }
+  position: absolute;
 
   &.scroll-content .header {
     margin-bottom: 20px;
@@ -111,27 +100,40 @@ class Modal extends React.Component {
       loading
     });
 
+    const transitionStyles = {
+      entered: {
+        opacity: 0.95
+      }
+    };
+
     return (
-      <CSSTransitionGroup
-        transitionName="transition"
-        transitionAppear
-        transitionAppearTimeout={300}
-        transitionEnter={false}
-        transitionLeave={false}
+      <Transition
+        in
+        timeout={300}
+        appear
+        onEntered={this.onOpen}
+        onExited={this.onClose}
       >
-        <StyledAside key="modal" className={asideClasses} {...rest}>
-          <header className="header">
-            {title && <Title inHeader>{title}</Title>}
-            {!loading && header && header}
-          </header>
+        {state => (
+          <StyledAside
+            key="modal"
+            className={asideClasses}
+            style={transitionStyles[state]}
+            {...rest}
+          >
+            <header className="header">
+              {title && <Title inHeader>{title}</Title>}
+              {!loading && header && header}
+            </header>
 
-          <div className={contentClasses}>{children}</div>
+            <div className={contentClasses}>{children}</div>
 
-          {!loading && footer && footer}
+            {!loading && footer && footer}
 
-          {loading && <Loader centered label={loaderLabel} />}
-        </StyledAside>
-      </CSSTransitionGroup>
+            {loading && <Loader centered label={loaderLabel} />}
+          </StyledAside>
+        )}
+      </Transition>
     );
   }
 }

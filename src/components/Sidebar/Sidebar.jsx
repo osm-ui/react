@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
+import Transition from 'react-transition-group/Transition';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
@@ -51,15 +51,13 @@ const StyledAside = styled.aside`
     width: 100%;
   }
 
-  &.left,
-  &.left.transition-appear {
+  &.left {
     left: 0;
     transform: translate(-150%, 0);
     border-right-width: ${props => props.theme.borderWidth};
   }
 
-  &.right,
-  &.right.transition-appear {
+  &.right {
     right: 0;
     transform: translate(150%, 0);
     border-left-width: ${props => props.theme.borderWidth};
@@ -68,11 +66,6 @@ const StyledAside = styled.aside`
   &.left.maximized,
   &.right.maximized {
     border-width: 0;
-  }
-
-  &.opened,
-  &.opened.transition-appear.transition-appear-active {
-    transform: translate(0, 0);
   }
 
   .back-btn,
@@ -228,42 +221,49 @@ class Sidebar extends React.Component {
       loading
     });
 
+    const transitionStyles = {
+      entered: {
+        transform: 'translate(0,0)'
+      }
+    };
+
     return (
-      <CSSTransitionGroup
-        transitionName="transition"
-        transitionAppear
-        transitionAppearTimeout={250}
-        transitionEnter={false}
-        transitionLeave={false}
-      >
-        <StyledAside key="sidebar" className={asideClasses} {...rest}>
-          <header className="header">
-            {this.props.onClickBack && (
+      <Transition in appear timeout={250}>
+        {state => (
+          <StyledAside
+            key="sidebar"
+            className={asideClasses}
+            style={transitionStyles[state]}
+            {...rest}
+          >
+            <header className="header">
+              {this.props.onClickBack && (
+                <button
+                  className="back-btn"
+                  onClick={() => this._handleBackClick()}
+                >
+                  <FontAwesome name="chevron-left" size="lg" />
+                </button>
+              )}
               <button
-                className="back-btn"
-                onClick={() => this._handleBackClick()}
+                className="close-btn"
+                onClick={() => this._handleCloseClick()}
               >
-                <FontAwesome name="chevron-left" size="lg" />
+                <FontAwesome name="close" size="lg" />
               </button>
-            )}
-            <button
-              className="close-btn"
-              onClick={() => this._handleCloseClick()}
-            >
-              <FontAwesome name="close" size="lg" />
-            </button>
-            {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
-            <div className="clearfix" />
-            {!loading && header && header}
-          </header>
+              {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
+              <div className="clearfix" />
+              {!loading && header && header}
+            </header>
 
-          <div className={contentClasses}>{children}</div>
+            <div className={contentClasses}>{children}</div>
 
-          {!loading && footer && footer}
+            {!loading && footer && footer}
 
-          {loading && <Loader centered label={loaderLabel} />}
-        </StyledAside>
-      </CSSTransitionGroup>
+            {loading && <Loader centered label={loaderLabel} />}
+          </StyledAside>
+        )}
+      </Transition>
     );
   }
 }

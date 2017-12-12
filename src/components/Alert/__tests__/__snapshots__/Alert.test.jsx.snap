@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="alert alert-info sc-EHOje fVpeSG"
+    className="alert alert-info sc-EHOje gjPsaZ"
   >
     <div />
   </div>
