@@ -1160,7 +1160,7 @@ var ToolbarItem = function ToolbarItem(_ref) {
     Element,
     _extends({ size: size, className: classes }, rest),
     children && children,
-    children !== '' && _react2.default.createElement(_reactFontawesome2.default, { name: icon })
+    !children && _react2.default.createElement(_reactFontawesome2.default, { name: icon })
   );
 };
 
