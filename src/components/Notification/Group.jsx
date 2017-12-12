@@ -78,8 +78,9 @@ const NotificationGroup = ({
 
   return (
     <StyledAside key="notification-group" className={asideClasses} {...rest}>
-      {React.Children.map(children, child =>
+      {React.Children.map(children, (child, index) =>
         React.cloneElement(child, {
+          key: index,
           className: 'notif-item',
           direction
         })
@@ -89,7 +90,14 @@ const NotificationGroup = ({
 };
 
 NotificationGroup.propTypes = {
-  position: PropTypes.oneOf(['left', 'right']),
+  position: PropTypes.oneOf([
+    'top-left',
+    'top-right',
+    'bottom-right',
+    'bottom-left',
+    'top',
+    'bottom'
+  ]),
   direction: PropTypes.oneOf(['horizontal', 'vertical']),
   className: PropTypes.string,
   children: PropTypes.node.isRequired

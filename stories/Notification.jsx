@@ -2,14 +2,30 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { host } from 'storybook-host';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, boolean, select, number } from '@storybook/addon-knobs';
 import styled from 'styled-components';
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import FakeApp from './components/FakeApp';
 
+import { contexts } from '../src/constants';
+
 import {
   DefaultTheme,
+  WhiteTheme,
+  LightGrayTheme,
+  DarkGrayTheme,
+  AnthraciteTheme,
+  YellowTheme,
+  OrangeTheme,
+  BrownTheme,
+  RedTheme,
+  RoseTheme,
+  PurpleTheme,
+  BlueTheme,
+  SkyTheme,
+  TurquoiseTheme,
+  GreenTheme,
   Notification,
   Button
 } from '../src/index';
@@ -25,6 +41,10 @@ class FakeNotificationCenter extends React.Component {
     this.findAllNotifs = this.findAllNotifs.bind(this);
     this.addTimeout = this.addTimeout.bind(this);
     this.resetNotifications = this.resetNotifications.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.resetNotifications();
   }
 
   resetNotifications() {
@@ -56,7 +76,7 @@ class FakeNotificationCenter extends React.Component {
             })
           }
         )
-      else if (component.type === Notification.Group)
+      else if (component.props)
         return React.cloneElement(component, {
           children: React.Children.map(component.props.children, this.addTimeout)
         });
@@ -66,7 +86,6 @@ class FakeNotificationCenter extends React.Component {
 
   render() {
     const notifications = this.state.notifications;
-    console.log('STATE', notifications);
 
     const button = (
       <Button onClick={this.resetNotifications}>
@@ -325,95 +344,89 @@ storiesOf('Notification', module)
       </FakeApp>
     </DefaultTheme>
   ))
+  .addWithInfo('Playground', () => {
+    const position = select(
+      'Position',
+      [
+        'top-left',
+        'top-right',
+        'bottom-right',
+        'bottom-left',
+        'top',
+        'bottom'
+      ],
+      'top-left'
+    );
+    const direction = select('Direction', ['horizontal', 'vertical'], 'horizontal');
+    const pending = boolean('Is Pending', false);
+    const context = select('Item type', contexts, 'info');
 
-  // .addWithInfo('Directions', () => (
-  //   <DefaultTheme>
-  //     <FakeApp style={fakeAppRowStyle}>
-  //       <Notification opened position="left-top" direction="row">
-  //         This is a notification !
-  //       </Notification>
-  //     </FakeApp>
-  //   </DefaultTheme>
-  // ))
-  // .addWithInfo('Playground', () => {
-  //   const position = select(
-  //     'Position',
-  //     [
-  //       'left-top',
-  //       'center-top',
-  //       'right-top',
-  //       'right-center',
-  //       'right-bottom',
-  //       'center-bottom',
-  //       'left-bottom',
-  //       'left-center'
-  //     ],
-  //     'left-top'
-  //   );
-  //   const direction = select('Direction', ['column', 'row'], 'column');
-  //   const size = select('Size', ['xs', 'sm', 'md', 'lg'], 'md');
-  //   const container = select('Container', ['parent', 'root'], 'parent');
-  //   const opened = boolean('Opened', true);
-  //   const loading = boolean('Loading');
-  //   const type = select('Item type', ['button', 'anchor'], 'button');
-  //   const theme = select(
-  //     'Theme',
-  //     [
-  //       'Default',
-  //       'White',
-  //       'LightGray',
-  //       'DarkGray',
-  //       'Anthracite',
-  //       'Yellow',
-  //       'Orange',
-  //       'Brown',
-  //       'Red',
-  //       'Rose',
-  //       'Purple',
-  //       'Blue',
-  //       'Sky',
-  //       'Turquoise',
-  //       'Green'
-  //     ],
-  //     'Turquoise'
-  //   );
-  //   const themes = {
-  //     DefaultTheme,
-  //     WhiteTheme,
-  //     LightGrayTheme,
-  //     DarkGrayTheme,
-  //     AnthraciteTheme,
-  //     YellowTheme,
-  //     OrangeTheme,
-  //     BrownTheme,
-  //     RedTheme,
-  //     RoseTheme,
-  //     PurpleTheme,
-  //     BlueTheme,
-  //     SkyTheme,
-  //     TurquoiseTheme,
-  //     GreenTheme
-  //   };
-  //   const ThemeElement = themes[`${theme}Theme`];
+    const timespanOptions = {
+      range: true,
+      min: 1000,
+      max: 10000,
+      step: 100,
+    };
+    const timespan = number('Timespan', 2000, timespanOptions);
 
-  //   return (
-  //     <DefaultTheme>
-  //       <KnobsAlert />
-  //       <FakeApp style={{ ...fakeAppColumnStyle, ...fakeAppRowStyle }}>
-  //         <ThemeElement>
-  //           <Notification
-  //             opened={opened}
-  //             position={position}
-  //             direction={direction}
-  //             container={container}
-  //             size={size}
-  //             onOpen={action('onOpen toolbar')}
-  //             onClose={action('onClose toolbar')}
-  //           >
+    const theme = select(
+      'Theme',
+      [
+        'Default',
+        'White',
+        'LightGray',
+        'DarkGray',
+        'Anthracite',
+        'Yellow',
+        'Orange',
+        'Brown',
+        'Red',
+        'Rose',
+        'Purple',
+        'Blue',
+        'Sky',
+        'Turquoise',
+        'Green'
+      ],
+      'Turquoise'
+    );
+    const themes = {
+      DefaultTheme,
+      WhiteTheme,
+      LightGrayTheme,
+      DarkGrayTheme,
+      AnthraciteTheme,
+      YellowTheme,
+      OrangeTheme,
+      BrownTheme,
+      RedTheme,
+      RoseTheme,
+      PurpleTheme,
+      BlueTheme,
+      SkyTheme,
+      TurquoiseTheme,
+      GreenTheme
+    };
+    const ThemeElement = themes[`${theme}Theme`];
 
-  //           </Notification>
-  //         </ThemeElement>
-  //       </FakeApp>
-  //     </DefaultTheme>
-  //   );
-  // });
+    return (
+      <DefaultTheme>
+        <KnobsAlert />
+        <FakeApp>
+          <FakeNotificationCenter>
+            <ThemeElement>
+              <Notification
+                id={17}
+                position={position}
+                direction={direction}
+                pending={pending}
+                timespan={timespan}
+              >
+                This is a notification
+              </Notification>
+            </ThemeElement>
+          </FakeNotificationCenter>
+        </FakeApp>
+      </DefaultTheme>
+    );
+  });

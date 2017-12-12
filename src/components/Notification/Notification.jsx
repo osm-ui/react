@@ -204,8 +204,8 @@ class Notification extends React.Component {
       }
     };
 
-    const ctas = callToActions.map(cta => (
-      <Button size="xs" shape="square" onClick={cta.action}>
+    const ctas = callToActions.map((cta, index) => (
+      <Button key={index} size="xs" shape="square" onClick={cta.action}>
         {cta.text}
       </Button>
     ));
@@ -248,6 +248,8 @@ class Notification extends React.Component {
 
 Notification.propTypes = {
   id: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
+  onTimeoutClose: PropTypes.func,
   context: PropTypes.oneOf(contexts),
   position: PropTypes.oneOf([
     'top-left',
@@ -261,12 +263,7 @@ Notification.propTypes = {
   callToActions: PropTypes.array,
   pending: PropTypes.bool,
   timespan: PropTypes.number,
-  onOpen: PropTypes.func,
-  onClose: PropTypes.func,
-  onClickClose: PropTypes.func,
-  onTimeoutClose: PropTypes.func.isRequired,
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired
+  className: PropTypes.string
 };
 
 Notification.defaultProps = {
@@ -276,10 +273,6 @@ Notification.defaultProps = {
   callToActions: [],
   pending: false,
   timespan: 4000,
-  onOpen: null,
-  onClickClose: null,
-  onClose: null,
-  onClickBack: null,
   className: ''
 };
 
