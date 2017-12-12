@@ -13,6 +13,10 @@ exports[`When using snapshots Should render with an element children 1`] = `
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
     <div
       className="position-left-top direction-column sc-iwsKbI fVCUCV"
@@ -47,6 +51,10 @@ exports[`When using snapshots Should render with the direction and position prop
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
   </div>
 </span>
@@ -65,6 +73,10 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
     <div
       className="position-left-top direction-column sc-iwsKbI fVCUCV"
@@ -91,6 +103,10 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
     <div
       className="position-left-top direction-column opened sc-iwsKbI fVCUCV"
@@ -117,6 +133,10 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
     <div
       className="position-left-top direction-column sc-iwsKbI fVCUCV"
@@ -144,6 +164,10 @@ exports[`When using snapshots Should render with the size prop 1`] = `
       size="md"
     >
       
+      <span
+        aria-hidden={true}
+        className="fa fa-bars"
+      />
     </button>
     <div
       className="position-left-top direction-column sc-iwsKbI fVCUCV"
