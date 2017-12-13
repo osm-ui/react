@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
 import { contexts, contextIcons } from '../../constants';
-import { Button } from '../../index';
+import Button from '../Button';
 
 const StyledAside = styled.aside`
   display: flex;
@@ -152,6 +152,7 @@ class Notification extends React.Component {
       timeout: null
     };
 
+    this.close = this.close.bind(this);
     this.setTimeout = this.setTimeout.bind(this);
     this.clearTimeout = this.clearTimeout.bind(this);
   }
@@ -162,10 +163,7 @@ class Notification extends React.Component {
 
   setTimeout() {
     this.setState({
-      timeout: setTimeout(
-        () => this.setState({ shouldDisplay: false }),
-        this.props.timespan
-      )
+      timeout: setTimeout(this.close, this.props.timespan)
     });
   }
 

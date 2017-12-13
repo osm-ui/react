@@ -119,7 +119,6 @@ storiesOf('Notification', module)
         <FakeNotificationCenter>
           <Notification
             id={1}
-            pending
           >
             This is a notif
           </Notification>
