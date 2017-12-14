@@ -129,14 +129,12 @@ class Sidebar extends React.Component {
     super(props);
 
     this.state = {
-      opened: props.opened
+      opened: true
     };
   }
 
   componentDidMount() {
-    if (this.props.opened === true) {
-      this._triggerCallback('onOpen');
-    }
+    if (this.props.onOpen) this.props.onOpen();
 
     if (this.props.maximized === true) {
       this.props.onMaximize();
@@ -144,50 +142,25 @@ class Sidebar extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      opened: nextProps.opened
-    });
-
-    if (this.props.opened !== nextProps.opened) {
-      if (nextProps.opened === true) {
-        this._triggerCallback('onOpen');
-      } else {
-        this._triggerCallback('onClose');
-      }
-    }
-
     if (this.props.maximized !== nextProps.maximized) {
-      if (nextProps.maximized === true) {
-        this._triggerCallback('onMaximize');
-      } else {
-        this._triggerCallback('onUnmaximize');
-      }
+      if (nextProps.maximized === true) this.props.onMaximize();
+      else this.props.onUnmaximize();
     }
   }
 
-  _triggerCallback(name) {
-    if (this.props[name] !== null) {
-      const callback = this.props[name];
-
-      switch (name) {
-        case 'onClickClose':
-        case 'onClose':
-          setTimeout(callback, 250);
-          break;
-        default:
-          callback();
-      }
-    }
+  componentWillUnmount() {
+    if (this.props.onClose) this.props.onClose();
   }
 
   _handleBackClick() {
-    this._triggerCallback('onClickBack');
+    if (this.props.onClickBack) this.props.onClickBack();
   }
 
   _handleCloseClick() {
     this.setState({ opened: false });
-    this._triggerCallback('onClickClose');
-    this._triggerCallback('onClose');
+
+    if (this.props.onClickClose) this.props.onClickClose();
+    if (this.props.onClose) this.props.onClose();
   }
 
   render() {
@@ -228,7 +201,7 @@ class Sidebar extends React.Component {
     };
 
     return (
-      <Transition in appear timeout={250}>
+      <Transition in={this.state.opened} appear timeout={250}>
         {state => (
           <StyledAside
             key="sidebar"
@@ -272,13 +245,9 @@ Sidebar.propTypes = {
   title: PropTypes.string,
   header: PropTypes.node,
   footer: PropTypes.node,
-  opened: PropTypes.bool,
   loading: PropTypes.bool,
   loaderLabel: PropTypes.node,
   position: PropTypes.oneOf(['left', 'right']),
-  // animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
-  // show-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
-  // close-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
   width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   maximized: PropTypes.bool,
   container: PropTypes.oneOf(['parent', 'root']),
@@ -297,13 +266,9 @@ Sidebar.defaultProps = {
   title: '',
   header: '',
   footer: '',
-  opened: false,
   loading: false,
   loaderLabel: '',
   position: 'left',
-  // animation: 'linear',
-  // show-animation: 'linear',
-  // close-animation: 'linear',
   width: 'md',
   maximized: false,
   container: 'parent',

@@ -38,7 +38,12 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
 >
   <aside
     className="position-left-top direction-column container-parent opened sc-chPdSV glXasl"
-    style={undefined}
+    style={
+      Object {
+        "opacity": 1,
+        "transform": "translate(0,0)",
+      }
+    }
   >
     <div
       direction="column"

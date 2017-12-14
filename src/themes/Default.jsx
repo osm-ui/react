@@ -5,8 +5,6 @@ import { darken } from 'polished';
 import { makeTransparent } from 'helpers/themes';
 import { colors } from 'constants/index';
 
-console.log('colors', colors);
-
 const boxShadow =
   '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
 

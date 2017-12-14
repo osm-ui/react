@@ -7,7 +7,10 @@ const StyledAside = styled.aside`
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 50rem;
+  @media (max-width: 50rem) {
+    width: 100%;
+  }
 
   &:empty {
     padding-top: 0px;

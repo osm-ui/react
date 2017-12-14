@@ -5,17 +5,23 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
-import { contexts, contextIcons } from '../../constants';
+import { contexts, contextIcons } from 'constants/index';
 import Button from '../Button';
 
 const StyledAside = styled.aside`
   display: flex;
   position: absolute;
   z-index: 1000;
-  width: 50%;
+  width: 50rem;
+
+  @media (max-width: 50rem) {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
   max-width: 100%;
   height: 40px;
-  margin: 2px;
+  margin: 2px 0;
   padding: 0 0.5rem;
   overflow-y: auto;
   opacity: 0;
@@ -148,7 +154,7 @@ class Notification extends React.Component {
     super(props);
 
     this.state = {
-      shouldDisplay: true,
+      opened: true,
       timeout: null
     };
 
@@ -158,7 +164,7 @@ class Notification extends React.Component {
   }
 
   close() {
-    this.setState({ shouldDisplay: false });
+    this.setState({ opened: false });
   }
 
   setTimeout() {
@@ -210,7 +216,7 @@ class Notification extends React.Component {
 
     return (
       <Transition
-        in={this.state.shouldDisplay}
+        in={this.state.opened}
         timeout={1000}
         appear
         onEntered={pending ? () => null : this.setTimeout}

@@ -244,7 +244,7 @@ class Toolbar extends React.Component {
     };
 
     return (
-      <Transition in appear timeout={100}>
+      <Transition in={this.state.opened} timeout={100}>
         {state => (
           <StyledAside
             className={asideClasses}
