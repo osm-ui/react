@@ -76,7 +76,7 @@ class FakeNotificationCenter extends React.Component {
             })
           }
         )
-      else if (component.props)
+      else if (component.type === Notification.Group)
         return React.cloneElement(component, {
           children: React.Children.map(component.props.children, this.addTimeout)
         });

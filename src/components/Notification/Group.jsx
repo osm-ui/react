@@ -78,9 +78,8 @@ const NotificationGroup = ({
 
   return (
     <StyledAside key="notification-group" className={asideClasses} {...rest}>
-      {React.Children.map(children, (child, index) =>
+      {React.Children.map(children, child =>
         React.cloneElement(child, {
-          key: index,
           className: 'notif-item',
           direction
         })
