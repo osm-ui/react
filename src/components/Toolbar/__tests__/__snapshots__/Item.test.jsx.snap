@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="md shape-round btn sc-EHOje dvAFCx"
+    className="md shape-round btn sc-kgoBCf iQjcqO"
     size="md"
   >
     <div />
@@ -22,7 +22,7 @@ exports[`When using snapshots Should render with the inactive prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="md shape-round sc-bZQynM ipGFGr"
+    className="md shape-round sc-kGXeez hirLKB"
     size="md"
   >
     <div />
@@ -39,7 +39,7 @@ exports[`When using snapshots Should render with the loading prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="loading md shape-round btn sc-EHOje dvAFCx"
+    className="loading md shape-round btn sc-kgoBCf iQjcqO"
     size="md"
   >
     <div
@@ -61,7 +61,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="md shape-square btn sc-EHOje dvAFCx"
+    className="md shape-square btn sc-kgoBCf iQjcqO"
     size="md"
   >
     <div />
@@ -78,7 +78,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="xs shape-round btn sc-EHOje jTUptB"
+    className="xs shape-round btn sc-kgoBCf dWxlTU"
     size="xs"
   >
     <div />
@@ -95,7 +95,7 @@ exports[`When using snapshots Should render with the type prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="md shape-round btn sc-gzVnrw gjSfye"
+    className="md shape-round btn sc-kpOJdX gEiUGl"
     size="md"
   >
     <div />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { snapshotWithElementChildren } from '../../helpers/tests';
+import { snapshotWithElementChildren } from 'helpers/tests';
 import Modal from './';
 
 describe('When using snapshots', () => {

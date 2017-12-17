@@ -2,8 +2,8 @@ import React from 'react';
 import {
   snapshotWithElementChildren,
   snapshotWithTextChildren
-} from '../../helpers/tests';
-import Anthracite from '../Anthracite';
+} from 'helpers/tests';
+import Anthracite from 'themes/Anthracite';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>

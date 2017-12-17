@@ -5,17 +5,17 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
       
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div
@@ -31,10 +31,10 @@ exports[`When using snapshots Should render with the direction and position prop
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-right-top direction-row sc-dnqmqq ZATcm"
+    className="position-right-top direction-row sc-ckVGcZ kwCLGq"
   >
     <div
-      className="position-right-top direction-row sc-iwsKbI fVCUCV"
+      className="position-right-top direction-row sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div
@@ -42,7 +42,7 @@ exports[`When using snapshots Should render with the direction and position prop
       />
     </div>
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
@@ -57,17 +57,17 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
       
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div
@@ -83,17 +83,17 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-left-top direction-column opened sc-dnqmqq ZATcm"
+    className="position-left-top direction-column opened sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
       
     </button>
     <div
-      className="position-left-top direction-column opened sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column opened sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div
@@ -109,17 +109,17 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
       
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div
@@ -136,17 +136,17 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn sc-kgoBCf iQjcqO"
       onClick={[Function]}
       size="md"
     >
       
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column sc-jKJlTe hKYJBH"
       onClick={null}
     >
       <div

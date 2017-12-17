@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import { makeTransparent } from '../helpers/themes';
-import colors from '../colors';
+import { makeTransparent } from 'helpers/themes';
+import colors from 'themes/colors';
 
 const boxShadow =
   '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';

@@ -12,7 +12,7 @@ import {
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 
-import { DefaultTheme, Form, Alert } from '../src/index';
+import { DefaultTheme, Form, Alert } from 'index';
 
 storiesOf('Form', module)
   .addDecorator(withKnobs)

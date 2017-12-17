@@ -25,7 +25,7 @@ import {
   TurquoiseTheme,
   GreenTheme,
   Titlebar
-} from '../src/index';
+} from 'index';
 
 const fakeAppStyle = {
   paddingTop: '70px',

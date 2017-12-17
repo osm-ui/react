@@ -4,8 +4,8 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import Title from '../Sidebar/Title';
-import Loader from '../Loader';
+import Title from 'components/Sidebar/Title';
+import Loader from 'components/Loader';
 
 const StyledAside = styled.aside`
   z-index: 1000;

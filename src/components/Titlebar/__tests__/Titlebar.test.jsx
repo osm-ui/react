@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { snapshotWithElementChildren } from '../../../helpers/tests';
-import Titlebar from '../';
+import { snapshotWithElementChildren } from 'helpers/tests';
+import { Titlebar } from 'index';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>

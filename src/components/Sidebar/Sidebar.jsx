@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 import SidebarTitle from './Title';
-import Loader from '../Loader';
+import Loader from 'components/Loader';
 
 const StyledAside = styled.aside`
   z-index: 1000;

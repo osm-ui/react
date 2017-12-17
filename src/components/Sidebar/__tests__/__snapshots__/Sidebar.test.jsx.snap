@@ -40,7 +40,7 @@ exports[`When using snapshots Should render with a title 1`] = `
 >
   <span>
     <aside
-      className="left md container-parent sc-EHOje haaoDa"
+      className="left md container-parent sc-fjdhpX kBLlyE"
     >
       <header
         className="header"
@@ -55,7 +55,7 @@ exports[`When using snapshots Should render with a title 1`] = `
           />
         </button>
         <h2
-          className="sidebar-title in-header sc-bwzfXH ierRJd"
+          className="sidebar-title in-header sc-jTzLTM gCmpTX"
         >
           A title
         </h2>
@@ -81,7 +81,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
 >
   <span>
     <aside
-      className="left md container-parent sc-EHOje haaoDa"
+      className="left md container-parent sc-fjdhpX kBLlyE"
     >
       <header
         className="header"
@@ -118,7 +118,7 @@ exports[`When using snapshots Should render with the loading prop 1`] = `
 >
   <span>
     <aside
-      className="left md container-parent sc-EHOje haaoDa"
+      className="left md container-parent sc-fjdhpX kBLlyE"
     >
       <header
         className="header"

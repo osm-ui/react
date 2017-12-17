@@ -26,7 +26,7 @@ import {
   GreenTheme,
   Toolbar,
   Alert
-} from '../src/index';
+} from 'index';
 
 const fakeAppRowStyle = {
   padding: '60px 100px'

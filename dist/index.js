@@ -2573,7 +2573,7 @@ Loader.defaultProps = {
   className: ''
 };
 
-Loader.displayName = 'Loader';
+Loader.displayName = 'components/Loader';
 
 exports.default = Loader;
 

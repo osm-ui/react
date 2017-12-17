@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import Loader from '../Loader';
+import Loader from 'components/Loader';
 
 const buildInGroupSize = props => {
   const size = props.theme.toolbar[`${props.size}Size`];

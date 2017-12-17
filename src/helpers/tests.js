@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
-import DefaultTheme from '../themes/Default';
+import DefaultTheme from 'themes/Default';
 
 export const snapshotWithElementChildren = (TestedElement, props) => {
   const result = ReactTestRenderer.create(

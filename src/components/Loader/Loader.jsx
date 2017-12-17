@@ -85,6 +85,6 @@ Loader.defaultProps = {
   className: ''
 };
 
-Loader.displayName = 'Loader';
+Loader.displayName = 'components/Loader';
 
 export default Loader;

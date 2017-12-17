@@ -33,7 +33,7 @@ import {
   GreenTheme,
   Button,
   Modal
-} from '../src/index';
+} from 'index';
 
 /*
   *** WARNING ***
@@ -42,7 +42,7 @@ import {
     * either add Title, Header and Footer for Modal
     * or make them separate components to be used in different contexts
 */
-import Sidebar from '../src/components/Sidebar';
+import Sidebar from 'components/Sidebar';
 
 storiesOf('Modal', module)
   .addDecorator(withKnobs)
