@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
+import { darken } from 'polished';
 import { makeTransparent } from 'helpers/themes';
 import colors from 'themes/colors';
 
@@ -131,7 +132,7 @@ export const config = {
 
       info: {
         fontWeight: 500,
-        color: colors.white,
+        color: darken(0.27, colors.turquoise1),
         backgroundColor: colors.turquoise2,
         borderColor: colors.turquoise1,
         hoverBackgroundColor: colors.turquoise3,
@@ -157,7 +158,7 @@ export const config = {
 
       warning: {
         fontWeight: 500,
-        color: colors.white,
+        color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2,
         borderColor: colors.orange1,
         hoverBackgroundColor: colors.orange3,
@@ -207,6 +208,12 @@ export const config = {
       focusBorderColor: colors.blue2,
       focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
 
+      info: {
+        color: colors.turquoise2,
+        backgroundColor: colors.white,
+        borderColor: colors.turquoise2
+      },
+
       success: {
         color: colors.green2,
         backgroundColor: colors.white,
@@ -230,6 +237,10 @@ export const config = {
       fontSize: '1.1em',
       fontWeight: 400,
 
+      info: {
+        color: colors.turquoise1
+      },
+
       success: {
         color: colors.green1
       },
@@ -250,13 +261,18 @@ export const config = {
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,
 
+      info: {
+        color: darken(0.27, colors.turquoise1),
+        backgroundColor: colors.turquoise2
+      },
+
       success: {
         color: colors.white,
         backgroundColor: colors.green2
       },
 
       warning: {
-        color: colors.white,
+        color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2
       },
 

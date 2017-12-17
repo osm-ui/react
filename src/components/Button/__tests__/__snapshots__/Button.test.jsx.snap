@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <button
-    className="btn shape-round btn-default btn-md sc-bZQynM evuqIW"
+    className="btn shape-round btn-default btn-md sc-bZQynM gtKTWn"
     disabled={false}
     type="button"
   >
@@ -19,7 +19,7 @@ exports[`When using snapshots on an anchor typed Button Should render with an el
   className="sc-bdVaJa lbJuWU"
 >
   <a
-    className="btn shape-round btn-default btn-md sc-gzVnrw khOqZS"
+    className="btn shape-round btn-default btn-md sc-gzVnrw gQBSLd"
     disabled={false}
     role="button"
   >

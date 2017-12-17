@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
-const contexts = ['', 'success', 'warning', 'error'];
+const contexts = ['', 'info', 'success', 'warning', 'error'];
 
 const colorsStyle = props =>
   contexts.reduce((reducedStyles, context) => {

@@ -228,6 +228,8 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _polished = __webpack_require__(9);
+
 var _themes = __webpack_require__(6);
 
 var _colors = __webpack_require__(4);
@@ -365,7 +367,7 @@ var config = exports.config = {
 
       info: {
         fontWeight: 500,
-        color: _colors2.default.white,
+        color: (0, _polished.darken)(0.27, _colors2.default.turquoise1),
         backgroundColor: _colors2.default.turquoise2,
         borderColor: _colors2.default.turquoise1,
         hoverBackgroundColor: _colors2.default.turquoise3,
@@ -391,7 +393,7 @@ var config = exports.config = {
 
       warning: {
         fontWeight: 500,
-        color: _colors2.default.white,
+        color: (0, _polished.darken)(0.27, _colors2.default.orange1),
         backgroundColor: _colors2.default.orange2,
         borderColor: _colors2.default.orange1,
         hoverBackgroundColor: _colors2.default.orange3,
@@ -441,6 +443,12 @@ var config = exports.config = {
       focusBorderColor: _colors2.default.blue2,
       focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
 
+      info: {
+        color: _colors2.default.turquoise2,
+        backgroundColor: _colors2.default.white,
+        borderColor: _colors2.default.turquoise2
+      },
+
       success: {
         color: _colors2.default.green2,
         backgroundColor: _colors2.default.white,
@@ -464,6 +472,10 @@ var config = exports.config = {
       fontSize: '1.1em',
       fontWeight: 400,
 
+      info: {
+        color: _colors2.default.turquoise1
+      },
+
       success: {
         color: _colors2.default.green1
       },
@@ -484,13 +496,18 @@ var config = exports.config = {
       backgroundColor: _colors2.default.lightGray5,
       color: _colors2.default.anthracite2,
 
+      info: {
+        color: (0, _polished.darken)(0.27, _colors2.default.turquoise1),
+        backgroundColor: _colors2.default.turquoise2
+      },
+
       success: {
         color: _colors2.default.white,
         backgroundColor: _colors2.default.green2
       },
 
       warning: {
-        color: _colors2.default.white,
+        color: (0, _polished.darken)(0.27, _colors2.default.orange1),
         backgroundColor: _colors2.default.orange2
       },
 
@@ -1722,20 +1739,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'orange'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'orange'), {
   form: {
     button: {
-      warning: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.orange1,
-        borderColor: _colors2.default.orange1,
-        hoverBackgroundColor: _colors2.default.orange3,
-        hoverBorderColor: _colors2.default.orange3,
-        focusBackgroundColor: _colors2.default.orange3,
-        focusBorderColor: _colors2.default.orange3,
-        activeBackgroundColor: _colors2.default.orange3,
-        activeBorderColor: _colors2.default.orange3
-      }
+      // warning: {
+      //   color: colors.white,
+      //   backgroundColor: colors.orange1,
+      //   borderColor: colors.orange1,
+      //   hoverBackgroundColor: colors.orange3,
+      //   hoverBorderColor: colors.orange3,
+      //   focusBackgroundColor: colors.orange3,
+      //   focusBorderColor: colors.orange3,
+      //   activeBackgroundColor: colors.orange3,
+      //   activeBorderColor: colors.orange3
+      // }
     }
   }
 });
@@ -2239,7 +2256,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'turquoise'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'turquoise'), {
   sidebar: {
     nav: {
       color: _colors2.default.white,
@@ -2928,7 +2945,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var contexts = ['', 'success', 'warning', 'error'];
+var contexts = ['', 'info', 'success', 'warning', 'error'];
 
 var colorsStyle = function colorsStyle(props) {
   return contexts.reduce(function (reducedStyles, context) {

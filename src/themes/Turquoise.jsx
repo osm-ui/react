@@ -4,12 +4,12 @@ import { ThemeProvider } from 'styled-components';
 import { lighten } from 'polished';
 import _ from 'lodash';
 import colors from 'themes/colors';
-import { buildDarkThemeConfig } from 'helpers/themes';
+import { buildLightThemeConfig } from 'helpers/themes';
 import { config as defaultThemeConfig, StyledSpan } from './Default';
 
 export const config = _.merge(
   {},
-  buildDarkThemeConfig(defaultThemeConfig, colors, 'turquoise'),
+  buildLightThemeConfig(defaultThemeConfig, colors, 'turquoise'),
   {
     sidebar: {
       nav: {
