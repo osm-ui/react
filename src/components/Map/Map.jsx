@@ -30,6 +30,10 @@ const StyledMap = styled.div`
       box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     }
   }
+
+  .leaflet-control-attribution {
+    padding: 2px 6px;
+  }
 `;
 
 class Map extends React.Component {

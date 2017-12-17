@@ -33,6 +33,37 @@ storiesOf('Map', module)
       </Map>
     </DefaultTheme>
   ))
+  .addWithInfo('Attribution in another position', () => (
+    <DefaultTheme>
+      <ReactLeafletAlert />
+      <Map attributionControl={false} center={mapPosition} zoom={mapZoom} style={mapStyle}>
+        <Map.AttributionControl
+          position="bottomleft"
+        />
+        <Map.TileLayer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        />
+      </Map>
+    </DefaultTheme>
+  ))
+  .addWithInfo('With scale control', () => (
+    <DefaultTheme>
+      <ReactLeafletAlert />
+      <Map attributionControl={false} center={mapPosition} zoom={mapZoom} style={mapStyle} locate>
+        <Map.AttributionControl
+          position="bottomleft"
+        />
+        <Map.ScaleControl
+          position="bottomleft"
+        />
+        <Map.TileLayer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        />
+      </Map>
+    </DefaultTheme>
+  ))
   .addWithInfo('With locate control', () => (
     <DefaultTheme>
       <ReactLeafletAlert />
