@@ -19,6 +19,10 @@ module.exports = {
     libraryTarget: 'umd'
   },
   resolve: {
+    modules: [
+      process.env.NODE_PATH ? path.resolve(__dirname, process.env.NODE_PATH) : '',
+      'node_modules'
+    ],
     extensions: ['.js', '.jsx']
   },
   module: {
