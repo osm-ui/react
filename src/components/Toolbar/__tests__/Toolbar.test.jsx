@@ -25,13 +25,14 @@ describe('When testing the callbacks', () => {
     const onOpen = jest.fn();
     const onClose = jest.fn();
     const toolbar = shallow(
-      <Toolbar opened onOpen={onOpen} onClose={onClose} />
+      <Toolbar opened onOpen={onOpen} onClose={onClose}>
+        <Toolbar.Item icon="bars" />
+      </Toolbar>
     );
-    const props = toolbar.props();
 
-    toolbar.setProps({ ...props, opened: false });
-    toolbar.setProps({ ...props, opened: true });
-    toolbar.setProps({ ...props, opened: false });
+    toolbar.setProps({ opened: false });
+    toolbar.setProps({ opened: true });
+    toolbar.setProps({ opened: false });
 
     expect(onOpen.mock.calls.length).toBe(2);
     expect(onClose.mock.calls.length).toBe(2);
@@ -41,13 +42,14 @@ describe('When testing the callbacks', () => {
     const onOpen = jest.fn();
     const onClose = jest.fn();
     const toolbar = shallow(
-      <Toolbar opened={false} onOpen={onOpen} onClose={onClose} />
+      <Toolbar opened={false} onOpen={onOpen} onClose={onClose}>
+        <Toolbar.Item icon="bars" />
+      </Toolbar>
     );
-    const props = toolbar.props();
 
-    toolbar.setProps({ ...props, opened: true });
-    toolbar.setProps({ ...props, opened: false });
-    toolbar.setProps({ ...props, opened: true });
+    toolbar.setProps({ opened: true });
+    toolbar.setProps({ opened: false });
+    toolbar.setProps({ opened: true });
 
     expect(onClose.mock.calls.length).toBe(1);
     expect(onOpen.mock.calls.length).toBe(2);

@@ -35,11 +35,10 @@ describe('When testing the callbacks', () => {
         Test
       </Toolbar.Collapse>
     );
-    const props = collapse.props();
 
-    collapse.setProps({ ...props, opened: false });
-    collapse.setProps({ ...props, opened: true });
-    collapse.setProps({ ...props, opened: false });
+    collapse.setProps({ opened: false });
+    collapse.setProps({ opened: true });
+    collapse.setProps({ opened: false });
 
     expect(onOpen.mock.calls.length).toBe(2);
     expect(onClose.mock.calls.length).toBe(2);
@@ -53,11 +52,10 @@ describe('When testing the callbacks', () => {
         Test
       </Toolbar.Collapse>
     );
-    const props = collapse.props();
 
-    collapse.setProps({ ...props, opened: true });
-    collapse.setProps({ ...props, opened: false });
-    collapse.setProps({ ...props, opened: true });
+    collapse.setProps({ opened: true });
+    collapse.setProps({ opened: false });
+    collapse.setProps({ opened: true });
 
     expect(onClose.mock.calls.length).toBe(1);
     expect(onOpen.mock.calls.length).toBe(2);
