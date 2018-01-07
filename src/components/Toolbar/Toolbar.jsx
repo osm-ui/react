@@ -282,7 +282,7 @@ Toolbar.propTypes = {
   onOpen: PropTypes.func,
   onClose: PropTypes.func,
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 };
 
 Toolbar.defaultProps = {
@@ -295,8 +295,7 @@ Toolbar.defaultProps = {
   opened: false,
   onOpen: null,
   onClose: null,
-  className: '',
-  children: ''
+  className: ''
 };
 
 Toolbar.displayName = 'Toolbar';
