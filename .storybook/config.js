@@ -28,6 +28,7 @@ function loadStories() {
     require('../stories/Titlebar');
     require('../stories/Map');
     require('../stories/Modal');
+    require('../stories/Notification');
     /* eslint-enable */
 }
 

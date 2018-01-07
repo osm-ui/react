@@ -46,7 +46,7 @@ storiesOf('Sidebar', module)
   .addWithInfo('Default state', () => (
     <DefaultTheme>
       <FakeApp>
-        <Sidebar opened title="A sidebar title">
+        <Sidebar title="A sidebar title">
           <Lorem count={2} />
         </Sidebar>
       </FakeApp>
@@ -55,7 +55,7 @@ storiesOf('Sidebar', module)
   .addWithInfo('Detached title', () => (
     <DefaultTheme>
       <FakeApp>
-        <Sidebar opened>
+        <Sidebar>
           <Sidebar.Title>A sidebar title</Sidebar.Title>
           <Lorem count={2} />
         </Sidebar>
@@ -66,7 +66,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened>
+          <Sidebar>
             <Sidebar.Title>A sidebar title</Sidebar.Title>
             <Lorem count={2} />
           </Sidebar>
@@ -78,7 +78,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened>
+          <Sidebar>
             <Sidebar.Title>A sidebar title</Sidebar.Title>
             <Lorem />
           </Sidebar>
@@ -91,7 +91,6 @@ storiesOf('Sidebar', module)
       <FakeApp>
         <RedTheme>
           <Sidebar
-            opened
             title="A sidebar title"
             scrollContent
             header={
@@ -117,7 +116,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened title="A sidebar title" loading>
+          <Sidebar title="A sidebar title" loading>
             <Lorem count={2} />
           </Sidebar>
         </RedTheme>
@@ -128,7 +127,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened title="A sidebar title">
+          <Sidebar title="A sidebar title">
             <Sidebar.Nav>
               <ul>
                 <li>
@@ -162,7 +161,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened title="A sidebar title" position="right">
+          <Sidebar title="A sidebar title" position="right">
             <Lorem count={2} />
           </Sidebar>
         </RedTheme>
@@ -173,7 +172,7 @@ storiesOf('Sidebar', module)
     <DefaultTheme>
       <FakeApp>
         <RedTheme>
-          <Sidebar opened title="A sidebar title" position="right" width="lg">
+          <Sidebar title="A sidebar title" position="right" width="lg">
             <Lorem count={2} />
           </Sidebar>
         </RedTheme>
@@ -186,7 +185,6 @@ storiesOf('Sidebar', module)
     const position = select('Position', ['left', 'right'], 'left');
     const width = select('Width', ['xs', 'sm', 'md', 'lg'], 'md');
     const container = select('Container', ['parent', 'root'], 'parent');
-    const opened = boolean('Opened', true);
     const maximized = boolean('Maximized');
     const scrollContent = boolean('Scroll content only');
     const loading = boolean('Loading');
@@ -238,7 +236,6 @@ storiesOf('Sidebar', module)
           <ThemeElement>
             <Sidebar
               title={title}
-              opened={opened}
               loading={loading}
               loaderLabel={loaderLabel}
               position={position}

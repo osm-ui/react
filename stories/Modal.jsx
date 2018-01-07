@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlaceholder from 'react-placeholder';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { host } from 'storybook-host';
@@ -10,7 +11,7 @@ import {
   select
 } from '@storybook/addon-knobs';
 import Lorem from 'react-lorem-component';
-
+import styled from 'styled-components';
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import FakeApp from './components/FakeApp';
@@ -43,6 +44,13 @@ import {
     * or make them separate components to be used in different contexts
 */
 import Sidebar from 'components/Sidebar';
+
+const StyledDiv = styled.div`
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+`;
 
 storiesOf('Modal', module)
   .addDecorator(withKnobs)
@@ -117,9 +125,12 @@ storiesOf('Modal', module)
   .addWithInfo('Inside a div', () => (
     <DefaultTheme>
       <FakeApp>
-        <Modal container='parent'>
-          <Lorem count={2} />
-        </Modal>
+        <StyledDiv>
+          <ReactPlaceholder type="text" rows={5} />
+          <Modal>
+            <Lorem count={2} />
+          </Modal>
+        </StyledDiv>
       </FakeApp>
     </DefaultTheme>
   ))

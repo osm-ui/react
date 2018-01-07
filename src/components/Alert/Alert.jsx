@@ -3,30 +3,30 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-const contexts = ['info', 'success', 'warning', 'danger'];
+import { contexts } from 'constants/index';
 
 const colorsStyle = props =>
   contexts.reduce((reducedStyles, context) => {
     const colors = props.theme.alert[context];
 
     return `
-        ${reducedStyles}
+      ${reducedStyles}
 
-        &.alert-${context} {
-            color: ${colors.color};
-            background-color: ${colors.backgroundColor};
-            border-color: ${colors.borderColor};
+      &.alert-${context} {
+          color: ${colors.color};
+          background-color: ${colors.backgroundColor};
+          border-color: ${colors.borderColor};
 
-            a {
-                color: ${colors.color};
-                text-decoration: underline;
-            }
+          a {
+              color: ${colors.color};
+              text-decoration: underline;
+          }
 
-            a:hover, a:focus, a:active {
-                color: ${colors.color};
-                text-decoration: none;
-            }
-        }
+          a:hover, a:focus, a:active {
+              color: ${colors.color};
+              text-decoration: none;
+          }
+      }
     `;
   }, '');
 

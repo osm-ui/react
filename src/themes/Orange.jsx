@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import _ from 'lodash';
-import colors from 'themes/colors';
+import { colors } from 'constants/index';
 import { buildLightThemeConfig } from 'helpers/themes';
 import { config as defaultThemeConfig, StyledSpan } from './Default';
 

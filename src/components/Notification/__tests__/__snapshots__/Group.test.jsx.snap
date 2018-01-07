@@ -4,10 +4,13 @@ exports[`When using snapshots Should render with an element children 1`] = `
 <span
   className="sc-bdVaJa lbJuWU"
 >
-  <div
-    className="alert alert-info sc-EHOje gjPsaZ"
+  <aside
+    className="position-top-right direction-horizontal sc-ifAKCX dnOXkw"
   >
-    <div />
-  </div>
+    <div
+      className="notif-item"
+      direction="horizontal"
+    />
+  </aside>
 </span>
 `;
