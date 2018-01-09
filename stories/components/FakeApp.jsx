@@ -8,7 +8,7 @@ import { Section } from 'index';
 const StyledSection = styled(Section)`
   height: 80vh !important;
   border: 1px solid #ccc;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
 `;
 
 const FakeApp = ({ fakeText, dimmed, children, ...rest }) => (

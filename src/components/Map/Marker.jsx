@@ -9,8 +9,8 @@ import shapes from './assets/markers';
 /* eslint-disable no-unused-expressions */
 injectGlobal`
     .osm-ui-react-marker-shape {
-        width: 50px !important;
-        height: 50px !important;
+        width: 5rem !important;
+        height: 5rem !important;
 
         svg {
             z-index: 1;
@@ -20,15 +20,15 @@ injectGlobal`
         }
 
         .osm-ui-react-marker-icon-wrapper {
-            width: 50px;
-            height: 50px;
+            width: 5rem;
+            height: 5rem;
             position: absolute;
             z-index: 2;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: visible;
-            font-size: 19px;
+            font-size: 1.9rem;
         }
     }
 
@@ -36,12 +36,12 @@ injectGlobal`
     .osm-ui-react-marker-pointerClassicThin,
     .osm-ui-react-marker-pointerCirclePin {
         svg {
-            top: -20px;
+            top: -2rem;
             left: 0;
         }
 
         .osm-ui-react-marker-icon-wrapper {
-            top: -23px;
+            top: -2.3rem;
             left: 0;
         }
     }

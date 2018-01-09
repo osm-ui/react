@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-top-right direction-horizontal sc-iAyFgw gTHipc"
+    className="position-top-right direction-horizontal sc-iAyFgw fewJSE"
   >
     <div
       className="notif-item"

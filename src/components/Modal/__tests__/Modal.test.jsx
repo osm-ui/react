@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { snapshotWithElementChildren } from 'helpers/tests';
-import Modal from './';
+import { Modal } from 'index';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>

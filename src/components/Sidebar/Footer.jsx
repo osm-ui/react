@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 
 const StyledDiv = styled.div`
-  padding: 20px 20px;
+  padding: 2rem 2rem;
 `;
 
 const SidebarFooter = ({ className, children, ...rest }) => (

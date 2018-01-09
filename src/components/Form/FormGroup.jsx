@@ -38,7 +38,7 @@ const colorsStyle = props =>
   }, '');
 
 const StyledDiv = styled.div`
-  ${props => colorsStyle(props)} margin-bottom: 40px;
+  ${props => colorsStyle(props)} margin-bottom: 4rem;
 `;
 
 const FormGroup = ({ context, className, ...props }) => {

@@ -24,23 +24,23 @@ const StyledSelect = styled(VirtualizedSelect)`
   }
 
   .Select-placeholder {
-    padding-left: 12px;
-    line-height: 38px;
+    padding-left: 1.2rem;
+    line-height: 3.8rem;
   }
 
   &.Select--single {
     .Select-value {
-      padding-left: 12px;
+      padding-left: 1.2rem;
     }
 
     .Select-value .Select-value-label {
-      line-height: 38px;
+      line-height: 3.8rem;
     }
   }
 
   .Select-input > input {
-    padding: 1px;
-    line-height: 32px;
+    padding: 0.1rem;
+    line-height: 3.2rem;
   }
 
   .Select-menu-outer {
@@ -50,7 +50,7 @@ const StyledSelect = styled(VirtualizedSelect)`
 
   .VirtualizedSelectOption {
     cursor: default;
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
   }
 
   .VirtualizedSelectFocusedOption {

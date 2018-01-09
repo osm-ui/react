@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="direction-column first-shape- last-shape- first-size- last-size- sc-dxgOiQ kTRKYm"
+    className="direction-column first-shape- last-shape- first-size- last-size- sc-dxgOiQ rFYcV"
   >
     <div
       inGroup={true}
@@ -19,7 +19,7 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="direction-column first-shape- last-shape- first-size- last-size- sc-dxgOiQ kTRKYm"
+    className="direction-column first-shape- last-shape- first-size- last-size- sc-dxgOiQ rFYcV"
   >
     <div
       inGroup={true}
@@ -33,7 +33,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="direction-column first-shape-square last-shape-square first-size- last-size- sc-dxgOiQ kTRKYm"
+    className="direction-column first-shape-square last-shape-square first-size- last-size- sc-dxgOiQ rFYcV"
   >
     <div
       inGroup={true}
@@ -48,7 +48,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="direction-column first-shape- last-shape- first-size-xs last-size-xs sc-dxgOiQ pADMK"
+    className="direction-column first-shape- last-shape- first-size-xs last-size-xs sc-dxgOiQ fjolix"
   >
     <div
       inGroup={true}

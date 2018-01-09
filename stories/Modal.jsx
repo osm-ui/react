@@ -48,7 +48,7 @@ import Sidebar from 'components/Sidebar';
 const StyledDiv = styled.div`
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 30rem;
   border: 1px solid black;
 `;
 

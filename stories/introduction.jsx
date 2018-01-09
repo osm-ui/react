@@ -17,7 +17,7 @@ storiesOf('Introduction', module)
   .add('Usage', () => (
     <div className="text-center">
       <p>
-        <img src={logoFile} style={{ width: '150px' }} alt="Logo" />
+        <img src={logoFile} style={{ width: '15rem' }} alt="Logo" />
       </p>
       <p>
         OSM UI for React is a set of React components to build OSM related

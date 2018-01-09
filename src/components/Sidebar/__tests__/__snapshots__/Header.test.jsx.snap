@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="sidebar-header sc-jzJRlG bHqBTL"
+    className="sidebar-header sc-jzJRlG cvDnxv"
   >
     <div />
   </div>
@@ -17,7 +17,7 @@ exports[`When using snapshots Should render with className and other props 1`] =
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="my-class sidebar-header sc-jzJRlG bHqBTL"
+    className="my-class sidebar-header sc-jzJRlG cvDnxv"
   >
     <div />
   </div>
@@ -29,7 +29,7 @@ exports[`When using snapshots Should render with other props 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="sidebar-header sc-jzJRlG bHqBTL"
+    className="sidebar-header sc-jzJRlG cvDnxv"
   >
     <div />
   </div>
@@ -41,7 +41,7 @@ exports[`When using snapshots Should render with the className prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="my-class sidebar-header sc-jzJRlG bHqBTL"
+    className="my-class sidebar-header sc-jzJRlG cvDnxv"
   >
     <div />
   </div>

@@ -22,8 +22,8 @@ const StyledAside = styled.aside`
   }
 
   max-width: 100%;
-  height: 40px;
-  margin: 2px 0;
+  height: 4rem;
+  margin: 0.2rem 0;
   padding: 0 0.5rem;
   overflow-y: auto;
   opacity: 0;
@@ -121,7 +121,7 @@ const StyledAside = styled.aside`
     border-width: 0;
     height: 100%;
     margin-right: 1rem;
-    line-height: 40px;
+    line-height: 4rem;
   }
 
   .close-btn {
@@ -130,8 +130,8 @@ const StyledAside = styled.aside`
     background: transparent;
     border-width: 0;
     height: 100%;
-    padding: 0 10px;
-    margin-left: 5px;
+    padding: 0 1rem;
+    margin-left: 0.5rem;
 
     &:hover {
       color: ${props => props.theme.hoverControlColor};
@@ -146,7 +146,7 @@ const StyledAside = styled.aside`
     justify-content: space-between;
 
     & * {
-      margin-left: 5px;
+      margin-left: 0.5rem;
     }
   }
 `;

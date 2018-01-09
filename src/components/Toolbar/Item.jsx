@@ -39,40 +39,40 @@ const StyledButton = styled.button`
   &.xs {
     width: ${props => props.theme.toolbar.xsSize};
     height: ${props => props.theme.toolbar.xsSize};
-    line-height: 0.85em;
+    line-height: 1.3rem;
 
     .fa {
-      font-size: 0.85em;
+      font-size: 1.3rem;
     }
   }
 
   &.sm {
     width: ${props => props.theme.toolbar.smSize};
     height: ${props => props.theme.toolbar.smSize};
-    line-height: 1.04em;
+    line-height: 1.6rem;
 
     .fa {
-      font-size: 1.04em;
+      font-size: 1.6rem;
     }
   }
 
   &.md {
     width: ${props => props.theme.toolbar.mdSize};
     height: ${props => props.theme.toolbar.mdSize};
-    line-height: 1.2em;
+    line-height: 1.9rem;
 
     .fa {
-      font-size: 1.2em;
+      font-size: 1.9rem;
     }
   }
 
   &.lg {
     width: ${props => props.theme.toolbar.lgSize};
     height: ${props => props.theme.toolbar.lgSize};
-    line-height: 1.43em;
+    line-height: 2.2rem;
 
     .fa {
-      font-size: 1.43em;
+      font-size: 1.2rem;
     }
   }
 
