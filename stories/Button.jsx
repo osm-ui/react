@@ -139,7 +139,7 @@ storiesOf('Button', module)
     );
     const context = select(
       'Context',
-      ['default', 'info', 'primary', 'success', 'warning', 'danger'],
+      Button.contexts,
       'default'
     );
     const theme = select(

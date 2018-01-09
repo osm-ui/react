@@ -5,8 +5,10 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
-import { contexts, contextIcons } from 'constants/index';
+import { contextIcons } from 'constants/index';
 import Button from 'components/Button';
+
+const contexts = ['info', 'success', 'warning', 'danger'];
 
 const StyledAside = styled.aside`
   display: flex;
@@ -249,6 +251,8 @@ class Notification extends React.Component {
     );
   }
 }
+
+Notification.contexts = contexts;
 
 Notification.propTypes = {
   id: PropTypes.number.isRequired,

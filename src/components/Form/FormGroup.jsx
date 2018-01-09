@@ -50,6 +50,8 @@ const FormGroup = ({ context, className, ...props }) => {
   return <StyledDiv className={classes} {...props} />;
 };
 
+FormGroup.contexts = contexts;
+
 FormGroup.propTypes = {
   context: PropTypes.oneOf(contexts),
   className: PropTypes.string

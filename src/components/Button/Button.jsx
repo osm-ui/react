@@ -142,6 +142,8 @@ const Button = ({
   );
 };
 
+Button.contexts = contexts;
+
 Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset', 'anchor']),
   context: PropTypes.oneOf(contexts),

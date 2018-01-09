@@ -5,4 +5,3 @@ export const contextIcons = {
   warning: 'warning',
   danger: 'times-circle'
 };
-export const contexts = Object.keys(contextIcons);
