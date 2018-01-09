@@ -4,8 +4,8 @@ import Transition from 'react-transition-group/Transition';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import SidebarTitle from './Title';
 import Loader from 'components/Loader';
+import SidebarTitle from './Title';
 
 const StyledAside = styled.aside`
   z-index: 1000;

@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
 import { contexts, contextIcons } from 'constants/index';
-import Button from '../Button';
+import Button from 'components/Button';
 
 const StyledAside = styled.aside`
   display: flex;
