@@ -9,7 +9,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div>
       <div
-        className="sc-htpNat fiuTRh"
+        className="sc-htpNat jHFNJI"
       />
       
     </div>
@@ -26,10 +26,10 @@ exports[`When using snapshots with a label prop Should render with an element ch
   >
     <div>
       <div
-        className="sc-htpNat fiuTRh"
+        className="sc-htpNat jHFNJI"
       />
       <div
-        className="sc-ifAKCX dKVvJV"
+        className="sc-ifAKCX hlQgNG"
       >
         This is a label
       </div>

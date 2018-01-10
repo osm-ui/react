@@ -8,8 +8,6 @@ import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import FakeApp from './components/FakeApp';
 
-import { contexts } from '../src/constants';
-
 import {
   DefaultTheme,
   WhiteTheme,
@@ -358,7 +356,7 @@ storiesOf('Notification', module)
     );
     const direction = select('Direction', ['horizontal', 'vertical'], 'horizontal');
     const pending = boolean('Is Pending', false);
-    const context = select('Item type', contexts, 'info');
+    const context = select('Item type', Notification.contexts, 'info');
 
     const timespanOptions = {
       range: true,

@@ -8,7 +8,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
     className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -19,7 +19,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-jKJlTe hKYJBH"
+      className="position-left-top direction-column sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div
@@ -38,7 +38,7 @@ exports[`When using snapshots Should render with the direction and position prop
     className="position-right-top direction-row sc-ckVGcZ kwCLGq"
   >
     <div
-      className="position-right-top direction-row sc-jKJlTe hKYJBH"
+      className="position-right-top direction-row sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div
@@ -46,7 +46,7 @@ exports[`When using snapshots Should render with the direction and position prop
       />
     </div>
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -68,7 +68,7 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
     className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -79,7 +79,7 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-jKJlTe hKYJBH"
+      className="position-left-top direction-column sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div
@@ -98,7 +98,7 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
     className="position-left-top direction-column opened sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -109,7 +109,7 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column opened sc-jKJlTe hKYJBH"
+      className="position-left-top direction-column opened sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div
@@ -128,7 +128,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
     className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -139,7 +139,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-jKJlTe hKYJBH"
+      className="position-left-top direction-column sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div
@@ -159,7 +159,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
     className="position-left-top direction-column sc-ckVGcZ kwCLGq"
   >
     <button
-      className="md shape-round btn sc-kgoBCf iQjcqO"
+      className="md shape-round btn sc-kgoBCf dewmPL"
       onClick={[Function]}
       size="md"
     >
@@ -170,7 +170,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-jKJlTe hKYJBH"
+      className="position-left-top direction-column sc-jKJlTe qEFmg"
       onClick={null}
     >
       <div

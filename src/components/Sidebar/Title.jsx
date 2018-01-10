@@ -4,14 +4,14 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 
 const StyledH2 = styled.h2`
-  margin: -30px 0 50px;
+  margin: -3rem 0 5rem;
 
   &.in-header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin: 0 0 0 20px;
-    line-height: 50px;
+    margin: 0 0 0 2rem;
+    line-height: 5rem;
   }
 `;
 

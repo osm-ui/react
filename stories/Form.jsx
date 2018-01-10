@@ -14,8 +14,6 @@ import KnobsAlert from './components/KnobsAlert';
 
 import { DefaultTheme, Form, Alert } from 'index';
 
-const contexts = ['', 'info', 'success', 'warning', 'error'];
-
 storiesOf('Form', module)
   .addDecorator(withKnobs)
   .addDecorator(
@@ -27,7 +25,7 @@ storiesOf('Form', module)
   .addWithInfo('Input', () => {
     const placeholder = text('Placeholder', 'A placeholder');
     const hint = text('Hint', 'Hey there! I can help you filling that field!');
-    const formGroupContext = select('Context', contexts);
+    const formGroupContext = select('Context', Form.Group.contexts);
     const disabled = boolean('Disabled');
     const type = select('Type', ['text', 'email', 'number', 'url'], 'text');
 
@@ -50,7 +48,7 @@ storiesOf('Form', module)
   .addWithInfo('Textarea', () => {
     const placeholder = text('Placeholder', 'A placeholder');
     const hint = text('Hint', 'Hey there! I can help you filling that field!');
-    const formGroupContext = select('Context', contexts);
+    const formGroupContext = select('Context', Form.Group.contexts);
     const resize = select(
       'Resize',
       ['none', 'vertical', 'horizontal'],
@@ -86,7 +84,7 @@ storiesOf('Form', module)
     const searchable = boolean('Searchable');
     const clearable = boolean('Clearable');
     const disabled = boolean('Disabled');
-    const formGroupContext = select('Context', contexts);
+    const formGroupContext = select('Context', Form.Group.contexts);
     const options = [
       { label: 'First option', value: 1 },
       { label: 'Second option', value: 2 },
@@ -118,7 +116,7 @@ storiesOf('Form', module)
     );
   })
   .addWithInfo('Label', () => {
-    const formGroupContext = select('Context', contexts);
+    const formGroupContext = select('Context', Form.Group.contexts);
 
     return (
       <DefaultTheme>

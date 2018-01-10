@@ -13,8 +13,8 @@ const StyledAside = styled.aside`
   }
 
   &:empty {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   &.position-top-right {

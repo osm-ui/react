@@ -29,12 +29,12 @@ import {
 } from 'index';
 
 const fakeAppRowStyle = {
-  padding: '60px 100px'
+  padding: '6rem 10rem'
 };
 
 const fakeAppColumnStyle = {
-  paddingLeft: '100px',
-  paddingRight: '100px'
+  paddingLeft: '10rem',
+  paddingRight: '10rem'
 };
 
 storiesOf('Toolbar', module)
