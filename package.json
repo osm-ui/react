@@ -61,7 +61,7 @@
       "eslint"
     ],
     "src/**/*.{js,jsx}": [
-      "npm test-ci -- --findRelatedTests"
+      "npm run test-ci -- --findRelatedTests"
     ]
   },
   "dependencies": {
