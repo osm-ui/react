@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import { contexts } from 'constants/index';
+export const contexts = ['info', 'success', 'warning', 'danger'];
 
 const colorsStyle = props =>
   contexts.reduce((reducedStyles, context) => {
@@ -43,6 +43,8 @@ const Alert = ({ context, className, ...props }) => {
 
   return <StyledDiv className={classes} {...props} />;
 };
+
+Alert.contexts = contexts;
 
 Alert.propTypes = {
   context: PropTypes.oneOf(contexts),

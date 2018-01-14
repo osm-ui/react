@@ -31,8 +31,8 @@ export const config = {
   sidebar: {
     boxShadow,
     nav: {
-      fontSize: '1.1em',
-      lineHeight: '1.2em',
+      fontSize: '1.8rem',
+      lineHeight: '2rem',
       fontWeight: 500,
       borderRadius: '4px',
       color: colors.anthracite1,
@@ -43,12 +43,12 @@ export const config = {
   },
   toolbar: {
     boxShadow,
-    margin: '10px',
-    childrenMargin: '8px',
-    xsSize: '30px',
-    smSize: '40px',
-    mdSize: '50px',
-    lgSize: '60px',
+    margin: '1rem',
+    childrenMargin: '.8rem',
+    xsSize: '3rem',
+    smSize: '4rem',
+    mdSize: '5rem',
+    lgSize: '6rem',
 
     button: {
       color: colors.anthracite1,
@@ -67,14 +67,14 @@ export const config = {
   },
   titlebar: {
     boxShadow,
-    xsHeight: '30px',
-    smHeight: '35px',
-    mdHeight: '40px',
-    lgHeight: '45px',
-    xsFontSize: '0.9em',
-    smFontSize: '1em',
-    mdFontSize: '1.1em',
-    lgFontSize: '1.3em',
+    xsHeight: '3rem',
+    smHeight: '3.5rem',
+    mdHeight: '4rem',
+    lgHeight: '4.5rem',
+    xsFontSize: '1.4rem',
+    smFontSize: '1.6rem',
+    mdFontSize: '1.8rem',
+    lgFontSize: '1.9rem',
     fontWeight: 500,
     color: colors.anthracite1,
     backgroundColor: colors.white,
@@ -234,7 +234,7 @@ export const config = {
     },
     label: {
       color: colors.anthracite1,
-      fontSize: '1.1em',
+      fontSize: '1.7rem',
       fontWeight: 400,
 
       info: {
@@ -254,9 +254,9 @@ export const config = {
       }
     },
     hint: {
-      fontSize: '0.9em',
+      fontSize: '1.4rem',
       margin: 0,
-      padding: '5px 10px',
+      padding: '.5rem 1rem',
 
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,

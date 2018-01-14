@@ -59,41 +59,41 @@ const StyledButton = styled.button`
   border-radius: ${props => props.theme.form.button.borderRadius};
 
   &.btn-xs {
-    font-size: 12px;
-    line-height: 21px;
-    padding: 0 14px;
+    font-size: 1.2rem;
+    line-height: 2.1rem;
+    padding: 0 1.4rem;
   }
 
   &.btn-sm {
-    line-height: 30px;
-    padding: 0 16px;
+    line-height: 3rem;
+    padding: 0 1.6rem;
   }
 
   &.btn-md {
-    line-height: 38px;
-    padding: 0 20px;
+    line-height: 3.8rem;
+    padding: 0 2rem;
   }
 
   &.btn-lg {
-    line-height: 45px;
-    padding: 0 24px;
+    line-height: 4.5rem;
+    padding: 0 2.4rem;
   }
 
   &.shape-round {
     &.btn-xs {
-      border-radius: 12.5px;
+      border-radius: 1.25rem;
     }
 
     &.btn-sm {
-      border-radius: 17px;
+      border-radius: 1.7rem;
     }
 
     &.btn-md {
-      border-radius: 21px;
+      border-radius: 2.1rem;
     }
 
     &.btn-lg {
-      border-radius: 24.5px;
+      border-radius: 2.45rem;
     }
   }
 `;
@@ -141,6 +141,8 @@ const Button = ({
     />
   );
 };
+
+Button.contexts = contexts;
 
 Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset', 'anchor']),

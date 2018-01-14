@@ -4,8 +4,8 @@ import Transition from 'react-transition-group/Transition';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import SidebarTitle from './Title';
 import Loader from 'components/Loader';
+import SidebarTitle from './Title';
 
 const StyledAside = styled.aside`
   z-index: 1000;
@@ -36,16 +36,16 @@ const StyledAside = styled.aside`
   }
 
   &.xs {
-    width: 150px;
+    width: 15rem;
   }
   &.sm {
-    width: 250px;
+    width: 25rem;
   }
   &.md {
-    width: 400px;
+    width: 40rem;
   }
   &.lg {
-    width: 600px;
+    width: 60rem;
   }
   &.maximized {
     width: 100%;
@@ -73,8 +73,8 @@ const StyledAside = styled.aside`
     color: ${props => props.theme.controlColor};
     background: transparent;
     border-width: 0;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     padding: 0;
 
     &:hover {
@@ -84,21 +84,21 @@ const StyledAside = styled.aside`
 
   .back-btn {
     float: left;
-    margin-right: 5px;
+    margin-right: 0.5rem;
   }
 
   .close-btn {
     float: right;
-    margin-left: 5px;
+    margin-left: 0.5rem;
   }
 
   &.scroll-content .header {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   .content {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 3rem;
+    padding: 2rem;
   }
 
   &.scroll-content .content {
@@ -110,7 +110,7 @@ const StyledAside = styled.aside`
 
     &::after {
       content: '';
-      margin-top: 20px;
+      margin-top: 2rem;
       display: block;
     }
   }
@@ -120,7 +120,7 @@ const StyledAside = styled.aside`
   }
 
   &.scroll-content .footer {
-    margin-top: 20px;
+    margin-top: 2rem;
   }
 `;
 

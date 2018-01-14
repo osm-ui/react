@@ -28,8 +28,8 @@ import {
 } from 'index';
 
 const fakeAppStyle = {
-  paddingTop: '70px',
-  paddingBottom: '70px'
+  paddingTop: '7rem',
+  paddingBottom: '7rem'
 };
 
 storiesOf('Titlebar', module)
