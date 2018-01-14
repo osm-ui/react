@@ -29,7 +29,7 @@
     "prepush": "npm run test",
     "test": "cross-env NODE_PATH=src jest --env=jsdom",
     "test-watch": "npm test -- --watch",
-    "test-ci": "npm test -- --ci",
+    "test-ci": "npm test -- --ci --findRelatedTests",
     "test-coverage": "npm run test-ci -- --coverage",
     "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'",
     "lint": "eslint 'src/**/*.{js,jsx}'"
