@@ -410,7 +410,7 @@ storiesOf('Notification', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp fakeText>
+        <FakeApp fakeText style={{ top: '80px' }}>
           <FakeNotificationCenter>
             <ThemeElement>
               <Notification

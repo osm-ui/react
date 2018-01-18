@@ -232,7 +232,7 @@ storiesOf('Sidebar', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp>
+        <FakeApp style={{ top: '80px' }}>
           <ThemeElement>
             <Sidebar
               title={title}

@@ -127,7 +127,7 @@ storiesOf('Titlebar', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp style={fakeAppStyle}>
+        <FakeApp style={{ ...{fakeAppStyle},  ...{ top: '80px'} }}>
           <ThemeElement>
             <Titlebar
               maximized={maximized}

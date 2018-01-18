@@ -389,7 +389,7 @@ storiesOf('Toolbar', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp style={{ ...fakeAppColumnStyle, ...fakeAppRowStyle }}>
+        <FakeApp style={{ ...fakeAppColumnStyle, ...fakeAppRowStyle,  ...{ top: '80px' } }}>
           <ThemeElement>
             <Toolbar
               opened={opened}
