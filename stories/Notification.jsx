@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { host } from 'storybook-host';
 import { withKnobs, boolean, select, number } from '@storybook/addon-knobs';
-import styled from 'styled-components';
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import FakeApp from './components/FakeApp';
@@ -29,6 +28,10 @@ import {
 } from '../src/index';
 
 class FakeNotificationCenter extends React.Component {
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+  }
+
   constructor(props) {
     super(props);
 
@@ -83,8 +86,6 @@ class FakeNotificationCenter extends React.Component {
   }
 
   render() {
-    const notifications = this.state.notifications;
-
     const button = (
       <Button onClick={this.resetNotifications}>
         Restart Notifications
@@ -409,13 +410,14 @@ storiesOf('Notification', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp>
+        <FakeApp fakeText>
           <FakeNotificationCenter>
             <ThemeElement>
               <Notification
                 id={17}
                 position={position}
                 direction={direction}
+                context={context}
                 pending={pending}
                 timespan={timespan}
               >
