@@ -26,7 +26,6 @@ const StyledAside = styled.aside`
   margin: 0.2rem 0;
   padding: 0 0.5rem;
   overflow-y: auto;
-  opacity: 0;
   font-size: 1.3rem;
   color: ${props => props.theme.alert[props.context].color};
   background: ${props => props.theme.backgroundColor};
@@ -35,8 +34,7 @@ const StyledAside = styled.aside`
   border-width: 0;
   box-shadow: ${props => props.theme.sidebar.boxShadow};
 
-  transition: height 1000ms ease-in-out, opacity 500ms ease-in-out,
-    transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 
   &.position-top-right {
     top: 0;
@@ -202,11 +200,7 @@ class Notification extends React.Component {
 
     const transitionStyles = {
       entered: {
-        opacity: 0.95,
         transform: 'translate(0,0)'
-      },
-      exiting: {
-        height: 0
       }
     };
 
