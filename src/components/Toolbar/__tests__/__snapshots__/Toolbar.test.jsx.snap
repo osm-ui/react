@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-chPdSV wOLbw"
+    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
     style={undefined}
   >
     <div
@@ -21,7 +21,7 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-chPdSV wOLbw"
+    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
     style={undefined}
   >
     <div
@@ -37,7 +37,7 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-left-top direction-column container-parent opened sc-chPdSV wOLbw"
+    className="position-left-top direction-column container-parent opened sc-kGXeez SzHZb"
     style={
       Object {
         "opacity": 1,
@@ -58,7 +58,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-chPdSV wOLbw"
+    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
     style={undefined}
   >
     <div
@@ -75,7 +75,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-chPdSV wOLbw"
+    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
     style={undefined}
   >
     <div

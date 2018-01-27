@@ -97,6 +97,28 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
           activeBackgroundColor: colors.lightGray5,
           activeBorderColor: color1
         }
+      },
+      label: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: color5,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: color5,
+        focusBackgroundColor: color3,
+        focusBorderColor: color5,
+        activeBackgroundColor: color3,
+        activeBorderColor: color5
+      },
+      checkbox: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: color5,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: color5,
+        focusBackgroundColor: color3,
+        focusBorderColor: color5,
+        activeBackgroundColor: color3,
+        activeBorderColor: color5
       }
     },
     modal: {
@@ -197,6 +219,28 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
           activeBackgroundColor: dark18Color1,
           activeBorderColor: dark22Color1
         }
+      },
+      label: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: dark27Color1,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: dark18Color1,
+        focusBackgroundColor: color3,
+        focusBorderColor: dark18Color1,
+        activeBackgroundColor: color3,
+        activeBorderColor: dark18Color1
+      },
+      checkbox: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: dark27Color1,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: dark18Color1,
+        focusBackgroundColor: color3,
+        focusBorderColor: dark18Color1,
+        activeBackgroundColor: color3,
+        activeBorderColor: dark18Color1
       }
     },
     modal: {

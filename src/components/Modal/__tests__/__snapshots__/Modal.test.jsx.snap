@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="container-root sc-kEYyzF immPgv"
+    className="container-root sc-iAyFgw klaKDQ"
     style={undefined}
   >
     
@@ -24,7 +24,7 @@ exports[`When using snapshots with loader Should render with an element children
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="container-root sc-kEYyzF immPgv"
+    className="container-root sc-iAyFgw klaKDQ"
     style={undefined}
   >
     
@@ -56,14 +56,14 @@ exports[`When using snapshots with title, header and footer Should render with a
   className="sc-bdVaJa lbJuWU"
 >
   <aside
-    className="container-root sc-kEYyzF immPgv"
+    className="container-root sc-iAyFgw klaKDQ"
     style={undefined}
   >
     <header
       className="header"
     >
       <h2
-        className="sidebar-title in-header sc-jTzLTM gbdrjl"
+        className="sidebar-title in-header sc-jzJRlG jKSUDG"
       >
         title
       </h2>
