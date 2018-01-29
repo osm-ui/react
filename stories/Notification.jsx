@@ -72,14 +72,17 @@ class FakeNotificationCenter extends React.Component {
     const notifications = this.state.notifications;
 
     if (notifications) {
-      if (component.type === Notification && notifications.includes(component.props.id))
-        return React.cloneElement(component, {
-          onTimeoutClose: () =>
-            this.setState({
-              notifications: notifications.filter(element => element !== component.props.id)
-            })
-        });
-      else if (component.type === Notification.Group)
+      if (component.type === Notification)
+        if (notifications.includes(component.props.id))
+          return React.cloneElement(component, {
+            onTimeoutClose: () =>
+              this.setState({
+                notifications: notifications.filter(element => element !== component.props.id)
+              })
+          });
+        else
+          return null;
+      else
         return React.cloneElement(component, {
           children: React.Children.map(component.props.children, this.addTimeout)
         });
