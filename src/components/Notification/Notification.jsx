@@ -10,36 +10,21 @@ import Button from 'components/Button';
 
 const contexts = ['info', 'success', 'warning', 'danger'];
 
-const StyledAside = styled.aside`
-  display: flex;
+const Container = styled.div`
   position: absolute;
-  z-index: 1000;
   width: 50rem;
+  max-width: 100%;
 
   @media (max-width: 50rem) {
     width: 100%;
     font-size: 1.2rem;
   }
 
-  max-width: 100%;
-  height: 4rem;
-  margin: 0.2rem 0;
-  padding: 0 0.5rem;
-  overflow-y: auto;
-  font-size: 1.3rem;
-  color: ${props => props.theme.alert[props.context].color};
-  background: ${props => props.theme.backgroundColor};
-  border-color: ${props => props.theme.alert[props.context].borderColor};
-  border-style: ${props => props.theme.borderStyle};
-  border-width: 0;
-  box-shadow: ${props => props.theme.sidebar.boxShadow};
-
   transition: transform 500ms ease-in-out;
 
   &.position-top-right {
     top: 0;
     right: 0;
-    border-left-width: ${props => props.theme.borderWidth};
     transform: translate(100%, 0);
 
     &.direction-vertical {
@@ -50,7 +35,6 @@ const StyledAside = styled.aside`
   &.position-top-left {
     top: 0;
     left: 0;
-    border-right-width: ${props => props.theme.borderWidth};
     transform: translate(-100%, 0);
 
     &.direction-vertical {
@@ -61,7 +45,6 @@ const StyledAside = styled.aside`
   &.position-bottom-left {
     bottom: 0;
     left: 0;
-    border-right-width: ${props => props.theme.borderWidth};
     transform: translate(-100%, 0);
 
     &.direction-vertical {
@@ -72,7 +55,6 @@ const StyledAside = styled.aside`
   &.position-bottom-right {
     bottom: 0;
     right: 0;
-    border-left-width: ${props => props.theme.borderWidth};
     transform: translate(100%, 0);
 
     &.direction-vertical {
@@ -87,8 +69,6 @@ const StyledAside = styled.aside`
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-
-    border-bottom-width: ${props => props.theme.borderWidth};
     transform: translate(100%, 0);
 
     &.direction-vertical {
@@ -103,13 +83,48 @@ const StyledAside = styled.aside`
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-
-    border-top-width: ${props => props.theme.borderWidth};
     transform: translate(100%, 0);
 
     &.direction-vertical {
       transform: translate(0, 100%);
     }
+  }
+`;
+
+const StyledAside = styled.aside`
+  display: flex;
+  z-index: 1000;
+  width: 100%;
+  height: 4rem;
+  margin: 0.2rem 0;
+  padding: 0 0.5rem;
+  overflow-y: auto;
+  font-size: 1.3rem;
+  color: ${props => props.theme.alert[props.context].color};
+  background: ${props => props.theme.backgroundColor};
+  border-color: ${props => props.theme.alert[props.context].borderColor};
+  border-style: ${props => props.theme.borderStyle};
+  border-width: 0;
+  box-shadow: ${props => props.theme.sidebar.boxShadow};
+
+  transition: height 500ms ease-in-out, margin 500ms ease-in-out;
+
+  &.position-top-right,
+  &.position-bottom-right {
+    border-left-width: ${props => props.theme.borderWidth};
+  }
+
+  &.position-top-left,
+  &.position-bottom-left {
+    border-right-width: ${props => props.theme.borderWidth};
+  }
+
+  &.position-top {
+    border-bottom-width: ${props => props.theme.borderWidth};
+  }
+
+  &.position-bottom {
+    border-top-width: ${props => props.theme.borderWidth};
   }
 
   .icon {
@@ -155,6 +170,7 @@ class Notification extends React.Component {
 
     this.state = {
       opened: true,
+      closing: false,
       timeout: null
     };
 
@@ -204,6 +220,13 @@ class Notification extends React.Component {
       }
     };
 
+    const closingTransitionStyles = {
+      exiting: {
+        height: 0,
+        margin: 0
+      }
+    };
+
     const ctas = callToActions.map((cta, index) => (
       <Button key={index} size="xs" shape="square" onClick={cta.action}>
         {cta.text}
@@ -213,33 +236,44 @@ class Notification extends React.Component {
     return (
       <Transition
         in={this.state.opened}
-        timeout={1000}
+        timeout={500}
         appear
         onEntered={pending ? () => null : this.setTimeout}
-        onExited={onTimeoutClose}
+        onExited={() => this.setState({ closing: true })}
       >
-        {state => (
-          <StyledAside
-            key="notification"
-            {...this.props}
-            className={asideClasses}
-            style={transitionStyles[state]}
-            onMouseEnter={this.clearTimeout}
-            onMouseLeave={pending ? () => null : this.setTimeout}
-          >
-            <div className="icon">
-              <FontAwesome name={contextIcons[context]} size="lg" />
-            </div>
-            <div className={contentClasses}>
-              {children}
-              <div>{ctas}</div>
-            </div>
-            {!pending && (
-              <button className="close-btn" onClick={() => this.close()}>
-                <FontAwesome name="close" size="lg" />
-              </button>
-            )}
-          </StyledAside>
+        {state1 => (
+          <Container className={asideClasses} style={transitionStyles[state1]}>
+            <Transition
+              in={!this.state.closing}
+              timeout={500}
+              appear
+              onExited={onTimeoutClose}
+            >
+              {state2 => (
+                <StyledAside
+                  key="notification"
+                  {...this.props}
+                  className={asideClasses}
+                  style={closingTransitionStyles[state2]}
+                  onMouseEnter={this.clearTimeout}
+                  onMouseLeave={pending ? () => null : this.setTimeout}
+                >
+                  <div className="icon">
+                    <FontAwesome name={contextIcons[context]} size="lg" />
+                  </div>
+                  <div className={contentClasses}>
+                    {children}
+                    <div>{ctas}</div>
+                  </div>
+                  {!pending && (
+                    <button className="close-btn" onClick={() => this.close()}>
+                      <FontAwesome name="close" size="lg" />
+                    </button>
+                  )}
+                </StyledAside>
+              )}
+            </Transition>
+          </Container>
         )}
       </Transition>
     );
