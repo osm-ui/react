@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots TextArea should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div>
+    <textarea
+      className="form-control sc-EHOje ecZjZY"
+      disabled={false}
+      rows={6}
+    >
+      <div />
+    </textarea>
+    
+  </div>
+</span>
+`;
