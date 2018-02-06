@@ -234,6 +234,8 @@ export const config = {
     },
     label: {
       color: colors.anthracite1,
+      borderColor: colors.anthracite1,
+      backgroundColor: colors.white,
       fontSize: '1.7rem',
       fontWeight: 400,
 
@@ -252,6 +254,9 @@ export const config = {
       error: {
         color: colors.red1
       }
+    },
+    checkbox: {
+      borderColor: colors.darkGray3
     },
     hint: {
       fontSize: '1.4rem',

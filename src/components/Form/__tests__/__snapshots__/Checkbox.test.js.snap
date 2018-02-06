@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Checkbox should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div
+    className="sc-gzVnrw irbVPN"
+  >
+    <input
+      checked={undefined}
+      className="sc-htoDjs hePhMK"
+      disabled={false}
+      id="1"
+      type="checkbox"
+    >
+      <div />
+    </input>
+    <label
+      className="control-label sc-htpNat fXbItB"
+      htmlFor="1"
+    >
+      
+    </label>
+  </div>
+</span>
+`;

@@ -22,11 +22,35 @@ storiesOf('Form', module)
       title: 'Form'
     })
   )
+  .addWithInfo('Checkbox', () => {
+    const formGroupContext = select('Context', Form.Group.contexts);
+    const disabled = boolean('Disabled', false);
+
+    return (
+      <DefaultTheme>
+        <KnobsAlert />
+        <Form>
+          <Form.Group context={formGroupContext}>
+            <Form.Checkbox
+              label='Check me out !'
+              id='hello'
+              disabled={disabled}
+            />
+            <Form.Checkbox
+              label='No, check ME out !'
+              id='hello2'
+              disabled={disabled}
+            />
+          </Form.Group>
+        </Form>
+      </DefaultTheme>
+    );
+  })
   .addWithInfo('Input', () => {
     const placeholder = text('Placeholder', 'A placeholder');
     const hint = text('Hint', 'Hey there! I can help you filling that field!');
     const formGroupContext = select('Context', Form.Group.contexts);
-    const disabled = boolean('Disabled');
+    const disabled = boolean('Disabled', false);
     const type = select('Type', ['text', 'email', 'number', 'url'], 'text');
 
     return (
@@ -54,7 +78,7 @@ storiesOf('Form', module)
       ['none', 'vertical', 'horizontal'],
       'vertical'
     );
-    const disabled = boolean('Disabled');
+    const disabled = boolean('Disabled', false);
     const rows = number('Rows', 6, {
       range: true,
       min: 1,
@@ -80,10 +104,10 @@ storiesOf('Form', module)
     );
   })
   .addWithInfo('Select', () => {
-    const multi = boolean('Multi-value');
-    const searchable = boolean('Searchable');
-    const clearable = boolean('Clearable');
-    const disabled = boolean('Disabled');
+    const multi = boolean('Multi-value', false);
+    const searchable = boolean('Searchable', false);
+    const clearable = boolean('Clearable', false);
+    const disabled = boolean('Disabled', false);
     const formGroupContext = select('Context', Form.Group.contexts);
     const options = [
       { label: 'First option', value: 1 },

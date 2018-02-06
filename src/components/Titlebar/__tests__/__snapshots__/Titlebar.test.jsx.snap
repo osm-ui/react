@@ -5,7 +5,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <header
-    className="md position-top container-parent sc-eNQAEJ jQDLvU"
+    className="md position-top container-parent sc-kEYyzF dQQSQE"
   >
     <div />
   </header>
@@ -17,7 +17,7 @@ exports[`When using snapshots with the maximized prop Should render with an elem
   className="sc-bdVaJa lbJuWU"
 >
   <header
-    className="md position-top container-parent maximized sc-eNQAEJ jQDLvU"
+    className="md position-top container-parent maximized sc-kEYyzF dQQSQE"
   >
     <div />
   </header>

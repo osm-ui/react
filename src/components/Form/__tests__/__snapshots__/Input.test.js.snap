@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Input should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div>
+    <input
+      className="form-control sc-ifAKCX gvQyyI"
+      disabled={false}
+      type="text"
+    >
+      <div />
+    </input>
+    
+  </div>
+</span>
+`;
+
+exports[`When using snapshots Input with Hint should render with an element children 1`] = `
+<span
+  className="sc-bdVaJa lbJuWU"
+>
+  <div>
+    <input
+      className="form-control sc-ifAKCX gvQyyI"
+      disabled={false}
+      type="text"
+    >
+      <div />
+    </input>
+    
+  </div>
+</span>
+`;

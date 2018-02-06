@@ -5,11 +5,11 @@ exports[`When using snapshots Should render with an element children 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="position-top-right direction-horizontal sc-kkGfuU dyrfKS"
+    className="position-top-right direction-horizontal sc-hSdWYo bHvuiu"
     style={undefined}
   >
     <aside
-      className="position-top-right direction-horizontal sc-iAyFgw gQmtGn"
+      className="position-top-right direction-horizontal sc-eHgmQL iSHCLI"
       direction="horizontal"
       id={1}
       onMouseEnter={[Function]}
