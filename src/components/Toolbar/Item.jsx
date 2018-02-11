@@ -40,9 +40,10 @@ const StyledButton = styled.button`
     width: ${props => props.theme.toolbar.xsSize};
     height: ${props => props.theme.toolbar.xsSize};
     line-height: ${props => props.theme.toolbar.xsLineHeight};
+    font-size: ${props => props.theme.toolbar.xsFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.xsFontSize};
+      font-size: ${props => props.theme.toolbar.xsIconSize};
     }
   }
 
@@ -50,9 +51,10 @@ const StyledButton = styled.button`
     width: ${props => props.theme.toolbar.smSize};
     height: ${props => props.theme.toolbar.smSize};
     line-height: ${props => props.theme.toolbar.smLineHeight};
+    font-size: ${props => props.theme.toolbar.smFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.smFontSize};
+      font-size: ${props => props.theme.toolbar.smIconSize};
     }
   }
 
@@ -60,9 +62,10 @@ const StyledButton = styled.button`
     width: ${props => props.theme.toolbar.mdSize};
     height: ${props => props.theme.toolbar.mdSize};
     line-height: ${props => props.theme.toolbar.mdLineHeight};
+    font-size: ${props => props.theme.toolbar.mdFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.mdFontSize};
+      font-size: ${props => props.theme.toolbar.mdIconSize};
     }
   }
 
@@ -70,9 +73,10 @@ const StyledButton = styled.button`
     width: ${props => props.theme.toolbar.lgSize};
     height: ${props => props.theme.toolbar.lgSize};
     line-height: ${props => props.theme.toolbar.lgLineHeight};
+    font-size: ${props => props.theme.toolbar.lgFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.lgFontSize};
+      font-size: ${props => props.theme.toolbar.lgIconSize};
     }
   }
 

@@ -206,10 +206,14 @@ var config = exports.config = {
     smSize: '3rem',
     mdSize: '4rem',
     lgSize: '5rem',
-    xsFontSize: '1.2rem',
-    smFontSize: '1.4rem',
-    mdFontSize: '1.6rem',
-    lgFontSize: '2rem',
+    xsFontSize: '1rem',
+    smFontSize: '1.2rem',
+    mdFontSize: '1.4rem',
+    lgFontSize: '1.8rem',
+    xsIconSize: '1.2rem',
+    smIconSize: '1.4rem',
+    mdIconSize: '1.6rem',
+    lgIconSize: '2rem',
     xsLineHeight: '1rem',
     smLineHeight: '1.2rem',
     mdLineHeight: '1.6rem',
@@ -1084,7 +1088,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  pointer-events: none;\n'], ['\n  pointer-events: none;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n']);
 
@@ -1149,6 +1153,8 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
 }, function (props) {
   return props.theme.toolbar.xsFontSize;
 }, function (props) {
+  return props.theme.toolbar.xsIconSize;
+}, function (props) {
   return props.theme.toolbar.smSize;
 }, function (props) {
   return props.theme.toolbar.smSize;
@@ -1156,6 +1162,8 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
   return props.theme.toolbar.smLineHeight;
 }, function (props) {
   return props.theme.toolbar.smFontSize;
+}, function (props) {
+  return props.theme.toolbar.smIconSize;
 }, function (props) {
   return props.theme.toolbar.mdSize;
 }, function (props) {
@@ -1165,6 +1173,8 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
 }, function (props) {
   return props.theme.toolbar.mdFontSize;
 }, function (props) {
+  return props.theme.toolbar.mdIconSize;
+}, function (props) {
   return props.theme.toolbar.lgSize;
 }, function (props) {
   return props.theme.toolbar.lgSize;
@@ -1172,6 +1182,8 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
   return props.theme.toolbar.lgLineHeight;
 }, function (props) {
   return props.theme.toolbar.lgFontSize;
+}, function (props) {
+  return props.theme.toolbar.lgIconSize;
 }, function (props) {
   return buildInGroupSize(props);
 }, function (props) {
