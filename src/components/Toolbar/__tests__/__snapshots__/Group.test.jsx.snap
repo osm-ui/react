@@ -48,7 +48,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   className="sc-bdVaJa lbJuWU"
 >
   <div
-    className="direction-column first-shape- last-shape- first-size-xs last-size-xs sc-jKJlTe dDDWVr"
+    className="direction-column first-shape- last-shape- first-size-xs last-size-xs sc-jKJlTe dRnmix"
   >
     <div
       inGroup={true}
