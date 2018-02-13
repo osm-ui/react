@@ -13,6 +13,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
       disabled={false}
       id="1"
       type="checkbox"
+      value="myValue"
     >
       <div />
     </input>
