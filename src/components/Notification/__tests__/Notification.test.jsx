@@ -1,4 +1,4 @@
-import React from 'react';
+import 'jest-styled-components';
 import { snapshotWithElementChildren } from 'helpers/tests';
 import { Notification } from 'index';
 

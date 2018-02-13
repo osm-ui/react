@@ -1,11 +1,233 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-left-bottom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-center-bottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-row.position-right-top,
+.c1.direction-row.position-right-center,
+.c1.direction-row.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-right-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-right-top {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-right-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-column.position-left-bottom,
+.c1.direction-column.position-center-bottom,
+.c1.direction-column.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-center-bottom {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-column.position-center-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-row.position-left-center {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-row.position-right-center {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-center-center,
+.c1.direction-row.position-center-center {
+  opacity: 0;
+}
+
+.c1.direction-column > * {
+  margin-bottom: .8rem;
+}
+
+.c1.direction-row > * {
+  margin-right: .8rem;
+}
+
+.c1.direction-column :last-child,
+.c1.direction-row :last-child {
+  margin: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
+    className="position-left-top direction-column container-parent c1"
     style={undefined}
   >
     <div
@@ -17,11 +239,233 @@ exports[`When using snapshots Should render with an element children 1`] = `
 `;
 
 exports[`When using snapshots Should render with the direction prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-left-bottom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-center-bottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-row.position-right-top,
+.c1.direction-row.position-right-center,
+.c1.direction-row.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-right-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-right-top {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-right-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-column.position-left-bottom,
+.c1.direction-column.position-center-bottom,
+.c1.direction-column.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-center-bottom {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-column.position-center-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-row.position-left-center {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-row.position-right-center {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-center-center,
+.c1.direction-row.position-center-center {
+  opacity: 0;
+}
+
+.c1.direction-column > * {
+  margin-bottom: .8rem;
+}
+
+.c1.direction-row > * {
+  margin-right: .8rem;
+}
+
+.c1.direction-column :last-child,
+.c1.direction-row :last-child {
+  margin: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
+    className="position-left-top direction-column container-parent c1"
     style={undefined}
   >
     <div
@@ -33,11 +477,233 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the opened prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-left-bottom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-center-bottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-row.position-right-top,
+.c1.direction-row.position-right-center,
+.c1.direction-row.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-right-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-right-top {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-right-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-column.position-left-bottom,
+.c1.direction-column.position-center-bottom,
+.c1.direction-column.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-center-bottom {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-column.position-center-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-row.position-left-center {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-row.position-right-center {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-center-center,
+.c1.direction-row.position-center-center {
+  opacity: 0;
+}
+
+.c1.direction-column > * {
+  margin-bottom: .8rem;
+}
+
+.c1.direction-row > * {
+  margin-right: .8rem;
+}
+
+.c1.direction-column :last-child,
+.c1.direction-row :last-child {
+  margin: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <aside
-    className="position-left-top direction-column container-parent opened sc-kGXeez SzHZb"
+    className="position-left-top direction-column container-parent opened c1"
     style={
       Object {
         "opacity": 1,
@@ -54,11 +720,233 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the shape prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-left-bottom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-center-bottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-row.position-right-top,
+.c1.direction-row.position-right-center,
+.c1.direction-row.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-right-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-right-top {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-right-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-column.position-left-bottom,
+.c1.direction-column.position-center-bottom,
+.c1.direction-column.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-center-bottom {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-column.position-center-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-row.position-left-center {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-row.position-right-center {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-center-center,
+.c1.direction-row.position-center-center {
+  opacity: 0;
+}
+
+.c1.direction-column > * {
+  margin-bottom: .8rem;
+}
+
+.c1.direction-row > * {
+  margin-right: .8rem;
+}
+
+.c1.direction-column :last-child,
+.c1.direction-row :last-child {
+  margin: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
+    className="position-left-top direction-column container-parent c1"
     style={undefined}
   >
     <div
@@ -71,11 +959,233 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the size prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-left-bottom {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-center-bottom {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-row.position-right-top,
+.c1.direction-row.position-right-center,
+.c1.direction-row.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-row.position-left-center,
+.c1.direction-row.position-center-center,
+.c1.direction-row.position-right-center {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-right-top {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-right-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.direction-column.position-left-bottom,
+.c1.direction-column.position-center-bottom,
+.c1.direction-column.position-right-bottom {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c1.direction-column.position-center-top,
+.c1.direction-column.position-center-center,
+.c1.direction-column.position-center-bottom {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c1.direction-column.position-left-top,
+.c1.direction-column.position-left-center,
+.c1.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-column.position-center-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-right-top,
+.c1.direction-column.position-right-center,
+.c1.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-top,
+.c1.direction-row.position-center-top,
+.c1.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c1.direction-row.position-left-center {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c1.direction-row.position-right-center {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c1.direction-row.position-left-bottom,
+.c1.direction-row.position-center-bottom,
+.c1.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c1.direction-column.position-center-center,
+.c1.direction-row.position-center-center {
+  opacity: 0;
+}
+
+.c1.direction-column > * {
+  margin-bottom: .8rem;
+}
+
+.c1.direction-row > * {
+  margin-right: .8rem;
+}
+
+.c1.direction-column :last-child,
+.c1.direction-row :last-child {
+  margin: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <aside
-    className="position-left-top direction-column container-parent sc-kGXeez SzHZb"
+    className="position-left-top direction-column container-parent c1"
     style={undefined}
   >
     <div
