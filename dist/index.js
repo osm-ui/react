@@ -70,7 +70,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -107,97 +107,21 @@ module.exports = require("classnames");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-/**
- * This file is a json representation of the palette.svg file.
- * Thank you to not modify it without updating the svg reference.
- */
+exports.contextIcons = exports.colors = undefined;
 
-/* eslint-disable */
+var _colors2 = __webpack_require__(27);
 
-var colors = {
-  white: '#ffffff',
-  black: '#000000',
+var _colors3 = _interopRequireDefault(_colors2);
 
-  anthracite1: '#101113',
-  anthracite2: '#3b3f45',
-  anthracite3: '#707377',
-  anthracite4: '#b7b9bb',
-  anthracite5: '#c9cacc',
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  darkGray1: '#3b3f45',
-  darkGray2: '#707377',
-  darkGray3: '#b7b9bb',
-  darkGray4: '#c9cacc',
-  darkGray5: '#dbdcdd',
-
-  lightGray1: '#707377',
-  lightGray2: '#b7b9bb',
-  lightGray3: '#c9cacc',
-  lightGray4: '#dbdcdd',
-  lightGray5: '#eceeef',
-
-  yellow1: '#e3b900',
-  yellow2: '#ffde08',
-  yellow3: '#fffa66',
-  yellow4: '#ffffb5',
-  yellow5: '#ffffcf',
-
-  orange1: '#de8c00',
-  orange2: '#ffa700',
-  orange3: '#ffd659',
-  orange4: '#ffecb3',
-  orange5: '#fff2ce',
-
-  brown1: '#965c00',
-  brown2: '#ba7200',
-  brown3: '#d3a65d',
-  brown4: '#dcbd8b',
-  brown5: '#ead7b9',
-
-  red1: '#c92d2d',
-  red2: '#f44336',
-  red3: '#f8877f',
-  red4: '#f9a7a1',
-  red5: '#ffcdd2',
-
-  rose1: '#b81756',
-  rose2: '#e91e63',
-  rose3: '#f06292',
-  rose4: '#f48caf',
-  rose5: '#f8bbd0',
-
-  purple1: '#894ba1',
-  purple2: '#b46dd0',
-  purple3: '#ca99de',
-  purple4: '#d9b6e7',
-  purple5: '#e8d3f1',
-
-  blue1: '#186fc5',
-  blue2: '#2196f3',
-  blue3: '#71bcf7',
-  blue4: '#97cef9',
-  blue5: '#c2e2fb',
-
-  sky1: '#0cacd7',
-  sky2: '#5cd5f6',
-  sky3: '#8ce1f9',
-  sky4: '#b2ebfb',
-  sky5: '#d0f3fd',
-
-  turquoise1: '#00948d',
-  turquoise2: '#00c2b8',
-  turquoise3: '#5cd7d1',
-  turquoise4: '#8be2de',
-  turquoise5: '#b9eeeb',
-
-  green1: '#348538',
-  green2: '#4caf50',
-  green3: '#7cc47f',
-  green4: '#9fd4a1',
-  green5: '#c8e6c9'
+exports.colors = _colors3.default;
+var contextIcons = exports.contextIcons = {
+  info: 'info-circle',
+  success: 'check-circle',
+  warning: 'warning',
+  danger: 'times-circle'
 };
-
-exports.default = colors;
 
 /***/ }),
 /* 5 */
@@ -232,9 +156,7 @@ var _polished = __webpack_require__(8);
 
 var _themes = __webpack_require__(6);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -247,179 +169,191 @@ var boxShadow = '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0
 var config = exports.config = {
   boxShadow: boxShadow,
   font: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
-  color: _colors2.default.anthracite1,
-  backgroundColor: _colors2.default.white,
-  borderColor: _colors2.default.lightGray4,
-  loaderColor: _colors2.default.lightGray1,
+  color: _index.colors.anthracite1,
+  backgroundColor: _index.colors.white,
+  borderColor: _index.colors.lightGray4,
+  loaderColor: _index.colors.lightGray1,
   borderStyle: 'solid',
   borderWidth: '4px',
   borderRadius: 0,
-  controlColor: _colors2.default.lightGray4,
-  hoverControlColor: _colors2.default.lightGray1,
+  controlColor: _index.colors.lightGray4,
+  hoverControlColor: _index.colors.lightGray1,
 
   map: {
-    controlColor: _colors2.default.anthracite1,
-    controlBackgroundColor: _colors2.default.white,
-    hoverControlColor: _colors2.default.white,
-    hoverControlBackgroundColor: _colors2.default.blue2
+    controlColor: _index.colors.anthracite1,
+    controlBackgroundColor: _index.colors.white,
+    hoverControlColor: _index.colors.white,
+    hoverControlBackgroundColor: _index.colors.blue2
   },
   sidebar: {
     boxShadow: boxShadow,
     nav: {
-      fontSize: '1.1em',
-      lineHeight: '1.2em',
+      fontSize: '1.8rem',
+      lineHeight: '2rem',
       fontWeight: 500,
       borderRadius: '4px',
-      color: _colors2.default.anthracite1,
-      backgroundColor: _colors2.default.lightGray5,
-      hoverColor: _colors2.default.anthracite1,
-      hoverBackgroundColor: _colors2.default.lightGray4
+      color: _index.colors.anthracite1,
+      backgroundColor: _index.colors.lightGray5,
+      hoverColor: _index.colors.anthracite1,
+      hoverBackgroundColor: _index.colors.lightGray4
     }
   },
   toolbar: {
     boxShadow: boxShadow,
-    margin: '10px',
-    childrenMargin: '8px',
-    xsSize: '30px',
-    smSize: '40px',
-    mdSize: '50px',
-    lgSize: '60px',
+    margin: '1rem',
+    childrenMargin: '.8rem',
+    xsSize: '2.4rem',
+    smSize: '3rem',
+    mdSize: '4rem',
+    lgSize: '5rem',
+    xsFontSize: '1rem',
+    smFontSize: '1.2rem',
+    mdFontSize: '1.4rem',
+    lgFontSize: '1.8rem',
+    xsIconSize: '1.2rem',
+    smIconSize: '1.4rem',
+    mdIconSize: '1.6rem',
+    lgIconSize: '2rem',
+    xsLineHeight: '1rem',
+    smLineHeight: '1.2rem',
+    mdLineHeight: '1.6rem',
+    lgLineHeight: '1.7rem',
 
     button: {
-      color: _colors2.default.anthracite1,
-      backgroundColor: _colors2.default.white,
-      borderColor: _colors2.default.lightGray3,
+      color: _index.colors.anthracite1,
+      backgroundColor: _index.colors.white,
+      borderColor: _index.colors.lightGray3,
       borderStyle: 'solid',
       borderWidth: '2px',
       borderRadius: '4px',
-      hoverBackgroundColor: _colors2.default.lightGray5,
-      hoverBorderColor: _colors2.default.lightGray3,
-      focusBackgroundColor: _colors2.default.lightGray5,
-      focusBorderColor: _colors2.default.lightGray3,
-      activeBackgroundColor: _colors2.default.lightGray5,
-      activeBorderColor: _colors2.default.lightGray3
+      hoverBackgroundColor: _index.colors.lightGray5,
+      hoverBorderColor: _index.colors.lightGray3,
+      focusBackgroundColor: _index.colors.lightGray5,
+      focusBorderColor: _index.colors.lightGray3,
+      activeBackgroundColor: _index.colors.lightGray5,
+      activeBorderColor: _index.colors.lightGray3
     }
   },
   titlebar: {
     boxShadow: boxShadow,
-    xsHeight: '30px',
-    smHeight: '35px',
-    mdHeight: '40px',
-    lgHeight: '45px',
-    xsFontSize: '0.9em',
-    smFontSize: '1em',
-    mdFontSize: '1.1em',
-    lgFontSize: '1.3em',
+    xsHeight: '3rem',
+    smHeight: '3.5rem',
+    mdHeight: '4rem',
+    lgHeight: '4.5rem',
+    xsFontSize: '1.4rem',
+    smFontSize: '1.6rem',
+    mdFontSize: '1.8rem',
+    lgFontSize: '1.9rem',
     fontWeight: 500,
-    color: _colors2.default.anthracite1,
-    backgroundColor: _colors2.default.white,
-    borderColor: _colors2.default.lightGray4,
+    color: _index.colors.anthracite1,
+    backgroundColor: _index.colors.white,
+    borderColor: _index.colors.lightGray4,
     borderStyle: 'solid',
     borderWidth: '1px',
 
     button: {
-      color: _colors2.default.anthracite1,
-      backgroundColor: _colors2.default.white,
-      borderColor: _colors2.default.white,
+      color: _index.colors.anthracite1,
+      backgroundColor: _index.colors.white,
+      borderColor: _index.colors.white,
       borderStyle: 'solid',
       borderWidth: 0,
       borderRadius: '4px',
-      hoverBackgroundColor: _colors2.default.lightGray5,
-      hoverBorderColor: _colors2.default.lightGray5,
-      focusBackgroundColor: _colors2.default.lightGray5,
-      focusBorderColor: _colors2.default.lightGray5,
-      activeBackgroundColor: _colors2.default.lightGray5,
-      activeBorderColor: _colors2.default.lightGray5
+      hoverBackgroundColor: _index.colors.lightGray5,
+      hoverBorderColor: _index.colors.lightGray5,
+      focusBackgroundColor: _index.colors.lightGray5,
+      focusBorderColor: _index.colors.lightGray5,
+      activeBackgroundColor: _index.colors.lightGray5,
+      activeBorderColor: _index.colors.lightGray5
     }
   },
   form: {
     select: {
-      optionColor: _colors2.default.white,
-      optionBackgroundColor: _colors2.default.blue2
+      optionColor: _index.colors.white,
+      optionBackgroundColor: _index.colors.blue2
     },
     button: {
       fontWeight: 500,
-      color: _colors2.default.anthracite2,
-      backgroundColor: _colors2.default.white,
-      borderColor: _colors2.default.lightGray3,
+      color: _index.colors.anthracite2,
+      backgroundColor: _index.colors.white,
+      borderColor: _index.colors.lightGray3,
       borderStyle: 'solid',
       borderWidth: '2px',
       borderRadius: '4px',
-      hoverBackgroundColor: _colors2.default.lightGray5,
-      hoverBorderColor: _colors2.default.lightGray3,
-      focusBackgroundColor: _colors2.default.lightGray5,
-      focusBorderColor: _colors2.default.lightGray3,
-      activeBackgroundColor: _colors2.default.lightGray5,
-      activeBorderColor: _colors2.default.lightGray3,
+      hoverBackgroundColor: _index.colors.lightGray5,
+      hoverBorderColor: _index.colors.lightGray3,
+      focusBackgroundColor: _index.colors.lightGray5,
+      focusBorderColor: _index.colors.lightGray3,
+      activeBackgroundColor: _index.colors.lightGray5,
+      activeBorderColor: _index.colors.lightGray3,
 
       primary: {
         fontWeight: 500,
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.blue2,
-        borderColor: _colors2.default.blue1,
-        hoverBackgroundColor: _colors2.default.blue3,
-        hoverBorderColor: _colors2.default.blue2,
-        focusBackgroundColor: _colors2.default.blue3,
-        focusBorderColor: _colors2.default.blue2,
-        activeBackgroundColor: _colors2.default.blue3,
-        activeBorderColor: _colors2.default.blue2
+        color: _index.colors.white,
+        backgroundColor: _index.colors.blue2,
+        borderColor: _index.colors.blue1,
+        hoverBackgroundColor: _index.colors.blue3,
+        hoverBorderColor: _index.colors.blue2,
+        focusBackgroundColor: _index.colors.blue3,
+        focusBorderColor: _index.colors.blue2,
+        activeBackgroundColor: _index.colors.blue3,
+        activeBorderColor: _index.colors.blue2
       },
 
       info: {
         fontWeight: 500,
-        color: (0, _polished.darken)(0.27, _colors2.default.turquoise1),
-        backgroundColor: _colors2.default.turquoise2,
-        borderColor: _colors2.default.turquoise1,
-        hoverBackgroundColor: _colors2.default.turquoise3,
-        hoverBorderColor: _colors2.default.turquoise2,
-        focusBackgroundColor: _colors2.default.turquoise3,
-        focusBorderColor: _colors2.default.turquoise2,
-        activeBackgroundColor: _colors2.default.turquoise3,
-        activeBorderColor: _colors2.default.turquoise2
+        color: (0, _polished.darken)(0.27, _index.colors.turquoise1),
+        backgroundColor: _index.colors.turquoise2,
+        borderColor: _index.colors.turquoise1,
+        hoverBackgroundColor: _index.colors.turquoise3,
+        hoverBorderColor: _index.colors.turquoise2,
+        focusBackgroundColor: _index.colors.turquoise3,
+        focusBorderColor: _index.colors.turquoise2,
+        activeBackgroundColor: _index.colors.turquoise3,
+        activeBorderColor: _index.colors.turquoise2
       },
 
       success: {
         fontWeight: 500,
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.green2,
-        borderColor: _colors2.default.green1,
-        hoverBackgroundColor: _colors2.default.green3,
-        hoverBorderColor: _colors2.default.green2,
-        focusBackgroundColor: _colors2.default.green3,
-        focusBorderColor: _colors2.default.green2,
-        activeBackgroundColor: _colors2.default.green3,
-        activeBorderColor: _colors2.default.green2
+        color: _index.colors.white,
+        backgroundColor: _index.colors.green2,
+        borderColor: _index.colors.green1,
+        hoverBackgroundColor: _index.colors.green3,
+        hoverBorderColor: _index.colors.green2,
+        focusBackgroundColor: _index.colors.green3,
+        focusBorderColor: _index.colors.green2,
+        activeBackgroundColor: _index.colors.green3,
+        activeBorderColor: _index.colors.green2
       },
 
       warning: {
         fontWeight: 500,
-        color: (0, _polished.darken)(0.27, _colors2.default.orange1),
-        backgroundColor: _colors2.default.orange2,
-        borderColor: _colors2.default.orange1,
-        hoverBackgroundColor: _colors2.default.orange3,
-        hoverBorderColor: _colors2.default.orange2,
-        focusBackgroundColor: _colors2.default.orange3,
-        focusBorderColor: _colors2.default.orange2,
-        activeBackgroundColor: _colors2.default.orange3,
-        activeBorderColor: _colors2.default.orange2
+        color: (0, _polished.darken)(0.27, _index.colors.orange1),
+        backgroundColor: _index.colors.orange2,
+        borderColor: _index.colors.orange1,
+        hoverBackgroundColor: _index.colors.orange3,
+        hoverBorderColor: _index.colors.orange2,
+        focusBackgroundColor: _index.colors.orange3,
+        focusBorderColor: _index.colors.orange2,
+        activeBackgroundColor: _index.colors.orange3,
+        activeBorderColor: _index.colors.orange2
       },
 
       danger: {
         fontWeight: 500,
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.red2,
-        borderColor: _colors2.default.red1,
-        hoverBackgroundColor: _colors2.default.red3,
-        hoverBorderColor: _colors2.default.red2,
-        focusBackgroundColor: _colors2.default.red3,
-        focusBorderColor: _colors2.default.red2,
-        activeBackgroundColor: _colors2.default.red3,
-        activeBorderColor: _colors2.default.red2
+        color: _index.colors.white,
+        backgroundColor: _index.colors.red2,
+        borderColor: _index.colors.red1,
+        hoverBackgroundColor: _index.colors.red3,
+        hoverBorderColor: _index.colors.red2,
+        focusBackgroundColor: _index.colors.red3,
+        focusBorderColor: _index.colors.red2,
+        activeBackgroundColor: _index.colors.red3,
+        activeBorderColor: _index.colors.red2
       },
 
       link: {
         fontWeight: 400,
-        color: _colors2.default.blue2,
+        color: _index.colors.blue2,
         backgroundColor: 'transparent',
         borderColor: 'transparent',
         hoverBackgroundColor: 'transparent',
@@ -435,121 +369,126 @@ var config = exports.config = {
       borderRadius: 0,
       boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
       opacity: 0.8,
-      backgroundColor: _colors2.default.white,
-      borderColor: _colors2.default.lightGray3,
+      backgroundColor: _index.colors.white,
+      borderColor: _index.colors.lightGray3,
 
       focusOpacity: 1,
-      focusBackgroundColor: _colors2.default.white,
-      focusBorderColor: _colors2.default.blue2,
+      focusBackgroundColor: _index.colors.white,
+      focusBorderColor: _index.colors.blue2,
       focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
 
       info: {
-        color: _colors2.default.turquoise2,
-        backgroundColor: _colors2.default.white,
-        borderColor: _colors2.default.turquoise2
+        color: _index.colors.turquoise2,
+        backgroundColor: _index.colors.white,
+        borderColor: _index.colors.turquoise2
       },
 
       success: {
-        color: _colors2.default.green2,
-        backgroundColor: _colors2.default.white,
-        borderColor: _colors2.default.green2
+        color: _index.colors.green2,
+        backgroundColor: _index.colors.white,
+        borderColor: _index.colors.green2
       },
 
       warning: {
-        color: _colors2.default.orange2,
-        backgroundColor: _colors2.default.white,
-        borderColor: _colors2.default.orange2
+        color: _index.colors.orange2,
+        backgroundColor: _index.colors.white,
+        borderColor: _index.colors.orange2
       },
 
       error: {
-        color: _colors2.default.red1,
-        backgroundColor: _colors2.default.white,
-        borderColor: _colors2.default.red2
+        color: _index.colors.red1,
+        backgroundColor: _index.colors.white,
+        borderColor: _index.colors.red2
       }
     },
     label: {
-      color: _colors2.default.anthracite1,
-      fontSize: '1.1em',
+      color: _index.colors.anthracite1,
+      borderColor: _index.colors.anthracite1,
+      backgroundColor: _index.colors.white,
+      fontSize: '1.7rem',
       fontWeight: 400,
 
       info: {
-        color: _colors2.default.turquoise1
+        color: _index.colors.turquoise1
       },
 
       success: {
-        color: _colors2.default.green1
+        color: _index.colors.green1
       },
 
       warning: {
-        color: _colors2.default.orange1
+        color: _index.colors.orange1
       },
 
       error: {
-        color: _colors2.default.red1
+        color: _index.colors.red1
       }
     },
+    checkbox: {
+      borderColor: _index.colors.darkGray3
+    },
     hint: {
-      fontSize: '0.9em',
+      fontSize: '1.4rem',
       margin: 0,
-      padding: '5px 10px',
+      padding: '.5rem 1rem',
 
-      backgroundColor: _colors2.default.lightGray5,
-      color: _colors2.default.anthracite2,
+      backgroundColor: _index.colors.lightGray5,
+      color: _index.colors.anthracite2,
 
       info: {
-        color: (0, _polished.darken)(0.27, _colors2.default.turquoise1),
-        backgroundColor: _colors2.default.turquoise2
+        color: (0, _polished.darken)(0.27, _index.colors.turquoise1),
+        backgroundColor: _index.colors.turquoise2
       },
 
       success: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.green2
+        color: _index.colors.white,
+        backgroundColor: _index.colors.green2
       },
 
       warning: {
-        color: (0, _polished.darken)(0.27, _colors2.default.orange1),
-        backgroundColor: _colors2.default.orange2
+        color: (0, _polished.darken)(0.27, _index.colors.orange1),
+        backgroundColor: _index.colors.orange2
       },
 
       error: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.red2
+        color: _index.colors.white,
+        backgroundColor: _index.colors.red2
       }
     }
   },
   alert: {
     info: {
-      color: _colors2.default.turquoise1,
-      backgroundColor: _colors2.default.turquoise5,
-      borderColor: _colors2.default.turquoise5
+      color: _index.colors.turquoise1,
+      backgroundColor: _index.colors.turquoise5,
+      borderColor: _index.colors.turquoise5
     },
 
     success: {
-      color: _colors2.default.green1,
-      backgroundColor: _colors2.default.green5,
-      borderColor: _colors2.default.green5
+      color: _index.colors.green1,
+      backgroundColor: _index.colors.green5,
+      borderColor: _index.colors.green5
     },
 
     warning: {
-      color: _colors2.default.orange1,
-      backgroundColor: _colors2.default.orange5,
-      borderColor: _colors2.default.orange5
+      color: _index.colors.orange1,
+      backgroundColor: _index.colors.orange5,
+      borderColor: _index.colors.orange5
     },
 
     danger: {
-      color: _colors2.default.red1,
-      backgroundColor: _colors2.default.red5,
-      borderColor: _colors2.default.red5
+      color: _index.colors.red1,
+      backgroundColor: _index.colors.red5,
+      borderColor: _index.colors.red5
     }
   },
   modal: {
-    color: _colors2.default.anthracite1,
-    backgroundColor: (0, _themes.makeTransparent)(_colors2.default.white, 0.95)
+    color: _index.colors.anthracite1,
+    backgroundColor: (0, _themes.makeTransparent)(_index.colors.white, 0.95)
   }
 };
 
 /* eslint-disable no-unused-expressions */
-(0, _styledComponents.injectGlobal)(_templateObject, _colors2.default.anthracite1, _colors2.default.white);
+(0, _styledComponents.injectGlobal)(_templateObject, _index.colors.anthracite1, _index.colors.white);
 /* eslint-enable */
 
 var StyledSpan = exports.StyledSpan = _styledComponents2.default.span(_templateObject2, function (props) {
@@ -607,7 +546,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _hexRgb = __webpack_require__(24);
+var _hexRgb = __webpack_require__(26);
 
 var _hexRgb2 = _interopRequireDefault(_hexRgb);
 
@@ -705,6 +644,28 @@ function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
           activeBackgroundColor: colors.lightGray5,
           activeBorderColor: color1
         }
+      },
+      label: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: color5,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: color5,
+        focusBackgroundColor: color3,
+        focusBorderColor: color5,
+        activeBackgroundColor: color3,
+        activeBorderColor: color5
+      },
+      checkbox: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: color5,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: color5,
+        focusBackgroundColor: color3,
+        focusBorderColor: color5,
+        activeBackgroundColor: color3,
+        activeBorderColor: color5
       }
     },
     modal: {
@@ -797,6 +758,28 @@ function buildLightThemeConfig(baseConfig, colors, colorVariant) {
           activeBackgroundColor: dark18Color1,
           activeBorderColor: dark22Color1
         }
+      },
+      label: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: dark27Color1,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: dark18Color1,
+        focusBackgroundColor: color3,
+        focusBorderColor: dark18Color1,
+        activeBackgroundColor: color3,
+        activeBorderColor: dark18Color1
+      },
+      checkbox: {
+        color: colors.white,
+        backgroundColor: color2,
+        borderColor: dark27Color1,
+        hoverBackgroundColor: color3,
+        hoverBorderColor: dark18Color1,
+        focusBackgroundColor: color3,
+        focusBorderColor: dark18Color1,
+        activeBackgroundColor: color3,
+        activeBorderColor: dark18Color1
       }
     },
     modal: {
@@ -834,7 +817,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Loader = __webpack_require__(40);
+var _Loader = __webpack_require__(43);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
@@ -846,10 +829,16 @@ exports.default = _Loader2.default;
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-transition-group");
+module.exports = require("react-transition-group/Transition");
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-fontawesome");
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -861,7 +850,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  margin: -30px 0 50px;\n\n  &.in-header {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0 0 0 20px;\n    line-height: 50px;\n  }\n'], ['\n  margin: -30px 0 50px;\n\n  &.in-header {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0 0 0 20px;\n    line-height: 50px;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin: -3rem 0 5rem;\n\n  &.in-header {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0 0 0 2rem;\n    line-height: 5rem;\n  }\n'], ['\n  margin: -3rem 0 5rem;\n\n  &.in-header {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    margin: 0 0 0 2rem;\n    line-height: 5rem;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -921,13 +910,105 @@ SidebarTitle.displayName = 'Sidebar.Title';
 exports.default = SidebarTitle;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-leaflet");
 
 /***/ }),
-/* 13 */
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Button = __webpack_require__(46);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _Button2.default;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n  color: ', ';\n  background-color: ', ';\n  margin-bottom: 0.6rem;\n  font-size: ', ';\n  font-weight: ', ';\n'], ['\n  color: ', ';\n  background-color: ', ';\n  margin-bottom: 0.6rem;\n  font-size: ', ';\n  font-weight: ', ';\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames = __webpack_require__(3);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledLabel = _styledComponents2.default.label(_templateObject, function (props) {
+  return props.theme.form.label.color;
+}, function (props) {
+  return props.theme.form.label.backgroundColor;
+}, function (props) {
+  return props.theme.form.label.fontSize;
+}, function (props) {
+  return props.theme.form.label.fontWeight;
+});
+
+var Label = function Label(_ref) {
+  var htmlFor = _ref.htmlFor,
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ['htmlFor', 'className']);
+
+  var classes = (0, _classnames2.default)(className, {
+    'control-label': true
+  });
+
+  return _react2.default.createElement(StyledLabel, _extends({ htmlFor: htmlFor, className: classes }, props));
+};
+
+Label.propTypes = {
+  htmlFor: _propTypes2.default.string,
+  className: _propTypes2.default.string
+};
+
+Label.defaultProps = {
+  htmlFor: '',
+  className: ''
+};
+
+Label.displayName = 'Form.Label';
+
+exports.default = Label;
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -995,13 +1076,7 @@ InputHint.displayName = 'Form.InputHint';
 exports.default = InputHint;
 
 /***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-fontawesome");
-
-/***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1013,7 +1088,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: 0.85em;\n\n    .fa {\n      font-size: 0.85em;\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: 1.04em;\n\n    .fa {\n      font-size: 1.04em;\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: 1.2em;\n\n    .fa {\n      font-size: 1.2em;\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: 1.43em;\n\n    .fa {\n      font-size: 1.43em;\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n'], ['\n  &,\n  &.btn {\n    position: relative;\n    transition: all 0.1s ease-out;\n\n    pointer-events: all;\n    color: ', ';\n    border-color: ', ';\n    border-style: ', ';\n    border-width: ', ';\n    background: ', ';\n    font-weight: 500;\n    padding: 0;\n    box-shadow: ', ';\n  }\n\n  &.shape-square {\n    border-radius: ', ';\n  }\n\n  &.shape-round {\n    border-radius: 50%;\n  }\n\n  &.xs {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.sm {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.md {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.lg {\n    width: ', ';\n    height: ', ';\n    line-height: ', ';\n    font-size: ', ';\n\n    .fa {\n      font-size: ', ';\n    }\n  }\n\n  &.in-group {\n    width: ', ';\n    height: ', ';\n    border-width: 0;\n    box-shadow: none;\n  }\n\n  &.btn:hover {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:focus {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n\n  &.btn:active,\n  &.btn.active {\n    color: ', ';\n    background-color: ', ';\n    border-color: ', ';\n\n    &.in-group {\n      border-color: ', ';\n    }\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  pointer-events: none;\n'], ['\n  pointer-events: none;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n'], ['\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-weight: 500;\n']);
 
@@ -1033,7 +1108,7 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(14);
+var _reactFontawesome = __webpack_require__(11);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
@@ -1074,17 +1149,41 @@ var StyledButton = _styledComponents2.default.button(_templateObject, function (
 }, function (props) {
   return props.theme.toolbar.xsSize;
 }, function (props) {
+  return props.theme.toolbar.xsLineHeight;
+}, function (props) {
+  return props.theme.toolbar.xsFontSize;
+}, function (props) {
+  return props.theme.toolbar.xsIconSize;
+}, function (props) {
   return props.theme.toolbar.smSize;
 }, function (props) {
   return props.theme.toolbar.smSize;
+}, function (props) {
+  return props.theme.toolbar.smLineHeight;
+}, function (props) {
+  return props.theme.toolbar.smFontSize;
+}, function (props) {
+  return props.theme.toolbar.smIconSize;
 }, function (props) {
   return props.theme.toolbar.mdSize;
 }, function (props) {
   return props.theme.toolbar.mdSize;
 }, function (props) {
+  return props.theme.toolbar.mdLineHeight;
+}, function (props) {
+  return props.theme.toolbar.mdFontSize;
+}, function (props) {
+  return props.theme.toolbar.mdIconSize;
+}, function (props) {
   return props.theme.toolbar.lgSize;
 }, function (props) {
   return props.theme.toolbar.lgSize;
+}, function (props) {
+  return props.theme.toolbar.lgLineHeight;
+}, function (props) {
+  return props.theme.toolbar.lgFontSize;
+}, function (props) {
+  return props.theme.toolbar.lgIconSize;
 }, function (props) {
   return buildInGroupSize(props);
 }, function (props) {
@@ -1214,13 +1313,13 @@ ToolbarItem.displayName = 'Toolbar.Item';
 exports.default = ToolbarItem;
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet");
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1229,11 +1328,7 @@ module.exports = require("leaflet");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Modal = exports.Map = exports.Titlebar = exports.Toolbar = exports.Sidebar = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.Section = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = exports.colors = undefined;
-
-__webpack_require__(18);
-
-__webpack_require__(19);
+exports.Notification = exports.Modal = exports.Map = exports.Titlebar = exports.Toolbar = exports.Sidebar = exports.Form = exports.Button = exports.Alert = exports.Loader = exports.Section = exports.GreenTheme = exports.TurquoiseTheme = exports.SkyTheme = exports.BlueTheme = exports.PurpleTheme = exports.RoseTheme = exports.RedTheme = exports.BrownTheme = exports.OrangeTheme = exports.YellowTheme = exports.AnthraciteTheme = exports.DarkGrayTheme = exports.LightGrayTheme = exports.WhiteTheme = exports.DefaultTheme = undefined;
 
 __webpack_require__(20);
 
@@ -1243,67 +1338,67 @@ __webpack_require__(22);
 
 __webpack_require__(23);
 
-var _colors2 = __webpack_require__(4);
+__webpack_require__(24);
 
-var _colors3 = _interopRequireDefault(_colors2);
+__webpack_require__(25);
 
 var _Default = __webpack_require__(5);
 
 var _Default2 = _interopRequireDefault(_Default);
 
-var _LightGray = __webpack_require__(25);
+var _LightGray = __webpack_require__(28);
 
 var _LightGray2 = _interopRequireDefault(_LightGray);
 
-var _DarkGray = __webpack_require__(26);
+var _DarkGray = __webpack_require__(29);
 
 var _DarkGray2 = _interopRequireDefault(_DarkGray);
 
-var _Anthracite = __webpack_require__(27);
+var _Anthracite = __webpack_require__(30);
 
 var _Anthracite2 = _interopRequireDefault(_Anthracite);
 
-var _Yellow = __webpack_require__(28);
+var _Yellow = __webpack_require__(31);
 
 var _Yellow2 = _interopRequireDefault(_Yellow);
 
-var _Orange = __webpack_require__(29);
+var _Orange = __webpack_require__(32);
 
 var _Orange2 = _interopRequireDefault(_Orange);
 
-var _Brown = __webpack_require__(30);
+var _Brown = __webpack_require__(33);
 
 var _Brown2 = _interopRequireDefault(_Brown);
 
-var _Red = __webpack_require__(31);
+var _Red = __webpack_require__(34);
 
 var _Red2 = _interopRequireDefault(_Red);
 
-var _Rose = __webpack_require__(32);
+var _Rose = __webpack_require__(35);
 
 var _Rose2 = _interopRequireDefault(_Rose);
 
-var _Purple = __webpack_require__(33);
+var _Purple = __webpack_require__(36);
 
 var _Purple2 = _interopRequireDefault(_Purple);
 
-var _Blue = __webpack_require__(34);
+var _Blue = __webpack_require__(37);
 
 var _Blue2 = _interopRequireDefault(_Blue);
 
-var _Sky = __webpack_require__(35);
+var _Sky = __webpack_require__(38);
 
 var _Sky2 = _interopRequireDefault(_Sky);
 
-var _Turquoise = __webpack_require__(36);
+var _Turquoise = __webpack_require__(39);
 
 var _Turquoise2 = _interopRequireDefault(_Turquoise);
 
-var _Green = __webpack_require__(37);
+var _Green = __webpack_require__(40);
 
 var _Green2 = _interopRequireDefault(_Green);
 
-var _Section2 = __webpack_require__(38);
+var _Section2 = __webpack_require__(41);
 
 var _Section3 = _interopRequireDefault(_Section2);
 
@@ -1311,41 +1406,44 @@ var _Loader2 = __webpack_require__(9);
 
 var _Loader3 = _interopRequireDefault(_Loader2);
 
-var _Alert2 = __webpack_require__(41);
+var _Alert2 = __webpack_require__(44);
 
 var _Alert3 = _interopRequireDefault(_Alert2);
 
-var _Button2 = __webpack_require__(43);
+var _Button2 = __webpack_require__(14);
 
 var _Button3 = _interopRequireDefault(_Button2);
 
-var _Form2 = __webpack_require__(45);
+var _Form2 = __webpack_require__(47);
 
 var _Form3 = _interopRequireDefault(_Form2);
 
-var _Sidebar2 = __webpack_require__(56);
+var _Sidebar2 = __webpack_require__(58);
 
 var _Sidebar3 = _interopRequireDefault(_Sidebar2);
 
-var _Toolbar2 = __webpack_require__(61);
+var _Toolbar2 = __webpack_require__(63);
 
 var _Toolbar3 = _interopRequireDefault(_Toolbar2);
 
-var _Titlebar2 = __webpack_require__(65);
+var _Titlebar2 = __webpack_require__(67);
 
 var _Titlebar3 = _interopRequireDefault(_Titlebar2);
 
-var _Map2 = __webpack_require__(67);
+var _Map2 = __webpack_require__(69);
 
 var _Map3 = _interopRequireDefault(_Map2);
 
-var _Modal2 = __webpack_require__(92);
+var _Modal2 = __webpack_require__(94);
 
 var _Modal3 = _interopRequireDefault(_Modal2);
 
+var _Notification2 = __webpack_require__(96);
+
+var _Notification3 = _interopRequireDefault(_Notification2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.colors = _colors3.default;
 exports.DefaultTheme = _Default2.default;
 exports.WhiteTheme = _Default2.default;
 exports.LightGrayTheme = _LightGray2.default;
@@ -1371,51 +1469,154 @@ exports.Toolbar = _Toolbar3.default;
 exports.Titlebar = _Titlebar3.default;
 exports.Map = _Map3.default;
 exports.Modal = _Modal3.default;
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = require("jquery");
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = require("bootstrap");
+exports.Notification = _Notification3.default;
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports) {
 
-module.exports = require("font-awesome/css/font-awesome.min.css");
+module.exports = require("jquery");
 
 /***/ }),
 /* 21 */
 /***/ (function(module, exports) {
 
-module.exports = require("leaflet/dist/leaflet.css");
+module.exports = require("bootstrap");
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports) {
 
-module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
+module.exports = require("font-awesome/css/font-awesome.min.css");
 
 /***/ }),
 /* 23 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+module.exports = require("leaflet/dist/leaflet.css");
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports) {
 
-module.exports = require("hex-rgb");
+module.exports = require("leaflet.locatecontrol/dist/L.Control.Locate.css");
 
 /***/ }),
 /* 25 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = require("hex-rgb");
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * This file is a json representation of the palette.svg file.
+ * Thank you to not modify it without updating the svg reference.
+ */
+
+/* eslint-disable */
+
+var colors = {
+  white: '#ffffff',
+  black: '#000000',
+
+  anthracite1: '#101113',
+  anthracite2: '#3b3f45',
+  anthracite3: '#707377',
+  anthracite4: '#b7b9bb',
+  anthracite5: '#c9cacc',
+
+  darkGray1: '#3b3f45',
+  darkGray2: '#707377',
+  darkGray3: '#b7b9bb',
+  darkGray4: '#c9cacc',
+  darkGray5: '#dbdcdd',
+
+  lightGray1: '#707377',
+  lightGray2: '#b7b9bb',
+  lightGray3: '#c9cacc',
+  lightGray4: '#dbdcdd',
+  lightGray5: '#eceeef',
+
+  yellow1: '#e3b900',
+  yellow2: '#ffde08',
+  yellow3: '#fffa66',
+  yellow4: '#ffffb5',
+  yellow5: '#ffffcf',
+
+  orange1: '#de8c00',
+  orange2: '#ffa700',
+  orange3: '#ffd659',
+  orange4: '#ffecb3',
+  orange5: '#fff2ce',
+
+  brown1: '#965c00',
+  brown2: '#ba7200',
+  brown3: '#d3a65d',
+  brown4: '#dcbd8b',
+  brown5: '#ead7b9',
+
+  red1: '#c92d2d',
+  red2: '#f44336',
+  red3: '#f8877f',
+  red4: '#f9a7a1',
+  red5: '#ffcdd2',
+
+  rose1: '#b81756',
+  rose2: '#e91e63',
+  rose3: '#f06292',
+  rose4: '#f48caf',
+  rose5: '#f8bbd0',
+
+  purple1: '#894ba1',
+  purple2: '#b46dd0',
+  purple3: '#ca99de',
+  purple4: '#d9b6e7',
+  purple5: '#e8d3f1',
+
+  blue1: '#186fc5',
+  blue2: '#2196f3',
+  blue3: '#71bcf7',
+  blue4: '#97cef9',
+  blue5: '#c2e2fb',
+
+  sky1: '#0cacd7',
+  sky2: '#5cd5f6',
+  sky3: '#8ce1f9',
+  sky4: '#b2ebfb',
+  sky5: '#d0f3fd',
+
+  turquoise1: '#00948d',
+  turquoise2: '#00c2b8',
+  turquoise3: '#5cd7d1',
+  turquoise4: '#8be2de',
+  turquoise5: '#b9eeeb',
+
+  green1: '#348538',
+  green2: '#4caf50',
+  green3: '#7cc47f',
+  green4: '#9fd4a1',
+  green5: '#c8e6c9'
+};
+
+exports.default = colors;
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1442,9 +1643,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1454,13 +1653,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'lightGray'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _index.colors, 'lightGray'), {
   sidebar: {
     nav: {
-      color: (0, _polished.darken)(0.27, _colors2.default.lightGray1),
-      backgroundColor: (0, _polished.lighten)(0.05, _colors2.default.lightGray3),
-      hoverColor: (0, _polished.darken)(0.27, _colors2.default.lightGray1),
-      hoverBackgroundColor: (0, _polished.lighten)(0.05, _colors2.default.lightGray4)
+      color: (0, _polished.darken)(0.27, _index.colors.lightGray1),
+      backgroundColor: (0, _polished.lighten)(0.05, _index.colors.lightGray3),
+      hoverColor: (0, _polished.darken)(0.27, _index.colors.lightGray1),
+      hoverBackgroundColor: (0, _polished.lighten)(0.05, _index.colors.lightGray4)
     }
   }
 });
@@ -1495,7 +1694,7 @@ LightGrayTheme.displayName = 'LightGrayTheme';
 exports.default = LightGrayTheme;
 
 /***/ }),
-/* 26 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1520,9 +1719,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1532,7 +1729,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'darkGray'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'darkGray'), {});
 
 var DarkGrayTheme = function DarkGrayTheme(_ref) {
   var children = _ref.children,
@@ -1564,7 +1761,7 @@ DarkGrayTheme.displayName = 'DarkGrayTheme';
 exports.default = DarkGrayTheme;
 
 /***/ }),
-/* 27 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1589,9 +1786,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1601,7 +1796,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'anthracite'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'anthracite'), {});
 
 var AnthraciteTheme = function AnthraciteTheme(_ref) {
   var children = _ref.children,
@@ -1633,7 +1828,7 @@ AnthraciteTheme.displayName = 'AnthraciteTheme';
 exports.default = AnthraciteTheme;
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1658,9 +1853,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1670,7 +1863,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'yellow'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _index.colors, 'yellow'), {});
 
 var YellowTheme = function YellowTheme(_ref) {
   var children = _ref.children,
@@ -1702,7 +1895,7 @@ YellowTheme.displayName = 'YellowTheme';
 exports.default = YellowTheme;
 
 /***/ }),
-/* 29 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1727,9 +1920,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1739,7 +1930,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'orange'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _index.colors, 'orange'), {
   form: {
     button: {
       // warning: {
@@ -1787,7 +1978,7 @@ OrangeTheme.displayName = 'OrangeTheme';
 exports.default = OrangeTheme;
 
 /***/ }),
-/* 30 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1812,9 +2003,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1824,7 +2013,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'brown'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'brown'), {});
 
 var BrownTheme = function BrownTheme(_ref) {
   var children = _ref.children,
@@ -1856,7 +2045,7 @@ BrownTheme.displayName = 'BrownTheme';
 exports.default = BrownTheme;
 
 /***/ }),
-/* 31 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1881,9 +2070,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1893,19 +2080,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'red'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'red'), {
   form: {
     button: {
       danger: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.red1,
-        borderColor: _colors2.default.red1,
-        hoverBackgroundColor: _colors2.default.red3,
-        hoverBorderColor: _colors2.default.red3,
-        focusBackgroundColor: _colors2.default.red3,
-        focusBorderColor: _colors2.default.red3,
-        activeBackgroundColor: _colors2.default.red3,
-        activeBorderColor: _colors2.default.red3
+        color: _index.colors.white,
+        backgroundColor: _index.colors.red1,
+        borderColor: _index.colors.red1,
+        hoverBackgroundColor: _index.colors.red3,
+        hoverBorderColor: _index.colors.red3,
+        focusBackgroundColor: _index.colors.red3,
+        focusBorderColor: _index.colors.red3,
+        activeBackgroundColor: _index.colors.red3,
+        activeBorderColor: _index.colors.red3
       }
     }
   }
@@ -1941,7 +2128,7 @@ RedTheme.displayName = 'RedTheme';
 exports.default = RedTheme;
 
 /***/ }),
-/* 32 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1966,9 +2153,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -1978,7 +2163,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'rose'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'rose'), {});
 
 var RoseTheme = function RoseTheme(_ref) {
   var children = _ref.children,
@@ -2010,7 +2195,7 @@ RoseTheme.displayName = 'RoseTheme';
 exports.default = RoseTheme;
 
 /***/ }),
-/* 33 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2035,9 +2220,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -2047,7 +2230,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'purple'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'purple'), {});
 
 var PurpleTheme = function PurpleTheme(_ref) {
   var children = _ref.children,
@@ -2079,7 +2262,7 @@ PurpleTheme.displayName = 'PurpleTheme';
 exports.default = PurpleTheme;
 
 /***/ }),
-/* 34 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2104,9 +2287,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -2116,7 +2297,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'blue'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'blue'), {});
 
 var BlueTheme = function BlueTheme(_ref) {
   var children = _ref.children,
@@ -2148,7 +2329,7 @@ BlueTheme.displayName = 'BlueTheme';
 exports.default = BlueTheme;
 
 /***/ }),
-/* 35 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2173,9 +2354,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -2185,7 +2364,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'sky'), {});
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _index.colors, 'sky'), {});
 
 var SkyTheme = function SkyTheme(_ref) {
   var children = _ref.children,
@@ -2217,7 +2396,7 @@ SkyTheme.displayName = 'SkyTheme';
 exports.default = SkyTheme;
 
 /***/ }),
-/* 36 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2244,9 +2423,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -2256,27 +2433,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _colors2.default, 'turquoise'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildLightThemeConfig)(_Default.config, _index.colors, 'turquoise'), {
   sidebar: {
     nav: {
-      color: _colors2.default.white,
-      backgroundColor: _colors2.default.turquoise3,
-      hoverColor: _colors2.default.white,
-      hoverBackgroundColor: (0, _polished.lighten)(0.05, _colors2.default.turquoise3)
+      color: _index.colors.white,
+      backgroundColor: _index.colors.turquoise3,
+      hoverColor: _index.colors.white,
+      hoverBackgroundColor: (0, _polished.lighten)(0.05, _index.colors.turquoise3)
     }
   },
   form: {
     button: {
       info: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.turquoise1,
-        borderColor: _colors2.default.turquoise1,
-        hoverBackgroundColor: _colors2.default.turquoise3,
-        hoverBorderColor: _colors2.default.turquoise3,
-        focusBackgroundColor: _colors2.default.turquoise3,
-        focusBorderColor: _colors2.default.turquoise3,
-        activeBackgroundColor: _colors2.default.turquoise3,
-        activeBorderColor: _colors2.default.turquoise3
+        color: _index.colors.white,
+        backgroundColor: _index.colors.turquoise1,
+        borderColor: _index.colors.turquoise1,
+        hoverBackgroundColor: _index.colors.turquoise3,
+        hoverBorderColor: _index.colors.turquoise3,
+        focusBackgroundColor: _index.colors.turquoise3,
+        focusBorderColor: _index.colors.turquoise3,
+        activeBackgroundColor: _index.colors.turquoise3,
+        activeBorderColor: _index.colors.turquoise3
       }
     }
   }
@@ -2312,7 +2489,7 @@ TurquoiseTheme.displayName = 'TurquoiseTheme';
 exports.default = TurquoiseTheme;
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2337,9 +2514,7 @@ var _lodash = __webpack_require__(7);
 
 var _lodash2 = _interopRequireDefault(_lodash);
 
-var _colors = __webpack_require__(4);
-
-var _colors2 = _interopRequireDefault(_colors);
+var _index = __webpack_require__(4);
 
 var _themes = __webpack_require__(6);
 
@@ -2349,19 +2524,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _colors2.default, 'green'), {
+var config = exports.config = _lodash2.default.merge({}, (0, _themes.buildDarkThemeConfig)(_Default.config, _index.colors, 'green'), {
   form: {
     button: {
       success: {
-        color: _colors2.default.white,
-        backgroundColor: _colors2.default.green3,
-        borderColor: _colors2.default.green3,
-        hoverBackgroundColor: _colors2.default.green1,
-        hoverBorderColor: _colors2.default.green1,
-        focusBackgroundColor: _colors2.default.green1,
-        focusBorderColor: _colors2.default.green1,
-        activeBackgroundColor: _colors2.default.green1,
-        activeBorderColor: _colors2.default.green1
+        color: _index.colors.white,
+        backgroundColor: _index.colors.green3,
+        borderColor: _index.colors.green3,
+        hoverBackgroundColor: _index.colors.green1,
+        hoverBorderColor: _index.colors.green1,
+        focusBackgroundColor: _index.colors.green1,
+        focusBorderColor: _index.colors.green1,
+        activeBackgroundColor: _index.colors.green1,
+        activeBorderColor: _index.colors.green1
       }
     }
   }
@@ -2397,7 +2572,7 @@ GreenTheme.displayName = 'GreenTheme';
 exports.default = GreenTheme;
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2407,7 +2582,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Section = __webpack_require__(39);
+var _Section = __webpack_require__(42);
 
 var _Section2 = _interopRequireDefault(_Section);
 
@@ -2416,7 +2591,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Section2.default;
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2489,7 +2664,7 @@ Section.displayName = 'Section';
 exports.default = Section;
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2502,9 +2677,9 @@ Object.defineProperty(exports, "__esModule", {
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _templateObject = _taggedTemplateLiteral(['\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n'], ['\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: ', 'px;\n  height: ', 'px;\n  margin: 0 auto;\n  border-width: ', 'px;\n  border-style: solid;\n  border-color: ', ';\n  border-radius: 50%;\n  border-left-color: transparent;\n  border-bottom-color: transparent;\n  border-right-color: transparent;\n  animation: ', ' 650ms infinite linear;\n'], ['\n  width: ', 'px;\n  height: ', 'px;\n  margin: 0 auto;\n  border-width: ', 'px;\n  border-style: solid;\n  border-color: ', ';\n  border-radius: 50%;\n  border-left-color: transparent;\n  border-bottom-color: transparent;\n  border-right-color: transparent;\n  animation: ', ' 650ms infinite linear;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: ', 'rem;\n  height: ', 'rem;\n  margin: 0 auto;\n  border-width: ', 'px;\n  border-style: solid;\n  border-color: ', ';\n  border-radius: 50%;\n  border-left-color: transparent;\n  border-bottom-color: transparent;\n  border-right-color: transparent;\n  animation: ', ' 650ms infinite linear;\n'], ['\n  width: ', 'rem;\n  height: ', 'rem;\n  margin: 0 auto;\n  border-width: ', 'px;\n  border-style: solid;\n  border-color: ', ';\n  border-radius: 50%;\n  border-left-color: transparent;\n  border-bottom-color: transparent;\n  border-right-color: transparent;\n  animation: ', ' 650ms infinite linear;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  text-align: center;\n\n  &.centered {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n'], ['\n  text-align: center;\n\n  &.centered {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n  margin-top: 15px;\n'], ['\n  color: ', ';\n  margin-top: 15px;\n']);
+    _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n  margin-top: 1.5rem;\n'], ['\n  color: ', ';\n  margin-top: 1.5rem;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2531,9 +2706,9 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var rotate360 = (0, _styledComponents.keyframes)(_templateObject);
 
 var Spinner = _styledComponents2.default.div(_templateObject2, function (props) {
-  return props.spinnerSize;
+  return props.spinnerSize / 10;
 }, function (props) {
-  return props.spinnerSize;
+  return props.spinnerSize / 10;
 }, function (props) {
   return props.strokeSize;
 }, function (props) {
@@ -2595,7 +2770,7 @@ Loader.displayName = 'components/Loader';
 exports.default = Loader;
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2605,7 +2780,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Alert = __webpack_require__(42);
+var _Alert = __webpack_require__(45);
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
@@ -2614,7 +2789,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Alert2.default;
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2623,6 +2798,7 @@ exports.default = _Alert2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.contexts = undefined;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -2652,13 +2828,13 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var contexts = ['info', 'success', 'warning', 'danger'];
+var contexts = exports.contexts = ['info', 'success', 'warning', 'danger'];
 
 var colorsStyle = function colorsStyle(props) {
   return contexts.reduce(function (reducedStyles, context) {
     var colors = props.theme.alert[context];
 
-    return '\n        ' + reducedStyles + '\n\n        &.alert-' + context + ' {\n            color: ' + colors.color + ';\n            background-color: ' + colors.backgroundColor + ';\n            border-color: ' + colors.borderColor + ';\n\n            a {\n                color: ' + colors.color + ';\n                text-decoration: underline;\n            }\n\n            a:hover, a:focus, a:active {\n                color: ' + colors.color + ';\n                text-decoration: none;\n            }\n        }\n    ';
+    return '\n      ' + reducedStyles + '\n\n      &.alert-' + context + ' {\n          color: ' + colors.color + ';\n          background-color: ' + colors.backgroundColor + ';\n          border-color: ' + colors.borderColor + ';\n\n          a {\n              color: ' + colors.color + ';\n              text-decoration: underline;\n          }\n\n          a:hover, a:focus, a:active {\n              color: ' + colors.color + ';\n              text-decoration: none;\n          }\n      }\n    ';
   }, '');
 };
 
@@ -2680,6 +2856,8 @@ var Alert = function Alert(_ref) {
   return _react2.default.createElement(StyledDiv, _extends({ className: classes }, props));
 };
 
+Alert.contexts = contexts;
+
 Alert.propTypes = {
   context: _propTypes2.default.oneOf(contexts),
   className: _propTypes2.default.string
@@ -2695,26 +2873,7 @@ Alert.displayName = 'Alert';
 exports.default = Alert;
 
 /***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Button = __webpack_require__(44);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _Button2.default;
-
-/***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2726,7 +2885,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 12px;\n    line-height: 21px;\n    padding: 0 14px;\n  }\n\n  &.btn-sm {\n    line-height: 30px;\n    padding: 0 16px;\n  }\n\n  &.btn-md {\n    line-height: 38px;\n    padding: 0 20px;\n  }\n\n  &.btn-lg {\n    line-height: 45px;\n    padding: 0 24px;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 12.5px;\n    }\n\n    &.btn-sm {\n      border-radius: 17px;\n    }\n\n    &.btn-md {\n      border-radius: 21px;\n    }\n\n    &.btn-lg {\n      border-radius: 24.5px;\n    }\n  }\n'], ['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 12px;\n    line-height: 21px;\n    padding: 0 14px;\n  }\n\n  &.btn-sm {\n    line-height: 30px;\n    padding: 0 16px;\n  }\n\n  &.btn-md {\n    line-height: 38px;\n    padding: 0 20px;\n  }\n\n  &.btn-lg {\n    line-height: 45px;\n    padding: 0 24px;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 12.5px;\n    }\n\n    &.btn-sm {\n      border-radius: 17px;\n    }\n\n    &.btn-md {\n      border-radius: 21px;\n    }\n\n    &.btn-lg {\n      border-radius: 24.5px;\n    }\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 1.2rem;\n    line-height: 2.1rem;\n    padding: 0 1.4rem;\n  }\n\n  &.btn-sm {\n    line-height: 3rem;\n    padding: 0 1.6rem;\n  }\n\n  &.btn-md {\n    line-height: 3.8rem;\n    padding: 0 2rem;\n  }\n\n  &.btn-lg {\n    line-height: 4.5rem;\n    padding: 0 2.4rem;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 1.25rem;\n    }\n\n    &.btn-sm {\n      border-radius: 1.7rem;\n    }\n\n    &.btn-md {\n      border-radius: 2.1rem;\n    }\n\n    &.btn-lg {\n      border-radius: 2.45rem;\n    }\n  }\n'], ['\n  /* prettier-ignore */\n  ', '\n\n  border-style: ', ';\n  border-width: ', ';\n  border-radius: ', ';\n\n  &.btn-xs {\n    font-size: 1.2rem;\n    line-height: 2.1rem;\n    padding: 0 1.4rem;\n  }\n\n  &.btn-sm {\n    line-height: 3rem;\n    padding: 0 1.6rem;\n  }\n\n  &.btn-md {\n    line-height: 3.8rem;\n    padding: 0 2rem;\n  }\n\n  &.btn-lg {\n    line-height: 4.5rem;\n    padding: 0 2.4rem;\n  }\n\n  &.shape-round {\n    &.btn-xs {\n      border-radius: 1.25rem;\n    }\n\n    &.btn-sm {\n      border-radius: 1.7rem;\n    }\n\n    &.btn-md {\n      border-radius: 2.1rem;\n    }\n\n    &.btn-lg {\n      border-radius: 2.45rem;\n    }\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2806,6 +2965,8 @@ var Button = function Button(_ref) {
   }, props));
 };
 
+Button.contexts = contexts;
+
 Button.propTypes = {
   type: _propTypes2.default.oneOf(['button', 'submit', 'reset', 'anchor']),
   context: _propTypes2.default.oneOf(contexts),
@@ -2833,7 +2994,7 @@ Button.displayName = 'Button';
 exports.default = Button;
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2843,29 +3004,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Form = __webpack_require__(46);
+var _Form = __webpack_require__(48);
 
 var _Form2 = _interopRequireDefault(_Form);
 
-var _FormGroup = __webpack_require__(47);
+var _FormGroup = __webpack_require__(49);
 
 var _FormGroup2 = _interopRequireDefault(_FormGroup);
 
-var _Label = __webpack_require__(48);
+var _Label = __webpack_require__(15);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(49);
+var _Input = __webpack_require__(50);
 
 var _Input2 = _interopRequireDefault(_Input);
 
-var _Textarea = __webpack_require__(50);
+var _Textarea = __webpack_require__(51);
 
 var _Textarea2 = _interopRequireDefault(_Textarea);
 
-var _Select = __webpack_require__(51);
+var _Select = __webpack_require__(52);
 
 var _Select2 = _interopRequireDefault(_Select);
+
+var _Checkbox = __webpack_require__(57);
+
+var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2874,11 +3039,12 @@ _Form2.default.Label = _Label2.default;
 _Form2.default.Input = _Input2.default;
 _Form2.default.Textarea = _Textarea2.default;
 _Form2.default.Select = _Select2.default;
+_Form2.default.Checkbox = _Checkbox2.default;
 
 exports.default = _Form2.default;
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2907,7 +3073,7 @@ Form.displayName = 'Form';
 exports.default = Form;
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2919,7 +3085,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  ', ' margin-bottom: 40px;\n'], ['\n  ', ' margin-bottom: 40px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  ', ' margin-bottom: 4rem;\n'], ['\n  ', ' margin-bottom: 4rem;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -2977,6 +3143,8 @@ var FormGroup = function FormGroup(_ref) {
   return _react2.default.createElement(StyledDiv, _extends({ className: classes }, props));
 };
 
+FormGroup.contexts = contexts;
+
 FormGroup.propTypes = {
   context: _propTypes2.default.oneOf(contexts),
   className: _propTypes2.default.string
@@ -2992,78 +3160,7 @@ FormGroup.displayName = 'Form.Group';
 exports.default = FormGroup;
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteral(['\n  color: ', ';\n  margin-bottom: 6px;\n  font-size: ', ';\n  font-weight: ', ';\n'], ['\n  color: ', ';\n  margin-bottom: 6px;\n  font-size: ', ';\n  font-weight: ', ';\n']);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _classnames = __webpack_require__(3);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var StyledLabel = _styledComponents2.default.label(_templateObject, function (props) {
-  return props.theme.form.label.color;
-}, function (props) {
-  return props.theme.form.label.fontSize;
-}, function (props) {
-  return props.theme.form.label.fontWeight;
-});
-
-var Label = function Label(_ref) {
-  var htmlFor = _ref.htmlFor,
-      className = _ref.className,
-      props = _objectWithoutProperties(_ref, ['htmlFor', 'className']);
-
-  var classes = (0, _classnames2.default)(className, {
-    'control-label': true
-  });
-
-  return _react2.default.createElement(StyledLabel, _extends({ htmlFor: htmlFor, className: classes }, props));
-};
-
-Label.propTypes = {
-  htmlFor: _propTypes2.default.string,
-  className: _propTypes2.default.string
-};
-
-Label.defaultProps = {
-  htmlFor: '',
-  className: ''
-};
-
-Label.displayName = 'Form.Label';
-
-exports.default = Label;
-
-/***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3093,7 +3190,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _InputHint = __webpack_require__(13);
+var _InputHint = __webpack_require__(16);
 
 var _InputHint2 = _interopRequireDefault(_InputHint);
 
@@ -3167,7 +3264,7 @@ Input.displayName = 'Form.Input';
 exports.default = Input;
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3197,7 +3294,7 @@ var _classnames = __webpack_require__(3);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _InputHint = __webpack_require__(13);
+var _InputHint = __webpack_require__(16);
 
 var _InputHint2 = _interopRequireDefault(_InputHint);
 
@@ -3275,7 +3372,7 @@ Textarea.displayName = 'Form.Textarea';
 exports.default = Textarea;
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3289,7 +3386,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: none;\n  }\n\n  &.is-focused .Select-control,\n  &.is-focused:not(.is-open) > .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    box-shadow: none;\n  }\n\n  .Select-placeholder {\n    padding-left: 12px;\n    line-height: 38px;\n  }\n\n  &.Select--single {\n    .Select-value {\n      padding-left: 12px;\n    }\n\n    .Select-value .Select-value-label {\n      line-height: 38px;\n    }\n  }\n\n  .Select-input > input {\n    padding: 1px;\n    line-height: 32px;\n  }\n\n  .Select-menu-outer {\n    margin-top: 0;\n    border-top-width: 0;\n  }\n\n  .VirtualizedSelectOption {\n    cursor: default;\n    padding: 5px 10px;\n  }\n\n  .VirtualizedSelectFocusedOption {\n    color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: none;\n  }\n\n  &.is-focused .Select-control,\n  &.is-focused:not(.is-open) > .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    box-shadow: none;\n  }\n\n  .Select-placeholder {\n    padding-left: 12px;\n    line-height: 38px;\n  }\n\n  &.Select--single {\n    .Select-value {\n      padding-left: 12px;\n    }\n\n    .Select-value .Select-value-label {\n      line-height: 38px;\n    }\n  }\n\n  .Select-input > input {\n    padding: 1px;\n    line-height: 32px;\n  }\n\n  .Select-menu-outer {\n    margin-top: 0;\n    border-top-width: 0;\n  }\n\n  .VirtualizedSelectOption {\n    cursor: default;\n    padding: 5px 10px;\n  }\n\n  .VirtualizedSelectFocusedOption {\n    color: ', ';\n    background-color: ', ';\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: none;\n  }\n\n  &.is-focused .Select-control,\n  &.is-focused:not(.is-open) > .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    box-shadow: none;\n  }\n\n  .Select-placeholder {\n    padding-left: 1.2rem;\n    line-height: 3.8rem;\n  }\n\n  &.Select--single {\n    .Select-value {\n      padding-left: 1.2rem;\n    }\n\n    .Select-value .Select-value-label {\n      line-height: 3.8rem;\n    }\n  }\n\n  .Select-input > input {\n    padding: 0.1rem;\n    line-height: 3.2rem;\n  }\n\n  .Select-menu-outer {\n    margin-top: 0;\n    border-top-width: 0;\n  }\n\n  .VirtualizedSelectOption {\n    cursor: default;\n    padding: 0.5rem 1rem;\n  }\n\n  .VirtualizedSelectFocusedOption {\n    color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    border-width: ', ';\n    border-radius: ', ';\n    box-shadow: none;\n  }\n\n  &.is-focused .Select-control,\n  &.is-focused:not(.is-open) > .Select-control {\n    opacity: ', ';\n    background-color: ', ';\n    border-color: ', ';\n    box-shadow: none;\n  }\n\n  .Select-placeholder {\n    padding-left: 1.2rem;\n    line-height: 3.8rem;\n  }\n\n  &.Select--single {\n    .Select-value {\n      padding-left: 1.2rem;\n    }\n\n    .Select-value .Select-value-label {\n      line-height: 3.8rem;\n    }\n  }\n\n  .Select-input > input {\n    padding: 0.1rem;\n    line-height: 3.2rem;\n  }\n\n  .Select-menu-outer {\n    margin-top: 0;\n    border-top-width: 0;\n  }\n\n  .VirtualizedSelectOption {\n    cursor: default;\n    padding: 0.5rem 1rem;\n  }\n\n  .VirtualizedSelectFocusedOption {\n    color: ', ';\n    background-color: ', ';\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3299,13 +3396,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-__webpack_require__(52);
-
 __webpack_require__(53);
 
 __webpack_require__(54);
 
-var _reactVirtualizedSelect = __webpack_require__(55);
+__webpack_require__(55);
+
+var _reactVirtualizedSelect = __webpack_require__(56);
 
 var _reactVirtualizedSelect2 = _interopRequireDefault(_reactVirtualizedSelect);
 
@@ -3383,68 +3480,28 @@ Select.displayName = 'Form.Select';
 exports.default = Select;
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-select/dist/react-select.css");
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized/styles.css");
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select/styles.css");
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-virtualized-select");
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _Sidebar = __webpack_require__(57);
-
-var _Sidebar2 = _interopRequireDefault(_Sidebar);
-
-var _Title = __webpack_require__(11);
-
-var _Title2 = _interopRequireDefault(_Title);
-
-var _Header = __webpack_require__(58);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(59);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _Nav = __webpack_require__(60);
-
-var _Nav2 = _interopRequireDefault(_Nav);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_Sidebar2.default.Title = _Title2.default;
-_Sidebar2.default.Header = _Header2.default;
-_Sidebar2.default.Footer = _Footer2.default;
-_Sidebar2.default.Nav = _Nav2.default;
-
-exports.default = _Sidebar2.default;
 
 /***/ }),
 /* 57 */
@@ -3459,9 +3516,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  top: 0;\n  max-width: 100%;\n  height: 100%;\n  overflow-y: auto;\n  transition: all 0.25s ease-out;\n\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.xs {\n    width: 150px;\n  }\n  &.sm {\n    width: 250px;\n  }\n  &.md {\n    width: 400px;\n  }\n  &.lg {\n    width: 600px;\n  }\n  &.maximized {\n    width: 100%;\n  }\n\n  &.left,\n  &.left.transition-appear {\n    left: 0;\n    transform: translate(-150%, 0);\n    border-right-width: ', ';\n  }\n\n  &.right,\n  &.right.transition-appear {\n    right: 0;\n    transform: translate(150%, 0);\n    border-left-width: ', ';\n  }\n\n  &.left.maximized,\n  &.right.maximized {\n    border-width: 0;\n  }\n\n  &.opened,\n  &.opened.transition-appear.transition-appear-active {\n    transform: translate(0, 0);\n  }\n\n  .back-btn,\n  .close-btn {\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    width: 50px;\n    height: 50px;\n    padding: 0;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .back-btn {\n    float: left;\n    margin-right: 5px;\n  }\n\n  .close-btn {\n    float: right;\n    margin-left: 5px;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 20px;\n  }\n\n  .content {\n    margin-top: 30px;\n    padding: 20px;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 20px;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 20px;\n  }\n'], ['\n  z-index: 1000;\n  top: 0;\n  max-width: 100%;\n  height: 100%;\n  overflow-y: auto;\n  transition: all 0.25s ease-out;\n\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.xs {\n    width: 150px;\n  }\n  &.sm {\n    width: 250px;\n  }\n  &.md {\n    width: 400px;\n  }\n  &.lg {\n    width: 600px;\n  }\n  &.maximized {\n    width: 100%;\n  }\n\n  &.left,\n  &.left.transition-appear {\n    left: 0;\n    transform: translate(-150%, 0);\n    border-right-width: ', ';\n  }\n\n  &.right,\n  &.right.transition-appear {\n    right: 0;\n    transform: translate(150%, 0);\n    border-left-width: ', ';\n  }\n\n  &.left.maximized,\n  &.right.maximized {\n    border-width: 0;\n  }\n\n  &.opened,\n  &.opened.transition-appear.transition-appear-active {\n    transform: translate(0, 0);\n  }\n\n  .back-btn,\n  .close-btn {\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    width: 50px;\n    height: 50px;\n    padding: 0;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .back-btn {\n    float: left;\n    margin-right: 5px;\n  }\n\n  .close-btn {\n    float: right;\n    margin-left: 5px;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 20px;\n  }\n\n  .content {\n    margin-top: 30px;\n    padding: 20px;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 20px;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 20px;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  color: ', ';\n  background-color: ', ';\n  border-color: ', ';\n'], ['\n  position: relative;\n  color: ', ';\n  background-color: ', ';\n  border-color: ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  opacity: 0;\n  width: 0;\n  height: 0;\n  margin: 0;\n\n  & + label {\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n    padding-left: 2.5rem;\n    cursor: pointer;\n\n    &:before,\n    &:after {\n      display: inline-block;\n      position: absolute;\n      left: 0;\n      top: 0.4rem;\n      border: 1px solid #ccc;\n      border-radius: 3px;\n      border-color: ', ';\n      content: \'\';\n      width: 1.7rem;\n      height: 1.7rem;\n      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;\n    }\n  }\n\n  &:checked + label:after {\n    padding-left: 0.5px;\n    content: \'\f00c\';\n    font-family: FontAwesome;\n    font-size: 1.4rem;\n  }\n\n  &:disabled + label,\n  &:disabled + label:after {\n    opacity: 0.3;\n    cursor: not-allowed;\n  }\n'], ['\n  opacity: 0;\n  width: 0;\n  height: 0;\n  margin: 0;\n\n  & + label {\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n    padding-left: 2.5rem;\n    cursor: pointer;\n\n    &:before,\n    &:after {\n      display: inline-block;\n      position: absolute;\n      left: 0;\n      top: 0.4rem;\n      border: 1px solid #ccc;\n      border-radius: 3px;\n      border-color: ', ';\n      content: \'\';\n      width: 1.7rem;\n      height: 1.7rem;\n      transition: border 0.15s ease-in-out, color 0.15s ease-in-out;\n    }\n  }\n\n  &:checked + label:after {\n    padding-left: 0.5px;\n    content: \'\\f00c\';\n    font-family: FontAwesome;\n    font-size: 1.4rem;\n  }\n\n  &:disabled + label,\n  &:disabled + label:after {\n    opacity: 0.3;\n    cursor: not-allowed;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3471,7 +3527,149 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactTransitionGroup = __webpack_require__(10);
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _Label = __webpack_require__(15);
+
+var _Label2 = _interopRequireDefault(_Label);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents2.default.div(_templateObject, function (props) {
+  return props.theme.form.label.color;
+}, function (props) {
+  return props.theme.form.label.backgroundColor;
+}, function (props) {
+  return props.theme.form.label.borderColor;
+});
+
+var StyledCheckbox = _styledComponents2.default.input.attrs({
+  type: 'checkbox',
+  checked: function checked(props) {
+    return props.checked;
+  },
+  disabled: function disabled(props) {
+    return props.disabled;
+  }
+})(_templateObject2, function (props) {
+  return props.theme.form.label.fontSize;
+}, function (props) {
+  return props.theme.form.label.fontSize;
+}, function (props) {
+  return props.theme.form.label.fontWeight;
+}, function (props) {
+  return props.theme.form.checkbox.borderColor;
+});
+
+var Checkbox = function Checkbox(_ref) {
+  var id = _ref.id,
+      label = _ref.label,
+      className = _ref.className,
+      props = _objectWithoutProperties(_ref, ['id', 'label', 'className']);
+
+  return _react2.default.createElement(
+    Container,
+    { className: className },
+    _react2.default.createElement(StyledCheckbox, _extends({ id: id }, props)),
+    _react2.default.createElement(
+      _Label2.default,
+      { htmlFor: id },
+      label
+    )
+  );
+};
+
+Checkbox.propTypes = {
+  id: _propTypes2.default.string.isRequired,
+  label: _propTypes2.default.string,
+  disabled: _propTypes2.default.bool,
+  className: _propTypes2.default.string
+};
+
+Checkbox.defaultProps = {
+  label: '',
+  disabled: false,
+  className: ''
+};
+
+Checkbox.displayName = 'Form.Checkbox';
+
+exports.default = Checkbox;
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Sidebar = __webpack_require__(59);
+
+var _Sidebar2 = _interopRequireDefault(_Sidebar);
+
+var _Title = __webpack_require__(12);
+
+var _Title2 = _interopRequireDefault(_Title);
+
+var _Header = __webpack_require__(60);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(61);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _Nav = __webpack_require__(62);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Sidebar2.default.Title = _Title2.default;
+_Sidebar2.default.Header = _Header2.default;
+_Sidebar2.default.Footer = _Footer2.default;
+_Sidebar2.default.Nav = _Nav2.default;
+
+exports.default = _Sidebar2.default;
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  top: 0;\n  max-width: 100%;\n  height: 100%;\n  overflow-y: auto;\n  transition: all 0.25s ease-out;\n\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.xs {\n    width: 15rem;\n  }\n  &.sm {\n    width: 25rem;\n  }\n  &.md {\n    width: 40rem;\n  }\n  &.lg {\n    width: 60rem;\n  }\n  &.maximized {\n    width: 100%;\n  }\n\n  &.left {\n    left: 0;\n    transform: translate(-150%, 0);\n    border-right-width: ', ';\n  }\n\n  &.right {\n    right: 0;\n    transform: translate(150%, 0);\n    border-left-width: ', ';\n  }\n\n  &.left.maximized,\n  &.right.maximized {\n    border-width: 0;\n  }\n\n  .back-btn,\n  .close-btn {\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    width: 5rem;\n    height: 5rem;\n    padding: 0;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .back-btn {\n    float: left;\n    margin-right: 0.5rem;\n  }\n\n  .close-btn {\n    float: right;\n    margin-left: 0.5rem;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 2rem;\n  }\n\n  .content {\n    margin-top: 3rem;\n    padding: 2rem;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 2rem;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 2rem;\n  }\n'], ['\n  z-index: 1000;\n  top: 0;\n  max-width: 100%;\n  height: 100%;\n  overflow-y: auto;\n  transition: all 0.25s ease-out;\n\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.xs {\n    width: 15rem;\n  }\n  &.sm {\n    width: 25rem;\n  }\n  &.md {\n    width: 40rem;\n  }\n  &.lg {\n    width: 60rem;\n  }\n  &.maximized {\n    width: 100%;\n  }\n\n  &.left {\n    left: 0;\n    transform: translate(-150%, 0);\n    border-right-width: ', ';\n  }\n\n  &.right {\n    right: 0;\n    transform: translate(150%, 0);\n    border-left-width: ', ';\n  }\n\n  &.left.maximized,\n  &.right.maximized {\n    border-width: 0;\n  }\n\n  .back-btn,\n  .close-btn {\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    width: 5rem;\n    height: 5rem;\n    padding: 0;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .back-btn {\n    float: left;\n    margin-right: 0.5rem;\n  }\n\n  .close-btn {\n    float: right;\n    margin-left: 0.5rem;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 2rem;\n  }\n\n  .content {\n    margin-top: 3rem;\n    padding: 2rem;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 2rem;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 2rem;\n  }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Transition = __webpack_require__(10);
+
+var _Transition2 = _interopRequireDefault(_Transition);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -3481,17 +3679,17 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _reactFontawesome = __webpack_require__(14);
+var _reactFontawesome = __webpack_require__(11);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _Title = __webpack_require__(11);
-
-var _Title2 = _interopRequireDefault(_Title);
 
 var _Loader = __webpack_require__(9);
 
 var _Loader2 = _interopRequireDefault(_Loader);
+
+var _Title = __webpack_require__(12);
+
+var _Title2 = _interopRequireDefault(_Title);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3540,7 +3738,7 @@ var Sidebar = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this, props));
 
     _this.state = {
-      opened: props.opened
+      opened: true
     };
     return _this;
   }
@@ -3548,9 +3746,7 @@ var Sidebar = function (_React$Component) {
   _createClass(Sidebar, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      if (this.props.opened === true) {
-        this._triggerCallback('onOpen');
-      }
+      if (this.props.onOpen) this.props.onOpen();
 
       if (this.props.maximized === true) {
         this.props.onMaximize();
@@ -3559,53 +3755,27 @@ var Sidebar = function (_React$Component) {
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      this.setState({
-        opened: nextProps.opened
-      });
-
-      if (this.props.opened !== nextProps.opened) {
-        if (nextProps.opened === true) {
-          this._triggerCallback('onOpen');
-        } else {
-          this._triggerCallback('onClose');
-        }
-      }
-
       if (this.props.maximized !== nextProps.maximized) {
-        if (nextProps.maximized === true) {
-          this._triggerCallback('onMaximize');
-        } else {
-          this._triggerCallback('onUnmaximize');
-        }
+        if (nextProps.maximized === true) this.props.onMaximize();else this.props.onUnmaximize();
       }
     }
   }, {
-    key: '_triggerCallback',
-    value: function _triggerCallback(name) {
-      if (this.props[name] !== null) {
-        var callback = this.props[name];
-
-        switch (name) {
-          case 'onClickClose':
-          case 'onClose':
-            setTimeout(callback, 250);
-            break;
-          default:
-            callback();
-        }
-      }
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.props.onClose) this.props.onClose();
     }
   }, {
     key: '_handleBackClick',
     value: function _handleBackClick() {
-      this._triggerCallback('onClickBack');
+      if (this.props.onClickBack) this.props.onClickBack();
     }
   }, {
     key: '_handleCloseClick',
     value: function _handleCloseClick() {
       this.setState({ opened: false });
-      this._triggerCallback('onClickClose');
-      this._triggerCallback('onClose');
+
+      if (this.props.onClickClose) this.props.onClickClose();
+      if (this.props.onClose) this.props.onClose();
     }
   }, {
     key: 'render',
@@ -3635,57 +3805,63 @@ var Sidebar = function (_React$Component) {
         loading: loading
       });
 
+      var transitionStyles = {
+        entered: {
+          transform: 'translate(0,0)'
+        }
+      };
+
       return _react2.default.createElement(
-        _reactTransitionGroup.CSSTransitionGroup,
-        {
-          transitionName: 'transition',
-          transitionAppear: true,
-          transitionAppearTimeout: 250,
-          transitionEnter: false,
-          transitionLeave: false
-        },
-        _react2.default.createElement(
-          StyledAside,
-          _extends({ key: 'sidebar', className: asideClasses }, rest),
-          _react2.default.createElement(
-            'header',
-            { className: 'header' },
-            this.props.onClickBack && _react2.default.createElement(
-              'button',
-              {
-                className: 'back-btn',
-                onClick: function onClick() {
-                  return _this2._handleBackClick();
-                }
-              },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+        _Transition2.default,
+        { 'in': this.state.opened, appear: true, timeout: 250 },
+        function (state) {
+          return _react2.default.createElement(
+            StyledAside,
+            _extends({
+              key: 'sidebar',
+              className: asideClasses,
+              style: transitionStyles[state]
+            }, rest),
+            _react2.default.createElement(
+              'header',
+              { className: 'header' },
+              _this2.props.onClickBack && _react2.default.createElement(
+                'button',
+                {
+                  className: 'back-btn',
+                  onClick: function onClick() {
+                    return _this2._handleBackClick();
+                  }
+                },
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'chevron-left', size: 'lg' })
+              ),
+              _react2.default.createElement(
+                'button',
+                {
+                  className: 'close-btn',
+                  onClick: function onClick() {
+                    return _this2._handleCloseClick();
+                  }
+                },
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+              ),
+              title && _react2.default.createElement(
+                _Title2.default,
+                { inHeader: true },
+                title
+              ),
+              _react2.default.createElement('div', { className: 'clearfix' }),
+              !loading && header && header
             ),
             _react2.default.createElement(
-              'button',
-              {
-                className: 'close-btn',
-                onClick: function onClick() {
-                  return _this2._handleCloseClick();
-                }
-              },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+              'div',
+              { className: contentClasses },
+              children
             ),
-            title && _react2.default.createElement(
-              _Title2.default,
-              { inHeader: true },
-              title
-            ),
-            _react2.default.createElement('div', { className: 'clearfix' }),
-            !loading && header && header
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: contentClasses },
-            children
-          ),
-          !loading && footer && footer,
-          loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
-        )
+            !loading && footer && footer,
+            loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
+          );
+        }
       );
     }
   }]);
@@ -3697,13 +3873,9 @@ Sidebar.propTypes = {
   title: _propTypes2.default.string,
   header: _propTypes2.default.node,
   footer: _propTypes2.default.node,
-  opened: _propTypes2.default.bool,
   loading: _propTypes2.default.bool,
   loaderLabel: _propTypes2.default.node,
   position: _propTypes2.default.oneOf(['left', 'right']),
-  // animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
-  // show-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
-  // close-animation: PropTypes.oneOf(['linear', 'bubble', 'bubble-inverse']),
   width: _propTypes2.default.oneOf(['xs', 'sm', 'md', 'lg']),
   maximized: _propTypes2.default.bool,
   container: _propTypes2.default.oneOf(['parent', 'root']),
@@ -3722,13 +3894,9 @@ Sidebar.defaultProps = {
   title: '',
   header: '',
   footer: '',
-  opened: false,
   loading: false,
   loaderLabel: '',
   position: 'left',
-  // animation: 'linear',
-  // show-animation: 'linear',
-  // close-animation: 'linear',
   width: 'md',
   maximized: false,
   container: 'parent',
@@ -3747,7 +3915,7 @@ Sidebar.displayName = 'Sidebar';
 exports.default = Sidebar;
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3759,7 +3927,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  padding: 15px 20px 0;\n'], ['\n  padding: 15px 20px 0;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 1.5rem 2rem 0;\n'], ['\n  padding: 1.5rem 2rem 0;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3811,7 +3979,7 @@ SidebarHeader.displayName = 'Sidebar.Header';
 exports.default = SidebarHeader;
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3823,7 +3991,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  padding: 20px 20px;\n'], ['\n  padding: 20px 20px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  padding: 2rem 2rem;\n'], ['\n  padding: 2rem 2rem;\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3875,7 +4043,7 @@ SidebarFooter.displayName = 'Sidebar.Footer';
 exports.default = SidebarFooter;
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3885,7 +4053,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  margin: 20px 0;\n\n  ul {\n    text-align: center;\n    list-style: none;\n    margin: 0 0 40px;\n    padding: 0;\n  }\n\n  a {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n\n    display: block;\n    margin: 10px 0;\n    padding: 14px 20px;\n    border-radius: ', ';\n    background-color: ', ';\n    color: ', ';\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n  }\n\n  a:hover,\n  a:active,\n  a:focus {\n    text-decoration: none;\n    color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  margin: 20px 0;\n\n  ul {\n    text-align: center;\n    list-style: none;\n    margin: 0 0 40px;\n    padding: 0;\n  }\n\n  a {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n\n    display: block;\n    margin: 10px 0;\n    padding: 14px 20px;\n    border-radius: ', ';\n    background-color: ', ';\n    color: ', ';\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n  }\n\n  a:hover,\n  a:active,\n  a:focus {\n    text-decoration: none;\n    color: ', ';\n    background-color: ', ';\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin: 2rem 0;\n\n  ul {\n    text-align: center;\n    list-style: none;\n    margin: 0 0 4rem;\n    padding: 0;\n  }\n\n  a {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n\n    display: block;\n    margin: 1rem 0;\n    padding: 1.4rem 2rem;\n    border-radius: ', ';\n    background-color: ', ';\n    color: ', ';\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n  }\n\n  a:hover,\n  a:active,\n  a:focus {\n    text-decoration: none;\n    color: ', ';\n    background-color: ', ';\n  }\n'], ['\n  margin: 2rem 0;\n\n  ul {\n    text-align: center;\n    list-style: none;\n    margin: 0 0 4rem;\n    padding: 0;\n  }\n\n  a {\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n\n    display: block;\n    margin: 1rem 0;\n    padding: 1.4rem 2rem;\n    border-radius: ', ';\n    background-color: ', ';\n    color: ', ';\n    font-size: ', ';\n    line-height: ', ';\n    font-weight: ', ';\n  }\n\n  a:hover,\n  a:active,\n  a:focus {\n    text-decoration: none;\n    color: ', ';\n    background-color: ', ';\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3930,7 +4098,7 @@ SidebarNav.displayName = 'Sidebar.Nav';
 exports.default = SidebarNav;
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3940,19 +4108,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Toolbar = __webpack_require__(62);
+var _Toolbar = __webpack_require__(64);
 
 var _Toolbar2 = _interopRequireDefault(_Toolbar);
 
-var _Item = __webpack_require__(15);
+var _Item = __webpack_require__(17);
 
 var _Item2 = _interopRequireDefault(_Item);
 
-var _Group = __webpack_require__(63);
+var _Group = __webpack_require__(65);
 
 var _Group2 = _interopRequireDefault(_Group);
 
-var _Collapse = __webpack_require__(64);
+var _Collapse = __webpack_require__(66);
 
 var _Collapse2 = _interopRequireDefault(_Collapse);
 
@@ -3965,7 +4133,7 @@ _Toolbar2.default.Collapse = _Collapse2.default;
 exports.default = _Toolbar2.default;
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3979,7 +4147,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  margin: ', ';\n  pointer-events: none;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.direction-row {\n    flex-direction: row;\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      justify-content: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      justify-content: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      align-items: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      align-items: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    flex-direction: column;\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      justify-content: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      justify-content: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      align-items: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      align-items: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    &.position-left-top,\n    &.position-left-top.transition-appear,\n    &.position-left-center,\n    &.position-left-center.transition-appear,\n    &.position-left-bottom,\n    &.position-left-bottom.transition-appear {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-center-top,\n    &.position-center-top.transition-appear {\n      transform: translate(0, -150%);\n    }\n\n    &.position-center-bottom,\n    &.position-center-bottom.transition-appear {\n      transform: translate(0, 150%);\n    }\n\n    &.position-right-top,\n    &.position-right-top.transition-appear,\n    &.position-right-center,\n    &.position-right-center.transition-appear,\n    &.position-right-bottom,\n    &.position-right-bottom.transition-appear {\n      transform: translate(150%, 0);\n    }\n  }\n\n  &.direction-row {\n    &.position-left-top,\n    &.position-left-top.transition-appear,\n    &.position-center-top,\n    &.position-center-top.transition-appear,\n    &.position-right-top,\n    &.position-right-top.transition-appear {\n      transform: translate(0, -150%);\n    }\n\n    &.position-left-center,\n    &.position-left-center.transition-appear {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-right-center,\n    &.position-right-center.transition-appear {\n      transform: translate(150%, 0);\n    }\n\n    &.position-left-bottom,\n    &.position-left-bottom.transition-appear,\n    &.position-center-bottom,\n    &.position-center-bottom.transition-appear,\n    &.position-right-bottom,\n    &.position-right-bottom.transition-appear {\n      transform: translate(0, 150%);\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-center-center,\n    &.position-center-center.transition-appear {\n      opacity: 0;\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom,\n    &.position-center-bottom,\n    &.position-left-bottom,\n    &.position-left-center,\n    &.position-center-center {\n      &.opened,\n      &.opened.transition-appear.transition-appear-active {\n        opacity: ', ';\n        transform: translate(0, 0);\n      }\n    }\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n'], ['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  margin: ', ';\n  pointer-events: none;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.direction-row {\n    flex-direction: row;\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      justify-content: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      justify-content: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      align-items: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      align-items: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    flex-direction: column;\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      justify-content: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      justify-content: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      align-items: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      align-items: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    &.position-left-top,\n    &.position-left-top.transition-appear,\n    &.position-left-center,\n    &.position-left-center.transition-appear,\n    &.position-left-bottom,\n    &.position-left-bottom.transition-appear {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-center-top,\n    &.position-center-top.transition-appear {\n      transform: translate(0, -150%);\n    }\n\n    &.position-center-bottom,\n    &.position-center-bottom.transition-appear {\n      transform: translate(0, 150%);\n    }\n\n    &.position-right-top,\n    &.position-right-top.transition-appear,\n    &.position-right-center,\n    &.position-right-center.transition-appear,\n    &.position-right-bottom,\n    &.position-right-bottom.transition-appear {\n      transform: translate(150%, 0);\n    }\n  }\n\n  &.direction-row {\n    &.position-left-top,\n    &.position-left-top.transition-appear,\n    &.position-center-top,\n    &.position-center-top.transition-appear,\n    &.position-right-top,\n    &.position-right-top.transition-appear {\n      transform: translate(0, -150%);\n    }\n\n    &.position-left-center,\n    &.position-left-center.transition-appear {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-right-center,\n    &.position-right-center.transition-appear {\n      transform: translate(150%, 0);\n    }\n\n    &.position-left-bottom,\n    &.position-left-bottom.transition-appear,\n    &.position-center-bottom,\n    &.position-center-bottom.transition-appear,\n    &.position-right-bottom,\n    &.position-right-bottom.transition-appear {\n      transform: translate(0, 150%);\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-center-center,\n    &.position-center-center.transition-appear {\n      opacity: 0;\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom,\n    &.position-center-bottom,\n    &.position-left-bottom,\n    &.position-left-center,\n    &.position-center-center {\n      &.opened,\n      &.opened.transition-appear.transition-appear-active {\n        opacity: ', ';\n        transform: translate(0, 0);\n      }\n    }\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  margin: ', ';\n  pointer-events: none;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.direction-row {\n    flex-direction: row;\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      justify-content: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      justify-content: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      align-items: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      align-items: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    flex-direction: column;\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      justify-content: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      justify-content: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      align-items: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      align-items: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-center-top {\n      transform: translate(0, -150%);\n    }\n\n    &.position-center-bottom {\n      transform: translate(0, 150%);\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      transform: translate(150%, 0);\n    }\n  }\n\n  &.direction-row {\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      transform: translate(0, -150%);\n    }\n\n    &.position-left-center {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-right-center {\n      transform: translate(150%, 0);\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      transform: translate(0, 150%);\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-center-center {\n      opacity: 0;\n    }\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n'], ['\n  z-index: 1000;\n  transition: all 0.1s ease-out;\n\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  margin: ', ';\n  pointer-events: none;\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.direction-row {\n    flex-direction: row;\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      justify-content: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      justify-content: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      align-items: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      align-items: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    flex-direction: column;\n\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      justify-content: flex-start;\n    }\n\n    &.position-left-center,\n    &.position-center-center,\n    &.position-right-center {\n      justify-content: center;\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      justify-content: flex-end;\n    }\n\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      align-items: flex-start;\n    }\n\n    &.position-center-top,\n    &.position-center-center,\n    &.position-center-bottom {\n      align-items: center;\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      align-items: flex-end;\n    }\n  }\n\n  &.direction-column {\n    &.position-left-top,\n    &.position-left-center,\n    &.position-left-bottom {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-center-top {\n      transform: translate(0, -150%);\n    }\n\n    &.position-center-bottom {\n      transform: translate(0, 150%);\n    }\n\n    &.position-right-top,\n    &.position-right-center,\n    &.position-right-bottom {\n      transform: translate(150%, 0);\n    }\n  }\n\n  &.direction-row {\n    &.position-left-top,\n    &.position-center-top,\n    &.position-right-top {\n      transform: translate(0, -150%);\n    }\n\n    &.position-left-center {\n      transform: translate(-150%, 0);\n    }\n\n    &.position-right-center {\n      transform: translate(150%, 0);\n    }\n\n    &.position-left-bottom,\n    &.position-center-bottom,\n    &.position-right-bottom {\n      transform: translate(0, 150%);\n    }\n  }\n\n  &.direction-column,\n  &.direction-row {\n    &.position-center-center {\n      opacity: 0;\n    }\n  }\n\n  &.direction-column > * {\n    margin-bottom: ', ';\n  }\n\n  &.direction-row > * {\n    margin-right: ', ';\n  }\n\n  &.direction-column :last-child,\n  &.direction-row :last-child {\n    margin: 0;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -3989,7 +4157,9 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactTransitionGroup = __webpack_require__(10);
+var _Transition = __webpack_require__(10);
+
+var _Transition2 = _interopRequireDefault(_Transition);
 
 var _styledComponents = __webpack_require__(1);
 
@@ -4015,8 +4185,6 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledAside = _styledComponents2.default.aside(_templateObject, function (props) {
   return props.theme.toolbar.margin;
-}, function (props) {
-  return props.opacity;
 }, function (props) {
   return props.theme.toolbar.childrenMargin;
 }, function (props) {
@@ -4076,10 +4244,11 @@ var Toolbar = function (_React$Component) {
           direction = _props.direction,
           size = _props.size,
           shape = _props.shape,
+          opacity = _props.opacity,
           container = _props.container,
           className = _props.className,
           children = _props.children,
-          rest = _objectWithoutProperties(_props, ['position', 'direction', 'size', 'shape', 'container', 'className', 'children']);
+          rest = _objectWithoutProperties(_props, ['position', 'direction', 'size', 'shape', 'opacity', 'container', 'className', 'children']);
 
       var asideClasses = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _defineProperty(_classnames, 'container-' + container, true), _defineProperty(_classnames, 'opened', this.state.opened), _classnames));
 
@@ -4096,22 +4265,28 @@ var Toolbar = function (_React$Component) {
         childrenProps.shape = shape;
       }
 
+      var transitionStyles = {
+        entered: {
+          opacity: opacity,
+          transform: 'translate(0,0)'
+        }
+      };
+
       return _react2.default.createElement(
-        _reactTransitionGroup.CSSTransitionGroup,
-        {
-          transitionName: 'transition',
-          transitionAppear: true,
-          transitionAppearTimeout: 100,
-          transitionEnter: false,
-          transitionLeave: false
-        },
-        _react2.default.createElement(
-          StyledAside,
-          _extends({ className: asideClasses }, rest),
-          _react2.default.Children.map(children, function (child) {
-            return _react2.default.cloneElement(child, childrenProps);
-          })
-        )
+        _Transition2.default,
+        { 'in': this.state.opened, timeout: 100 },
+        function (state) {
+          return _react2.default.createElement(
+            StyledAside,
+            _extends({
+              className: asideClasses,
+              style: transitionStyles[state]
+            }, rest),
+            _react2.default.Children.map(children, function (child) {
+              return _react2.default.cloneElement(child, childrenProps);
+            })
+          );
+        }
       );
     }
   }]);
@@ -4130,7 +4305,7 @@ Toolbar.propTypes = {
   onOpen: _propTypes2.default.func,
   onClose: _propTypes2.default.func,
   className: _propTypes2.default.string,
-  children: _propTypes2.default.node
+  children: _propTypes2.default.node.isRequired
 };
 
 Toolbar.defaultProps = {
@@ -4143,8 +4318,7 @@ Toolbar.defaultProps = {
   opened: false,
   onOpen: null,
   onClose: null,
-  className: '',
-  children: ''
+  className: ''
 };
 
 Toolbar.displayName = 'Toolbar';
@@ -4152,7 +4326,7 @@ Toolbar.displayName = 'Toolbar';
 exports.default = Toolbar;
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4310,7 +4484,7 @@ ToolbarGroup.displayName = 'Toolbar.Group';
 exports.default = ToolbarGroup;
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4343,7 +4517,7 @@ var _classnames2 = __webpack_require__(3);
 
 var _classnames3 = _interopRequireDefault(_classnames2);
 
-var _Item = __webpack_require__(15);
+var _Item = __webpack_require__(17);
 
 var _Item2 = _interopRequireDefault(_Item);
 
@@ -4524,7 +4698,7 @@ ToolbarCollapse.displayName = 'Toolbar.Collapse';
 exports.default = ToolbarCollapse;
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4534,7 +4708,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Titlebar = __webpack_require__(66);
+var _Titlebar = __webpack_require__(68);
 
 var _Titlebar2 = _interopRequireDefault(_Titlebar);
 
@@ -4543,7 +4717,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Titlebar2.default;
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4727,7 +4901,7 @@ Titlebar.displayName = 'Titlebar';
 exports.default = Titlebar;
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4737,15 +4911,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactLeaflet = __webpack_require__(12);
+var _reactLeaflet = __webpack_require__(13);
 
 var ReactLeaflet = _interopRequireWildcard(_reactLeaflet);
 
-var _Map = __webpack_require__(68);
+var _Map = __webpack_require__(70);
 
 var _Map2 = _interopRequireDefault(_Map);
 
-var _Marker = __webpack_require__(70);
+var _Marker = __webpack_require__(72);
 
 var _Marker2 = _interopRequireDefault(_Marker);
 
@@ -4785,7 +4959,7 @@ _Map2.default.Marker = _Marker2.default;
 exports.default = _Map2.default;
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4799,7 +4973,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  .leaflet-bar {\n    border: none;\n  }\n\n  .leaflet-bar a {\n    color: ', ';\n    background: ', ';\n    border: none;\n    width: 50px;\n    height: 50px;\n    line-height: 50px;\n    transition: all 0.1s ease-out;\n\n    &:hover,\n    &:focus,\n    &:active {\n      color: ', ';\n      background: ', ';\n    }\n\n    &:active {\n      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n    }\n  }\n\n  .leaflet-control-attribution {\n    padding: 2px 6px;\n  }\n'], ['\n  .leaflet-bar {\n    border: none;\n  }\n\n  .leaflet-bar a {\n    color: ', ';\n    background: ', ';\n    border: none;\n    width: 50px;\n    height: 50px;\n    line-height: 50px;\n    transition: all 0.1s ease-out;\n\n    &:hover,\n    &:focus,\n    &:active {\n      color: ', ';\n      background: ', ';\n    }\n\n    &:active {\n      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n    }\n  }\n\n  .leaflet-control-attribution {\n    padding: 2px 6px;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  .leaflet-bar {\n    border: none;\n  }\n\n  .leaflet-bar a {\n    color: ', ';\n    background: ', ';\n    border: none;\n    width: 5rem;\n    height: 5rem;\n    line-height: 5rem;\n    transition: all 0.1s ease-out;\n\n    &:hover,\n    &:focus,\n    &:active {\n      color: ', ';\n      background: ', ';\n    }\n\n    &:active {\n      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n    }\n  }\n\n  .leaflet-control-attribution {\n    padding: 0.2rem 0.6rem;\n  }\n'], ['\n  .leaflet-bar {\n    border: none;\n  }\n\n  .leaflet-bar a {\n    color: ', ';\n    background: ', ';\n    border: none;\n    width: 5rem;\n    height: 5rem;\n    line-height: 5rem;\n    transition: all 0.1s ease-out;\n\n    &:hover,\n    &:focus,\n    &:active {\n      color: ', ';\n      background: ', ';\n    }\n\n    &:active {\n      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n    }\n  }\n\n  .leaflet-control-attribution {\n    padding: 0.2rem 0.6rem;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -4813,13 +4987,13 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _leaflet = __webpack_require__(16);
+var _leaflet = __webpack_require__(18);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
-var _reactLeaflet = __webpack_require__(12);
+var _reactLeaflet = __webpack_require__(13);
 
-__webpack_require__(69);
+__webpack_require__(71);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4909,13 +5083,13 @@ Map.displayName = 'Map';
 exports.default = Map;
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = require("leaflet.locatecontrol");
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4927,13 +5101,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n    .osm-ui-react-marker-shape {\n        width: 50px !important;\n        height: 50px !important;\n\n        svg {\n            z-index: 1;\n            position: absolute;\n            top: 0;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 50px;\n            height: 50px;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 19px;\n        }\n    }\n\n    .osm-ui-react-marker-pointerClassic,\n    .osm-ui-react-marker-pointerClassicThin,\n    .osm-ui-react-marker-pointerCirclePin {\n        svg {\n            top: -20px;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -23px;\n            left: 0;\n        }\n    }\n\n    .osm-ui-react-marker-basicCircle,\n    .osm-ui-react-marker-basicSquare,\n    .osm-ui-react-marker-basicUpTriangle,\n    .osm-ui-react-marker-basicRightTriangle,\n    .osm-ui-react-marker-basicDownTriangle,\n    .osm-ui-react-marker-basicLeftTriangle,\n    .osm-ui-react-marker-basicDiamond {\n        .osm-ui-react-marker-icon-wrapper {\n            display: none;\n        }\n    }\n'], ['\n    .osm-ui-react-marker-shape {\n        width: 50px !important;\n        height: 50px !important;\n\n        svg {\n            z-index: 1;\n            position: absolute;\n            top: 0;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 50px;\n            height: 50px;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 19px;\n        }\n    }\n\n    .osm-ui-react-marker-pointerClassic,\n    .osm-ui-react-marker-pointerClassicThin,\n    .osm-ui-react-marker-pointerCirclePin {\n        svg {\n            top: -20px;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -23px;\n            left: 0;\n        }\n    }\n\n    .osm-ui-react-marker-basicCircle,\n    .osm-ui-react-marker-basicSquare,\n    .osm-ui-react-marker-basicUpTriangle,\n    .osm-ui-react-marker-basicRightTriangle,\n    .osm-ui-react-marker-basicDownTriangle,\n    .osm-ui-react-marker-basicLeftTriangle,\n    .osm-ui-react-marker-basicDiamond {\n        .osm-ui-react-marker-icon-wrapper {\n            display: none;\n        }\n    }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n    .osm-ui-react-marker-shape {\n        width: 5rem !important;\n        height: 5rem !important;\n\n        svg {\n            z-index: 1;\n            position: absolute;\n            top: 0;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 5rem;\n            height: 5rem;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 1.9rem;\n        }\n    }\n\n    .osm-ui-react-marker-pointerClassic,\n    .osm-ui-react-marker-pointerClassicThin,\n    .osm-ui-react-marker-pointerCirclePin {\n        svg {\n            top: -2rem;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -2.3rem;\n            left: 0;\n        }\n    }\n\n    .osm-ui-react-marker-basicCircle,\n    .osm-ui-react-marker-basicSquare,\n    .osm-ui-react-marker-basicUpTriangle,\n    .osm-ui-react-marker-basicRightTriangle,\n    .osm-ui-react-marker-basicDownTriangle,\n    .osm-ui-react-marker-basicLeftTriangle,\n    .osm-ui-react-marker-basicDiamond {\n        .osm-ui-react-marker-icon-wrapper {\n            display: none;\n        }\n    }\n'], ['\n    .osm-ui-react-marker-shape {\n        width: 5rem !important;\n        height: 5rem !important;\n\n        svg {\n            z-index: 1;\n            position: absolute;\n            top: 0;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            width: 5rem;\n            height: 5rem;\n            position: absolute;\n            z-index: 2;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            overflow: visible;\n            font-size: 1.9rem;\n        }\n    }\n\n    .osm-ui-react-marker-pointerClassic,\n    .osm-ui-react-marker-pointerClassicThin,\n    .osm-ui-react-marker-pointerCirclePin {\n        svg {\n            top: -2rem;\n            left: 0;\n        }\n\n        .osm-ui-react-marker-icon-wrapper {\n            top: -2.3rem;\n            left: 0;\n        }\n    }\n\n    .osm-ui-react-marker-basicCircle,\n    .osm-ui-react-marker-basicSquare,\n    .osm-ui-react-marker-basicUpTriangle,\n    .osm-ui-react-marker-basicRightTriangle,\n    .osm-ui-react-marker-basicDownTriangle,\n    .osm-ui-react-marker-basicLeftTriangle,\n    .osm-ui-react-marker-basicDiamond {\n        .osm-ui-react-marker-icon-wrapper {\n            display: none;\n        }\n    }\n']);
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _leaflet = __webpack_require__(16);
+var _leaflet = __webpack_require__(18);
 
 var _leaflet2 = _interopRequireDefault(_leaflet);
 
@@ -4941,11 +5115,11 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactLeaflet = __webpack_require__(12);
+var _reactLeaflet = __webpack_require__(13);
 
 var _styledComponents = __webpack_require__(1);
 
-var _markers = __webpack_require__(71);
+var _markers = __webpack_require__(73);
 
 var _markers2 = _interopRequireDefault(_markers);
 
@@ -4998,7 +5172,7 @@ MapMarker.displayName = 'Map.Marker';
 exports.default = MapMarker;
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5008,43 +5182,43 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pointerClassic = __webpack_require__(72);
+var _pointerClassic = __webpack_require__(74);
 
 var _pointerClassic2 = _interopRequireDefault(_pointerClassic);
 
-var _pointerClassicThin = __webpack_require__(74);
+var _pointerClassicThin = __webpack_require__(76);
 
 var _pointerClassicThin2 = _interopRequireDefault(_pointerClassicThin);
 
-var _pointerCirclePin = __webpack_require__(76);
+var _pointerCirclePin = __webpack_require__(78);
 
 var _pointerCirclePin2 = _interopRequireDefault(_pointerCirclePin);
 
-var _basicCircle = __webpack_require__(78);
+var _basicCircle = __webpack_require__(80);
 
 var _basicCircle2 = _interopRequireDefault(_basicCircle);
 
-var _basicSquare = __webpack_require__(80);
+var _basicSquare = __webpack_require__(82);
 
 var _basicSquare2 = _interopRequireDefault(_basicSquare);
 
-var _basicDiamond = __webpack_require__(82);
+var _basicDiamond = __webpack_require__(84);
 
 var _basicDiamond2 = _interopRequireDefault(_basicDiamond);
 
-var _basicUpTriangle = __webpack_require__(84);
+var _basicUpTriangle = __webpack_require__(86);
 
 var _basicUpTriangle2 = _interopRequireDefault(_basicUpTriangle);
 
-var _basicRightTriangle = __webpack_require__(86);
+var _basicRightTriangle = __webpack_require__(88);
 
 var _basicRightTriangle2 = _interopRequireDefault(_basicRightTriangle);
 
-var _basicDownTriangle = __webpack_require__(88);
+var _basicDownTriangle = __webpack_require__(90);
 
 var _basicDownTriangle2 = _interopRequireDefault(_basicDownTriangle);
 
-var _basicLeftTriangle = __webpack_require__(90);
+var _basicLeftTriangle = __webpack_require__(92);
 
 var _basicLeftTriangle2 = _interopRequireDefault(_basicLeftTriangle);
 
@@ -5064,7 +5238,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5074,7 +5248,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pointerClassic = __webpack_require__(73);
+var _pointerClassic = __webpack_require__(75);
 
 var _pointerClassic2 = _interopRequireDefault(_pointerClassic);
 
@@ -5086,38 +5260,10 @@ exports.default = {
 };
 
 /***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs10\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     transform=\"matrix(1.0285679,0,0,1.0285793,6.4857087,-1035.4834)\"\n     fill=\"#babdb6\"\n     fill-rule=\"evenodd\">\n    <path\n       id=\"path4143\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4141\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <path\n       id=\"colorized\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\" />\n  </g>\n</svg>\n"
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _pointerClassicThin = __webpack_require__(75);
-
-var _pointerClassicThin2 = _interopRequireDefault(_pointerClassicThin);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  iconAnchor: [25, 7],
-  html: _pointerClassicThin2.default
-};
-
-/***/ }),
 /* 75 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   width=\"50\"\n   version=\"1.1\"\n   viewBox=\"0 0 50 50.000001\">\n  <defs\n     id=\"defs12\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.5462)\">\n    <path\n       id=\"path4198\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\"\n       fill=\"#d3d7cf\" />\n    <path\n       id=\"path4180\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"colorized\"\n       fill=\"#babdb6\"\n       style=\"fill:#b7b9bb;fill-opacity:1\">\n      <path\n         id=\"path4148\"\n         style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         d=\"m 24.364,1018.2 a 9.0002,14.789 0 0 0 -0.4661,-0.7149 9.0002,14.789 0 0 0 -0.70854,-0.9089 9.0002,14.789 0 0 0 -0.75984,-0.794 9.0002,14.789 0 0 0 -0.80327,-0.6612 9.0002,14.789 0 0 0 -0.84208,-0.526 9.0002,14.789 0 0 0 -0.86694,-0.388 9.0002,14.789 0 0 0 -0.8872,-0.2426 9.0002,14.789 0 0 0 -0.89968,-0.095 9.0002,14.789 0 0 0 -0.898,0.051 9.0002,14.789 0 0 0 -0.89192,0.1991 9.0002,14.789 0 0 0 -0.8747,0.3448 9.0002,14.789 0 0 0 -0.84996,0.4876 9.0002,14.789 0 0 0 -0.81564,0.6255 9.0002,14.789 0 0 0 -0.77222,0.7531 9.0002,14.789 0 0 0 -0.72564,0.8756 9.0002,14.789 0 0 0 -0.66646,0.9933 9.0002,14.789 0 0 0 -0.43471,0.7664 9.0002,14.789 0 0 0 -0.55284,1.1647 9.0002,14.789 0 0 0 -0.4832,1.2485 9.0002,14.789 0 0 0 -0.40242,1.3199 9.0002,14.789 0 0 0 -0.32007,1.3837 9.0002,14.789 0 0 0 -0.23614,1.4246 9.0002,14.789 0 0 0 -0.1476,1.4579 9.0002,14.789 0 0 0 -0.057379,1.4781 9.0002,14.789 0 0 0 0.031499,1.4757 9.0002,14.789 0 0 0 0.12117,1.4654 9.0002,14.789 0 0 0 0.2097,1.4373 9.0002,14.789 0 0 0 0.29678,1.3965 9.0002,14.789 0 0 0 0.38071,1.3404 9.0002,14.789 0 0 0 0.45822,1.2688 9.0002,14.789 0 0 0 0.53292,1.1923 9.0002,14.789 0 0 0 0.60448,1.0953 l 5.5685,9.15 c 0.43944,0.7219 1.1517,0.7218 1.5911,0 l 5.5685,-9.15 a 9.0002,14.789 0 0 0 0.43471,-0.7665 9.0002,14.789 0 0 0 0.55284,-1.1646 9.0002,14.789 0 0 0 0.4832,-1.2485 9.0002,14.789 0 0 0 0.40242,-1.3199 9.0002,14.789 0 0 0 0.32007,-1.3837 9.0002,14.789 0 0 0 0.23614,-1.4246 9.0002,14.789 0 0 0 0.1476,-1.4579 9.0002,14.789 0 0 0 0.05738,-1.4781 9.0002,14.789 0 0 0 -0.0315,-1.4756 9.0002,14.789 0 0 0 -0.12128,-1.4655 9.0002,14.789 0 0 0 -0.2097,-1.4373 9.0002,14.789 0 0 0 -0.29678,-1.3965 9.0002,14.789 0 0 0 -0.38071,-1.3404 9.0002,14.789 0 0 0 -0.45834,-1.2688 9.0002,14.789 0 0 0 -0.53281,-1.1923 9.0002,14.789 0 0 0 -0.60436,-1.0952 z\" />\n      <circle\n         id=\"path4152\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cy=\"1028.3\"\n         cx=\"18\"\n         r=\"15\" />\n    </g>\n  </g>\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs10\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     transform=\"matrix(1.0285679,0,0,1.0285793,6.4857087,-1035.4834)\"\n     fill=\"#babdb6\"\n     fill-rule=\"evenodd\">\n    <path\n       id=\"path4143\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4141\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <path\n       id=\"colorized\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 28.606,1017.7 a 15,15 0 0 0 -0.77683,-0.7251 15,15 0 0 0 -1.1809,-0.9219 15,15 0 0 0 -1.2664,-0.8054 15,15 0 0 0 -1.3388,-0.6707 15,15 0 0 0 -1.4035,-0.5335 15,15 0 0 0 -1.4449,-0.3935 15,15 0 0 0 -1.4787,-0.2461 15,15 0 0 0 -1.4995,-0.096 15,15 0 0 0 -1.4967,0.052 15,15 0 0 0 -1.4865,0.2019 15,15 0 0 0 -1.4578,0.3497 15,15 0 0 0 -1.4166,0.4946 15,15 0 0 0 -1.3594,0.6345 15,15 0 0 0 -1.287,0.7638 15,15 0 0 0 -1.2094,0.8882 15,15 0 0 0 -1.1108,1.0075 15,15 0 0 0 -0.72452,0.7774 15,15 0 0 0 -0.92139,1.1813 15,15 0 0 0 -0.80533,1.2664 15,15 0 0 0 -0.67071,1.3388 15,15 0 0 0 -0.53344,1.4035 15,15 0 0 0 -0.39357,1.445 15,15 0 0 0 -0.24601,1.4787 15,15 0 0 0 -0.095631,1.4993 15,15 0 0 0 0.052498,1.4968 15,15 0 0 0 0.20195,1.4864 15,15 0 0 0 0.3495,1.4578 15,15 0 0 0 0.49464,1.4165 15,15 0 0 0 0.63451,1.3596 15,15 0 0 0 0.7637,1.287 15,15 0 0 0 0.88821,1.2093 15,15 0 0 0 1.0075,1.111 l 9.2809,9.281 c 0.73239,0.7322 1.9195,0.7321 2.6519,0 l 9.2809,-9.281 a 15,15 0 0 0 0.72452,-0.7775 15,15 0 0 0 0.92139,-1.1812 15,15 0 0 0 0.80533,-1.2664 15,15 0 0 0 0.6707,-1.3388 15,15 0 0 0 0.53345,-1.4035 15,15 0 0 0 0.39357,-1.445 15,15 0 0 0 0.246,-1.4787 15,15 0 0 0 0.09563,-1.4993 15,15 0 0 0 -0.0525,-1.4967 15,15 0 0 0 -0.20213,-1.4865 15,15 0 0 0 -0.34951,-1.4578 15,15 0 0 0 -0.49464,-1.4165 15,15 0 0 0 -0.63451,-1.3596 15,15 0 0 0 -0.76389,-1.287 15,15 0 0 0 -0.88802,-1.2093 15,15 0 0 0 -1.0073,-1.1109 z\" />\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 76 */
@@ -5130,22 +5276,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _pointerCirclePin = __webpack_require__(77);
+var _pointerClassicThin = __webpack_require__(77);
 
-var _pointerCirclePin2 = _interopRequireDefault(_pointerCirclePin);
+var _pointerClassicThin2 = _interopRequireDefault(_pointerClassicThin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 7],
-  html: _pointerCirclePin2.default
+  html: _pointerClassicThin2.default
 };
 
 /***/ }),
 /* 77 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.3371)\">\n    <path\n       id=\"rect4159\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4172\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"qsdf\">\n      <g\n         id=\"g4145\">\n        <rect\n           id=\"rect4141\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#3b3f45;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"18\" />\n        <rect\n           id=\"rect4143\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"17\"\n           fill=\"#888a85\" />\n      </g>\n      <circle\n         id=\"colorized\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cx=\"18\"\n         cy=\"1028.3\"\n         r=\"15\"\n         fill=\"#babdb6\" />\n    </g>\n  </g>\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   width=\"50\"\n   version=\"1.1\"\n   viewBox=\"0 0 50 50.000001\">\n  <defs\n     id=\"defs12\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.5462)\">\n    <path\n       id=\"path4198\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\"\n       fill=\"#d3d7cf\" />\n    <path\n       id=\"path4180\"\n       stroke-linejoin=\"round\"\n       style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 10.924,14.422 l 3.281,5.468 c 0.44,0.733 1.152,0.733 1.592,0 l 3.273,-5.457 A 15,15 0 0 0 33,17.9668 15,15 0 0 0 18.215,2.9788 9.0002,15 0 0 0 18.131,2.9686 9.0002,15 0 0 0 18.088,2.9705 15,15 0 0 0 18,2.9666 Z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"colorized\"\n       fill=\"#babdb6\"\n       style=\"fill:#b7b9bb;fill-opacity:1\">\n      <path\n         id=\"path4148\"\n         style=\"color:#000000;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         d=\"m 24.364,1018.2 a 9.0002,14.789 0 0 0 -0.4661,-0.7149 9.0002,14.789 0 0 0 -0.70854,-0.9089 9.0002,14.789 0 0 0 -0.75984,-0.794 9.0002,14.789 0 0 0 -0.80327,-0.6612 9.0002,14.789 0 0 0 -0.84208,-0.526 9.0002,14.789 0 0 0 -0.86694,-0.388 9.0002,14.789 0 0 0 -0.8872,-0.2426 9.0002,14.789 0 0 0 -0.89968,-0.095 9.0002,14.789 0 0 0 -0.898,0.051 9.0002,14.789 0 0 0 -0.89192,0.1991 9.0002,14.789 0 0 0 -0.8747,0.3448 9.0002,14.789 0 0 0 -0.84996,0.4876 9.0002,14.789 0 0 0 -0.81564,0.6255 9.0002,14.789 0 0 0 -0.77222,0.7531 9.0002,14.789 0 0 0 -0.72564,0.8756 9.0002,14.789 0 0 0 -0.66646,0.9933 9.0002,14.789 0 0 0 -0.43471,0.7664 9.0002,14.789 0 0 0 -0.55284,1.1647 9.0002,14.789 0 0 0 -0.4832,1.2485 9.0002,14.789 0 0 0 -0.40242,1.3199 9.0002,14.789 0 0 0 -0.32007,1.3837 9.0002,14.789 0 0 0 -0.23614,1.4246 9.0002,14.789 0 0 0 -0.1476,1.4579 9.0002,14.789 0 0 0 -0.057379,1.4781 9.0002,14.789 0 0 0 0.031499,1.4757 9.0002,14.789 0 0 0 0.12117,1.4654 9.0002,14.789 0 0 0 0.2097,1.4373 9.0002,14.789 0 0 0 0.29678,1.3965 9.0002,14.789 0 0 0 0.38071,1.3404 9.0002,14.789 0 0 0 0.45822,1.2688 9.0002,14.789 0 0 0 0.53292,1.1923 9.0002,14.789 0 0 0 0.60448,1.0953 l 5.5685,9.15 c 0.43944,0.7219 1.1517,0.7218 1.5911,0 l 5.5685,-9.15 a 9.0002,14.789 0 0 0 0.43471,-0.7665 9.0002,14.789 0 0 0 0.55284,-1.1646 9.0002,14.789 0 0 0 0.4832,-1.2485 9.0002,14.789 0 0 0 0.40242,-1.3199 9.0002,14.789 0 0 0 0.32007,-1.3837 9.0002,14.789 0 0 0 0.23614,-1.4246 9.0002,14.789 0 0 0 0.1476,-1.4579 9.0002,14.789 0 0 0 0.05738,-1.4781 9.0002,14.789 0 0 0 -0.0315,-1.4756 9.0002,14.789 0 0 0 -0.12128,-1.4655 9.0002,14.789 0 0 0 -0.2097,-1.4373 9.0002,14.789 0 0 0 -0.29678,-1.3965 9.0002,14.789 0 0 0 -0.38071,-1.3404 9.0002,14.789 0 0 0 -0.45834,-1.2688 9.0002,14.789 0 0 0 -0.53281,-1.1923 9.0002,14.789 0 0 0 -0.60436,-1.0952 z\" />\n      <circle\n         id=\"path4152\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cy=\"1028.3\"\n         cx=\"18\"\n         r=\"15\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 78 */
@@ -5158,22 +5304,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicCircle = __webpack_require__(79);
+var _pointerCirclePin = __webpack_require__(79);
 
-var _basicCircle2 = _interopRequireDefault(_basicCircle);
+var _pointerCirclePin2 = _interopRequireDefault(_pointerCirclePin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-  iconAnchor: [25, 25],
-  html: _basicCircle2.default
+  iconAnchor: [25, 7],
+  html: _pointerCirclePin2.default
 };
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <circle\n     r=\"7\"\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke-width:0.46666664;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"circle4379\" />\n  <circle\n     r=\"6\"\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.39999998;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"circle4381\" />\n  <circle\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:0.26666665;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"colorized\"\n     r=\"4\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <g\n     id=\"layer1\"\n     fill-rule=\"evenodd\"\n     transform=\"matrix(1.0285714,0,0,1.0285714,6.4857148,-1035.3371)\">\n    <path\n       id=\"rect4159\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;stroke:#707377;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#d3d7cf\"\n       stroke-width=\"5\" />\n    <path\n       id=\"path4172\"\n       style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n       d=\"m 18,2.9668 a 15,15 0 0 0 -15,15 15,15 0 0 0 14,14.951 v 5.082 h 2 v -5.068 a 15,15 0 0 0 14,-14.965 15,15 0 0 0 -15,-15 z\"\n       transform=\"translate(0,1010.4)\"\n       stroke=\"#fff\"\n       stroke-width=\"3\" />\n    <g\n       id=\"qsdf\">\n      <g\n         id=\"g4145\">\n        <rect\n           id=\"rect4141\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#3b3f45;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"18\" />\n        <rect\n           id=\"rect4143\"\n           style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n           height=\"8\"\n           width=\"1\"\n           y=\"1040.4\"\n           x=\"17\"\n           fill=\"#888a85\" />\n      </g>\n      <circle\n         id=\"colorized\"\n         style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n         cx=\"18\"\n         cy=\"1028.3\"\n         r=\"15\"\n         fill=\"#babdb6\" />\n    </g>\n  </g>\n</svg>\n"
 
 /***/ }),
 /* 80 */
@@ -5186,22 +5332,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicSquare = __webpack_require__(81);
+var _basicCircle = __webpack_require__(81);
 
-var _basicSquare2 = _interopRequireDefault(_basicSquare);
+var _basicCircle2 = _interopRequireDefault(_basicCircle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicSquare2.default
+  html: _basicCircle2.default
 };
 
 /***/ }),
 /* 81 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <rect\n     rx=\"1.9999999\"\n     y=\"18\"\n     x=\"18\"\n     height=\"14\"\n     width=\"14\"\n     id=\"rect4950\"\n     style=\"color:#000000;overflow:visible;fill:#707377;fill-rule:evenodd;stroke-width:1.99999988\" />\n  <rect\n     style=\"color:#000000;overflow:visible;fill:#ffffff;fill-rule:evenodd;stroke-width:1.71428561\"\n     id=\"rect4952\"\n     width=\"12\"\n     height=\"12\"\n     x=\"19\"\n     y=\"19\"\n     rx=\"1.7142856\" />\n  <rect\n     rx=\"1.1428572\"\n     y=\"21\"\n     x=\"21\"\n     height=\"8\"\n     width=\"8\"\n     id=\"colorized\"\n     style=\"color:#000000;overflow:visible;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:1.14285696\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <circle\n     r=\"7\"\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke-width:0.46666664;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"circle4379\" />\n  <circle\n     r=\"6\"\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.39999998;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"circle4381\" />\n  <circle\n     fill=\"#babdb6\"\n     cy=\"25\"\n     cx=\"25\"\n     style=\"color:#000000;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:0.26666665;color-rendering:auto;image-rendering:auto;shape-rendering:auto\"\n     id=\"colorized\"\n     r=\"4\" />\n</svg>\n"
 
 /***/ }),
 /* 82 */
@@ -5214,22 +5360,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicDiamond = __webpack_require__(83);
+var _basicSquare = __webpack_require__(83);
 
-var _basicDiamond2 = _interopRequireDefault(_basicDiamond);
+var _basicSquare2 = _interopRequireDefault(_basicSquare);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicDiamond2.default
+  html: _basicSquare2.default
 };
 
 /***/ }),
 /* 83 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <rect\n     transform=\"rotate(45)\"\n     rx=\"1.9999999\"\n     y=\"-7\"\n     x=\"28.355339\"\n     height=\"14\"\n     width=\"14\"\n     id=\"rect4950\"\n     style=\"color:#000000;overflow:visible;fill:#707377;fill-rule:evenodd;stroke-width:1.99999988\" />\n  <rect\n     transform=\"rotate(45)\"\n     style=\"color:#000000;overflow:visible;fill:#ffffff;fill-rule:evenodd;stroke-width:1.71428561\"\n     id=\"rect4952\"\n     width=\"12\"\n     height=\"12\"\n     x=\"29.355339\"\n     y=\"-6\"\n     rx=\"1.7142856\" />\n  <rect\n     transform=\"rotate(45)\"\n     rx=\"1.1428572\"\n     y=\"-4\"\n     x=\"31.355339\"\n     height=\"8\"\n     width=\"8\"\n     id=\"colorized\"\n     style=\"color:#000000;overflow:visible;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:1.14285696\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <rect\n     rx=\"1.9999999\"\n     y=\"18\"\n     x=\"18\"\n     height=\"14\"\n     width=\"14\"\n     id=\"rect4950\"\n     style=\"color:#000000;overflow:visible;fill:#707377;fill-rule:evenodd;stroke-width:1.99999988\" />\n  <rect\n     style=\"color:#000000;overflow:visible;fill:#ffffff;fill-rule:evenodd;stroke-width:1.71428561\"\n     id=\"rect4952\"\n     width=\"12\"\n     height=\"12\"\n     x=\"19\"\n     y=\"19\"\n     rx=\"1.7142856\" />\n  <rect\n     rx=\"1.1428572\"\n     y=\"21\"\n     x=\"21\"\n     height=\"8\"\n     width=\"8\"\n     id=\"colorized\"\n     style=\"color:#000000;overflow:visible;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:1.14285696\" />\n</svg>\n"
 
 /***/ }),
 /* 84 */
@@ -5242,22 +5388,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicUpTriangle = __webpack_require__(85);
+var _basicDiamond = __webpack_require__(85);
 
-var _basicUpTriangle2 = _interopRequireDefault(_basicUpTriangle);
+var _basicDiamond2 = _interopRequireDefault(_basicDiamond);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicUpTriangle2.default
+  html: _basicDiamond2.default
 };
 
 /***/ }),
 /* 85 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 24.94467,16.997516 c -0.355558,0.01831 -0.677638,0.215534 -0.855768,0.523815 L 16.641484,30.424867 C 16.238527,31.125597 16.744296,31.999964 17.552586,32 h 14.894832 c 0.808297,-3.6e-5 1.314052,-0.874403 0.911097,-1.575133 L 25.911102,17.521331 C 25.713204,17.178752 25.339719,16.97632 24.94467,16.997516 Z\"\n     id=\"path4895\" />\n  <path\n     id=\"path4891\"\n     d=\"m 24.954434,18.64508 c -0.292813,0.01509 -0.558055,0.177497 -0.704751,0.431374 l -6.133166,10.626387 c -0.331848,0.577067 0.08467,1.29713 0.750318,1.297159 h 12.266332 c 0.665656,-2.9e-5 1.082162,-0.720092 0.750316,-1.297159 L 25.750319,19.076454 c -0.162974,-0.282121 -0.470551,-0.44883 -0.795885,-0.431374 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     id=\"colorized\"\n     d=\"m 25.026358,21.559568 c -0.207877,-0.0097 -0.403797,0.09739 -0.507821,0.277625 l -3.943074,6.828173 c -0.21463,0.371461 0.0542,0.8358 0.48322,0.834632 h 7.882633 c 0.429017,0.0012 0.697851,-0.463171 0.483221,-0.834632 l -3.943075,-6.828173 c -0.0946,-0.163931 -0.266053,-0.268523 -0.455104,-0.277625 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <rect\n     transform=\"rotate(45)\"\n     rx=\"1.9999999\"\n     y=\"-7\"\n     x=\"28.355339\"\n     height=\"14\"\n     width=\"14\"\n     id=\"rect4950\"\n     style=\"color:#000000;overflow:visible;fill:#707377;fill-rule:evenodd;stroke-width:1.99999988\" />\n  <rect\n     transform=\"rotate(45)\"\n     style=\"color:#000000;overflow:visible;fill:#ffffff;fill-rule:evenodd;stroke-width:1.71428561\"\n     id=\"rect4952\"\n     width=\"12\"\n     height=\"12\"\n     x=\"29.355339\"\n     y=\"-6\"\n     rx=\"1.7142856\" />\n  <rect\n     transform=\"rotate(45)\"\n     rx=\"1.1428572\"\n     y=\"-4\"\n     x=\"31.355339\"\n     height=\"8\"\n     width=\"8\"\n     id=\"colorized\"\n     style=\"color:#000000;overflow:visible;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke-width:1.14285696\" />\n</svg>\n"
 
 /***/ }),
 /* 86 */
@@ -5270,22 +5416,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicRightTriangle = __webpack_require__(87);
+var _basicUpTriangle = __webpack_require__(87);
 
-var _basicRightTriangle2 = _interopRequireDefault(_basicRightTriangle);
+var _basicUpTriangle2 = _interopRequireDefault(_basicUpTriangle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicRightTriangle2.default
+  html: _basicUpTriangle2.default
 };
 
 /***/ }),
 /* 87 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"M 32.500484,24.44267 C 32.482174,24.087112 32.28495,23.765032 31.976669,23.586902 L 19.073133,16.139484 c -0.70073,-0.402957 -1.575097,0.102812 -1.575133,0.911102 l 0,14.894832 c 3.6e-5,0.808297 0.874403,1.314052 1.575133,0.911097 l 12.903536,-7.447413 c 0.342579,-0.197898 0.545011,-0.571383 0.523815,-0.966432 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"M 30.85292,24.452434 C 30.83783,24.159621 30.675423,23.894379 30.421546,23.747683 L 19.795159,17.614517 c -0.577067,-0.331848 -1.29713,0.08467 -1.297159,0.750318 l 0,12.266332 c 2.9e-5,0.665656 0.720092,1.082162 1.297159,0.750316 l 10.626387,-6.133164 c 0.282121,-0.162974 0.44883,-0.470551 0.431374,-0.795885 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 27.938432,24.524358 c 0.0097,-0.207877 -0.09739,-0.403797 -0.277625,-0.507821 l -6.828173,-3.943074 c -0.371461,-0.21463 -0.8358,0.0542 -0.834632,0.48322 v 7.882633 c -0.0012,0.429017 0.463171,0.697851 0.834632,0.483221 l 6.828173,-3.943075 c 0.163931,-0.0946 0.268523,-0.266053 0.277625,-0.455104 z\"\n     id=\"colorized\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   version=\"1.1\"\n   width=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   height=\"50\"\n   id=\"svg2\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 24.94467,16.997516 c -0.355558,0.01831 -0.677638,0.215534 -0.855768,0.523815 L 16.641484,30.424867 C 16.238527,31.125597 16.744296,31.999964 17.552586,32 h 14.894832 c 0.808297,-3.6e-5 1.314052,-0.874403 0.911097,-1.575133 L 25.911102,17.521331 C 25.713204,17.178752 25.339719,16.97632 24.94467,16.997516 Z\"\n     id=\"path4895\" />\n  <path\n     id=\"path4891\"\n     d=\"m 24.954434,18.64508 c -0.292813,0.01509 -0.558055,0.177497 -0.704751,0.431374 l -6.133166,10.626387 c -0.331848,0.577067 0.08467,1.29713 0.750318,1.297159 h 12.266332 c 0.665656,-2.9e-5 1.082162,-0.720092 0.750316,-1.297159 L 25.750319,19.076454 c -0.162974,-0.282121 -0.470551,-0.44883 -0.795885,-0.431374 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     id=\"colorized\"\n     d=\"m 25.026358,21.559568 c -0.207877,-0.0097 -0.403797,0.09739 -0.507821,0.277625 l -3.943074,6.828173 c -0.21463,0.371461 0.0542,0.8358 0.48322,0.834632 h 7.882633 c 0.429017,0.0012 0.697851,-0.463171 0.483221,-0.834632 l -3.943075,-6.828173 c -0.0946,-0.163931 -0.266053,-0.268523 -0.455104,-0.277625 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n</svg>\n"
 
 /***/ }),
 /* 88 */
@@ -5298,22 +5444,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicDownTriangle = __webpack_require__(89);
+var _basicRightTriangle = __webpack_require__(89);
 
-var _basicDownTriangle2 = _interopRequireDefault(_basicDownTriangle);
+var _basicRightTriangle2 = _interopRequireDefault(_basicRightTriangle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicDownTriangle2.default
+  html: _basicRightTriangle2.default
 };
 
 /***/ }),
 /* 89 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"M 24.94467,31.998484 C 24.589112,31.980174 24.267032,31.78295 24.088902,31.474669 L 16.641484,18.571133 c -0.402957,-0.70073 0.102812,-1.575097 0.911102,-1.575133 h 14.894832 c 0.808297,3.6e-5 1.314052,0.874403 0.911097,1.575133 l -7.447413,12.903536 c -0.197898,0.342579 -0.571383,0.545011 -0.966432,0.523815 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"M 24.954434,30.35092 C 24.661621,30.33583 24.396379,30.173423 24.249683,29.919546 L 18.116517,19.293159 c -0.331848,-0.577067 0.08467,-1.29713 0.750318,-1.297159 h 12.266332 c 0.665656,2.9e-5 1.082162,0.720092 0.750316,1.297159 l -6.133164,10.626387 c -0.162974,0.282121 -0.470551,0.44883 -0.795885,0.431374 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 25.026358,27.436432 c -0.207877,0.0097 -0.403797,-0.09739 -0.507821,-0.277625 l -3.943074,-6.828173 c -0.21463,-0.371461 0.0542,-0.8358 0.48322,-0.834632 h 7.882633 c 0.429017,-0.0012 0.697851,0.463171 0.483221,0.834632 l -3.943075,6.828173 c -0.0946,0.163931 -0.266053,0.268523 -0.455104,0.277625 z\"\n     id=\"colorized\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"M 32.500484,24.44267 C 32.482174,24.087112 32.28495,23.765032 31.976669,23.586902 L 19.073133,16.139484 c -0.70073,-0.402957 -1.575097,0.102812 -1.575133,0.911102 l 0,14.894832 c 3.6e-5,0.808297 0.874403,1.314052 1.575133,0.911097 l 12.903536,-7.447413 c 0.342579,-0.197898 0.545011,-0.571383 0.523815,-0.966432 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"M 30.85292,24.452434 C 30.83783,24.159621 30.675423,23.894379 30.421546,23.747683 L 19.795159,17.614517 c -0.577067,-0.331848 -1.29713,0.08467 -1.297159,0.750318 l 0,12.266332 c 2.9e-5,0.665656 0.720092,1.082162 1.297159,0.750316 l 10.626387,-6.133164 c 0.282121,-0.162974 0.44883,-0.470551 0.431374,-0.795885 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 27.938432,24.524358 c 0.0097,-0.207877 -0.09739,-0.403797 -0.277625,-0.507821 l -6.828173,-3.943074 c -0.371461,-0.21463 -0.8358,0.0542 -0.834632,0.48322 v 7.882633 c -0.0012,0.429017 0.463171,0.697851 0.834632,0.483221 l 6.828173,-3.943075 c 0.163931,-0.0946 0.268523,-0.266053 0.277625,-0.455104 z\"\n     id=\"colorized\" />\n</svg>\n"
 
 /***/ }),
 /* 90 */
@@ -5326,22 +5472,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _basicLeftTriangle = __webpack_require__(91);
+var _basicDownTriangle = __webpack_require__(91);
 
-var _basicLeftTriangle2 = _interopRequireDefault(_basicLeftTriangle);
+var _basicDownTriangle2 = _interopRequireDefault(_basicDownTriangle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
   iconAnchor: [25, 25],
-  html: _basicLeftTriangle2.default
+  html: _basicDownTriangle2.default
 };
 
 /***/ }),
 /* 91 */
 /***/ (function(module, exports) {
 
-module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"m 17.499516,24.55333 c 0.01831,0.355558 0.215534,0.677638 0.523815,0.855768 l 12.903536,7.447418 c 0.70073,0.402957 1.575097,-0.102812 1.575133,-0.911102 V 17.050582 c -3.6e-5,-0.808297 -0.874403,-1.314052 -1.575133,-0.911097 l -12.903536,7.447413 c -0.342579,0.197898 -0.545011,0.571383 -0.523815,0.966432 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 19.14708,24.543566 c 0.01509,0.292813 0.177497,0.558055 0.431374,0.704751 l 10.626387,6.133166 c 0.577067,0.331848 1.29713,-0.08467 1.297159,-0.750318 l 0,-12.266332 c -2.9e-5,-0.665656 -0.720092,-1.082162 -1.297159,-0.750316 l -10.626387,6.133164 c -0.282121,0.162974 -0.44883,0.470551 -0.431374,0.795885 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 22.061568,24.471642 c -0.0097,0.207877 0.09739,0.403797 0.277625,0.507821 l 6.828173,3.943074 c 0.371461,0.21463 0.8358,-0.0542 0.834632,-0.48322 v -7.882633 c 0.0012,-0.429017 -0.463171,-0.697851 -0.834632,-0.483221 l -6.828173,3.943075 c -0.163931,0.0946 -0.268523,0.266053 -0.277625,0.455104 z\"\n     id=\"colorized\" />\n</svg>\n"
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"M 24.94467,31.998484 C 24.589112,31.980174 24.267032,31.78295 24.088902,31.474669 L 16.641484,18.571133 c -0.402957,-0.70073 0.102812,-1.575097 0.911102,-1.575133 h 14.894832 c 0.808297,3.6e-5 1.314052,0.874403 0.911097,1.575133 l -7.447413,12.903536 c -0.197898,0.342579 -0.571383,0.545011 -0.966432,0.523815 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"M 24.954434,30.35092 C 24.661621,30.33583 24.396379,30.173423 24.249683,29.919546 L 18.116517,19.293159 c -0.331848,-0.577067 0.08467,-1.29713 0.750318,-1.297159 h 12.266332 c 0.665656,2.9e-5 1.082162,0.720092 0.750316,1.297159 l -6.133164,10.626387 c -0.162974,0.282121 -0.470551,0.44883 -0.795885,0.431374 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 25.026358,27.436432 c -0.207877,0.0097 -0.403797,-0.09739 -0.507821,-0.277625 l -3.943074,-6.828173 c -0.21463,-0.371461 0.0542,-0.8358 0.48322,-0.834632 h 7.882633 c 0.429017,-0.0012 0.697851,0.463171 0.483221,0.834632 l -3.943075,6.828173 c -0.0946,0.163931 -0.266053,0.268523 -0.455104,0.277625 z\"\n     id=\"colorized\" />\n</svg>\n"
 
 /***/ }),
 /* 92 */
@@ -5354,7 +5500,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Modal = __webpack_require__(93);
+var _basicLeftTriangle = __webpack_require__(93);
+
+var _basicLeftTriangle2 = _interopRequireDefault(_basicLeftTriangle);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  iconAnchor: [25, 25],
+  html: _basicLeftTriangle2.default
+};
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports) {
+
+module.exports = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<svg\n   xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n   xmlns:cc=\"http://creativecommons.org/ns#\"\n   xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n   xmlns:svg=\"http://www.w3.org/2000/svg\"\n   xmlns=\"http://www.w3.org/2000/svg\"\n   id=\"svg2\"\n   height=\"50\"\n   viewBox=\"0 0 50 50.000001\"\n   width=\"50\"\n   version=\"1.1\">\n  <defs\n     id=\"defs14\" />\n  <metadata\n     id=\"metadata7\">\n    <rdf:RDF>\n      <cc:Work\n         rdf:about=\"\">\n        <dc:format>image/svg+xml</dc:format>\n        <dc:type\n           rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />\n        <dc:title></dc:title>\n      </cc:Work>\n    </rdf:RDF>\n  </metadata>\n  <path\n     id=\"path4895\"\n     d=\"m 17.499516,24.55333 c 0.01831,0.355558 0.215534,0.677638 0.523815,0.855768 l 12.903536,7.447418 c 0.70073,0.402957 1.575097,-0.102812 1.575133,-0.911102 V 17.050582 c -3.6e-5,-0.808297 -0.874403,-1.314052 -1.575133,-0.911097 l -12.903536,7.447413 c -0.342579,0.197898 -0.545011,0.571383 -0.523815,0.966432 z\"\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#707377;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.10198498;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.73104167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 19.14708,24.543566 c 0.01509,0.292813 0.177497,0.558055 0.431374,0.704751 l 10.626387,6.133166 c 0.577067,0.331848 1.29713,-0.08467 1.297159,-0.750318 l 0,-12.266332 c -2.9e-5,-0.665656 -0.720092,-1.082162 -1.297159,-0.750316 l -10.626387,6.133164 c -0.282121,0.162974 -0.44883,0.470551 -0.431374,0.795885 z\"\n     id=\"path4891\" />\n  <path\n     style=\"color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#b7b9bb;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.11253786;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate\"\n     d=\"m 22.061568,24.471642 c -0.0097,0.207877 0.09739,0.403797 0.277625,0.507821 l 6.828173,3.943074 c 0.371461,0.21463 0.8358,-0.0542 0.834632,-0.48322 v -7.882633 c 0.0012,-0.429017 -0.463171,-0.697851 -0.834632,-0.483221 l -6.828173,3.943075 c -0.163931,0.0946 -0.268523,0.266053 -0.277625,0.455104 z\"\n     id=\"colorized\" />\n</svg>\n"
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Modal = __webpack_require__(95);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
@@ -5363,7 +5537,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _Modal2.default;
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5377,7 +5551,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 10%;\n  background: ', ';\n  color: ', ';\n  overflow-y: auto;\n\n  &.transition-appear {\n    opacity: 0;\n  }\n\n  &.transition-appear.transition-appear-active {\n    opacity: 1;\n    transition: opacity 300ms ease-in-out;\n  }\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 20px;\n  }\n\n  .content {\n    margin-top: 30px;\n    padding: 20px;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 20px;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 20px;\n  }\n'], ['\n  z-index: 1000;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 10%;\n  background: ', ';\n  color: ', ';\n  overflow-y: auto;\n\n  &.transition-appear {\n    opacity: 0;\n  }\n\n  &.transition-appear.transition-appear-active {\n    opacity: 1;\n    transition: opacity 300ms ease-in-out;\n  }\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  &.container-parent {\n    position: absolute;\n  }\n  &.container-root {\n    position: fixed;\n  }\n\n  &.scroll-content .header {\n    margin-bottom: 20px;\n  }\n\n  .content {\n    margin-top: 30px;\n    padding: 20px;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 20px;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 20px;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  z-index: 1000;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 3rem;\n  background: ', ';\n  color: ', ';\n  overflow-y: auto;\n  opacity: 0;\n\n  transition: opacity 300ms ease-in-out;\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  position: absolute;\n\n  &.scroll-content .header {\n    margin-bottom: 2rem;\n  }\n\n  .content {\n    padding: 2rem;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 2rem;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 2rem;\n  }\n'], ['\n  z-index: 1000;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  padding: 3rem;\n  background: ', ';\n  color: ', ';\n  overflow-y: auto;\n  opacity: 0;\n\n  transition: opacity 300ms ease-in-out;\n\n  &.scroll-content {\n    display: flex;\n    flex-direction: column;\n    overflow-y: none;\n  }\n\n  position: absolute;\n\n  &.scroll-content .header {\n    margin-bottom: 2rem;\n  }\n\n  .content {\n    padding: 2rem;\n  }\n\n  &.scroll-content .content {\n    overflow-y: auto;\n    margin: 0;\n    border-color: ', ';\n    border-style: ', ';\n    border-width: 1px 0 1px 0;\n\n    &::after {\n      content: \'\';\n      margin-top: 2rem;\n      display: block;\n    }\n  }\n\n  .content.loading {\n    display: none;\n  }\n\n  &.scroll-content .footer {\n    margin-top: 2rem;\n  }\n']);
 
 var _react = __webpack_require__(0);
 
@@ -5387,7 +5561,9 @@ var _propTypes = __webpack_require__(2);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactTransitionGroup = __webpack_require__(10);
+var _Transition = __webpack_require__(10);
+
+var _Transition2 = _interopRequireDefault(_Transition);
 
 var _classnames2 = __webpack_require__(3);
 
@@ -5397,7 +5573,7 @@ var _styledComponents = __webpack_require__(1);
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _Title = __webpack_require__(11);
+var _Title = __webpack_require__(12);
 
 var _Title2 = _interopRequireDefault(_Title);
 
@@ -5479,36 +5655,48 @@ var Modal = function (_React$Component) {
         loading: loading
       });
 
+      var transitionStyles = {
+        entered: {
+          opacity: 0.95
+        }
+      };
+
       return _react2.default.createElement(
-        _reactTransitionGroup.CSSTransitionGroup,
+        _Transition2.default,
         {
-          transitionName: 'transition',
-          transitionAppear: true,
-          transitionAppearTimeout: 300,
-          transitionEnter: false,
-          transitionLeave: false
+          'in': true,
+          timeout: 300,
+          appear: true,
+          onEntered: this.onOpen,
+          onExited: this.onClose
         },
-        _react2.default.createElement(
-          StyledAside,
-          _extends({ key: 'modal', className: asideClasses }, rest),
-          _react2.default.createElement(
-            'header',
-            { className: 'header' },
-            title && _react2.default.createElement(
-              _Title2.default,
-              { inHeader: true },
-              title
+        function (state) {
+          return _react2.default.createElement(
+            StyledAside,
+            _extends({
+              key: 'modal',
+              className: asideClasses,
+              style: transitionStyles[state]
+            }, rest),
+            (header || title) && _react2.default.createElement(
+              'header',
+              { className: 'header' },
+              title && _react2.default.createElement(
+                _Title2.default,
+                { inHeader: true },
+                title
+              ),
+              !loading && header && header
             ),
-            !loading && header && header
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: contentClasses },
-            children
-          ),
-          !loading && footer && footer,
-          loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
-        )
+            _react2.default.createElement(
+              'div',
+              { className: contentClasses },
+              children
+            ),
+            !loading && footer && footer,
+            loading && _react2.default.createElement(_Loader2.default, { centered: true, label: loaderLabel })
+          );
+        }
       );
     }
   }]);
@@ -5547,6 +5735,403 @@ Modal.defaultProps = {
 Modal.displayName = 'Modal';
 
 exports.default = Modal;
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Notification = __webpack_require__(97);
+
+var _Notification2 = _interopRequireDefault(_Notification);
+
+var _Group = __webpack_require__(98);
+
+var _Group2 = _interopRequireDefault(_Group);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_Notification2.default.Group = _Group2.default;
+
+exports.default = _Notification2.default;
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  width: 50rem;\n  max-width: 100%;\n\n  @media (max-width: 50rem) {\n    width: 100%;\n    font-size: 1.2rem;\n  }\n\n  transition: transform 500ms ease-in-out;\n\n  &.position-top-right {\n    top: 0;\n    right: 0;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-top-left {\n    top: 0;\n    left: 0;\n    transform: translate(-100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-bottom-left {\n    bottom: 0;\n    left: 0;\n    transform: translate(-100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n\n  &.position-bottom-right {\n    bottom: 0;\n    right: 0;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n\n  &.position-top {\n    top: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n'], ['\n  position: absolute;\n  width: 50rem;\n  max-width: 100%;\n\n  @media (max-width: 50rem) {\n    width: 100%;\n    font-size: 1.2rem;\n  }\n\n  transition: transform 500ms ease-in-out;\n\n  &.position-top-right {\n    top: 0;\n    right: 0;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-top-left {\n    top: 0;\n    left: 0;\n    transform: translate(-100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-bottom-left {\n    bottom: 0;\n    left: 0;\n    transform: translate(-100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n\n  &.position-bottom-right {\n    bottom: 0;\n    right: 0;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n\n  &.position-top {\n    top: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, -100%);\n    }\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    transform: translate(100%, 0);\n\n    &.direction-vertical {\n      transform: translate(0, 100%);\n    }\n  }\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  z-index: 1000;\n  width: 100%;\n  height: 4rem;\n  margin: 0.2rem 0;\n  padding: 0 0.5rem;\n  overflow-y: auto;\n  font-size: 1.3rem;\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  transition: height 500ms ease-in-out, margin 500ms ease-in-out;\n\n  &.position-top-right,\n  &.position-bottom-right {\n    border-left-width: ', ';\n  }\n\n  &.position-top-left,\n  &.position-bottom-left {\n    border-right-width: ', ';\n  }\n\n  &.position-top {\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    border-top-width: ', ';\n  }\n\n  .icon {\n    display: inline-block;\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    height: 100%;\n    margin-right: 1rem;\n    line-height: 4rem;\n  }\n\n  .close-btn {\n    display: inline-block;\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    height: 100%;\n    padding: 0 1rem;\n    margin-left: 0.5rem;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .content {\n    display: inline-flex;\n    flex: 2 1 auto;\n    height: 100%;\n    align-items: center;\n    justify-content: space-between;\n\n    & * {\n      margin-left: 0.5rem;\n    }\n  }\n'], ['\n  display: flex;\n  z-index: 1000;\n  width: 100%;\n  height: 4rem;\n  margin: 0.2rem 0;\n  padding: 0 0.5rem;\n  overflow-y: auto;\n  font-size: 1.3rem;\n  color: ', ';\n  background: ', ';\n  border-color: ', ';\n  border-style: ', ';\n  border-width: 0;\n  box-shadow: ', ';\n\n  transition: height 500ms ease-in-out, margin 500ms ease-in-out;\n\n  &.position-top-right,\n  &.position-bottom-right {\n    border-left-width: ', ';\n  }\n\n  &.position-top-left,\n  &.position-bottom-left {\n    border-right-width: ', ';\n  }\n\n  &.position-top {\n    border-bottom-width: ', ';\n  }\n\n  &.position-bottom {\n    border-top-width: ', ';\n  }\n\n  .icon {\n    display: inline-block;\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    height: 100%;\n    margin-right: 1rem;\n    line-height: 4rem;\n  }\n\n  .close-btn {\n    display: inline-block;\n    color: ', ';\n    background: transparent;\n    border-width: 0;\n    height: 100%;\n    padding: 0 1rem;\n    margin-left: 0.5rem;\n\n    &:hover {\n      color: ', ';\n    }\n  }\n\n  .content {\n    display: inline-flex;\n    flex: 2 1 auto;\n    height: 100%;\n    align-items: center;\n    justify-content: space-between;\n\n    & * {\n      margin-left: 0.5rem;\n    }\n  }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _Transition = __webpack_require__(10);
+
+var _Transition2 = _interopRequireDefault(_Transition);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _classnames2 = __webpack_require__(3);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _reactFontawesome = __webpack_require__(11);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _index = __webpack_require__(4);
+
+var _Button = __webpack_require__(14);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var contexts = ['info', 'success', 'warning', 'danger'];
+
+var Container = _styledComponents2.default.div(_templateObject);
+
+var StyledAside = _styledComponents2.default.aside(_templateObject2, function (props) {
+  return props.theme.alert[props.context].color;
+}, function (props) {
+  return props.theme.backgroundColor;
+}, function (props) {
+  return props.theme.alert[props.context].borderColor;
+}, function (props) {
+  return props.theme.borderStyle;
+}, function (props) {
+  return props.theme.sidebar.boxShadow;
+}, function (props) {
+  return props.theme.borderWidth;
+}, function (props) {
+  return props.theme.borderWidth;
+}, function (props) {
+  return props.theme.borderWidth;
+}, function (props) {
+  return props.theme.borderWidth;
+}, function (props) {
+  return props.theme.alert[props.context].borderColor;
+}, function (props) {
+  return props.theme.controlColor;
+}, function (props) {
+  return props.theme.hoverControlColor;
+});
+
+var Notification = function (_React$Component) {
+  _inherits(Notification, _React$Component);
+
+  function Notification(props) {
+    _classCallCheck(this, Notification);
+
+    var _this = _possibleConstructorReturn(this, (Notification.__proto__ || Object.getPrototypeOf(Notification)).call(this, props));
+
+    _this.state = {
+      opened: true,
+      closing: false,
+      timeout: null
+    };
+
+    _this.close = _this.close.bind(_this);
+    _this.setTimeout = _this.setTimeout.bind(_this);
+    _this.clearTimeout = _this.clearTimeout.bind(_this);
+    return _this;
+  }
+
+  _createClass(Notification, [{
+    key: 'close',
+    value: function close() {
+      this.setState({ opened: false });
+    }
+  }, {
+    key: 'setTimeout',
+    value: function (_setTimeout) {
+      function setTimeout() {
+        return _setTimeout.apply(this, arguments);
+      }
+
+      setTimeout.toString = function () {
+        return _setTimeout.toString();
+      };
+
+      return setTimeout;
+    }(function () {
+      this.setState({
+        timeout: setTimeout(this.close, this.props.timespan)
+      });
+    })
+  }, {
+    key: 'clearTimeout',
+    value: function (_clearTimeout) {
+      function clearTimeout() {
+        return _clearTimeout.apply(this, arguments);
+      }
+
+      clearTimeout.toString = function () {
+        return _clearTimeout.toString();
+      };
+
+      return clearTimeout;
+    }(function () {
+      this.setState({
+        timeout: clearTimeout(this.state.timeout)
+      });
+    })
+  }, {
+    key: 'render',
+    value: function render() {
+      var _classnames,
+          _this2 = this;
+
+      var _props = this.props,
+          context = _props.context,
+          callToActions = _props.callToActions,
+          onTimeoutClose = _props.onTimeoutClose,
+          children = _props.children,
+          position = _props.position,
+          direction = _props.direction,
+          pending = _props.pending,
+          className = _props.className;
+
+
+      var asideClasses = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _classnames));
+
+      var contentClasses = (0, _classnames3.default)('content');
+
+      var transitionStyles = {
+        entered: {
+          transform: 'translate(0,0)'
+        }
+      };
+
+      var closingTransitionStyles = {
+        exiting: {
+          height: 0,
+          margin: 0
+        }
+      };
+
+      var ctas = callToActions.map(function (cta, index) {
+        return _react2.default.createElement(
+          _Button2.default,
+          { key: index, size: 'xs', shape: 'square', onClick: cta.action },
+          cta.text
+        );
+      });
+
+      return _react2.default.createElement(
+        _Transition2.default,
+        {
+          'in': this.state.opened,
+          timeout: 500,
+          appear: true,
+          onEntered: pending ? function () {
+            return null;
+          } : this.setTimeout,
+          onExited: function onExited() {
+            return _this2.setState({ closing: true });
+          }
+        },
+        function (state1) {
+          return _react2.default.createElement(
+            Container,
+            { className: asideClasses, style: transitionStyles[state1] },
+            _react2.default.createElement(
+              _Transition2.default,
+              {
+                'in': !_this2.state.closing,
+                timeout: 500,
+                appear: true,
+                onExited: onTimeoutClose
+              },
+              function (state2) {
+                return _react2.default.createElement(
+                  StyledAside,
+                  _extends({
+                    key: 'notification'
+                  }, _this2.props, {
+                    className: asideClasses,
+                    style: closingTransitionStyles[state2],
+                    onMouseEnter: _this2.clearTimeout,
+                    onMouseLeave: pending ? function () {
+                      return null;
+                    } : _this2.setTimeout
+                  }),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'icon' },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: _index.contextIcons[context], size: 'lg' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: contentClasses },
+                    children,
+                    _react2.default.createElement(
+                      'div',
+                      null,
+                      ctas
+                    )
+                  ),
+                  !pending && _react2.default.createElement(
+                    'button',
+                    { className: 'close-btn', onClick: function onClick() {
+                        return _this2.close();
+                      } },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'close', size: 'lg' })
+                  )
+                );
+              }
+            )
+          );
+        }
+      );
+    }
+  }]);
+
+  return Notification;
+}(_react2.default.Component);
+
+Notification.contexts = contexts;
+
+Notification.propTypes = {
+  id: _propTypes2.default.number.isRequired,
+  children: _propTypes2.default.node.isRequired,
+  onTimeoutClose: _propTypes2.default.func,
+  context: _propTypes2.default.oneOf(contexts),
+  position: _propTypes2.default.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left', 'top', 'bottom']),
+  direction: _propTypes2.default.oneOf(['horizontal', 'vertical']),
+  callToActions: _propTypes2.default.array,
+  pending: _propTypes2.default.bool,
+  timespan: _propTypes2.default.number,
+  className: _propTypes2.default.string
+};
+
+Notification.defaultProps = {
+  context: 'info',
+  position: 'top-right',
+  direction: 'horizontal',
+  callToActions: [],
+  pending: false,
+  timespan: 4000,
+  className: ''
+};
+
+Notification.displayName = 'Notification';
+
+exports.default = Notification;
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  width: 50rem;\n  @media (max-width: 50rem) {\n    width: 100%;\n  }\n\n  &:empty {\n    padding-top: 0;\n    padding-bottom: 0;\n  }\n\n  &.position-top-right {\n    top: 0;\n    right: 0;\n    justify-content: flex-end;\n  }\n\n  &.position-top-left {\n    top: 0;\n    left: 0;\n    justify-content: flex-start;\n  }\n\n  &.position-bottom-right {\n    bottom: 0;\n    right: 0;\n    justify-content: flex-end;\n    flex-direction: column-reverse;\n  }\n\n  &.position-bottom-left {\n    bottom: 0;\n    left: 0;\n    justify-content: flex-start;\n    flex-direction: column-reverse;\n  }\n\n  &.position-top {\n    top: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    flex-direction: column-reverse;\n  }\n\n  & .notif-item {\n    position: relative;\n    width: 100%;\n  }\n'], ['\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  width: 50rem;\n  @media (max-width: 50rem) {\n    width: 100%;\n  }\n\n  &:empty {\n    padding-top: 0;\n    padding-bottom: 0;\n  }\n\n  &.position-top-right {\n    top: 0;\n    right: 0;\n    justify-content: flex-end;\n  }\n\n  &.position-top-left {\n    top: 0;\n    left: 0;\n    justify-content: flex-start;\n  }\n\n  &.position-bottom-right {\n    bottom: 0;\n    right: 0;\n    justify-content: flex-end;\n    flex-direction: column-reverse;\n  }\n\n  &.position-bottom-left {\n    bottom: 0;\n    left: 0;\n    justify-content: flex-start;\n    flex-direction: column-reverse;\n  }\n\n  &.position-top {\n    top: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  &.position-bottom {\n    bottom: 0;\n    left: 0;\n    right: 0;\n    width: 50%;\n    margin-left: auto;\n    margin-right: auto;\n    flex-direction: column-reverse;\n  }\n\n  & .notif-item {\n    position: relative;\n    width: 100%;\n  }\n']);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _classnames2 = __webpack_require__(3);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _styledComponents = __webpack_require__(1);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var StyledAside = _styledComponents2.default.aside(_templateObject);
+var NotificationGroup = function NotificationGroup(_ref) {
+  var _classnames;
+
+  var position = _ref.position,
+      direction = _ref.direction,
+      className = _ref.className,
+      children = _ref.children,
+      rest = _objectWithoutProperties(_ref, ['position', 'direction', 'className', 'children']);
+
+  var asideClasses = (0, _classnames3.default)(className, (_classnames = {}, _defineProperty(_classnames, 'position-' + position, true), _defineProperty(_classnames, 'direction-' + direction, true), _classnames));
+
+  return _react2.default.createElement(
+    StyledAside,
+    _extends({ key: 'notification-group', className: asideClasses }, rest),
+    _react2.default.Children.map(children, function (child) {
+      return _react2.default.cloneElement(child, {
+        className: 'notif-item',
+        direction: direction
+      });
+    })
+  );
+};
+
+NotificationGroup.propTypes = {
+  position: _propTypes2.default.oneOf(['top-left', 'top-right', 'bottom-right', 'bottom-left', 'top', 'bottom']),
+  direction: _propTypes2.default.oneOf(['horizontal', 'vertical']),
+  className: _propTypes2.default.string,
+  children: _propTypes2.default.node.isRequired
+};
+
+NotificationGroup.defaultProps = {
+  position: 'top-right',
+  direction: 'horizontal',
+  className: ''
+};
+
+NotificationGroup.displayName = 'Notification.Group';
+
+exports.default = NotificationGroup;
 
 /***/ })
 /******/ ]);
