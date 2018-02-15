@@ -34,11 +34,13 @@ storiesOf('Form', module)
             <Form.Checkbox
               label='Check me out !'
               id='hello'
+              value='good'
               disabled={disabled}
             />
             <Form.Checkbox
               label='No, check ME out !'
               id='hello2'
+              value='better'
               disabled={disabled}
             />
           </Form.Group>

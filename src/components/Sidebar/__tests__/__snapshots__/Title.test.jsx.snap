@@ -1,11 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  margin: -3rem 0 5rem;
+}
+
+.c1.in-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 0 0 2rem;
+  line-height: 5rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <h2
-    className="sidebar-title sc-jzJRlG jKSUDG"
+    className="sidebar-title c1"
   >
     <div />
   </h2>
@@ -13,11 +29,27 @@ exports[`When using snapshots Should render with an element children 1`] = `
 `;
 
 exports[`When using snapshots Should render with className and other props 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  margin: -3rem 0 5rem;
+}
+
+.c1.in-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 0 0 2rem;
+  line-height: 5rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <h2
-    className="my-class sidebar-title sc-jzJRlG jKSUDG"
+    className="my-class sidebar-title c1"
   >
     <div />
   </h2>
@@ -25,11 +57,27 @@ exports[`When using snapshots Should render with className and other props 1`] =
 `;
 
 exports[`When using snapshots Should render with other props 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  margin: -3rem 0 5rem;
+}
+
+.c1.in-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 0 0 2rem;
+  line-height: 5rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <h2
-    className="sidebar-title sc-jzJRlG jKSUDG"
+    className="sidebar-title c1"
   >
     <div />
   </h2>
@@ -37,11 +85,27 @@ exports[`When using snapshots Should render with other props 1`] = `
 `;
 
 exports[`When using snapshots Should render with the className prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  margin: -3rem 0 5rem;
+}
+
+.c1.in-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 0 0 2rem;
+  line-height: 5rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <h2
-    className="my-class sidebar-title sc-jzJRlG jKSUDG"
+    className="my-class sidebar-title c1"
   >
     <div />
   </h2>

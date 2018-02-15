@@ -68,6 +68,7 @@ const Checkbox = ({ id, label, className, ...props }) => {
 
 Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   label: PropTypes.string,
   disabled: PropTypes.bool,
   className: PropTypes.string

@@ -1,4 +1,4 @@
-import React from 'react';
+import 'jest-styled-components';
 // import { shallow } from 'enzyme';
 import { snapshotWithElementChildren } from 'helpers/tests';
 import { Toolbar } from 'index';

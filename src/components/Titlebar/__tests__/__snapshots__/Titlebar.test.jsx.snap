@@ -1,11 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  left: 0;
+  right: 0;
+  font-weight: 500;
+  color: #101113;
+  border-color: #dbdcdd;
+  border-style: solid;
+  border-width: 0;
+  background: #ffffff;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.position-top {
+  top: 0;
+  border-bottom-width: 1px;
+}
+
+.c1.position-bottom {
+  bottom: 0;
+  border-top-width: 1px;
+}
+
+.c1.xs {
+  height: 3rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+.c1.sm {
+  height: 3.5rem;
+  font-size: 1.6rem;
+  line-height: 3.5rem;
+}
+
+.c1.md {
+  height: 4rem;
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+
+.c1.lg {
+  height: 4.5rem;
+  font-size: 1.9rem;
+  line-height: 4.5rem;
+}
+
+.c1.maximized {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  border-width: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <header
-    className="md position-top container-parent sc-kEYyzF dQQSQE"
+    className="md position-top container-parent c1"
   >
     <div />
   </header>
@@ -13,11 +82,80 @@ exports[`When using snapshots Should render with an element children 1`] = `
 `;
 
 exports[`When using snapshots with the maximized prop Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  z-index: 1000;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  left: 0;
+  right: 0;
+  font-weight: 500;
+  color: #101113;
+  border-color: #dbdcdd;
+  border-style: solid;
+  border-width: 0;
+  background: #ffffff;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.c1.container-parent {
+  position: absolute;
+}
+
+.c1.container-root {
+  position: fixed;
+}
+
+.c1.position-top {
+  top: 0;
+  border-bottom-width: 1px;
+}
+
+.c1.position-bottom {
+  bottom: 0;
+  border-top-width: 1px;
+}
+
+.c1.xs {
+  height: 3rem;
+  font-size: 1.4rem;
+  line-height: 3rem;
+}
+
+.c1.sm {
+  height: 3.5rem;
+  font-size: 1.6rem;
+  line-height: 3.5rem;
+}
+
+.c1.md {
+  height: 4rem;
+  font-size: 1.8rem;
+  line-height: 4rem;
+}
+
+.c1.lg {
+  height: 4.5rem;
+  font-size: 1.9rem;
+  line-height: 4.5rem;
+}
+
+.c1.maximized {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  border-width: 0;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <header
-    className="md position-top container-parent maximized sc-kEYyzF dQQSQE"
+    className="md position-top container-parent maximized c1"
   >
     <div />
   </header>
