@@ -18,6 +18,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   color: #101113;
   background-color: #ffffff;
   border-color: #101113;
+  height: 2.7rem;
 }
 
 .c2 {
@@ -33,6 +34,8 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   font-weight: 400;
   padding-left: 2.5rem;
   cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .c2 + label:before,
@@ -47,15 +50,30 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   content: '';
   width: 1.7rem;
   height: 1.7rem;
-  -webkit-transition: border 0.15s ease-in-out,color 0.15s ease-in-out;
-  transition: border 0.15s ease-in-out,color 0.15s ease-in-out;
+}
+
+.c2 + label:after {
+  border-color: transparent;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  padding-left: 0.5px;
+  content: '\\f00c';
+  color: #707377;
+  font-family: FontAwesome;
+  font-size: 1.4rem;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:checked + label:after {
-  padding-left: 0.5px;
-  content: '\\f00c';
-  font-family: FontAwesome;
-  font-size: 1.4rem;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:disabled + label,
@@ -69,12 +87,16 @@ exports[`When using snapshots Checkbox should render with an element children 1`
 >
   <div
     className="c1"
+    disabled={false}
+    size="md"
+    value="myValue"
   >
     <input
       checked={undefined}
       className="c2"
       disabled={false}
       id="1"
+      size="md"
       type="checkbox"
       value="myValue"
     >

@@ -268,7 +268,60 @@ export const config = {
       }
     },
     checkbox: {
-      borderColor: colors.darkGray3
+      borderColor: colors.darkGray3,
+      color: colors.darkGray2,
+      sm: {
+        height: '2.2rem',
+        size: '1.4rem',
+        top: '0.7rem',
+        innerSize: '1.1rem',
+        paddingLeft: '2rem'
+      },
+      md: {
+        height: '2.7rem',
+        size: '1.7rem',
+        top: '0.4rem',
+        innerSize: '1.4rem',
+        paddingLeft: '2.5rem'
+      },
+      lg: {
+        height: '3.2rem',
+        size: '2.1rem',
+        top: '0.1rem',
+        innerSize: '1.8rem',
+        paddingLeft: '3rem'
+      }
+    },
+    radio: {
+      borderColor: colors.darkGray3,
+      backgroundColor: colors.darkGray2,
+      sm: {
+        height: '2.2rem',
+        size: '1.4rem',
+        top: '0.7rem',
+        innerSize: '0.8rem',
+        innerTop: '1rem',
+        innerLeft: '0.3rem',
+        paddingLeft: '2rem'
+      },
+      md: {
+        height: '2.7rem',
+        size: '1.7rem',
+        top: '0.4rem',
+        innerSize: '0.9rem',
+        innerTop: '0.8rem',
+        innerLeft: '0.4rem',
+        paddingLeft: '2.5rem'
+      },
+      lg: {
+        height: '3.2rem',
+        size: '2.1rem',
+        top: '0.1rem',
+        innerSize: '1.3rem',
+        innerTop: '0.5rem',
+        innerLeft: '0.4rem',
+        paddingLeft: '3rem'
+      }
     },
     hint: {
       fontSize: '1.4rem',
