@@ -35,12 +35,59 @@ storiesOf('Form', module)
               label='Check me out !'
               id='hello'
               value='good'
+              size='sm'
               disabled={disabled}
             />
             <Form.Checkbox
               label='No, check ME out !'
               id='hello2'
               value='better'
+              size='md'
+              disabled={disabled}
+            />
+            <Form.Checkbox
+              label='Alright guys, I am the cool checkbox !'
+              id='hello3'
+              value='best'
+              size='lg'
+              disabled={disabled}
+            />
+          </Form.Group>
+        </Form>
+      </DefaultTheme>
+    );
+  })
+  .addWithInfo('Radio', () => {
+    const formGroupContext = select('Context', Form.Group.contexts);
+    const disabled = boolean('Disabled', false);
+
+    return (
+      <DefaultTheme>
+        <KnobsAlert />
+        <Form>
+          <Form.Group context={formGroupContext}>
+            <Form.Radio
+              name='test'
+              label='I am a small radio button !'
+              id='lvl1'
+              value='cool'
+              size='sm'
+              disabled={disabled}
+            />
+            <Form.Radio
+              name='test'
+              label='I am a medium radio button !!'
+              id='lvl2'
+              value='cooler'
+              disabled={disabled}
+            />
+            <Form.Radio
+              name='test'
+              label='I am a large radio button !!!'
+              id='lvl3'
+              value='coolest'
+              defaultChecked
+              size='lg'
               disabled={disabled}
             />
           </Form.Group>

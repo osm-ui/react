@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`When using snapshots Checkbox should render with an element children 1`] = `
+exports[`When using snapshots Radio should render with an element children 1`] = `
 .c0 {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
@@ -45,7 +45,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   left: 0;
   top: 0.4rem;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 50%;
   border-color: #b7b9bb;
   content: '';
   width: 1.7rem;
@@ -53,27 +53,29 @@ exports[`When using snapshots Checkbox should render with an element children 1`
 }
 
 .c2 + label::after {
-  border-color: transparent;
+  border: none;
+  padding-left: 0.5px;
+  content: ' ';
+  width: 0.9rem;
+  height: 0.9rem;
+  top: 0.8rem;
+  left: 0.4rem;
+  background-color: #707377;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  padding-left: 0.5px;
-  content: '\\f00c';
-  color: #707377;
-  font-family: FontAwesome;
-  font-size: 1.4rem;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:checked + label::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.3s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:disabled + label,
@@ -88,6 +90,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   <div
     className="c1"
     disabled={false}
+    name="myName"
     size="md"
     value="myValue"
   >
@@ -96,8 +99,9 @@ exports[`When using snapshots Checkbox should render with an element children 1`
       className="c2"
       disabled={false}
       id="1"
+      name="myName"
       size="md"
-      type="checkbox"
+      type="radio"
       value="myValue"
     >
       <div />
