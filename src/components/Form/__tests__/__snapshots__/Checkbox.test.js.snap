@@ -38,8 +38,8 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   transition: opacity 0.2s ease-in-out;
 }
 
-.c2 + label:before,
-.c2 + label:after {
+.c2 + label::before,
+.c2 + label::after {
   display: inline-block;
   position: absolute;
   left: 0;
@@ -52,7 +52,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   height: 1.7rem;
 }
 
-.c2 + label:after {
+.c2 + label::after {
   border-color: transparent;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -67,7 +67,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
-.c2:checked + label:after {
+.c2:checked + label::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -77,7 +77,7 @@ exports[`When using snapshots Checkbox should render with an element children 1`
 }
 
 .c2:disabled + label,
-.c2:disabled + label:after {
+.c2:disabled + label::after {
   opacity: 0.3;
   cursor: not-allowed;
 }

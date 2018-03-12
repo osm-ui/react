@@ -29,8 +29,8 @@ const StyledRadio = styled.input.attrs({
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: inline-block;
       position: absolute;
       left: 0;
@@ -43,7 +43,7 @@ const StyledRadio = styled.input.attrs({
       height: ${props => props.theme.form.radio[props.size].size};
     }
 
-    &:after {
+    &::after {
       border: none;
       padding-left: 0.5px;
       content: ' ';
@@ -57,13 +57,13 @@ const StyledRadio = styled.input.attrs({
     }
   }
 
-  &:checked + label:after {
+  &:checked + label::after {
     transform: scale(1);
     transition: transform 0.3s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   }
 
   &:disabled + label,
-  &:disabled + label:after {
+  &:disabled + label::after {
     opacity: 0.3;
     cursor: not-allowed;
   }
