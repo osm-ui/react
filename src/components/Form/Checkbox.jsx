@@ -51,18 +51,18 @@ const StyledCheckbox = styled.input.attrs({
       color: ${props => props.theme.form.checkbox.color};
       font-family: FontAwesome;
       font-size: ${props => props.theme.form.checkbox[props.size].innerSize};
-      transition: transform 0.5s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+      transition: transform 0.2s cubic-bezier(0.8, -0.33, 0.2, 1.33);
     }
   }
 
   &:checked + label::after {
     transform: scale(1);
-    transition: transform 0.5s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.2s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   }
 
   &:disabled + label,
   &:disabled + label::after {
-    opacity: 0.3;
+    opacity: ${props => props.theme.form.checkbox.disabledOpacity};
     cursor: not-allowed;
   }
 `;

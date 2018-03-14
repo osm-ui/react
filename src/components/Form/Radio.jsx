@@ -53,18 +53,18 @@ const StyledRadio = styled.input.attrs({
       left: ${props => props.theme.form.radio[props.size].innerLeft};
       background-color: ${props => props.theme.form.radio.backgroundColor};
       transform: scale(0);
-      transition: transform 0.3s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+      transition: transform 0.2s cubic-bezier(0.8, -0.33, 0.2, 1.33);
     }
   }
 
   &:checked + label::after {
     transform: scale(1);
-    transition: transform 0.3s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+    transition: transform 0.2s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   }
 
   &:disabled + label,
   &:disabled + label::after {
-    opacity: 0.3;
+    opacity: ${props => props.theme.form.radio.disabledOpacity};
     cursor: not-allowed;
   }
 `;

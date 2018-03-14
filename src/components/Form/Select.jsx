@@ -38,6 +38,10 @@ const StyledSelect = styled(VirtualizedSelect)`
     }
   }
 
+  &.Select--single.is-disabled {
+    opacity: ${props => props.theme.form.input.disabledOpacity};
+  }
+
   .Select-input > input {
     padding: 0.1rem;
     line-height: 3.2rem;
