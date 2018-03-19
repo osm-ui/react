@@ -13,6 +13,10 @@ const StyledTextArea = styled.textarea`
   border-radius: ${props => props.theme.form.input.borderRadius};
   box-shadow: ${props => props.theme.form.input.boxShadow};
 
+  &.form-control {
+    height: 100%;
+  }
+
   &:focus,
   &.form-control:focus {
     opacity: ${props => props.theme.form.input.focusOpacity};
@@ -22,24 +26,41 @@ const StyledTextArea = styled.textarea`
   }
 `;
 
-const Textarea = ({ rows, disabled, hint, className, ...props }) => (
-  <div>
-    <StyledTextArea
-      className={classnames(className, 'form-control')}
-      rows={rows}
-      disabled={disabled}
-      {...props}
-    />
-    {hint && <InputHint>{hint}</InputHint>}
-  </div>
-);
+class Textarea extends React.Component {
+  render() {
+    const {
+      rows,
+      disabled,
+      hint,
+      className,
+      innerRef,
+      style,
+      ...props
+    } = this.props;
+
+    return (
+      <div className="textarea-container" style={style}>
+        <StyledTextArea
+          className={classnames(className, 'form-control')}
+          rows={rows}
+          innerRef={innerRef}
+          disabled={disabled}
+          {...props}
+        />
+        {hint && <InputHint>{hint}</InputHint>}
+      </div>
+    );
+  }
+}
 
 Textarea.propTypes = {
   rows: PropTypes.number,
   disabled: PropTypes.bool,
   hint: PropTypes.string,
   resize: PropTypes.oneOf(['none', 'vertical', 'horizontal']),
-  className: PropTypes.string
+  innerRef: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.object
 };
 
 Textarea.defaultProps = {
@@ -47,9 +68,12 @@ Textarea.defaultProps = {
   disabled: false,
   hint: '',
   resize: 'vertical',
-  className: ''
+  innerRef: null,
+  className: '',
+  style: null
 };
 
 Textarea.displayName = 'Form.Textarea';
+Textarea.style = StyledTextArea;
 
 export default Textarea;

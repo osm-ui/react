@@ -33,3 +33,4 @@ export Map from 'components/Map';
 export Modal from 'components/Modal';
 export Notification from 'components/Notification';
 export Osmose from 'components/Osmose';
+export Editor from 'components/Osm';
