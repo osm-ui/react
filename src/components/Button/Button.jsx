@@ -167,5 +167,6 @@ Button.defaultProps = {
 };
 
 Button.displayName = 'Button';
+Button.style = StyledButton;
 
 export default Button;

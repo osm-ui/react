@@ -12,6 +12,10 @@ const StyledInput = styled.input`
   border-radius: ${props => props.theme.form.input.borderRadius};
   box-shadow: ${props => props.theme.form.input.boxShadow};
 
+  &.form-control {
+    height: 100%;
+  }
+
   &:focus,
   &.form-control:focus {
     opacity: ${props => props.theme.form.input.focusOpacity};
@@ -21,32 +25,52 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = ({ type, disabled, hint, className, ...props }) => (
-  <div>
-    <StyledInput
-      className={classnames(className, 'form-control')}
-      type={type}
-      disabled={disabled}
-      {...props}
-    />
-    {hint && <InputHint>{hint}</InputHint>}
-  </div>
-);
+class Input extends React.Component {
+  render() {
+    const {
+      type,
+      disabled,
+      hint,
+      className,
+      innerRef,
+      style,
+      ...props
+    } = this.props;
+
+    return (
+      <div className="input-container" style={style}>
+        <StyledInput
+          className={classnames(className, 'form-control')}
+          type={type}
+          disabled={disabled}
+          innerRef={innerRef}
+          {...props}
+        />
+        {hint && <InputHint>{hint}</InputHint>}
+      </div>
+    );
+  }
+}
 
 Input.propTypes = {
   type: PropTypes.string,
   disabled: PropTypes.bool,
   hint: PropTypes.string,
-  className: PropTypes.string
+  innerRef: PropTypes.func,
+  className: PropTypes.string,
+  style: PropTypes.object
 };
 
 Input.defaultProps = {
   type: 'text',
   disabled: false,
   hint: '',
-  className: ''
+  innerRef: null,
+  className: '',
+  style: null
 };
 
 Input.displayName = 'Form.Input';
+Input.style = StyledInput;
 
 export default Input;

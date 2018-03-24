@@ -30,6 +30,7 @@ function loadStories() {
     require('../stories/Modal');
     require('../stories/Notification');
     require('../stories/Osmose');
+    require('../stories/Osm');
     /* eslint-enable */
 }
 
