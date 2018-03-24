@@ -29,6 +29,7 @@ function loadStories() {
     require('../stories/Map');
     require('../stories/Modal');
     require('../stories/Notification');
+    require('../stories/Osmose');
     /* eslint-enable */
 }
 

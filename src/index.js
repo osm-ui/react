@@ -32,3 +32,4 @@ export Titlebar from 'components/Titlebar';
 export Map from 'components/Map';
 export Modal from 'components/Modal';
 export Notification from 'components/Notification';
+export Osmose from 'components/Osmose';

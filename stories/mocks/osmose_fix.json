@@ -1,0 +1,82 @@
+{
+  "maxlon": -61.590266799999995,
+  "subtitle": "École primaire Louis Andrea 1, RUE EUTROPE MARIAN, 97122, BAIE MAHAULT (positioned: building, matching: manual)",
+  "elems": [
+    {
+      "node": true,
+      "fixes": [
+        {
+          "add": [
+            {
+              "k": "ref:UAI",
+              "vlink": "http://www.education.gouv.fr/pid24302/annuaire-resultat-recherche.html?lycee_name=9710194J",
+              "v": "9710194J"
+            },
+            {
+              "k": "school:FR",
+              "v": "primaire"
+            },
+            {
+              "k": "source",
+              "v": "data.gouv.fr:Éducation Nationale - 05/2016"
+            }
+          ],
+          "num": 0,
+          "del": [],
+          "mod": []
+        },
+        {
+          "add": [
+            {
+              "k": "ref:UAI",
+              "vlink": "http://www.education.gouv.fr/pid24302/annuaire-resultat-recherche.html?lycee_name=9710194J",
+              "v": "9710194J"
+            },
+            {
+              "k": "school:FR",
+              "v": "primaire"
+            },
+            {
+              "k": "source",
+              "v": "data.gouv.fr:Éducation Nationale - 05/2016"
+            }
+          ],
+          "num": 1,
+          "del": [
+            "amenity"
+          ],
+          "mod": [
+            {
+              "k": "name",
+              "v": "École primaire Louis Andrea 1"
+            }
+          ]
+        }
+      ],
+      "type": "node",
+      "id": 4685618649,
+      "tags": [
+        {
+          "k": "amenity",
+          "v": "school"
+        },
+        {
+          "k": "name",
+          "v": "Collège Maurice SATINEAU"
+        }
+      ]
+    }
+  ],
+  "minlat": 16.2581911,
+  "b_date": "2018-03-11",
+  "elems_id": "node4685618649",
+  "maxlat": 16.2621911,
+  "lat": "16.2601911",
+  "new_elems": [],
+  "minlon": -61.5942668,
+  "title": "School, integration suggestion",
+  "url_help": "http://wiki.openstreetmap.org/wiki/Osmose/errors",
+  "lon": "-61.5922668",
+  "item": 8031,
+  "error_id": 16567871739
+}
