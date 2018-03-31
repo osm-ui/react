@@ -8,7 +8,6 @@ const Container = styled.div`
   color: ${props => props.theme.form.label.color};
   background-color: ${props => props.theme.form.label.backgroundColor};
   border-color: ${props => props.theme.form.label.borderColor};
-  height: ${props => props.theme.form.checkbox[props.size].height};
 `;
 
 const StyledRadio = styled.input.attrs({
@@ -16,6 +15,7 @@ const StyledRadio = styled.input.attrs({
   checked: props => props.checked,
   disabled: props => props.disabled
 })`
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
@@ -23,7 +23,7 @@ const StyledRadio = styled.input.attrs({
 
   & + label {
     font-size: ${props => props.theme.form.radio[props.size].size};
-    line-height: ${props => props.theme.form.radio[props.size].size};
+    line-height: ${props => props.theme.form.radio[props.size].lineHeight};
     font-weight: ${props => props.theme.form.label.fontWeight};
     padding-left: ${props => props.theme.form.radio[props.size].paddingLeft};
     cursor: pointer;

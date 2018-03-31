@@ -274,25 +274,28 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        height: '2.2rem',
+        lineHeight: '2.6rem',
         size: '1.4rem',
         top: '0.7rem',
-        innerSize: '1.1rem',
-        paddingLeft: '1rem'
+        innerSize: '1rem',
+        innerTop: '0rem',
+        paddingLeft: '2.6rem'
       },
       md: {
-        height: '2.7rem',
+        lineHeight: '3.2rem',
         size: '1.7rem',
         top: '0.4rem',
         innerSize: '1.4rem',
-        paddingLeft: '1.5rem'
+        innerTop: '-0.4rem',
+        paddingLeft: '3rem'
       },
       lg: {
-        height: '3.2rem',
+        lineHeight: '4rem',
         size: '2.1rem',
-        top: '0.1rem',
-        innerSize: '1.8rem',
-        paddingLeft: '2rem'
+        top: '0.9rem',
+        innerSize: '1.7rem',
+        innerTop: '-0.1rem',
+        paddingLeft: '3.4rem'
       }
     },
     radio: {
@@ -301,31 +304,31 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        height: '2.2rem',
+        lineHeight: '2.6rem',
         size: '1.4rem',
         top: '0.7rem',
         innerSize: '0.8rem',
         innerTop: '1rem',
         innerLeft: '0.3rem',
-        paddingLeft: '1rem'
+        paddingLeft: '2.6rem'
       },
       md: {
-        height: '2.7rem',
+        lineHeight: '3.2rem',
         size: '1.7rem',
-        top: '0.4rem',
+        top: '0.7rem',
         innerSize: '0.9rem',
-        innerTop: '0.8rem',
+        innerTop: '1.1rem',
         innerLeft: '0.4rem',
-        paddingLeft: '1.5rem'
+        paddingLeft: '3rem'
       },
       lg: {
-        height: '3.2rem',
+        lineHeight: '4rem',
         size: '2.1rem',
-        top: '0.1rem',
+        top: '0.9rem',
         innerSize: '1.3rem',
-        innerTop: '0.5rem',
+        innerTop: '1.3rem',
         innerLeft: '0.4rem',
-        paddingLeft: '2rem'
+        paddingLeft: '3.4rem'
       }
     },
     hint: {
