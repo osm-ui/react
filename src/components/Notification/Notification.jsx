@@ -91,12 +91,13 @@ const Container = styled.div`
 `;
 
 const StyledAside = styled.aside`
+  position: relative;
   display: flex;
   z-index: 1000;
   width: 100%;
   height: 4rem;
   margin: 0.4rem 0;
-  padding: 0 2rem;
+  padding: 0 4rem 0 2rem;
   overflow-y: auto;
   font-size: ${props => props.theme.notification.fontSize};
   color: ${props => props.theme.notification[props.context].color};
