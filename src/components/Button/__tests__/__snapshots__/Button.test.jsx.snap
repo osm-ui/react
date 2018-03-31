@@ -195,23 +195,23 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.btn-xs {
   font-size: 1.2rem;
-  line-height: 2.1rem;
-  padding: 0 1.4rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 
 .c1.btn-sm {
-  line-height: 3rem;
-  padding: 0 1.6rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 .c1.btn-md {
-  line-height: 3.8rem;
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .c1.btn-lg {
-  line-height: 4.5rem;
-  padding: 0 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 .c1.shape-round.btn-xs {
@@ -438,23 +438,23 @@ exports[`When using snapshots on an anchor typed Button Should render with an el
 
 .c1.btn-xs {
   font-size: 1.2rem;
-  line-height: 2.1rem;
-  padding: 0 1.4rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 
 .c1.btn-sm {
-  line-height: 3rem;
-  padding: 0 1.6rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 .c1.btn-md {
-  line-height: 3.8rem;
-  padding: 0 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .c1.btn-lg {
-  line-height: 4.5rem;
-  padding: 0 2.4rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 .c1.shape-round.btn-xs {
