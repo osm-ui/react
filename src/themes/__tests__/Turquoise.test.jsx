@@ -2,8 +2,8 @@ import React from 'react';
 import {
   snapshotWithElementChildren,
   snapshotWithTextChildren
-} from '../../helpers/tests';
-import Turquoise from '../Turquoise';
+} from 'helpers/tests';
+import Turquoise from 'themes/Turquoise';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>

@@ -1,14 +1,270 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c2,
+.c2.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c2.shape-square {
+  border-radius: 4px;
+}
+
+.c2.shape-round {
+  border-radius: 50%;
+}
+
+.c2.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c2.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c2.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c2.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c2.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c2.md .fa {
+  font-size: 1.6rem;
+}
+
+.c2.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c2.lg .fa {
+  font-size: 2rem;
+}
+
+.c2.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c2.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:active,
+.c2.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:active.in-group,
+.c2.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3.direction-column.position-left-center > *,
+.c3.direction-column.position-left-top > *,
+.c3.direction-column.position-center-top > *,
+.c3.direction-column.position-right-top > *,
+.c3.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c3.direction-column.position-left-bottom > *,
+.c3.direction-column.position-center-bottom > *,
+.c3.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c3.direction-row.position-center-top > *,
+.c3.direction-row.position-left-top > *,
+.c3.direction-row.position-left-center > *,
+.c3.direction-row.position-left-bottom > *,
+.c3.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c3.direction-row.position-right-top > *,
+.c3.direction-row.position-right-center > *,
+.c3.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c3.direction-column.position-left-top,
+.c3.direction-column.position-left-center,
+.c3.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c3.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c3.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c3.direction-column.position-right-top,
+.c3.direction-column.position-right-center,
+.c3.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c3.direction-row.position-left-top,
+.c3.direction-row.position-center-top,
+.c3.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c3.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c3.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c3.direction-row.position-left-bottom,
+.c3.direction-row.position-center-bottom,
+.c3.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c3.direction-column.position-left-top.opened,
+.c3.direction-row.position-left-top.opened,
+.c3.direction-column.position-center-top.opened,
+.c3.direction-row.position-center-top.opened,
+.c3.direction-column.position-right-top.opened,
+.c3.direction-row.position-right-top.opened,
+.c3.direction-column.position-right-center.opened,
+.c3.direction-row.position-right-center.opened,
+.c3.direction-column.position-right-bottom.opened,
+.c3.direction-row.position-right-bottom.opened,
+.c3.direction-column.position-center-bottom.opened,
+.c3.direction-row.position-center-bottom.opened,
+.c3.direction-column.position-left-bottom.opened,
+.c3.direction-row.position-left-bottom.opened,
+.c3.direction-column.position-left-center.opened,
+.c3.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column c1"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c2"
       onClick={[Function]}
       size="md"
     >
@@ -19,7 +275,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column c3"
       onClick={null}
     >
       <div
@@ -31,14 +287,270 @@ exports[`When using snapshots Should render with an element children 1`] = `
 `;
 
 exports[`When using snapshots Should render with the direction and position prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c3,
+.c3.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c3.shape-square {
+  border-radius: 4px;
+}
+
+.c3.shape-round {
+  border-radius: 50%;
+}
+
+.c3.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c3.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c3.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c3.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c3.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c3.md .fa {
+  font-size: 1.6rem;
+}
+
+.c3.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c3.lg .fa {
+  font-size: 2rem;
+}
+
+.c3.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c3.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c3.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c3.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c3.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c3.btn:active,
+.c3.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c3.btn:active.in-group,
+.c3.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c2.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2.direction-column.position-left-center > *,
+.c2.direction-column.position-left-top > *,
+.c2.direction-column.position-center-top > *,
+.c2.direction-column.position-right-top > *,
+.c2.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c2.direction-column.position-left-bottom > *,
+.c2.direction-column.position-center-bottom > *,
+.c2.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c2.direction-row.position-center-top > *,
+.c2.direction-row.position-left-top > *,
+.c2.direction-row.position-left-center > *,
+.c2.direction-row.position-left-bottom > *,
+.c2.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c2.direction-row.position-right-top > *,
+.c2.direction-row.position-right-center > *,
+.c2.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c2.direction-column.position-left-top,
+.c2.direction-column.position-left-center,
+.c2.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c2.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c2.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c2.direction-column.position-right-top,
+.c2.direction-column.position-right-center,
+.c2.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c2.direction-row.position-left-top,
+.c2.direction-row.position-center-top,
+.c2.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c2.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c2.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c2.direction-row.position-left-bottom,
+.c2.direction-row.position-center-bottom,
+.c2.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c2.direction-column.position-left-top.opened,
+.c2.direction-row.position-left-top.opened,
+.c2.direction-column.position-center-top.opened,
+.c2.direction-row.position-center-top.opened,
+.c2.direction-column.position-right-top.opened,
+.c2.direction-row.position-right-top.opened,
+.c2.direction-column.position-right-center.opened,
+.c2.direction-row.position-right-center.opened,
+.c2.direction-column.position-right-bottom.opened,
+.c2.direction-row.position-right-bottom.opened,
+.c2.direction-column.position-center-bottom.opened,
+.c2.direction-row.position-center-bottom.opened,
+.c2.direction-column.position-left-bottom.opened,
+.c2.direction-row.position-left-bottom.opened,
+.c2.direction-column.position-left-center.opened,
+.c2.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-right-top direction-row sc-dnqmqq ZATcm"
+    className="position-right-top direction-row c1"
   >
     <div
-      className="position-right-top direction-row sc-iwsKbI fVCUCV"
+      className="position-right-top direction-row c2"
       onClick={null}
     >
       <div
@@ -46,7 +558,7 @@ exports[`When using snapshots Should render with the direction and position prop
       />
     </div>
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c3"
       onClick={[Function]}
       size="md"
     >
@@ -61,14 +573,270 @@ exports[`When using snapshots Should render with the direction and position prop
 `;
 
 exports[`When using snapshots Should render with the direction prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c2,
+.c2.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c2.shape-square {
+  border-radius: 4px;
+}
+
+.c2.shape-round {
+  border-radius: 50%;
+}
+
+.c2.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c2.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c2.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c2.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c2.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c2.md .fa {
+  font-size: 1.6rem;
+}
+
+.c2.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c2.lg .fa {
+  font-size: 2rem;
+}
+
+.c2.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c2.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:active,
+.c2.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:active.in-group,
+.c2.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3.direction-column.position-left-center > *,
+.c3.direction-column.position-left-top > *,
+.c3.direction-column.position-center-top > *,
+.c3.direction-column.position-right-top > *,
+.c3.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c3.direction-column.position-left-bottom > *,
+.c3.direction-column.position-center-bottom > *,
+.c3.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c3.direction-row.position-center-top > *,
+.c3.direction-row.position-left-top > *,
+.c3.direction-row.position-left-center > *,
+.c3.direction-row.position-left-bottom > *,
+.c3.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c3.direction-row.position-right-top > *,
+.c3.direction-row.position-right-center > *,
+.c3.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c3.direction-column.position-left-top,
+.c3.direction-column.position-left-center,
+.c3.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c3.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c3.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c3.direction-column.position-right-top,
+.c3.direction-column.position-right-center,
+.c3.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c3.direction-row.position-left-top,
+.c3.direction-row.position-center-top,
+.c3.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c3.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c3.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c3.direction-row.position-left-bottom,
+.c3.direction-row.position-center-bottom,
+.c3.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c3.direction-column.position-left-top.opened,
+.c3.direction-row.position-left-top.opened,
+.c3.direction-column.position-center-top.opened,
+.c3.direction-row.position-center-top.opened,
+.c3.direction-column.position-right-top.opened,
+.c3.direction-row.position-right-top.opened,
+.c3.direction-column.position-right-center.opened,
+.c3.direction-row.position-right-center.opened,
+.c3.direction-column.position-right-bottom.opened,
+.c3.direction-row.position-right-bottom.opened,
+.c3.direction-column.position-center-bottom.opened,
+.c3.direction-row.position-center-bottom.opened,
+.c3.direction-column.position-left-bottom.opened,
+.c3.direction-row.position-left-bottom.opened,
+.c3.direction-column.position-left-center.opened,
+.c3.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column c1"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c2"
       onClick={[Function]}
       size="md"
     >
@@ -79,7 +847,7 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column c3"
       onClick={null}
     >
       <div
@@ -91,14 +859,270 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the opened prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c2,
+.c2.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c2.shape-square {
+  border-radius: 4px;
+}
+
+.c2.shape-round {
+  border-radius: 50%;
+}
+
+.c2.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c2.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c2.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c2.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c2.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c2.md .fa {
+  font-size: 1.6rem;
+}
+
+.c2.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c2.lg .fa {
+  font-size: 2rem;
+}
+
+.c2.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c2.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:active,
+.c2.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:active.in-group,
+.c2.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3.direction-column.position-left-center > *,
+.c3.direction-column.position-left-top > *,
+.c3.direction-column.position-center-top > *,
+.c3.direction-column.position-right-top > *,
+.c3.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c3.direction-column.position-left-bottom > *,
+.c3.direction-column.position-center-bottom > *,
+.c3.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c3.direction-row.position-center-top > *,
+.c3.direction-row.position-left-top > *,
+.c3.direction-row.position-left-center > *,
+.c3.direction-row.position-left-bottom > *,
+.c3.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c3.direction-row.position-right-top > *,
+.c3.direction-row.position-right-center > *,
+.c3.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c3.direction-column.position-left-top,
+.c3.direction-column.position-left-center,
+.c3.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c3.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c3.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c3.direction-column.position-right-top,
+.c3.direction-column.position-right-center,
+.c3.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c3.direction-row.position-left-top,
+.c3.direction-row.position-center-top,
+.c3.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c3.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c3.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c3.direction-row.position-left-bottom,
+.c3.direction-row.position-center-bottom,
+.c3.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c3.direction-column.position-left-top.opened,
+.c3.direction-row.position-left-top.opened,
+.c3.direction-column.position-center-top.opened,
+.c3.direction-row.position-center-top.opened,
+.c3.direction-column.position-right-top.opened,
+.c3.direction-row.position-right-top.opened,
+.c3.direction-column.position-right-center.opened,
+.c3.direction-row.position-right-center.opened,
+.c3.direction-column.position-right-bottom.opened,
+.c3.direction-row.position-right-bottom.opened,
+.c3.direction-column.position-center-bottom.opened,
+.c3.direction-row.position-center-bottom.opened,
+.c3.direction-column.position-left-bottom.opened,
+.c3.direction-row.position-left-bottom.opened,
+.c3.direction-column.position-left-center.opened,
+.c3.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-left-top direction-column opened sc-dnqmqq ZATcm"
+    className="position-left-top direction-column opened c1"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c2"
       onClick={[Function]}
       size="md"
     >
@@ -109,7 +1133,7 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column opened sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column opened c3"
       onClick={null}
     >
       <div
@@ -121,14 +1145,270 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the shape prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c2,
+.c2.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c2.shape-square {
+  border-radius: 4px;
+}
+
+.c2.shape-round {
+  border-radius: 50%;
+}
+
+.c2.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c2.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c2.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c2.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c2.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c2.md .fa {
+  font-size: 1.6rem;
+}
+
+.c2.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c2.lg .fa {
+  font-size: 2rem;
+}
+
+.c2.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c2.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:active,
+.c2.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:active.in-group,
+.c2.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3.direction-column.position-left-center > *,
+.c3.direction-column.position-left-top > *,
+.c3.direction-column.position-center-top > *,
+.c3.direction-column.position-right-top > *,
+.c3.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c3.direction-column.position-left-bottom > *,
+.c3.direction-column.position-center-bottom > *,
+.c3.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c3.direction-row.position-center-top > *,
+.c3.direction-row.position-left-top > *,
+.c3.direction-row.position-left-center > *,
+.c3.direction-row.position-left-bottom > *,
+.c3.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c3.direction-row.position-right-top > *,
+.c3.direction-row.position-right-center > *,
+.c3.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c3.direction-column.position-left-top,
+.c3.direction-column.position-left-center,
+.c3.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c3.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c3.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c3.direction-column.position-right-top,
+.c3.direction-column.position-right-center,
+.c3.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c3.direction-row.position-left-top,
+.c3.direction-row.position-center-top,
+.c3.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c3.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c3.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c3.direction-row.position-left-bottom,
+.c3.direction-row.position-center-bottom,
+.c3.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c3.direction-column.position-left-top.opened,
+.c3.direction-row.position-left-top.opened,
+.c3.direction-column.position-center-top.opened,
+.c3.direction-row.position-center-top.opened,
+.c3.direction-column.position-right-top.opened,
+.c3.direction-row.position-right-top.opened,
+.c3.direction-column.position-right-center.opened,
+.c3.direction-row.position-right-center.opened,
+.c3.direction-column.position-right-bottom.opened,
+.c3.direction-row.position-right-bottom.opened,
+.c3.direction-column.position-center-bottom.opened,
+.c3.direction-row.position-center-bottom.opened,
+.c3.direction-column.position-left-bottom.opened,
+.c3.direction-row.position-left-bottom.opened,
+.c3.direction-column.position-left-center.opened,
+.c3.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column c1"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c2"
       onClick={[Function]}
       size="md"
     >
@@ -139,7 +1419,7 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column c3"
       onClick={null}
     >
       <div
@@ -152,14 +1432,270 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
 `;
 
 exports[`When using snapshots Should render with the size prop 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c2,
+.c2.btn {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  pointer-events: all;
+  color: #101113;
+  border-color: #c9cacc;
+  border-style: solid;
+  border-width: 2px;
+  background: #ffffff;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
+}
+
+.c2.shape-square {
+  border-radius: 4px;
+}
+
+.c2.shape-round {
+  border-radius: 50%;
+}
+
+.c2.xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+.c2.xs .fa {
+  font-size: 1.2rem;
+}
+
+.c2.sm {
+  width: 3rem;
+  height: 3rem;
+  line-height: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.c2.sm .fa {
+  font-size: 1.4rem;
+}
+
+.c2.md {
+  width: 4rem;
+  height: 4rem;
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.c2.md .fa {
+  font-size: 1.6rem;
+}
+
+.c2.lg {
+  width: 5rem;
+  height: 5rem;
+  line-height: 1.7rem;
+  font-size: 1.8rem;
+}
+
+.c2.lg .fa {
+  font-size: 2rem;
+}
+
+.c2.in-group {
+  width: calc(4rem - (2px * 2));
+  height: calc(4rem - (2px * 2));
+  border-width: 0;
+  box-shadow: none;
+}
+
+.c2.btn:hover {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:hover.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:focus {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:focus.in-group {
+  border-color: #eceeef;
+}
+
+.c2.btn:active,
+.c2.btn.active {
+  color: #101113;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c2.btn:active.in-group,
+.c2.btn.active.in-group {
+  border-color: #eceeef;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c1.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3.direction-row {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c3.direction-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3.direction-column.position-left-center > *,
+.c3.direction-column.position-left-top > *,
+.c3.direction-column.position-center-top > *,
+.c3.direction-column.position-right-top > *,
+.c3.direction-column.position-right-center > * {
+  margin-top: .8rem;
+}
+
+.c3.direction-column.position-left-bottom > *,
+.c3.direction-column.position-center-bottom > *,
+.c3.direction-column.position-right-bottom > * {
+  margin-bottom: .8rem;
+}
+
+.c3.direction-row.position-center-top > *,
+.c3.direction-row.position-left-top > *,
+.c3.direction-row.position-left-center > *,
+.c3.direction-row.position-left-bottom > *,
+.c3.direction-row.position-center-bottom > * {
+  margin-left: .8rem;
+}
+
+.c3.direction-row.position-right-top > *,
+.c3.direction-row.position-right-center > *,
+.c3.direction-row.position-right-bottom > * {
+  margin-right: .8rem;
+}
+
+.c3.direction-column.position-left-top,
+.c3.direction-column.position-left-center,
+.c3.direction-column.position-left-bottom {
+  -webkit-transform: translate(-150%,0);
+  -ms-transform: translate(-150%,0);
+  transform: translate(-150%,0);
+}
+
+.c3.direction-column.position-center-top {
+  -webkit-transform: translate(0,-200%);
+  -ms-transform: translate(0,-200%);
+  transform: translate(0,-200%);
+}
+
+.c3.direction-column.position-center-bottom {
+  -webkit-transform: translate(0,200%);
+  -ms-transform: translate(0,200%);
+  transform: translate(0,200%);
+}
+
+.c3.direction-column.position-right-top,
+.c3.direction-column.position-right-center,
+.c3.direction-column.position-right-bottom {
+  -webkit-transform: translate(150%,0);
+  -ms-transform: translate(150%,0);
+  transform: translate(150%,0);
+}
+
+.c3.direction-row.position-left-top,
+.c3.direction-row.position-center-top,
+.c3.direction-row.position-right-top {
+  -webkit-transform: translate(0,-150%);
+  -ms-transform: translate(0,-150%);
+  transform: translate(0,-150%);
+}
+
+.c3.direction-row.position-left-center {
+  -webkit-transform: translate(-200%,0);
+  -ms-transform: translate(-200%,0);
+  transform: translate(-200%,0);
+}
+
+.c3.direction-row.position-right-center {
+  -webkit-transform: translate(200%,0);
+  -ms-transform: translate(200%,0);
+  transform: translate(200%,0);
+}
+
+.c3.direction-row.position-left-bottom,
+.c3.direction-row.position-center-bottom,
+.c3.direction-row.position-right-bottom {
+  -webkit-transform: translate(0,150%);
+  -ms-transform: translate(0,150%);
+  transform: translate(0,150%);
+}
+
+.c3.direction-column.position-left-top.opened,
+.c3.direction-row.position-left-top.opened,
+.c3.direction-column.position-center-top.opened,
+.c3.direction-row.position-center-top.opened,
+.c3.direction-column.position-right-top.opened,
+.c3.direction-row.position-right-top.opened,
+.c3.direction-column.position-right-center.opened,
+.c3.direction-row.position-right-center.opened,
+.c3.direction-column.position-right-bottom.opened,
+.c3.direction-row.position-right-bottom.opened,
+.c3.direction-column.position-center-bottom.opened,
+.c3.direction-row.position-center-bottom.opened,
+.c3.direction-column.position-left-bottom.opened,
+.c3.direction-row.position-left-bottom.opened,
+.c3.direction-column.position-left-center.opened,
+.c3.direction-row.position-left-center.opened {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="position-left-top direction-column sc-dnqmqq ZATcm"
+    className="position-left-top direction-column c1"
   >
     <button
-      className="md shape-round btn sc-EHOje dvAFCx"
+      className="md shape-round btn c2"
       onClick={[Function]}
       size="md"
     >
@@ -170,7 +1706,7 @@ exports[`When using snapshots Should render with the size prop 1`] = `
       />
     </button>
     <div
-      className="position-left-top direction-column sc-iwsKbI fVCUCV"
+      className="position-left-top direction-column c3"
       onClick={null}
     >
       <div

@@ -14,8 +14,8 @@ const rotate360 = keyframes`
 `;
 
 const Spinner = styled.div`
-  width: ${props => props.spinnerSize}px;
-  height: ${props => props.spinnerSize}px;
+  width: ${props => props.spinnerSize / 10}rem;
+  height: ${props => props.spinnerSize / 10}rem;
   margin: 0 auto;
   border-width: ${props => props.strokeSize}px;
   border-style: solid;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 
 const Label = styled.div`
   color: ${props => props.theme.loaderColor};
-  margin-top: 15px;
+  margin-top: 1.5rem;
 `;
 
 const Loader = ({
@@ -85,6 +85,6 @@ Loader.defaultProps = {
   className: ''
 };
 
-Loader.displayName = 'Loader';
+Loader.displayName = 'components/Loader';
 
 export default Loader;

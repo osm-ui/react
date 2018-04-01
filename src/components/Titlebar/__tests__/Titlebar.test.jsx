@@ -1,7 +1,8 @@
 import React from 'react';
+import 'jest-styled-components';
 import { shallow } from 'enzyme';
-import { snapshotWithElementChildren } from '../../../helpers/tests';
-import Titlebar from '../';
+import { snapshotWithElementChildren } from 'helpers/tests';
+import { Titlebar } from 'index';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>
@@ -27,15 +28,13 @@ describe('When testing the callbacks', () => {
   });
 
   it('Should call the onUnmaximize callback when the maximized prop is removed', () => {
-    const props = titlebar.props();
-    titlebar.setProps({ ...props, maximized: false });
+    titlebar.setProps({ maximized: false });
 
     expect(onUnmaximize.mock.calls.length).toBe(1);
   });
 
   it('Should call the onMaximize callback when the maximized prop is passed again', () => {
-    const props = titlebar.props();
-    titlebar.setProps({ ...props, maximized: true });
+    titlebar.setProps({ maximized: true });
 
     expect(onMaximize.mock.calls.length).toBe(2);
   });

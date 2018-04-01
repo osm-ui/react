@@ -26,15 +26,15 @@ import {
   GreenTheme,
   Toolbar,
   Alert
-} from '../src/index';
+} from 'index';
 
 const fakeAppRowStyle = {
-  padding: '60px 100px'
+  padding: '6rem 10rem'
 };
 
 const fakeAppColumnStyle = {
-  paddingLeft: '100px',
-  paddingRight: '100px'
+  paddingLeft: '10rem',
+  paddingRight: '10rem'
 };
 
 storiesOf('Toolbar', module)
@@ -389,7 +389,7 @@ storiesOf('Toolbar', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp style={{ ...fakeAppColumnStyle, ...fakeAppRowStyle }}>
+        <FakeApp style={{ ...fakeAppColumnStyle, ...fakeAppRowStyle,  ...{ top: '80px' } }}>
           <ThemeElement>
             <Toolbar
               opened={opened}

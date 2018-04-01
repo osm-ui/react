@@ -1,7 +1,7 @@
-import React from 'react';
+import 'jest-styled-components';
 // import { shallow } from 'enzyme';
-import { snapshotWithElementChildren } from '../../../helpers/tests';
-import Toolbar from '../';
+import { snapshotWithElementChildren } from 'helpers/tests';
+import { Toolbar } from 'index';
 
 describe('When using snapshots', () => {
   it('Should render with an element children', () =>

@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  margin: 20px 0;
+  margin: 2rem 0;
 
   ul {
     text-align: center;
     list-style: none;
-    margin: 0 0 40px;
+    margin: 0 0 4rem;
     padding: 0;
   }
 
@@ -17,8 +17,8 @@ const StyledNav = styled.nav`
     white-space: nowrap;
 
     display: block;
-    margin: 10px 0;
-    padding: 14px 20px;
+    margin: 1rem 0;
+    padding: 1.4rem 2rem;
     border-radius: ${props => props.theme.sidebar.nav.borderRadius};
     background-color: ${props => props.theme.sidebar.nav.backgroundColor};
     color: ${props => props.theme.sidebar.nav.color};

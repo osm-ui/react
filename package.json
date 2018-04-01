@@ -1,7 +1,7 @@
 {
   "name": "osm-ui-react",
   "description": "React components for awesome OSM interfaces",
-  "version": "0.3.2",
+  "version": "0.4.2",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
   "bugs": "https://github.com/osm-ui/react/issues",
@@ -17,19 +17,26 @@
     "react"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "moduleRoots": [
+    "./src"
+  ],
   "scripts": {
-    "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook -o docs",
-    "build-dist": "cross-env NODE_ENV=production webpack --progress",
+    "storybook": "cross-env NODE_PATH=src start-storybook -p 9009",
+    "build-storybook": "cross-env NODE_PATH=src build-storybook -o docs",
+    "build-dist": "cross-env NODE_PATH=src NODE_ENV=production webpack --progress",
     "build": "npm run build-dist && npm run build-storybook",
     "precommit": "lint-staged",
-    "prepush": "npm run test",
-    "test": "jest --env=jsdom",
+    "test": "cross-env NODE_PATH=src jest --env=jsdom",
     "test-watch": "npm test -- --watch",
     "test-ci": "npm test -- --ci",
     "test-coverage": "npm run test-ci -- --coverage",
     "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'",
-    "lint": "eslint 'src/**/*.{js,jsx}'"
+    "lint": "eslint 'src/**/*.{js,jsx}'",
+    "preversion": "npm run test-ci && npm run build && git add docs",
+    "postversion": "git push && git push --tags"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -41,7 +48,10 @@
     ],
     "setupFiles": [
       "<rootDir>/jest.setup.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|svg)$": "identity-obj-proxy"
+    }
   },
   "prettier": {
     "semi": true,
@@ -53,19 +63,17 @@
       "git add"
     ],
     "src/**/*.{js,jsx,json}": [
-      "eslint"
-    ],
-    "src/**/*.{js,jsx}": [
-      "npm run test-ci"
+      "eslint",
+      "npm run test-ci -- --findRelatedTests"
     ]
   },
   "dependencies": {
-    "@storybook/addon-actions": "^3.2.15",
-    "@storybook/addon-info": "^3.2.15",
-    "@storybook/addon-knobs": "^3.2.15",
-    "@storybook/addon-links": "^3.2.15",
-    "@storybook/addon-options": "^3.2.15",
-    "@storybook/react": "^3.2.15",
+    "@storybook/addon-actions": "^3.3.4",
+    "@storybook/addon-info": "^3.3.4",
+    "@storybook/addon-knobs": "^3.3.4",
+    "@storybook/addon-links": "^3.3.4",
+    "@storybook/addon-options": "^3.3.4",
+    "@storybook/react": "^3.3.4",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
@@ -82,6 +90,7 @@
     "react-lorem-component": "^0.12.2",
     "react-placeholder": "^1.0.8",
     "react-select": "^1.0.0-rc.10",
+    "react-transition-group": "^2.2.1",
     "react-virtualized": "^9.12.0",
     "react-virtualized-select": "^3.1.0",
     "styled-components": "^2.2.3"
@@ -106,18 +115,20 @@
     "eslint-plugin-jest": "^21.3.2",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-react": "^7.4.0",
-    "expose-loader": "^0.7.3",
+    "expose-loader": "^0.7.4",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
+    "jest-styled-components": "^4.10.0",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "lint-staged": "^5.0.0",
     "prettier": "^1.8.2",
     "raw-loader": "^0.5.1",
     "react-test-renderer": "^16.1.0",
-    "storybook-host": "^4.1.4",
+    "storybook-host": "^4.1.5",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"

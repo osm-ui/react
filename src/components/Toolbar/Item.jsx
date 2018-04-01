@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-import Loader from '../Loader';
+import Loader from 'components/Loader';
 
 const buildInGroupSize = props => {
   const size = props.theme.toolbar[`${props.size}Size`];
@@ -39,40 +39,44 @@ const StyledButton = styled.button`
   &.xs {
     width: ${props => props.theme.toolbar.xsSize};
     height: ${props => props.theme.toolbar.xsSize};
-    line-height: 0.85em;
+    line-height: ${props => props.theme.toolbar.xsLineHeight};
+    font-size: ${props => props.theme.toolbar.xsFontSize};
 
     .fa {
-      font-size: 0.85em;
+      font-size: ${props => props.theme.toolbar.xsIconSize};
     }
   }
 
   &.sm {
     width: ${props => props.theme.toolbar.smSize};
     height: ${props => props.theme.toolbar.smSize};
-    line-height: 1.04em;
+    line-height: ${props => props.theme.toolbar.smLineHeight};
+    font-size: ${props => props.theme.toolbar.smFontSize};
 
     .fa {
-      font-size: 1.04em;
+      font-size: ${props => props.theme.toolbar.smIconSize};
     }
   }
 
   &.md {
     width: ${props => props.theme.toolbar.mdSize};
     height: ${props => props.theme.toolbar.mdSize};
-    line-height: 1.2em;
+    line-height: ${props => props.theme.toolbar.mdLineHeight};
+    font-size: ${props => props.theme.toolbar.mdFontSize};
 
     .fa {
-      font-size: 1.2em;
+      font-size: ${props => props.theme.toolbar.mdIconSize};
     }
   }
 
   &.lg {
     width: ${props => props.theme.toolbar.lgSize};
     height: ${props => props.theme.toolbar.lgSize};
-    line-height: 1.43em;
+    line-height: ${props => props.theme.toolbar.lgLineHeight};
+    font-size: ${props => props.theme.toolbar.lgFontSize};
 
     .fa {
-      font-size: 1.43em;
+      font-size: ${props => props.theme.toolbar.lgIconSize};
     }
   }
 

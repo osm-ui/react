@@ -12,7 +12,7 @@ import {
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 
-import { DefaultTheme, Form, Alert } from '../src/index';
+import { DefaultTheme, Form, Alert } from 'index';
 
 storiesOf('Form', module)
   .addDecorator(withKnobs)
@@ -22,16 +22,84 @@ storiesOf('Form', module)
       title: 'Form'
     })
   )
+  .addWithInfo('Checkbox', () => {
+    const formGroupContext = select('Context', Form.Group.contexts);
+    const disabled = boolean('Disabled', false);
+
+    return (
+      <DefaultTheme>
+        <KnobsAlert />
+        <Form>
+          <Form.Group context={formGroupContext}>
+            <Form.Checkbox
+              label='Check me out !'
+              id='hello'
+              value='good'
+              size='sm'
+              disabled={disabled}
+            />
+            <Form.Checkbox
+              label='No, check ME out !'
+              id='hello2'
+              value='better'
+              size='md'
+              disabled={disabled}
+            />
+            <Form.Checkbox
+              label='Alright guys, I am the cool checkbox !'
+              id='hello3'
+              value='best'
+              size='lg'
+              disabled={disabled}
+            />
+          </Form.Group>
+        </Form>
+      </DefaultTheme>
+    );
+  })
+  .addWithInfo('Radio', () => {
+    const formGroupContext = select('Context', Form.Group.contexts);
+    const disabled = boolean('Disabled', false);
+
+    return (
+      <DefaultTheme>
+        <KnobsAlert />
+        <Form>
+          <Form.Group context={formGroupContext}>
+            <Form.Radio
+              name='test'
+              label='I am a small radio button !'
+              id='lvl1'
+              value='cool'
+              size='sm'
+              disabled={disabled}
+            />
+            <Form.Radio
+              name='test'
+              label='I am a medium radio button !!'
+              id='lvl2'
+              value='cooler'
+              disabled={disabled}
+            />
+            <Form.Radio
+              name='test'
+              label='I am a large radio button !!!'
+              id='lvl3'
+              value='coolest'
+              defaultChecked
+              size='lg'
+              disabled={disabled}
+            />
+          </Form.Group>
+        </Form>
+      </DefaultTheme>
+    );
+  })
   .addWithInfo('Input', () => {
     const placeholder = text('Placeholder', 'A placeholder');
     const hint = text('Hint', 'Hey there! I can help you filling that field!');
-    const formGroupContext = select('Context', [
-      '',
-      'success',
-      'warning',
-      'error'
-    ]);
-    const disabled = boolean('Disabled');
+    const formGroupContext = select('Context', Form.Group.contexts);
+    const disabled = boolean('Disabled', false);
     const type = select('Type', ['text', 'email', 'number', 'url'], 'text');
 
     return (
@@ -53,18 +121,13 @@ storiesOf('Form', module)
   .addWithInfo('Textarea', () => {
     const placeholder = text('Placeholder', 'A placeholder');
     const hint = text('Hint', 'Hey there! I can help you filling that field!');
-    const formGroupContext = select('Context', [
-      '',
-      'success',
-      'warning',
-      'error'
-    ]);
+    const formGroupContext = select('Context', Form.Group.contexts);
     const resize = select(
       'Resize',
       ['none', 'vertical', 'horizontal'],
       'vertical'
     );
-    const disabled = boolean('Disabled');
+    const disabled = boolean('Disabled', false);
     const rows = number('Rows', 6, {
       range: true,
       min: 1,
@@ -90,16 +153,11 @@ storiesOf('Form', module)
     );
   })
   .addWithInfo('Select', () => {
-    const multi = boolean('Multi-value');
-    const searchable = boolean('Searchable');
-    const clearable = boolean('Clearable');
-    const disabled = boolean('Disabled');
-    const formGroupContext = select('Context', [
-      '',
-      'success',
-      'warning',
-      'error'
-    ]);
+    const multi = boolean('Multi-value', false);
+    const searchable = boolean('Searchable', false);
+    const clearable = boolean('Clearable', false);
+    const disabled = boolean('Disabled', false);
+    const formGroupContext = select('Context', Form.Group.contexts);
     const options = [
       { label: 'First option', value: 1 },
       { label: 'Second option', value: 2 },
@@ -131,12 +189,7 @@ storiesOf('Form', module)
     );
   })
   .addWithInfo('Label', () => {
-    const formGroupContext = select('Context', [
-      '',
-      'success',
-      'warning',
-      'error'
-    ]);
+    const formGroupContext = select('Context', Form.Group.contexts);
 
     return (
       <DefaultTheme>

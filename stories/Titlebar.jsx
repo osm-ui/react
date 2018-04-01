@@ -25,11 +25,11 @@ import {
   TurquoiseTheme,
   GreenTheme,
   Titlebar
-} from '../src/index';
+} from 'index';
 
 const fakeAppStyle = {
-  paddingTop: '70px',
-  paddingBottom: '70px'
+  paddingTop: '7rem',
+  paddingBottom: '7rem'
 };
 
 storiesOf('Titlebar', module)
@@ -127,7 +127,7 @@ storiesOf('Titlebar', module)
     return (
       <DefaultTheme>
         <KnobsAlert />
-        <FakeApp style={fakeAppStyle}>
+        <FakeApp style={{ ...{fakeAppStyle},  ...{ top: '80px'} }}>
           <ThemeElement>
             <Titlebar
               maximized={maximized}

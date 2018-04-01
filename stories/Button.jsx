@@ -25,7 +25,7 @@ import {
   GreenTheme,
   Section,
   Button
-} from '../src/index';
+} from 'index';
 
 storiesOf('Button', module)
   .addDecorator(withKnobs)
@@ -139,7 +139,7 @@ storiesOf('Button', module)
     );
     const context = select(
       'Context',
-      ['default', 'info', 'primary', 'success', 'warning', 'danger'],
+      Button.contexts,
       'default'
     );
     const theme = select(

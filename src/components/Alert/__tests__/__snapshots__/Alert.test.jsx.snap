@@ -1,11 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  border-radius: 0;
+}
+
+.c1.alert-info {
+  color: #00948d;
+  background-color: #b9eeeb;
+  border-color: #b9eeeb;
+}
+
+.c1.alert-info a {
+  color: #00948d;
+  text-decoration: underline;
+}
+
+.c1.alert-info a:hover,
+.c1.alert-info a:focus,
+.c1.alert-info a:active {
+  color: #00948d;
+  text-decoration: none;
+}
+
+.c1.alert-success {
+  color: #348538;
+  background-color: #c8e6c9;
+  border-color: #c8e6c9;
+}
+
+.c1.alert-success a {
+  color: #348538;
+  text-decoration: underline;
+}
+
+.c1.alert-success a:hover,
+.c1.alert-success a:focus,
+.c1.alert-success a:active {
+  color: #348538;
+  text-decoration: none;
+}
+
+.c1.alert-warning {
+  color: #de8c00;
+  background-color: #fff2ce;
+  border-color: #fff2ce;
+}
+
+.c1.alert-warning a {
+  color: #de8c00;
+  text-decoration: underline;
+}
+
+.c1.alert-warning a:hover,
+.c1.alert-warning a:focus,
+.c1.alert-warning a:active {
+  color: #de8c00;
+  text-decoration: none;
+}
+
+.c1.alert-danger {
+  color: #c92d2d;
+  background-color: #ffcdd2;
+  border-color: #ffcdd2;
+}
+
+.c1.alert-danger a {
+  color: #c92d2d;
+  text-decoration: underline;
+}
+
+.c1.alert-danger a:hover,
+.c1.alert-danger a:focus,
+.c1.alert-danger a:active {
+  color: #c92d2d;
+  text-decoration: none;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <div
-    className="alert alert-info sc-bwzfXH eSIoy"
+    className="alert alert-info c1"
   >
     <div />
   </div>

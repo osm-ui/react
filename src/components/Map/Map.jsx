@@ -14,9 +14,9 @@ const StyledMap = styled.div`
     color: ${props => props.theme.map.controlColor};
     background: ${props => props.theme.map.controlBackgroundColor};
     border: none;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
     transition: all 0.1s ease-out;
 
     &:hover,
@@ -29,6 +29,10 @@ const StyledMap = styled.div`
     &:active {
       box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     }
+  }
+
+  .leaflet-control-attribution {
+    padding: 0.2rem 0.6rem;
   }
 `;
 

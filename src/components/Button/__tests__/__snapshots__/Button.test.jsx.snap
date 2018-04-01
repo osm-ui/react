@@ -1,11 +1,240 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.c1.btn-default {
+  font-weight: 500;
+  color: #3b3f45;
+  background-color: #ffffff;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:hover {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:focus {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:active,
+.c1.btn-default .active {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-primary {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: #186fc5;
+}
+
+.c1.btn-primary:hover {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-primary:focus {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-primary:active,
+.c1.btn-primary .active {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-info {
+  font-weight: 500;
+  color: #000a0a;
+  background-color: #00c2b8;
+  border-color: #00948d;
+}
+
+.c1.btn-info:hover {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-info:focus {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-info:active,
+.c1.btn-info .active {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-success {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #4caf50;
+  border-color: #348538;
+}
+
+.c1.btn-success:hover {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-success:focus {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-success:active,
+.c1.btn-success .active {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-warning {
+  font-weight: 500;
+  color: #543500;
+  background-color: #ffa700;
+  border-color: #de8c00;
+}
+
+.c1.btn-warning:hover {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-warning:focus {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-warning:active,
+.c1.btn-warning .active {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-danger {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #f44336;
+  border-color: #c92d2d;
+}
+
+.c1.btn-danger:hover {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-danger:focus {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-danger:active,
+.c1.btn-danger .active {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-link {
+  font-weight: 400;
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:hover {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:focus {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:active,
+.c1.btn-link .active {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-xs {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  padding: 0 1.4rem;
+}
+
+.c1.btn-sm {
+  line-height: 3rem;
+  padding: 0 1.6rem;
+}
+
+.c1.btn-md {
+  line-height: 3.8rem;
+  padding: 0 2rem;
+}
+
+.c1.btn-lg {
+  line-height: 4.5rem;
+  padding: 0 2.4rem;
+}
+
+.c1.shape-round.btn-xs {
+  border-radius: 1.25rem;
+}
+
+.c1.shape-round.btn-sm {
+  border-radius: 1.7rem;
+}
+
+.c1.shape-round.btn-md {
+  border-radius: 2.1rem;
+}
+
+.c1.shape-round.btn-lg {
+  border-radius: 2.45rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <button
-    className="btn shape-round btn-default btn-md sc-bwzfXH fEgsfH"
+    className="btn shape-round btn-default btn-md c1"
     disabled={false}
     type="button"
   >
@@ -15,11 +244,240 @@ exports[`When using snapshots Should render with an element children 1`] = `
 `;
 
 exports[`When using snapshots on an anchor typed Button Should render with an element children 1`] = `
+.c0 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.c1 {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.c1.btn-default {
+  font-weight: 500;
+  color: #3b3f45;
+  background-color: #ffffff;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:hover {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:focus {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-default:active,
+.c1.btn-default .active {
+  color: #3b3f45;
+  background-color: #eceeef;
+  border-color: #c9cacc;
+}
+
+.c1.btn-primary {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: #186fc5;
+}
+
+.c1.btn-primary:hover {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-primary:focus {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-primary:active,
+.c1.btn-primary .active {
+  color: #ffffff;
+  background-color: #71bcf7;
+  border-color: #2196f3;
+}
+
+.c1.btn-info {
+  font-weight: 500;
+  color: #000a0a;
+  background-color: #00c2b8;
+  border-color: #00948d;
+}
+
+.c1.btn-info:hover {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-info:focus {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-info:active,
+.c1.btn-info .active {
+  color: #000a0a;
+  background-color: #5cd7d1;
+  border-color: #00c2b8;
+}
+
+.c1.btn-success {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #4caf50;
+  border-color: #348538;
+}
+
+.c1.btn-success:hover {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-success:focus {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-success:active,
+.c1.btn-success .active {
+  color: #ffffff;
+  background-color: #7cc47f;
+  border-color: #4caf50;
+}
+
+.c1.btn-warning {
+  font-weight: 500;
+  color: #543500;
+  background-color: #ffa700;
+  border-color: #de8c00;
+}
+
+.c1.btn-warning:hover {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-warning:focus {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-warning:active,
+.c1.btn-warning .active {
+  color: #543500;
+  background-color: #ffd659;
+  border-color: #ffa700;
+}
+
+.c1.btn-danger {
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #f44336;
+  border-color: #c92d2d;
+}
+
+.c1.btn-danger:hover {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-danger:focus {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-danger:active,
+.c1.btn-danger .active {
+  color: #ffffff;
+  background-color: #f8877f;
+  border-color: #f44336;
+}
+
+.c1.btn-link {
+  font-weight: 400;
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:hover {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:focus {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-link:active,
+.c1.btn-link .active {
+  color: #2196f3;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.c1.btn-xs {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  padding: 0 1.4rem;
+}
+
+.c1.btn-sm {
+  line-height: 3rem;
+  padding: 0 1.6rem;
+}
+
+.c1.btn-md {
+  line-height: 3.8rem;
+  padding: 0 2rem;
+}
+
+.c1.btn-lg {
+  line-height: 4.5rem;
+  padding: 0 2.4rem;
+}
+
+.c1.shape-round.btn-xs {
+  border-radius: 1.25rem;
+}
+
+.c1.shape-round.btn-sm {
+  border-radius: 1.7rem;
+}
+
+.c1.shape-round.btn-md {
+  border-radius: 2.1rem;
+}
+
+.c1.shape-round.btn-lg {
+  border-radius: 2.45rem;
+}
+
 <span
-  className="sc-bdVaJa lbJuWU"
+  className="c0"
 >
   <a
-    className="btn shape-round btn-default btn-md sc-htpNat jTMgHP"
+    className="btn shape-round btn-default btn-md c1"
     disabled={false}
     role="button"
   >

@@ -7,7 +7,7 @@ import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
 import ReactLeafletAlert from './components/ReactLeafletAlert';
 
-import { DefaultTheme, Map } from '../src/index';
+import { DefaultTheme, Map } from 'index';
 
 const mapPosition = [44.834769665310445, -0.5757522583007814];
 const mapStyle = { height: 500 };
@@ -26,6 +26,37 @@ storiesOf('Map', module)
     <DefaultTheme>
       <ReactLeafletAlert />
       <Map center={mapPosition} zoom={mapZoom} style={mapStyle}>
+        <Map.TileLayer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        />
+      </Map>
+    </DefaultTheme>
+  ))
+  .addWithInfo('Attribution in another position', () => (
+    <DefaultTheme>
+      <ReactLeafletAlert />
+      <Map attributionControl={false} center={mapPosition} zoom={mapZoom} style={mapStyle}>
+        <Map.AttributionControl
+          position="bottomleft"
+        />
+        <Map.TileLayer
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+          attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+        />
+      </Map>
+    </DefaultTheme>
+  ))
+  .addWithInfo('With scale control', () => (
+    <DefaultTheme>
+      <ReactLeafletAlert />
+      <Map attributionControl={false} center={mapPosition} zoom={mapZoom} style={mapStyle} locate>
+        <Map.AttributionControl
+          position="bottomleft"
+        />
+        <Map.ScaleControl
+          position="bottomleft"
+        />
         <Map.TileLayer
           url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"

@@ -3,32 +3,40 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Lorem from 'react-lorem-component';
 import ReactPlaceholder from 'react-placeholder';
-import { Section } from '../../src/index';
+import { Section } from 'index';
 
-const StyledSection = styled(Section)`
+const App = styled(Section)`
   height: 80vh !important;
   border: 1px solid #ccc;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
+`;
+
+const Content = styled(Section)`
+  margin-bottom: 4rem;
+`;
+
+const Title = styled.h2`
+  margin-bottom: 3rem;
 `;
 
 const FakeApp = ({ fakeText, dimmed, children, ...rest }) => (
-  <StyledSection appCanvas {...rest}>
-    <Section dimmed={dimmed}>
-      <h2>
+  <App appCanvas {...rest}>
+    <Content dimmed={dimmed}>
+      <Title>
         {fakeText ? (
           <ReactPlaceholder type="text" rows={1} />
         ) : (
           'Application Content'
         )}
-      </h2>
+      </Title>
       {fakeText ? (
         <ReactPlaceholder type="text" rows={10} />
       ) : (
         <Lorem count={2} />
       )}
-    </Section>
+    </Content>
     {children}
-  </StyledSection>
+  </App>
 );
 
 FakeApp.propTypes = {

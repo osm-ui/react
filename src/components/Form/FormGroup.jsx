@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
-const contexts = ['', 'success', 'warning', 'error'];
+const contexts = ['', 'info', 'success', 'warning', 'error'];
 
 const colorsStyle = props =>
   contexts.reduce((reducedStyles, context) => {
@@ -38,7 +38,7 @@ const colorsStyle = props =>
   }, '');
 
 const StyledDiv = styled.div`
-  ${props => colorsStyle(props)} margin-bottom: 40px;
+  ${props => colorsStyle(props)} margin-bottom: 4rem;
 `;
 
 const FormGroup = ({ context, className, ...props }) => {
@@ -49,6 +49,8 @@ const FormGroup = ({ context, className, ...props }) => {
 
   return <StyledDiv className={classes} {...props} />;
 };
+
+FormGroup.contexts = contexts;
 
 FormGroup.propTypes = {
   context: PropTypes.oneOf(contexts),

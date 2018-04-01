@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import { makeTransparent } from '../helpers/themes';
-import colors from '../colors';
+import { darken } from 'polished';
+import { makeTransparent } from 'helpers/themes';
+import { colors } from 'constants/index';
 
 const boxShadow =
   '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
@@ -30,8 +31,8 @@ export const config = {
   sidebar: {
     boxShadow,
     nav: {
-      fontSize: '1.1em',
-      lineHeight: '1.2em',
+      fontSize: '1.8rem',
+      lineHeight: '2rem',
       fontWeight: 500,
       borderRadius: '4px',
       color: colors.anthracite1,
@@ -42,12 +43,24 @@ export const config = {
   },
   toolbar: {
     boxShadow,
-    margin: '10px',
-    childrenMargin: '8px',
-    xsSize: '30px',
-    smSize: '40px',
-    mdSize: '50px',
-    lgSize: '60px',
+    margin: '1rem',
+    childrenMargin: '.8rem',
+    xsSize: '2.4rem',
+    smSize: '3rem',
+    mdSize: '4rem',
+    lgSize: '5rem',
+    xsFontSize: '1rem',
+    smFontSize: '1.2rem',
+    mdFontSize: '1.4rem',
+    lgFontSize: '1.8rem',
+    xsIconSize: '1.2rem',
+    smIconSize: '1.4rem',
+    mdIconSize: '1.6rem',
+    lgIconSize: '2rem',
+    xsLineHeight: '1rem',
+    smLineHeight: '1.2rem',
+    mdLineHeight: '1.6rem',
+    lgLineHeight: '1.7rem',
 
     button: {
       color: colors.anthracite1,
@@ -66,14 +79,14 @@ export const config = {
   },
   titlebar: {
     boxShadow,
-    xsHeight: '30px',
-    smHeight: '35px',
-    mdHeight: '40px',
-    lgHeight: '45px',
-    xsFontSize: '0.9em',
-    smFontSize: '1em',
-    mdFontSize: '1.1em',
-    lgFontSize: '1.3em',
+    xsHeight: '3rem',
+    smHeight: '3.5rem',
+    mdHeight: '4rem',
+    lgHeight: '4.5rem',
+    xsFontSize: '1.4rem',
+    smFontSize: '1.6rem',
+    mdFontSize: '1.8rem',
+    lgFontSize: '1.9rem',
     fontWeight: 500,
     color: colors.anthracite1,
     backgroundColor: colors.white,
@@ -131,7 +144,7 @@ export const config = {
 
       info: {
         fontWeight: 500,
-        color: colors.white,
+        color: darken(0.27, colors.turquoise1),
         backgroundColor: colors.turquoise2,
         borderColor: colors.turquoise1,
         hoverBackgroundColor: colors.turquoise3,
@@ -157,7 +170,7 @@ export const config = {
 
       warning: {
         fontWeight: 500,
-        color: colors.white,
+        color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2,
         borderColor: colors.orange1,
         hoverBackgroundColor: colors.orange3,
@@ -207,6 +220,12 @@ export const config = {
       focusBorderColor: colors.blue2,
       focusBoxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
 
+      info: {
+        color: colors.turquoise2,
+        backgroundColor: colors.white,
+        borderColor: colors.turquoise2
+      },
+
       success: {
         color: colors.green2,
         backgroundColor: colors.white,
@@ -227,8 +246,14 @@ export const config = {
     },
     label: {
       color: colors.anthracite1,
-      fontSize: '1.1em',
+      borderColor: colors.anthracite1,
+      backgroundColor: colors.white,
+      fontSize: '1.7rem',
       fontWeight: 400,
+
+      info: {
+        color: colors.turquoise1
+      },
 
       success: {
         color: colors.green1
@@ -242,13 +267,74 @@ export const config = {
         color: colors.red1
       }
     },
+    checkbox: {
+      borderColor: colors.darkGray3,
+      color: colors.darkGray2,
+      sm: {
+        height: '2.2rem',
+        size: '1.4rem',
+        top: '0.7rem',
+        innerSize: '1.1rem',
+        paddingLeft: '2rem'
+      },
+      md: {
+        height: '2.7rem',
+        size: '1.7rem',
+        top: '0.4rem',
+        innerSize: '1.4rem',
+        paddingLeft: '2.5rem'
+      },
+      lg: {
+        height: '3.2rem',
+        size: '2.1rem',
+        top: '0.1rem',
+        innerSize: '1.8rem',
+        paddingLeft: '3rem'
+      }
+    },
+    radio: {
+      borderColor: colors.darkGray3,
+      backgroundColor: colors.darkGray2,
+      sm: {
+        height: '2.2rem',
+        size: '1.4rem',
+        top: '0.7rem',
+        innerSize: '0.8rem',
+        innerTop: '1rem',
+        innerLeft: '0.3rem',
+        paddingLeft: '2rem'
+      },
+      md: {
+        height: '2.7rem',
+        size: '1.7rem',
+        top: '0.4rem',
+        innerSize: '0.9rem',
+        innerTop: '0.8rem',
+        innerLeft: '0.4rem',
+        paddingLeft: '2.5rem'
+      },
+      lg: {
+        height: '3.2rem',
+        size: '2.1rem',
+        top: '0.1rem',
+        innerSize: '1.3rem',
+        innerTop: '0.5rem',
+        innerLeft: '0.4rem',
+        paddingLeft: '3rem'
+      }
+    },
     hint: {
-      fontSize: '0.9em',
+      fontSize: '1.4rem',
       margin: 0,
-      padding: '5px 10px',
+      padding: '.5rem 1rem',
 
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,
+
+      info: {
+        color: darken(0.27, colors.turquoise1),
+        backgroundColor: colors.turquoise2
+      },
 
       success: {
         color: colors.white,
@@ -256,7 +342,7 @@ export const config = {
       },
 
       warning: {
-        color: colors.white,
+        color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2
       },
 

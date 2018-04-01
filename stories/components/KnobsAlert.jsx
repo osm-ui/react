@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from '../../src/index';
+import { Alert } from 'index';
 
 const KnobsAlert = () => (
   <Alert context="info">

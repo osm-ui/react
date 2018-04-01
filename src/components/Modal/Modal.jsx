@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
+import Transition from 'react-transition-group/Transition';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import Title from '../Sidebar/Title';
-import Loader from '../Loader';
+import Title from 'components/Sidebar/Title';
+import Loader from 'components/Loader';
 
 const StyledAside = styled.aside`
   z-index: 1000;
@@ -13,19 +13,13 @@ const StyledAside = styled.aside`
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10%;
+  padding: 3rem;
   background: ${props => props.theme.modal.backgroundColor};
   color: ${props => props.theme.modal.color};
   overflow-y: auto;
+  opacity: 0;
 
-  &.transition-appear {
-    opacity: 0;
-  }
-
-  &.transition-appear.transition-appear-active {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
-  }
+  transition: opacity 300ms ease-in-out;
 
   &.scroll-content {
     display: flex;
@@ -33,20 +27,14 @@ const StyledAside = styled.aside`
     overflow-y: none;
   }
 
-  &.container-parent {
-    position: absolute;
-  }
-  &.container-root {
-    position: fixed;
-  }
+  position: absolute;
 
   &.scroll-content .header {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   .content {
-    margin-top: 30px;
-    padding: 20px;
+    padding: 2rem;
   }
 
   &.scroll-content .content {
@@ -58,7 +46,7 @@ const StyledAside = styled.aside`
 
     &::after {
       content: '';
-      margin-top: 20px;
+      margin-top: 2rem;
       display: block;
     }
   }
@@ -68,7 +56,7 @@ const StyledAside = styled.aside`
   }
 
   &.scroll-content .footer {
-    margin-top: 20px;
+    margin-top: 2rem;
   }
 `;
 
@@ -111,27 +99,42 @@ class Modal extends React.Component {
       loading
     });
 
+    const transitionStyles = {
+      entered: {
+        opacity: 0.95
+      }
+    };
+
     return (
-      <CSSTransitionGroup
-        transitionName="transition"
-        transitionAppear
-        transitionAppearTimeout={300}
-        transitionEnter={false}
-        transitionLeave={false}
+      <Transition
+        in
+        timeout={300}
+        appear
+        onEntered={this.onOpen}
+        onExited={this.onClose}
       >
-        <StyledAside key="modal" className={asideClasses} {...rest}>
-          <header className="header">
-            {title && <Title inHeader>{title}</Title>}
-            {!loading && header && header}
-          </header>
+        {state => (
+          <StyledAside
+            key="modal"
+            className={asideClasses}
+            style={transitionStyles[state]}
+            {...rest}
+          >
+            {(header || title) && (
+              <header className="header">
+                {title && <Title inHeader>{title}</Title>}
+                {!loading && header && header}
+              </header>
+            )}
 
-          <div className={contentClasses}>{children}</div>
+            <div className={contentClasses}>{children}</div>
 
-          {!loading && footer && footer}
+            {!loading && footer && footer}
 
-          {loading && <Loader centered label={loaderLabel} />}
-        </StyledAside>
-      </CSSTransitionGroup>
+            {loading && <Loader centered label={loaderLabel} />}
+          </StyledAside>
+        )}
+      </Transition>
     );
   }
 }
