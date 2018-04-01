@@ -1,7 +1,7 @@
 {
   "name": "osm-ui-react",
   "description": "React components for awesome OSM interfaces",
-  "version": "0.3.2",
+  "version": "0.4.3",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
   "bugs": "https://github.com/osm-ui/react/issues",
@@ -35,7 +35,7 @@
     "test-coverage": "npm run test-ci -- --coverage",
     "test-prettier": "prettier --single-quote --list-different 'src/**/*.{js,jsx,json,css,less}'",
     "lint": "eslint 'src/**/*.{js,jsx}'",
-    "preversion": "npm run test-ci && npm run build",
+    "preversion": "npm run test-ci && npm run build && git add docs",
     "postversion": "git push && git push --tags"
   },
   "jest": {
