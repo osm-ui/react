@@ -1,7 +1,7 @@
 {
   "name": "osm-ui-react",
   "description": "React components for awesome OSM interfaces",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "homepage": "https://osm-ui.github.io/react",
   "repository": "https://github.com/osm-ui/react",
   "bugs": "https://github.com/osm-ui/react/issues",
