@@ -215,7 +215,7 @@ exports[`When using snapshots Should render with element children  1`] = `
       <div>
         <div
           className="osm c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"
@@ -257,7 +257,7 @@ exports[`When using snapshots Should render with element children  1`] = `
         </div>
         <div
           className="fix c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"
@@ -313,7 +313,7 @@ exports[`When using snapshots Should render with element children  1`] = `
         </div>
         <div
           className="fix c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"

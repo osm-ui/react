@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Titlebar from 'components/Titlebar';
 import Suggestion from './Suggestion';
+import { formatOsmTags, formatDeletedTags, fixOsmTags } from 'helpers/osmose';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -29,17 +30,6 @@ const StyledDiv = styled.div`
 `;
 
 class Osmose extends React.PureComponent {
-  formatDeletedData(fixes, osmTags) {
-    return fixes.map(fix => {
-      return {
-        ...fix,
-        del: fix.del.map(deletedTag => {
-          return osmTags.find(tag => tag.k === deletedTag);
-        })
-      };
-    });
-  }
-
   renderOptions(data) {
     const osmData = data.elems.length > 0 ? data.elems[0] : null;
 
@@ -49,15 +39,19 @@ class Osmose extends React.PureComponent {
       const osmTags = osmData ? osmData.tags : [];
       const fixes = osmData ? osmData.fixes : [];
 
-      const newFixes = this.formatDeletedData(fixes, osmTags);
-
       return (
         <div>
-          <Suggestion title="Présent dans OSM" osm={osmTags} key={0} />
-          {newFixes.map(fix => (
+          <Suggestion
+            title="Présent dans OSM"
+            osm={osmTags}
+            handleClick={() => formatOsmTags(osmTags)}
+            key={0}
+          />
+          {fixes.map(fix => (
             <Suggestion
               title={`Suggestion n°${fix.num}`}
-              fixes={fix}
+              fixes={formatDeletedTags(fix, osmTags)}
+              handleClick={() => fixOsmTags(osmTags, fix)}
               key={fix.num + 1}
             />
           ))}
@@ -69,7 +63,15 @@ class Osmose extends React.PureComponent {
 
     return (
       <div>
-        <Suggestion title="Nouvelle donnée" fixes={newData} className="new" />
+        <Suggestion
+          title="Nouvelle donnée"
+          fixes={newData}
+          handleClick={() => {
+            console.log('New', formatOsmTags(newData.add));
+            formatOsmTags(newData.add);
+          }}
+          className="new"
+        />
       </div>
     );
   }
