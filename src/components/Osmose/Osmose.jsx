@@ -9,15 +9,12 @@ const StyledDiv = styled.div`
   position: relative;
 
   color: black;
-  border-width: ${props => props.theme.borderWidth};
-  border-style: ${props => props.theme.borderStyle};
-  border-color: ${props => props.theme.borderColor};
   height: 90vh;
   background-color: ${props => props.theme.backgroundColor};
 
   & > div {
     height: 100%;
-    padding: 2rem;
+    padding-bottom: 2rem;
     padding-top: ${props => props.theme.titlebar.lgHeight};
     overflow-y: scroll;
   }
@@ -25,11 +22,17 @@ const StyledDiv = styled.div`
   h3 {
     text-align: center;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
 class Osmose extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.renderOptions = this.renderOptions.bind(this);
+  }
+
   renderOptions(data) {
     const osmData = data.elems.length > 0 ? data.elems[0] : null;
 
@@ -44,14 +47,18 @@ class Osmose extends React.PureComponent {
           <Suggestion
             title="Présent dans OSM"
             osm={osmTags}
-            handleClick={() => formatOsmTags(osmTags)}
+            handleClick={() =>
+              this.props.handleSuggestion(formatOsmTags(osmTags))
+            }
             key={0}
           />
           {fixes.map(fix => (
             <Suggestion
               title={`Suggestion n°${fix.num}`}
               fixes={formatDeletedTags(fix, osmTags)}
-              handleClick={() => fixOsmTags(osmTags, fix)}
+              handleClick={() =>
+                this.props.handleSuggestion(fixOsmTags(osmTags, fix))
+              }
               key={fix.num + 1}
             />
           ))}
@@ -66,10 +73,9 @@ class Osmose extends React.PureComponent {
         <Suggestion
           title="Nouvelle donnée"
           fixes={newData}
-          handleClick={() => {
-            console.log('New', formatOsmTags(newData.add));
-            formatOsmTags(newData.add);
-          }}
+          handleClick={() =>
+            this.props.handleSuggestion(formatOsmTags(newData.add))
+          }
           className="new"
         />
       </div>
@@ -93,6 +99,7 @@ class Osmose extends React.PureComponent {
 
 Osmose.propTypes = {
   data: PropTypes.object.isRequired,
+  handleSuggestion: PropTypes.func.isRequired,
   className: PropTypes.string
 };
 

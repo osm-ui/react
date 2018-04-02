@@ -6,5 +6,8 @@ import fixData from '../../../../stories/mocks/osmose_fix.json';
 
 describe('When using snapshots', () => {
   it('Should render with element children ', () =>
-    snapshotWithElementChildren(Osmose, { data: fixData }));
+    snapshotWithElementChildren(Osmose, {
+      data: fixData,
+      handleSuggestion: jest.fn()
+    }));
 });
