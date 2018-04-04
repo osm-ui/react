@@ -72,17 +72,21 @@ const StyledDiv = styled.div`
           content: '\f068';
           font-family: FontAwesome;
           font-size: 1.3rem;
-          line-height: 2.8rem;
+          line-height: 2.7rem;
           margin-right: 0.5rem;
         }
       }
 
       .tag {
-        flex: 0 0 15rem;
+        flex: 0 0 10rem;
+        line-height: 2.7rem;
+        font-size: 1.4rem;
         font-weight: bold;
       }
 
       .value {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
       }
     }
   }
