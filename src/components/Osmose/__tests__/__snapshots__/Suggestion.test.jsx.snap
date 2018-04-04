@@ -126,7 +126,7 @@ exports[`When using snapshots Should render with new data 1`] = `
     <div
       className="title"
     >
-      
+      Suggestion n°null
     </div>
     <div
       className="infos"
@@ -318,7 +318,7 @@ exports[`When using snapshots Should render with only osm 1`] = `
     <div
       className="title"
     >
-      
+      Suggestion n°null
     </div>
     <div
       className="infos"
@@ -482,7 +482,7 @@ exports[`When using snapshots Should render with osm fixable data  1`] = `
     <div
       className="title"
     >
-      
+      Suggestion n°null
     </div>
     <div
       className="infos"

@@ -224,7 +224,7 @@ exports[`When using snapshots Should render with element children  1`] = `
           <div
             className="title"
           >
-            Présent dans OSM
+            New data
           </div>
           <div
             className="infos"
@@ -266,7 +266,7 @@ exports[`When using snapshots Should render with element children  1`] = `
           <div
             className="title"
           >
-            Suggestion n°0
+            Suggestion n°1
           </div>
           <div
             className="infos"
@@ -322,7 +322,7 @@ exports[`When using snapshots Should render with element children  1`] = `
           <div
             className="title"
           >
-            Suggestion n°1
+            Suggestion n°2
           </div>
           <div
             className="infos"

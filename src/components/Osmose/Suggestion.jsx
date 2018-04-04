@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
-import { colors } from 'constants/index';
+import { colors, osmoseSuggestionTypes as types } from 'constants/index';
+
+const titleObj = {
+  [types.NEW]: 'New data',
+  [types.ORIGINAL]: 'Data in OSM',
+  [types.MODIFICATION]: 'Suggestion n°'
+};
 
 const StyledDiv = styled.div`
   margin-top: 3rem;
@@ -137,12 +143,16 @@ class Suggestion extends React.PureComponent {
   }
 
   render() {
-    const { osm, fixes, title, className, handleClick } = this.props;
+    const { osm, fixes, type, number, handleClick, className } = this.props;
 
-    var suggestion =
+    const suggestion =
       fixes !== null ? this.renderTagFixes(fixes) : this.renderTags(osm);
 
-    var classNames = classnames(fixes ? 'fix' : 'osm', className);
+    const classNames = classnames(fixes ? 'fix' : 'osm', className);
+
+    const baseTitle = titleObj[type];
+    const title =
+      type === types.MODIFICATION ? `${baseTitle}${number}` : baseTitle;
 
     return (
       <StyledDiv className={classNames} onClick={handleClick}>
@@ -154,18 +164,21 @@ class Suggestion extends React.PureComponent {
 }
 
 Suggestion.propTypes = {
-  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(Object.keys(types)),
+  number: PropTypes.number,
   osm: PropTypes.array,
   fixes: PropTypes.object,
-  className: PropTypes.string,
-  handleClick: PropTypes.func
+  handleClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 Suggestion.defaultProps = {
-  className: '',
+  type: types.MODIFICATION,
+  number: null,
   osm: null,
   fixes: null,
-  handleClick: null
+  handleClick: null,
+  className: ''
 };
 
 Suggestion.displayName = 'Suggestion';
