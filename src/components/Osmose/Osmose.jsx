@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Titlebar from 'components/Titlebar';
 import Suggestion from './Suggestion';
+import { formatOsmTags, formatDeletedTags, fixOsmTags } from 'helpers/osmose';
+import { osmoseSuggestionTypes as types } from 'constants/index';
 
 const StyledDiv = styled.div`
   position: relative;
 
   color: black;
-  border-width: ${props => props.theme.borderWidth};
-  border-style: ${props => props.theme.borderStyle};
-  border-color: ${props => props.theme.borderColor};
   height: 90vh;
   background-color: ${props => props.theme.backgroundColor};
 
   & > div {
     height: 100%;
-    padding: 2rem;
+    padding-bottom: 2rem;
     padding-top: ${props => props.theme.titlebar.lgHeight};
     overflow-y: scroll;
   }
@@ -24,20 +23,15 @@ const StyledDiv = styled.div`
   h3 {
     text-align: center;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 `;
 
 class Osmose extends React.PureComponent {
-  formatDeletedData(fixes, osmTags) {
-    return fixes.map(fix => {
-      return {
-        ...fix,
-        del: fix.del.map(deletedTag => {
-          return osmTags.find(tag => tag.k === deletedTag);
-        })
-      };
-    });
+  constructor(props) {
+    super(props);
+
+    this.renderOptions = this.renderOptions.bind(this);
   }
 
   renderOptions(data) {
@@ -49,15 +43,24 @@ class Osmose extends React.PureComponent {
       const osmTags = osmData ? osmData.tags : [];
       const fixes = osmData ? osmData.fixes : [];
 
-      const newFixes = this.formatDeletedData(fixes, osmTags);
-
       return (
         <div>
-          <Suggestion title="Présent dans OSM" osm={osmTags} key={0} />
-          {newFixes.map(fix => (
+          <Suggestion
+            type={types.NEW}
+            osm={osmTags}
+            handleClick={() =>
+              this.props.handleSuggestion(formatOsmTags(osmTags))
+            }
+            key={0}
+          />
+          {fixes.map(fix => (
             <Suggestion
-              title={`Suggestion n°${fix.num}`}
-              fixes={fix}
+              type={types.MODIFICATION}
+              number={fix.num + 1}
+              fixes={formatDeletedTags(fix, osmTags)}
+              handleClick={() =>
+                this.props.handleSuggestion(fixOsmTags(osmTags, fix))
+              }
               key={fix.num + 1}
             />
           ))}
@@ -69,7 +72,14 @@ class Osmose extends React.PureComponent {
 
     return (
       <div>
-        <Suggestion title="Nouvelle donnée" fixes={newData} className="new" />
+        <Suggestion
+          type={types.ORIGINAL}
+          fixes={newData}
+          handleClick={() =>
+            this.props.handleSuggestion(formatOsmTags(newData.add))
+          }
+          className="new"
+        />
       </div>
     );
   }
@@ -91,6 +101,7 @@ class Osmose extends React.PureComponent {
 
 Osmose.propTypes = {
   data: PropTypes.object.isRequired,
+  handleSuggestion: PropTypes.func.isRequired,
   className: PropTypes.string
 };
 

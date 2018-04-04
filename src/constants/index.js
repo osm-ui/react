@@ -5,3 +5,9 @@ export const contextIcons = {
   warning: 'warning',
   danger: 'times-circle'
 };
+
+export const osmoseSuggestionTypes = {
+  NEW: 'NEW',
+  ORIGINAL: 'ORIGINAL',
+  MODIFICATION: 'MODIFICATION'
+};

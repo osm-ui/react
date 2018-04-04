@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
 
-import { colors } from 'constants/index';
+import { colors, osmoseSuggestionTypes as types } from 'constants/index';
+
+const titleObj = {
+  [types.NEW]: 'New data',
+  [types.ORIGINAL]: 'Data in OSM',
+  [types.MODIFICATION]: 'Suggestion n°'
+};
 
 const StyledDiv = styled.div`
   margin-top: 3rem;
@@ -72,17 +78,21 @@ const StyledDiv = styled.div`
           content: '\f068';
           font-family: FontAwesome;
           font-size: 1.3rem;
-          line-height: 2.8rem;
+          line-height: 2.7rem;
           margin-right: 0.5rem;
         }
       }
 
       .tag {
-        flex: 0 0 15rem;
+        flex: 0 0 10rem;
+        line-height: 2.7rem;
+        font-size: 1.4rem;
         font-weight: bold;
       }
 
       .value {
+        font-size: 1.5rem;
+        line-height: 2.7rem;
       }
     }
   }
@@ -133,12 +143,16 @@ class Suggestion extends React.PureComponent {
   }
 
   render() {
-    const { osm, fixes, title, className, handleClick } = this.props;
+    const { osm, fixes, type, number, handleClick, className } = this.props;
 
-    var suggestion =
+    const suggestion =
       fixes !== null ? this.renderTagFixes(fixes) : this.renderTags(osm);
 
-    var classNames = classnames(fixes ? 'fix' : 'osm', className);
+    const classNames = classnames(fixes ? 'fix' : 'osm', className);
+
+    const baseTitle = titleObj[type];
+    const title =
+      type === types.MODIFICATION ? `${baseTitle}${number}` : baseTitle;
 
     return (
       <StyledDiv className={classNames} onClick={handleClick}>
@@ -150,18 +164,21 @@ class Suggestion extends React.PureComponent {
 }
 
 Suggestion.propTypes = {
-  title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(Object.keys(types)),
+  number: PropTypes.number,
   osm: PropTypes.array,
   fixes: PropTypes.object,
-  className: PropTypes.string,
-  handleClick: PropTypes.func
+  handleClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 Suggestion.defaultProps = {
-  className: '',
+  type: types.MODIFICATION,
+  number: null,
   osm: null,
   fixes: null,
-  handleClick: null
+  handleClick: null,
+  className: ''
 };
 
 Suggestion.displayName = 'Suggestion';

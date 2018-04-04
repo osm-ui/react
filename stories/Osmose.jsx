@@ -26,11 +26,11 @@ storiesOf('Osmose', module)
   )
   .addWithInfo('Data to fix', () => (
     <DefaultTheme>
-      <Osmose data={fixData}/>
+      <Osmose data={fixData} handleSuggestion={action('suggestion')}/>
     </DefaultTheme>
   ))
   .addWithInfo('New data', () => (
     <DefaultTheme>
-      <Osmose data={newData}/>
+      <Osmose data={newData} handleSuggestion={action('suggestion')}/>
     </DefaultTheme>
   ));
