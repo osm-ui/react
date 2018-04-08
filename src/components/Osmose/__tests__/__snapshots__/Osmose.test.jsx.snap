@@ -142,15 +142,22 @@ exports[`When using snapshots Should render with element children  1`] = `
   content: '\\f068';
   font-family: FontAwesome;
   font-size: 1.3rem;
-  line-height: 2.8rem;
+  line-height: 2.7rem;
   margin-right: 0.5rem;
 }
 
 .c3 .infos .info .tag {
-  -webkit-flex: 0 0 15rem;
-  -ms-flex: 0 0 15rem;
-  flex: 0 0 15rem;
+  -webkit-flex: 0 0 10rem;
+  -ms-flex: 0 0 10rem;
+  flex: 0 0 10rem;
+  line-height: 2.7rem;
+  font-size: 1.4rem;
   font-weight: bold;
+}
+
+.c3 .infos .info .value {
+  font-size: 1.5rem;
+  line-height: 2.7rem;
 }
 
 .c3.fix .title,
@@ -169,16 +176,13 @@ exports[`When using snapshots Should render with element children  1`] = `
 .c1 {
   position: relative;
   color: black;
-  border-width: 4px;
-  border-style: solid;
-  border-color: #dbdcdd;
   height: 90vh;
   background-color: #ffffff;
 }
 
 .c1 > div {
   height: 100%;
-  padding: 2rem;
+  padding-bottom: 2rem;
   padding-top: 4.5rem;
   overflow-y: scroll;
 }
@@ -186,7 +190,7 @@ exports[`When using snapshots Should render with element children  1`] = `
 .c1 h3 {
   text-align: center;
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width:50rem) {
@@ -215,12 +219,12 @@ exports[`When using snapshots Should render with element children  1`] = `
       <div>
         <div
           className="osm c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"
           >
-            Présent dans OSM
+            New data
           </div>
           <div
             className="infos"
@@ -257,12 +261,12 @@ exports[`When using snapshots Should render with element children  1`] = `
         </div>
         <div
           className="fix c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"
           >
-            Suggestion n°0
+            Suggestion n°1
           </div>
           <div
             className="infos"
@@ -313,12 +317,12 @@ exports[`When using snapshots Should render with element children  1`] = `
         </div>
         <div
           className="fix c3"
-          onClick={null}
+          onClick={[Function]}
         >
           <div
             className="title"
           >
-            Suggestion n°1
+            Suggestion n°2
           </div>
           <div
             className="infos"
