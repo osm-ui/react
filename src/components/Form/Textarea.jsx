@@ -30,7 +30,15 @@ const StyledTextArea = styled.textarea`
   }
 `;
 
-const Textarea = ({ rows, disabled, hint, className, innerRef, style, ...props }) => (
+const Textarea = ({
+  rows,
+  disabled,
+  hint,
+  className,
+  innerRef,
+  style,
+  ...props
+}) => (
   <div className="textarea-container" style={style}>
     <StyledTextArea
       className={classnames(className, 'form-control')}

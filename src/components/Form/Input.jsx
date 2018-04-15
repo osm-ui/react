@@ -29,7 +29,15 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = ({ type, disabled, hint, className,innerRef, style, ...props }) => (
+const Input = ({
+  type,
+  disabled,
+  hint,
+  className,
+  innerRef,
+  style,
+  ...props
+}) => (
   <div className="input-container" style={style}>
     <StyledInput
       className={classnames(className, 'form-control')}
