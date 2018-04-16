@@ -7,18 +7,27 @@ import styled from 'styled-components';
 import Title from 'components/Sidebar/Title';
 import Loader from 'components/Loader';
 
-const StyledAside = styled.aside`
+const Overlay = styled.aside`
+  position: absolute;
   z-index: 1000;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3rem;
+  padding: ${props => props.theme.modal.overlayPadding};
+  background: ${props => props.theme.modal.overlayBackgroundColor};
+  transition: opacity 300ms ease-in-out;
+`;
+
+const StyledMain = styled.main`
+  position: relative;
+  min-height: 15rem;
+  max-height: 100%;
+  padding: ${props => props.theme.modal.padding};
   background: ${props => props.theme.modal.backgroundColor};
   color: ${props => props.theme.modal.color};
   overflow-y: auto;
   opacity: 0;
-
   transition: opacity 300ms ease-in-out;
 
   &.scroll-content {
@@ -26,8 +35,6 @@ const StyledAside = styled.aside`
     flex-direction: column;
     overflow-y: none;
   }
-
-  position: absolute;
 
   &.scroll-content .header {
     margin-bottom: 2rem;
@@ -101,7 +108,7 @@ class Modal extends React.Component {
 
     const transitionStyles = {
       entered: {
-        opacity: 0.95
+        opacity: 1
       }
     };
 
@@ -114,25 +121,28 @@ class Modal extends React.Component {
         onExited={this.onClose}
       >
         {state => (
-          <StyledAside
-            key="modal"
-            className={asideClasses}
-            style={transitionStyles[state]}
-            {...rest}
-          >
-            {(header || title) && (
-              <header className="header">
-                {title && <Title inHeader>{title}</Title>}
-                {!loading && header && header}
-              </header>
-            )}
+          <Overlay>
+            <StyledMain
+              key="modal"
+              className={asideClasses}
+              style={transitionStyles[state]}
+              {...rest}
+            >
+              {!loading &&
+                (header || title) && (
+                  <header className="header">
+                    {title && <Title inHeader>{title}</Title>}
+                    {!loading && header && header}
+                  </header>
+                )}
 
-            <div className={contentClasses}>{children}</div>
+              <div className={contentClasses}>{children}</div>
 
-            {!loading && footer && footer}
+              {!loading && footer && footer}
 
-            {loading && <Loader centered label={loaderLabel} />}
-          </StyledAside>
+              {loading && <Loader centered label={loaderLabel} />}
+            </StyledMain>
+          </Overlay>
         )}
       </Transition>
     );

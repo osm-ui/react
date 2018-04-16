@@ -35,6 +35,10 @@ exports[`When using snapshots Select should render with an element children 1`] 
   line-height: 3.8rem;
 }
 
+.c1.Select--single.is-disabled {
+  opacity: 0.6;
+}
+
 .c1 .Select-input > input {
   padding: 0.1rem;
   line-height: 3.2rem;

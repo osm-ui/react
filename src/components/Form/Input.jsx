@@ -23,34 +23,32 @@ const StyledInput = styled.input`
     border-color: ${props => props.theme.form.input.focusBorderColor};
     box-shadow: ${props => props.theme.form.input.focusBoxShadow};
   }
+
+  &:disabled {
+    opacity: ${props => props.theme.form.input.disabledOpacity};
+  }
 `;
 
-class Input extends React.Component {
-  render() {
-    const {
-      type,
-      disabled,
-      hint,
-      className,
-      innerRef,
-      style,
-      ...props
-    } = this.props;
-
-    return (
-      <div className="input-container" style={style}>
-        <StyledInput
-          className={classnames(className, 'form-control')}
-          type={type}
-          disabled={disabled}
-          innerRef={innerRef}
-          {...props}
-        />
-        {hint && <InputHint>{hint}</InputHint>}
-      </div>
-    );
-  }
-}
+const Input = ({
+  type,
+  disabled,
+  hint,
+  className,
+  innerRef,
+  style,
+  ...props
+}) => (
+  <div className="input-container" style={style}>
+    <StyledInput
+      className={classnames(className, 'form-control')}
+      type={type}
+      disabled={disabled}
+      innerRef={innerRef}
+      {...props}
+    />
+    {hint && <InputHint disabled={disabled}>{hint}</InputHint>}
+  </div>
+);
 
 Input.propTypes = {
   type: PropTypes.string,

@@ -60,23 +60,23 @@ const StyledButton = styled.button`
 
   &.btn-xs {
     font-size: 1.2rem;
-    line-height: 2.1rem;
-    padding: 0 1.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
   }
 
   &.btn-sm {
-    line-height: 3rem;
-    padding: 0 1.6rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 
   &.btn-md {
-    line-height: 3.8rem;
-    padding: 0 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   &.btn-lg {
-    line-height: 4.5rem;
-    padding: 0 2.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 
   &.shape-round {
