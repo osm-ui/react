@@ -67,14 +67,14 @@ const StyledAside = styled.aside`
   &.left.slide-enter,
   &.left.slide-exit.slide-exit-active,
   &.left.slide-exit.slide-exit-done {
-    transform: translate(-150%, 0);
+    transform: translate(-110%, 0);
   }
 
   &.right.slide-appear,
   &.right.slide-enter,
   &.right.slide-exit.slide-exit-active,
   &.right.slide-exit.slide-exit-done {
-    transform: translate(150%, 0);
+    transform: translate(110%, 0);
   }
 
   &.left.slide-appear.slide-appear-active,
