@@ -25,6 +25,7 @@ export Section from 'components/Section';
 export Loader from 'components/Loader';
 export Alert from 'components/Alert';
 export Button from 'components/Button';
+export List from 'components/List';
 export Form from 'components/Form';
 export Sidebar from 'components/Sidebar';
 export Toolbar from 'components/Toolbar';

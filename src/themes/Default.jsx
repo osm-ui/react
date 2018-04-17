@@ -427,6 +427,11 @@ export const config = {
       controlColor: colors.red2,
       hoverControlColor: colors.red3
     }
+  },
+  list: {
+    color: colors.anthracite2,
+    backgroundColor: colors.white,
+    borderColor: colors.lightGray3
   }
 };
 
