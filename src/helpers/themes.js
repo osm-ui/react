@@ -124,6 +124,11 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     modal: {
       color: colors.white,
       backgroundColor: color2
+    },
+    list: {
+      color: colors.white,
+      backgroundColor: color2,
+      borderColor: color5
     }
   });
 }
@@ -246,6 +251,11 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     modal: {
       color: colors.dark27Color1,
       backgroundColor: color2
+    },
+    list: {
+      color: dark27Color1,
+      backgroundColor: color2,
+      borderColor: dark27Color1
     }
   });
 }

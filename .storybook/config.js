@@ -21,6 +21,7 @@ function loadStories() {
     require('../stories/introduction');
     require('../stories/Button');
     require('../stories/Alert');
+    require('../stories/List');
     require('../stories/Form');
     require('../stories/Loader');
     require('../stories/Sidebar');

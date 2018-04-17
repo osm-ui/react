@@ -387,7 +387,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c1 .c4,
-.c1 .sc-gqjmRU {
+.c1 .sc-VigVT {
   line-height: 1.7rem;
   border-radius: 0 0 4px 4px;
 }

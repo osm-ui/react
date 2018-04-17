@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
-import Enzyme, { render } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import 'jest-styled-components';
+import { render } from 'enzyme';
 import DefaultTheme from 'themes/Default';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 export const snapshotWithElementChildren = (TestedElement, props) => {
   const result = ReactTestRenderer.create(
