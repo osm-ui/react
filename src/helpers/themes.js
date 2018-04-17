@@ -4,7 +4,8 @@ import { lighten, darken } from 'polished';
 import { injectGlobal } from 'styled-components';
 
 export function makeTransparent(hexColor, opacity) {
-  const colorAsAnArray = hexRgb(hexColor);
+  const colorAsAnArray = hexRgb(hexColor, { format: 'array' });
+  colorAsAnArray.pop();
   colorAsAnArray.push(opacity);
   return `rgba(${colorAsAnArray.join(',')})`;
 }

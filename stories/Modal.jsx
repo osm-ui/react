@@ -50,6 +50,7 @@ const StyledDiv = styled.div`
   width: 100%;
   height: 30rem;
   border: 1px solid black;
+  padding: 15px;
 `;
 
 storiesOf('Modal', module)
@@ -126,7 +127,9 @@ storiesOf('Modal', module)
     <DefaultTheme>
       <FakeApp>
         <StyledDiv>
-          <ReactPlaceholder type="text" rows={5} />
+          <ReactPlaceholder ready={false} type="text" rows={5}>
+            {' '}
+          </ReactPlaceholder>
           <Modal>
             <Lorem count={2} />
           </Modal>

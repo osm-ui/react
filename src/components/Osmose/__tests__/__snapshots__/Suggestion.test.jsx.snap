@@ -70,6 +70,7 @@ exports[`When using snapshots Should render with new data 1`] = `
 
 .c1 .infos .info.del {
   color: #c92d2d;
+  -webkit-text-decoration: line-through;
   text-decoration: line-through;
 }
 
@@ -262,6 +263,7 @@ exports[`When using snapshots Should render with only osm 1`] = `
 
 .c1 .infos .info.del {
   color: #c92d2d;
+  -webkit-text-decoration: line-through;
   text-decoration: line-through;
 }
 
@@ -426,6 +428,7 @@ exports[`When using snapshots Should render with osm fixable data  1`] = `
 
 .c1 .infos .info.del {
   color: #c92d2d;
+  -webkit-text-decoration: line-through;
   text-decoration: line-through;
 }
 
