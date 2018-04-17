@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactTestRenderer from 'react-test-renderer';
+import Enzyme, { render } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import DefaultTheme from 'themes/Default';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 export const snapshotWithElementChildren = (TestedElement, props) => {
   const result = ReactTestRenderer.create(
@@ -20,6 +24,28 @@ export const snapshotWithTextChildren = (TestedElement, props) => {
       <TestedElement {...props}>This is a text</TestedElement>
     </DefaultTheme>
   ).toJSON();
+
+  expect(result).toMatchSnapshot();
+};
+
+export const snapshotWithRenderAndElementChildren = (TestedElement, props) => {
+  const result = render(
+    <DefaultTheme>
+      <TestedElement {...props}>
+        <div />
+      </TestedElement>
+    </DefaultTheme>
+  ).html();
+
+  expect(result).toMatchSnapshot();
+};
+
+export const snapshotWithRenderAndTextChildren = (TestedElement, props) => {
+  const result = render(
+    <DefaultTheme>
+      <TestedElement {...props}>This is a text</TestedElement>
+    </DefaultTheme>
+  ).html();
 
   expect(result).toMatchSnapshot();
 };

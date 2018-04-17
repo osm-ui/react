@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Transition from 'react-transition-group/Transition';
+import CSSTransition from 'react-transition-group/CSSTransition';
 import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 import Loader from 'components/Loader';
 import SidebarTitle from './Title';
+
+const slideDuration = 300;
 
 const StyledAside = styled.aside`
   z-index: 1000;
@@ -13,7 +15,7 @@ const StyledAside = styled.aside`
   max-width: 100%;
   height: 100%;
   overflow-y: auto;
-  transition: all 0.25s ease-out;
+  transition: all ${slideDuration}ms ease-out;
 
   color: ${props => props.theme.color};
   background: ${props => props.theme.backgroundColor};
@@ -53,14 +55,37 @@ const StyledAside = styled.aside`
 
   &.left {
     left: 0;
-    transform: translate(-150%, 0);
     border-right-width: ${props => props.theme.borderWidth};
   }
 
   &.right {
     right: 0;
-    transform: translate(150%, 0);
     border-left-width: ${props => props.theme.borderWidth};
+  }
+
+  &.left.slide-appear,
+  &.left.slide-enter,
+  &.left.slide-exit.slide-exit-active,
+  &.left.slide-exit.slide-exit-done {
+    transform: translate(-150%, 0);
+  }
+
+  &.right.slide-appear,
+  &.right.slide-enter,
+  &.right.slide-exit.slide-exit-active,
+  &.right.slide-exit.slide-exit-done {
+    transform: translate(150%, 0);
+  }
+
+  &.left.slide-appear.slide-appear-active,
+  &.left.slide-enter.slide-enter-active,
+  &.left.slide-enter.slide-enter-done,
+  &.left.slide-exit,
+  &.right.slide-appear.slide-appear-active,
+  &.right.slide-enter.slide-enter-active,
+  &.right.slide-enter.slide-enter-done,
+  &.right.slide-exit {
+    transform: translate(0, 0);
   }
 
   &.left.maximized,
@@ -125,12 +150,8 @@ const StyledAside = styled.aside`
 `;
 
 class Sidebar extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      opened: true
-    };
+  componentWillMount() {
+    this.setState({ opened: this.props.opened });
   }
 
   componentDidMount() {
@@ -145,6 +166,10 @@ class Sidebar extends React.Component {
     if (this.props.maximized !== nextProps.maximized) {
       if (nextProps.maximized === true) this.props.onMaximize();
       else this.props.onUnmaximize();
+    }
+
+    if (this.state.opened !== nextProps.opened) {
+      this.setState({ opened: nextProps.opened });
     }
   }
 
@@ -183,7 +208,6 @@ class Sidebar extends React.Component {
     const asideClasses = classnames(className, {
       [position]: true,
       [width]: true,
-      opened: this.state.opened,
       maximized,
       [`container-${container}`]: true,
       'scroll-content': scrollContent
@@ -194,49 +218,43 @@ class Sidebar extends React.Component {
       loading
     });
 
-    const transitionStyles = {
-      entered: {
-        transform: 'translate(0,0)'
-      }
-    };
-
     return (
-      <Transition in={this.state.opened} appear timeout={250}>
-        {state => (
-          <StyledAside
-            key="sidebar"
-            className={asideClasses}
-            style={transitionStyles[state]}
-            {...rest}
-          >
-            <header className="header">
-              {this.props.onClickBack && (
-                <button
-                  className="back-btn"
-                  onClick={() => this._handleBackClick()}
-                >
-                  <FontAwesome name="chevron-left" size="lg" />
-                </button>
-              )}
+      <CSSTransition
+        classNames="slide"
+        appear
+        mountOnEnter
+        unmountOnExit
+        in={this.state.opened}
+        timeout={slideDuration}
+      >
+        <StyledAside key="sidebar" className={asideClasses} {...rest}>
+          <header className="header">
+            {this.props.onClickBack && (
               <button
-                className="close-btn"
-                onClick={() => this._handleCloseClick()}
+                className="back-btn"
+                onClick={() => this._handleBackClick()}
               >
-                <FontAwesome name="close" size="lg" />
+                <FontAwesome name="chevron-left" size="lg" />
               </button>
-              {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
-              <div className="clearfix" />
-              {!loading && header && header}
-            </header>
+            )}
+            <button
+              className="close-btn"
+              onClick={() => this._handleCloseClick()}
+            >
+              <FontAwesome name="close" size="lg" />
+            </button>
+            {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
+            <div className="clearfix" />
+            {!loading && header && header}
+          </header>
 
-            <div className={contentClasses}>{children}</div>
+          <div className={contentClasses}>{children}</div>
 
-            {!loading && footer && footer}
+          {!loading && footer && footer}
 
-            {loading && <Loader centered label={loaderLabel} />}
-          </StyledAside>
-        )}
-      </Transition>
+          {loading && <Loader centered label={loaderLabel} />}
+        </StyledAside>
+      </CSSTransition>
     );
   }
 }
@@ -249,6 +267,7 @@ Sidebar.propTypes = {
   loaderLabel: PropTypes.node,
   position: PropTypes.oneOf(['left', 'right']),
   width: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+  opened: PropTypes.bool,
   maximized: PropTypes.bool,
   container: PropTypes.oneOf(['parent', 'root']),
   scrollContent: PropTypes.bool,
@@ -271,6 +290,7 @@ Sidebar.defaultProps = {
   position: 'left',
   width: 'md',
   maximized: false,
+  opened: true,
   container: 'parent',
   scrollContent: false,
   onOpen: null,
