@@ -17,7 +17,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.alert-info a {
   color: #003836;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -25,7 +24,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 .c1.alert-info a:focus,
 .c1.alert-info a:active {
   color: #003836;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -37,7 +35,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.alert-success a {
   color: #1a431c;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -45,7 +42,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 .c1.alert-success a:focus,
 .c1.alert-success a:active {
   color: #1a431c;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -57,7 +53,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.alert-warning a {
   color: #825200;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -65,7 +60,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 .c1.alert-warning a:focus,
 .c1.alert-warning a:active {
   color: #825200;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -77,7 +71,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.alert-danger a {
   color: #7e1c1c;
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -85,7 +78,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 .c1.alert-danger a:focus,
 .c1.alert-danger a:active {
   color: #7e1c1c;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 

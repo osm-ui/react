@@ -23,13 +23,17 @@ const FakeApp = ({ fakeText, dimmed, children, ...rest }) => (
   <App appCanvas {...rest}>
     <Content dimmed={dimmed}>
       <Title>
-        <ReactPlaceholder ready={!fakeText} type="text" rows={1}>
-          Application Content
-        </ReactPlaceholder>
+        {fakeText ? (
+          <ReactPlaceholder type="text" rows={1} />
+        ) : (
+          'Application Content'
+        )}
       </Title>
-      <ReactPlaceholder ready={!fakeText} type="text" rows={10}>
+      {fakeText ? (
+        <ReactPlaceholder type="text" rows={10} />
+      ) : (
         <Lorem count={2} />
-      </ReactPlaceholder>
+      )}
     </Content>
     {children}
   </App>
