@@ -111,8 +111,10 @@ export const config = {
   },
   form: {
     select: {
-      optionColor: colors.white,
-      optionBackgroundColor: colors.blue2
+      optionColor: colors.anthracite1,
+      optionBackgroundColor: colors.xhite,
+      focusedOptionColor: colors.white,
+      focusedOptionBackgroundColor: colors.blue2
     },
     button: {
       fontWeight: 500,

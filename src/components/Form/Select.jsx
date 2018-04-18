@@ -56,12 +56,18 @@ const StyledSelect = styled(VirtualizedSelect)`
   && .VirtualizedSelectOption {
     cursor: default;
     padding: 0.5rem 1rem;
+    color: ${props => props.theme.form.select.optionColor};
+    background-color: ${props => props.theme.form.select.optionBackgroundColor};
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   && .nameOptionFocused,
   && .VirtualizedSelectFocusedOption {
-    color: ${props => props.theme.form.select.optionColor};
-    background-color: ${props => props.theme.form.select.optionBackgroundColor};
+    color: ${props => props.theme.form.select.focusedOptionColor};
+    background-color: ${props =>
+      props.theme.form.select.focusedOptionBackgroundColor};
   }
 `;
 
