@@ -6,7 +6,7 @@ import 'react-virtualized-select/styles.css';
 import VirtualizedSelect from 'react-virtualized-select';
 
 const StyledSelect = styled(VirtualizedSelect)`
-  .Select-control {
+  && .Select-control {
     opacity: ${props => props.theme.form.input.opacity};
     background-color: ${props => props.theme.form.input.backgroundColor};
     border-color: ${props => props.theme.form.input.borderColor};
@@ -15,20 +15,20 @@ const StyledSelect = styled(VirtualizedSelect)`
     box-shadow: none;
   }
 
-  &.is-focused .Select-control,
-  &.is-focused:not(.is-open) > .Select-control {
+  &&.is-focused .Select-control,
+  &&.is-focused:not(.is-open) > .Select-control {
     opacity: ${props => props.theme.form.input.focusOpacity};
     background-color: ${props => props.theme.form.input.focusBackgroundColor};
     border-color: ${props => props.theme.form.input.focusBorderColor};
     box-shadow: none;
   }
 
-  .Select-placeholder {
+  && .Select-placeholder {
     padding-left: 1.2rem;
     line-height: 3.8rem;
   }
 
-  &.Select--single {
+  &&.Select--single {
     .Select-value {
       padding-left: 1.2rem;
     }
@@ -38,26 +38,28 @@ const StyledSelect = styled(VirtualizedSelect)`
     }
   }
 
-  &.Select--single.is-disabled {
+  &&.Select--single.is-disabled {
     opacity: ${props => props.theme.form.input.disabledOpacity};
   }
 
-  .Select-input > input {
+  && .Select-input > input {
     padding: 0.1rem;
     line-height: 3.2rem;
   }
 
-  .Select-menu-outer {
+  && .Select-menu-outer {
     margin-top: 0;
     border-top-width: 0;
   }
 
-  .VirtualizedSelectOption {
+  && .nameOption,
+  && .VirtualizedSelectOption {
     cursor: default;
     padding: 0.5rem 1rem;
   }
 
-  .VirtualizedSelectFocusedOption {
+  && .nameOptionFocused,
+  && .VirtualizedSelectFocusedOption {
     color: ${props => props.theme.form.select.optionColor};
     background-color: ${props => props.theme.form.select.optionBackgroundColor};
   }

@@ -231,7 +231,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c8 {
-  opacity: 0.8;
+  opacity: 1;
   background-color: #ffffff;
   border-color: #c9cacc;
   border-width: 2px;
@@ -256,7 +256,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c6 {
-  opacity: 0.8;
+  opacity: 1;
   resize: vertical;
   background-color: #ffffff;
   border-color: #c9cacc;

@@ -6,7 +6,7 @@ exports[`When using snapshots TextArea should render with an element children 1`
 }
 
 .c1 {
-  opacity: 0.8;
+  opacity: 1;
   resize: vertical;
   background-color: #ffffff;
   border-color: #c9cacc;

@@ -211,7 +211,7 @@ export const config = {
       borderWidth: '2px',
       borderRadius: 0,
       boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
-      opacity: 0.8,
+      opacity: 1,
       backgroundColor: colors.white,
       borderColor: colors.lightGray3,
       disabledOpacity: 0.6,
