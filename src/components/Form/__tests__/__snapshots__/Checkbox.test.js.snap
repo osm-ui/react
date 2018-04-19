@@ -18,10 +18,10 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   color: #101113;
   background-color: #ffffff;
   border-color: #101113;
-  height: 2.7rem;
 }
 
 .c2 {
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
@@ -30,9 +30,9 @@ exports[`When using snapshots Checkbox should render with an element children 1`
 
 .c2 + label {
   font-size: 1.7rem;
-  line-height: 1.7rem;
+  line-height: 3.2rem;
   font-weight: 400;
-  padding-left: 2.5rem;
+  padding-left: 3rem;
   cursor: pointer;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
@@ -58,27 +58,29 @@ exports[`When using snapshots Checkbox should render with an element children 1`
   -ms-transform: scale(0);
   transform: scale(0);
   padding-left: 0.5px;
+  top: -0.4rem;
   content: '\\f00c';
   color: #707377;
   font-family: FontAwesome;
   font-size: 1.4rem;
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:checked + label::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  -webkit-transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
-  transition: transform 0.5s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
+  -webkit-transition: transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
+  transition: transform 0.2s cubic-bezier(0.8,-0.33,0.2,1.33);
 }
 
 .c2:disabled + label,
 .c2:disabled + label::after {
-  opacity: 0.3;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 

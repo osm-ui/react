@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 
-import { contextIcons } from 'constants/index';
 import Button from 'components/Button';
 
 const contexts = ['info', 'success', 'warning', 'danger'];
@@ -92,17 +91,19 @@ const Container = styled.div`
 `;
 
 const StyledAside = styled.aside`
+  position: relative;
   display: flex;
   z-index: 1000;
   width: 100%;
   height: 4rem;
-  margin: 0.2rem 0;
-  padding: 0 0.5rem;
+  margin: 0.4rem 0;
+  padding: 0 4rem 0 2rem;
   overflow-y: auto;
-  font-size: 1.3rem;
-  color: ${props => props.theme.alert[props.context].color};
-  background: ${props => props.theme.backgroundColor};
-  border-color: ${props => props.theme.alert[props.context].borderColor};
+  font-size: ${props => props.theme.notification.fontSize};
+  color: ${props => props.theme.notification[props.context].color};
+  background: ${props =>
+    props.theme.notification[props.context].backgroundColor};
+  border-color: ${props => props.theme.notification[props.context].borderColor};
   border-style: ${props => props.theme.borderStyle};
   border-width: 0;
   box-shadow: ${props => props.theme.sidebar.boxShadow};
@@ -127,27 +128,22 @@ const StyledAside = styled.aside`
     border-top-width: ${props => props.theme.borderWidth};
   }
 
-  .icon {
-    display: inline-block;
-    color: ${props => props.theme.alert[props.context].borderColor};
-    background: transparent;
-    border-width: 0;
-    height: 100%;
-    margin-right: 1rem;
-    line-height: 4rem;
-  }
-
   .close-btn {
     display: inline-block;
-    color: ${props => props.theme.controlColor};
-    background: transparent;
-    border-width: 0;
-    height: 100%;
-    padding: 0 1rem;
-    margin-left: 0.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0;
+    color: ${props => props.theme.notification[props.context].controlColor};
+    background: none;
+    border: none;
 
     &:hover {
-      color: ${props => props.theme.hoverControlColor};
+      color: ${props =>
+        props.theme.notification[props.context].hoverControlColor};
     }
   }
 
@@ -197,7 +193,6 @@ class Notification extends React.Component {
 
   render() {
     const {
-      context,
       callToActions,
       onTimeoutClose,
       children,
@@ -216,7 +211,7 @@ class Notification extends React.Component {
 
     const transitionStyles = {
       entered: {
-        transform: 'translate(0,0)'
+        transform: 'translate(0, 0)'
       }
     };
 
@@ -258,9 +253,6 @@ class Notification extends React.Component {
                   onMouseEnter={this.clearTimeout}
                   onMouseLeave={pending ? () => null : this.setTimeout}
                 >
-                  <div className="icon">
-                    <FontAwesome name={contextIcons[context]} size="lg" />
-                  </div>
                   <div className={contentClasses}>
                     {children}
                     <div>{ctas}</div>

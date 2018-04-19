@@ -10,6 +10,8 @@ const StyledDiv = styled.div`
   margin: ${props => props.theme.form.hint.margin};
   padding: ${props => props.theme.form.hint.padding};
   transition: all ease-in-out 0.15s;
+  opacity: ${props =>
+    props.disabled ? props.theme.form.hint.disabledOpacity : 1};
 `;
 
 const InputHint = ({ className, ...props }) => (

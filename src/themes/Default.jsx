@@ -111,8 +111,10 @@ export const config = {
   },
   form: {
     select: {
-      optionColor: colors.white,
-      optionBackgroundColor: colors.blue2
+      optionColor: colors.anthracite1,
+      optionBackgroundColor: colors.xhite,
+      focusedOptionColor: colors.white,
+      focusedOptionBackgroundColor: colors.blue2
     },
     button: {
       fontWeight: 500,
@@ -211,9 +213,10 @@ export const config = {
       borderWidth: '2px',
       borderRadius: 0,
       boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
-      opacity: 0.8,
+      opacity: 1,
       backgroundColor: colors.white,
       borderColor: colors.lightGray3,
+      disabledOpacity: 0.6,
 
       focusOpacity: 1,
       focusBackgroundColor: colors.white,
@@ -270,64 +273,71 @@ export const config = {
     checkbox: {
       borderColor: colors.darkGray3,
       color: colors.darkGray2,
+      disabledOpacity: 0.6,
+
       sm: {
-        height: '2.2rem',
+        lineHeight: '2.6rem',
         size: '1.4rem',
         top: '0.7rem',
-        innerSize: '1.1rem',
-        paddingLeft: '2rem'
+        innerSize: '1rem',
+        innerTop: '0rem',
+        paddingLeft: '2.6rem'
       },
       md: {
-        height: '2.7rem',
+        lineHeight: '3.2rem',
         size: '1.7rem',
         top: '0.4rem',
         innerSize: '1.4rem',
-        paddingLeft: '2.5rem'
+        innerTop: '-0.4rem',
+        paddingLeft: '3rem'
       },
       lg: {
-        height: '3.2rem',
+        lineHeight: '4rem',
         size: '2.1rem',
-        top: '0.1rem',
-        innerSize: '1.8rem',
-        paddingLeft: '3rem'
+        top: '0.9rem',
+        innerSize: '1.7rem',
+        innerTop: '-0.1rem',
+        paddingLeft: '3.4rem'
       }
     },
     radio: {
       borderColor: colors.darkGray3,
       backgroundColor: colors.darkGray2,
+      disabledOpacity: 0.6,
+
       sm: {
-        height: '2.2rem',
+        lineHeight: '2.6rem',
         size: '1.4rem',
         top: '0.7rem',
         innerSize: '0.8rem',
         innerTop: '1rem',
         innerLeft: '0.3rem',
-        paddingLeft: '2rem'
+        paddingLeft: '2.6rem'
       },
       md: {
-        height: '2.7rem',
+        lineHeight: '3.2rem',
         size: '1.7rem',
-        top: '0.4rem',
+        top: '0.7rem',
         innerSize: '0.9rem',
-        innerTop: '0.8rem',
-        innerLeft: '0.4rem',
-        paddingLeft: '2.5rem'
-      },
-      lg: {
-        height: '3.2rem',
-        size: '2.1rem',
-        top: '0.1rem',
-        innerSize: '1.3rem',
-        innerTop: '0.5rem',
+        innerTop: '1.1rem',
         innerLeft: '0.4rem',
         paddingLeft: '3rem'
+      },
+      lg: {
+        lineHeight: '4rem',
+        size: '2.1rem',
+        top: '0.9rem',
+        innerSize: '1.3rem',
+        innerTop: '1.3rem',
+        innerLeft: '0.4rem',
+        paddingLeft: '3.4rem'
       }
     },
     hint: {
       fontSize: '1.4rem',
       margin: 0,
       padding: '.5rem 1rem',
-
+      disabledOpacity: 0.6,
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,
 
@@ -354,32 +364,76 @@ export const config = {
   },
   alert: {
     info: {
-      color: colors.turquoise1,
+      color: darken(0.18, colors.turquoise1),
       backgroundColor: colors.turquoise5,
       borderColor: colors.turquoise5
     },
 
     success: {
-      color: colors.green1,
+      color: darken(0.18, colors.green1),
       backgroundColor: colors.green5,
       borderColor: colors.green5
     },
 
     warning: {
-      color: colors.orange1,
+      color: darken(0.18, colors.orange1),
       backgroundColor: colors.orange5,
       borderColor: colors.orange5
     },
 
     danger: {
-      color: colors.red1,
+      color: darken(0.18, colors.red1),
       backgroundColor: colors.red5,
       borderColor: colors.red5
     }
   },
   modal: {
     color: colors.anthracite1,
-    backgroundColor: makeTransparent(colors.white, 0.95)
+    overlayBackgroundColor: makeTransparent(colors.black, 0.65),
+    overlayPadding: '4rem',
+    backgroundColor: colors.white,
+    padding: '5rem 3rem'
+  },
+  notification: {
+    fontSize: '1.4rem',
+    offset: '1rem',
+
+    info: {
+      color: darken(0.18, colors.turquoise1),
+      backgroundColor: colors.turquoise5,
+      borderColor: colors.turquoise2,
+      controlColor: colors.turquoise2,
+      hoverControlColor: colors.turquoise3
+    },
+
+    success: {
+      color: darken(0.18, colors.green1),
+      backgroundColor: colors.green5,
+      borderColor: colors.green2,
+      controlColor: colors.green2,
+      hoverControlColor: colors.green3
+    },
+
+    warning: {
+      color: darken(0.18, colors.orange1),
+      backgroundColor: colors.orange5,
+      borderColor: colors.orange2,
+      controlColor: colors.orange2,
+      hoverControlColor: colors.orange3
+    },
+
+    danger: {
+      color: darken(0.18, colors.red1),
+      backgroundColor: colors.red5,
+      borderColor: colors.red2,
+      controlColor: colors.red2,
+      hoverControlColor: colors.red3
+    }
+  },
+  list: {
+    color: colors.anthracite2,
+    backgroundColor: colors.white,
+    borderColor: colors.lightGray3
   }
 };
 

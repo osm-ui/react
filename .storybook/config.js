@@ -9,9 +9,9 @@ setOptions({
     url: 'https://github.com/osm-ui/react',
     goFullScreen: false,
     showSearchBox: false,
-    showLeftPanel: true,
-    showDownPanel: true,
-    downPanelInRight: true,
+    showStoriesPanel: true,
+    showAddonPanel: true,
+    addonPanelInRight: true,
     sortStoriesByKind: false,
 });
 
@@ -21,6 +21,7 @@ function loadStories() {
     require('../stories/introduction');
     require('../stories/Button');
     require('../stories/Alert');
+    require('../stories/List');
     require('../stories/Form');
     require('../stories/Loader');
     require('../stories/Sidebar');

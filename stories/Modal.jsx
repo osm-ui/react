@@ -93,7 +93,7 @@ storiesOf('Modal', module)
       <FakeApp>
         <Modal>
           <Sidebar.Title>A modal title</Sidebar.Title>
-          <Lorem />
+          <Lorem count={10} />
         </Modal>
       </FakeApp>
     </DefaultTheme>

@@ -10,74 +10,74 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c1.alert-info {
-  color: #00948d;
+  color: #003836;
   background-color: #b9eeeb;
   border-color: #b9eeeb;
 }
 
 .c1.alert-info a {
-  color: #00948d;
+  color: #003836;
   text-decoration: underline;
 }
 
 .c1.alert-info a:hover,
 .c1.alert-info a:focus,
 .c1.alert-info a:active {
-  color: #00948d;
+  color: #003836;
   text-decoration: none;
 }
 
 .c1.alert-success {
-  color: #348538;
+  color: #1a431c;
   background-color: #c8e6c9;
   border-color: #c8e6c9;
 }
 
 .c1.alert-success a {
-  color: #348538;
+  color: #1a431c;
   text-decoration: underline;
 }
 
 .c1.alert-success a:hover,
 .c1.alert-success a:focus,
 .c1.alert-success a:active {
-  color: #348538;
+  color: #1a431c;
   text-decoration: none;
 }
 
 .c1.alert-warning {
-  color: #de8c00;
+  color: #825200;
   background-color: #fff2ce;
   border-color: #fff2ce;
 }
 
 .c1.alert-warning a {
-  color: #de8c00;
+  color: #825200;
   text-decoration: underline;
 }
 
 .c1.alert-warning a:hover,
 .c1.alert-warning a:focus,
 .c1.alert-warning a:active {
-  color: #de8c00;
+  color: #825200;
   text-decoration: none;
 }
 
 .c1.alert-danger {
-  color: #c92d2d;
+  color: #7e1c1c;
   background-color: #ffcdd2;
   border-color: #ffcdd2;
 }
 
 .c1.alert-danger a {
-  color: #c92d2d;
+  color: #7e1c1c;
   text-decoration: underline;
 }
 
 .c1.alert-danger a:hover,
 .c1.alert-danger a:focus,
 .c1.alert-danger a:active {
-  color: #c92d2d;
+  color: #7e1c1c;
   text-decoration: none;
 }
 
