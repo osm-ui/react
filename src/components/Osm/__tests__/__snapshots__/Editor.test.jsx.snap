@@ -302,7 +302,13 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c2 .main .c3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 4px 0 0 4px;
+}
+
+.c2 .main .c3:focus {
+  outline: none;
 }
 
 .c2 .main .value {
@@ -332,6 +338,10 @@ exports[`When using snapshots Should render with an element children 1`] = `
   bottom: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.c2 .main .actions .c3 {
+  padding: 0 1rem;
 }
 
 .c2 .main .actions .action {
@@ -439,16 +449,9 @@ exports[`When using snapshots Should render with an element children 1`] = `
   border-radius: 0 4px 0 0;
 }
 
-.c2 .c3 {
-  padding: 0 1rem;
-}
-
-.c2 .c3:focus {
-  outline: none;
-}
-
 .c1 {
   max-width: 40rem;
+  margin: 0 auto;
 }
 
 .c1 .removedList {
@@ -542,7 +545,8 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c1 .c3 {
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .c1 .c3:focus {

@@ -43,13 +43,15 @@ class Osmose extends React.PureComponent {
       const osmTags = osmData ? osmData.tags : [];
       const fixes = osmData ? osmData.fixes : [];
 
+      const formattedTags = formatOsmTags(osmTags);
+
       return (
         <div>
           <Suggestion
-            type={types.NEW}
+            type={types.ORIGINAL}
             osm={osmTags}
             handleClick={() =>
-              this.props.handleSuggestion(formatOsmTags(osmTags))
+              this.props.handleSuggestion(formattedTags, formattedTags)
             }
             key={0}
           />
@@ -59,7 +61,10 @@ class Osmose extends React.PureComponent {
               number={fix.num + 1}
               fixes={formatDeletedTags(fix, osmTags)}
               handleClick={() =>
-                this.props.handleSuggestion(fixOsmTags(osmTags, fix))
+                this.props.handleSuggestion(
+                  fixOsmTags(osmTags, fix),
+                  formattedTags
+                )
               }
               key={fix.num + 1}
             />
@@ -73,7 +78,7 @@ class Osmose extends React.PureComponent {
     return (
       <div>
         <Suggestion
-          type={types.ORIGINAL}
+          type={types.NEW}
           fixes={newData}
           handleClick={() =>
             this.props.handleSuggestion(formatOsmTags(newData.add))

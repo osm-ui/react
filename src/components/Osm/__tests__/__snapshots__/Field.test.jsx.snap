@@ -276,7 +276,13 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c1 .main .c2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 4px 0 0 4px;
+}
+
+.c1 .main .c2:focus {
+  outline: none;
 }
 
 .c1 .main .value {
@@ -306,6 +312,10 @@ exports[`When using snapshots Should render with an element children 1`] = `
   bottom: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.c1 .main .actions .c2 {
+  padding: 0 1rem;
 }
 
 .c1 .main .actions .action {
@@ -411,14 +421,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 
 .c1.selected .value {
   border-radius: 0 4px 0 0;
-}
-
-.c1 .c2 {
-  padding: 0 1rem;
-}
-
-.c1 .c2:focus {
-  outline: none;
 }
 
 <span
