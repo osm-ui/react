@@ -319,13 +319,14 @@ Editor.propTypes = {
   // id: PropTypes.number.isRequired,
   // lon: PropTypes.number.isRequired,
   // lat: PropTypes.number.isRequired,
-  original: PropTypes.object.isRequired,
   fixed: PropTypes.object.isRequired,
+  original: PropTypes.object,
   submit: PropTypes.func,
   className: PropTypes.string
 };
 
 Editor.defaultProps = {
+  original: {},
   submit: null,
   className: ''
 };

@@ -224,7 +224,7 @@ exports[`When using snapshots Should render with element children  1`] = `
           <div
             className="title"
           >
-            New data
+            Data in OSM
           </div>
           <div
             className="infos"
