@@ -592,7 +592,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c5 c6"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             rows={6}
             value="11000 VeryFarAwayStreet, 98765 VeryCoolCity"
           />
@@ -627,7 +627,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c7 c8"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             type="text"
             value="32"
           />
@@ -662,7 +662,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c7 c8"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             type="text"
             value="Blue"
           />
@@ -697,7 +697,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c7 c8"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             type="text"
             value="Male"
           />
@@ -732,7 +732,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c7 c8"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             type="text"
             value="yes"
           />
@@ -767,7 +767,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
             className="form-control c7 c8"
             disabled={false}
             onChange={[Function]}
-            placeholder="Veuillez entrer une valeur"
+            placeholder="A value is required"
             type="text"
             value="Romain"
           />

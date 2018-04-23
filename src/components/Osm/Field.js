@@ -8,7 +8,7 @@ import Button from 'components/Button';
 import Form from 'components/Form';
 import { colors } from 'constants/index';
 
-const placeholder = 'Veuillez entrer une valeur';
+const placeholder = 'A value is required';
 
 export const statusValue = {
   ADD: 'add',

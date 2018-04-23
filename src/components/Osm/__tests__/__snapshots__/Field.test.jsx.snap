@@ -443,7 +443,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
       <div
         className="value"
       >
-        Veuillez entrer une valeur
+        A value is required
       </div>
     </div>
     <div
@@ -454,7 +454,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
         className="form-control c4 c5"
         disabled={false}
         onChange={[Function]}
-        placeholder="Veuillez entrer une valeur"
+        placeholder="A value is required"
         type="text"
         value=""
       />
