@@ -8,7 +8,7 @@ import Button from 'components/Button';
 import Form from 'components/Form';
 import { colors } from 'constants/index';
 
-const placeholder = 'Veuillez entrer une valeur';
+const placeholder = 'A value is required';
 
 export const statusValue = {
   ADD: 'add',
@@ -28,7 +28,13 @@ const StyledDiv = styled.div`
     align-items: center;
 
     ${Button.style} {
+      padding-left: 1rem;
+      padding-right: 1rem;
       border-radius: 4px 0 0 4px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .value {
@@ -53,6 +59,10 @@ const StyledDiv = styled.div`
       bottom: 0;
 
       transition: opacity 300ms ease-in-out;
+
+      ${Button.style} {
+        padding: 0 1rem;
+      }
 
       .action {
         color: ${colors.white};
@@ -151,14 +161,6 @@ const StyledDiv = styled.div`
 
     .value {
       border-radius: 0 4px 0 0;
-    }
-  }
-
-  ${Button.style} {
-    padding: 0 1rem;
-
-    &:focus {
-      outline: none;
     }
   }
 `;
@@ -287,9 +289,9 @@ class Field extends React.Component {
             {tag}
           </Button>
           <div className="value">{value || placeholder}</div>
-          {this.renderActions(tag, status)}
+          {this.renderActions()}
         </div>
-        {!isRemoved && this.renderInput(tag, value)}
+        {!isRemoved && this.renderInput()}
       </StyledDiv>
     );
   }

@@ -10,6 +10,7 @@ import Field, { statusValue as status } from './Field';
 
 const StyledDiv = styled.div`
   max-width: 40rem;
+  margin: 0 auto;
 
   .removedList {
     margin-top: 3rem;
@@ -83,7 +84,8 @@ const StyledDiv = styled.div`
   }
 
   ${Button.style} {
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     &:focus {
       outline: none;
@@ -319,13 +321,14 @@ Editor.propTypes = {
   // id: PropTypes.number.isRequired,
   // lon: PropTypes.number.isRequired,
   // lat: PropTypes.number.isRequired,
-  original: PropTypes.object.isRequired,
   fixed: PropTypes.object.isRequired,
+  original: PropTypes.object,
   submit: PropTypes.func,
   className: PropTypes.string
 };
 
 Editor.defaultProps = {
+  original: {},
   submit: null,
   className: ''
 };

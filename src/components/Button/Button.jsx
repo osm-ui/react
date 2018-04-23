@@ -54,9 +54,11 @@ const StyledButton = styled.button`
   /* prettier-ignore */
   ${props => colorsStyle(props)}
 
-  border-style: ${props => props.theme.form.button.borderStyle};
-  border-width: ${props => props.theme.form.button.borderWidth};
-  border-radius: ${props => props.theme.form.button.borderRadius};
+  &.btn {
+    border-style: ${props => props.theme.form.button.borderStyle};
+    border-width: ${props => props.theme.form.button.borderWidth};
+    border-radius: ${props => props.theme.form.button.borderRadius};
+  }
 
   &.btn-xs {
     font-size: 1.2rem;

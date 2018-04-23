@@ -5,12 +5,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
-.c3 {
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 4px;
-}
-
 .c3.btn-default {
   font-weight: 500;
   color: #3b3f45;
@@ -193,6 +187,12 @@ exports[`When using snapshots Should render with an element children 1`] = `
   border-color: transparent;
 }
 
+.c3.btn {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
 .c3.btn-xs {
   font-size: 1.2rem;
   padding-left: 1.4rem;
@@ -276,7 +276,13 @@ exports[`When using snapshots Should render with an element children 1`] = `
 }
 
 .c1 .main .c2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 4px 0 0 4px;
+}
+
+.c1 .main .c2:focus {
+  outline: none;
 }
 
 .c1 .main .value {
@@ -306,6 +312,10 @@ exports[`When using snapshots Should render with an element children 1`] = `
   bottom: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
+}
+
+.c1 .main .actions .c2 {
+  padding: 0 1rem;
 }
 
 .c1 .main .actions .action {
@@ -413,14 +423,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
   border-radius: 0 4px 0 0;
 }
 
-.c1 .c2 {
-  padding: 0 1rem;
-}
-
-.c1 .c2:focus {
-  outline: none;
-}
-
 <span
   className="c0"
 >
@@ -441,7 +443,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
       <div
         className="value"
       >
-        Veuillez entrer une valeur
+        A value is required
       </div>
     </div>
     <div
@@ -452,7 +454,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
         className="form-control c4 c5"
         disabled={false}
         onChange={[Function]}
-        placeholder="Veuillez entrer une valeur"
+        placeholder="A value is required"
         type="text"
         value=""
       />
