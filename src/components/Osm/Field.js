@@ -289,9 +289,9 @@ class Field extends React.Component {
             {tag}
           </Button>
           <div className="value">{value || placeholder}</div>
-          {this.renderActions(tag, status)}
+          {this.renderActions()}
         </div>
-        {!isRemoved && this.renderInput(tag, value)}
+        {!isRemoved && this.renderInput()}
       </StyledDiv>
     );
   }
