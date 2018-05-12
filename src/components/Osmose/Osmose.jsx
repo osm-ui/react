@@ -35,6 +35,8 @@ class Osmose extends React.PureComponent {
   }
 
   renderOptions(data) {
+    if (!data.elems) return null;
+
     const osmData = data.elems.length > 0 ? data.elems[0] : null;
 
     if (osmData) {
@@ -73,7 +75,11 @@ class Osmose extends React.PureComponent {
       );
     }
 
+    if (!data.new_elems) return null;
+
     const newData = data.new_elems.length > 0 ? data.new_elems[0] : null;
+
+    if (!newData) return null;
 
     return (
       <div>
@@ -94,9 +100,9 @@ class Osmose extends React.PureComponent {
 
     return (
       <StyledDiv>
-        <Titlebar size="sm">{data.title}</Titlebar>
+        {data.title && <Titlebar size="sm">{data.title}</Titlebar>}
         <div>
-          <h3>{data.subtitle}</h3>
+          {data.subtitle && <h3>{data.subtitle}</h3>}
           {this.renderOptions(data)}
         </div>
       </StyledDiv>

@@ -23,4 +23,9 @@ describe('When using snapshots', () => {
       title: '',
       fixes: newData.new_elems[0]
     }));
+
+  it('Should render with no tags or fixes', () =>
+    snapshotWithElementChildren(Osmose.Suggestion, {
+      title: ''
+    }));
 });
