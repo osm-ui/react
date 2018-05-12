@@ -129,6 +129,8 @@ class Suggestion extends React.PureComponent {
   }
 
   renderTags(tags) {
+    if (!tags) return null;
+
     return <div className="infos">{tags.map(tag => this.renderTag(tag))}</div>;
   }
 
