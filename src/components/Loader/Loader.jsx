@@ -86,5 +86,6 @@ Loader.defaultProps = {
 };
 
 Loader.displayName = 'components/Loader';
+Loader.style = Wrapper;
 
 export default Loader;

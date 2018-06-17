@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Transition from 'react-transition-group/Transition';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import FontAwesome from 'react-fontawesome';
 
 import Button from 'components/Button';
 
@@ -235,7 +234,7 @@ class Notification extends React.Component {
                   </div>
                   {!pending && (
                     <button className="close-btn" onClick={() => this.close()}>
-                      <FontAwesome name="close" size="lg" />
+                      <i className="fas fa-times" />
                     </button>
                   )}
                 </StyledAside>

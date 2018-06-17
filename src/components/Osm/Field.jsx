@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-import FontAwesome from 'react-fontawesome';
+
 import Button from 'components/Button';
 import Form from 'components/Form';
 import { colors } from 'constants/index';
@@ -238,7 +238,7 @@ class Field extends React.Component {
                 onClick={() => revertField(tag)}
                 className="action mod"
               >
-                <FontAwesome name="undo" />
+                <i className="fas fa-undo" />
               </Button>
             )}
             {status !== 'del' && (
@@ -248,7 +248,7 @@ class Field extends React.Component {
                 onClick={() => removeField(tag)}
                 className="action del"
               >
-                <FontAwesome name="times" />
+                <i className="fas fa-times" />
               </Button>
             )}
           </div>

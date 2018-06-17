@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import CSSTransition from 'react-transition-group/CSSTransition';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import FontAwesome from 'react-fontawesome';
 import Loader from 'components/Loader';
 import SidebarTitle from './Title';
 
@@ -233,14 +232,14 @@ class Sidebar extends React.Component {
                 className="back-btn"
                 onClick={() => this._handleBackClick()}
               >
-                <FontAwesome name="chevron-left" size="lg" />
+                <i className="fas fa-chevron-left" />
               </button>
             )}
             <button
               className="close-btn"
               onClick={() => this._handleCloseClick()}
             >
-              <FontAwesome name="close" size="lg" />
+              <i className="fas fa-times" />
             </button>
             {title && <SidebarTitle inHeader>{title}</SidebarTitle>}
             <div className="clearfix" />

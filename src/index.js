@@ -1,7 +1,8 @@
 import 'normalize.css';
-import 'font-awesome/css/font-awesome.min.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.css';
+
+import 'helpers/icons.css';
 
 export DefaultTheme from 'themes/Default';
 export WhiteTheme from 'themes/Default';
@@ -34,3 +35,5 @@ export Notification from 'components/Notification';
 export Osmose from 'components/Osmose';
 export Editor from 'components/Osm';
 export ColorPicker from 'components/ColorPicker';
+export IconPicker from 'components/IconPicker';
+export Scrollable from 'components/Scrollable';

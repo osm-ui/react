@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classnames from 'classnames';
-import FontAwesome from 'react-fontawesome';
 import Loader from 'components/Loader';
 
 const StyledButton = styled.button`
@@ -167,7 +166,7 @@ const ToolbarItem = ({
   return (
     <Element size={size} className={classes} {...rest}>
       {children && children}
-      {!children && <FontAwesome name={icon} fixedWidth />}
+      {!children && <i className={`fas fa-${icon}`} />}
     </Element>
   );
 };

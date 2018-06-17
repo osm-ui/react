@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with element children  1`] = `
+<styled.span>
+  <Scrollable
+    className=""
+    key=".0"
+    position="left"
+  >
+    <div />
+  </Scrollable>
+</styled.span>
+`;

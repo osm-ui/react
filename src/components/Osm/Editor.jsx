@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
-import FontAwesome from 'react-fontawesome';
+
 import { colors } from 'constants/index';
 import Button from 'components/Button';
 import Form from 'components/Form';
@@ -236,7 +236,7 @@ class Editor extends React.Component {
             context="primary"
             onClick={() => !hasSelected && this.toggleAddMode()}
           >
-            <FontAwesome name="plus" />
+            <i className="fas fa-plus" />
           </Button>
         </div>
       </div>
