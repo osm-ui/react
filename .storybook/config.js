@@ -32,6 +32,7 @@ function loadStories() {
     require('../stories/Notification');
     require('../stories/Osmose');
     require('../stories/Osm');
+    require('../stories/ColorPicker');
     /* eslint-enable */
 }
 
