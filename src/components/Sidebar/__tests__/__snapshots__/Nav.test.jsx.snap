@@ -34,6 +34,7 @@ exports[`When using snapshots Should render with an element children 1`] = `
 .c1 a:hover,
 .c1 a:active,
 .c1 a:focus {
+  -webkit-text-decoration: none;
   text-decoration: none;
   color: #101113;
   background-color: #dbdcdd;
