@@ -135,6 +135,7 @@ exports[`When using snapshots Should render with element children  1`] = `
 
 .c3 .infos .info.del {
   color: #c92d2d;
+  -webkit-text-decoration: line-through;
   text-decoration: line-through;
 }
 
