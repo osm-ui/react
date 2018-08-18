@@ -18,7 +18,7 @@ export const config = {
   loaderColor: colors.lightGray1,
   borderStyle: 'solid',
   borderWidth: '4px',
-  borderRadius: 0,
+  borderRadius: '2px',
   controlColor: colors.lightGray4,
   hoverControlColor: colors.lightGray1,
 
@@ -328,28 +328,28 @@ export const config = {
     }
   },
   alert: {
+    borderRadius: '2px',
+    horizontalPadding: '1.5rem',
+    verticalPadding: '1.2rem',
+
     info: {
       color: darken(0.18, colors.turquoise1),
-      backgroundColor: colors.turquoise5,
-      borderColor: colors.turquoise5
+      backgroundColor: colors.turquoise5
     },
 
     success: {
       color: darken(0.18, colors.green1),
-      backgroundColor: colors.green5,
-      borderColor: colors.green5
+      backgroundColor: colors.green5
     },
 
     warning: {
       color: darken(0.18, colors.orange1),
-      backgroundColor: colors.orange5,
-      borderColor: colors.orange5
+      backgroundColor: colors.orange5
     },
 
     danger: {
       color: darken(0.18, colors.red1),
-      backgroundColor: colors.red5,
-      borderColor: colors.red5
+      backgroundColor: colors.red5
     }
   },
   modal: {
