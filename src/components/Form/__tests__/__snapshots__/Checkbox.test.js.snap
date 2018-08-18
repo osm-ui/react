@@ -94,7 +94,6 @@ exports[`When using snapshots Checkbox should render with an element children 1`
     value="myValue"
   >
     <input
-      checked={undefined}
       className="c2"
       disabled={false}
       id="1"

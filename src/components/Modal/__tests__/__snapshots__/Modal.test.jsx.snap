@@ -80,7 +80,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <main
       className="container-root c2"
-      style={undefined}
     >
       
       <div
@@ -218,7 +217,6 @@ exports[`When using snapshots with loader Should render with an element children
   >
     <main
       className="container-root c2"
-      style={undefined}
     >
       <div
         className="content loading"
@@ -336,7 +334,6 @@ exports[`When using snapshots with title, header and footer Should render with a
   >
     <main
       className="container-root c2"
-      style={undefined}
     >
       <header
         className="header"

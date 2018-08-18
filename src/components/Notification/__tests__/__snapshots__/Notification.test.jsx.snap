@@ -200,7 +200,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 >
   <div
     className="position-top-right direction-horizontal c1"
-    style={undefined}
   >
     <aside
       className="position-top-right direction-horizontal c2"
@@ -208,7 +207,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
       id={1}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      style={undefined}
     >
       <div
         className="content"

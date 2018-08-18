@@ -228,7 +228,6 @@ exports[`When using snapshots Should render with an element children 1`] = `
 >
   <aside
     className="position-left-top direction-column container-parent c1"
-    style={undefined}
   >
     <div
       direction="column"
@@ -466,7 +465,6 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
 >
   <aside
     className="position-left-top direction-column container-parent c1"
-    style={undefined}
   >
     <div
       direction="column"
@@ -947,7 +945,6 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
 >
   <aside
     className="position-left-top direction-column container-parent c1"
-    style={undefined}
   >
     <div
       direction="column"
@@ -1186,7 +1183,6 @@ exports[`When using snapshots Should render with the size prop 1`] = `
 >
   <aside
     className="position-left-top direction-column container-parent c1"
-    style={undefined}
   >
     <div
       direction="column"
