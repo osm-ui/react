@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 import { host } from 'storybook-host';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs';
 
 import defaultHostOptions from './defaultHostOptions';
 import KnobsAlert from './components/KnobsAlert';
@@ -46,7 +45,6 @@ storiesOf('List', module)
     </DefaultTheme>
   ))
   .addWithInfo('Playground', () => {
-    const size = select('Size', ['lg', 'md', 'sm', 'xs'], 'md');
     const theme = select(
       'Theme',
       [

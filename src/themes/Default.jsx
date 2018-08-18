@@ -396,6 +396,7 @@ export const config = {
     }
   },
   list: {
+    fontSize: '.9rem',
     color: colors.anthracite2,
     backgroundColor: colors.white,
     borderColor: colors.lightGray3
