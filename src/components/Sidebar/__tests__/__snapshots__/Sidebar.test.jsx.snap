@@ -35,7 +35,7 @@ exports[`When using snapshots Should render with a some props and children 1`] =
 `;
 
 exports[`When using snapshots Should render with a title 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar
     className=""
     container="parent"
@@ -59,11 +59,11 @@ exports[`When using snapshots Should render with a title 1`] = `
   >
     <div />
   </Sidebar>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar
     className=""
     container="parent"
@@ -87,11 +87,11 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div />
   </Sidebar>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the loading prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar
     className=""
     container="parent"
@@ -115,5 +115,5 @@ exports[`When using snapshots Should render with the loading prop 1`] = `
   >
     <div />
   </Sidebar>
-</styled.span>
+</Default__StyledSpan>
 `;

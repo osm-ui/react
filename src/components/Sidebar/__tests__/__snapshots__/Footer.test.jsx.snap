@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar.Footer
     className=""
     key=".0"
   >
     <div />
   </Sidebar.Footer>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with className and other props 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar.Footer
     className="my-class"
     key=".0"
@@ -21,11 +21,11 @@ exports[`When using snapshots Should render with className and other props 1`] =
   >
     <div />
   </Sidebar.Footer>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with other props 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar.Footer
     className=""
     key=".0"
@@ -34,16 +34,16 @@ exports[`When using snapshots Should render with other props 1`] = `
   >
     <div />
   </Sidebar.Footer>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the className prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar.Footer
     className="my-class"
     key=".0"
   >
     <div />
   </Sidebar.Footer>
-</styled.span>
+</Default__StyledSpan>
 `;

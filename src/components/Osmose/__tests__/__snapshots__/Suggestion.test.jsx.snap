@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with new data 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Suggestion
     className=""
     fixes={
@@ -38,11 +38,11 @@ exports[`When using snapshots Should render with new data 1`] = `
   >
     <div />
   </Suggestion>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with no tags or fixes 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Suggestion
     className=""
     fixes={null}
@@ -55,11 +55,11 @@ exports[`When using snapshots Should render with no tags or fixes 1`] = `
   >
     <div />
   </Suggestion>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with only osm 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Suggestion
     className=""
     fixes={null}
@@ -83,11 +83,11 @@ exports[`When using snapshots Should render with only osm 1`] = `
   >
     <div />
   </Suggestion>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with osm fixable data  1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Suggestion
     className=""
     fixes={
@@ -121,5 +121,5 @@ exports[`When using snapshots Should render with osm fixable data  1`] = `
   >
     <div />
   </Suggestion>
-</styled.span>
+</Default__StyledSpan>
 `;

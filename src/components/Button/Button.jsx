@@ -15,6 +15,7 @@ const contexts = [
 
 const colorsStyle = props =>
   contexts.reduce((reducedStyles, context) => {
+    const isLink = context === 'link';
     const colors =
       context === 'default'
         ? props.theme.form.button
@@ -24,83 +25,100 @@ const colorsStyle = props =>
         ${reducedStyles}
 
         &.btn-${context} {
-            font-weight: ${colors.fontWeight};
-            color: ${colors.color};
-            background-color: ${colors.backgroundColor};
-            border-color: ${colors.borderColor};
+          font-weight: ${colors.fontWeight};
+          color: ${colors.color};
+          background-color: ${colors.backgroundColor};
+          ${isLink ? 'cursor: pointer;' : ''}
 
-            &:hover {
-                color: ${colors.color};
-                background-color: ${colors.hoverBackgroundColor};
-                border-color: ${colors.hoverBorderColor};
-            }
+          &:hover {
+            background-color: ${colors.hoverBackgroundColor};
+            ${isLink ? 'text-decoration: underline;' : ''}
+          }
 
-            &:focus {
-                color: ${colors.color};
-                background-color: ${colors.focusBackgroundColor};
-                border-color: ${colors.focusBorderColor};
-            }
+          &:focus {
+            outline: none;
+            border-color: ${colors.outlineColor};
+            background-color: ${colors.focusBackgroundColor};
+            ${isLink ? 'text-decoration: underline;' : ''}
+          }
 
-            &:active, .active {
-                color: ${colors.color};
-                background-color: ${colors.activeBackgroundColor};
-                border-color: ${colors.activeBorderColor};
-            }
+          &:active {
+            ${!isLink ? 'border-color: transparent;' : ''}
+            background-color: ${colors.activeBackgroundColor};
+            ${isLink ? 'text-decoration: none;' : ''}
+          }
         }
     `;
   }, '');
 
 const StyledButton = styled.button`
-  /* prettier-ignore */
-  ${props => colorsStyle(props)}
+  border: 2px solid transparent;
+  border-radius: ${p => p.theme.form.button.borderRadius};
 
-  &.btn {
-    border-style: ${props => props.theme.form.button.borderStyle};
-    border-width: ${props => props.theme.form.button.borderWidth};
-    border-radius: ${props => props.theme.form.button.borderRadius};
+  /* prettier-ignore */
+  ${p => colorsStyle(p)}
+
+  &:disabled,
+  &.disabled {
+    opacity: .6;
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
   }
 
   &.btn-xs {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  &.btn-sm {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  &.btn-md {
+    font-size: 0.9rem;
+    line-height: 2.2rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  &.btn-lg {
     font-size: 1.2rem;
+    line-height: 2.6rem;
     padding-left: 1.4rem;
     padding-right: 1.4rem;
   }
 
-  &.btn-sm {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
-  }
-
-  &.btn-md {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  &.btn-lg {
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-  }
-
   &.shape-round {
     &.btn-xs {
-      border-radius: 1.25rem;
+      border-radius: 1.4rem;
     }
 
     &.btn-sm {
-      border-radius: 1.7rem;
+      border-radius: 1.6rem;
     }
 
     &.btn-md {
-      border-radius: 2.1rem;
+      border-radius: 2.2rem;
     }
 
     &.btn-lg {
-      border-radius: 2.45rem;
+      border-radius: 2.6rem;
     }
   }
 `;
 
-const StyledAnchor = StyledButton.withComponent('a');
+const StyledAnchor = StyledButton.withComponent('a').extend`
+  display: inline-block;
+  text-decoration: none;
+`;
 
 const Button = ({
   type,
@@ -119,7 +137,6 @@ const Button = ({
     [`btn-${context}`]: true,
     [`btn-${size}`]: true,
     'btn-block': block,
-    active,
     disabled
   });
 
@@ -160,7 +177,7 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'button',
   context: 'default',
-  shape: 'round',
+  shape: 'square',
   size: 'md',
   block: false,
   active: false,

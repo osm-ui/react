@@ -64,17 +64,11 @@ export const config = {
 
     button: {
       color: colors.anthracite1,
-      backgroundColor: colors.white,
-      borderColor: colors.lightGray3,
-      borderStyle: 'solid',
-      borderWidth: '2px',
+      backgroundColor: colors.lightGray5,
       borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray3,
-      focusBackgroundColor: colors.lightGray5,
-      focusBorderColor: colors.lightGray3,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray3
+      hoverBackgroundColor: colors.lightGray4,
+      focusBackgroundColor: colors.lightGray4,
+      activeBackgroundColor: colors.lightGray4
     }
   },
   titlebar: {
@@ -96,17 +90,11 @@ export const config = {
 
     button: {
       color: colors.anthracite1,
-      backgroundColor: colors.white,
-      borderColor: colors.white,
-      borderStyle: 'solid',
-      borderWidth: 0,
+      backgroundColor: colors.lightGray5,
       borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray5,
-      focusBackgroundColor: colors.lightGray5,
-      focusBorderColor: colors.lightGray5,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray5
+      hoverBackgroundColor: colors.lightGray4,
+      focusBackgroundColor: colors.lightGray4,
+      activeBackgroundColor: colors.lightGray4
     }
   },
   form: {
@@ -119,94 +107,71 @@ export const config = {
     button: {
       fontWeight: 500,
       color: colors.anthracite2,
-      backgroundColor: colors.white,
-      borderColor: colors.lightGray3,
-      borderStyle: 'solid',
-      borderWidth: '2px',
       borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray3,
-      focusBackgroundColor: colors.lightGray5,
-      focusBorderColor: colors.lightGray3,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray3,
+      backgroundColor: colors.lightGray5,
+      hoverBackgroundColor: colors.lightGray4,
+      focusBackgroundColor: colors.lightGray4,
+      activeBackgroundColor: colors.lightGray3,
+      outlineColor: colors.lightGray3,
 
       primary: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.blue2,
-        borderColor: colors.blue1,
         hoverBackgroundColor: colors.blue3,
-        hoverBorderColor: colors.blue2,
         focusBackgroundColor: colors.blue3,
-        focusBorderColor: colors.blue2,
-        activeBackgroundColor: colors.blue3,
-        activeBorderColor: colors.blue2
+        activeBackgroundColor: colors.blue2,
+        outlineColor: colors.blue2
       },
 
       info: {
         fontWeight: 500,
         color: darken(0.27, colors.turquoise1),
         backgroundColor: colors.turquoise2,
-        borderColor: colors.turquoise1,
         hoverBackgroundColor: colors.turquoise3,
-        hoverBorderColor: colors.turquoise2,
         focusBackgroundColor: colors.turquoise3,
-        focusBorderColor: colors.turquoise2,
-        activeBackgroundColor: colors.turquoise3,
-        activeBorderColor: colors.turquoise2
+        activeBackgroundColor: colors.turquoise2,
+        outlineColor: colors.turquoise2
       },
 
       success: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.green2,
-        borderColor: colors.green1,
         hoverBackgroundColor: colors.green3,
-        hoverBorderColor: colors.green2,
         focusBackgroundColor: colors.green3,
-        focusBorderColor: colors.green2,
-        activeBackgroundColor: colors.green3,
-        activeBorderColor: colors.green2
+        activeBackgroundColor: colors.green2,
+        outlineColor: colors.green2
       },
 
       warning: {
         fontWeight: 500,
         color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2,
-        borderColor: colors.orange1,
         hoverBackgroundColor: colors.orange3,
-        hoverBorderColor: colors.orange2,
         focusBackgroundColor: colors.orange3,
-        focusBorderColor: colors.orange2,
-        activeBackgroundColor: colors.orange3,
-        activeBorderColor: colors.orange2
+        activeBackgroundColor: colors.orange2,
+        outlineColor: colors.orange2
       },
 
       danger: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.red2,
-        borderColor: colors.red1,
         hoverBackgroundColor: colors.red3,
-        hoverBorderColor: colors.red2,
         focusBackgroundColor: colors.red3,
-        focusBorderColor: colors.red2,
-        activeBackgroundColor: colors.red3,
-        activeBorderColor: colors.red2
+        activeBackgroundColor: colors.red2,
+        outlineColor: colors.red2
       },
 
       link: {
         fontWeight: 400,
         color: colors.blue2,
         backgroundColor: 'transparent',
-        borderColor: 'transparent',
         hoverBackgroundColor: 'transparent',
-        hoverBorderColor: 'transparent',
         focusBackgroundColor: 'transparent',
-        focusBorderColor: 'transparent',
         activeBackgroundColor: 'transparent',
-        activeBorderColor: 'transparent'
+        outlineColor: colors.blue2
       }
     },
     input: {
@@ -439,6 +404,10 @@ export const config = {
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+    html, body {
+      font-size: 16px;
+    }
+
     .osm-ui-react-marker-default {
         color: ${colors.anthracite1};
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with element children  1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Osmose
     className=""
     data={
@@ -93,11 +93,11 @@ exports[`When using snapshots Should render with element children  1`] = `
   >
     <div />
   </Osmose>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with empty tag data  1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Osmose
     className=""
     data={Object {}}
@@ -106,11 +106,11 @@ exports[`When using snapshots Should render with empty tag data  1`] = `
   >
     <div />
   </Osmose>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with empty tag data  2`] = `
-<styled.span>
+<Default__StyledSpan>
   <Osmose
     className=""
     data={
@@ -124,5 +124,5 @@ exports[`When using snapshots Should render with empty tag data  2`] = `
   >
     <div />
   </Osmose>
-</styled.span>
+</Default__StyledSpan>
 `;

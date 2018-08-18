@@ -119,8 +119,8 @@ storiesOf('Button', module)
   ))
   .addWithInfo('State', () => (
     <DefaultTheme>
-      <Button active onClick={action('onClick')}>
-        Active
+      <Button onClick={action('onClick')}>
+        Default
       </Button>{' '}
       <Button disabled>Disabled</Button>
     </DefaultTheme>
@@ -128,7 +128,6 @@ storiesOf('Button', module)
   .addWithInfo('Playground', () => {
     const label = text('Label', 'Hello world!');
     const block = boolean('Block');
-    const active = boolean('Active');
     const disabled = boolean('Disabled');
     const shape = select('Shape', ['round', 'square'], 'round');
     const size = select('Size', ['lg', 'md', 'sm', 'xs'], 'md');
@@ -186,10 +185,9 @@ storiesOf('Button', module)
       <DefaultTheme>
         <KnobsAlert />
         <ThemeElement>
-          <Section style={{ padding: 30, display: 'inline' }}>
+          <Section style={{ padding: 30, display: 'inline-block' }}>
             <Button
               block={block}
-              active={active}
               disabled={disabled}
               shape={shape}
               size={size}

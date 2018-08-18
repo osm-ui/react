@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Editor
     className=""
     fixed={
@@ -28,5 +28,5 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div />
   </Editor>
-</styled.span>
+</Default__StyledSpan>
 `;

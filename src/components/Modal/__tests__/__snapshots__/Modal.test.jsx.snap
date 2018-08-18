@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Modal
     className=""
     container="root"
@@ -17,11 +17,11 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div />
   </Modal>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots with loader Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Modal
     className=""
     container="root"
@@ -37,11 +37,11 @@ exports[`When using snapshots with loader Should render with an element children
   >
     <div />
   </Modal>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots with title, header and footer Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Modal
     className=""
     container="root"
@@ -57,5 +57,5 @@ exports[`When using snapshots with title, header and footer Should render with a
   >
     <div />
   </Modal>
-</styled.span>
+</Default__StyledSpan>
 `;
