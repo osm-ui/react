@@ -9,7 +9,9 @@ module.exports = {
       filename: '[name].css',
       allChunks: true
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+    })
   ],
   externals: [nodeExternals()],
   entry: {
