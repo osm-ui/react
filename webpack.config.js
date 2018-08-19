@@ -11,6 +11,7 @@ module.exports = {
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
+      openAnalyzer: !process.env.CI,
     })
   ],
   externals: [nodeExternals()],
