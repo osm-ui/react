@@ -241,28 +241,28 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        lineHeight: '2.6rem',
-        size: '1.4rem',
-        top: '0.7rem',
-        innerSize: '1rem',
-        innerTop: '0rem',
-        paddingLeft: '2.6rem'
+        lineHeight: '1.6rem',
+        size: '.8rem',
+        top: '.3rem',
+        innerSize: '.7rem',
+        innerTop: '-.1rem',
+        paddingLeft: '1.5rem'
       },
       md: {
-        lineHeight: '3.2rem',
-        size: '1.7rem',
-        top: '0.4rem',
-        innerSize: '1.4rem',
-        innerTop: '-0.4rem',
-        paddingLeft: '3rem'
+        lineHeight: '2rem',
+        size: '1rem',
+        top: '.4rem',
+        innerSize: '.8rem',
+        innerTop: '-.1rem',
+        paddingLeft: '1.8rem'
       },
       lg: {
-        lineHeight: '4rem',
-        size: '2.1rem',
-        top: '0.9rem',
-        innerSize: '1.7rem',
-        innerTop: '-0.1rem',
-        paddingLeft: '3.4rem'
+        lineHeight: '2.6rem',
+        size: '1.2rem',
+        top: '.6rem',
+        innerSize: '1rem',
+        innerTop: '-.1rem',
+        paddingLeft: '2.1rem'
       }
     },
     radio: {
@@ -271,31 +271,31 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        lineHeight: '2.6rem',
-        size: '1.4rem',
-        top: '0.7rem',
-        innerSize: '0.8rem',
-        innerTop: '1rem',
-        innerLeft: '0.3rem',
-        paddingLeft: '2.6rem'
+        lineHeight: '1.6rem',
+        size: '.8rem',
+        top: '.3rem',
+        innerSize: '.5rem',
+        innerTop: '.5rem',
+        innerLeft: '.2rem',
+        paddingLeft: '1.5rem'
       },
       md: {
-        lineHeight: '3.2rem',
-        size: '1.7rem',
-        top: '0.7rem',
-        innerSize: '0.9rem',
-        innerTop: '1.1rem',
-        innerLeft: '0.4rem',
-        paddingLeft: '3rem'
+        lineHeight: '2rem',
+        size: '1rem',
+        top: '.4rem',
+        innerSize: '.6rem',
+        innerTop: '.65rem',
+        innerLeft: '.25rem',
+        paddingLeft: '1.8rem'
       },
       lg: {
-        lineHeight: '4rem',
-        size: '2.1rem',
-        top: '0.9rem',
-        innerSize: '1.3rem',
-        innerTop: '1.3rem',
-        innerLeft: '0.4rem',
-        paddingLeft: '3.4rem'
+        lineHeight: '2.6rem',
+        size: '1.2rem',
+        top: '.6rem',
+        innerSize: '.8rem',
+        innerTop: '.85rem',
+        innerLeft: '.25rem',
+        paddingLeft: '2.1rem'
       }
     },
     hint: {
