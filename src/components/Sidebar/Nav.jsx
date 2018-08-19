@@ -15,24 +15,25 @@ const StyledNav = styled.nav`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-decoration: none;
 
     display: block;
-    margin: 1rem 0;
-    padding: 1.4rem 2rem;
-    border-radius: ${props => props.theme.sidebar.nav.borderRadius};
-    background-color: ${props => props.theme.sidebar.nav.backgroundColor};
-    color: ${props => props.theme.sidebar.nav.color};
-    font-size: ${props => props.theme.sidebar.nav.fontSize};
-    line-height: ${props => props.theme.sidebar.nav.lineHeight};
-    font-weight: ${props => props.theme.sidebar.nav.fontWeight};
+    margin: 0.5rem 0;
+    padding: 1.1rem 1.5rem;
+    border-radius: ${p => p.theme.sidebar.nav.borderRadius};
+    background-color: ${p => p.theme.sidebar.nav.backgroundColor};
+    color: ${p => p.theme.sidebar.nav.color};
+    font-size: ${p => p.theme.sidebar.nav.fontSize};
+    line-height: ${p => p.theme.sidebar.nav.lineHeight};
+    font-weight: ${p => p.theme.sidebar.nav.fontWeight};
   }
 
   a:hover,
   a:active,
   a:focus {
     text-decoration: none;
-    color: ${props => props.theme.sidebar.nav.hoverColor};
-    background-color: ${props => props.theme.sidebar.nav.hoverBackgroundColor};
+    color: ${p => p.theme.sidebar.nav.hoverColor};
+    background-color: ${p => p.theme.sidebar.nav.hoverBackgroundColor};
   }
 `;
 

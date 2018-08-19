@@ -31,9 +31,11 @@ export const config = {
   },
   sidebar: {
     boxShadow,
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
     nav: {
-      fontSize: '1.8rem',
-      lineHeight: '2rem',
+      fontSize: '1.3rem',
+      lineHeight: '1.5rem',
       fontWeight: 500,
       borderRadius: '4px',
       color: colors.anthracite1,
