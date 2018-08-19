@@ -9,6 +9,7 @@ const boxShadow =
   '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
 
 export const config = {
+  rem: 16,
   boxShadow,
   font:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
@@ -413,7 +414,7 @@ injectGlobal`
     }
 
     html, body {
-      font-size: 16px;
+    font-size: ${config.rem}px;
       color: ${config.color};
     }
 

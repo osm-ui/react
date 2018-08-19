@@ -14,12 +14,12 @@ const rotate360 = keyframes`
 `;
 
 const Spinner = styled.div`
-  width: ${props => props.spinnerSize / 10}rem;
-  height: ${props => props.spinnerSize / 10}rem;
+  width: ${p => p.spinnerSize / p.theme.rem}rem;
+  height: ${p => p.spinnerSize / p.theme.rem}rem;
   margin: 0 auto;
-  border-width: ${props => props.strokeSize}px;
+  border-width: ${p => p.strokeSize}px;
   border-style: solid;
-  border-color: ${props => props.theme.loaderColor};
+  border-color: ${p => p.theme.loaderColor};
   border-radius: 50%;
   border-left-color: transparent;
   border-bottom-color: transparent;
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
 `;
 
 const Label = styled.div`
-  color: ${props => props.theme.loaderColor};
+  color: ${p => p.theme.loaderColor};
   margin-top: 1.5rem;
 `;
 
