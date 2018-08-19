@@ -175,8 +175,10 @@ export const config = {
       }
     },
     input: {
-      borderWidth: '2px',
-      borderRadius: 0,
+      fontSize: '.9rem',
+      lineHeight: '1.2rem',
+      borderWidth: '1px',
+      borderRadius: '2px',
       boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
       opacity: 1,
       backgroundColor: colors.white,
@@ -216,8 +218,9 @@ export const config = {
       color: colors.anthracite1,
       borderColor: colors.anthracite1,
       backgroundColor: colors.white,
-      fontSize: '1.7rem',
+      fontSize: '1rem',
       fontWeight: 400,
+      lineHeight: '1.6rem',
 
       info: {
         color: colors.turquoise1
@@ -243,7 +246,7 @@ export const config = {
       sm: {
         lineHeight: '1.6rem',
         size: '.8rem',
-        top: '.3rem',
+        top: '.4rem',
         innerSize: '.7rem',
         innerTop: '-.1rem',
         paddingLeft: '1.5rem'
@@ -251,17 +254,17 @@ export const config = {
       md: {
         lineHeight: '2rem',
         size: '1rem',
-        top: '.4rem',
-        innerSize: '.8rem',
+        top: '.5rem',
+        innerSize: '.9rem',
         innerTop: '-.1rem',
         paddingLeft: '1.8rem'
       },
       lg: {
         lineHeight: '2.6rem',
         size: '1.2rem',
-        top: '.6rem',
+        top: '.7rem',
         innerSize: '1rem',
-        innerTop: '-.1rem',
+        innerTop: '0rem',
         paddingLeft: '2.1rem'
       }
     },
@@ -272,7 +275,7 @@ export const config = {
 
       sm: {
         lineHeight: '1.6rem',
-        size: '.8rem',
+        size: '.9rem',
         top: '.3rem',
         innerSize: '.5rem',
         innerTop: '.5rem',
@@ -283,7 +286,7 @@ export const config = {
         lineHeight: '2rem',
         size: '1rem',
         top: '.4rem',
-        innerSize: '.6rem',
+        innerSize: '.5rem',
         innerTop: '.65rem',
         innerLeft: '.25rem',
         paddingLeft: '1.8rem'
@@ -292,16 +295,16 @@ export const config = {
         lineHeight: '2.6rem',
         size: '1.2rem',
         top: '.6rem',
-        innerSize: '.8rem',
+        innerSize: '.7rem',
         innerTop: '.85rem',
         innerLeft: '.25rem',
         paddingLeft: '2.1rem'
       }
     },
     hint: {
-      fontSize: '1.4rem',
+      fontSize: '.8rem',
       margin: 0,
-      padding: '.5rem 1rem',
+      padding: '.4rem .8rem',
       disabledOpacity: 0.6,
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,
@@ -405,12 +408,17 @@ export const config = {
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
     html, body {
       font-size: 16px;
+      color: ${config.color};
     }
 
     .osm-ui-react-marker-default {
-        color: ${colors.anthracite1};
+        color: ${config.color};
 
         #colorized, #colorized * {
             fill: ${colors.white} !important;

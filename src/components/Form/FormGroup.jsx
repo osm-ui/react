@@ -24,12 +24,13 @@ const colorsStyle = props =>
         }
 
         .Select-control,
-        .form-control {
+        .input,
+        .textarea {
             background-color: ${inputColors.backgroundColor};
             border-color: ${inputColors.borderColor};
         }
 
-        .help-block {
+        .hint {
             background-color: ${hintColors.backgroundColor};
             color: ${hintColors.color};
         }
@@ -38,12 +39,14 @@ const colorsStyle = props =>
   }, '');
 
 const StyledDiv = styled.div`
-  ${props => colorsStyle(props)} margin-bottom: 4rem;
+  /* prettier-ignore */
+  ${p => colorsStyle(p)}
+
+  margin-bottom: 4rem;
 `;
 
 const FormGroup = ({ context, className, ...props }) => {
   const classes = classnames(className, {
-    'form-group': true,
     [`has-${context}`]: context !== ''
   });
 

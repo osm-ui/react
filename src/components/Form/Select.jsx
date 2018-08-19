@@ -24,17 +24,23 @@ const StyledSelect = styled(VirtualizedSelect)`
   }
 
   && .Select-placeholder {
-    padding-left: 1.2rem;
-    line-height: 3.8rem;
+    padding-left: 1rem;
+    line-height: 2.3rem;
   }
 
   &&.Select--single {
     .Select-value {
-      padding-left: 1.2rem;
+      padding-left: 1rem;
     }
 
     .Select-value .Select-value-label {
-      line-height: 3.8rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  &&.Select--multi {
+    .Select-value {
+      line-height: 1.2rem;
     }
   }
 
@@ -44,7 +50,7 @@ const StyledSelect = styled(VirtualizedSelect)`
 
   && .Select-input > input {
     padding: 0.1rem;
-    line-height: 3.2rem;
+    line-height: 2rem;
   }
 
   && .Select-menu-outer {

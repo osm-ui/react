@@ -3,8 +3,6 @@
 exports[`When using snapshots Label should render with an element children 1`] = `
 <Default__StyledSpan>
   <Form.Label
-    className=""
-    htmlFor=""
     key=".0"
   >
     <div />
