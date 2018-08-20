@@ -366,13 +366,14 @@ export const config = {
     padding: '5rem 3rem'
   },
   notification: {
-    fontSize: '1.4rem',
+    fontSize: '1rem',
     offset: '1rem',
+    width: '35rem',
+    height: '3rem',
 
     info: {
       color: darken(0.18, colors.turquoise1),
       backgroundColor: colors.turquoise5,
-      borderColor: colors.turquoise2,
       controlColor: colors.turquoise2,
       hoverControlColor: colors.turquoise3
     },
@@ -380,7 +381,6 @@ export const config = {
     success: {
       color: darken(0.18, colors.green1),
       backgroundColor: colors.green5,
-      borderColor: colors.green2,
       controlColor: colors.green2,
       hoverControlColor: colors.green3
     },
@@ -388,7 +388,6 @@ export const config = {
     warning: {
       color: darken(0.18, colors.orange1),
       backgroundColor: colors.orange5,
-      borderColor: colors.orange2,
       controlColor: colors.orange2,
       hoverControlColor: colors.orange3
     },
@@ -396,7 +395,6 @@ export const config = {
     danger: {
       color: darken(0.18, colors.red1),
       backgroundColor: colors.red5,
-      borderColor: colors.red2,
       controlColor: colors.red2,
       hoverControlColor: colors.red3
     }
