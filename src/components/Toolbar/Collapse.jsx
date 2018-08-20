@@ -32,13 +32,13 @@ const Collapse = styled.div`
   &.direction-column.position-center-top > *,
   &.direction-column.position-right-top > *,
   &.direction-column.position-right-center > * {
-    margin-top: ${props => props.theme.toolbar.childrenMargin};
+    margin-top: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-column.position-left-bottom > *,
   &.direction-column.position-center-bottom > *,
   &.direction-column.position-right-bottom > * {
-    margin-bottom: ${props => props.theme.toolbar.childrenMargin};
+    margin-bottom: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-row.position-center-top > *,
@@ -46,13 +46,13 @@ const Collapse = styled.div`
   &.direction-row.position-left-center > *,
   &.direction-row.position-left-bottom > *,
   &.direction-row.position-center-bottom > * {
-    margin-left: ${props => props.theme.toolbar.childrenMargin};
+    margin-left: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-row.position-right-top > *,
   &.direction-row.position-right-center > *,
   &.direction-row.position-right-bottom > * {
-    margin-right: ${props => props.theme.toolbar.childrenMargin};
+    margin-right: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-column {

@@ -5,12 +5,6 @@ import classnames from 'classnames';
 import FontAwesome from 'react-fontawesome';
 import Loader from 'components/Loader';
 
-const buildInGroupSize = props => {
-  const size = props.theme.toolbar[`${props.size}Size`];
-  const borderWidth = props.theme.toolbar.button.borderWidth;
-  return `calc(${size} - (${borderWidth} * 2))`;
-};
-
 const StyledButton = styled.button`
   &,
   &.btn {
@@ -18,18 +12,18 @@ const StyledButton = styled.button`
     transition: all 0.1s ease-out;
 
     pointer-events: all;
-    color: ${props => props.theme.toolbar.button.color};
-    border-color: ${props => props.theme.toolbar.button.borderColor};
-    border-style: ${props => props.theme.toolbar.button.borderStyle};
-    border-width: ${props => props.theme.toolbar.button.borderWidth};
-    background: ${props => props.theme.toolbar.button.backgroundColor};
+    color: ${p => p.theme.toolbar.button.color};
+    border-color: ${p => p.theme.toolbar.button.backgroundColor};
+    border-style: ${p => p.theme.toolbar.button.borderStyle};
+    border-width: ${p => p.theme.toolbar.button.borderWidth};
+    background: ${p => p.theme.toolbar.button.backgroundColor};
     font-weight: 500;
     padding: 0;
-    box-shadow: ${props => props.theme.toolbar.boxShadow};
+    box-shadow: ${p => p.theme.toolbar.boxShadow};
   }
 
   &.shape-square {
-    border-radius: ${props => props.theme.toolbar.button.borderRadius};
+    border-radius: ${p => p.theme.toolbar.button.borderRadius};
   }
 
   &.shape-round {
@@ -37,89 +31,70 @@ const StyledButton = styled.button`
   }
 
   &.xs {
-    width: ${props => props.theme.toolbar.xsSize};
-    height: ${props => props.theme.toolbar.xsSize};
-    line-height: ${props => props.theme.toolbar.xsLineHeight};
-    font-size: ${props => props.theme.toolbar.xsFontSize};
+    width: ${p => p.theme.toolbar.xsSize};
+    height: ${p => p.theme.toolbar.xsSize};
+    line-height: ${p => p.theme.toolbar.xsLineHeight};
+    font-size: ${p => p.theme.toolbar.xsFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.xsIconSize};
+      font-size: ${p => p.theme.toolbar.xsIconSize};
     }
   }
 
   &.sm {
-    width: ${props => props.theme.toolbar.smSize};
-    height: ${props => props.theme.toolbar.smSize};
-    line-height: ${props => props.theme.toolbar.smLineHeight};
-    font-size: ${props => props.theme.toolbar.smFontSize};
+    width: ${p => p.theme.toolbar.smSize};
+    height: ${p => p.theme.toolbar.smSize};
+    line-height: ${p => p.theme.toolbar.smLineHeight};
+    font-size: ${p => p.theme.toolbar.smFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.smIconSize};
+      font-size: ${p => p.theme.toolbar.smIconSize};
     }
   }
 
   &.md {
-    width: ${props => props.theme.toolbar.mdSize};
-    height: ${props => props.theme.toolbar.mdSize};
-    line-height: ${props => props.theme.toolbar.mdLineHeight};
-    font-size: ${props => props.theme.toolbar.mdFontSize};
+    width: ${p => p.theme.toolbar.mdSize};
+    height: ${p => p.theme.toolbar.mdSize};
+    line-height: ${p => p.theme.toolbar.mdLineHeight};
+    font-size: ${p => p.theme.toolbar.mdFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.mdIconSize};
+      font-size: ${p => p.theme.toolbar.mdIconSize};
     }
   }
 
   &.lg {
-    width: ${props => props.theme.toolbar.lgSize};
-    height: ${props => props.theme.toolbar.lgSize};
-    line-height: ${props => props.theme.toolbar.lgLineHeight};
-    font-size: ${props => props.theme.toolbar.lgFontSize};
+    width: ${p => p.theme.toolbar.lgSize};
+    height: ${p => p.theme.toolbar.lgSize};
+    line-height: ${p => p.theme.toolbar.lgLineHeight};
+    font-size: ${p => p.theme.toolbar.lgFontSize};
 
     .fa {
-      font-size: ${props => props.theme.toolbar.lgIconSize};
+      font-size: ${p => p.theme.toolbar.lgIconSize};
     }
   }
 
   &.in-group {
-    width: ${props => buildInGroupSize(props)};
-    height: ${props => buildInGroupSize(props)};
-    border-width: 0;
     box-shadow: none;
   }
 
   &.btn:hover {
-    color: ${props => props.theme.toolbar.button.color};
-    background-color: ${props =>
-      props.theme.toolbar.button.hoverBackgroundColor};
-    border-color: ${props => props.theme.toolbar.button.hoverBorderColor};
-
-    &.in-group {
-      border-color: ${props => props.theme.toolbar.button.hoverBackgroundColor};
-    }
+    color: ${p => p.theme.toolbar.button.color};
+    background-color: ${p => p.theme.toolbar.button.hoverBackgroundColor};
+    border-color: ${p => p.theme.toolbar.button.hoverBorderColor};
   }
 
   &.btn:focus {
-    color: ${props => props.theme.toolbar.button.color};
-    background-color: ${props =>
-      props.theme.toolbar.button.focusBackgroundColor};
-    border-color: ${props => props.theme.toolbar.button.focusBorderColor};
-
-    &.in-group {
-      border-color: ${props => props.theme.toolbar.button.focusBackgroundColor};
-    }
+    color: ${p => p.theme.toolbar.button.color};
+    background-color: ${p => p.theme.toolbar.button.focusBackgroundColor};
+    border-color: ${p => p.theme.toolbar.button.focusBorderColor};
+    outline: none;
   }
 
-  &.btn:active,
-  &.btn.active {
-    color: ${props => props.theme.toolbar.button.color};
-    background-color: ${props =>
-      props.theme.toolbar.button.activeBackgroundColor};
-    border-color: ${props => props.theme.toolbar.button.activeBorderColor};
-
-    &.in-group {
-      border-color: ${props =>
-        props.theme.toolbar.button.activeBackgroundColor};
-    }
+  &.btn:active {
+    color: ${p => p.theme.toolbar.button.color};
+    background-color: ${p => p.theme.toolbar.button.activeBackgroundColor};
+    border-color: ${p => p.theme.toolbar.button.activeBorderColor};
   }
 `;
 
@@ -128,9 +103,6 @@ const StyledDiv = StyledButton.extend`
 `;
 
 const StyledAnchor = StyledButton.extend`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 500;
 `;
 
@@ -195,7 +167,7 @@ const ToolbarItem = ({
   return (
     <Element size={size} className={classes} {...rest}>
       {children && children}
-      {!children && <FontAwesome name={icon} />}
+      {!children && <FontAwesome name={icon} fixedWidth />}
     </Element>
   );
 };

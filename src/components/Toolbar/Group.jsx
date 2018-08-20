@@ -5,11 +5,8 @@ import classnames from 'classnames';
 
 const Group = styled.div`
   display: flex;
-  background: ${props => props.theme.toolbar.button.backgroundColor};
-  border-color: ${props => props.theme.toolbar.button.borderColor};
-  border-style: ${props => props.theme.toolbar.button.borderStyle};
-  border-width: ${props => props.theme.toolbar.button.borderWidth};
-  box-shadow: ${props => props.theme.toolbar.boxShadow};
+  background: ${p => p.theme.toolbar.button.backgroundColor};
+  box-shadow: ${p => p.theme.toolbar.boxShadow};
 
   &.direction-row {
     flex-direction: row;
@@ -19,75 +16,59 @@ const Group = styled.div`
   }
 
   &.direction-column > * {
-    margin-bottom: ${props => props.theme.toolbar.childrenMargin};
+    margin-bottom: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-row > * {
-    margin-right: ${props => props.theme.toolbar.childrenMargin};
+    margin-right: ${p => p.theme.toolbar.childrenMargin};
   }
 
-  &.direction-column :last-child,
-  &.direction-row :last-child {
+  &.direction-column > *:last-child,
+  &.direction-row > *:last-child {
     margin: 0;
   }
 
   &.direction-column {
     &.first-shape-square {
-      border-top-left-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
-      border-top-right-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
+      border-top-left-radius: ${p => p.theme.toolbar.button.borderRadius};
+      border-top-right-radius: ${p => p.theme.toolbar.button.borderRadius};
     }
 
     &.last-shape-square {
-      border-bottom-left-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
-      border-bottom-right-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
+      border-bottom-left-radius: ${p => p.theme.toolbar.button.borderRadius};
+      border-bottom-right-radius: ${p => p.theme.toolbar.button.borderRadius};
     }
 
     &.first-shape-round {
-      border-top-left-radius: ${props =>
-        props.theme.toolbar[`${props.firstSize}Size`]};
-      border-top-right-radius: ${props =>
-        props.theme.toolbar[`${props.firstSize}Size`]};
+      border-top-left-radius: ${p => p.theme.toolbar[`${p.firstSize}Size`]};
+      border-top-right-radius: ${p => p.theme.toolbar[`${p.firstSize}Size`]};
     }
 
     &.last-shape-round {
-      border-bottom-left-radius: ${props =>
-        props.theme.toolbar[`${props.lastSize}Size`]};
-      border-bottom-right-radius: ${props =>
-        props.theme.toolbar[`${props.lastSize}Size`]};
+      border-bottom-left-radius: ${p => p.theme.toolbar[`${p.lastSize}Size`]};
+      border-bottom-right-radius: ${p => p.theme.toolbar[`${p.lastSize}Size`]};
     }
   }
 
   &.direction-row {
     &.first-shape-square {
-      border-top-left-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
-      border-bottom-left-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
+      border-top-left-radius: ${p => p.theme.toolbar.button.borderRadius};
+      border-bottom-left-radius: ${p => p.theme.toolbar.button.borderRadius};
     }
 
     &.last-shape-square {
-      border-top-right-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
-      border-bottom-right-radius: ${props =>
-        props.theme.toolbar.button.borderRadius};
+      border-top-right-radius: ${p => p.theme.toolbar.button.borderRadius};
+      border-bottom-right-radius: ${p => p.theme.toolbar.button.borderRadius};
     }
 
     &.first-shape-round {
-      border-top-left-radius: ${props =>
-        props.theme.toolbar[`${props.firstSize}Size`]};
-      border-bottom-left-radius: ${props =>
-        props.theme.toolbar[`${props.firstSize}Size`]};
+      border-top-left-radius: ${p => p.theme.toolbar[`${p.firstSize}Size`]};
+      border-bottom-left-radius: ${p => p.theme.toolbar[`${p.firstSize}Size`]};
     }
 
     &.last-shape-round {
-      border-top-right-radius: ${props =>
-        props.theme.toolbar[`${props.lastSize}Size`]};
-      border-bottom-right-radius: ${props =>
-        props.theme.toolbar[`${props.lastSize}Size`]};
+      border-top-right-radius: ${p => p.theme.toolbar[`${p.lastSize}Size`]};
+      border-bottom-right-radius: ${p => p.theme.toolbar[`${p.lastSize}Size`]};
     }
   }
 `;

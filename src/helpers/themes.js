@@ -53,7 +53,7 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         hoverBorderColor: color2,
         focusBackgroundColor: color3,
         focusBorderColor: color2,
-        activeBackgroundColor: color3,
+        activeBackgroundColor: color2,
         activeBorderColor: color2
       }
     },
@@ -175,8 +175,11 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
         color: dark27Color1,
         backgroundColor: color2,
         hoverBackgroundColor: color3,
+        hoverBorderColor: color3,
         focusBackgroundColor: color3,
-        activeBackgroundColor: color3
+        focusBorderColor: color2,
+        activeBackgroundColor: color2,
+        activeBorderColor: color2
       }
     },
     titlebar: {
