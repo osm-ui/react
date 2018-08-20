@@ -9,13 +9,10 @@ const StyledHeader = styled.header`
 
   left: 0;
   right: 0;
-  font-weight: ${props => props.theme.titlebar.fontWeight};
-  color: ${props => props.theme.titlebar.color};
-  border-color: ${props => props.theme.titlebar.borderColor};
-  border-style: ${props => props.theme.titlebar.borderStyle};
-  border-width: 0;
-  background: ${props => props.theme.titlebar.backgroundColor};
-  box-shadow: ${props => props.theme.titlebar.boxShadow};
+  font-weight: ${p => p.theme.titlebar.fontWeight};
+  color: ${p => p.theme.titlebar.color};
+  background: ${p => p.theme.titlebar.backgroundColor};
+  box-shadow: ${p => p.theme.titlebar.boxShadow};
   text-align: center;
 
   &.container-parent {
@@ -27,36 +24,36 @@ const StyledHeader = styled.header`
 
   &.position-top {
     top: 0;
-    border-bottom-width: ${props => props.theme.titlebar.borderWidth};
+    border-bottom-width: ${p => p.theme.titlebar.borderWidth};
   }
 
   &.position-bottom {
     bottom: 0;
-    border-top-width: ${props => props.theme.titlebar.borderWidth};
+    border-top-width: ${p => p.theme.titlebar.borderWidth};
   }
 
   &.xs {
-    height: ${props => props.theme.titlebar.xsHeight};
-    font-size: ${props => props.theme.titlebar.xsFontSize};
-    line-height: ${props => props.theme.titlebar.xsHeight};
+    height: ${p => p.theme.titlebar.xsHeight};
+    font-size: ${p => p.theme.titlebar.xsFontSize};
+    line-height: ${p => p.theme.titlebar.xsHeight};
   }
 
   &.sm {
-    height: ${props => props.theme.titlebar.smHeight};
-    font-size: ${props => props.theme.titlebar.smFontSize};
-    line-height: ${props => props.theme.titlebar.smHeight};
+    height: ${p => p.theme.titlebar.smHeight};
+    font-size: ${p => p.theme.titlebar.smFontSize};
+    line-height: ${p => p.theme.titlebar.smHeight};
   }
 
   &.md {
-    height: ${props => props.theme.titlebar.mdHeight};
-    font-size: ${props => props.theme.titlebar.mdFontSize};
-    line-height: ${props => props.theme.titlebar.mdHeight};
+    height: ${p => p.theme.titlebar.mdHeight};
+    font-size: ${p => p.theme.titlebar.mdFontSize};
+    line-height: ${p => p.theme.titlebar.mdHeight};
   }
 
   &.lg {
-    height: ${props => props.theme.titlebar.lgHeight};
-    font-size: ${props => props.theme.titlebar.lgFontSize};
-    line-height: ${props => props.theme.titlebar.lgHeight};
+    height: ${p => p.theme.titlebar.lgHeight};
+    font-size: ${p => p.theme.titlebar.lgFontSize};
+    line-height: ${p => p.theme.titlebar.lgHeight};
   }
 
   &.maximized {

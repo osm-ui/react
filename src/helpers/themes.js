@@ -60,18 +60,13 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
     titlebar: {
       color: colors.white,
       backgroundColor: color2,
-      borderColor: color2,
 
       button: {
         color: colors.white,
         backgroundColor: color2,
-        borderColor: color2,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
-        activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBackgroundColor: color3
       }
     },
     form: {
@@ -185,18 +180,13 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
     titlebar: {
       color: dark27Color1,
       backgroundColor: color2,
-      borderColor: color2,
 
       button: {
         color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color2,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
-        activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBackgroundColor: color3
       }
     },
     form: {
