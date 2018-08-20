@@ -14,18 +14,18 @@ const Overlay = styled.aside`
   bottom: 0;
   left: 0;
   right: 0;
-  padding: ${props => props.theme.modal.overlayPadding};
-  background: ${props => props.theme.modal.overlayBackgroundColor};
+  padding: ${p => p.theme.modal.overlayPadding};
+  background: ${p => p.theme.modal.overlayBackgroundColor};
   transition: opacity 300ms ease-in-out;
 `;
 
 const StyledMain = styled.main`
   position: relative;
-  min-height: 15rem;
+  min-height: 10rem;
   max-height: 100%;
-  padding: ${props => props.theme.modal.padding};
-  background: ${props => props.theme.modal.backgroundColor};
-  color: ${props => props.theme.modal.color};
+  padding: ${p => p.theme.modal.padding};
+  background: ${p => p.theme.modal.backgroundColor};
+  color: ${p => p.theme.modal.color};
   overflow-y: auto;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
@@ -37,23 +37,24 @@ const StyledMain = styled.main`
   }
 
   &.scroll-content .header {
-    margin-bottom: 2rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
   }
 
   .content {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   &.scroll-content .content {
     overflow-y: auto;
     margin: 0;
-    border-color: ${props => props.theme.borderColor};
-    border-style: ${props => props.theme.borderStyle};
+    border-color: ${p => p.theme.borderColor};
+    border-style: ${p => p.theme.borderStyle};
     border-width: 1px 0 1px 0;
 
     &::after {
       content: '';
-      margin-top: 2rem;
+      margin-top: 1rem;
       display: block;
     }
   }
@@ -63,7 +64,8 @@ const StyledMain = styled.main`
   }
 
   &.scroll-content .footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
   }
 `;
 

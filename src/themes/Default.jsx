@@ -363,7 +363,7 @@ export const config = {
     overlayBackgroundColor: makeTransparent(colors.black, 0.65),
     overlayPadding: '4rem',
     backgroundColor: colors.white,
-    padding: '5rem 3rem'
+    padding: '3.5rem 2rem'
   },
   notification: {
     fontSize: '1rem',
