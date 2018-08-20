@@ -17,7 +17,7 @@ export const statusValue = {
 };
 
 const StyledDiv = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: opacity 300ms ease-in-out;
 
   .main {
@@ -30,7 +30,7 @@ const StyledDiv = styled.div`
     ${Button.style} {
       padding-left: 1rem;
       padding-right: 1rem;
-      border-radius: 4px 0 0 4px;
+      border-radius: 2px 0 0 2px;
 
       &:focus {
         outline: none;
@@ -39,12 +39,11 @@ const StyledDiv = styled.div`
 
     .value {
       flex: 1 0 10rem;
-      line-height: 3rem;
-      padding: 1px 0;
-      padding-left: 1rem;
+      line-height: 1.6rem;
+      padding: 1px 1rem;
       border: 1px solid ${colors.lightGray3};
       border-left: none;
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 2px 2px 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -66,7 +65,7 @@ const StyledDiv = styled.div`
 
       .action {
         color: ${colors.white};
-        line-height: 3rem;
+        line-height: 1.6rem;
         border: 2px solid transparent;
         cursor: pointer;
       }
@@ -74,7 +73,7 @@ const StyledDiv = styled.div`
       .del {
         background-color: ${colors.red2};
         border-color: ${colors.red1};
-        border-radius: 0 4px 0 0;
+        border-radius: 0 2px 0 0;
       }
 
       .mod {
@@ -132,22 +131,27 @@ const StyledDiv = styled.div`
 
   .input-container,
   .textarea-container {
-    height: 3.4rem;
+    height: 1.6rem;
     z-index: 0;
-    margin-top: -3.4rem;
+    margin-top: -1.6rem;
     transition: margin-top 300ms ease-in-out, height 300ms ease-in-out;
+
+    input,
+    textarea {
+      height: 100%;
+    }
   }
 
   ${Form.Input.style}, ${Form.Textarea.style} {
     line-height: 1.7rem;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 2px 2px;
   }
 
   &.selected {
     opacity: 1;
 
     ${Button.style} {
-      border-radius: 4px 0 0 0;
+      border-radius: 2px 0 0 0;
     }
 
     .input-container,
@@ -156,11 +160,11 @@ const StyledDiv = styled.div`
     }
 
     .textarea-container {
-      height: 8rem;
+      height: 4rem;
     }
 
     .value {
-      border-radius: 0 4px 0 0;
+      border-radius: 0 2px 0 0;
     }
   }
 `;
