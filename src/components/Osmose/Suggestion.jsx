@@ -15,46 +15,36 @@ const StyledDiv = styled.div`
   margin-top: 3rem;
   cursor: pointer;
 
-  &:hover {
-    .infos {
-      box-shadow: ${props => props.theme.titlebar.boxShadow};
-    }
-  }
-
   .title {
-    font-size: 1.4rem;
-    padding-top: 0.2rem;
+    font-size: 0.9rem;
+    line-height: 2rem;
     text-align: center;
-    color: ${props => props.theme.form.button.color};
-    border-width: 2px;
+    color: ${p => p.theme.form.button.color};
+    border-width: 1px;
     border-style: solid;
-    border-color: ${props => props.theme.form.button.borderColor};
-    border-radius: 12px 12px 0 0;
-    background-color: ${props => props.theme.form.button.backgroundColor};
+    border-color: ${p => p.theme.form.button.backgroundColor};
+    border-radius: 2px 2px 0 0;
+    background-color: ${p => p.theme.form.button.backgroundColor};
   }
 
   .infos {
-    padding: 0.7rem 1rem;
-    padding-top: 1rem;
-    border-width: 2px;
+    padding: 1rem 1.2rem;
+    border-width: 1px;
     border-style: solid;
-    border-color: ${props => props.theme.form.button.borderColor};
-    border-radius: 0 0 12px 12px;
+    border-color: ${colors.lightGray4};
+    border-radius: 0 0 2px 2px;
     border-top: none;
 
     .info {
       display: flex;
-      margin: 0.2rem 0;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
 
       &.add {
         color: ${colors.green1};
 
         &::before {
           content: '\f067';
-          font-family: FontAwesome;
-          font-size: 1.3rem;
-          line-height: 2.8rem;
-          margin-right: 0.5rem;
         }
       }
 
@@ -63,10 +53,6 @@ const StyledDiv = styled.div`
 
         &::before {
           content: '\f192';
-          font-family: FontAwesome;
-          font-size: 1.3rem;
-          line-height: 2.8rem;
-          margin-right: 0.5rem;
         }
       }
 
@@ -76,39 +62,30 @@ const StyledDiv = styled.div`
 
         &::before {
           content: '\f068';
+        }
+      }
+
+      &.add,
+      &.mod,
+      &.del {
+        &::before {
           font-family: FontAwesome;
-          font-size: 1.3rem;
-          line-height: 2.7rem;
           margin-right: 0.5rem;
         }
       }
 
       .tag {
-        flex: 0 0 10rem;
-        line-height: 2.7rem;
-        font-size: 1.4rem;
+        flex: 0 0 6rem;
         font-weight: bold;
-      }
-
-      .value {
-        font-size: 1.5rem;
-        line-height: 2.7rem;
       }
     }
   }
 
   &.fix .title,
-  &.fix .infos,
-  &.new .title,
-  &.new .infos {
-    border-color: ${props => props.theme.form.button.primary.borderColor};
-  }
-
-  &.fix .title,
   &.new .title {
-    color: ${props => props.theme.form.button.primary.color};
-    background-color: ${props =>
-      props.theme.form.button.primary.backgroundColor};
+    color: ${p => p.theme.form.button.primary.color};
+    background-color: ${p => p.theme.form.button.primary.backgroundColor};
+    border-color: ${p => p.theme.form.button.primary.backgroundColor};
   }
 
   @media (max-width: 50rem) {
