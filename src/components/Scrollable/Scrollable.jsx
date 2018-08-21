@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
 
+import { isOverflowYHidden } from 'helpers/dom';
+
 const StyledDiv = styled.div`
   height: 100%;
   color: ${props => props.theme.color};
@@ -61,10 +63,7 @@ class Scrollable extends React.Component {
   checkScroll() {
     const element = this.scrollable.current;
 
-    if (element && window.getComputedStyle(element).overflowY !== 'hidden') {
-      console.log('scrollHeight', element.scrollHeight);
-      console.log('Scrolltop', element.scrollTop);
-      console.log('clientHeight', element.clientHeight);
+    if (element && isOverflowYHidden(element)) {
       const hasMoreDown =
         element.scrollHeight - element.scrollTop - element.clientHeight > 1; // can't put 0 here, because sometimes the calculation is imprecise
       const hasMoreUp = element.scrollTop > 0;
