@@ -24,9 +24,12 @@
     "./src"
   ],
   "scripts": {
+    "load-data": "node scripts/generateFontAwesomeData.js",
+    "prestorybook": "npm run load-data",
     "storybook": "cross-env NODE_PATH=src start-storybook -p 9009",
     "build-storybook": "cross-env NODE_PATH=src build-storybook -o docs",
     "build-dist": "cross-env NODE_PATH=src NODE_ENV=production webpack --progress",
+    "prebuild": "npm run load-data",
     "build": "npm run build-dist && npm run build-storybook",
     "precommit": "lint-staged",
     "test": "cross-env NODE_PATH=src jest --env=jsdom",
@@ -82,7 +85,6 @@
     "@storybook/react": "^3.4.1",
     "classnames": "^2.2.5",
     "hex-rgb": "^1.0.0",
-    "js-yaml": "^3.12.0",
     "leaflet": "^1.2.0",
     "leaflet.locatecontrol": "^0.62.0",
     "normalize.css": "^8.0.0",
@@ -126,6 +128,7 @@
     "file-loader": "^1.1.11",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^23.5.0",
     "jest-styled-components": "^6.0.1",
     "less": "^3.8.1",
@@ -138,7 +141,8 @@
     "styled-components": "^3.4.2",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "yamljs": "^0.3.0"
   },
   "peerDependencies": {
     "styled-components": "^2.4.1"

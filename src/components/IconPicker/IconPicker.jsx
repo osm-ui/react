@@ -2,55 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
-import jsyaml from 'js-yaml';
-import { colors } from 'constants/index';
+
+import { makeName, makePrefix } from 'helpers/fontAwesome';
+import icons from 'data/icons.json';
+import categories from 'data/categories.json';
 
 import { DefaultTheme } from 'index';
 import Scrollable from 'components/Scrollable';
 import Loader from 'components/Loader';
-
-const categoryMainIcons = {
-  accessibility: 'wheelchair',
-  animals: 'crow',
-  arrows: 'arrow-right',
-  'audio-video': 'microphone-alt',
-  automotive: 'car',
-  buildings: 'building',
-  business: 'file-alt',
-  charity: 'hand-holding-heart',
-  chat: 'comment',
-  chess: 'chess',
-  code: 'code',
-  communication: 'phone-volume',
-  computers: 'desktop',
-  currency: 'euro-sign',
-  'date-time': 'clock',
-  design: 'pencil-ruler',
-  editors: 'edit',
-  education: 'graduation-cap',
-  emoji: 'surprise',
-  files: 'folder-open',
-  gender: 'venus-mars',
-  hands: 'hand-point-right',
-  health: 'heartbeat',
-  images: 'image',
-  interfaces: 'check-circle',
-  logistics: 'dolly',
-  maps: 'map',
-  mathematics: 'superscript',
-  medical: 'briefcase-medical',
-  moving: 'box-open',
-  objects: 'thumbtack',
-  'payments-shopping': 'credit-card',
-  shapes: 'shapes',
-  spinners: 'spinner',
-  sports: 'futbol',
-  status: 'ban',
-  travel: 'plane-departure',
-  'users-people': 'child',
-  vehicles: 'bus-alt',
-  writing: 'pencil-alt'
-};
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -129,7 +88,6 @@ const StyledDiv = styled.div`
       cursor: pointer;
       font-size: 4rem;
       margin: 0.7rem;
-      color: ${colors.anthracite2};
 
       &.selected {
         color: ${props => props.theme.backgroundColor};
@@ -142,54 +100,21 @@ class IconPicker extends React.Component {
   constructor(props) {
     super(props);
 
+    const categoryNames = Object.keys(categories);
+    const filter = props.selectedIcon
+      ? categoryNames.find(name =>
+          categories[name].icons.includes(props.selectedIcon)
+        )
+      : categoryNames[0];
+
     this.state = {
-      categories: null,
       categoriesOpened: false,
-      icons: null,
       selectedIcon: props.selectedIcon,
       selectedStyle: props.selectedStyle,
-      filter: null
+      filter: filter
     };
 
-    this.setCategory = this.setCategory.bind(this);
     this.openCategories = this.openCategories.bind(this);
-  }
-
-  componentDidMount() {
-    fetch(
-      'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/5.2.0/advanced-options/metadata/categories.yml'
-    )
-      .then(result => result.text())
-      .then(text => {
-        const { selectedIcon } = this.state;
-
-        const categories = jsyaml.load(text);
-        const categoryNames = Object.keys(categories);
-
-        const defaultFilter = selectedIcon
-          ? categoryNames.find(name =>
-              categories[name].icons.includes(selectedIcon)
-            )
-          : categoryNames[0];
-
-        this.setState({
-          categories,
-          filter: defaultFilter
-        });
-      })
-      .catch(e => console.error(`Error in fetching categories ${e}`));
-
-    fetch(
-      'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/5.2.0/advanced-options/metadata/icons.yml'
-    )
-      .then(result => result.text())
-      .then(text => {
-        const icons = jsyaml.load(text);
-        this.setState({
-          icons
-        });
-      })
-      .catch(e => console.error(`Error in fetching icons ${e}`));
   }
 
   choose(style, iconName) {
@@ -213,48 +138,20 @@ class IconPicker extends React.Component {
     });
   }
 
-  makePrefix(style) {
-    return `fa${style[0]}`;
-  }
-
-  makeName(name) {
-    return `fa-${name}`;
-  }
-
-  renderLoader() {
-    const { categories, icons } = this.state;
-
-    const isLoading = !icons || !categories;
-
-    if (isLoading)
-      return (
-        <DefaultTheme>
-          <Loader centered />
-        </DefaultTheme>
-      );
-
-    return null;
-  }
-
   renderCategories() {
-    const { categories, filter, icons, categoriesOpened } = this.state;
-
-    const isLoading = !icons || !categories;
-    if (isLoading) return null;
+    const { filter, categoriesOpened } = this.state;
 
     const categoriesToDisplay = Object.keys(categories).map(name => {
       const className = classnames(
         'category',
         filter === name ? 'current' : ''
       );
-      const icon = categories[name].icons.find(
-        icon => categoryMainIcons[name] === icon
-      );
 
-      console.log('NAME', name);
-      console.log('ICON', icon);
-      const iconName = this.makeName(icon);
-      const prefix = this.makePrefix(icons[icon].styles[0]);
+      const category = categories[name];
+
+      const icon = category.icons.find(icon => category.main === icon);
+      const iconName = makeName(icon);
+      const prefix = makePrefix(icons[icon][0]);
 
       return (
         <div
@@ -274,16 +171,7 @@ class IconPicker extends React.Component {
   }
 
   renderIcons() {
-    const {
-      filter,
-      icons,
-      categories,
-      selectedStyle,
-      selectedIcon
-    } = this.state;
-
-    const isLoading = !icons || !categories;
-    if (isLoading) return null;
+    const { filter, selectedStyle, selectedIcon } = this.state;
 
     const keys = Object.keys(icons);
     const iconsToDisplay = [];
@@ -293,9 +181,9 @@ class IconPicker extends React.Component {
       : keys;
 
     filteredIconNames.forEach(iconName => {
-      icons[iconName].styles.forEach(style => {
-        const prefix = this.makePrefix(style);
-        const name = this.makeName(iconName);
+      icons[iconName].forEach(style => {
+        const prefix = makePrefix(style);
+        const name = makeName(iconName);
 
         const isSelected = style === selectedStyle && iconName === selectedIcon;
 
@@ -312,24 +200,23 @@ class IconPicker extends React.Component {
     });
 
     return (
-      <Scrollable className="icons" position="right">
-        {iconsToDisplay}
-      </Scrollable>
+      <DefaultTheme>
+        <Scrollable className="icons" position="right">
+          {iconsToDisplay}
+        </Scrollable>
+      </DefaultTheme>
     );
   }
 
   render() {
     const { className, ...props } = this.props;
 
-    const { categories, filter, categoriesOpened } = this.state;
+    const { filter, categoriesOpened } = this.state;
     const classes = classnames(className);
 
-    const isLoading = !categories || !filter;
-
-    let title = 'Loading';
-
-    if (!isLoading)
-      title = categoriesOpened ? 'Pick a category' : categories[filter].label;
+    const title = categoriesOpened
+      ? 'Pick a category'
+      : categories[filter].label;
 
     return (
       <StyledDiv className={classes} {...props}>
@@ -337,7 +224,6 @@ class IconPicker extends React.Component {
           {title}
         </div>
         <div className="content">
-          {this.renderLoader()}
           {this.renderCategories()}
           {this.renderIcons()}
         </div>
@@ -356,7 +242,8 @@ IconPicker.propTypes = {
 IconPicker.defaultProps = {
   className: '',
   selectedIcon: null,
-  selectedStyle: null
+  selectedStyle: null,
+  onChoose: null
 };
 
 IconPicker.displayName = 'IconPicker';
