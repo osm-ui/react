@@ -1,33 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with a text children 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-<span
-  className="c0"
->
-  <span
-    className="c0"
+<styled.span>
+  <BrownTheme
+    key=".0"
   >
     This is a text
-  </span>
-</span>
+  </BrownTheme>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with an element children 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-<span
-  className="c0"
->
-  <span
-    className="c0"
+<styled.span>
+  <BrownTheme
+    key=".0"
   >
     <div />
-  </span>
-</span>
+  </BrownTheme>
+</styled.span>
 `;
