@@ -122,7 +122,8 @@ class IconPicker extends React.Component {
       selectedIcon: iconName,
       selectedStyle: style
     });
-    this.props.onChoose(style, iconName);
+
+    if (this.props.onChoose) this.props.onChoose(style, iconName);
   }
 
   setCategory(category) {
