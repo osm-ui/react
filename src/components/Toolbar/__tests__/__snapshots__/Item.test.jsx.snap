@@ -1,813 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(4rem - (2px * 2));
-  height: calc(4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="md shape-round btn c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={false}
+    key=".0"
+    loading={false}
+    shape="round"
     size="md"
+    type="button"
   >
     <div />
-  </button>
-</span>
+  </Toolbar.Item>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the inactive prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  pointer-events: none;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(4rem - (2px * 2));
-  height: calc(4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="md shape-round c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={true}
+    key=".0"
+    loading={false}
+    shape="round"
     size="md"
+    type="button"
   >
     <div />
-  </button>
-</span>
+  </Toolbar.Item>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the loading prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c3 {
-  width: 2.4rem;
-  height: 2.4rem;
-  margin: 0 auto;
-  border-width: 3px;
-  border-style: solid;
-  border-color: #707377;
-  border-radius: 50%;
-  border-left-color: transparent;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  -webkit-animation: iVXCSc 650ms infinite linear;
-  animation: iVXCSc 650ms infinite linear;
-}
-
-.c2 {
-  text-align: center;
-}
-
-.c2.centered {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(4rem - (2px * 2));
-  height: calc(4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="loading md shape-round btn c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={false}
+    key=".0"
+    loading={true}
+    shape="round"
     size="md"
+    type="button"
   >
-    <div
-      className="centered c2"
-    >
-      <div>
-        <div
-          className="c3"
-        />
-        
-      </div>
-    </div>
-  </button>
-</span>
+    <div />
+  </Toolbar.Item>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the shape prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(4rem - (2px * 2));
-  height: calc(4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="md shape-square btn c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={false}
+    key=".0"
+    loading={false}
+    shape="square"
     size="md"
+    type="button"
   >
     <div />
-  </button>
-</span>
+  </Toolbar.Item>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the size prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(2.4rem - (2px * 2));
-  height: calc(2.4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="xs shape-round btn c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={false}
+    key=".0"
+    loading={false}
+    shape="round"
     size="xs"
+    type="button"
   >
     <div />
-  </button>
-</span>
+  </Toolbar.Item>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the type prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: 500;
-}
-
-.c1,
-.c1.btn {
-  position: relative;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  pointer-events: all;
-  color: #101113;
-  border-color: #c9cacc;
-  border-style: solid;
-  border-width: 2px;
-  background: #ffffff;
-  font-weight: 500;
-  padding: 0;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c1.shape-square {
-  border-radius: 4px;
-}
-
-.c1.shape-round {
-  border-radius: 50%;
-}
-
-.c1.xs {
-  width: 2.4rem;
-  height: 2.4rem;
-  line-height: 1rem;
-  font-size: 1rem;
-}
-
-.c1.xs .fa {
-  font-size: 1.2rem;
-}
-
-.c1.sm {
-  width: 3rem;
-  height: 3rem;
-  line-height: 1.2rem;
-  font-size: 1.2rem;
-}
-
-.c1.sm .fa {
-  font-size: 1.4rem;
-}
-
-.c1.md {
-  width: 4rem;
-  height: 4rem;
-  line-height: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.c1.md .fa {
-  font-size: 1.6rem;
-}
-
-.c1.lg {
-  width: 5rem;
-  height: 5rem;
-  line-height: 1.7rem;
-  font-size: 1.8rem;
-}
-
-.c1.lg .fa {
-  font-size: 2rem;
-}
-
-.c1.in-group {
-  width: calc(4rem - (2px * 2));
-  height: calc(4rem - (2px * 2));
-  border-width: 0;
-  box-shadow: none;
-}
-
-.c1.btn:hover {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:hover.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:focus {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:focus.in-group {
-  border-color: #eceeef;
-}
-
-.c1.btn:active,
-.c1.btn.active {
-  color: #101113;
-  background-color: #eceeef;
-  border-color: #c9cacc;
-}
-
-.c1.btn:active.in-group,
-.c1.btn.active.in-group {
-  border-color: #eceeef;
-}
-
-<span
-  className="c0"
->
-  <button
-    className="md shape-round btn c1"
+<styled.span>
+  <Toolbar.Item
+    className=""
+    icon=""
+    inGroup={false}
+    inactive={false}
+    key=".0"
+    loading={false}
+    shape="round"
     size="md"
+    type="anchor"
   >
     <div />
-  </button>
-</span>
+  </Toolbar.Item>
+</styled.span>
 `;

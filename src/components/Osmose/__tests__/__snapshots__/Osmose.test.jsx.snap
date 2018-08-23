@@ -1,479 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with element children  1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c2 {
-  z-index: 1000;
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  left: 0;
-  right: 0;
-  font-weight: 500;
-  color: #101113;
-  border-color: #dbdcdd;
-  border-style: solid;
-  border-width: 0;
-  background: #ffffff;
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-  text-align: center;
-}
-
-.c2.container-parent {
-  position: absolute;
-}
-
-.c2.container-root {
-  position: fixed;
-}
-
-.c2.position-top {
-  top: 0;
-  border-bottom-width: 1px;
-}
-
-.c2.position-bottom {
-  bottom: 0;
-  border-top-width: 1px;
-}
-
-.c2.xs {
-  height: 3rem;
-  font-size: 1.4rem;
-  line-height: 3rem;
-}
-
-.c2.sm {
-  height: 3.5rem;
-  font-size: 1.6rem;
-  line-height: 3.5rem;
-}
-
-.c2.md {
-  height: 4rem;
-  font-size: 1.8rem;
-  line-height: 4rem;
-}
-
-.c2.lg {
-  height: 4.5rem;
-  font-size: 1.9rem;
-  line-height: 4.5rem;
-}
-
-.c2.maximized {
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  border-width: 0;
-}
-
-.c3 {
-  margin-top: 3rem;
-  cursor: pointer;
-}
-
-.c3:hover .infos {
-  box-shadow: 0 3px 4px -3px rgba(0,0,0,0.5),0 0 2px -1px rgba(0,0,0,0.4);
-}
-
-.c3 .title {
-  font-size: 1.4rem;
-  padding-top: 0.2rem;
-  text-align: center;
-  color: #3b3f45;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9cacc;
-  border-radius: 12px 12px 0 0;
-  background-color: #ffffff;
-}
-
-.c3 .infos {
-  padding: 0.7rem 1rem;
-  padding-top: 1rem;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #c9cacc;
-  border-radius: 0 0 12px 12px;
-  border-top: none;
-}
-
-.c3 .infos .info {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0.2rem 0;
-}
-
-.c3 .infos .info.add {
-  color: #348538;
-}
-
-.c3 .infos .info.add::before {
-  content: '\\f067';
-  font-family: FontAwesome;
-  font-size: 1.3rem;
-  line-height: 2.8rem;
-  margin-right: 0.5rem;
-}
-
-.c3 .infos .info.mod {
-  color: #de8c00;
-}
-
-.c3 .infos .info.mod::before {
-  content: '\\f192';
-  font-family: FontAwesome;
-  font-size: 1.3rem;
-  line-height: 2.8rem;
-  margin-right: 0.5rem;
-}
-
-.c3 .infos .info.del {
-  color: #c92d2d;
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-}
-
-.c3 .infos .info.del::before {
-  content: '\\f068';
-  font-family: FontAwesome;
-  font-size: 1.3rem;
-  line-height: 2.7rem;
-  margin-right: 0.5rem;
-}
-
-.c3 .infos .info .tag {
-  -webkit-flex: 0 0 10rem;
-  -ms-flex: 0 0 10rem;
-  flex: 0 0 10rem;
-  line-height: 2.7rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-.c3 .infos .info .value {
-  font-size: 1.5rem;
-  line-height: 2.7rem;
-}
-
-.c3.fix .title,
-.c3.fix .infos,
-.c3.new .title,
-.c3.new .infos {
-  border-color: #186fc5;
-}
-
-.c3.fix .title,
-.c3.new .title {
-  color: #ffffff;
-  background-color: #2196f3;
-}
-
-.c1 {
-  position: relative;
-  color: black;
-  height: 90vh;
-  background-color: #ffffff;
-}
-
-.c1 > div {
-  height: 100%;
-  padding-bottom: 2rem;
-  padding-top: 4.5rem;
-  overflow-y: scroll;
-}
-
-.c1 h3 {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-@media (max-width:50rem) {
-  .c3 .infos .info .tag {
-    -webkit-flex: 0 0 30%;
-    -ms-flex: 0 0 30%;
-    flex: 0 0 30%;
-  }
-}
-
-<span
-  className="c0"
->
-  <div
-    className="c1"
+<styled.span>
+  <Osmose
+    className=""
+    data={
+      Object {
+        "b_date": "2018-03-11",
+        "elems": Array [
+          Object {
+            "fixes": Array [
+              Object {
+                "add": Array [
+                  Object {
+                    "k": "ref:UAI",
+                    "v": "9710194J",
+                    "vlink": "http://www.education.gouv.fr/pid24302/annuaire-resultat-recherche.html?lycee_name=9710194J",
+                  },
+                  Object {
+                    "k": "school:FR",
+                    "v": "primaire",
+                  },
+                  Object {
+                    "k": "source",
+                    "v": "data.gouv.fr:Éducation Nationale - 05/2016",
+                  },
+                ],
+                "del": Array [],
+                "mod": Array [],
+                "num": 0,
+              },
+              Object {
+                "add": Array [
+                  Object {
+                    "k": "ref:UAI",
+                    "v": "9710194J",
+                    "vlink": "http://www.education.gouv.fr/pid24302/annuaire-resultat-recherche.html?lycee_name=9710194J",
+                  },
+                  Object {
+                    "k": "school:FR",
+                    "v": "primaire",
+                  },
+                  Object {
+                    "k": "source",
+                    "v": "data.gouv.fr:Éducation Nationale - 05/2016",
+                  },
+                ],
+                "del": Array [
+                  "amenity",
+                ],
+                "mod": Array [
+                  Object {
+                    "k": "name",
+                    "v": "École primaire Louis Andrea 1",
+                  },
+                ],
+                "num": 1,
+              },
+            ],
+            "id": 4685618649,
+            "node": true,
+            "tags": Array [
+              Object {
+                "k": "amenity",
+                "v": "school",
+              },
+              Object {
+                "k": "name",
+                "v": "Collège Maurice SATINEAU",
+              },
+            ],
+            "type": "node",
+          },
+        ],
+        "elems_id": "node4685618649",
+        "error_id": 16567871739,
+        "item": 8031,
+        "lat": "16.2601911",
+        "lon": "-61.5922668",
+        "maxlat": 16.2621911,
+        "maxlon": -61.590266799999995,
+        "minlat": 16.2581911,
+        "minlon": -61.5942668,
+        "new_elems": Array [],
+        "subtitle": "École primaire Louis Andrea 1, RUE EUTROPE MARIAN, 97122, BAIE MAHAULT (positioned: building, matching: manual)",
+        "title": "School, integration suggestion",
+        "url_help": "http://wiki.openstreetmap.org/wiki/Osmose/errors",
+      }
+    }
+    handleSuggestion={[MockFunction]}
+    key=".0"
   >
-    <header
-      className="sm position-top container-parent c2"
-    >
-      School, integration suggestion
-    </header>
-    <div>
-      <h3>
-        École primaire Louis Andrea 1, RUE EUTROPE MARIAN, 97122, BAIE MAHAULT (positioned: building, matching: manual)
-      </h3>
-      <div>
-        <div
-          className="osm c3"
-          onClick={[Function]}
-        >
-          <div
-            className="title"
-          >
-            Data in OSM
-          </div>
-          <div
-            className="infos"
-          >
-            <div
-              className="info"
-            >
-              <div
-                className="tag"
-              >
-                amenity
-              </div>
-              <div
-                className="value"
-              >
-                school
-              </div>
-            </div>
-            <div
-              className="info"
-            >
-              <div
-                className="tag"
-              >
-                name
-              </div>
-              <div
-                className="value"
-              >
-                Collège Maurice SATINEAU
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="fix c3"
-          onClick={[Function]}
-        >
-          <div
-            className="title"
-          >
-            Suggestion n°1
-          </div>
-          <div
-            className="infos"
-          >
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                ref:UAI
-              </div>
-              <div
-                className="value"
-              >
-                9710194J
-              </div>
-            </div>
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                school:FR
-              </div>
-              <div
-                className="value"
-              >
-                primaire
-              </div>
-            </div>
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                source
-              </div>
-              <div
-                className="value"
-              >
-                data.gouv.fr:Éducation Nationale - 05/2016
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="fix c3"
-          onClick={[Function]}
-        >
-          <div
-            className="title"
-          >
-            Suggestion n°2
-          </div>
-          <div
-            className="infos"
-          >
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                ref:UAI
-              </div>
-              <div
-                className="value"
-              >
-                9710194J
-              </div>
-            </div>
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                school:FR
-              </div>
-              <div
-                className="value"
-              >
-                primaire
-              </div>
-            </div>
-            <div
-              className="info add"
-            >
-              <div
-                className="tag"
-              >
-                source
-              </div>
-              <div
-                className="value"
-              >
-                data.gouv.fr:Éducation Nationale - 05/2016
-              </div>
-            </div>
-            <div
-              className="info mod"
-            >
-              <div
-                className="tag"
-              >
-                name
-              </div>
-              <div
-                className="value"
-              >
-                École primaire Louis Andrea 1
-              </div>
-            </div>
-            <div
-              className="info del"
-            >
-              <div
-                className="tag"
-              >
-                amenity
-              </div>
-              <div
-                className="value"
-              >
-                school
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</span>
+    <div />
+  </Osmose>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with empty tag data  1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  position: relative;
-  color: black;
-  height: 90vh;
-  background-color: #ffffff;
-}
-
-.c1 > div {
-  height: 100%;
-  padding-bottom: 2rem;
-  padding-top: 4.5rem;
-  overflow-y: scroll;
-}
-
-.c1 h3 {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="c1"
+<styled.span>
+  <Osmose
+    className=""
+    data={Object {}}
+    handleSuggestion={[MockFunction]}
+    key=".0"
   >
     <div />
-  </div>
-</span>
+  </Osmose>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with empty tag data  2`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  position: relative;
-  color: black;
-  height: 90vh;
-  background-color: #ffffff;
-}
-
-.c1 > div {
-  height: 100%;
-  padding-bottom: 2rem;
-  padding-top: 4.5rem;
-  overflow-y: scroll;
-}
-
-.c1 h3 {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="c1"
+<styled.span>
+  <Osmose
+    className=""
+    data={
+      Object {
+        "elems": Array [],
+        "new_elems": Array [],
+      }
+    }
+    handleSuggestion={[MockFunction]}
+    key=".0"
   >
     <div />
-  </div>
-</span>
+  </Osmose>
+</styled.span>
 `;

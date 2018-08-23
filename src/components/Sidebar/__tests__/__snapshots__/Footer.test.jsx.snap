@@ -1,81 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  padding: 2rem 2rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="sidebar-footer c1"
+<styled.span>
+  <Sidebar.Footer
+    className=""
+    key=".0"
   >
     <div />
-  </div>
-</span>
+  </Sidebar.Footer>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with className and other props 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  padding: 2rem 2rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="my-class sidebar-footer c1"
+<styled.span>
+  <Sidebar.Footer
+    className="my-class"
+    key=".0"
+    oneProp={1}
+    twoProp={2}
   >
     <div />
-  </div>
-</span>
+  </Sidebar.Footer>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with other props 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  padding: 2rem 2rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="sidebar-footer c1"
+<styled.span>
+  <Sidebar.Footer
+    className=""
+    key=".0"
+    oneProp={1}
+    twoProp={2}
   >
     <div />
-  </div>
-</span>
+  </Sidebar.Footer>
+</styled.span>
 `;
 
 exports[`When using snapshots Should render with the className prop 1`] = `
-.c0 {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-}
-
-.c1 {
-  padding: 2rem 2rem;
-}
-
-<span
-  className="c0"
->
-  <div
-    className="my-class sidebar-footer c1"
+<styled.span>
+  <Sidebar.Footer
+    className="my-class"
+    key=".0"
   >
     <div />
-  </div>
-</span>
+  </Sidebar.Footer>
+</styled.span>
 `;
