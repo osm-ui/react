@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`When using snapshots Should render with an element children 1`] = `
+<Default__StyledSpan>
+  <ColorPicker
+    className=""
+    key=".0"
+    onChange={[MockFunction]}
+  >
+    <div />
+  </ColorPicker>
+</Default__StyledSpan>
+`;
