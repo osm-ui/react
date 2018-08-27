@@ -41,15 +41,8 @@ storiesOf('Introduction', module)
           rel="noopener noreferrer"
         >
           React
-        </a>{' '}
-        and{' '}
-        <a
-          href="https://getbootstrap.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bootstrap
-        </a>.
+        </a>
+        .
       </p>
       <p>
         That site is both a documentation and a playground, feel free to use the{' '}

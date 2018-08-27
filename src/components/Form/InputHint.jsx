@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import classnames from 'classnames';
 
-const StyledDiv = styled.div`
+const InputHint = styled.div.attrs({
+  className: 'hint'
+})`
   font-size: ${props => props.theme.form.hint.fontSize};
   color: ${props => props.theme.form.hint.color};
   background-color: ${props => props.theme.form.hint.backgroundColor};
@@ -13,18 +12,6 @@ const StyledDiv = styled.div`
   opacity: ${props =>
     props.disabled ? props.theme.form.hint.disabledOpacity : 1};
 `;
-
-const InputHint = ({ className, ...props }) => (
-  <StyledDiv className={classnames(className, 'help-block')} {...props} />
-);
-
-InputHint.propTypes = {
-  className: PropTypes.string
-};
-
-InputHint.defaultProps = {
-  className: ''
-};
 
 InputHint.displayName = 'Form.InputHint';
 

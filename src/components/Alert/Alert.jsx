@@ -15,7 +15,6 @@ const colorsStyle = props =>
       &.alert-${context} {
           color: ${colors.color};
           background-color: ${colors.backgroundColor};
-          border-color: ${colors.borderColor};
 
           a {
               color: ${colors.color};
@@ -31,7 +30,12 @@ const colorsStyle = props =>
   }, '');
 
 const StyledDiv = styled.div`
-  border-radius: ${props => props.theme.borderRadius};
+  padding-top: ${props => props.theme.alert.verticalPadding};
+  padding-bottom: ${props => props.theme.alert.verticalPadding};
+  padding-left: ${props => props.theme.alert.horizontalPadding};
+  padding-right: ${props => props.theme.alert.horizontalPadding};
+  border-radius: ${props => props.theme.alert.borderRadius};
+
   ${props => colorsStyle(props)};
 `;
 

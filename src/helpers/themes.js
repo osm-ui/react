@@ -53,49 +53,43 @@ export function buildDarkThemeConfig(baseConfig, colors, colorVariant) {
         hoverBorderColor: color2,
         focusBackgroundColor: color3,
         focusBorderColor: color2,
-        activeBackgroundColor: color3,
+        activeBackgroundColor: color2,
         activeBorderColor: color2
       }
     },
     titlebar: {
       color: colors.white,
       backgroundColor: color2,
-      borderColor: color2,
 
       button: {
         color: colors.white,
         backgroundColor: color2,
-        borderColor: color2,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
-        activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBackgroundColor: color3
       }
     },
     form: {
       button: {
         color: colors.white,
-        backgroundColor: color2,
-        borderColor: color5,
+        backgroundColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color5,
         focusBackgroundColor: color3,
-        focusBorderColor: color5,
-        activeBackgroundColor: color3,
-        activeBorderColor: color5,
+        activeBackgroundColor: color1,
+        outlineColor: color1,
 
         primary: {
           color: color1,
           backgroundColor: colors.white,
-          borderColor: color1,
-          hoverBackgroundColor: colors.lightGray5,
-          hoverBorderColor: color1,
-          focusBackgroundColor: colors.lightGray5,
-          focusBorderColor: color1,
-          activeBackgroundColor: colors.lightGray5,
-          activeBorderColor: color1
+          hoverBackgroundColor: color5,
+          focusBackgroundColor: color5,
+          activeBackgroundColor: colors.white,
+          outlineColor: colors.white
+        },
+
+        link: {
+          color: colors.white,
+          outlineColor: color1
         }
       },
       label: {
@@ -138,7 +132,7 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
   const color2 = colors[`${colorVariant}2`];
   const color3 = colors[`${colorVariant}3`];
   const color4 = colors[`${colorVariant}4`];
-  // const color5 = colors[`${colorVariant}5`];
+  const color5 = colors[`${colorVariant}5`];
   const dark18Color1 = darken(0.18, color1);
   const dark22Color1 = darken(0.22, color1);
   const dark27Color1 = darken(0.27, color1);
@@ -175,54 +169,47 @@ export function buildLightThemeConfig(baseConfig, colors, colorVariant) {
       button: {
         color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color1,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color2,
+        hoverBorderColor: color3,
         focusBackgroundColor: color3,
         focusBorderColor: color2,
-        activeBackgroundColor: color3,
+        activeBackgroundColor: color2,
         activeBorderColor: color2
       }
     },
     titlebar: {
       color: dark27Color1,
       backgroundColor: color2,
-      borderColor: color2,
 
       button: {
         color: dark27Color1,
         backgroundColor: color2,
-        borderColor: color2,
         hoverBackgroundColor: color3,
-        hoverBorderColor: color3,
         focusBackgroundColor: color3,
-        focusBorderColor: color3,
-        activeBackgroundColor: color3,
-        activeBorderColor: color3
+        activeBackgroundColor: color3
       }
     },
     form: {
       button: {
         color: dark27Color1,
-        backgroundColor: color2,
-        borderColor: dark27Color1,
-        hoverBackgroundColor: color3,
-        hoverBorderColor: dark18Color1,
-        focusBackgroundColor: color3,
-        focusBorderColor: dark18Color1,
-        activeBackgroundColor: color3,
-        activeBorderColor: dark18Color1,
+        backgroundColor: color4,
+        hoverBackgroundColor: color5,
+        focusBackgroundColor: color5,
+        activeBackgroundColor: colors.white,
+        outlineColor: colors.white,
 
         primary: {
-          color: color2,
+          color: color4,
           backgroundColor: dark22Color1,
-          borderColor: dark27Color1,
           hoverBackgroundColor: dark18Color1,
-          hoverBorderColor: dark22Color1,
           focusBackgroundColor: dark18Color1,
-          focusBorderColor: dark22Color1,
-          activeBackgroundColor: dark18Color1,
-          activeBorderColor: dark22Color1
+          activeBackgroundColor: dark22Color1,
+          outlineColor: dark27Color1
+        },
+
+        link: {
+          color: dark27Color1,
+          outlineColor: color1
         }
       },
       label: {

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="column"
@@ -17,11 +17,11 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the direction and position prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="row"
@@ -37,11 +37,11 @@ exports[`When using snapshots Should render with the direction and position prop
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the direction prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="column"
@@ -57,11 +57,11 @@ exports[`When using snapshots Should render with the direction prop 1`] = `
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the opened prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="column"
@@ -77,11 +77,11 @@ exports[`When using snapshots Should render with the opened prop 1`] = `
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the shape prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="column"
@@ -97,11 +97,11 @@ exports[`When using snapshots Should render with the shape prop 1`] = `
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with the size prop 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Toolbar.Collapse
     className=""
     direction="column"
@@ -117,5 +117,5 @@ exports[`When using snapshots Should render with the size prop 1`] = `
   >
     <div />
   </Toolbar.Collapse>
-</styled.span>
+</Default__StyledSpan>
 `;

@@ -16,13 +16,12 @@ const StyledAside = styled.aside`
   height: 100%;
   overflow-y: auto;
   transition: all ${slideDuration}ms ease-out;
+  font-size: ${p => p.theme.sidebar.fontSize};
+  line-height: ${p => p.theme.sidebar.lineHeight};
 
-  color: ${props => props.theme.color};
-  background: ${props => props.theme.backgroundColor};
-  border-color: ${props => props.theme.borderColor};
-  border-style: ${props => props.theme.borderStyle};
-  border-width: 0;
-  box-shadow: ${props => props.theme.sidebar.boxShadow};
+  color: ${p => p.theme.color};
+  background: ${p => p.theme.backgroundColor};
+  box-shadow: ${p => p.theme.sidebar.boxShadow};
 
   &.scroll-content {
     display: flex;
@@ -41,13 +40,13 @@ const StyledAside = styled.aside`
     width: 15rem;
   }
   &.sm {
-    width: 25rem;
+    width: 20rem;
   }
   &.md {
-    width: 40rem;
+    width: 30rem;
   }
   &.lg {
-    width: 60rem;
+    width: 40rem;
   }
   &.maximized {
     width: 100%;
@@ -55,12 +54,12 @@ const StyledAside = styled.aside`
 
   &.left {
     left: 0;
-    border-right-width: ${props => props.theme.borderWidth};
+    border-right-width: ${p => p.theme.borderWidth};
   }
 
   &.right {
     right: 0;
-    border-left-width: ${props => props.theme.borderWidth};
+    border-left-width: ${p => p.theme.borderWidth};
   }
 
   &.left.slide-appear,
@@ -95,7 +94,7 @@ const StyledAside = styled.aside`
 
   .back-btn,
   .close-btn {
-    color: ${props => props.theme.controlColor};
+    color: ${p => p.theme.controlColor};
     background: transparent;
     border-width: 0;
     width: 5rem;
@@ -103,7 +102,7 @@ const StyledAside = styled.aside`
     padding: 0;
 
     &:hover {
-      color: ${props => props.theme.hoverControlColor};
+      color: ${p => p.theme.hoverControlColor};
     }
   }
 
@@ -129,8 +128,8 @@ const StyledAside = styled.aside`
   &.scroll-content .content {
     overflow-y: auto;
     margin: 0;
-    border-color: ${props => props.theme.borderColor};
-    border-style: ${props => props.theme.borderStyle};
+    border-color: ${p => p.theme.borderColor};
+    border-style: ${p => p.theme.borderStyle};
     border-width: 1px 0 1px 0;
 
     &::after {

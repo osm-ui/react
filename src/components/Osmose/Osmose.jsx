@@ -11,12 +11,12 @@ const StyledDiv = styled.div`
 
   color: black;
   height: 90vh;
-  background-color: ${props => props.theme.backgroundColor};
+  background-color: ${p => p.theme.backgroundColor};
 
   & > div {
     height: 100%;
     padding-bottom: 2rem;
-    padding-top: ${props => props.theme.titlebar.lgHeight};
+    padding-top: ${p => p.theme.titlebar.lgHeight};
     overflow-y: scroll;
   }
 

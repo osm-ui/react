@@ -1,10 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Alert } from 'index';
 
+
+const StyledAlert = styled(Alert)`
+  margin-bottom: 2rem;
+`
+
 const KnobsAlert = () => (
-  <Alert context="info">
+  <StyledAlert context="info">
     Don&rsquo;t forget to play with the <em>Knobs</em> in the right column!
-  </Alert>
+  </StyledAlert>
 );
 
 KnobsAlert.displayName = 'KnobsAlert';

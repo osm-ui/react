@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Notification
     callToActions={Array []}
     className=""
@@ -15,5 +15,5 @@ exports[`When using snapshots Should render with an element children 1`] = `
   >
     <div />
   </Notification>
-</styled.span>
+</Default__StyledSpan>
 `;

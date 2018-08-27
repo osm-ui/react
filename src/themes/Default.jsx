@@ -9,6 +9,7 @@ const boxShadow =
   '0 3px 4px -3px rgba(0, 0, 0, 0.5), 0 0 2px -1px rgba(0, 0, 0, 0.4)';
 
 export const config = {
+  rem: 16,
   boxShadow,
   font:
     '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
@@ -18,7 +19,7 @@ export const config = {
   loaderColor: colors.lightGray1,
   borderStyle: 'solid',
   borderWidth: '4px',
-  borderRadius: 0,
+  borderRadius: '2px',
   controlColor: colors.lightGray4,
   hoverControlColor: colors.lightGray1,
 
@@ -30,9 +31,11 @@ export const config = {
   },
   sidebar: {
     boxShadow,
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
     nav: {
-      fontSize: '1.8rem',
-      lineHeight: '2rem',
+      fontSize: '1.3rem',
+      lineHeight: '1.5rem',
       fontWeight: 500,
       borderRadius: '4px',
       color: colors.anthracite1,
@@ -44,69 +47,61 @@ export const config = {
   toolbar: {
     boxShadow,
     margin: '1rem',
-    childrenMargin: '.8rem',
-    xsSize: '2.4rem',
-    smSize: '3rem',
-    mdSize: '4rem',
-    lgSize: '5rem',
-    xsFontSize: '1rem',
-    smFontSize: '1.2rem',
-    mdFontSize: '1.4rem',
-    lgFontSize: '1.8rem',
-    xsIconSize: '1.2rem',
-    smIconSize: '1.4rem',
-    mdIconSize: '1.6rem',
-    lgIconSize: '2rem',
-    xsLineHeight: '1rem',
-    smLineHeight: '1.2rem',
-    mdLineHeight: '1.6rem',
-    lgLineHeight: '1.7rem',
+    childrenMargin: '.6rem',
+    xsSize: '1.8rem',
+    smSize: '2.4rem',
+    mdSize: '3rem',
+    lgSize: '4rem',
+    xsFontSize: '.6rem',
+    smFontSize: '.8rem',
+    mdFontSize: '1rem',
+    lgFontSize: '1.2rem',
+    xsIconSize: '.8rem',
+    smIconSize: '1rem',
+    mdIconSize: '1.3rem',
+    lgIconSize: '1.5rem',
+    xsLineHeight: '1.6rem',
+    smLineHeight: '2.3rem',
+    mdLineHeight: '3rem',
+    lgLineHeight: '4rem',
 
     button: {
       color: colors.anthracite1,
-      backgroundColor: colors.white,
-      borderColor: colors.lightGray3,
+      backgroundColor: colors.lightGray5,
+      borderRadius: '4px',
       borderStyle: 'solid',
       borderWidth: '2px',
-      borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray3,
-      focusBackgroundColor: colors.lightGray5,
+      hoverBorderColor: colors.lightGray4,
+      hoverBackgroundColor: colors.lightGray4,
       focusBorderColor: colors.lightGray3,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray3
+      focusBackgroundColor: colors.lightGray4,
+      activeBorderColor: colors.lightGray3,
+      activeBackgroundColor: colors.lightGray3
     }
   },
   titlebar: {
     boxShadow,
-    xsHeight: '3rem',
-    smHeight: '3.5rem',
-    mdHeight: '4rem',
-    lgHeight: '4.5rem',
-    xsFontSize: '1.4rem',
-    smFontSize: '1.6rem',
-    mdFontSize: '1.8rem',
-    lgFontSize: '1.9rem',
+    xsHeight: '2rem',
+    smHeight: '2.5rem',
+    mdHeight: '3rem',
+    lgHeight: '3.5rem',
+    xsFontSize: '.8rem',
+    smFontSize: '1rem',
+    mdFontSize: '1.2rem',
+    lgFontSize: '1.4rem',
     fontWeight: 500,
     color: colors.anthracite1,
     backgroundColor: colors.white,
     borderColor: colors.lightGray4,
     borderStyle: 'solid',
-    borderWidth: '1px',
 
     button: {
       color: colors.anthracite1,
-      backgroundColor: colors.white,
-      borderColor: colors.white,
-      borderStyle: 'solid',
-      borderWidth: 0,
+      backgroundColor: colors.lightGray5,
       borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray5,
-      focusBackgroundColor: colors.lightGray5,
-      focusBorderColor: colors.lightGray5,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray5
+      hoverBackgroundColor: colors.lightGray4,
+      focusBackgroundColor: colors.lightGray4,
+      activeBackgroundColor: colors.lightGray4
     }
   },
   form: {
@@ -119,99 +114,78 @@ export const config = {
     button: {
       fontWeight: 500,
       color: colors.anthracite2,
-      backgroundColor: colors.white,
-      borderColor: colors.lightGray3,
-      borderStyle: 'solid',
-      borderWidth: '2px',
       borderRadius: '4px',
-      hoverBackgroundColor: colors.lightGray5,
-      hoverBorderColor: colors.lightGray3,
-      focusBackgroundColor: colors.lightGray5,
-      focusBorderColor: colors.lightGray3,
-      activeBackgroundColor: colors.lightGray5,
-      activeBorderColor: colors.lightGray3,
+      backgroundColor: colors.lightGray5,
+      hoverBackgroundColor: colors.lightGray4,
+      focusBackgroundColor: colors.lightGray4,
+      activeBackgroundColor: colors.lightGray3,
+      outlineColor: colors.lightGray3,
 
       primary: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.blue2,
-        borderColor: colors.blue1,
         hoverBackgroundColor: colors.blue3,
-        hoverBorderColor: colors.blue2,
         focusBackgroundColor: colors.blue3,
-        focusBorderColor: colors.blue2,
-        activeBackgroundColor: colors.blue3,
-        activeBorderColor: colors.blue2
+        activeBackgroundColor: colors.blue2,
+        outlineColor: colors.blue2
       },
 
       info: {
         fontWeight: 500,
         color: darken(0.27, colors.turquoise1),
         backgroundColor: colors.turquoise2,
-        borderColor: colors.turquoise1,
         hoverBackgroundColor: colors.turquoise3,
-        hoverBorderColor: colors.turquoise2,
         focusBackgroundColor: colors.turquoise3,
-        focusBorderColor: colors.turquoise2,
-        activeBackgroundColor: colors.turquoise3,
-        activeBorderColor: colors.turquoise2
+        activeBackgroundColor: colors.turquoise2,
+        outlineColor: colors.turquoise2
       },
 
       success: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.green2,
-        borderColor: colors.green1,
         hoverBackgroundColor: colors.green3,
-        hoverBorderColor: colors.green2,
         focusBackgroundColor: colors.green3,
-        focusBorderColor: colors.green2,
-        activeBackgroundColor: colors.green3,
-        activeBorderColor: colors.green2
+        activeBackgroundColor: colors.green2,
+        outlineColor: colors.green2
       },
 
       warning: {
         fontWeight: 500,
         color: darken(0.27, colors.orange1),
         backgroundColor: colors.orange2,
-        borderColor: colors.orange1,
         hoverBackgroundColor: colors.orange3,
-        hoverBorderColor: colors.orange2,
         focusBackgroundColor: colors.orange3,
-        focusBorderColor: colors.orange2,
-        activeBackgroundColor: colors.orange3,
-        activeBorderColor: colors.orange2
+        activeBackgroundColor: colors.orange2,
+        outlineColor: colors.orange2
       },
 
       danger: {
         fontWeight: 500,
         color: colors.white,
         backgroundColor: colors.red2,
-        borderColor: colors.red1,
         hoverBackgroundColor: colors.red3,
-        hoverBorderColor: colors.red2,
         focusBackgroundColor: colors.red3,
-        focusBorderColor: colors.red2,
-        activeBackgroundColor: colors.red3,
-        activeBorderColor: colors.red2
+        activeBackgroundColor: colors.red2,
+        outlineColor: colors.red2
       },
 
       link: {
         fontWeight: 400,
         color: colors.blue2,
         backgroundColor: 'transparent',
-        borderColor: 'transparent',
         hoverBackgroundColor: 'transparent',
-        hoverBorderColor: 'transparent',
         focusBackgroundColor: 'transparent',
-        focusBorderColor: 'transparent',
         activeBackgroundColor: 'transparent',
-        activeBorderColor: 'transparent'
+        outlineColor: colors.blue2
       }
     },
     input: {
-      borderWidth: '2px',
-      borderRadius: 0,
+      fontSize: '.9rem',
+      lineHeight: '1.2rem',
+      borderWidth: '1px',
+      borderRadius: '2px',
       boxShadow: 'inset 0 1px 1px rgba(0, 0, 0, 0.075)',
       opacity: 1,
       backgroundColor: colors.white,
@@ -251,8 +225,9 @@ export const config = {
       color: colors.anthracite1,
       borderColor: colors.anthracite1,
       backgroundColor: colors.white,
-      fontSize: '1.7rem',
+      fontSize: '1rem',
       fontWeight: 400,
+      lineHeight: '1.6rem',
 
       info: {
         color: colors.turquoise1
@@ -276,28 +251,28 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        lineHeight: '2.6rem',
-        size: '1.4rem',
-        top: '0.7rem',
-        innerSize: '1rem',
-        innerTop: '0rem',
-        paddingLeft: '2.6rem'
+        lineHeight: '1.6rem',
+        size: '.8rem',
+        top: '.4rem',
+        innerSize: '.7rem',
+        innerTop: '-.1rem',
+        paddingLeft: '1.5rem'
       },
       md: {
-        lineHeight: '3.2rem',
-        size: '1.7rem',
-        top: '0.4rem',
-        innerSize: '1.4rem',
-        innerTop: '-0.4rem',
-        paddingLeft: '3rem'
+        lineHeight: '2rem',
+        size: '1rem',
+        top: '.5rem',
+        innerSize: '.9rem',
+        innerTop: '-.1rem',
+        paddingLeft: '1.8rem'
       },
       lg: {
-        lineHeight: '4rem',
-        size: '2.1rem',
-        top: '0.9rem',
-        innerSize: '1.7rem',
-        innerTop: '-0.1rem',
-        paddingLeft: '3.4rem'
+        lineHeight: '2.6rem',
+        size: '1.2rem',
+        top: '.7rem',
+        innerSize: '1rem',
+        innerTop: '0rem',
+        paddingLeft: '2.1rem'
       }
     },
     radio: {
@@ -306,37 +281,37 @@ export const config = {
       disabledOpacity: 0.6,
 
       sm: {
-        lineHeight: '2.6rem',
-        size: '1.4rem',
-        top: '0.7rem',
-        innerSize: '0.8rem',
-        innerTop: '1rem',
-        innerLeft: '0.3rem',
-        paddingLeft: '2.6rem'
+        lineHeight: '1.6rem',
+        size: '.9rem',
+        top: '.3rem',
+        innerSize: '.5rem',
+        innerTop: '.5rem',
+        innerLeft: '.2rem',
+        paddingLeft: '1.5rem'
       },
       md: {
-        lineHeight: '3.2rem',
-        size: '1.7rem',
-        top: '0.7rem',
-        innerSize: '0.9rem',
-        innerTop: '1.1rem',
-        innerLeft: '0.4rem',
-        paddingLeft: '3rem'
+        lineHeight: '2rem',
+        size: '1rem',
+        top: '.4rem',
+        innerSize: '.5rem',
+        innerTop: '.65rem',
+        innerLeft: '.25rem',
+        paddingLeft: '1.8rem'
       },
       lg: {
-        lineHeight: '4rem',
-        size: '2.1rem',
-        top: '0.9rem',
-        innerSize: '1.3rem',
-        innerTop: '1.3rem',
-        innerLeft: '0.4rem',
-        paddingLeft: '3.4rem'
+        lineHeight: '2.6rem',
+        size: '1.2rem',
+        top: '.6rem',
+        innerSize: '.7rem',
+        innerTop: '.85rem',
+        innerLeft: '.25rem',
+        paddingLeft: '2.1rem'
       }
     },
     hint: {
-      fontSize: '1.4rem',
+      fontSize: '.8rem',
       margin: 0,
-      padding: '.5rem 1rem',
+      padding: '.4rem .8rem',
       disabledOpacity: 0.6,
       backgroundColor: colors.lightGray5,
       color: colors.anthracite2,
@@ -363,28 +338,28 @@ export const config = {
     }
   },
   alert: {
+    borderRadius: '2px',
+    horizontalPadding: '1.5rem',
+    verticalPadding: '1.2rem',
+
     info: {
       color: darken(0.18, colors.turquoise1),
-      backgroundColor: colors.turquoise5,
-      borderColor: colors.turquoise5
+      backgroundColor: colors.turquoise5
     },
 
     success: {
       color: darken(0.18, colors.green1),
-      backgroundColor: colors.green5,
-      borderColor: colors.green5
+      backgroundColor: colors.green5
     },
 
     warning: {
       color: darken(0.18, colors.orange1),
-      backgroundColor: colors.orange5,
-      borderColor: colors.orange5
+      backgroundColor: colors.orange5
     },
 
     danger: {
       color: darken(0.18, colors.red1),
-      backgroundColor: colors.red5,
-      borderColor: colors.red5
+      backgroundColor: colors.red5
     }
   },
   modal: {
@@ -392,16 +367,17 @@ export const config = {
     overlayBackgroundColor: makeTransparent(colors.black, 0.65),
     overlayPadding: '4rem',
     backgroundColor: colors.white,
-    padding: '5rem 3rem'
+    padding: '3.5rem 2rem'
   },
   notification: {
-    fontSize: '1.4rem',
+    fontSize: '1rem',
     offset: '1rem',
+    width: '35rem',
+    height: '3rem',
 
     info: {
       color: darken(0.18, colors.turquoise1),
       backgroundColor: colors.turquoise5,
-      borderColor: colors.turquoise2,
       controlColor: colors.turquoise2,
       hoverControlColor: colors.turquoise3
     },
@@ -409,7 +385,6 @@ export const config = {
     success: {
       color: darken(0.18, colors.green1),
       backgroundColor: colors.green5,
-      borderColor: colors.green2,
       controlColor: colors.green2,
       hoverControlColor: colors.green3
     },
@@ -417,7 +392,6 @@ export const config = {
     warning: {
       color: darken(0.18, colors.orange1),
       backgroundColor: colors.orange5,
-      borderColor: colors.orange2,
       controlColor: colors.orange2,
       hoverControlColor: colors.orange3
     },
@@ -425,12 +399,12 @@ export const config = {
     danger: {
       color: darken(0.18, colors.red1),
       backgroundColor: colors.red5,
-      borderColor: colors.red2,
       controlColor: colors.red2,
       hoverControlColor: colors.red3
     }
   },
   list: {
+    fontSize: '.9rem',
     color: colors.anthracite2,
     backgroundColor: colors.white,
     borderColor: colors.lightGray3
@@ -439,8 +413,17 @@ export const config = {
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+    font-size: ${config.rem}px;
+      color: ${config.color};
+    }
+
     .osm-ui-react-marker-default {
-        color: ${colors.anthracite1};
+        color: ${config.color};
 
         #colorized, #colorized * {
             fill: ${colors.white} !important;

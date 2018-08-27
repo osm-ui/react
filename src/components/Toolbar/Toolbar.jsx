@@ -13,7 +13,7 @@ const StyledAside = styled.aside`
   bottom: 0;
   left: 0;
   display: flex;
-  margin: ${props => props.theme.toolbar.margin};
+  padding: ${p => p.theme.toolbar.margin};
   pointer-events: none;
 
   &.container-parent {
@@ -155,15 +155,15 @@ const StyledAside = styled.aside`
   }
 
   &.direction-column > * {
-    margin-bottom: ${props => props.theme.toolbar.childrenMargin};
+    margin-bottom: ${p => p.theme.toolbar.childrenMargin};
   }
 
   &.direction-row > * {
-    margin-right: ${props => props.theme.toolbar.childrenMargin};
+    margin-right: ${p => p.theme.toolbar.childrenMargin};
   }
 
-  &.direction-column :last-child,
-  &.direction-row :last-child {
+  &.direction-column > *:last-child,
+  &.direction-row > *:last-child {
     margin: 0;
   }
 `;

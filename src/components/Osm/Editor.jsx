@@ -52,7 +52,7 @@ const StyledDiv = styled.div`
 
     &.open {
       ${Button.style} {
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 2px 2px 0;
       }
 
       span {
@@ -67,14 +67,15 @@ const StyledDiv = styled.div`
 
     ${Form.Input.style} {
       opacity: 1;
-      height: 3.4rem;
-      font-size: 1.4rem;
+      line-height: 1.6rem;
+      padding: 1px 1rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: ${colors.white};
       background-color: ${colors.blue3};
       border-color: ${colors.blue1};
       border-right: none;
-      border-radius: 4px 0 0 4px;
+      border-radius: 2px 0 0 2px;
 
       &::placeholder {
         color: ${colors.blue5};
@@ -92,7 +93,7 @@ const StyledDiv = styled.div`
     }
 
     &.submit {
-      margin-top: 5rem;
+      margin-top: 3rem;
     }
   }
 `;
@@ -107,16 +108,7 @@ class Editor extends React.Component {
       isAdding: false
     };
 
-    this.modifyNewTag = this.modifyNewTag.bind(this);
-    this.addTag = this.addTag.bind(this);
-    this.toggleAddMode = this.toggleAddMode.bind(this);
-    this.addField = this.addField.bind(this);
-    this.revertField = this.revertField.bind(this);
-    this.modifyField = this.modifyField.bind(this);
-    this.removeField = this.removeField.bind(this);
-    this.selectField = this.selectField.bind(this);
     // this.validate = this.validate.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   findStatus(tag) {
@@ -131,16 +123,16 @@ class Editor extends React.Component {
     return '';
   }
 
-  addField(tag, value) {
+  addField = (tag, value) => {
     var fixed = { ...this.state.fixed };
     fixed[tag] = value;
 
     this.setState({
       fixed
     });
-  }
+  };
 
-  removeField(tag) {
+  removeField = tag => {
     var fixed = { ...this.state.fixed };
     Reflect.deleteProperty(fixed, tag);
 
@@ -148,9 +140,9 @@ class Editor extends React.Component {
       fixed,
       selectedTag: null
     });
-  }
+  };
 
-  revertField(tag) {
+  revertField = tag => {
     var fixed = { ...this.state.fixed };
     fixed[tag] = this.props.original[tag];
 
@@ -158,26 +150,26 @@ class Editor extends React.Component {
       fixed,
       selectedTag: null
     });
-  }
+  };
 
-  modifyField(tag, value) {
+  modifyField = (tag, value) => {
     var fixed = { ...this.state.fixed };
     fixed[tag] = value;
 
     this.setState({
       fixed
     });
-  }
+  };
 
-  selectField(tag) {
+  selectField = tag => {
     const isSelected = tag === this.state.selectedTag;
 
     this.setState({
       selectedTag: isSelected ? null : tag
     });
-  }
+  };
 
-  toggleAddMode() {
+  toggleAddMode = () => {
     console.log('TOGGLE');
     if (!this.state.isAdding) this.add.focus();
     else this.add.blur();
@@ -186,9 +178,9 @@ class Editor extends React.Component {
       selectedTag: null,
       isAdding: !this.state.isAdding
     });
-  }
+  };
 
-  addTag(tag) {
+  addTag = tag => {
     this.addField(tag);
     this.toggleAddMode();
     this.setState(
@@ -197,13 +189,13 @@ class Editor extends React.Component {
       },
       () => this.selectField(tag)
     );
-  }
+  };
 
-  modifyNewTag(value) {
+  modifyNewTag = value => {
     this.setState({
       newTag: value
     });
-  }
+  };
 
   validate() {
     const fixed = this.state.fixed;
@@ -212,9 +204,9 @@ class Editor extends React.Component {
       .every(value => value);
   }
 
-  handleSubmit() {
+  handleSubmit = () => {
     if (this.validate()) this.props.submit(this.state.fixed);
-  }
+  };
 
   renderAddButton() {
     const hasSelected = this.state.selectedTag !== null;

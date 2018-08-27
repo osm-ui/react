@@ -11,12 +11,11 @@ const contexts = ['info', 'success', 'warning', 'danger'];
 
 const Container = styled.div`
   position: absolute;
-  width: 50rem;
+  width: ${p => p.theme.notification.width};
   max-width: 100%;
 
   @media (max-width: 50rem) {
     width: 100%;
-    font-size: 1.2rem;
   }
 
   transition: transform 500ms ease-in-out;
@@ -95,55 +94,32 @@ const StyledAside = styled.aside`
   display: flex;
   z-index: 1000;
   width: 100%;
-  height: 4rem;
+  height: ${p => p.theme.notification.height};
   margin: 0.4rem 0;
   padding: 0 4rem 0 2rem;
   overflow-y: auto;
-  font-size: ${props => props.theme.notification.fontSize};
-  color: ${props => props.theme.notification[props.context].color};
-  background: ${props =>
-    props.theme.notification[props.context].backgroundColor};
-  border-color: ${props => props.theme.notification[props.context].borderColor};
-  border-style: ${props => props.theme.borderStyle};
-  border-width: 0;
-  box-shadow: ${props => props.theme.sidebar.boxShadow};
+  font-size: ${p => p.theme.notification.fontSize};
+  color: ${p => p.theme.notification[p.context].color};
+  background: ${p => p.theme.notification[p.context].backgroundColor};
+  box-shadow: ${p => p.theme.sidebar.boxShadow};
 
   transition: height 500ms ease-in-out, margin 500ms ease-in-out;
-
-  &.position-top-right,
-  &.position-bottom-right {
-    border-left-width: ${props => props.theme.borderWidth};
-  }
-
-  &.position-top-left,
-  &.position-bottom-left {
-    border-right-width: ${props => props.theme.borderWidth};
-  }
-
-  &.position-top {
-    border-bottom-width: ${props => props.theme.borderWidth};
-  }
-
-  &.position-bottom {
-    border-top-width: ${props => props.theme.borderWidth};
-  }
 
   .close-btn {
     display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
+    width: ${p => p.theme.notification.height};
+    height: ${p => p.theme.notification.height};
+    line-height: ${p => p.theme.notification.height};
     padding: 0;
-    color: ${props => props.theme.notification[props.context].controlColor};
+    color: ${p => p.theme.notification[p.context].controlColor};
     background: none;
     border: none;
 
     &:hover {
-      color: ${props =>
-        props.theme.notification[props.context].hoverControlColor};
+      color: ${p => p.theme.notification[p.context].hoverControlColor};
     }
   }
 

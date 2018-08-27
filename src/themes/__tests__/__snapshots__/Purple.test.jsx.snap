@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with a text children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <PurpleTheme
     key=".0"
   >
     This is a text
   </PurpleTheme>
-</styled.span>
+</Default__StyledSpan>
 `;
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <PurpleTheme
     key=".0"
   >
     <div />
   </PurpleTheme>
-</styled.span>
+</Default__StyledSpan>
 `;

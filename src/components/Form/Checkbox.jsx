@@ -46,7 +46,6 @@ const StyledCheckbox = styled.input.attrs({
     &::after {
       border-color: transparent;
       transform: scale(0);
-      padding-left: 0.5px;
       top: ${props => props.theme.form.checkbox[props.size].innerTop};
       content: '\f00c';
       color: ${props => props.theme.form.checkbox.color};

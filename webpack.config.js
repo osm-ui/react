@@ -1,12 +1,17 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   plugins: [
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: !process.env.CI,
     })
   ],
   externals: [nodeExternals()],
@@ -57,10 +62,6 @@ module.exports = {
         query: {
           name: 'assets/[name].[ext]?[hash]'
         }
-      },
-      {
-        test: require.resolve('jquery'),
-        loader: 'expose-loader?$!expose-loader?jQuery'
       },
       {
         test: require.resolve('leaflet'),

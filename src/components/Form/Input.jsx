@@ -5,27 +5,31 @@ import classnames from 'classnames';
 import InputHint from './InputHint';
 
 const StyledInput = styled.input`
-  opacity: ${props => props.theme.form.input.opacity};
-  background-color: ${props => props.theme.form.input.backgroundColor};
-  border-color: ${props => props.theme.form.input.borderColor};
-  border-width: ${props => props.theme.form.input.borderWidth};
-  border-radius: ${props => props.theme.form.input.borderRadius};
-  box-shadow: ${props => props.theme.form.input.boxShadow};
+  opacity: ${p => p.theme.form.input.opacity};
+  background-color: ${p => p.theme.form.input.backgroundColor};
+  border-style: solid;
+  border-color: ${p => p.theme.form.input.borderColor};
+  border-width: ${p => p.theme.form.input.borderWidth};
+  border-radius: ${p => p.theme.form.input.borderRadius};
+  box-shadow: ${p => p.theme.form.input.boxShadow};
+  padding: 0.6rem 0.8rem;
+  width: 100%;
+  font-size: ${p => p.theme.form.input.fontSize};
+  color: ${p => p.theme.color};
 
-  &.form-control {
-    height: 100%;
-  }
+  /* prettier-ignore */
+  ${p => (p.hasHint ? 'border-bottom-left-radius: 0;' : '')}
+  ${p => (p.hasHint ? 'border-bottom-right-radius: 0;' : '')}
 
-  &:focus,
-  &.form-control:focus {
-    opacity: ${props => props.theme.form.input.focusOpacity};
-    background-color: ${props => props.theme.form.input.focusBackgroundColor};
-    border-color: ${props => props.theme.form.input.focusBorderColor};
-    box-shadow: ${props => props.theme.form.input.focusBoxShadow};
+  &:focus {
+    opacity: ${p => p.theme.form.input.focusOpacity};
+    background-color: ${p => p.theme.form.input.focusBackgroundColor};
+    border-color: ${p => p.theme.form.input.focusBorderColor};
+    box-shadow: ${p => p.theme.form.input.focusBoxShadow};
   }
 
   &:disabled {
-    opacity: ${props => props.theme.form.input.disabledOpacity};
+    opacity: ${p => p.theme.form.input.disabledOpacity};
   }
 `;
 
@@ -40,13 +44,14 @@ const Input = ({
 }) => (
   <div className="input-container" style={style}>
     <StyledInput
-      className={classnames(className, 'form-control')}
+      className={classnames(className, 'input')}
       type={type}
       disabled={disabled}
       innerRef={innerRef}
+      hasHint={!!hint}
       {...props}
     />
-    {hint && <InputHint disabled={disabled}>{hint}</InputHint>}
+    {!!hint && <InputHint disabled={disabled}>{hint}</InputHint>}
   </div>
 );
 

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Sidebar.Nav
     key=".0"
   >
     <div />
   </Sidebar.Nav>
-</styled.span>
+</Default__StyledSpan>
 `;

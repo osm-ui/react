@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`When using snapshots Radio should render with an element children 1`] = `
-<styled.span>
+<Default__StyledSpan>
   <Form.Radio
     className=""
     disabled={false}
@@ -14,5 +14,5 @@ exports[`When using snapshots Radio should render with an element children 1`] =
   >
     <div />
   </Form.Radio>
-</styled.span>
+</Default__StyledSpan>
 `;
