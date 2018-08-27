@@ -49,7 +49,8 @@ const StyledCheckbox = styled.input.attrs({
       top: ${props => props.theme.form.checkbox[props.size].innerTop};
       content: '\f00c';
       color: ${props => props.theme.form.checkbox.color};
-      font-family: FontAwesome;
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 600;
       font-size: ${props => props.theme.form.checkbox[props.size].innerSize};
       text-align: center;
       transition: transform 0.2s cubic-bezier(0.8, -0.33, 0.2, 1.33);

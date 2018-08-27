@@ -33,6 +33,8 @@ function loadStories() {
     require('../stories/Osmose');
     require('../stories/Osm');
     require('../stories/ColorPicker');
+    require('../stories/IconPicker');
+    require('../stories/Scrollable');
     /* eslint-enable */
 }
 

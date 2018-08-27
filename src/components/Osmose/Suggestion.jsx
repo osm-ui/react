@@ -40,6 +40,15 @@ const StyledDiv = styled.div`
       font-size: 0.9rem;
       line-height: 1.2rem;
 
+      &::before {
+        font-family: 'Font Awesome 5 Free';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-right: 0.5rem;
+        line-height: 2.8rem;
+      }
+
       &.add {
         color: ${colors.green1};
 
@@ -62,6 +71,7 @@ const StyledDiv = styled.div`
 
         &::before {
           content: '\f068';
+          line-height: 2.7rem;
         }
       }
 
